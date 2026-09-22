@@ -1,0 +1,444 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#657253">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Dérej">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icon-180.png"><title>Dérej · Beta Comunitaria</title><style>
+:root{--bg:#efe7d7;--card:#fffaf0;--ink:#2d2922;--mut:#70695e;--line:#d8cbb7;--ol:#657253;--soft:#e8eddc;--gold:#ae8a47;--scale:1}
+*{box-sizing:border-box}html{font-size:calc(16px*var(--scale));scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.app{max-width:640px;margin:auto;padding:14px 16px 118px}.top{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:7px 0 12px}.brand{font:1.28rem Georgia,serif}.badge{font-size:.65rem;font-weight:900;background:#554d40;color:#fff;border-radius:99px;padding:5px 8px}.topR{display:flex;gap:6px;align-items:center}.iconBtn{min-width:44px;min-height:44px;border:1px solid var(--line);border-radius:13px;background:#fff8ee;color:var(--ink);font-weight:800}.view{display:none}.view.on{display:block}h1{font:2.2rem/1.06 Georgia,serif;margin:.25em 0 .45em}h2{font:1.45rem/1.2 Georgia,serif}.he{font-size:2.35rem;direction:rtl;text-align:center;margin:10px 0 2px}.k{font-size:.68rem;font-weight:900;letter-spacing:.13em;color:var(--mut);text-transform:uppercase}.small{color:var(--mut);font-size:.87rem;line-height:1.48}.q{font:1.32rem/1.35 Georgia,serif}.card,.note,.privacy{background:var(--card);border:1px solid var(--line);border-radius:19px;padding:14px;margin:11px 0}.note{background:#fff5e0}.privacy{background:#edf1e5}.stage{background:linear-gradient(150deg,#f5f1df,#e5ead7);border-radius:22px;padding:20px 15px;text-align:center;margin:12px 0}.big{font-size:3rem}.btn,.choice,.day,.domain{width:100%;min-height:54px;border:1px solid var(--line);border-radius:16px;padding:12px 14px;margin:6px 0;font:inherit}.btn{background:var(--ol);color:#fff;border-color:var(--ol);font-weight:850}.btn.ghost{background:#fffaf2;color:var(--ink)}.btn.light{background:var(--soft);color:#34402d;border-color:#cbd4be}.btn:disabled{opacity:.42}.choice,.domain{background:#fffaf2;color:var(--ink);text-align:left}.choice.on,.domain.on{background:var(--soft);border-color:var(--ol);font-weight:800}.progress{height:8px;background:#ddd2c1;border-radius:99px;overflow:hidden;margin:9px 0}.progress span{display:block;height:100%;background:var(--ol);width:0}.day{display:grid;grid-template-columns:46px 1fr auto;gap:10px;align-items:center;background:var(--card);text-align:left;color:var(--ink)}.ico{width:44px;height:44px;border:1px solid var(--line);border-radius:50%;display:flex;align-items:center;justify-content:center;background:#f2e9da;font-size:1.35rem}.done .ico{background:var(--soft);border-color:var(--ol)}.status{font-size:.65rem;font-weight:900;color:var(--mut)}.chips{display:flex;gap:6px;overflow:auto;margin:8px 0 12px;scrollbar-width:none}.chip{white-space:nowrap;border:1px solid var(--line);border-radius:99px;padding:7px 9px;background:#fff8ee;color:var(--ink);font-size:.73rem}.chip.on{background:var(--soft);border-color:var(--ol);font-weight:800}.nav{position:fixed;bottom:8px;left:50%;transform:translateX(-50%);width:min(610px,calc(100% - 20px));display:grid;grid-template-columns:repeat(5,1fr);gap:4px;background:#efe7d7ee;backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:18px;padding:6px;z-index:20}.nav button{border:0;background:transparent;border-radius:11px;padding:7px 2px;color:var(--mut);font-weight:750;font-size:.72rem}.nav button.on{background:var(--card);color:var(--ink)}.row{display:grid;grid-template-columns:48px 1fr;gap:10px;align-items:center}.src{border-top:1px solid var(--line);padding:11px 0}.src:first-child{border-top:0}.tag{display:inline-block;border:1px solid var(--line);border-radius:99px;padding:4px 7px;background:#fff8ec;font-size:.71rem;margin:2px}.step{border-left:4px solid var(--gold);padding-left:12px;margin:17px 0}.step b{display:block;margin-bottom:4px}.metric{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.metric div{background:#fff;border:1px solid var(--line);border-radius:13px;padding:8px;text-align:center}.metric b{display:block;font-size:1.05rem}.metric span{font-size:.68rem;color:var(--mut)}pre{white-space:pre-wrap;word-break:break-word;max-height:220px;overflow:auto;font-size:.7rem}.pilotbar{text-align:center;font-size:.72rem;color:var(--mut);padding:7px;border:1px dashed var(--line);border-radius:13px;margin-bottom:10px}.hidden{display:none!important}:focus-visible{outline:3px solid var(--gold);outline-offset:2px}@media(max-width:420px){h1{font-size:1.98rem}.metric{grid-template-columns:1fr 1fr}.nav button{font-size:.66rem}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+.sourceAccess{background:#f2ead8;border:1px solid var(--gold);border-radius:19px;padding:14px;margin:11px 0}
+.sourceLink{display:block;text-decoration:none;color:var(--ink);background:#fffaf2;border:1px solid var(--line);border-radius:15px;padding:12px 14px;margin:7px 0;font-weight:750}
+.sourceLink span{display:block;color:var(--mut);font-weight:500;font-size:.8rem;margin-top:3px}
+.sourceLink:hover,.sourceLink:focus{background:var(--soft);border-color:var(--ol)}
+.expTag{display:inline-block;background:#8a6f3f;color:#fff;border-radius:99px;padding:4px 7px;font-size:.65rem;font-weight:900;margin-bottom:5px}
+
+.welcomeLogo{width:124px;height:124px;border-radius:27px;display:block;margin:8px auto 18px;box-shadow:0 10px 30px #5b4b2c22}
+.promise{display:grid;grid-template-columns:34px 1fr;gap:9px;align-items:start;margin:12px 0}.promise b{display:block;margin-bottom:2px}.promise .pico{font-size:1.35rem}
+textarea{width:100%;min-height:96px;border:1px solid var(--line);border-radius:15px;background:#fffaf2;color:var(--ink);padding:12px;font:inherit;resize:vertical;margin:7px 0 13px}
+.installHint{background:#f3eedf;border:1px dashed var(--gold);border-radius:16px;padding:12px;margin:11px 0}
+.betaRibbon{display:inline-block;background:var(--soft);border:1px solid #cbd4be;border-radius:99px;padding:5px 9px;font-size:.68rem;font-weight:850;color:#34402d;margin-bottom:8px}
+
+.datePair{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;margin:5px 0 8px}
+.dateSide{min-width:0}
+.dateSide.right{text-align:right}
+.dateMain{font-size:.73rem;font-weight:900;letter-spacing:.09em;text-transform:uppercase;color:var(--mut)}
+.dateHeb{font-size:.78rem;font-weight:850;color:var(--ink);margin-top:2px}
+.dateHebSmall{font-size:.65rem;color:var(--mut);margin-top:1px;direction:rtl}
+@media(max-width:390px){.datePair{gap:8px}.dateMain{font-size:.64rem}.dateHeb{font-size:.7rem}.dateHebSmall{font-size:.6rem}}
+
+.portalGrid{display:grid;gap:11px;margin:15px 0}
+.portalCard{width:100%;border:1px solid var(--line);border-radius:20px;background:var(--card);padding:17px;text-align:left;color:var(--ink);font:inherit;box-shadow:0 7px 18px #594b2d0a}
+.portalCard.primary{background:linear-gradient(150deg,#f4f0df,#e3ead5);border-color:#b9c5a9}
+.portalCard .portalIcon{font-size:2rem;display:block;margin-bottom:7px}
+.portalCard b{display:block;font:1.24rem Georgia,serif;margin-bottom:4px}
+.portalCard span{display:block;font-size:.84rem;line-height:1.42;color:var(--mut)}
+.quickGrid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:12px 0}
+.quickCard{border:1px solid var(--line);border-radius:17px;background:var(--card);padding:14px;text-align:left;color:var(--ink);min-height:103px}
+.quickCard b{display:block;margin:5px 0 3px}.quickCard.radioWide{grid-column:1/-1;min-height:88px}.quickCard span{font-size:.75rem;color:var(--mut);line-height:1.35}
+.radioDot{display:inline-block;width:9px;height:9px;border-radius:50%;background:#8e3f35;margin-right:6px}
+@media(max-width:390px){.quickGrid{grid-template-columns:1fr 1fr}.portalCard{padding:15px}}
+</style></head><body>
+<main class="app">
+<header class="top"><div class="brand">Dérej · דרך</div><div class="topR"><span class="badge">BETA COMUNITARIA 1.1.4 · TEXTO DIRECTO</span><button class="iconBtn" id="fontBtn" aria-label="Cambiar tamaño de texto">Aa</button></div></header>
+<div class="pilotbar" id="pilotLabel">Beta comunitaria · acceso para nuestra comunidad · no publicar todavía</div>
+<section id="welcome" class="view">
+<img src="icon-192.png" class="welcomeLogo" alt="Símbolo de Dérej">
+<div style="text-align:center"><span class="betaRibbon">BETA COMUNITARIA 1.1.4 · TEXTO DIRECTO</span></div>
+<h1 style="text-align:center">Bienvenido a Dérej.</h1>
+<p style="text-align:center">Una experiencia para <b>caminar juntos la parashá de cada semana</b>, acercarnos a las Escrituras y a la sabiduría hebrea, llevar una pregunta a la vida y después salir de la pantalla.</p>
+<div class="card">
+  <div class="promise"><div class="pico">📖</div><div><b>Una misma parashá, siete ventanas.</b><span class="small">Cada semana Dérej acompaña a la comunidad por la porción semanal de la Torá: raíz, contexto, voces, preguntas, experiencia y vida cotidiana. Cuando el calendario trae una festividad o un Shabbat especial, esa lectura ocupa su lugar y Dérej explica por qué.</span></div></div>
+  <div class="promise"><div class="pico">🌿</div><div><b>No necesitas conocimientos previos.</b><span class="small">El encuentro empieza desde una experiencia humana y luego abre su raíz.</span></div></div>
+  <div class="promise"><div class="pico">📜</div><div><b>La fuente siempre importa.</b><span class="small">Cuando un texto habla a Israel o pertenece a una práctica judía, lo indicamos antes de hacer una lectura contemporánea.</span></div></div>
+  <div class="promise"><div class="pico">👣</div><div><b>No tienes que completar nada.</b><span class="small">No hay rachas, puntos ni niveles espirituales. El destino de Dérej es la vida fuera de la app.</span></div></div>
+</div>
+<div class="privacy"><b>🔒 Privacidad por defecto</b><p>Esta beta no pide nombre, correo ni religión. El progreso y cualquier paso elegido permanecen localmente en este dispositivo.</p></div>
+<button class="btn" id="enterBeta">Entrar al camino</button>
+<button class="btn ghost installApp">Agregar Dérej a mi teléfono</button>
+<p class="small" style="text-align:center">Esta versión continúa en evaluación dentro de nuestra comunidad. Por ahora, evita publicar el enlace fuera del grupo.</p>
+</section>
+
+
+<section id="portal" class="view">
+<div class="k">Dérej · El Camino</div>
+<h1>¿Por dónde quieres entrar hoy?</h1>
+<p class="small"><b>La parashá es nuestro eje común.</b> Desde ella puedes caminar, escuchar la Haftará, profundizar en las fuentes o entrar a Radio Dérej. No necesitas recorrerlo todo.</p>
+<div class="portalGrid">
+  <button class="portalCard primary" id="portalParasha"><span class="portalIcon">📖</span><b>Parashá semanal</b><span>El camino principal: siete ventanas para escuchar la raíz de esta semana y llevarla a la vida.</span></button>
+  <button class="portalCard" id="portalHaftara"><span class="portalIcon">🕯️</span><b>Haftará · voz profética</b><span>Una segunda puerta hacia la lectura profética asociada a la semana, Shabbat especial o festividad.</span></button>
+  <button class="portalCard" id="portalDeep"><span class="portalIcon">🔎</span><b>Profundizar</b><span>Fuentes, comentarios y voces de Sefarad, Jasidut, Kabbalah y Jabad, claramente identificadas.</span></button>
+  <button class="portalCard" id="portalRadio"><span class="portalIcon">♫</span><b>Radio Dérej</b><span>Música nacida del camino semanal para escuchar, recordar y después volver a la vida.</span></button>
+</div>
+<button class="btn ghost" id="portalHome">Ver el Inicio completo</button>
+<button class="btn ghost" id="portalAbout">Qué es Dérej</button>
+<p class="small" style="text-align:center">Dérej no exige elegir siempre la misma puerta.</p>
+</section>
+
+<section id="home" class="view">
+<div class="datePair">
+  <div class="dateSide">
+    <div class="dateMain" id="localToday"></div>
+    <div class="small" id="weekDates"></div>
+  </div>
+  <div class="dateSide right">
+    <div class="dateMain">Israel</div>
+    <div class="dateHeb" id="israelHebrewDate"></div>
+    <div class="dateHebSmall" id="israelHebrewDateNative"></div>
+  </div>
+</div>
+<div class="he" id="weekHe"></div><h1 id="weekTitle"></h1><p class="small"><b>Esta es nuestra parashá / lectura guía de la semana.</b> Cada día abrimos una ventana distinta para escucharla y llevar algo de ella a la vida.</p><p class="small">Vive primero · descubre la raíz después · sal cuando sea suficiente.</p>
+<div class="card"><div class="k">Encuentro de hoy</div><h2 id="todayTitle"></h2><p class="small" id="todaySub"></p><button class="btn" id="startEncounter">Comenzar encuentro</button>
+<a class="btn light" id="homeToratEmet" target="_blank" rel="noopener noreferrer" style="display:block;text-align:center;text-decoration:none">📜 Leer la porción completa en Torat Emet</a>
+</div>
+
+<div class="quickGrid">
+  <button class="quickCard" id="quickParasha">📖<b>Parashá</b><span>Ver las cuatro semanas y sus lecturas guía.</span></button>
+  <button class="quickCard" id="quickHaftara">🕯️<b>Haftará</b><span>Abrir la voz profética asociada a esta semana.</span></button>
+  <button class="quickCard" id="quickSources">📜<b>Fuentes</b><span>Ir directamente a la raíz y las referencias.</span></button>
+  <button class="quickCard" id="quickLibrary">📚<b>Biblioteca</b><span>Explorar tradiciones, autores y obras.</span></button>
+  <button class="quickCard radioWide" id="quickRadio">♫<b>Radio Dérej</b><span>Música para acompañar el camino sin convertir la pantalla en destino.</span></button>
+</div>
+<div class="card"><div class="k">Tu semana · sólo en este dispositivo</div><div class="progress"><span id="weekProgress"></span></div><p class="small" id="weekProgressText"></p></div>
+<div class="stage"><div class="big" id="weekSymbol"></div><h2 id="weekSymbolName"></h2><p class="small" id="weekSymbolText"></p></div>
+<div class="note" id="umbralPromo"><div class="k">Preparar el Umbral</div><h2>Una revisión antes de seguir caminando</h2><p class="small">Inspirada en la lógica ética de Al Jet, respetando que no somos judíos y sin reproducir su liturgia como propia.</p><button class="btn light" id="openUmbral">Abrir Revisión del Camino</button></div>
+<div class="note hidden" id="echoPromo"><div class="k">Eco disponible</div><h2>¿Lo reconoces antes que antes?</h2><p class="small" id="echoPromoText"></p><button class="btn light" id="openEcho">Abrir mi Eco</button></div>
+</section>
+
+<section id="week" class="view"><div class="k">Explorar</div><h1>Cuatro semanas</h1><p class="small">Parashá o lectura guía según el calendario. En semanas de festividad, Dérej muestra la lectura especial correspondiente.</p><div class="chips" id="weekChips"></div><a class="btn light" id="weekToratEmet" target="_blank" rel="noopener noreferrer" style="display:block;text-align:center;text-decoration:none">📜 Leer texto completo</a><div id="daysList"></div></section>
+
+<section id="journey" class="view"><div class="k">Mi Camino</div><h1>Memoria, no puntuación.</h1><div class="card"><div class="k">Huellas vividas</div><div class="progress"><span id="allProgress"></span></div><p class="small" id="allProgressText"></p></div><div id="activeStepBox"></div><div class="card"><div class="k">Beta comunitaria</div><h2>Ayúdanos a cuidar el camino.</h2><p class="small">Nos sirve más una experiencia concreta que una puntuación. Tus comentarios no se envían automáticamente.</p><button class="btn light" id="openFeedback">Contarnos algo sobre tu experiencia</button></div></section>
+
+<section id="sources" class="view"><button class="btn ghost" data-view="portal">← Portales</button><div class="k">Biblioteca / Profundizar</div><h1>Quién está hablando</h1><div class="note">Dérej no mezcla las voces. Las presenta. Los archivos internos no se publican mientras sus derechos no estén resueltos.</div><div class="card"><div class="src"><span class="tag">📜 Mikrá</span> <b>Raíz textual</b><p class="small">La Torá y otros textos bíblicos aparecen primero con contexto. Dérej separa la fuente de nuestra lectura contemporánea.</p></div><div class="src"><span class="tag">🌿 Sefarad</span> <b>Mirada sefardí</b><p class="small">Materiales de nuestra biblioteca interna sirven para estudio y preparación editorial.</p></div><div class="src"><span class="tag">🕯️ Jasidut / Jabad</span> <b>Voces identificadas</b><p class="small">Presentamos autor, obra y tradición; no hablamos genéricamente en nombre de “los sabios”.</p></div><div class="src"><span class="tag">✨ Kabbalah</span> <b>Contexto de profundización</b><p class="small">No reproducimos traducciones modernas extensas sin derechos confirmados.</p></div></div><div class="sourceAccess">
+<span class="expTag">ACCESO EXPERIMENTAL · BETA COMUNITARIA</span>
+<h2>Fuentes para leer y profundizar durante la beta</h2>
+<p class="small">Durante esta beta puedes salir de Dérej y consultar las fuentes. Los enlaces de Drive pertenecen a la Biblioteca Sagrada y pueden requerir permiso según su configuración. No implica autorización para redistribuir sus contenidos.</p>
+
+<div class="k">Raíz textual en español</div>
+<div class="note"><b>Ir directo al texto</b><p class="small">Dérej abre la porción completa en Torat Emet, sin pasar por el catálogo. Dentro del lector puedes ver toda la porción o elegir una aliyá.</p></div>
+<a class="sourceLink" href="https://parashot.com.ar/?section=parashot&parasha=haazinu&aliya=all" target="_blank" rel="noopener noreferrer">💧 Leer Haazinu completo<span>Torat Emet · Devarim / Deuteronomio 32:1–52 · siete aliyot.</span></a>
+<a class="sourceLink" href="https://parashot.com.ar/?section=parashot&parasha=bereshit&aliya=all" target="_blank" rel="noopener noreferrer">○ Leer Bereshit completo<span>Torat Emet · Bereshit / Génesis 1:1–6:8 · siete aliyot.</span></a>
+<a class="sourceLink" href="https://parashot.com.ar/parashot/" target="_blank" rel="noopener noreferrer">📚 Ver todas las Parashot<span>Acceso secundario al catálogo completo.</span></a>
+<div class="note"><b>Transparencia de fuente</b><p class="small">El lector externo contiene además otras secciones y materiales editoriales propios. Dérej enlaza aquí únicamente como acceso a la lectura de Torat Emet; esos otros contenidos no forman parte automáticamente de nuestra línea editorial.</p></div>
+
+<div class="k" style="margin-top:14px">Haazinu / Shabbat Shuvah</div>
+<a class="sourceLink" href="https://drive.google.com/file/d/1gD8rtbEtekj2CROoIQm78fIW9cbCZtn9/view" target="_blank" rel="noopener noreferrer">🌿 Mishkenot Shimon<span>Mirada sefardí / Musar · Biblioteca privada.</span></a>
+<a class="sourceLink" href="https://drive.google.com/file/d/1mEjjmg7OJ354fr6xT9Qf5LQh3YQdQWEq/view" target="_blank" rel="noopener noreferrer">✨ Zohar · Tomo V<span>Incluye material asociado a Haazinu · Biblioteca privada.</span></a>
+
+<div class="k" style="margin-top:14px">Yom Kipur · Teshuvá</div>
+<a class="sourceLink" href="https://drive.google.com/file/d/10aL0Skf0dSUOnKfVKJK2LQHdrtuiYgPx/view" target="_blank" rel="noopener noreferrer">🌿 Vidui en español · Rab Yosef Bittón<span>Referencia interna para comprender la lógica del Vidui.</span></a>
+<a class="sourceLink" href="https://drive.google.com/file/d/18fCdduN4V5Tft_Uorp5_6NpHfVxF3u2j/view" target="_blank" rel="noopener noreferrer">📖 Maimónides · Leyes del Arrepentimiento<span>Fuente interna para reconocer, asumir y decidir no repetir.</span></a>
+
+<div class="k" style="margin-top:14px">Sukot</div>
+<a class="sourceLink" href="https://drive.google.com/file/d/1o_yXAcqzJzYxHO61P-2WHn4jc7TlcgHa/view" target="_blank" rel="noopener noreferrer">🌿 Sidur sefardí para principiantes<span>Material de referencia sobre la festividad · Biblioteca privada.</span></a>
+
+<div class="k" style="margin-top:14px">Bereshit</div>
+<a class="sourceLink" href="https://drive.google.com/file/d/1Oj7nQ_SMlgRp0XbnnutLQ-jete0cMhwk/view" target="_blank" rel="noopener noreferrer">📖 El Midrash Dice · Bereshit<span>Profundización narrativa · Biblioteca privada.</span></a>
+<a class="sourceLink" href="https://drive.google.com/file/d/1vv9sbzyBQbg_IAgeNBF52VlJMWbex408/view" target="_blank" rel="noopener noreferrer">✨ Historias del Zohar · Bereshit<span>Profundización cabalística · Biblioteca privada.</span></a>
+</div>
+
+<button class="btn ghost" id="openHebrew">Hebreo en el Camino</button></section>
+
+<section id="about" class="view"><div class="k">Acerca de Dérej</div><h1>Con raíces profundas y puertas abiertas.</h1><p>Dérej es una experiencia para adultos que <b>acompaña a la comunidad a lo largo de la parashá semanal</b> y explora, desde esa raíz, la espiritualidad bíblica y la sabiduría hebrea mediante reflexión, experiencia, comunidad y jesed.</p>
+<div class="card"><div class="k">Nuestro eje semanal</div><h2>La parashá nos da un camino común.</h2><p>Durante la semana no intentamos explicar toda la porción. Abrimos distintas ventanas: texto, contexto, voces de la tradición, memoria hebrea, preguntas, experiencia y una posible acción de jesed. Así, personas distintas pueden caminar una misma raíz sin tener que vivirla de la misma manera.</p><p class="small">Cuando una festividad o lectura especial del calendario judío tiene precedencia, Dérej lo indica y organiza la semana respetando ese contexto.</p></div><div class="note"><b>Nuestra posición</b><p>Somos aprendices antes que maestros. No pertenecemos al pueblo judío ni pretendemos representarlo. No invitamos a nadie a cambiar de identidad. Cuando un texto habla específicamente a Israel, lo indicamos.</p></div><div class="privacy"><b>Privacidad por defecto</b><p>No hay cuenta ni login. Dérej no guarda el contenido de la autoevaluación ni tus reflexiones personales. El progreso y un eventual paso de siete días permanecen localmente en este dispositivo.</p></div><div class="installHint"><b>📲 Llevar Dérej en el teléfono</b><p class="small">Puedes agregar esta beta a tu pantalla de inicio y abrirla como una app.</p><button class="btn light installApp">Agregar a pantalla de inicio</button></div><div class="card"><b>Beta Comunitaria 1.0</b><p class="small">Esta etapa nos permite observar el uso real durante varias semanas. Algunas fuentes y funciones aún pueden cambiar antes de un lanzamiento público.</p></div></section>
+
+
+<section id="haftara" class="view">
+<button class="btn ghost" data-view="portal">← Portales</button>
+<div class="k">Haftará · voz profética</div>
+<h1 id="haftaraTitle">Una segunda voz para la semana.</h1>
+<div class="note"><b>Antes de leer</b><p>Las lecturas proféticas pertenecen al calendario y a las tradiciones litúrgicas judías. Su extensión puede variar según el rito y la ocasión. Dérej conserva ese contexto antes de abrir una pregunta contemporánea.</p></div>
+<div class="card"><div class="he" id="haftaraHe">שׁוּבָה יִשְׂרָאֵל</div><p style="text-align:center"><b id="haftaraTr"></b></p><p><b id="haftaraRef"></b></p><p id="haftaraText"></p></div>
+<div class="note"><p class="q" id="haftaraQuestion"></p></div>
+<button class="btn light" id="haftaraSource">Abrir lector Torat Emet</button>
+<button class="btn ghost" data-view="home">Volver al Inicio</button>
+</section>
+
+<section id="library" class="view">
+<button class="btn ghost" data-view="portal">← Portales</button>
+<div class="k">Biblioteca Dérej</div>
+<h1>Voces que no mezclamos.</h1>
+<p class="small">La Biblioteca organiza caminos de estudio. Cada tradición conserva su nombre, autor y contexto.</p>
+<div class="card">
+  <div class="src"><span class="tag">📜 Mikrá</span><b>Torá y Escrituras</b><p class="small">La raíz textual antes de cualquier aplicación.</p></div>
+  <div class="src"><span class="tag">🌿 Sefarad</span><b>Tradición sefardí</b><p class="small">Comentario, Musar, liturgia y memoria.</p></div>
+  <div class="src"><span class="tag">🕯️ Jasidut</span><b>Voces jasídicas</b><p class="small">Autores y obras identificados.</p></div>
+  <div class="src"><span class="tag">✨ Kabbalah</span><b>Lectura cabalística</b><p class="small">Fuentes con atribución y contexto.</p></div>
+  <div class="src"><span class="tag">🔥 Jabad</span><b>Jabad / Chabad</b><p class="small">Una voz jasídica particular, presentada separadamente.</p></div>
+</div>
+<button class="btn light" id="librarySources">Abrir fuentes disponibles</button>
+<button class="btn ghost" id="libraryHebrew">Hebreo en el Camino</button>
+</section>
+
+<section id="radio" class="view">
+<button class="btn ghost" data-view="portal">← Portales</button>
+<div class="k">Radio Dérej · experimental</div>
+<h1>♫ Música para continuar fuera de la pantalla.</h1>
+<div class="stage"><div class="big">♫</div><h2>Radio Dérej</h2><p class="small">Canciones creadas para acompañar parashot, Shabbat, reflexión, estudio y momentos de silencio.</p></div>
+<div class="note"><span class="radioDot"></span><b>Conexión Suno</b><p class="small">La arquitectura está preparada para enlazar una playlist o perfil de Suno. En esta beta la reproducción se abrirá en Suno.</p></div>
+<div class="card"><b>La música no será fondo permanente.</b><p class="small">Radio Dérej debe ayudar a recordar una enseñanza, acompañar una práctica o preparar un encuentro; no convertir la app en consumo continuo.</p></div>
+<a class="btn" style="display:block;text-align:center;text-decoration:none" id="radioSuno" href="https://suno.com" target="_blank" rel="noopener noreferrer">Abrir Suno</a>
+<p class="small">Cuando conectemos la playlist oficial, este botón abrirá directamente Radio Dérej.</p>
+</section>
+
+<section id="encounter" class="view"><button class="btn ghost" id="exitEncounter">← Salir</button><div class="k" id="encDate"></div><h1 id="encTitle"></h1><p class="small" id="encSub"></p><div class="note"><b>Qué hacer ahora</b><p id="encInstruction"></p></div><div id="encExperience"></div><button class="btn" id="discoverRoot" disabled>Descubrir la raíz</button></section>
+
+<section id="root" class="view"><div class="k">Raíz</div><div class="he" id="rootHe"></div><p style="text-align:center"><b id="rootTr"></b></p><div class="card"><b id="rootRef"></b><p id="rootCtx"></p></div><div class="card"><b>👣 Lectura Dérej</b><p id="rootDerej"></p></div><div class="note"><p class="q" id="rootClose"></p></div>
+<div class="sourceAccess">
+  <span class="expTag">BETA · FUENTES EN EVALUACIÓN</span>
+  <b>🔗 Abrir la raíz</b>
+  <p class="small">La lectura completa de la porción se abre en un lector externo en español basado en <b>Torat Emet</b>. Dérej conserva aquí la referencia puntual del encuentro.</p>
+  <a class="sourceLink" id="rootSourceLink" target="_blank" rel="noopener noreferrer">📜 Leer la porción completa ahora<span id="rootSourceHint"></span></a>
+  <button class="btn ghost" id="rootGoSources">Ver fuentes de profundización</button>
+</div>
+<button class="btn" id="finishEncounter">Terminar por hoy</button></section>
+
+<section id="done" class="view"><div class="stage"><div class="big">🌿</div><h1>Por hoy, es suficiente.</h1><p class="q" id="doneText"></p></div><p class="small" style="text-align:center">No hay nada que recuperar. El camino sigue aquí.</p><button class="btn" data-view="home">Volver al inicio</button></section>
+
+<section id="hebrew" class="view"><button class="btn ghost" data-view="sources">← Volver</button><div class="k">Hebreo en el Camino</div><h1>Aprender una palabra es escuchar mejor una fuente.</h1><div id="glossary"></div></section>
+
+<section id="umbral" class="view"><button class="btn ghost" data-view="home">← Volver</button><div class="k">Revisión del Camino</div><h1>Preparar el Umbral</h1><div class="he">עַל חֵטְא</div><p style="text-align:center"><b>Al Jet · al JET</b></p><div class="note"><b>Una distinción importante</b><p>Al Jet y el Vidui pertenecen a la liturgia judía de Yom Kipur. Dérej no los reproduce como una liturgia nuestra. Esta experiencia toma una pregunta ética: <b>¿qué conducta necesito reconocer para poder cambiarla?</b></p></div><div class="card"><b>12 preguntas · sin puntuación</b><p class="small">Si un área pide atención, aparecerá una pregunta adicional. No hay nota, diagnóstico ni nivel espiritual.</p></div><div class="privacy"><b>🔒 Privado por diseño</b><p>Las respuestas de la revisión no se guardan. Si eliges un área para trabajar, sólo queda localmente el nombre del área y la fecha del seguimiento.</p></div><button class="btn" id="beginReview">Comenzar la revisión</button><button class="btn ghost" id="learnAlJet">Aprender primero: ¿por qué “Al Jet”?</button></section>
+
+<section id="review" class="view"><div class="k" id="reviewPhase"></div><div class="row"><div class="ico" id="reviewIcon"></div><div><b id="reviewDomain"></b><div class="small" id="reviewCounter"></div></div></div><div class="progress"><span id="reviewProgress"></span></div><div class="card"><p class="q" id="reviewQuestion"></p></div><div id="reviewAnswers"></div><button class="btn ghost" id="cancelReview">Cerrar sin guardar</button></section>
+
+<section id="reviewResult" class="view"><div class="k">Lo que pidió atención</div><h1>Estas áreas no te definen.</h1><p class="small">No apareció una puntuación. Sólo reunimos aquello que tú mismo marcaste como repetición o necesidad de trabajo.</p><div id="resultDomains"></div><div class="card"><b>Elige una sola.</b><p class="small">No la “peor”: aquella que, si trabajas algo pequeño y real, podría mover también otras cosas.</p></div><button class="btn" id="scaleBtn" disabled>Escalar un Paso</button><button class="btn ghost" id="endWithoutChoice">Terminar sin elegir</button></section>
+
+<section id="scale" class="view"><div class="k">Escalar un Paso</div><h1 id="scaleTitle"></h1><div class="chips"><span class="chip on">1 · Reconocer</span><span class="chip">2 · Antes</span><span class="chip">3 · Reparar</span><span class="chip">4 · Practicar</span></div><div class="card"><p class="q" id="scaleCore"></p></div><div class="step"><b>1 · RECONOCER</b><p>Durante siete días, intenta reconocer este patrón un poco antes que antes.</p></div><div class="step"><b>2 · MIRAR EL MOMENTO ANTERIOR</b><p>¿Qué suele ocurrir justo antes: cansancio, apuro, miedo, enojo, deseo de aprobación, hábito?</p></div><div class="step"><b>3 · REPARAR</b><p id="repairQuestion"></p><div id="repairChoices"></div></div><div class="step"><b>4 · PRACTICAR SIETE DÍAS</b><p>Elige un entrenamiento suficientemente pequeño.</p><div id="practiceChoices"></div></div><button class="btn" id="commitStep" disabled>Elegir este paso</button><button class="btn ghost" data-view="reviewResult">← Volver</button></section>
+
+<section id="commitment" class="view"><div class="stage"><div class="big">👣</div><h1>Un paso es suficiente.</h1><p class="q" id="commitmentText"></p></div><div class="privacy"><b>Lo que Dérej guarda</b><p id="commitmentSaved"></p><p class="small">Las respuestas de la revisión y de profundización fueron descartadas.</p></div><button class="btn" id="copyCommitment">Copiar mi práctica</button><button class="btn ghost" data-view="home">Cerrar</button></section>
+
+<section id="echo" class="view"><div class="k">Eco · siete días después</div><h1>No buscamos cumplimiento. Buscamos conciencia.</h1><div class="card"><div class="row"><div class="ico">↶</div><div><b id="echoTitle"></b><div class="small">El área que elegiste observar.</div></div></div></div><div class="note"><p class="q">¿Lo reconoces antes que antes?</p><div id="echoAwareness"></div></div><div class="card"><b>¿La práctica fue suficientemente pequeña para poder vivirla?</b><div id="echoSize"></div></div><div class="card"><b>¿Qué hacemos ahora?</b><p class="small">Tus respuestas al Eco no se guardarán. Sólo sirven para decidir el siguiente movimiento.</p><button class="choice" id="echoKeep" disabled>Mantener el paso 7 días más</button><button class="choice" id="echoAdjust" disabled>Hacer el paso más pequeño</button><button class="choice" id="echoClose" disabled>Cerrar este ciclo</button></div><button class="btn ghost" data-view="home">Volver</button></section>
+
+
+<section id="feedback" class="view">
+<button class="btn ghost" data-view="journey">← Volver</button>
+<div class="k">Tu experiencia</div><h1>Cuéntanos qué ocurrió fuera de la pantalla.</h1>
+<div class="privacy"><b>🔒 Nada se envía automáticamente.</b><p class="small">Escribe sólo lo que quieras compartir. Dérej no guardará estas respuestas; al final podrás compartirlas con tu aplicación de mensajería o copiarlas.</p></div>
+<label><b>¿Algo de Dérej regresó a ti después, cuando ya no estabas mirando la app?</b></label><textarea id="fbEcho" placeholder="Si quieres, cuéntanos una situación concreta…"></textarea>
+<label><b>¿Hubo algo que no entendiste o que te costó recorrer?</b></label><textarea id="fbConfusion" placeholder="Pantalla, palabra, instrucción, fuente…"></textarea>
+<label><b>¿Hubo algo que te incomodó, pareció incorrecto o crees que deberíamos cuidar mejor?</b></label><textarea id="fbCare" placeholder="Tu observación nos ayuda especialmente aquí…"></textarea>
+<button class="btn" id="shareFeedback">Compartir comentario</button>
+<button class="btn ghost" id="copyFeedback">Copiar comentario</button>
+</section>
+</main>
+
+<nav class="nav">
+<button data-view="portal" class="on">◈<br>Portales</button><button data-view="home">⌂<br>Hoy</button><button data-view="week">📖<br>Semana</button><button data-view="library">📚<br>Biblioteca</button><button data-view="journey">👣<br>Mi camino</button>
+</nav>
+
+<script>
+document.addEventListener('DOMContentLoaded',()=>{
+const W=[{"id":"haazinu","start":"2026-09-13","end":"2026-09-19","title":"Haazinu · Escuchar lo que permanece","he":"הַאֲזִינוּ","symbol":"💧","symbolName":"La gota","symbolText":"Algunas enseñanzas permanecen porque descienden como rocío.","days":[["2026-09-13","◎","ESTAR DESPUÉS DEL COMIENZO","¿Qué queda cuando termina el momento solemne?",["Algo recién comienza","Algo necesita asentarse","Algo todavía hace ruido","Algo pide silencio"],"הִנְנִי","Hineni · aquí estoy","Bereshit 22","La lectura tradicional del segundo día de Rosh Hashaná abre una pregunta por la presencia consciente.","Después de un comienzo importante, quizá la primera tarea no sea avanzar: puede ser comprobar dónde estamos.","No tienes que empezar de nuevo. Primero puedes estar aquí.","choice"],["2026-09-14","⌁","RECORDAR","¿Qué no quiero perder justo después de comenzar?",["Algo que recibí","Alguien que sostuvo","Una advertencia que olvidé","Una enseñanza que quiero conservar"],"זְכֹר יְמוֹת עוֹלָם","Zekhor yemot olam · recuerda los días antiguos","Devarim 32:7","Haazinu pide a Israel recordar su historia y preguntar a las generaciones anteriores.","La memoria no sirve sólo para mirar atrás. También puede impedir que el próximo paso nazca sin raíces.","Recuerda una cosa. No necesitas cargar con toda la historia.","choice"],["2026-09-15","💧","RECIBIR COMO ROCÍO","¿Qué puede entrar sin forzarlo?",["Una frase","Un gesto","Un minuto de silencio","Una conversación"],"תִּזַּל כַּטַּל אִמְרָתִי","Tizal katal imrati · que mi palabra destile como rocío","Devarim 32:2","La canción de Moshe compara la enseñanza con lluvia y rocío. La imagen pertenece al poema dirigido a Israel.","No todo cambio necesita intensidad. Algunas cosas entran mejor cuando no intentamos obligarlas.","Deja una gota. No fabriques una tormenta.","choice"],["2026-09-16","⬡","RECONOCER LA ROCA","¿Qué permanece cuando cambia el ánimo?",["Una persona confiable","Una práctica que me ordena","Un valor que no quiero negociar","Una verdad que resiste mi estado de ánimo"],"הַצּוּר תָּמִים פָּעֳלוֹ","HaTzur tamim po'alo · La Roca, perfecta es Su obra","Devarim 32:4","Moshe nombra a Dios como La Roca dentro de la canción y de la relación de Israel con el Eterno.","La imagen abre una pregunta: ¿qué fundamento no debería depender de cómo me siento hoy?","Reconocer un ancla no elimina el movimiento.","choice"],["2026-09-17","◌","NOTAR LO QUE SE VOLVIÓ OBVIO","¿Qué dejo de ver cuando siempre está disponible?",["El cuidado de alguien","Mi cuerpo funcionando","Una oportunidad cotidiana","Un recurso que uso sin agradecer"],"וַיִּשְׁמַן יְשֻׁרוּן","Vayishman Yeshurun · Yeshurún engordó","Devarim 32:15","El poema advierte a Israel que la abundancia también puede producir olvido.","La comodidad puede hacer invisible aquello que antes habríamos reconocido como regalo.","Hoy basta con volver a ver una cosa.","choice"],["2026-09-18","↶","VOLVER","¿Qué orientación quiero recuperar antes de Shabbat?",["1 · RECONOCER — Me desvié de algo importante.","2 · ORIENTAR — Sé hacia dónde quiero volver.","3 · PRIMER PASO — Puedo nombrar un acto pequeño."],"שׁוּבָה יִשְׂרָאֵל","Shuvah Yisrael · vuelve, Israel","Hoshea 14:2","La haftará de Shabbat Shuvah se dirige explícitamente a Israel. Dérej abre una pregunta humana sobre reorientación.","Volver no es fingir que nada ocurrió. Es recuperar dirección llevando contigo lo que aprendiste.","Un giro pequeño también cambia el camino.","bridge"],["2026-09-19","♫","ESCUCHAR LO QUE PERMANECE","¿Qué palabra de la semana sigue viva sin que la app la empuje?",["💧 Rocío","⌁ Memoria","⬡ Roca","◌ Lo que dejé de ver","↶ Volver","Otra cosa apareció"],"הַאֲזִינוּ","Haazinu · escuchen / presten oído","Devarim 32:1–52","Haazinu es una canción de Moshe dirigida a Israel. Este Shabbat es también Shabbat Shuvah.","Una canción puede terminar y seguir sonando. La medida no es cuánto completaste, sino qué regresó cuando la pantalla ya no estaba.","Dérej se retira. La conversación continúa.","recall"]]},{"id":"kippur-sukkot","start":"2026-09-20","end":"2026-09-26","title":"Entre volver y habitar","he":"כִּפּוּר · סֻכּוֹת","symbol":"🚪","symbolName":"El umbral","symbolText":"A veces primero hay que reconocer, reparar, soltar y hacer espacio.","days":[["2026-09-20","▯","DETENERSE ANTES DEL UMBRAL","¿Qué no quiero arrastrar sin mirarlo?",["Una conversación pendiente","Una reacción repetida","Algo que necesito reconocer","Algo que debo dejar de justificar"],"כִּי בַיּוֹם הַזֶּה","Ki vayom hazeh · porque en este día","Vayikrá 16:30","El texto pertenece al servicio de Yom Kipur de Israel y habla de expiación y purificación. Dérej no convierte ese rito en una práctica universal.","Antes de pedir un comienzo distinto, puede ser necesario mirar con claridad aquello que todavía viaja con nosotros.","No resuelvas todo. Nombra el peso.","choice"],["2026-09-21","◐","HACER ESPACIO PARA REPARAR","¿Qué clase de cambio sería visible fuera de mí?",["Escuchar antes de defenderme","Reparar un daño concreto","Devolver algo pendiente","Cambiar una conducta repetida"],"הֲלוֹא זֶה צוֹם אֶבְחָרֵהוּ","Halo ze tzom evjarehu · ¿no es éste el ayuno que escogí?","Yeshayahu 58:6–7","Esta haftará de Yom Kipur critica una religiosidad desconectada de justicia y cuidado del vulnerable.","Una experiencia interior se vuelve más creíble cuando modifica la manera en que tratamos a otros.","Que la reparación tenga una forma visible.","choice"],["2026-09-22","↘","BAJAR EL VOLUMEN","¿Qué puedo dejar de alimentar después de un día intenso?",["La necesidad de tener razón","Una preocupación repetida","Una conversación imaginaria","La urgencia por sentir algo especial"],"שַׁבָּתוֹן","Shabbaton · reposo completo","Vayikrá 23:32","El término aparece en el mandato de Yom Kipur dirigido a Israel. Dérej no traslada la obligación ritual.","Después de un momento profundo, quizá no toca producir más significado sino dejar que algo se asiente.","No todo silencio tiene que llenarse.","choice"],["2026-09-23","□","HACER LUGAR","¿Qué espacio físico o interior necesita quedar disponible?",["Una mesa","Una hora","Una conversación","Un rincón sin pantalla"],"בַּסֻּכּוֹת תֵּשְׁבוּ","Basukkot teshvu · habitarán en sukkot","Vayikrá 23:42","La Torá ordena a Israel habitar en sukkot durante la festividad. Dérej no invita a reproducir el rito.","A veces cambiar de perspectiva requiere cambiar, aunque sea un poco, el lugar desde donde miramos.","Haz lugar antes de llenarlo.","choice"],["2026-09-24","🤝","HACER LUGAR PARA OTRO","¿Quién quedaría fuera si sólo pienso en mi propia alegría?",["Alguien solo","Alguien que necesita ser escuchado","Alguien diferente a mí","Alguien a quien debo invitar de verdad"],"וְשָׂמַחְתָּ בְּחַגֶּךָ","Vesamachta bejagueja · te alegrarás en tu fiesta","Devarim 16:14","El texto sobre Sukkot incluye explícitamente a familia, levita, extranjero, huérfano y viuda dentro de la alegría de Israel.","La alegría que sólo cabe en mí puede ser demasiado pequeña.","Deja un lugar real para otro.","choice"],["2026-09-25","⌂","HABITAR LO FRÁGIL","¿Qué me enseña un espacio que no pretende ser permanente?",["No controlo todo","Necesito de otros","La seguridad absoluta no existe","Puedo agradecer aun sin tener todo resuelto"],"לְמַעַן יֵדְעוּ דֹרֹתֵיכֶם","Lemaan yed'u doroteijem · para que sepan sus generaciones","Vayikrá 23:43","La Torá conecta la sukkah con la memoria histórica de Israel. Dérej conserva ese contexto.","Lo frágil puede revelar dependencias que una estructura permanente oculta.","No necesitas sentirte invulnerable para estar presente.","choice"],["2026-09-26","🌿","ALEGRARSE SIN NEGAR LA FRAGILIDAD","¿Puede haber alegría sin fingir que todo está bien?",["Sí, como gratitud","Sí, como compañía","Sí, como descanso","Todavía no lo sé"],"וּשְׂמַחְתֶּם לִפְנֵי","Usmachtem lifnei · se alegrarán delante de","Vayikrá 23:40","El verso pertenece a la celebración de Sukkot de Israel e incluye las cuatro especies. Dérej no convierte sus objetos rituales en una técnica universal.","La alegría madura no exige negar la fragilidad; puede aparecer precisamente mientras la reconocemos.","Deja que la alegría sea verdadera, no perfecta.","recall"]]},{"id":"sukkot-atzeret","start":"2026-09-27","end":"2026-10-03","title":"Bajo un techo frágil","he":"סֻכּוֹת · עֲצֶרֶת","symbol":"🍃","symbolName":"La rama","symbolText":"Lo vivo se mueve con el viento. Permanecer no significa volverse rígido.","days":[["2026-09-27","🌿","HABITAR","¿Qué cambia cuando acepto que algo es temporal?",["Cuido más","Agradezco más","Controlo menos","Escucho mejor"],"בַּסֻּכּוֹת תֵּשְׁבוּ","Basukkot teshvu · habitarán en sukkot","Vayikrá 23:42","Sukkot II continúa una práctica ritual propia de la vida judía. Dérej observa la tensión entre habitar y saber que el espacio es temporal.","Saber que algo no dura para siempre puede ayudarnos a estar más presentes mientras existe.","Habita lo que hoy sí está.","choice"],["2026-09-28","⊕","REUNIR SIN UNIFORMAR","¿Qué diferencias puedo sostener sin convertirlas en amenaza?",["Ritmos distintos","Opiniones distintas","Historias distintas","Necesidades distintas"],"וּלְקַחְתֶּם לָכֶם","Ulekajtem lajem · tomarán para ustedes","Vayikrá 23:40","El verso introduce las cuatro especies de Sukkot. Dérej no reproduce ni reinterpreta el ritual como si le perteneciera.","Unidad no siempre significa semejanza. A veces consiste en aprender a sostener diferencias sin borrarlas.","No necesitas hacer iguales las piezas para mantenerlas juntas.","choice"],["2026-09-29","💧","RECIBIR AGUA","¿Qué necesito recibir, no producir?",["Descanso","Ayuda","Tiempo","Una palabra buena"],"וּשְׁאַבְתֶּם מַיִם בְּשָׂשׂוֹן","Ushavtem mayim besason · sacarán agua con alegría","Yeshayahu 12:3","Este verso quedó profundamente asociado en la tradición con la celebración del agua en Sukkot.","Hay temporadas en que la tarea no es producir más, sino aprender a recibir.","Recibir también es una forma de participación.","choice"],["2026-09-30","👁","MIRAR LO SUFICIENTE","¿Qué ya está aquí y sigo tratando como si faltara?",["Compañía","Comida","Tiempo","Un lugar seguro"],"וְהָיִיתָ אַךְ שָׂמֵחַ","Vehayita aj sameaj · estarás plenamente alegre","Devarim 16:15","La frase pertenece al mandato de alegría en Sukkot para Israel. Dérej no la transforma en obligación emocional.","Agradecer no significa negar lo que falta. Significa permitir que lo presente también cuente.","Deja que lo suficiente sea visible.","choice"],["2026-10-01","↕","ACEPTAR EL MOVIMIENTO","¿Qué intento fijar aunque ya está cambiando?",["Una relación","Una etapa","Una imagen de mí","Una expectativa"],"הֲבֵל הֲבָלִים","Havel havalim · vapor de vapores","Kohelet 1:2","Kohelet está asociado litúrgicamente a Sukkot en varias comunidades judías.","Lo transitorio no carece de valor. Puede enseñarnos a soltar la fantasía de control.","No todo lo valioso necesita permanecer igual.","choice"],["2026-10-02","↶","PEDIR OTRA OPORTUNIDAD","¿Qué merece una nueva oportunidad antes de cerrar?",["Una conversación","Un hábito","Una relación","Una intención"],"הוֹשַׁע נָא","Hosha na · salva, por favor","Tehilim 118:25","Hoshana Rabbah pertenece a la liturgia y práctica judía de Sukkot. Dérej no imita sus procesiones ni fórmulas.","Pedir ayuda puede ser una forma de honestidad cuando nuestra propia fuerza no alcanza.","No todo tiene que depender sólo de ti.","bridge"],["2026-10-03","○","QUEDARSE UN POCO MÁS","¿Qué merece un día más de atención antes de pasar a lo siguiente?",["Una gratitud","Una conversación","Una enseñanza","Una presencia"],"עֲצֶרֶת תִּהְיֶה לָכֶם","Atzeret tihyeh lajem · será para ustedes una asamblea","Bamidbar 29:35","Shemini Atzeret es una festividad distinta que sigue inmediatamente a Sukkot. Dérej no reproduce sus prácticas.","A veces la prisa por pasar a lo nuevo nos roba la última conversación con lo que estamos dejando.","Antes de terminar, quédate un momento más.","recall"]]},{"id":"bereshit","start":"2026-10-04","end":"2026-10-10","title":"Volver al principio","he":"בְּרֵאשִׁית","symbol":"○","symbolName":"El círculo","symbolText":"Terminar y comenzar pueden tocarse. El final de una lectura puede abrir la primera palabra otra vez.","days":[["2026-10-04","↻","TERMINAR Y VOLVER A EMPEZAR","¿Qué final contiene ya una puerta?",["Una etapa cerrada","Una enseñanza terminada","Una pérdida integrada","Algo que puedo leer de nuevo"],"לְעֵינֵי כָּל יִשְׂרָאֵל · בְּרֵאשִׁית","Le'einei kol Yisrael · Bereshit","Devarim 34:12 · Bereshit 1:1","Simchat Torah concluye Devarim y vuelve inmediatamente al comienzo de Bereshit. Es una celebración ritual judía.","Hay finales que no piden olvidar lo vivido, sino volver al principio con otros ojos.","Empieza otra vez, pero no desde cero.","choice"],["2026-10-05","●","ANTES DE LA FORMA","¿Qué existe todavía sin nombre claro?",["Una intuición","Una preocupación","Un deseo","Una posibilidad"],"תֹהוּ וָבֹהוּ","Tohu vavohu · desorden y vacío","Bereshit 1:2","Bereshit describe el estado inicial antes de la organización de la creación.","No todo lo que aún no tiene forma está perdido. Algunas cosas están comenzando.","No obligues a lo nuevo a tener forma demasiado pronto.","choice"],["2026-10-06","✦","NOMBRAR UNA LUZ","¿Qué pequeña claridad apareció?",["Entendí algo","Puse un límite","Vi una opción","Reconocí una verdad"],"יְהִי אוֹר","Yehi or · sea la luz","Bereshit 1:3","El texto bíblico presenta la luz como uno de los primeros actos de creación.","A veces una vida cambia no porque todo se resuelva, sino porque aparece suficiente luz para ver el próximo paso.","No necesitas iluminarlo todo.","choice"],["2026-10-07","│","SEPARAR PARA DISTINGUIR","¿Qué necesito dejar de mezclar?",["Hechos y temores","Deseo y obligación","Responsabilidad y culpa","Lo mío y lo del otro"],"וַיַּבְדֵּל","Vayavdel · separó / distinguió","Bereshit 1:4","En Bereshit, separar permite distinguir luz y oscuridad. La acción no implica declarar que todo contraste es moral.","Distinguir puede ser más útil que juzgar.","Separa lo suficiente para poder verlo.","choice"],["2026-10-08","✓","RECONOCER LO BUENO","¿Qué cosa concreta puedo llamar buena sin exagerarla?",["Un gesto","Un avance","Una relación","Una decisión"],"וַיַּרְא ... כִּי טוֹב","Vayar... ki tov · vio que era bueno","Bereshit 1","La fórmula se repite en el relato de la creación. Dérej no la usa como garantía de que todo lo que ocurre sea bueno.","Reconocer lo bueno no exige negar lo incompleto.","Nombra una cosa buena y déjala ser suficiente.","choice"],["2026-10-09","🤝","NO CREAR SOLOS","¿Qué parte de mi camino necesita relación?",["Pedir ayuda","Escuchar otra mirada","Compartir una carga","Acompañar a alguien"],"לֹא טוֹב הֱיוֹת הָאָדָם לְבַדּוֹ","Lo tov heyot ha'adam levado · no es bueno que el ser humano esté solo","Bereshit 2:18","El verso pertenece al relato de la creación del ser humano y su relación. Dérej evita convertirlo en una única norma sobre matrimonio o forma de vida.","La autonomía tiene límites. Hay cosas que sólo se vuelven humanas en relación.","No cargues todo a solas.","choice"],["2026-10-10","?","¿DÓNDE ESTÁS?","¿Dónde estoy después de haber comenzado otra vez?",["Más presente","Todavía confundido","En movimiento","Necesito volver a mirar"],"אַיֶּכָּה","Ayeká · ¿dónde estás?","Bereshit 3:9","La pregunta aparece cuando el ser humano se esconde. Dérej no la usa para simular la voz divina dirigida al usuario.","Una buena pregunta no siempre acusa. A veces simplemente devuelve orientación.","El comienzo continúa con una pregunta.","recall"]]}], DOMAINS=[{"id":"D01","icon":"💬","title":"Palabra y reputación","core":"¿He usado mis palabras para herir, ridiculizar, manipular o disminuir a alguien?","pattern":"¿Hablo de una persona ausente de una forma que no sostendría si estuviera presente?","impact":"¿Mi tono, bromas o comentarios hacen que otra persona se sienta expuesta o humillada?","repair":"¿Qué necesito aclarar, retirar, corregir o conversar directamente en vez de seguir comentándolo con terceros?","practice":"Antes de comentar sobre alguien ausente, detenerme y preguntar si realmente es necesario."},{"id":"D02","icon":"◐","title":"Verdad, promesas e integridad","core":"¿He presentado una versión incompleta de los hechos porque me convenía?","pattern":"¿He prometido algo sabiendo que probablemente no lo cumpliría?","impact":"¿Alguien ha tomado una decisión con información que yo sabía que era incompleta o engañosa?","repair":"¿Qué verdad necesito decir o corregir con precisión, sin exagerar ni justificarme?","practice":"Antes de comprometerme, comprobar si realmente puedo cumplir lo que voy a prometer."},{"id":"D03","icon":"⚡","title":"Reacción, impulso y autocontrol","core":"¿He actuado impulsivamente aun sabiendo que después lamentaría la consecuencia?","pattern":"¿Uso 'no pude evitarlo' para no examinar una conducta que sí puedo aprender a regular?","impact":"¿He descargado tensión sobre alguien que no era responsable de ella?","repair":"¿Qué señal física, emoción o situación puedo reconocer un poco antes la próxima vez?","practice":"En una situación de tensión, hacer una pausa breve antes de responder o decidir."},{"id":"D04","icon":"🪞","title":"Orgullo, humildad y receptividad","core":"¿Me ha costado reconocer un error porque sentía que perdería autoridad, prestigio o imagen?","pattern":"¿Desecho una crítica útil antes de comprobar si contiene algo que necesito escuchar?","impact":"¿He hecho sentir menos a otra persona para proteger mi propia imagen?","repair":"¿Qué puedo practicar para escuchar una opinión distinta sin convertirla inmediatamente en una amenaza?","practice":"Ante una crítica, hacer una pregunta antes de defenderme."},{"id":"D05","icon":"⚖️","title":"Juicio, comparación y resentimiento","core":"¿He reducido a una persona a un error, una opinión o una etiqueta?","pattern":"¿Siento resentimiento frente al éxito de alguien o pienso que no lo merece?","impact":"¿He juzgado antes de tener suficiente información o he alimentado deseos de venganza?","repair":"¿Qué juicio puedo suspender, qué información me falta o qué resentimiento necesito dejar de alimentar?","practice":"Cuando aparezca un juicio, nombrar una información que todavía me falta."},{"id":"D06","icon":"🤝","title":"Relaciones, amistad y confianza","core":"¿He dado por sentado a quienes me cuidan, acompañan o confían en mí?","pattern":"¿He divulgado información que me fue confiada o usado una confidencia para obtener ventaja?","impact":"¿Alguien cercano recibe habitualmente mi cansancio mientras otros reciben mi mejor versión?","repair":"¿Qué acto concreto de escucha, gratitud, disculpa o fidelidad a una confianza puedo realizar?","practice":"Ofrecer un momento de atención real, sin teléfono, a una relación importante."},{"id":"D07","icon":"○","title":"Compasión, omisión y comunidad","core":"¿Vi una necesidad o una injusticia en la que podía ayudar razonablemente y preferí no involucrarme?","pattern":"¿La repetición de noticias, sufrimiento o conflictos me ha vuelto indiferente a personas concretas?","impact":"¿Mi silencio o pasividad permitió que alguien quedara solo, humillado o desprotegido?","repair":"¿Qué ayuda pequeña y específica sí está dentro de mi responsabilidad ahora?","practice":"Elegir una necesidad concreta en la que sí puedo ayudar esta semana."},{"id":"D08","icon":"⬡","title":"Trabajo, autoridad y justicia","core":"¿He usado mi cargo, experiencia, información o influencia para obtener una ventaja injusta?","pattern":"¿Exijo a otros algo que yo no aceptaría si las posiciones estuvieran invertidas?","impact":"¿Hay alguien que no se siente libre de decirme la verdad por la forma en que ejerzo autoridad?","repair":"¿Qué decisión puedo revisar incorporando la voz o el interés de quien tiene menos poder?","practice":"Antes de una decisión que afecta a otros, mirarla desde la posición con menos poder."},{"id":"D09","icon":"◫","title":"Dinero, consumo y recursos","core":"¿He obtenido beneficio aprovechando innecesariamente la urgencia, ignorancia o vulnerabilidad de otra persona?","pattern":"¿Mi relación con el dinero se vuelve tacañería, codicia, acumulación o miedo constante a compartir?","impact":"¿Una decisión económica mía trasladó a otra persona un costo que justamente me correspondía?","repair":"¿Qué uso de dinero, objetos o recursos puedo volver más justo y consciente esta semana?","practice":"Posponer una compra no necesaria 24 horas y observar qué necesidad intentaba cubrir."},{"id":"D10","icon":"◇","title":"Cuerpo, deseo y límites","core":"¿Trato mi cuerpo y el de los demás con dignidad, cuidado y respeto por los límites?","pattern":"¿He usado la mirada, comentarios, insinuaciones o cercanía física de una manera que puede incomodar u objetificar?","impact":"¿He cruzado límites propios o ajenos buscando gratificación, aprobación o placer inmediato?","repair":"¿Qué límite, conversación o cuidado concreto puede hacer más respetuosa mi relación con el cuerpo y el deseo?","practice":"Tomar en serio una señal de cansancio, exceso o incomodidad antes de ignorarla."},{"id":"D11","icon":"⌁","title":"Tiempo, atención y vida digital","core":"¿Entrego mi mejor atención sólo a lo urgente y dejo sistemáticamente lo importante para después?","pattern":"¿Lleno cada silencio con teléfono, conversación, contenido o actividad para no quedarme conmigo mismo?","impact":"¿Qué persona, propósito o responsabilidad recibe continuamente mis sobras de tiempo y atención?","repair":"¿Qué espacio pequeño y real puedo proteger durante siete días para aquello que digo que importa?","practice":"Proteger diariamente un espacio breve sin teléfono para algo que digo que importa."},{"id":"D12","icon":"↗","title":"Responsabilidad, propósito y coherencia","core":"¿He construido explicaciones para algo que, en el fondo, sé que me corresponde asumir?","pattern":"¿Me disculpo, prometo cambiar o uso lenguaje espiritual sin una intención real de actuar diferente?","impact":"¿He usado a Dios, la fe, principios o lenguaje moral para dar autoridad a una promesa, juicio o decisión que no podía sostener honestamente?","repair":"¿Cuál es una responsabilidad, prioridad o compromiso que puedo asumir sin comenzar la frase con 'sí, pero...'?","practice":"Cuando aparezca “sí, pero…”, nombrar primero la parte que sí me corresponde."}], GLOSSARY=[["דֶּרֶךְ","Dérej","DÉ-rej","camino / manera de andar"],["עַל חֵטְא","Al Jet","al JET","por el pecado / por la falta"],["וִדּוּי","Vidui","vi-DÚI","confesión / reconocimiento verbal"],["תְּשׁוּבָה","Teshuvá","te-shu-VÁ","retorno / regreso"],["חֶסֶד","Jésed","JÉ-sed","bondad amorosa / benevolencia"],["שַׁבָּת","Shabbat","sha-BÁT","cese / descanso"],["חב״ד","Jabad","ja-BÁD","Jojmá · Biná · Dáat"],["סֻכּוֹת","Sukot","su-KÓT","cabañas / enramadas"],["שִׂמְחַת תּוֹרָה","Simjat Torá","sim-JÁT to-RÁ","alegría de la Torá"],["בְּרֵאשִׁית","Bereshit","be-re-SHÍT","en el comienzo"]];
+
+const WEEK_READING_LABELS={
+  "haazinu":"Haazinu",
+  "kippur-sukkot":"Yom Kipur · Sukot",
+  "sukkot-atzeret":"Sukot · Shemini Atzeret",
+  "bereshit":"Simjat Torá · Bereshit"
+};
+
+const KEY='derej_beta_comunitaria_v1';
+const ANSWERS=[['No lo reconozco en mí',0],['Alguna vez',1],['Se repite',2],['Necesito trabajar en esto',3]];
+let weekIndex=0, dayIndex=0, encounterStart=0, bridgeStep=0;
+let reviewIndex=0, reviewCore={}, reviewQueue=[], reviewDeepIndex=0, selectedDomain=null, repairSelected=null, practiceSelected=null;
+let echoA=null, echoS=null;
+
+const $=id=>document.getElementById(id);
+function state(){try{return JSON.parse(localStorage.getItem(KEY)||'{"done":{},"events":[],"font":1,"step":null}')}catch(e){return {done:{},events:[],font:1,step:null}}}
+function save(s){try{localStorage.setItem(KEY,JSON.stringify(s))}catch(e){}}
+function log(type,data={}){const s=state();s.events.push({t:Date.now(),type,...data});s.events=s.events.slice(-500);save(s)}
+function localKey(){const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`}
+function findWeek(k=localKey()){let i=W.findIndex(w=>k>=w.start&&k<=w.end);if(i>=0)return i;if(k<W[0].start)return 0;return W.length-1}
+function todayIndex(wi){const k=localKey(),d=W[wi].days;let i=d.findIndex(x=>x[0]===k);return i>=0?i:(k<d[0][0]?0:6)}
+function show(id){document.querySelectorAll('.view').forEach(v=>v.classList.remove('on'));$(id).classList.add('on');document.querySelector('.nav').classList.toggle('hidden',id==='welcome');document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('on',b.dataset.view===id));if(id==='home')renderHome();if(id==='week')renderWeek();if(id==='journey')renderJourney();window.scrollTo(0,0)}
+document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>show(b.dataset.view)));
+
+
+const HAFTARA_BY_WEEK={
+  "haazinu":{title:"Shabbat Shuvah · la voz del retorno",he:"שׁוּבָה יִשְׂרָאֵל",tr:"Shuvah Yisrael · vuelve, Israel",ref:"Hoshea 14:2",text:"La haftará de Shabbat Shuvah se dirige explícitamente a Israel. Según el rito pueden añadirse otros pasajes proféticos.",q:"¿Qué orientación necesito recuperar?"},
+  "kippur-sukkot":{title:"Yom Kipur · una reparación visible",he:"הֲלוֹא זֶה צוֹם אֶבְחָרֵהוּ",tr:"Halo ze tzom evjarehu · ¿no es éste el ayuno que escogí?",ref:"Yeshayahu 58:6–7",text:"Yeshayahu 58 forma parte de la lectura profética de Yom Kipur y confronta una práctica religiosa desligada de justicia y cuidado.",q:"¿Qué cambio interior necesitaría volverse visible en mi manera de tratar a otros?"},
+  "sukkot-atzeret":{title:"Sukot · voces proféticas de la festividad",he:"וּשְׁאַבְתֶּם מַיִם בְּשָׂשׂוֹן",tr:"Ushavtem mayim besason · sacarán agua con alegría",ref:"Yeshayahu 12:3",text:"Durante Sukot aparecen varias lecturas proféticas según el día y el rito. Dérej presenta aquí una voz profética asociada a la memoria del agua sin llamarla una única haftará semanal.",q:"¿Qué necesito aprender a recibir, no sólo producir?"},
+  "bereshit":{title:"Bereshit · creación y testimonio",he:"כֹּה אָמַר הָאֵל",tr:"Ko amar ha-El · así dice Dios",ref:"Yeshayahu 42:5",text:"Yeshayahu 42 está asociado a la haftará de Bereshit en tradiciones judías, con extensiones que pueden variar según el rito.",q:"¿Qué significa vivir como alguien que ha recibido aliento y responsabilidad?"}
+};
+function renderHaftara(){
+  const wi=findWeek(),w=W[wi],h=HAFTARA_BY_WEEK[w.id]||HAFTARA_BY_WEEK.haazinu;
+  $('haftaraTitle').textContent=h.title;$('haftaraHe').textContent=h.he;$('haftaraTr').textContent=h.tr;
+  $('haftaraRef').textContent=h.ref;$('haftaraText').textContent=h.text;$('haftaraQuestion').textContent=h.q;
+  $('haftaraSource').onclick=()=>window.open(toratEmetHaftaraUrl(w.id),'_blank','noopener');
+}
+
+const pid=new URLSearchParams(location.search).get('pid');if(pid)$('pilotLabel').textContent=`Beta comunitaria · participante ${pid} · acceso para nuestra comunidad`; 
+
+
+function formatLocalToday(){
+  const d=new Date();
+  return new Intl.DateTimeFormat('es-CL',{day:'2-digit',month:'short',year:'numeric'}).format(d).replace(/\./g,'').toUpperCase();
+}
+function israelHebrewDate(){
+  const now=new Date();
+  const opts={timeZone:'Asia/Jerusalem',day:'numeric',month:'long',year:'numeric'};
+  let latin='';
+  let native='';
+  try{
+    latin=new Intl.DateTimeFormat('es-ES-u-ca-hebrew',opts).format(now);
+  }catch(e){
+    latin=new Intl.DateTimeFormat('en-US-u-ca-hebrew',opts).format(now);
+  }
+  try{
+    native=new Intl.DateTimeFormat('he-IL-u-ca-hebrew',opts).format(now);
+  }catch(e){}
+  return {latin,native};
+}
+
+function renderHome(){
+  weekIndex=findWeek();dayIndex=todayIndex(weekIndex);updateToratEmetLinks();const w=W[weekIndex],d=w.days[dayIndex],s=state();
+  $('localToday').textContent=formatLocalToday();
+  const hd=israelHebrewDate();
+  $('israelHebrewDate').textContent=hd.latin;
+  $('israelHebrewDateNative').textContent=hd.native;
+  $('weekDates').textContent=`${w.start} → ${w.end}`;$('weekHe').textContent=w.he;$('weekTitle').textContent=w.title;
+  $('todayTitle').textContent=`${d[1]} ${d[2]}`;$('todaySub').textContent=d[3];$('weekSymbol').textContent=w.symbol;$('weekSymbolName').textContent=w.symbolName;$('weekSymbolText').textContent=w.symbolText;
+  const n=w.days.filter(x=>s.done[x[0]]).length;$('weekProgress').style.width=(n/7*100)+'%';$('weekProgressText').textContent=n?`${n} de 7 encuentros vividos. No es una racha ni una deuda.`:'Todavía no hay huellas vividas.';
+  const step=s.step, due=step&&Date.now()>=step.followupAt;$('echoPromo').classList.toggle('hidden',!due);$('umbralPromo').classList.toggle('hidden',!!step);
+  if(due)$('echoPromoText').textContent=`Hace siete días elegiste observar “${step.title}”.`;
+}
+$('startEncounter').addEventListener('click',()=>openEncounter(weekIndex,dayIndex));
+$('openUmbral').addEventListener('click',()=>show('umbral'));$('openEcho').addEventListener('click',openEcho);
+
+function renderWeek(){
+  updateToratEmetLinks();
+  $('weekChips').innerHTML='';W.forEach((w,i)=>{const b=document.createElement('button');b.className='chip'+(i===weekIndex?' on':'');b.textContent=`${w.symbol} ${w.start.slice(5)} · ${WEEK_READING_LABELS[w.id]||w.title}`;b.addEventListener('click',()=>{weekIndex=i;updateToratEmetLinks();renderWeek()});$('weekChips').appendChild(b)});
+  const s=state();$('daysList').innerHTML='';W[weekIndex].days.forEach((d,i)=>{const b=document.createElement('button');b.className='day'+(s.done[d[0]]?' done':'');b.innerHTML=`<div class="ico">${d[1]}</div><div><div class="k">${d[0]}</div><b>${d[2]}</b><div class="small">${d[3]}</div></div><div class="status">${s.done[d[0]]?'✓ VIVIDA':'ABRIR'}</div>`;b.addEventListener('click',()=>openEncounter(weekIndex,i));$('daysList').appendChild(b)});
+}
+
+function openEncounter(wi,di){
+  weekIndex=wi;dayIndex=di;encounterStart=Date.now();bridgeStep=0;const d=W[wi].days[di];log('encounter_start',{week:W[wi].id,date:d[0]});
+  $('encDate').textContent=d[0];$('encTitle').textContent=`${d[1]} ${d[2]}`;$('encSub').textContent=d[3];$('discoverRoot').disabled=true;$('encExperience').innerHTML='';
+  if(d[11]==='bridge'){$('encInstruction').textContent='Construye la experiencia en orden.';d[4].forEach((c,j)=>{const b=document.createElement('button');b.className='choice';b.textContent=c;b.addEventListener('click',()=>{if(j!==bridgeStep){log('friction',{kind:'bridge_order',date:d[0]});$('encInstruction').textContent=`Sigue con la pieza ${bridgeStep+1}.`;return}bridgeStep++;b.classList.add('on');b.disabled=true;if(bridgeStep===d[4].length)$('discoverRoot').disabled=false});$('encExperience').appendChild(b)})}
+  else if(d[11]==='recall'){$('encInstruction').textContent='Primero intenta recordar sin pistas.';const yes=button('Sí · algo volvió'),no=button('Todavía no aparece'),box=document.createElement('div');$('encExperience').append(yes,no,box);const reveal=v=>{log('free_recall',{date:d[0],value:v});yes.remove();no.remove();d[4].forEach(c=>{const b=button(c);b.addEventListener('click',()=>{box.querySelectorAll('.choice').forEach(x=>x.classList.remove('on'));b.classList.add('on');$('discoverRoot').disabled=false});box.appendChild(b)})};yes.addEventListener('click',()=>reveal(1));no.addEventListener('click',()=>reveal(0));}
+  else {$('encInstruction').textContent='Elige una opción. No necesitas justificarla.';d[4].forEach(c=>{const b=button(c);b.addEventListener('click',()=>{$('encExperience').querySelectorAll('.choice').forEach(x=>x.classList.remove('on'));b.classList.add('on');$('discoverRoot').disabled=false});$('encExperience').appendChild(b)})}
+  show('encounter');
+}
+function button(text){const b=document.createElement('button');b.className='choice';b.textContent=text;return b}
+
+
+function toratEmetDirectMeta(weekId){
+  const map={
+    "haazinu":{url:"https://parashot.com.ar/?section=parashot&parasha=haazinu&aliya=all",label:"Haazinu · Devarim 32:1–52"},
+    "bereshit":{url:"https://parashot.com.ar/?section=parashot&parasha=bereshit&aliya=all",label:"Bereshit · Génesis 1:1–6:8"}
+  };
+  return map[weekId]||null;
+}
+function updateToratEmetLinks(){
+  const w=W[weekIndex],m=toratEmetDirectMeta(w.id);
+  const h=$('homeToratEmet'),wk=$('weekToratEmet');
+  if(m){
+    h.href=m.url;
+    h.textContent='📜 Leer '+m.label+' en Torat Emet';
+    wk.href=m.url;
+    wk.textContent='📜 Leer '+m.label+' completo';
+    h.classList.remove('hidden');
+    wk.classList.remove('hidden');
+  }else{
+    h.classList.add('hidden');
+    wk.classList.add('hidden');
+  }
+}
+function toratEmetParashaUrl(weekId){
+  const map={
+    "haazinu":"https://parashot.com.ar/?section=parashot&parasha=haazinu&aliya=all",
+    "bereshit":"https://parashot.com.ar/?section=parashot&parasha=bereshit&aliya=all"
+  };
+  return map[weekId]||"https://parashot.com.ar/parashot/";
+}
+function toratEmetHaftaraUrl(weekId){
+  const map={
+    "bereshit":"https://parashot.com.ar/?section=parashot&parasha=bereshit&aliya=haftara"
+  };
+  // Haazinu 5787 cae en Shabbat Shuvah; evitamos abrir la Haftará regular de Haazinu.
+  return map[weekId]||"https://parashot.com.ar/parashot/";
+}
+function sefariaSearchUrl(ref){
+  const map={Bereshit:'Genesis',Devarim:'Deuteronomy',Hoshea:'Hosea',Vayikrá:'Leviticus',Vayikra:'Leviticus',Yeshayahu:'Isaiah',Tehilim:'Psalms',Bamidbar:'Numbers',Kohelet:'Ecclesiastes'};
+  let q=ref;
+  Object.entries(map).forEach(([a,b])=>{q=q.replaceAll(a,b)});
+  return 'https://www.sefaria.org/search?q='+encodeURIComponent(q);
+}
+$('exitEncounter').addEventListener('click',()=>{log('encounter_abandon',{ms:Date.now()-encounterStart});show('home')});
+$('discoverRoot').addEventListener('click',()=>{const d=W[weekIndex].days[dayIndex];$('rootHe').textContent=d[5];$('rootTr').textContent=d[6];$('rootRef').textContent='📜 '+d[7];$('rootCtx').textContent=d[8];$('rootDerej').textContent=d[9];$('rootClose').textContent=d[10];$('rootSourceLink').href=toratEmetParashaUrl(W[weekIndex].id);
+$('rootSourceHint').textContent=(W[weekIndex].id==='haazinu'?'Haazinu · Devarim 32:1–52':W[weekIndex].id==='bereshit'?'Bereshit · Génesis 1:1–6:8':'Semana de festividad · lectura especial del calendario')+' · español · se abre fuera de Dérej';log('root_open',{date:d[0]});show('root')});
+$('rootGoSources').addEventListener('click',()=>show('sources'));
+$('finishEncounter').addEventListener('click',()=>{const d=W[weekIndex].days[dayIndex],s=state();s.done[d[0]]=Date.now();s.events.push({t:Date.now(),type:'encounter_close',week:W[weekIndex].id,date:d[0],ms:Date.now()-encounterStart});save(s);$('doneText').textContent=d[10];show('done')});
+
+function renderJourney(){
+ const s=state(),total=W.flatMap(w=>w.days).length,done=W.flatMap(w=>w.days).filter(d=>s.done[d[0]]).length;$('allProgress').style.width=(done/total*100)+'%';$('allProgressText').textContent=`${done} de ${total} encuentros vividos. Esto es memoria, no puntuación.`;
+ $('activeStepBox').innerHTML='';if(s.step){const box=document.createElement('div');box.className='card';const due=Date.now()>=s.step.followupAt;box.innerHTML=`<div class="k">${due?'Eco disponible':'Paso en curso'}</div><h2>${s.step.title}</h2><p class="small">${due?'Ya puedes revisar qué cambió en tu capacidad de reconocer el patrón.':'El Eco aparecerá '+new Date(s.step.followupAt).toLocaleDateString('es-CL')+'. No necesitas otra revisión hoy.'}</p>`;if(due){const b=document.createElement('button');b.className='btn light';b.textContent='Abrir mi Eco';b.addEventListener('click',openEcho);box.appendChild(b)}$('activeStepBox').appendChild(box)}else $('activeStepBox').innerHTML='<div class="note"><b>No hay un paso activo.</b><p class="small">Puedes iniciar Preparar el Umbral desde Hoy cuando quieras probarlo.</p></div>';
+}
+
+
+$('portalParasha').addEventListener('click',()=>show('home'));
+$('portalHaftara').addEventListener('click',()=>{renderHaftara();show('haftara')});
+$('portalDeep').addEventListener('click',()=>show('sources'));
+$('portalRadio').addEventListener('click',()=>show('radio'));
+$('portalHome').addEventListener('click',()=>show('home'));
+$('portalAbout').addEventListener('click',()=>show('about'));
+$('quickParasha').addEventListener('click',()=>show('week'));
+$('quickHaftara').addEventListener('click',()=>{renderHaftara();show('haftara')});
+$('quickSources').addEventListener('click',()=>show('sources'));
+$('quickLibrary').addEventListener('click',()=>show('library'));
+$('quickRadio').addEventListener('click',()=>show('radio'));
+$('librarySources').addEventListener('click',()=>show('sources'));
+$('libraryHebrew').addEventListener('click',()=>show('hebrew'));
+
+$('openHebrew').addEventListener('click',()=>show('hebrew'));
+$('glossary').innerHTML=GLOSSARY.map(g=>`<div class="card"><div class="he">${g[0]}</div><p style="text-align:center"><b>${g[1]} · ${g[2]}</b></p><p class="small" style="text-align:center">${g[3]}</p></div>`).join('');
+
+$('learnAlJet').addEventListener('click',()=>{show('hebrew');window.scrollTo(0,0)});
+$('beginReview').addEventListener('click',beginReview);$('cancelReview').addEventListener('click',cancelReview);$('endWithoutChoice').addEventListener('click',cancelReview);
+
+function beginReview(){reviewIndex=0;reviewCore={};reviewQueue=[];reviewDeepIndex=0;selectedDomain=null;repairSelected=null;practiceSelected=null;renderCore()}
+function renderReviewAnswers(cb){$('reviewAnswers').innerHTML='';ANSWERS.forEach(([label,val])=>{const b=button(label);b.addEventListener('click',()=>cb(val));$('reviewAnswers').appendChild(b)})}
+function renderCore(){const d=DOMAINS[reviewIndex];$('reviewPhase').textContent='Primera mirada';$('reviewIcon').textContent=d.icon;$('reviewDomain').textContent=d.title;$('reviewCounter').textContent=`${reviewIndex+1} de 12 · una pregunta por área`;$('reviewProgress').style.width=(reviewIndex/12*100)+'%';$('reviewQuestion').textContent=d.core;renderReviewAnswers(v=>{reviewCore[d.id]=v;reviewIndex++;if(reviewIndex<DOMAINS.length)renderCore();else prepareDeep()});show('review')}
+function prepareDeep(){reviewQueue=DOMAINS.filter(d=>(reviewCore[d.id]||0)>=2).sort((a,b)=>(reviewCore[b.id]-reviewCore[a.id])||a.id.localeCompare(b.id)).slice(0,4);reviewDeepIndex=0;reviewQueue.length?renderDeep():renderReviewResult()}
+function renderDeep(){const d=reviewQueue[reviewDeepIndex];$('reviewPhase').textContent='Mirar un poco más';$('reviewIcon').textContent=d.icon;$('reviewDomain').textContent=d.title;$('reviewCounter').textContent=`${reviewDeepIndex+1} de ${reviewQueue.length} · sólo donde apareció un patrón`;$('reviewProgress').style.width=(reviewDeepIndex/reviewQueue.length*100)+'%';$('reviewQuestion').textContent=reviewCore[d.id]===3?d.impact:d.pattern;renderReviewAnswers(()=>{reviewDeepIndex++;reviewDeepIndex<reviewQueue.length?renderDeep():renderReviewResult()});show('review')}
+function renderReviewResult(){let z=[...DOMAINS.filter(d=>reviewCore[d.id]===3),...DOMAINS.filter(d=>reviewCore[d.id]===2),...DOMAINS.filter(d=>reviewCore[d.id]===1)];if(!z.length)z=[...DOMAINS];z=z.slice(0,3);$('resultDomains').innerHTML='';$('scaleBtn').disabled=true;z.forEach(d=>{const b=document.createElement('button');b.className='domain';b.innerHTML=`<div class="row"><div class="ico">${d.icon}</div><div><b>${d.title}</b><div class="small">${reviewCore[d.id]===3?'Pidió atención':reviewCore[d.id]===2?'Se repite':reviewCore[d.id]===1?'Apareció':'Quiero observar'}</div></div></div>`;b.addEventListener('click',()=>{$('resultDomains').querySelectorAll('.domain').forEach(x=>x.classList.remove('on'));b.classList.add('on');selectedDomain=d;$('scaleBtn').disabled=false});$('resultDomains').appendChild(b)});show('reviewResult')}
+function cancelReview(){reviewCore={};reviewQueue=[];selectedDomain=null;show('home')}
+$('scaleBtn').addEventListener('click',()=>{if(!selectedDomain)return;$('scaleTitle').textContent=selectedDomain.title;$('scaleCore').textContent=selectedDomain.core;$('repairQuestion').textContent=selectedDomain.repair;repairSelected=null;practiceSelected=null;$('commitStep').disabled=true;$('repairChoices').innerHTML='';['Sí · hay algo concreto','Tal vez · necesito pensarlo','No veo una reparación pendiente'].forEach(t=>{const b=button(t);b.addEventListener('click',()=>{$('repairChoices').querySelectorAll('.choice').forEach(x=>x.classList.remove('on'));b.classList.add('on');repairSelected=t;checkCommit()});$('repairChoices').appendChild(b)});$('practiceChoices').innerHTML='';[selectedDomain.practice,'Responder de una manera distinta en la próxima situación parecida.','Otra práctica · la escribiré fuera de Dérej.'].forEach(t=>{const b=button(t);b.addEventListener('click',()=>{$('practiceChoices').querySelectorAll('.choice').forEach(x=>x.classList.remove('on'));b.classList.add('on');practiceSelected=t;checkCommit()});$('practiceChoices').appendChild(b)});show('scale')});
+function checkCommit(){$('commitStep').disabled=!(repairSelected&&practiceSelected)}
+$('commitStep').addEventListener('click',()=>{const s=state(),now=Date.now();s.step={domain:selectedDomain.id,title:selectedDomain.title,practice:practiceSelected,startedAt:now,followupAt:now+604800000};s.events.push({t:now,type:'step_started',domain:selectedDomain.id});save(s);$('commitmentText').textContent=`Durante siete días observaré “${selectedDomain.title}”. Mi práctica: ${practiceSelected}`;$('commitmentSaved').textContent=`Sólo: ${selectedDomain.title} + fecha de inicio + fecha del seguimiento.`;reviewCore={};reviewQueue=[];selectedDomain=null;show('commitment')});
+$('copyCommitment').addEventListener('click',()=>navigator.clipboard?.writeText($('commitmentText').textContent).then(()=>alert('Práctica copiada.')));
+
+function openEcho(){const s=state();if(!s.step)return;echoA=null;echoS=null;$('echoTitle').textContent=s.step.title;renderEchoChoices();toggleEchoButtons(false);show('echo')}
+function renderEchoChoices(){$('echoAwareness').innerHTML='';['Antes','A veces','Todavía después','No lo sé'].forEach(t=>{const b=button(t);b.addEventListener('click',()=>{$('echoAwareness').querySelectorAll('.choice').forEach(x=>x.classList.remove('on'));b.classList.add('on');echoA=t;toggleEchoButtons(!!echoA&&!!echoS)});$('echoAwareness').appendChild(b)});$('echoSize').innerHTML='';['Sí','A veces','No'].forEach(t=>{const b=button(t);b.addEventListener('click',()=>{$('echoSize').querySelectorAll('.choice').forEach(x=>x.classList.remove('on'));b.classList.add('on');echoS=t;toggleEchoButtons(!!echoA&&!!echoS)});$('echoSize').appendChild(b)})}
+function toggleEchoButtons(on){$('echoKeep').disabled=!on;$('echoAdjust').disabled=!on;$('echoClose').disabled=!on}
+function echoAction(action){const s=state();if(!s.step)return;const now=Date.now();if(action==='close'){s.events.push({t:now,type:'step_closed',domain:s.step.domain});s.step=null;save(s);alert('Ciclo cerrado. Tus respuestas al Eco no fueron guardadas.');show('home');return}s.step.startedAt=now;s.step.followupAt=now+604800000;s.events.push({t:now,type:action==='keep'?'step_extended':'step_adjusted',domain:s.step.domain});save(s);alert(action==='keep'?'Mantendrás el paso siete días más.':'Harás el paso más pequeño durante siete días.');show('home')}
+$('echoKeep').addEventListener('click',()=>echoAction('keep'));$('echoAdjust').addEventListener('click',()=>echoAction('adjust'));$('echoClose').addEventListener('click',()=>echoAction('close'));
+
+
+$('fontBtn').addEventListener('click',()=>{const s=state(),vals=[1,1.15,1.32],i=vals.indexOf(s.font||1);s.font=vals[(i+1)%vals.length];save(s);applyFont(s.font)});
+function applyFont(v){document.documentElement.style.setProperty('--scale',v);$('fontBtn').textContent=v===1?'Aa':v===1.15?'Aa+':'Aa++'}
+
+
+$('enterBeta').addEventListener('click',()=>{const s=state();s.welcomed=true;save(s);log('beta_enter');show('portal')});
+$('openFeedback').addEventListener('click',()=>show('feedback'));
+function feedbackText(){
+ const a=$('fbEcho').value.trim(),b=$('fbConfusion').value.trim(),c=$('fbCare').value.trim();
+ return `DÉREJ · BETA COMUNITARIA 1.1.4 · TEXTO DIRECTO.1\n\n1. Algo que volvió fuera de la app:\n${a||'—'}\n\n2. Algo difícil o confuso:\n${b||'—'}\n\n3. Algo que deberíamos cuidar mejor:\n${c||'—'}`;
+}
+$('shareFeedback').addEventListener('click',async()=>{
+ const text=feedbackText();
+ try{if(navigator.share){await navigator.share({title:'Dérej · Beta Comunitaria',text});log('feedback_shared')}else{await navigator.clipboard.writeText(text);alert('Comentario copiado. Puedes pegarlo en WhatsApp.');log('feedback_copied')}}catch(e){}
+});
+$('copyFeedback').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(feedbackText());alert('Comentario copiado.');log('feedback_copied')}catch(e){alert('Selecciona el texto y compártelo manualmente.')}});
+let deferredInstallPrompt=null;
+window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredInstallPrompt=e});
+async function installBeta(){
+ if(deferredInstallPrompt){deferredInstallPrompt.prompt();try{await deferredInstallPrompt.userChoice}catch(e){}deferredInstallPrompt=null;return}
+ const ios=/iphone|ipad|ipod/i.test(navigator.userAgent);
+ if(ios){alert('En iPhone/iPad: abre Dérej en Safari → toca Compartir → “Agregar a pantalla de inicio” → Agregar.')}else{alert('En el menú de tu navegador busca “Instalar app” o “Agregar a pantalla de inicio”.')}
+}
+document.querySelectorAll('.installApp').forEach(b=>b.addEventListener('click',installBeta));
+if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}))}
+applyFont(state().font||1);weekIndex=findWeek();renderHome();if(state().welcomed)show('portal');else show('welcome');
+});
+</script></body></html>
