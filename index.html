@@ -44,13 +44,22 @@ textarea{width:100%;min-height:96px;border:1px solid var(--line);border-radius:1
 .coverMini{width:78px;height:78px;border-radius:17px;display:flex;align-items:center;justify-content:center;font-size:2rem;background:linear-gradient(145deg,#392e52,#a85f56);color:#fff}
 .radioMeta{font-size:.72rem;font-weight:850;color:var(--mut);letter-spacing:.06em;text-transform:uppercase}
 .comingSoon{opacity:.72;border-style:dashed}
+
+.radioPlayerWrap{background:#151515;border-radius:20px;overflow:hidden;margin:13px 0;border:1px solid #2b2b2b}
+.radioPlayerWrap iframe{display:block;width:100%;height:180px;border:0;background:#111}
+.radioNow{padding:10px 13px;background:#242424;color:#fff;font-size:.78rem}
+.radioTrackList{display:grid;gap:7px;margin:12px 0}
+.radioTrack{width:100%;display:grid;grid-template-columns:36px 1fr auto;gap:9px;align-items:center;text-align:left;border:1px solid var(--line);border-radius:14px;background:var(--card);color:var(--ink);padding:10px 11px;font:inherit}
+.radioTrack.on{background:var(--soft);border-color:var(--ol)}
+.radioTrackNum{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#eee3d1;font-size:.72rem;font-weight:900}
+.radioTrackPlay{font-size:.85rem;color:var(--mut);font-weight:850}
 </style></head><body>
 <main class="app">
-<header class="top"><div class="brand">Dérej · דרך</div><div class="topR"><span class="badge">BETA COMUNITARIA 1.1.7 · RADIO DÉREJ</span><button class="iconBtn" id="fontBtn" aria-label="Cambiar tamaño de texto">Aa</button></div></header>
+<header class="top"><div class="brand">Dérej · דרך</div><div class="topR"><span class="badge">BETA COMUNITARIA 1.1.8 · RADIO INTERNA</span><button class="iconBtn" id="fontBtn" aria-label="Cambiar tamaño de texto">Aa</button></div></header>
 <div class="pilotbar" id="pilotLabel">Beta comunitaria · acceso para nuestra comunidad · no publicar todavía</div>
 <section id="welcome" class="view">
 <img src="icon-192.png" class="welcomeLogo" alt="Símbolo de Dérej">
-<div style="text-align:center"><span class="betaRibbon">BETA COMUNITARIA 1.1.7 · RADIO DÉREJ</span></div>
+<div style="text-align:center"><span class="betaRibbon">BETA COMUNITARIA 1.1.8 · RADIO INTERNA</span></div>
 <h1 style="text-align:center">Bienvenido a Dérej.</h1>
 <p style="text-align:center">Una experiencia para <b>caminar juntos la parashá de cada semana</b>, acercarnos a las Escrituras y a la sabiduría hebrea, llevar una pregunta a la vida y después salir de la pantalla.</p>
 <div class="card">
@@ -74,7 +83,7 @@ textarea{width:100%;min-height:96px;border:1px solid var(--line);border-radius:1
   <button class="portalCard primary" id="portalParasha"><span class="portalIcon">📖</span><b>Parashá semanal</b><span>El camino principal: siete ventanas para escuchar la raíz de esta semana y llevarla a la vida.</span></button>
   <button class="portalCard" id="portalHaftara"><span class="portalIcon">🕯️</span><b>Haftará · voz profética</b><span>Una segunda puerta hacia la lectura profética asociada a la semana, Shabbat especial o festividad.</span></button>
   <button class="portalCard" id="portalDeep"><span class="portalIcon">🔎</span><b>Profundizar</b><span>Fuentes, comentarios y voces de Sefarad, Jasidut, Kabbalah y Jabad, claramente identificadas.</span></button>
-  <button class="portalCard" id="portalRadio"><span class="portalIcon">♫</span><b>Radio Dérej</b><span>Meditación ya disponible · música para escuchar, recordar y después volver a la vida.</span></button>
+  <button class="portalCard" id="portalRadio"><span class="portalIcon">♫</span><b>Radio Dérej</b><span>Meditación · 13 canciones que puedes escuchar sin salir de Dérej.</span></button>
 </div>
 <button class="btn ghost" id="portalHome">Ver el Inicio completo</button>
 <button class="btn ghost" id="portalAbout">Qué es Dérej</button>
@@ -103,7 +112,7 @@ textarea{width:100%;min-height:96px;border:1px solid var(--line);border-radius:1
   <button class="quickCard" id="quickHaftara">🕯️<b>Haftará</b><span>Abrir la voz profética asociada a esta semana.</span></button>
   <button class="quickCard" id="quickSources">📜<b>Fuentes</b><span>Ir directamente a la raíz y las referencias.</span></button>
   <button class="quickCard" id="quickLibrary">📚<b>Biblioteca</b><span>Explorar tradiciones, autores y obras.</span></button>
-  <button class="quickCard radioWide" id="quickRadio">♫<b>Radio Dérej</b><span>Meditación disponible · música para acompañar el camino.</span></button>
+  <button class="quickCard radioWide" id="quickRadio">♫<b>Radio Dérej</b><span>Meditación · reproductor dentro de Dérej.</span></button>
 </div>
 <div class="card"><div class="k">Tu semana · sólo en este dispositivo</div><div class="progress"><span id="weekProgress"></span></div><p class="small" id="weekProgressText"></p></div>
 <div class="stage"><div class="big" id="weekSymbol"></div><h2 id="weekSymbolName"></h2><p class="small" id="weekSymbolText"></p></div>
@@ -177,25 +186,37 @@ textarea{width:100%;min-height:96px;border:1px solid var(--line);border-radius:1
 </section>
 
 
+
 <section id="radio" class="view">
 <button class="btn ghost" data-view="portal">← Portales</button>
-<div class="k">Radio Dérej · primera playlist activa</div>
-<h1>♫ Música para continuar el camino.</h1>
-<p class="small">Radio Dérej reúne música creada para acompañar momentos de estudio, silencio, reflexión y memoria. La música no es el destino: es otra puerta para que una enseñanza vuelva cuando la pantalla ya no está delante.</p>
+<div class="k">Radio Dérej · reproductor interno</div>
+<h1>♫ Meditación</h1>
+<p class="small">Baja el ruido, respira y vuelve al centro. Elige una pieza y escúchala sin salir de Dérej.</p>
 
-<div class="radioPlaylist">
-  <div class="radioPlaylistHead">
-    <div class="coverMini">♫</div>
-    <div>
-      <div class="radioMeta">Playlist · Meditación</div>
-      <h2>Radio Dérej · Meditación</h2>
-      <p class="small">13 canciones · Danygrafiko</p>
-    </div>
-  </div>
-  <p>Un espacio sonoro para bajar el ruido, respirar y volver al centro. Música contemplativa y canciones suaves para acompañar el silencio, la reflexión y el camino interior.</p>
-  <a class="btn" href="https://suno.com/playlist/95b0df94-31a8-48e4-8184-0686bd771c99" style="display:block;text-align:center;text-decoration:none">▶ Escuchar Radio Dérej · Meditación</a>
-<p class="small" style="text-align:center">Toca para abrir directamente la playlist en Suno.</p>
+<div class="radioPlayerWrap">
+  <iframe id="radioEmbed" src="https://suno.com/embed/4b8c413c-5da7-4351-b667-8f2631b41f7d" title="Radio Dérej · reproductor Suno" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+  <div class="radioNow">Ahora: <b id="radioNowTitle">Shofar of Contemplation</b></div>
 </div>
+
+<div class="radioTrackList" id="radioTrackList">
+<button class="radioTrack on" data-suno-id="4b8c413c-5da7-4351-b667-8f2631b41f7d" data-title="Shofar of Contemplation"><span class="radioTrackNum">1</span><span><b>Shofar of Contemplation</b><span class="small" style="display:block">Radio Dérej · Meditación</span></span><span class="radioTrackPlay">▶</span></button>
+<button class="radioTrack" data-suno-id="42ddbf2b-32d0-466f-88de-43df36e85ad1" data-title="Meditación II"><span class="radioTrackNum">2</span><span><b>Meditación II</b><span class="small" style="display:block">Radio Dérej · Meditación</span></span><span class="radioTrackPlay">▶</span></button>
+<button class="radioTrack" data-suno-id="23554639-74a6-4ab3-a777-4d26dbfd3e07" data-title="Meditación III"><span class="radioTrackNum">3</span><span><b>Meditación III</b><span class="small" style="display:block">Radio Dérej · Meditación</span></span><span class="radioTrackPlay">▶</span></button>
+<button class="radioTrack" data-suno-id="f48c39b4-1e53-4dd1-aae6-bc0e81d937c8" data-title="Meditación IV"><span class="radioTrackNum">4</span><span><b>Meditación IV</b><span class="small" style="display:block">Radio Dérej · Meditación</span></span><span class="radioTrackPlay">▶</span></button>
+<button class="radioTrack" data-suno-id="6c418cdc-67ed-4b92-9a3b-285990f7d3b8" data-title="Meditación V"><span class="radioTrackNum">5</span><span><b>Meditación V</b><span class="small" style="display:block">Radio Dérej · Meditación</span></span><span class="radioTrackPlay">▶</span></button>
+<button class="radioTrack" data-suno-id="d312a227-2b9c-4920-b9e9-7dc958d3f1be" data-title="Resonancia Oceánica"><span class="radioTrackNum">6</span><span><b>Resonancia Oceánica</b><span class="small" style="display:block">Radio Dérej · Meditación</span></span><span class="radioTrackPlay">▶</span></button>
+<button class="radioTrack" data-suno-id="241d3781-cc7e-474c-8bca-4bfb0d6da33c" data-title="Oy, Neshama"><span class="radioTrackNum">7</span><span><b>Oy, Neshama</b><span class="small" style="display:block">Radio Dérej · Meditación</span></span><span class="radioTrackPlay">▶</span></button>
+<button class="radioTrack" data-suno-id="c47c8464-cac7-4f56-a8f9-a1e10ff1e2e9" data-title="Meditación VIII"><span class="radioTrackNum">8</span><span><b>Meditación VIII</b><span class="small" style="display:block">Radio Dérej · Meditación</span></span><span class="radioTrackPlay">▶</span></button>
+<button class="radioTrack" data-suno-id="a866b7e8-3bd2-4427-adee-f5d1975c4405" data-title="Dum Na, Dum Na Re"><span class="radioTrackNum">9</span><span><b>Dum Na, Dum Na Re</b><span class="small" style="display:block">Radio Dérej · Meditación</span></span><span class="radioTrackPlay">▶</span></button>
+<button class="radioTrack" data-suno-id="c3328268-fcd3-41cf-bebf-0a3fb5d493bb" data-title="Oy"><span class="radioTrackNum">10</span><span><b>Oy</b><span class="small" style="display:block">Radio Dérej · Meditación</span></span><span class="radioTrackPlay">▶</span></button>
+<button class="radioTrack" data-suno-id="f31eb5c0-4acd-4c4c-af4b-f48acc6af38d" data-title="Oy Neshama"><span class="radioTrackNum">11</span><span><b>Oy Neshama</b><span class="small" style="display:block">Radio Dérej · Meditación</span></span><span class="radioTrackPlay">▶</span></button>
+<button class="radioTrack" data-suno-id="e1c39ddc-da5b-492b-858b-54aa5558d828" data-title="Meditación XII"><span class="radioTrackNum">12</span><span><b>Meditación XII</b><span class="small" style="display:block">Radio Dérej · Meditación</span></span><span class="radioTrackPlay">▶</span></button>
+<button class="radioTrack" data-suno-id="1519b530-f2ff-4564-889a-a2786c38a26d" data-title="Sod"><span class="radioTrackNum">13</span><span><b>Sod</b><span class="small" style="display:block">Radio Dérej · Meditación</span></span><span class="radioTrackPlay">▶</span></button>
+</div>
+
+<div class="note"><b>Elige, escucha y vuelve.</b><p class="small">Radio Dérej no busca mantenerte dentro de la app. La música acompaña el silencio, el estudio y la memoria.</p></div>
+
+<a class="btn ghost" href="https://suno.com/playlist/95b0df94-31a8-48e4-8184-0686bd771c99" target="_blank" rel="noopener noreferrer" style="display:block;text-align:center;text-decoration:none">Ver playlist completa en Suno</a>
 
 <div class="radioPlaylist comingSoon">
   <div class="radioPlaylistHead">
@@ -206,12 +227,10 @@ textarea{width:100%;min-height:96px;border:1px solid var(--line);border-radius:1
       <p class="small">Una banda sonora para caminar la Torá semana a semana.</p>
     </div>
   </div>
-  <p class="small">Las canciones inspiradas en cada parashá irán reuniéndose aquí a medida que avancemos por el calendario.</p>
   <button class="btn ghost" disabled>Próximamente</button>
 </div>
-
-<div class="note"><b>Escuchar también es una forma de recordar.</b><p class="small">Entra cuando la música pueda acompañar algo que ya estás viviendo. Sal cuando sea suficiente.</p></div>
 </section>
+
 
 
 <section id="encounter" class="view"><button class="btn ghost" id="exitEncounter">← Salir</button><div class="k" id="encDate"></div><h1 id="encTitle"></h1><p class="small" id="encSub"></p><div class="note"><b>Qué hacer ahora</b><p id="encInstruction"></p></div><div id="encExperience"></div><button class="btn" id="discoverRoot" disabled>Descubrir la raíz</button></section>
@@ -410,6 +429,18 @@ function renderJourney(){
 
 
 
+
+document.querySelectorAll('.radioTrack').forEach(b=>{
+  b.addEventListener('click',()=>{
+    document.querySelectorAll('.radioTrack').forEach(x=>x.classList.remove('on'));
+    b.classList.add('on');
+    const id=b.dataset.sunoId,title=b.dataset.title;
+    $('radioNowTitle').textContent=title;
+    $('radioEmbed').src='https://suno.com/embed/'+id;
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+});
+
 $('portalParasha').addEventListener('click',()=>show('home'));
 $('portalHaftara').addEventListener('click',()=>{renderHaftara();show('haftara')});
 $('portalDeep').addEventListener('click',()=>show('sources'));
@@ -457,7 +488,7 @@ $('enterBeta').addEventListener('click',()=>{const s=state();s.welcomed=true;sav
 $('openFeedback').addEventListener('click',()=>show('feedback'));
 function feedbackText(){
  const a=$('fbEcho').value.trim(),b=$('fbConfusion').value.trim(),c=$('fbCare').value.trim();
- return `DÉREJ · BETA COMUNITARIA 1.1.7 · RADIO DÉREJ.1\n\n1. Algo que volvió fuera de la app:\n${a||'—'}\n\n2. Algo difícil o confuso:\n${b||'—'}\n\n3. Algo que deberíamos cuidar mejor:\n${c||'—'}`;
+ return `DÉREJ · BETA COMUNITARIA 1.1.8 · RADIO INTERNA.1\n\n1. Algo que volvió fuera de la app:\n${a||'—'}\n\n2. Algo difícil o confuso:\n${b||'—'}\n\n3. Algo que deberíamos cuidar mejor:\n${c||'—'}`;
 }
 $('shareFeedback').addEventListener('click',async()=>{
  const text=feedbackText();
