@@ -201,7 +201,7 @@ textarea{width:100%;min-height:96px;border:1px solid var(--line);border-radius:1
 <p class="small">Un espacio sonoro para bajar el ruido, respirar y volver al centro. Ahora la música se reproduce directamente dentro de Dérej.</p>
 
 <div class="radioNative">
-  <img class="radioNativeCover" src="assets/radio-meditacion.png" alt="Radio Dérej · Meditación">
+  <img class="radioNativeCover" src="radio-meditacion.png" alt="Radio Dérej · Meditación">
   <div class="radioNativeMeta">
     <div class="radioMeta" style="color:#e5d7cd">Radio Dérej · Meditación</div>
     <h2 id="radioTitle">Radio Dérej · Meditación</h2>
@@ -497,7 +497,7 @@ function radioLoad(i,autoplay=false){
         title:t.title,
         artist:t.artist||'Danygrafiko',
         album:t.collection||'Radio Dérej · Meditación',
-        artwork:[{src:t.artwork||'assets/radio-meditacion.png',sizes:'1254x1254',type:'image/png'}]
+        artwork:[{src:'radio-meditacion.png',sizes:'1254x1254',type:'image/png'}]
       });
     }catch(e){}
   }
