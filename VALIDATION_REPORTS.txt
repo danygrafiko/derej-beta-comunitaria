@@ -1,0 +1,24 @@
+DÉREJ MASTER v1.1 · REPORTES COMUNITARIOS
+
+Backend
+- testimony_reports RLS enabled
+- anon/authenticated: no direct privileges
+- service_role: SELECT/INSERT/UPDATE only
+- one report per testimony + identity (unique constraint)
+- reasons constrained
+- details max 500 chars
+- report-testimony Edge Function ACTIVE
+- identity validated against Supabase Auth
+- 5 reports/hour and 20/day per identity
+- no automatic hiding from reports
+
+Moderation
+- moderation-console v2 exposes only open report metadata to authorized permanent moderators
+- hide => open reports actioned
+- keep published => open reports dismissed
+- reporter user_id is not returned to moderator UI
+
+Tests
+- REPORTS_E2E_OK (transaction rolled back)
+- package JS syntax PASS
+- local HTTP smoke PASS

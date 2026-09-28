@@ -1,0 +1,30 @@
+DÉREJ · Escudo Comunitario v0.1 · VALIDATION
+
+Database / production
+- RLS remains enabled on testimonies.
+- anon/authenticated cannot INSERT, UPDATE or DELETE testimonies directly.
+- public SELECT is column-scoped; user_id and moderation metadata are not selectable.
+- moderation fields exist: moderation_level, moderation_flags, moderation_note, moderated_at, moderated_by, consent_version.
+- body database constraint: 10–1500 trimmed characters.
+- moderation transition trigger stamps moderated_at.
+- published/hidden rows require moderated_at.
+
+Edge Function
+- submit-testimony ACTIVE.
+- Custom auth validates Bearer token through Supabase Auth.
+- user_id is derived server-side; never accepted from client body.
+- conversation availability validated server-side.
+- rate limit: 3/hour and 10/day per identity.
+- automatic classification only prioritizes human review; all submissions remain pending.
+- allowed browser origins are explicit.
+
+Client
+- direct REST insert removed.
+- testimony submission calls /functions/v1/submit-testimony.
+- rules and human-review notice visible before consent.
+
+Pending
+- Anonymous Sign-Ins still needs Dashboard verification/enablement.
+- End-to-end authenticated write test requires a real anonymous Auth session.
+- Private SQL moderation queue exists at private.testimony_moderation_queue for service_role only.
+- Dedicated moderator authentication/UI is a later step; initial moderation can use the private queue/Supabase Dashboard.

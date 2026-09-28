@@ -1,0 +1,24 @@
+DÉREJ MASTER v1.4 · VALIDACIÓN CAPTCHA
+
+Estado: ACTIVO
+Provider: Cloudflare Turnstile
+Site Key: pública, configurada en config.js
+Secret Key: NO incluida en el paquete; configurada en Supabase Auth por el administrador
+
+Backend verificado 2026-09-28:
+- Anonymous Sign-Ins habilitado.
+- Alta anónima sin captcha_token rechazada por Supabase Auth.
+- Error esperado observado: captcha_failed / no captcha_token found.
+- Endpoint diagnóstico retirado después de la prueba.
+
+Frontend:
+- communityCaptchaEnabled = true
+- Turnstile se solicita sólo al crear una nueva identidad anónima.
+- Sesión válida/reutilizable evita desafíos repetidos.
+- Cancelación no crea identidad ni envía contenido.
+- La Secret Key nunca se expone al navegador.
+
+Pendiente de QA humano:
+- Render real del widget en danygrafiko.github.io.
+- Resolución Turnstile en iPhone Safari.
+- Alta anónima real con token válido desde el dominio autorizado.

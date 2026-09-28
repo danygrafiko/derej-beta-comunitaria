@@ -4,7 +4,7 @@
   "collection": "Meditación",
   "creator": "Danygrafiko",
   "description": "Música contemplativa para acompañar silencio, reflexión y camino interior.",
-  "updated_at": "2026-09-25",
+  "updated_at": "2026-09-27",
   "tracks": [
     {
       "id": "med-01",
@@ -13,7 +13,7 @@
       "collection": "Radio Dérej · Meditación",
       "duration": "3:24",
       "path": "meditacion/01-shofar-of-contemplation.mp3",
-      "artwork": "assets/radio-meditacion.png",
+      "artwork": "radio-meditacion.png",
       "ai_assisted": true
     },
     {
@@ -23,7 +23,7 @@
       "collection": "Radio Dérej · Meditación",
       "duration": "3:14",
       "path": "meditacion/02-dawn-over-the-stone-room.mp3",
-      "artwork": "assets/radio-meditacion.png",
+      "artwork": "radio-meditacion.png",
       "ai_assisted": true
     },
     {
@@ -33,7 +33,7 @@
       "collection": "Radio Dérej · Meditación",
       "duration": "3:58",
       "path": "meditacion/03-breathing-through-the-woods.mp3",
-      "artwork": "assets/radio-meditacion.png",
+      "artwork": "radio-meditacion.png",
       "ai_assisted": true
     },
     {
@@ -43,7 +43,7 @@
       "collection": "Radio Dérej · Meditación",
       "duration": "4:04",
       "path": "meditacion/04-cosmic-serenity.mp3",
-      "artwork": "assets/radio-meditacion.png",
+      "artwork": "radio-meditacion.png",
       "ai_assisted": true
     },
     {
@@ -53,7 +53,7 @@
       "collection": "Radio Dérej · Meditación",
       "duration": "4:00",
       "path": "meditacion/05-resonancia-oceanica.mp3",
-      "artwork": "assets/radio-meditacion.png",
+      "artwork": "radio-meditacion.png",
       "ai_assisted": true
     },
     {
@@ -63,7 +63,7 @@
       "collection": "Radio Dérej · Meditación",
       "duration": "2:00",
       "path": "meditacion/06-oy-coma-neshama.mp3",
-      "artwork": "assets/radio-meditacion.png",
+      "artwork": "radio-meditacion.png",
       "ai_assisted": true
     },
     {
@@ -73,7 +73,7 @@
       "collection": "Radio Dérej · Meditación",
       "duration": "3:00",
       "path": "meditacion/07-nafshi-adonai.mp3",
-      "artwork": "assets/radio-meditacion.png",
+      "artwork": "radio-meditacion.png",
       "ai_assisted": true
     },
     {
@@ -83,7 +83,7 @@
       "collection": "Radio Dérej · Meditación",
       "duration": "2:09",
       "path": "meditacion/08-dum-na-dum-na-re.mp3",
-      "artwork": "assets/radio-meditacion.png",
+      "artwork": "radio-meditacion.png",
       "ai_assisted": true
     },
     {
@@ -93,7 +93,7 @@
       "collection": "Radio Dérej · Meditación",
       "duration": "3:03",
       "path": "meditacion/09-oy.mp3",
-      "artwork": "assets/radio-meditacion.png",
+      "artwork": "radio-meditacion.png",
       "ai_assisted": true
     },
     {
@@ -103,7 +103,7 @@
       "collection": "Radio Dérej · Meditación",
       "duration": "3:00",
       "path": "meditacion/10-oy-neshama.mp3",
-      "artwork": "assets/radio-meditacion.png",
+      "artwork": "radio-meditacion.png",
       "ai_assisted": true
     },
     {
@@ -113,7 +113,7 @@
       "collection": "Radio Dérej · Meditación",
       "duration": "3:57",
       "path": "meditacion/11-nafshi-et-adonai.mp3",
-      "artwork": "assets/radio-meditacion.png",
+      "artwork": "radio-meditacion.png",
       "ai_assisted": true
     },
     {
@@ -123,7 +123,7 @@
       "collection": "Radio Dérej · Meditación",
       "duration": "3:03",
       "path": "meditacion/12-sod.mp3",
-      "artwork": "assets/radio-meditacion.png",
+      "artwork": "radio-meditacion.png",
       "ai_assisted": true
     },
     {
@@ -133,7 +133,7 @@
       "collection": "Radio Dérej · Meditación",
       "duration": "3:48",
       "path": "meditacion/13-shofar-invocation.mp3",
-      "artwork": "assets/radio-meditacion.png",
+      "artwork": "radio-meditacion.png",
       "ai_assisted": true
     }
   ]

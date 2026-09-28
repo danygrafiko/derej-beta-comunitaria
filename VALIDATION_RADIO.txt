@@ -1,0 +1,20 @@
+DÉREJ MASTER v0.5 · RADIO LIVE
+Validation date: 2026-09-27
+
+PASS · app.js syntax (node --check)
+PASS · config.js syntax (node --check)
+PASS · all JSON parses
+PASS · radio.json contains 13 tracks
+PASS · canonical artwork path = radio-meditacion.png
+PASS · unique HTML IDs
+PASS · required Radio DOM controls exist
+PASS · config.js loads before app.js
+
+Network audio playback still requires deployment/browser QA against Supabase.
+
+LIVE SUPABASE VERIFICATION · 2026-09-27
+PASS · project derej-production (ryeztkcyopbmwwaacpxl) ACTIVE_HEALTHY
+PASS · bucket radio-derej exists and public=true
+PASS · 13 storage objects found under meditacion/
+PASS · all 13 objects report audio/mpeg
+PASS · object names match radio.json paths

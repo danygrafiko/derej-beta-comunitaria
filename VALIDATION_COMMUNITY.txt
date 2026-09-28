@@ -1,0 +1,21 @@
+DÉREJ MASTER v0.8 · Comunidad LIVE
+
+Static integration checks:
+- Route: community
+- Source: Supabase REST with public publishable key only
+- No service_role key in client
+- Slug: shabat-para-la-tierra
+- RLS expected on conversations, conversation_sections, missions, mission_actions, testimonies
+- Mission reflection remains local; mission_actions sends reflection=null
+- Testimony requires explicit consent and sends status=pending
+- Anonymous Auth attempted only on participation
+- Service worker ignores external Supabase requests
+- Live authenticated write QA depends on Anonymous Sign-Ins being enabled in Supabase Auth.
+
+Live database verification (2026-09-27):
+- anon sees 1 published conversation
+- anon sees 6 published sections
+- anon sees 1 published mission
+- anon sees 0 published testimonies
+- Supabase Security Advisor: 0 lints
+- Anonymous Auth runtime state could not be verified from dashboard because browser automation did not share the user's Supabase login.

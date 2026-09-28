@@ -1,0 +1,14 @@
+DÉREJ MASTER v0.6 · CAMINO LIVE
+Validation date: 2026-09-27
+
+PASS · app.js syntax
+PASS · 4 RC2 weeks migrated
+PASS · 28 encounters migrated
+PASS · choice / bridge / recall supported
+PASS · 4 Haftará context records migrated
+PASS · local-only completion memory
+PASS · unique HTML IDs
+PASS · Radio v0.5 retained
+PASS · Shabat, Sukot and ADAM–ADAMÁ retained
+
+Pending: browser/deployment QA and external-reader link review.

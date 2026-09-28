@@ -1,0 +1,10 @@
+DÉREJ MASTER NAV v0.4 · VALIDATION
+- JS syntax: OK.
+- DOM IDs referenced by app.js: OK.
+- Content Schema v0.1 remains supported.
+- Content Schema v0.2 draft added for ADAM–ADAMÁ.
+- adam-adama.json: schema v0.2 OK.
+- adam-adama-practicas-b1.json: schema v0.2 OK.
+- Checklist local persistence implemented.
+- Layered source renderer implemented for future Peshat/Iyun imports.
+- ADAM Block 1 is a PARTIAL import: missing details were intentionally not invented.

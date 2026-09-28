@@ -1,0 +1,167 @@
+{
+  "version": "1.4",
+  "target_repo": "danygrafiko/derej-beta-comunitaria",
+  "target_branch": "main",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 7501,
+      "sha256": "f712cc072c710f3bfb49b8b3e1ae265b18f6d92f8e3c3787db062cbf1790a941"
+    },
+    {
+      "path": "TURNSTILE_SETUP.md",
+      "bytes": 2179,
+      "sha256": "404033fd0600ada50a0de852b0b37536ddd36e5dd4f9dabb61e5d619e4b8402b"
+    },
+    {
+      "path": "VALIDATION.txt",
+      "bytes": 465,
+      "sha256": "877ce7dd488e5052fed5eb645b715522c332477c65f440f2bbd2a81790b2e2fd"
+    },
+    {
+      "path": "VALIDATION_CAMINO.txt",
+      "bytes": 435,
+      "sha256": "a172b36b27f0c110d1c437805406c96ba109d056e03845f50ed05bf892a2c7d4"
+    },
+    {
+      "path": "VALIDATION_CAPTCHA.txt",
+      "bytes": 933,
+      "sha256": "caf14bd1b1b3a2f415ccf66738898b86841487d5d9517bdd2b7df5a3b9741d6c"
+    },
+    {
+      "path": "VALIDATION_COMMUNITY.txt",
+      "bytes": 981,
+      "sha256": "e477c997afd3c908fee4a37daf52692e6a9dc1cb16648fbe4074cae714db39af"
+    },
+    {
+      "path": "VALIDATION_MODERATION.txt",
+      "bytes": 1640,
+      "sha256": "f3f682ad873e504b9e03fce3066ea30a3ea3b1cdb8e62a4ac5550fe4ebaa5354"
+    },
+    {
+      "path": "VALIDATION_PWA.txt",
+      "bytes": 1085,
+      "sha256": "aa2ca25e6af8351b33b5058386a53f0656a1317dc4bc0d8317055d3fd9d21b30"
+    },
+    {
+      "path": "VALIDATION_RADIO.txt",
+      "bytes": 737,
+      "sha256": "00642f2925cd185bed71a6c0d351f8ac7dc7830d7e81267552e08a3050e1398b"
+    },
+    {
+      "path": "VALIDATION_REPORTS.txt",
+      "bytes": 763,
+      "sha256": "425e06b69be1023d1de384d0b09bf7adb9f535d5e4c3fa04be6850057fbe7415"
+    },
+    {
+      "path": "VALIDATION_SHIELD.txt",
+      "bytes": 1479,
+      "sha256": "60980ee8e1790d074238a63dab7795038adc7756389cfa9452760cc768063d2a"
+    },
+    {
+      "path": "app.js",
+      "bytes": 48413,
+      "sha256": "529e0b03a4e8c366e91fe5d272b3b36c42b7b1cbbd273e0723961d14786343dc"
+    },
+    {
+      "path": "config.js",
+      "bytes": 648,
+      "sha256": "c00ff9fdeda1aede2d279d38ed7aab7063d03dbe5e73e00ebc5761fc9d86a91c"
+    },
+    {
+      "path": "content/adam-adama-practicas-b1.json",
+      "bytes": 5051,
+      "sha256": "ec05729365057f95a722039a16bfa6a5e9fe78d5cd2a754610be8d45a6fa96ca"
+    },
+    {
+      "path": "content/adam-adama.json",
+      "bytes": 5460,
+      "sha256": "a8a930f2ed9a25a9d5595b65adb102667621a3336097cb5382467bed26dc9db4"
+    },
+    {
+      "path": "content/camino-weeks.json",
+      "bytes": 25207,
+      "sha256": "a5d2154881edd79e22a2b5365a590667fd1d5f7ad07bab7ab05a1c769e87ddca"
+    },
+    {
+      "path": "content/shabbat-raiz-bendicion.json",
+      "bytes": 11893,
+      "sha256": "5d3b71004d4ece90d8f05fd544c3838fbb0844ee4d7865bde20f1093f72726bf"
+    },
+    {
+      "path": "content/shabbat.json",
+      "bytes": 2324,
+      "sha256": "881b5e1707934368773c38b55e411f34ced15775f2152f1bbb0724a8cb57b58c"
+    },
+    {
+      "path": "content/sukkot-beit-midrash.json",
+      "bytes": 14273,
+      "sha256": "5784ea874dfe3c8b7a5bc4534eeeaaef4cd100719a4530ad310bd7a4994de7cc"
+    },
+    {
+      "path": "content/sukkot.json",
+      "bytes": 5635,
+      "sha256": "fc49da2c4776d8e2dc4e8bfb6a1131f519cd0dac0b16c5bb39624c57df49f307"
+    },
+    {
+      "path": "icon-180.png",
+      "bytes": 1889,
+      "sha256": "bbb0e35e43f6998b233f85272d6df0aa2df69149db4c4c20a3f525f1e2c7220e"
+    },
+    {
+      "path": "icon-192.png",
+      "bytes": 2044,
+      "sha256": "19f56d6f0086bd28d04c53916c8bc94e300b81e3420e8ae11c4981253ad34b6e"
+    },
+    {
+      "path": "icon-512.png",
+      "bytes": 5519,
+      "sha256": "44b47aab29c152088a09ab1f310bcb350026825888ec2f2aa479c785d5bcd549"
+    },
+    {
+      "path": "index.html",
+      "bytes": 21299,
+      "sha256": "4eaa19c348786e1779f7da182f28563dc473e9949a1b9ced8e0112395e14623c"
+    },
+    {
+      "path": "manifest.webmanifest",
+      "bytes": 965,
+      "sha256": "54899ea2d507de5c13cce523ffc337c97afe7bc97e1d22ba45054f16cc03329f"
+    },
+    {
+      "path": "moderacion.css",
+      "bytes": 3402,
+      "sha256": "79f19cd02bc29433ddd6d1dd1da68ed608daa02da19878f268d713a63cf7cbf4"
+    },
+    {
+      "path": "moderacion.html",
+      "bytes": 2538,
+      "sha256": "00ed731abb729559eb1bacdf7490b7e48026ce53edd516b7849cc9b48693cff3"
+    },
+    {
+      "path": "moderacion.js",
+      "bytes": 9438,
+      "sha256": "b627f83b08ad9431ea2fa40a39159ab4728a4083d63836f114a1f2db5da8ce7a"
+    },
+    {
+      "path": "radio-meditacion.png",
+      "bytes": 167366,
+      "sha256": "ec6e6c77b8a4ece0fd1c1c18d7be4c2c42f63ef9bcac653d0e5a8fc05771ea22"
+    },
+    {
+      "path": "radio.json",
+      "bytes": 4103,
+      "sha256": "ee99cf96fe53437aafa8d267b79c8fa29c80aad7647de34eaaed38a1c6ef75ab"
+    },
+    {
+      "path": "styles.css",
+      "bytes": 18169,
+      "sha256": "d4e72f57d6552561c74def3cb3b959f4cba89fd6ce0bb12e43615ac34ec4e8cf"
+    },
+    {
+      "path": "sw.js",
+      "bytes": 2568,
+      "sha256": "bbd3c2ea13a50f9bc822d03c8e0d08a60c670a3c447454bd3bdabf0f49cb89e6"
+    }
+  ]
+}

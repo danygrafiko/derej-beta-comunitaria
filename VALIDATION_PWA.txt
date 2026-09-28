@@ -1,0 +1,25 @@
+DÉREJ MASTER · RC3 Candidate v0.7 · PWA VALIDATION
+Date: 2026-09-27
+
+PASS · app.js syntax (node --check)
+PASS · sw.js syntax (node --check)
+PASS · manifest.webmanifest parses as JSON
+PASS · 18 Service Worker shell entries resolved locally
+PASS · Radio catalog: 13 tracks
+PASS · Camino: 4 weeks / 28 encounters
+PASS · PWA icons: 180, 192, 512 exact dimensions
+PASS · Local HTTP smoke: index, manifest, service worker, JS, CSS, radio catalog, Camino JSON and icon all HTTP 200
+PASS · Service Worker excludes MP3/audio and Range requests
+PASS · Service Worker ignores cross-origin resources
+PASS · Update flow uses waiting worker + explicit user action
+
+PENDING REAL DEVICE QA
+- iPhone / Safari install + standalone
+- Android / Chrome install prompt
+- Desktop Chromium install
+- Offline reload after first successful SW install
+- Update from v0.7 cache to next release cache
+- Background audio behavior depends on browser/OS policy
+
+RELEASE NOTE
+PWA icons in this package are temporary neutral Master icons. Replace with the canonical RC2/Dérej icon set before public RC3.

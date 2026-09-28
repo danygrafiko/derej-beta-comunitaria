@@ -1,0 +1,33 @@
+DÉREJ MASTER v1.0 · MODERATION BACKEND/UI
+
+Backend production:
+- Edge Function moderation-console ACTIVE.
+- Unauthenticated external GET => 403.
+- Moderator must be a permanent Auth user (anonymous users rejected).
+- Active membership in community_moderators required.
+- community_moderators: RLS enabled, no anon/authenticated grants.
+- moderation_events: RLS enabled, no anon/authenticated grants.
+- Testimony status transitions are audited by database trigger.
+- Published/hidden states require moderated_at + moderated_by.
+
+Frontend:
+- moderacion.html is separate and not linked from the public navigation.
+- No sign-up flow; sign-in only.
+- Moderator tokens are kept in sessionStorage, not localStorage.
+- No service_role/secret key is shipped to the browser.
+- Queue data is fetched cross-origin and is not cached by the PWA Service Worker.
+- Service Worker no longer stores arbitrary navigation responses as index.html.
+
+Pending real QA:
+- Create/authorize first permanent moderator account.
+- Verify email/password sign-in in the actual Supabase Auth configuration.
+- End-to-end Publish / Hide / Return pending with a real testimony.
+- Enable Anonymous Sign-Ins for community participation.
+
+Final production audit — 2026-09-27/28:
+- Security Advisor: 0 lints.
+- community_moderators service_role privileges: SELECT only.
+- moderation_events service_role privileges: SELECT, INSERT only.
+- anon/authenticated: no table privileges on either internal table.
+- Explicit deny-all RLS policies exist for anon/authenticated on both internal tables.
+- Performance Advisor: only unused-index INFO notices, expected before real traffic.
