@@ -1,0 +1,408 @@
+{
+  "schema_version": "0.1",
+  "id": "study.sukkot-sombra-emuna.v0-2",
+  "type": "study",
+  "slug": "sukkot-sombra-emuna",
+  "status": "review",
+  "visibility": "pilot",
+  "title": {
+    "es": "Sukot: El Secreto de la Sombra de Emuná",
+    "he": "צֵל דִּמְהֵימָנוּתָא",
+    "translit": "Tzel de-Mehemanuta",
+    "subtitle": "Beit Midrash digital · raíces, alegría, fragilidad y universalidad"
+  },
+  "summary": "Migración del estudio completo de Sukot a Content Schema: introducción, Sod, Jasidut, Breslev, Ramjal, Avodá, Arizal, Shoevá, 70 Parim, meditación/carta y mapa de Tishrei.",
+  "calendar": {
+    "hebrew_label": "Tishrei",
+    "recurring": true,
+    "precedence": 20
+  },
+  "source_refs": [
+    {
+      "id": "vayikra-23-42-43",
+      "label": "Vayikrá 23:42-43",
+      "tradition": "mikra",
+      "citation": "Vayikrá 23:42-43",
+      "rights": "public_domain"
+    },
+    {
+      "id": "zohar-emor-103a",
+      "label": "Zohar · Emor 103a",
+      "tradition": "kabbalah",
+      "citation": "Zohar Emor 103a",
+      "rights": "internal_review",
+      "note": "Revisar texto arameo, traducción y formulación antes de publicación."
+    },
+    {
+      "id": "zohar-ushpizin",
+      "label": "Zohar · Ushpizin",
+      "tradition": "kabbalah",
+      "citation": "Zohar, tradición de los Ushpizin",
+      "rights": "internal_review"
+    },
+    {
+      "id": "likutei-moharan-sukkot",
+      "label": "Likutei Moharan",
+      "tradition": "jasidut",
+      "citation": "I:10, I:282, II:8, II:23, II:24, II:48",
+      "rights": "internal_review",
+      "note": "Verificar cada correspondencia temática con el texto original."
+    },
+    {
+      "id": "likutei-halajot-sukka",
+      "label": "Likutei Halajot · Hiljot Suká",
+      "tradition": "jasidut",
+      "citation": "Hiljot Suká 1–4",
+      "rights": "internal_review"
+    },
+    {
+      "id": "derej-hashem-iv",
+      "label": "Derej Hashem · Parte IV",
+      "tradition": "rabbinic",
+      "citation": "Ramjal, Derej Hashem Parte IV",
+      "rights": "internal_review"
+    },
+    {
+      "id": "daat-tevunot",
+      "label": "Daat Tevunot",
+      "tradition": "kabbalah",
+      "citation": "Ramjal, Daat Tevunot 52, 152",
+      "rights": "internal_review"
+    },
+    {
+      "id": "mesilat-yesharim-19",
+      "label": "Mesilat Yesharim · cap. 19",
+      "tradition": "rabbinic",
+      "citation": "Ramjal, Mesilat Yesharim 19",
+      "rights": "internal_review"
+    },
+    {
+      "id": "sfat-emet-sukkot",
+      "label": "Sfat Emet · Sukot",
+      "tradition": "jasidut",
+      "citation": "Sfat Emet, enseñanzas de Sukot",
+      "rights": "internal_review"
+    },
+    {
+      "id": "noam-elimelej-emor",
+      "label": "Noam Elimelej · Emor",
+      "tradition": "jasidut",
+      "citation": "Noam Elimelej, Parashat Emor",
+      "rights": "internal_review"
+    },
+    {
+      "id": "sukka-talmud",
+      "label": "Talmud Bavli Suká",
+      "tradition": "rabbinic",
+      "citation": "Suká 2a–56b; en especial 55b para 70 Parim",
+      "rights": "internal_review"
+    },
+    {
+      "id": "yeshayahu-12-3",
+      "label": "Yeshayahu 12:3",
+      "tradition": "mikra",
+      "citation": "Yeshayahu 12:3",
+      "rights": "public_domain"
+    },
+    {
+      "id": "derej-editorial",
+      "label": "Adaptación pedagógica Dérej",
+      "tradition": "derej",
+      "citation": "Síntesis y organización editorial Dérej",
+      "rights": "original",
+      "note": "Distinguir siempre fuente, tradición interpretativa y aplicación contemporánea."
+    }
+  ],
+  "experience": {
+    "entry": {
+      "eyebrow": "Beit Midrash · Moed · Sukot",
+      "intro": "Este estudio conserva la arquitectura extensa del artefacto original, pero la separa de la experiencia breve. Las afirmaciones místicas se presentan como enseñanzas atribuidas y quedan en revisión editorial antes de publicación pública.",
+      "symbol": "🌌"
+    },
+    "blocks": [
+      {
+        "id": "sec-1",
+        "kind": "heading",
+        "title": "1 · Introducción — No es sólo una fiesta agrícola"
+      },
+      {
+        "id": "intro-tishrei",
+        "kind": "reflection",
+        "title": "El abrazo después del juicio",
+        "body": "El artefacto original presenta el ciclo de Tishrei como tránsito desde juicio y purificación hacia una morada frágil y alegre. Dérej conserva la metáfora del abrazo como lectura pedagógica, distinguiéndola del texto bíblico base.",
+        "source_ids": [
+          "vayikra-23-42-43",
+          "derej-editorial"
+        ]
+      },
+      {
+        "id": "nissan-tishrei",
+        "kind": "source",
+        "title": "¿Por qué Sukot en Tishrei?",
+        "body": "El estudio atribuye al Zohar Emor 103a una lectura que vincula la ubicación de Sukot en Tishrei con un proceso de purificación previo. Esta formulación queda en revisión textual antes de publicación.",
+        "source_ids": [
+          "zohar-emor-103a"
+        ]
+      },
+      {
+        "id": "sec-2",
+        "kind": "heading",
+        "title": "2 · Sod — La Cábala de la Suká"
+      },
+      {
+        "id": "tzel",
+        "kind": "source",
+        "title": "Tzel de-Mehemanuta · la Sombra de la Fe",
+        "body": "La tradición zohárica es presentada como una lectura de la suká en términos de sombra, Shejiná y protección. El lenguaje de Or Makif / Or Pnimi se conserva como marco místico atribuido.",
+        "source_ids": [
+          "zohar-emor-103a",
+          "derej-editorial"
+        ]
+      },
+      {
+        "id": "arba-minim",
+        "kind": "reflection",
+        "title": "Arbaat HaMinim",
+        "body": "El artefacto relaciona las cuatro especies con cualidades y tipos humanos. En Master, la aplicación comunitaria se formula como una analogía Dérej: pertenecer sin exigir uniformidad.",
+        "source_ids": [
+          "derej-editorial"
+        ]
+      },
+      {
+        "id": "ushpizin",
+        "kind": "source",
+        "title": "Los siete Ushpizin",
+        "body": "La capa de Sod presenta a los invitados tradicionales de la suká como un mapa de atributos y memoria. Antes de publicación se verificará cada atribución específica.",
+        "source_ids": [
+          "zohar-ushpizin",
+          "derej-editorial"
+        ]
+      },
+      {
+        "id": "sec-3",
+        "kind": "heading",
+        "title": "3 · Jasidut — Alegría y Emuná"
+      },
+      {
+        "id": "jasidut-simja",
+        "kind": "source",
+        "title": "Alegría como trabajo espiritual",
+        "body": "Sfat Emet y Noam Elimelej aparecen en el estudio como voces para pensar la suká, la alegría y la fe más allá de la comodidad material. La síntesis permanece atribuida y en revisión.",
+        "source_ids": [
+          "sfat-emet-sukkot",
+          "noam-elimelej-emor",
+          "derej-editorial"
+        ]
+      },
+      {
+        "id": "sec-4",
+        "kind": "heading",
+        "title": "4 · Rabi Najmán — La corona de la Emuná"
+      },
+      {
+        "id": "najman-simja",
+        "kind": "source",
+        "title": "Mitzvá Guedolá · alegría y renovación",
+        "body": "El artefacto conecta enseñanzas de Likutei Moharan sobre alegría, puntos buenos, renovación y fe con la experiencia de Sukot. Cada referencia será cotejada antes de publicación pública.",
+        "source_ids": [
+          "likutei-moharan-sukkot",
+          "derej-editorial"
+        ]
+      },
+      {
+        "id": "najman-practice",
+        "kind": "question",
+        "title": "Alegría sin negar fragilidad",
+        "prompt": "¿Cómo practicar alegría sin usarla para esconder dolor, incertidumbre o necesidades reales?",
+        "source_ids": [
+          "derej-editorial"
+        ]
+      },
+      {
+        "id": "sec-5",
+        "kind": "heading",
+        "title": "5 · Ramjal — Conducción y propósito"
+      },
+      {
+        "id": "ramjal",
+        "kind": "source",
+        "title": "Tishrei como recorrido",
+        "body": "Derej Hashem, Daat Tevunot y Mesilat Yesharim son utilizados en el artículo como marcos para conectar tiempo, providencia, alegría y finalidad. Master conserva la arquitectura pero exige verificación de cada correspondencia antes de publicación.",
+        "source_ids": [
+          "derej-hashem-iv",
+          "daat-tevunot",
+          "mesilat-yesharim-19",
+          "derej-editorial"
+        ]
+      },
+      {
+        "id": "sec-6",
+        "kind": "heading",
+        "title": "6 · Avodá — Entrar, sentarse, recibir"
+      },
+      {
+        "id": "avoda-umbral",
+        "kind": "practice",
+        "title": "El umbral",
+        "body": "Detenerse antes de entrar y reconocer el cambio de espacio: dejar por un momento la ilusión de permanencia y entrar con atención.",
+        "duration_minutes": 3,
+        "source_ids": [
+          "derej-editorial"
+        ]
+      },
+      {
+        "id": "avoda-hospitalidad",
+        "kind": "practice",
+        "title": "Hospitalidad real",
+        "body": "Invitar, compartir o hacer espacio a alguien convierte el símbolo de la suká en relación concreta.",
+        "source_ids": [
+          "derej-editorial"
+        ]
+      },
+      {
+        "id": "sec-7",
+        "kind": "heading",
+        "title": "7 · Arizal — La noche de la Suká"
+      },
+      {
+        "id": "arizal-night",
+        "kind": "source",
+        "title": "Or Makif y noche",
+        "body": "La segunda parte del artefacto profundiza en lenguaje del Arizal sobre la suká, la noche y la luz envolvente. Estas correspondencias se preservan únicamente como material de Beit Midrash en revisión.",
+        "source_ids": [
+          "zohar-emor-103a",
+          "derej-editorial"
+        ]
+      },
+      {
+        "id": "sec-8",
+        "kind": "heading",
+        "title": "8 · Simjat Beit HaShoevá — Agua y alegría"
+      },
+      {
+        "id": "shoeva",
+        "kind": "hebrew",
+        "title": "Ushavtem Mayim Besason",
+        "he": "וּשְׁאַבְתֶּם מַיִם בְּשָׂשׂוֹן",
+        "translit": "Ushavtem mayim besason",
+        "body": "La imagen de sacar agua con alegría sirve en el estudio como eje de recepción, abundancia y celebración.",
+        "source_ids": [
+          "yeshayahu-12-3"
+        ]
+      },
+      {
+        "id": "sec-9",
+        "kind": "heading",
+        "title": "9 · Los 70 Parim — horizonte universal"
+      },
+      {
+        "id": "parim",
+        "kind": "source",
+        "title": "Setenta toros · setenta naciones",
+        "body": "Suká 55b vincula los setenta toros con las setenta naciones. Master conserva el dato tradicional y lo separa de interpretaciones posteriores sobre universalidad, que se identifican como lectura Dérej.",
+        "source_ids": [
+          "sukka-talmud",
+          "derej-editorial"
+        ]
+      },
+      {
+        "id": "parim-question",
+        "kind": "question",
+        "prompt": "¿Qué significa recibir una tradición propia de manera que también aumente nuestra responsabilidad hacia quienes están fuera de nuestro grupo?",
+        "source_ids": [
+          "derej-editorial"
+        ]
+      },
+      {
+        "id": "sec-10",
+        "kind": "heading",
+        "title": "10 · Carta desde la Suká — memoria personal"
+      },
+      {
+        "id": "carta",
+        "kind": "practice",
+        "title": "Escribir después, no durante",
+        "body": "Fuera del tiempo ritual, escribir una breve carta para recordar qué reveló la fragilidad: qué controlabas, qué recibiste y a quién quieres abrir espacio.",
+        "duration_minutes": 10,
+        "source_ids": [
+          "derej-editorial"
+        ]
+      },
+      {
+        "id": "sec-11",
+        "kind": "heading",
+        "title": "11 · Meditaciones — entrar al infinito por lo frágil"
+      },
+      {
+        "id": "meditacion",
+        "kind": "reflection",
+        "title": "Ver estrellas a través del sjaj",
+        "body": "El artefacto usa la imagen de ver el cielo a través de una cubierta imperfecta como meditación sobre límites: suficiente protección para habitar, suficiente apertura para recordar el cielo.",
+        "source_ids": [
+          "derej-editorial"
+        ]
+      },
+      {
+        "id": "sec-12",
+        "kind": "heading",
+        "title": "12 · Mapa del Tiempo — viaje de Tishrei"
+      },
+      {
+        "id": "mapa-tishrei",
+        "kind": "text",
+        "title": "Elul → Rosh HaShaná → Aseret Yemei Teshuvá → Yom Kipur → Sukot → Shmini Atzeret",
+        "body": "La edición completa organiza estas estaciones como un viaje del alma: preparación, coronación, retorno, purificación, abrazo e intimidad. Es una síntesis pedagógica del artefacto, no una definición halájica exhaustiva.",
+        "source_ids": [
+          "derej-editorial"
+        ]
+      },
+      {
+        "id": "llevar-estudio",
+        "kind": "action",
+        "title": "Una sola práctica",
+        "body": "Elige una enseñanza para llevar a la vida: hospitalidad, gratitud, alegría responsable o aceptación de la fragilidad.",
+        "action": {
+          "label": "Guardar una práctica en este dispositivo",
+          "mode": "local"
+        },
+        "source_ids": [
+          "derej-editorial"
+        ]
+      }
+    ],
+    "closing": {
+      "title": "La suká se desmonta",
+      "body": "El Beit Midrash no intenta reemplazar la suká real ni la vida comunitaria. Su función es ofrecer raíces y preguntas para volver a ellas con más atención.",
+      "prompt": "¿Qué enseñanza de Sukot quieres que siga protegiendo tu manera de vivir cuando ya no estés bajo el sjaj?"
+    }
+  },
+  "navigation": {
+    "parent": "moed.sukkot.core.v0-2",
+    "order": 20,
+    "related": [
+      "moed.sukkot.core.v0-2"
+    ]
+  },
+  "privacy": {
+    "storage": "local",
+    "account_required": false,
+    "notes": "Sólo se guardan localmente las prácticas que el usuario elige conservar."
+  },
+  "metadata": {
+    "content_version": "0.2-migrated",
+    "updated_at": "2026-09-27",
+    "author": "Dérej",
+    "tags": [
+      "sukkot",
+      "beit-midrash",
+      "zohar",
+      "jasidut",
+      "breslev",
+      "ramjal",
+      "arizal",
+      "simja",
+      "tishrei",
+      "70-parim"
+    ]
+  }
+}

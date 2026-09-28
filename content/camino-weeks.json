@@ -1,0 +1,628 @@
+{
+  "schema_version": "weekly-1.0",
+  "source": "RC2 migration",
+  "updated_at": "2026-09-27",
+  "weeks": [
+    {
+      "id": "haazinu",
+      "start": "2026-09-13",
+      "end": "2026-09-19",
+      "title": "Haazinu · Escuchar lo que permanece",
+      "he": "הַאֲזִינוּ",
+      "symbol": "💧",
+      "symbolName": "La gota",
+      "symbolText": "Algunas enseñanzas permanecen porque descienden como rocío.",
+      "days": [
+        [
+          "2026-09-13",
+          "◎",
+          "ESTAR DESPUÉS DEL COMIENZO",
+          "¿Qué queda cuando termina el momento solemne?",
+          [
+            "Algo recién comienza",
+            "Algo necesita asentarse",
+            "Algo todavía hace ruido",
+            "Algo pide silencio"
+          ],
+          "הִנְנִי",
+          "Hineni · aquí estoy",
+          "Bereshit 22",
+          "La lectura tradicional del segundo día de Rosh Hashaná abre una pregunta por la presencia consciente.",
+          "Después de un comienzo importante, quizá la primera tarea no sea avanzar: puede ser comprobar dónde estamos.",
+          "No tienes que empezar de nuevo. Primero puedes estar aquí.",
+          "choice"
+        ],
+        [
+          "2026-09-14",
+          "⌁",
+          "RECORDAR",
+          "¿Qué no quiero perder justo después de comenzar?",
+          [
+            "Algo que recibí",
+            "Alguien que sostuvo",
+            "Una advertencia que olvidé",
+            "Una enseñanza que quiero conservar"
+          ],
+          "זְכֹר יְמוֹת עוֹלָם",
+          "Zekhor yemot olam · recuerda los días antiguos",
+          "Devarim 32:7",
+          "Haazinu pide a Israel recordar su historia y preguntar a las generaciones anteriores.",
+          "La memoria no sirve sólo para mirar atrás. También puede impedir que el próximo paso nazca sin raíces.",
+          "Recuerda una cosa. No necesitas cargar con toda la historia.",
+          "choice"
+        ],
+        [
+          "2026-09-15",
+          "💧",
+          "RECIBIR COMO ROCÍO",
+          "¿Qué puede entrar sin forzarlo?",
+          [
+            "Una frase",
+            "Un gesto",
+            "Un minuto de silencio",
+            "Una conversación"
+          ],
+          "תִּזַּל כַּטַּל אִמְרָתִי",
+          "Tizal katal imrati · que mi palabra destile como rocío",
+          "Devarim 32:2",
+          "La canción de Moshe compara la enseñanza con lluvia y rocío. La imagen pertenece al poema dirigido a Israel.",
+          "No todo cambio necesita intensidad. Algunas cosas entran mejor cuando no intentamos obligarlas.",
+          "Deja una gota. No fabriques una tormenta.",
+          "choice"
+        ],
+        [
+          "2026-09-16",
+          "⬡",
+          "RECONOCER LA ROCA",
+          "¿Qué permanece cuando cambia el ánimo?",
+          [
+            "Una persona confiable",
+            "Una práctica que me ordena",
+            "Un valor que no quiero negociar",
+            "Una verdad que resiste mi estado de ánimo"
+          ],
+          "הַצּוּר תָּמִים פָּעֳלוֹ",
+          "HaTzur tamim po'alo · La Roca, perfecta es Su obra",
+          "Devarim 32:4",
+          "Moshe nombra a Dios como La Roca dentro de la canción y de la relación de Israel con el Eterno.",
+          "La imagen abre una pregunta: ¿qué fundamento no debería depender de cómo me siento hoy?",
+          "Reconocer un ancla no elimina el movimiento.",
+          "choice"
+        ],
+        [
+          "2026-09-17",
+          "◌",
+          "NOTAR LO QUE SE VOLVIÓ OBVIO",
+          "¿Qué dejo de ver cuando siempre está disponible?",
+          [
+            "El cuidado de alguien",
+            "Mi cuerpo funcionando",
+            "Una oportunidad cotidiana",
+            "Un recurso que uso sin agradecer"
+          ],
+          "וַיִּשְׁמַן יְשֻׁרוּן",
+          "Vayishman Yeshurun · Yeshurún engordó",
+          "Devarim 32:15",
+          "El poema advierte a Israel que la abundancia también puede producir olvido.",
+          "La comodidad puede hacer invisible aquello que antes habríamos reconocido como regalo.",
+          "Hoy basta con volver a ver una cosa.",
+          "choice"
+        ],
+        [
+          "2026-09-18",
+          "↶",
+          "VOLVER",
+          "¿Qué orientación quiero recuperar antes de Shabbat?",
+          [
+            "1 · RECONOCER — Me desvié de algo importante.",
+            "2 · ORIENTAR — Sé hacia dónde quiero volver.",
+            "3 · PRIMER PASO — Puedo nombrar un acto pequeño."
+          ],
+          "שׁוּבָה יִשְׂרָאֵל",
+          "Shuvah Yisrael · vuelve, Israel",
+          "Hoshea 14:2",
+          "La haftará de Shabbat Shuvah se dirige explícitamente a Israel. Dérej abre una pregunta humana sobre reorientación.",
+          "Volver no es fingir que nada ocurrió. Es recuperar dirección llevando contigo lo que aprendiste.",
+          "Un giro pequeño también cambia el camino.",
+          "bridge"
+        ],
+        [
+          "2026-09-19",
+          "♫",
+          "ESCUCHAR LO QUE PERMANECE",
+          "¿Qué palabra de la semana sigue viva sin que la app la empuje?",
+          [
+            "💧 Rocío",
+            "⌁ Memoria",
+            "⬡ Roca",
+            "◌ Lo que dejé de ver",
+            "↶ Volver",
+            "Otra cosa apareció"
+          ],
+          "הַאֲזִינוּ",
+          "Haazinu · escuchen / presten oído",
+          "Devarim 32:1–52",
+          "Haazinu es una canción de Moshe dirigida a Israel. Este Shabbat es también Shabbat Shuvah.",
+          "Una canción puede terminar y seguir sonando. La medida no es cuánto completaste, sino qué regresó cuando la pantalla ya no estaba.",
+          "Dérej se retira. La conversación continúa.",
+          "recall"
+        ]
+      ]
+    },
+    {
+      "id": "kippur-sukkot",
+      "start": "2026-09-20",
+      "end": "2026-09-26",
+      "title": "Entre volver y habitar",
+      "he": "כִּפּוּר · סֻכּוֹת",
+      "symbol": "🚪",
+      "symbolName": "El umbral",
+      "symbolText": "A veces primero hay que reconocer, reparar, soltar y hacer espacio.",
+      "days": [
+        [
+          "2026-09-20",
+          "▯",
+          "DETENERSE ANTES DEL UMBRAL",
+          "¿Qué no quiero arrastrar sin mirarlo?",
+          [
+            "Una conversación pendiente",
+            "Una reacción repetida",
+            "Algo que necesito reconocer",
+            "Algo que debo dejar de justificar"
+          ],
+          "כִּי בַיּוֹם הַזֶּה",
+          "Ki vayom hazeh · porque en este día",
+          "Vayikrá 16:30",
+          "El texto pertenece al servicio de Yom Kipur de Israel y habla de expiación y purificación. Dérej no convierte ese rito en una práctica universal.",
+          "Antes de pedir un comienzo distinto, puede ser necesario mirar con claridad aquello que todavía viaja con nosotros.",
+          "No resuelvas todo. Nombra el peso.",
+          "choice"
+        ],
+        [
+          "2026-09-21",
+          "◐",
+          "HACER ESPACIO PARA REPARAR",
+          "¿Qué clase de cambio sería visible fuera de mí?",
+          [
+            "Escuchar antes de defenderme",
+            "Reparar un daño concreto",
+            "Devolver algo pendiente",
+            "Cambiar una conducta repetida"
+          ],
+          "הֲלוֹא זֶה צוֹם אֶבְחָרֵהוּ",
+          "Halo ze tzom evjarehu · ¿no es éste el ayuno que escogí?",
+          "Yeshayahu 58:6–7",
+          "Esta haftará de Yom Kipur critica una religiosidad desconectada de justicia y cuidado del vulnerable.",
+          "Una experiencia interior se vuelve más creíble cuando modifica la manera en que tratamos a otros.",
+          "Que la reparación tenga una forma visible.",
+          "choice"
+        ],
+        [
+          "2026-09-22",
+          "↘",
+          "BAJAR EL VOLUMEN",
+          "¿Qué puedo dejar de alimentar después de un día intenso?",
+          [
+            "La necesidad de tener razón",
+            "Una preocupación repetida",
+            "Una conversación imaginaria",
+            "La urgencia por sentir algo especial"
+          ],
+          "שַׁבָּתוֹן",
+          "Shabbaton · reposo completo",
+          "Vayikrá 23:32",
+          "El término aparece en el mandato de Yom Kipur dirigido a Israel. Dérej no traslada la obligación ritual.",
+          "Después de un momento profundo, quizá no toca producir más significado sino dejar que algo se asiente.",
+          "No todo silencio tiene que llenarse.",
+          "choice"
+        ],
+        [
+          "2026-09-23",
+          "□",
+          "HACER LUGAR",
+          "¿Qué espacio físico o interior necesita quedar disponible?",
+          [
+            "Una mesa",
+            "Una hora",
+            "Una conversación",
+            "Un rincón sin pantalla"
+          ],
+          "בַּסֻּכּוֹת תֵּשְׁבוּ",
+          "Basukkot teshvu · habitarán en sukkot",
+          "Vayikrá 23:42",
+          "La Torá ordena a Israel habitar en sukkot durante la festividad. Dérej no invita a reproducir el rito.",
+          "A veces cambiar de perspectiva requiere cambiar, aunque sea un poco, el lugar desde donde miramos.",
+          "Haz lugar antes de llenarlo.",
+          "choice"
+        ],
+        [
+          "2026-09-24",
+          "🤝",
+          "HACER LUGAR PARA OTRO",
+          "¿Quién quedaría fuera si sólo pienso en mi propia alegría?",
+          [
+            "Alguien solo",
+            "Alguien que necesita ser escuchado",
+            "Alguien diferente a mí",
+            "Alguien a quien debo invitar de verdad"
+          ],
+          "וְשָׂמַחְתָּ בְּחַגֶּךָ",
+          "Vesamachta bejagueja · te alegrarás en tu fiesta",
+          "Devarim 16:14",
+          "El texto sobre Sukkot incluye explícitamente a familia, levita, extranjero, huérfano y viuda dentro de la alegría de Israel.",
+          "La alegría que sólo cabe en mí puede ser demasiado pequeña.",
+          "Deja un lugar real para otro.",
+          "choice"
+        ],
+        [
+          "2026-09-25",
+          "⌂",
+          "HABITAR LO FRÁGIL",
+          "¿Qué me enseña un espacio que no pretende ser permanente?",
+          [
+            "No controlo todo",
+            "Necesito de otros",
+            "La seguridad absoluta no existe",
+            "Puedo agradecer aun sin tener todo resuelto"
+          ],
+          "לְמַעַן יֵדְעוּ דֹרֹתֵיכֶם",
+          "Lemaan yed'u doroteijem · para que sepan sus generaciones",
+          "Vayikrá 23:43",
+          "La Torá conecta la sukkah con la memoria histórica de Israel. Dérej conserva ese contexto.",
+          "Lo frágil puede revelar dependencias que una estructura permanente oculta.",
+          "No necesitas sentirte invulnerable para estar presente.",
+          "choice"
+        ],
+        [
+          "2026-09-26",
+          "🌿",
+          "ALEGRARSE SIN NEGAR LA FRAGILIDAD",
+          "¿Puede haber alegría sin fingir que todo está bien?",
+          [
+            "Sí, como gratitud",
+            "Sí, como compañía",
+            "Sí, como descanso",
+            "Todavía no lo sé"
+          ],
+          "וּשְׂמַחְתֶּם לִפְנֵי",
+          "Usmachtem lifnei · se alegrarán delante de",
+          "Vayikrá 23:40",
+          "El verso pertenece a la celebración de Sukkot de Israel e incluye las cuatro especies. Dérej no convierte sus objetos rituales en una técnica universal.",
+          "La alegría madura no exige negar la fragilidad; puede aparecer precisamente mientras la reconocemos.",
+          "Deja que la alegría sea verdadera, no perfecta.",
+          "recall"
+        ]
+      ]
+    },
+    {
+      "id": "sukkot-atzeret",
+      "start": "2026-09-27",
+      "end": "2026-10-03",
+      "title": "Bajo un techo frágil",
+      "he": "סֻכּוֹת · עֲצֶרֶת",
+      "symbol": "🍃",
+      "symbolName": "La rama",
+      "symbolText": "Lo vivo se mueve con el viento. Permanecer no significa volverse rígido.",
+      "days": [
+        [
+          "2026-09-27",
+          "🌿",
+          "HABITAR",
+          "¿Qué cambia cuando acepto que algo es temporal?",
+          [
+            "Cuido más",
+            "Agradezco más",
+            "Controlo menos",
+            "Escucho mejor"
+          ],
+          "בַּסֻּכּוֹת תֵּשְׁבוּ",
+          "Basukkot teshvu · habitarán en sukkot",
+          "Vayikrá 23:42",
+          "Sukkot II continúa una práctica ritual propia de la vida judía. Dérej observa la tensión entre habitar y saber que el espacio es temporal.",
+          "Saber que algo no dura para siempre puede ayudarnos a estar más presentes mientras existe.",
+          "Habita lo que hoy sí está.",
+          "choice"
+        ],
+        [
+          "2026-09-28",
+          "⊕",
+          "REUNIR SIN UNIFORMAR",
+          "¿Qué diferencias puedo sostener sin convertirlas en amenaza?",
+          [
+            "Ritmos distintos",
+            "Opiniones distintas",
+            "Historias distintas",
+            "Necesidades distintas"
+          ],
+          "וּלְקַחְתֶּם לָכֶם",
+          "Ulekajtem lajem · tomarán para ustedes",
+          "Vayikrá 23:40",
+          "El verso introduce las cuatro especies de Sukkot. Dérej no reproduce ni reinterpreta el ritual como si le perteneciera.",
+          "Unidad no siempre significa semejanza. A veces consiste en aprender a sostener diferencias sin borrarlas.",
+          "No necesitas hacer iguales las piezas para mantenerlas juntas.",
+          "choice"
+        ],
+        [
+          "2026-09-29",
+          "💧",
+          "RECIBIR AGUA",
+          "¿Qué necesito recibir, no producir?",
+          [
+            "Descanso",
+            "Ayuda",
+            "Tiempo",
+            "Una palabra buena"
+          ],
+          "וּשְׁאַבְתֶּם מַיִם בְּשָׂשׂוֹן",
+          "Ushavtem mayim besason · sacarán agua con alegría",
+          "Yeshayahu 12:3",
+          "Este verso quedó profundamente asociado en la tradición con la celebración del agua en Sukkot.",
+          "Hay temporadas en que la tarea no es producir más, sino aprender a recibir.",
+          "Recibir también es una forma de participación.",
+          "choice"
+        ],
+        [
+          "2026-09-30",
+          "👁",
+          "MIRAR LO SUFICIENTE",
+          "¿Qué ya está aquí y sigo tratando como si faltara?",
+          [
+            "Compañía",
+            "Comida",
+            "Tiempo",
+            "Un lugar seguro"
+          ],
+          "וְהָיִיתָ אַךְ שָׂמֵחַ",
+          "Vehayita aj sameaj · estarás plenamente alegre",
+          "Devarim 16:15",
+          "La frase pertenece al mandato de alegría en Sukkot para Israel. Dérej no la transforma en obligación emocional.",
+          "Agradecer no significa negar lo que falta. Significa permitir que lo presente también cuente.",
+          "Deja que lo suficiente sea visible.",
+          "choice"
+        ],
+        [
+          "2026-10-01",
+          "↕",
+          "ACEPTAR EL MOVIMIENTO",
+          "¿Qué intento fijar aunque ya está cambiando?",
+          [
+            "Una relación",
+            "Una etapa",
+            "Una imagen de mí",
+            "Una expectativa"
+          ],
+          "הֲבֵל הֲבָלִים",
+          "Havel havalim · vapor de vapores",
+          "Kohelet 1:2",
+          "Kohelet está asociado litúrgicamente a Sukkot en varias comunidades judías.",
+          "Lo transitorio no carece de valor. Puede enseñarnos a soltar la fantasía de control.",
+          "No todo lo valioso necesita permanecer igual.",
+          "choice"
+        ],
+        [
+          "2026-10-02",
+          "↶",
+          "PEDIR OTRA OPORTUNIDAD",
+          "¿Qué merece una nueva oportunidad antes de cerrar?",
+          [
+            "Una conversación",
+            "Un hábito",
+            "Una relación",
+            "Una intención"
+          ],
+          "הוֹשַׁע נָא",
+          "Hosha na · salva, por favor",
+          "Tehilim 118:25",
+          "Hoshana Rabbah pertenece a la liturgia y práctica judía de Sukkot. Dérej no imita sus procesiones ni fórmulas.",
+          "Pedir ayuda puede ser una forma de honestidad cuando nuestra propia fuerza no alcanza.",
+          "No todo tiene que depender sólo de ti.",
+          "bridge"
+        ],
+        [
+          "2026-10-03",
+          "○",
+          "QUEDARSE UN POCO MÁS",
+          "¿Qué merece un día más de atención antes de pasar a lo siguiente?",
+          [
+            "Una gratitud",
+            "Una conversación",
+            "Una enseñanza",
+            "Una presencia"
+          ],
+          "עֲצֶרֶת תִּהְיֶה לָכֶם",
+          "Atzeret tihyeh lajem · será para ustedes una asamblea",
+          "Bamidbar 29:35",
+          "Shemini Atzeret es una festividad distinta que sigue inmediatamente a Sukkot. Dérej no reproduce sus prácticas.",
+          "A veces la prisa por pasar a lo nuevo nos roba la última conversación con lo que estamos dejando.",
+          "Antes de terminar, quédate un momento más.",
+          "recall"
+        ]
+      ]
+    },
+    {
+      "id": "bereshit",
+      "start": "2026-10-04",
+      "end": "2026-10-10",
+      "title": "Volver al principio",
+      "he": "בְּרֵאשִׁית",
+      "symbol": "○",
+      "symbolName": "El círculo",
+      "symbolText": "Terminar y comenzar pueden tocarse. El final de una lectura puede abrir la primera palabra otra vez.",
+      "days": [
+        [
+          "2026-10-04",
+          "↻",
+          "TERMINAR Y VOLVER A EMPEZAR",
+          "¿Qué final contiene ya una puerta?",
+          [
+            "Una etapa cerrada",
+            "Una enseñanza terminada",
+            "Una pérdida integrada",
+            "Algo que puedo leer de nuevo"
+          ],
+          "לְעֵינֵי כָּל יִשְׂרָאֵל · בְּרֵאשִׁית",
+          "Le'einei kol Yisrael · Bereshit",
+          "Devarim 34:12 · Bereshit 1:1",
+          "Simchat Torah concluye Devarim y vuelve inmediatamente al comienzo de Bereshit. Es una celebración ritual judía.",
+          "Hay finales que no piden olvidar lo vivido, sino volver al principio con otros ojos.",
+          "Empieza otra vez, pero no desde cero.",
+          "choice"
+        ],
+        [
+          "2026-10-05",
+          "●",
+          "ANTES DE LA FORMA",
+          "¿Qué existe todavía sin nombre claro?",
+          [
+            "Una intuición",
+            "Una preocupación",
+            "Un deseo",
+            "Una posibilidad"
+          ],
+          "תֹהוּ וָבֹהוּ",
+          "Tohu vavohu · desorden y vacío",
+          "Bereshit 1:2",
+          "Bereshit describe el estado inicial antes de la organización de la creación.",
+          "No todo lo que aún no tiene forma está perdido. Algunas cosas están comenzando.",
+          "No obligues a lo nuevo a tener forma demasiado pronto.",
+          "choice"
+        ],
+        [
+          "2026-10-06",
+          "✦",
+          "NOMBRAR UNA LUZ",
+          "¿Qué pequeña claridad apareció?",
+          [
+            "Entendí algo",
+            "Puse un límite",
+            "Vi una opción",
+            "Reconocí una verdad"
+          ],
+          "יְהִי אוֹר",
+          "Yehi or · sea la luz",
+          "Bereshit 1:3",
+          "El texto bíblico presenta la luz como uno de los primeros actos de creación.",
+          "A veces una vida cambia no porque todo se resuelva, sino porque aparece suficiente luz para ver el próximo paso.",
+          "No necesitas iluminarlo todo.",
+          "choice"
+        ],
+        [
+          "2026-10-07",
+          "│",
+          "SEPARAR PARA DISTINGUIR",
+          "¿Qué necesito dejar de mezclar?",
+          [
+            "Hechos y temores",
+            "Deseo y obligación",
+            "Responsabilidad y culpa",
+            "Lo mío y lo del otro"
+          ],
+          "וַיַּבְדֵּל",
+          "Vayavdel · separó / distinguió",
+          "Bereshit 1:4",
+          "En Bereshit, separar permite distinguir luz y oscuridad. La acción no implica declarar que todo contraste es moral.",
+          "Distinguir puede ser más útil que juzgar.",
+          "Separa lo suficiente para poder verlo.",
+          "choice"
+        ],
+        [
+          "2026-10-08",
+          "✓",
+          "RECONOCER LO BUENO",
+          "¿Qué cosa concreta puedo llamar buena sin exagerarla?",
+          [
+            "Un gesto",
+            "Un avance",
+            "Una relación",
+            "Una decisión"
+          ],
+          "וַיַּרְא ... כִּי טוֹב",
+          "Vayar... ki tov · vio que era bueno",
+          "Bereshit 1",
+          "La fórmula se repite en el relato de la creación. Dérej no la usa como garantía de que todo lo que ocurre sea bueno.",
+          "Reconocer lo bueno no exige negar lo incompleto.",
+          "Nombra una cosa buena y déjala ser suficiente.",
+          "choice"
+        ],
+        [
+          "2026-10-09",
+          "🤝",
+          "NO CREAR SOLOS",
+          "¿Qué parte de mi camino necesita relación?",
+          [
+            "Pedir ayuda",
+            "Escuchar otra mirada",
+            "Compartir una carga",
+            "Acompañar a alguien"
+          ],
+          "לֹא טוֹב הֱיוֹת הָאָדָם לְבַדּוֹ",
+          "Lo tov heyot ha'adam levado · no es bueno que el ser humano esté solo",
+          "Bereshit 2:18",
+          "El verso pertenece al relato de la creación del ser humano y su relación. Dérej evita convertirlo en una única norma sobre matrimonio o forma de vida.",
+          "La autonomía tiene límites. Hay cosas que sólo se vuelven humanas en relación.",
+          "No cargues todo a solas.",
+          "choice"
+        ],
+        [
+          "2026-10-10",
+          "?",
+          "¿DÓNDE ESTÁS?",
+          "¿Dónde estoy después de haber comenzado otra vez?",
+          [
+            "Más presente",
+            "Todavía confundido",
+            "En movimiento",
+            "Necesito volver a mirar"
+          ],
+          "אַיֶּכָּה",
+          "Ayeká · ¿dónde estás?",
+          "Bereshit 3:9",
+          "La pregunta aparece cuando el ser humano se esconde. Dérej no la usa para simular la voz divina dirigida al usuario.",
+          "Una buena pregunta no siempre acusa. A veces simplemente devuelve orientación.",
+          "El comienzo continúa con una pregunta.",
+          "recall"
+        ]
+      ]
+    }
+  ],
+  "haftara_by_week": {
+    "haazinu": {
+      "title": "Shabbat Shuvah · la voz del retorno",
+      "he": "שׁוּבָה יִשְׂרָאֵל",
+      "tr": "Shuvah Yisrael · vuelve, Israel",
+      "ref": "Hoshea 14:2",
+      "text": "La haftará de Shabbat Shuvah se dirige explícitamente a Israel. Según el rito pueden añadirse otros pasajes proféticos.",
+      "q": "¿Qué orientación necesito recuperar?"
+    },
+    "kippur-sukkot": {
+      "title": "Yom Kipur · una reparación visible",
+      "he": "הֲלוֹא זֶה צוֹם אֶבְחָרֵהוּ",
+      "tr": "Halo ze tzom evjarehu · ¿no es éste el ayuno que escogí?",
+      "ref": "Yeshayahu 58:6–7",
+      "text": "Yeshayahu 58 forma parte de la lectura profética de Yom Kipur y confronta una práctica religiosa desligada de justicia y cuidado.",
+      "q": "¿Qué cambio interior necesitaría volverse visible en mi manera de tratar a otros?"
+    },
+    "sukkot-atzeret": {
+      "title": "Sukot · voces proféticas de la festividad",
+      "he": "וּשְׁאַבְתֶּם מַיִם בְּשָׂשׂוֹן",
+      "tr": "Ushavtem mayim besason · sacarán agua con alegría",
+      "ref": "Yeshayahu 12:3",
+      "text": "Durante Sukot aparecen varias lecturas proféticas según el día y el rito. Dérej presenta aquí una voz profética asociada a la memoria del agua sin llamarla una única haftará semanal.",
+      "q": "¿Qué necesito aprender a recibir, no sólo producir?"
+    },
+    "bereshit": {
+      "title": "Bereshit · creación y testimonio",
+      "he": "כֹּה אָמַר הָאֵל",
+      "tr": "Ko amar ha-El · así dice Dios",
+      "ref": "Yeshayahu 42:5",
+      "text": "Yeshayahu 42 está asociado a la haftará de Bereshit en tradiciones judías, con extensiones que pueden variar según el rito.",
+      "q": "¿Qué significa vivir como alguien que ha recibido aliento y responsabilidad?"
+    }
+  },
+  "torat_emet": {
+    "haazinu": "https://parashot.com.ar/?section=parashot&parasha=haazinu&aliya=all",
+    "bereshit": "https://parashot.com.ar/?section=parashot&parasha=bereshit&aliya=all",
+    "catalog": "https://parashot.com.ar/parashot/",
+    "haftara_bereshit": "https://parashot.com.ar/?section=parashot&parasha=bereshit&aliya=haftara"
+  }
+}

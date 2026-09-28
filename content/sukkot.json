@@ -1,0 +1,172 @@
+{
+  "schema_version": "0.1",
+  "id": "moed.sukkot.core.v0-2",
+  "type": "moed",
+  "slug": "sukkot",
+  "status": "pilot",
+  "visibility": "pilot",
+  "title": {
+    "es": "Sukot",
+    "he": "סֻכּוֹת",
+    "translit": "Sukot",
+    "subtitle": "Zman Simjateinu · tiempo de nuestra alegría"
+  },
+  "summary": "Una experiencia breve para entrar a Sukot desde fragilidad, hospitalidad, alegría, agua y memoria.",
+  "calendar": {
+    "hebrew_label": "15–21 Tishrei",
+    "precedence": 20,
+    "recurring": true
+  },
+  "source_refs": [
+    {
+      "id": "vayikra-23-42-43",
+      "label": "Vayikrá 23:42-43",
+      "tradition": "mikra",
+      "citation": "Levítico / Vayikrá 23:42-43",
+      "rights": "public_domain",
+      "note": "Publicar con traducción propia o licenciada."
+    },
+    {
+      "id": "sukka-55b",
+      "label": "Talmud Bavli Suká 55b",
+      "tradition": "rabbinic",
+      "citation": "Suká 55b",
+      "rights": "internal_review",
+      "note": "Revisar traducción y alcance editorial antes de publicar."
+    },
+    {
+      "id": "yeshayahu-12-3",
+      "label": "Yeshayahu 12:3",
+      "tradition": "mikra",
+      "citation": "Isaías / Yeshayahu 12:3",
+      "rights": "public_domain"
+    },
+    {
+      "id": "derej-editorial",
+      "label": "Adaptación pedagógica Dérej",
+      "tradition": "derej",
+      "citation": "Síntesis editorial Dérej",
+      "rights": "original"
+    }
+  ],
+  "experience": {
+    "entry": {
+      "eyebrow": "Dérej · Moed · Sukot",
+      "intro": "Entrar a una morada frágil para recordar que la seguridad no depende sólo de lo que construimos. Sukot se vive con alegría, hospitalidad y gratitud, no como una lista para completar.",
+      "symbol": "🌿"
+    },
+    "blocks": [
+      {
+        "id": "umbral",
+        "kind": "reflection",
+        "title": "Entrar a la sombra",
+        "body": "Sukot nos mueve de la casa fija a una morada temporal. Dérej usa ese gesto como una invitación a distinguir protección de control.",
+        "source_ids": [
+          "vayikra-23-42-43",
+          "derej-editorial"
+        ]
+      },
+      {
+        "id": "habitar",
+        "kind": "practice",
+        "title": "Habitar",
+        "body": "Si tienes acceso a una suká, entra y permanece un momento sin producir nada. Si no, busca un espacio sencillo y temporal para practicar presencia y gratitud.",
+        "duration_minutes": 7,
+        "source_ids": [
+          "derej-editorial"
+        ]
+      },
+      {
+        "id": "cuatro-especies",
+        "kind": "reflection",
+        "title": "Cuatro especies · muchas formas de pertenecer",
+        "body": "La tradición reúne etrog, lulav, hadás y aravá. En Dérej funcionan como recordatorio de que una comunidad no necesita que todos sean iguales para estar unida.",
+        "source_ids": [
+          "derej-editorial"
+        ]
+      },
+      {
+        "id": "ushpizin",
+        "kind": "practice",
+        "title": "Hospitalidad",
+        "body": "Haz espacio para alguien: una persona, una historia o una voz que normalmente queda fuera de tu mesa. La hospitalidad convierte la fragilidad en vínculo.",
+        "source_ids": [
+          "derej-editorial"
+        ]
+      },
+      {
+        "id": "simja",
+        "kind": "question",
+        "title": "Alegría",
+        "prompt": "¿Qué forma de alegría puede existir aun cuando la vida no está completamente resuelta?",
+        "source_ids": [
+          "derej-editorial"
+        ]
+      },
+      {
+        "id": "agua",
+        "kind": "hebrew",
+        "title": "Sacar agua con alegría",
+        "he": "וּשְׁאַבְתֶּם מַיִם בְּשָׂשׂוֹן",
+        "translit": "Ushavtem mayim besason",
+        "body": "La imagen del agua acompaña la memoria festiva y abre una pregunta sobre recibir, agradecer y compartir.",
+        "source_ids": [
+          "yeshayahu-12-3"
+        ]
+      },
+      {
+        "id": "naciones",
+        "kind": "callout",
+        "title": "Una fiesta con horizonte universal",
+        "body": "Suká 55b vincula los setenta toros del servicio festivo con las setenta naciones. Dérej conserva ese dato como puerta para pensar responsabilidad y bendición más allá del propio grupo, sin convertir la tradición en una afirmación política o de superioridad.",
+        "source_ids": [
+          "sukka-55b",
+          "derej-editorial"
+        ]
+      },
+      {
+        "id": "llevar",
+        "kind": "action",
+        "title": "Llevar la sombra contigo",
+        "body": "Elige una práctica pequeña de hospitalidad, gratitud o consumo más sobrio para sostener después de la festividad.",
+        "action": {
+          "label": "Guardar una práctica en este dispositivo",
+          "mode": "local"
+        },
+        "source_ids": [
+          "derej-editorial"
+        ]
+      }
+    ],
+    "closing": {
+      "title": "Salir de la suká sin perder la enseñanza",
+      "body": "La estructura se desmonta; la memoria de fragilidad, alegría y hospitalidad puede quedarse.",
+      "prompt": "¿Qué muro interior puedes volver un poco menos rígido esta semana?"
+    }
+  },
+  "navigation": {
+    "parent": "moed",
+    "order": 10,
+    "related": [
+      "study.sukkot-sombra-emuna.v0-2"
+    ]
+  },
+  "privacy": {
+    "storage": "local",
+    "account_required": false,
+    "notes": "Las prácticas guardadas permanecen sólo en el dispositivo."
+  },
+  "metadata": {
+    "content_version": "0.2-migrated",
+    "updated_at": "2026-09-27",
+    "author": "Dérej",
+    "tags": [
+      "sukkot",
+      "moed",
+      "simja",
+      "hospitalidad",
+      "fragilidad",
+      "tishrei"
+    ]
+  }
+}

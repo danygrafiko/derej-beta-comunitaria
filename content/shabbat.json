@@ -1,0 +1,53 @@
+{
+  "schema_version": "0.1",
+  "id": "shabbat.core.v0-3",
+  "type": "shabbat",
+  "slug": "shabbat",
+  "status": "pilot",
+  "visibility": "pilot",
+  "title": {
+    "es": "Shabat",
+    "he": "שבת",
+    "translit": "Shabbat",
+    "subtitle": "Detenerse para volver a escuchar"
+  },
+  "summary": "Una experiencia de preparación, descanso, mesa, escucha y retorno a la semana.",
+  "source_refs": [],
+  "experience": {
+    "entry": {
+      "eyebrow": "Dérej · Shabat",
+      "intro": "No se trata de completar una tarea sino de abrir un espacio de descanso, presencia y memoria.",
+      "symbol": "🕯️"
+    },
+    "blocks": [
+      {"id":"preparar","kind":"practice","title":"Preparar","body":"Bajar el ritmo antes de entrar.","duration_minutes":5},
+      {"id":"recibir","kind":"reflection","title":"Recibir","body":"Entrar al descanso como algo que se recibe, no como rendimiento."},
+      {"id":"modo-shabat","kind":"practice","title":"Modo Shabat","body":"Reducir deliberadamente ruido, consumo y demandas digitales."},
+      {"id":"mesa","kind":"practice","title":"Mesa","body":"Hacer de la mesa un espacio de presencia, gratitud y vínculo."},
+      {"id":"escuchar","kind":"question","title":"Escuchar","prompt":"¿Qué aparece cuando dejamos de producir por un momento?"},
+      {"id":"havdala","kind":"reflection","title":"Havdalá","body":"Reconocer la transición entre el tiempo apartado y la semana que vuelve."},
+      {"id":"llevar","kind":"action","title":"Llevar","body":"Elegir una pequeña práctica de descanso, cuidado o justicia para la semana.","action":{"label":"Guardar sólo en este dispositivo","mode":"local"}}
+    ],
+    "closing": {
+      "title": "El camino continúa fuera de la pantalla",
+      "body": "Dérej acompaña la entrada y la salida; el centro de la experiencia ocurre en la vida.",
+      "prompt": "¿Qué quieres conservar de este Shabat durante la semana?"
+    }
+  },
+  "navigation": {
+    "parent": "shabbat",
+    "order": 10,
+    "related": []
+  },
+  "privacy": {
+    "storage": "local",
+    "account_required": false,
+    "notes": "Las respuestas privadas no salen del dispositivo por defecto."
+  },
+  "metadata": {
+    "content_version": "0.3",
+    "updated_at": "2026-09-27",
+    "author": "Dérej",
+    "tags": ["shabbat", "descanso", "presencia", "comunidad"]
+  }
+}

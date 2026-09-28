@@ -1,0 +1,96 @@
+{
+  "schema_version": "0.1",
+  "id": "study.shabbat-raiz-bendicion.v0-3",
+  "type": "study",
+  "slug": "shabbat-raiz-bendicion",
+  "status": "review",
+  "visibility": "pilot",
+  "title": {
+    "es": "Shabat: La Raíz de Toda Bendición",
+    "he": "מעין עולם הבא",
+    "translit": "Meein Olam Haba",
+    "subtitle": "Un recorrido de Beit Midrash desde Bereshit hasta la avodá práctica"
+  },
+  "summary": "Capa de profundización de Shabat organizada en siete estaciones: Bereshit, Sod/Zohar, Jasidut, Breslev, Ramjal, las tres seudot y Avodá.",
+  "source_refs": [
+    {"id":"bereshit-2-2-3","label":"Bereshit 2:2-3","tradition":"mikra","citation":"Génesis / Bereshit 2:2-3","rights":"public_domain","note":"Usar texto bíblico con traducción cuya licencia esté confirmada o adaptación propia."},
+    {"id":"bereshit-rabba-11-8","label":"Bereshit Rabá 11:8","tradition":"rabbinic","citation":"Bereshit Rabá 11:8","rights":"internal_review","note":"Referencia tradicional; revisar traducción antes de publicación."},
+    {"id":"zohar-bereshit-47b","label":"Zohar · Bereshit 47b","tradition":"kabbalah","citation":"Zohar Bereshit 47b","rights":"internal_review","note":"Presentar como enseñanza atribuida a la fuente; no publicar traducciones extensas sin derechos confirmados."},
+    {"id":"zohar-yitro-88a","label":"Zohar · Yitro 88a","tradition":"kabbalah","citation":"Zohar Yitro 88a","rights":"internal_review"},
+    {"id":"pri-etz-jaim-shabbat","label":"Pri Etz Jaim · Shaar HaShabat","tradition":"kabbalah","citation":"R. Jaim Vital, Pri Etz Jaim, Shaar HaShabat","rights":"internal_review","note":"Tradición asociada al Arizal; revisar formulaciones específicas."},
+    {"id":"sfat-emet-shabbat","label":"Sfat Emet · Bereshit/Yitro","tradition":"jasidut","citation":"Sfat Emet sobre Bereshit y Yitro","rights":"internal_review"},
+    {"id":"noam-elimelej-bereshit","label":"Noam Elimelej · Bereshit","tradition":"jasidut","citation":"Noam Elimelej, Parashat Bereshit","rights":"internal_review"},
+    {"id":"likutei-moharan","label":"Likutei Moharan","tradition":"jasidut","citation":"Likutei Moharan I:17, I:23, I:40, II:7, II:17","rights":"internal_review","note":"Resumir y atribuir; revisar cada correspondencia temática antes de publicación."},
+    {"id":"derej-hashem-4-7","label":"Derej Hashem · Parte IV, cap. 7","tradition":"rabbinic","citation":"Ramjal, Derej Hashem IV:7","rights":"internal_review"},
+    {"id":"daat-tevunot-120-140","label":"Daat Tevunot · 120–140","tradition":"kabbalah","citation":"Ramjal, Daat Tevunot 120–140","rights":"internal_review"},
+    {"id":"mesilat-yesharim-1","label":"Mesilat Yesharim · cap. 1","tradition":"rabbinic","citation":"Ramjal, Mesilat Yesharim 1","rights":"internal_review"},
+    {"id":"leja-dodi","label":"Lejá Dodi","tradition":"kabbalah","citation":"R. Shlomo Alkabetz, Lejá Dodi","rights":"internal_review"},
+    {"id":"toldot-yaakov-yosef","label":"Toldot Yaakov Yosef","tradition":"jasidut","citation":"Toldot Yaakov Yosef","rights":"internal_review"},
+    {"id":"keter-shem-tov","label":"Keter Shem Tov","tradition":"jasidut","citation":"Enseñanzas atribuidas al Baal Shem Tov, Keter Shem Tov","rights":"internal_review"},
+    {"id":"derej-editorial","label":"Adaptación pedagógica Dérej","tradition":"derej","citation":"Síntesis y organización editorial Dérej","rights":"original","note":"Distinguir siempre la adaptación contemporánea de las afirmaciones textuales de las fuentes."}
+  ],
+  "experience": {
+    "entry": {
+      "eyebrow": "Beit Midrash · Shabat",
+      "intro": "Este estudio no sustituye la experiencia simple de Shabat. Es una puerta opcional para quien quiera profundizar en las fuentes y en la arquitectura espiritual que inspiró el módulo.",
+      "symbol": "📚"
+    },
+    "blocks": [
+      {"id":"sec-1","kind":"heading","title":"1 · Bereshit — Lo que faltaba"},
+      {"id":"bereshit-text","kind":"hebrew","he":"וַיְכַל אֱלֹהִים בַּיּוֹם הַשְּׁבִיעִי מְלַאכְתּוֹ... וַיִּשְׁבֹּת","body":"Bereshit 2:2-3 presenta la conclusión de la obra, el cese y la santificación del séptimo día.","source_ids":["bereshit-2-2-3"]},
+      {"id":"menuja","kind":"reflection","title":"Menujá no es vacío","body":"La lectura desarrollada en Dérej entiende el descanso como una realidad positiva: dejar de perseguir para habitar, recibir y reconocer que el mundo no depende de nuestra producción continua.","source_ids":["bereshit-rabba-11-8","derej-editorial"]},
+      {"id":"pareja-shabat","kind":"source","title":"La imagen de la pareja","body":"Bereshit Rabá 11:8 es usado como puerta para presentar a Shabat no como un día aislado, sino como tiempo de relación, pertenencia y encuentro.","source_ids":["bereshit-rabba-11-8"]},
+
+      {"id":"sec-2","kind":"heading","title":"2 · Sod / Zohar — La Cábala del Shabat"},
+      {"id":"zohar-name","kind":"source","title":"Shabat como Nombre y presencia","body":"El estudio original vincula Zohar Bereshit 47b con la idea de Shabat como revelación y no sólo como unidad cronológica. La formulación final debe mantenerse atribuida a la fuente.","source_ids":["zohar-bereshit-47b"]},
+      {"id":"bat-kala","kind":"callout","title":"Bat · Kalá · Reina","body":"La capa cabalística explora imágenes de Shabat como hija, novia y reina. Dérej las presenta como lenguaje simbólico propio de esa tradición y no como definiciones universales.","source_ids":["zohar-bereshit-47b","leja-dodi","derej-editorial"]},
+      {"id":"shamor-zajor","kind":"reflection","title":"Shamor / Zajor","body":"Guardar y recordar se presentan como dos movimientos complementarios: límite y memoria, contención y vínculo.","source_ids":["derej-editorial"]},
+      {"id":"neshama-yetera","kind":"source","title":"Neshamá Yeterá","body":"El artefacto anterior recoge la tradición cabalística de un alma adicional asociada a Shabat. En Master esta idea debe aparecer explícitamente como enseñanza tradicional atribuida, no como afirmación científica.","source_ids":["pri-etz-jaim-shabbat","derej-editorial"]},
+
+      {"id":"sec-3","kind":"heading","title":"3 · Jasidut — La fuente de toda bendición"},
+      {"id":"jasidut-raiz","kind":"source","title":"La semana recibe de Shabat","body":"El estudio reúne voces jasídicas para presentar Shabat como raíz desde la cual se bendicen y reordenan los días de la semana: menos ilusión de control, más recepción, emuná y retorno a la raíz.","source_ids":["keter-shem-tov","toldot-yaakov-yosef","sfat-emet-shabbat","noam-elimelej-bereshit"]},
+      {"id":"ser-no-hacer","kind":"reflection","title":"Del hacer al ser","prompt":"¿Qué cambia cuando, por un tiempo, tu valor deja de medirse por lo que produces?","source_ids":["sfat-emet-shabbat","derej-editorial"]},
+
+      {"id":"sec-4","kind":"heading","title":"4 · Breslev — El deleite del alma"},
+      {"id":"breslev-map","kind":"source","title":"Cuatro puertas en Likutei Moharan","body":"El artículo relaciona Azamra con aprender a mirar el punto bueno; la ansiedad por la parnasá con el descanso de la ilusión de control; el endulzamiento de los dinim con la transformación de la dureza; y la teshuvá con volver a la raíz.","source_ids":["likutei-moharan","derej-editorial"]},
+      {"id":"hitbodedut","kind":"practice","title":"Hitbodedut en Shabat","body":"Abrir un breve espacio de silencio y conversación personal orientado a cercanía y gratitud, evitando convertirlo en una lista de demandas materiales.","duration_minutes":10,"source_ids":["likutei-moharan","derej-editorial"]},
+
+      {"id":"sec-5","kind":"heading","title":"5 · Ramjal — Tajlit HaBriá"},
+      {"id":"ramjal-hanhaga","kind":"source","title":"Creación, conducción y propósito","body":"Derej Hashem y Daat Tevunot sirven como marco para pensar Shabat dentro de la conducción divina: creación, providencia, juicio y unificación. La lectura Dérej organiza estos conceptos como un mapa y debe mantener separada la fuente de su aplicación pedagógica.","source_ids":["derej-hashem-4-7","daat-tevunot-120-140","derej-editorial"]},
+      {"id":"ramjal-oneg","kind":"source","title":"El deleite como propósito","body":"Mesilat Yesharim cap. 1 es utilizado para conectar el lenguaje del deleite en Dios con la experiencia de Shabat como anticipo de finalidad y no sólo como interrupción del trabajo.","source_ids":["mesilat-yesharim-1","derej-editorial"]},
+      {"id":"or-makif","kind":"callout","title":"Or Makif / Or Pnimi","body":"El artefacto usa este contraste cabalístico como recurso visual para expresar que hay realidades que no se producen ni se dominan: se reciben. Mantener como interpretación pedagógica atribuida a la tradición mística.","source_ids":["daat-tevunot-120-140","derej-editorial"]},
+
+      {"id":"sec-6","kind":"heading","title":"6 · Las Tres Seudot"},
+      {"id":"seudot","kind":"text","title":"Tres mesas, tres momentos","body":"La versión anterior distingue viernes por la noche, Shabat de día y Seudá Shlishit como tres movimientos del mismo día. Su simbolismo se conecta con Guevurá, Jesed y Tiferet, y con la progresión desde la entrada luminosa hasta la interioridad del final de Shabat.","source_ids":["zohar-yitro-88a","pri-etz-jaim-shabbat","derej-editorial"]},
+      {"id":"seudot-question","kind":"question","prompt":"¿Qué cambia en una mesa cuando comer deja de ser sólo consumo y se vuelve presencia, memoria y vínculo?","source_ids":["derej-editorial"]},
+
+      {"id":"sec-7","kind":"heading","title":"7 · Avodá — Cómo recibir la Reina"},
+      {"id":"viernes","kind":"practice","title":"Preparación del viernes","body":"Preparar el espacio, el cuerpo y la mesa como gesto de honor y transición: bajar el ritmo antes de que llegue el tiempo apartado.","source_ids":["pri-etz-jaim-shabbat","derej-editorial"]},
+      {"id":"velas","kind":"practice","title":"Encendido de velas","body":"Presentar Zajor y Shamor como memoria y cuidado. La explicación mística sobre Biná y Neshamá Yeterá debe permanecer claramente atribuida a la tradición cabalística.","source_ids":["pri-etz-jaim-shabbat","derej-editorial"]},
+      {"id":"kiddush","kind":"practice","title":"Kiddush","body":"Reconocer con palabras que el tiempo no nos pertenece por completo y que la creación tiene una fuente anterior a nuestro hacer.","source_ids":["bereshit-2-2-3","derej-editorial"]},
+      {"id":"zemirot","kind":"practice","title":"Zemirot y estudio","body":"Cantar y estudiar como formas de oneg y memoria, sin convertir la experiencia en rendimiento religioso.","source_ids":["leja-dodi","derej-editorial"]},
+      {"id":"llevar-estudio","kind":"action","title":"Llevar una sola práctica","body":"Después de estudiar, elegir una práctica concreta y pequeña para vivirla; no intentar aplicar todo el contenido a la vez.","action":{"label":"Guardar una práctica en este dispositivo","mode":"local"},"source_ids":["derej-editorial"]}
+    ],
+    "closing": {
+      "title": "Profundizar para volver a la vida",
+      "body": "El Beit Midrash no es el final del recorrido. Su función es dar raíces, lenguaje y contexto para vivir con más atención lo que ocurre fuera de la pantalla.",
+      "prompt": "¿Qué idea de este estudio cambia de manera concreta cómo quieres entrar al próximo Shabat?"
+    }
+  },
+  "navigation": {
+    "parent": "shabbat",
+    "order": 20,
+    "related": ["shabbat.core.v0-3"]
+  },
+  "privacy": {
+    "storage": "local",
+    "account_required": false,
+    "notes": "Sólo las acciones que el usuario decida guardar se conservan en el dispositivo."
+  },
+  "metadata": {
+    "content_version": "0.3-migrated",
+    "updated_at": "2026-09-27",
+    "author": "Dérej",
+    "tags": ["shabbat","beit-midrash","zohar","jasidut","breslev","ramjal","seudot","avoda"]
+  }
+}

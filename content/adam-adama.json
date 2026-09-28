@@ -1,0 +1,196 @@
+{
+  "schema_version": "0.2",
+  "id": "series.adam-adama.v2",
+  "type": "series",
+  "slug": "adam-adama",
+  "status": "review",
+  "visibility": "pilot",
+  "title": {
+    "es": "ADAM–ADAMÁ · Edición Ramak",
+    "he": "אָדָם · אֲדָמָה",
+    "translit": "Adam · Adamá",
+    "subtitle": "De la enseñanza a la práctica regenerativa"
+  },
+  "summary": "Colección de 64 fichas organizada en dos series y 16 bloques.",
+  "source_refs": [
+    {
+      "id": "ramak-pardes",
+      "label": "Ramak · Pardes Rimonim",
+      "tradition": "kabbalah",
+      "citation": "Pardes Rimonim 8:12-15 (paleta y marco atribuido en el proyecto original)",
+      "rights": "internal_review",
+      "note": "Verificar citas y correspondencias cromáticas antes de publicación."
+    },
+    {
+      "id": "derej-editorial",
+      "label": "Arquitectura editorial Dérej",
+      "tradition": "derej",
+      "citation": "Organización y adaptación pedagógica Dérej",
+      "rights": "original"
+    }
+  ],
+  "experience": {
+    "entry": {
+      "eyebrow": "Profundizar · ADAM–ADAMÁ",
+      "intro": "Este módulo no es un recorrido semanal obligatorio. Es una biblioteca de fundamentos y prácticas para volver a mirar tierra, agua, palabra, tiempo, cuerpo, trabajo, ciudad y objetos como ámbitos de responsabilidad.",
+      "symbol": "🌱"
+    },
+    "blocks": [
+      {
+        "id": "serie-1",
+        "kind": "heading",
+        "title": "Primera Serie · Fundamentos"
+      },
+      {
+        "id": "serie-1-desc",
+        "kind": "text",
+        "body": "32 fichas teóricas · bloques 1–8"
+      },
+      {
+        "id": "serie-1-status",
+        "kind": "callout",
+        "title": "Estado de migración",
+        "body": "La fuente HTML completa está referenciada por el manifiesto original, pero no está accesible actualmente para migración automática.",
+        "source_ids": [
+          "derej-editorial"
+        ]
+      },
+      {
+        "id": "serie-2",
+        "kind": "heading",
+        "title": "Segunda Serie · Prácticas"
+      },
+      {
+        "id": "serie-2-desc",
+        "kind": "text",
+        "body": "32 prácticas de 7 días · bloques 1–8"
+      },
+      {
+        "id": "serie-2-status",
+        "kind": "callout",
+        "title": "Estado de migración",
+        "body": "Los bloques usan estructura data-derej, Peshat/Iyun y persistencia local; la migración nativa comenzó por el Bloque 1.",
+        "source_ids": [
+          "derej-editorial"
+        ]
+      },
+      {
+        "id": "mapa-1",
+        "kind": "text",
+        "title": "Bloque 1 · Fundamentos",
+        "body": "Fichas 1–4 · eje sefirotico: Keter.",
+        "source_ids": [
+          "derej-editorial"
+        ]
+      },
+      {
+        "id": "mapa-2",
+        "kind": "text",
+        "title": "Bloque 2 · Agua y Árbol",
+        "body": "Fichas 5–8 · eje sefirotico: Biná.",
+        "source_ids": [
+          "derej-editorial"
+        ]
+      },
+      {
+        "id": "mapa-3",
+        "kind": "text",
+        "title": "Bloque 3 · Aire y Palabra",
+        "body": "Fichas 9–12 · eje sefirotico: Jojmá.",
+        "source_ids": [
+          "derej-editorial"
+        ]
+      },
+      {
+        "id": "mapa-4",
+        "kind": "text",
+        "title": "Bloque 4 · Tiempo y Dinero",
+        "body": "Fichas 13–16 · eje sefirotico: Jesed + Guevurá.",
+        "source_ids": [
+          "derej-editorial"
+        ]
+      },
+      {
+        "id": "mapa-5",
+        "kind": "text",
+        "title": "Bloque 5 · Cuerpo",
+        "body": "Fichas 17–20 · eje sefirotico: Tiferet.",
+        "source_ids": [
+          "derej-editorial"
+        ]
+      },
+      {
+        "id": "mapa-6",
+        "kind": "text",
+        "title": "Bloque 6 · Trabajo",
+        "body": "Fichas 21–24 · eje sefirotico: Netzaj + Hod + Yesod.",
+        "source_ids": [
+          "derej-editorial"
+        ]
+      },
+      {
+        "id": "mapa-7",
+        "kind": "text",
+        "title": "Bloque 7 · Ciudad",
+        "body": "Fichas 25–28 · eje sefirotico: Maljut.",
+        "source_ids": [
+          "derej-editorial"
+        ]
+      },
+      {
+        "id": "mapa-8",
+        "kind": "text",
+        "title": "Bloque 8 · Objetos",
+        "body": "Fichas 29–32 · eje sefirotico: Yesod + Maljut.",
+        "source_ids": [
+          "derej-editorial"
+        ]
+      }
+    ],
+    "closing": {
+      "title": "Estudiar para volver a cuidar",
+      "body": "La serie cobra sentido cuando una enseñanza se convierte en una práctica concreta y medible en la vida cotidiana.",
+      "prompt": "¿Qué ámbito de tu relación con la tierra necesita hoy más atención?"
+    }
+  },
+  "navigation": {
+    "parent": "camino",
+    "order": 30,
+    "related": [
+      "practice.adam-adama.s2-b1.v0-1"
+    ]
+  },
+  "privacy": {
+    "storage": "local",
+    "account_required": false,
+    "notes": "El progreso de prácticas se conserva localmente."
+  },
+  "metadata": {
+    "content_version": "2.0-migration-index",
+    "updated_at": "2026-09-27",
+    "author": "Dérej",
+    "tags": [
+      "adam-adama",
+      "ramak",
+      "regeneracion",
+      "serie",
+      "tikkun-olam"
+    ]
+  },
+  "series": {
+    "family_id": "adam-adama",
+    "series_name": "Colección completa",
+    "sefirot": [
+      "Keter",
+      "Biná",
+      "Jojmá",
+      "Jesed",
+      "Guevurá",
+      "Tiferet",
+      "Netzaj",
+      "Hod",
+      "Yesod",
+      "Maljut"
+    ]
+  }
+}

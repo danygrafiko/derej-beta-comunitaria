@@ -1,0 +1,174 @@
+{
+  "schema_version": "0.2",
+  "id": "practice.adam-adama.s2-b1.v0-1",
+  "type": "practice",
+  "slug": "adam-adama-practicas-b1",
+  "status": "review",
+  "visibility": "pilot",
+  "title": {
+    "es": "ADAM–ADAMÁ · Fundamentos Prácticos",
+    "subtitle": "Segunda Serie · Bloque 1 · Fichas 1–4"
+  },
+  "summary": "Prueba de migración nativa del primer bloque práctico.",
+  "source_refs": [
+    {
+      "id": "derej-source",
+      "label": "Contenido original ADAM–ADAMÁ · Bloque 1",
+      "tradition": "derej",
+      "citation": "Segunda Serie Bloque 1 - Fundamentos Prácticos.html",
+      "rights": "internal_review",
+      "note": "Migración basada únicamente en contenido indexado accesible; restaurar fuentes y prácticas faltantes antes de publicación."
+    }
+  ],
+  "experience": {
+    "entry": {
+      "eyebrow": "ADAM–ADAMÁ · Segunda Serie",
+      "intro": "Este bloque prueba la nueva capacidad de checklist persistente. Sólo se migró lo que estaba visible en la copia indexada; no se completaron datos faltantes por inferencia.",
+      "symbol": "🌱"
+    },
+    "blocks": [
+      {
+        "id": "f1",
+        "kind": "heading",
+        "title": "1 · Fundamentos Hoy — Adam Adamá"
+      },
+      {
+        "id": "f1-teach",
+        "kind": "text",
+        "body": "Adam de Adamá. No sobre la tierra, de la tierra. Primera práctica: volver a tocar suelo.",
+        "source_ids": [
+          "derej-source"
+        ]
+      },
+      {
+        "id": "f1-check",
+        "kind": "checklist",
+        "title": "Práctica 7 días",
+        "items": [
+          {
+            "id": "d1-2",
+            "label": "Días 1–2",
+            "body": "Toca tierra 10 min sin guantes, sin objetivo."
+          },
+          {
+            "id": "d3-7",
+            "label": "Días 3–7",
+            "body": "5 min diarios de contacto directo con suelo."
+          }
+        ]
+      },
+      {
+        "id": "f2",
+        "kind": "heading",
+        "title": "2 · Bereshit Hoy — En el principio es relación"
+      },
+      {
+        "id": "f2-teach",
+        "kind": "text",
+        "body": "Bereshit no es inicio cronológico, es inicio relacional. Todo empieza en relación.",
+        "source_ids": [
+          "derej-source"
+        ]
+      },
+      {
+        "id": "f2-check",
+        "kind": "checklist",
+        "title": "Práctica 7 días",
+        "items": [
+          {
+            "id": "d1-3",
+            "label": "Días 1–3",
+            "body": "Mapea tus relaciones con no-humanos."
+          },
+          {
+            "id": "d4-7",
+            "label": "Días 4–7",
+            "body": "Acto de reparación relacional con territorio."
+          }
+        ]
+      },
+      {
+        "id": "f3",
+        "kind": "heading",
+        "title": "3 · Tzelem Hoy — Imagen y semejanza con todo lo vivo"
+      },
+      {
+        "id": "f3-teach",
+        "kind": "text",
+        "body": "Tzelem no es solo humano, es imagen de lo vivo. Ver Tzelem en animal, árbol, río.",
+        "source_ids": [
+          "derej-source"
+        ]
+      },
+      {
+        "id": "f3-note",
+        "kind": "callout",
+        "title": "Migración incompleta",
+        "body": "La práctica detallada de esta ficha no estaba visible en la copia indexada recuperada. Se conserva pendiente en vez de reconstruirla."
+      },
+      {
+        "id": "f4",
+        "kind": "heading",
+        "title": "4 · Leovda Uleshomra Hoy — Trabajar y cuidar"
+      },
+      {
+        "id": "f4-teach",
+        "kind": "text",
+        "body": "Leovda uleshomra: trabajar y cuidar, no trabajar para extraer. Dos verbos, no uno.",
+        "source_ids": [
+          "derej-source"
+        ]
+      },
+      {
+        "id": "f4-note",
+        "kind": "callout",
+        "title": "Migración incompleta",
+        "body": "La práctica detallada de esta ficha no estaba visible en la copia indexada recuperada. Se conserva pendiente en vez de reconstruirla."
+      }
+    ],
+    "closing": {
+      "title": "Bloque piloto",
+      "body": "El formato nativo ya puede representar fichas y checklists sin depender del HTML original.",
+      "prompt": "¿Qué práctica quieres sostener esta semana?"
+    }
+  },
+  "navigation": {
+    "parent": "series.adam-adama.v2",
+    "order": 1,
+    "related": [
+      "series.adam-adama.v2"
+    ]
+  },
+  "privacy": {
+    "storage": "local",
+    "account_required": false,
+    "notes": "Cada check se guarda en localStorage con una clave por contenido, bloque e ítem."
+  },
+  "metadata": {
+    "content_version": "0.1-partial-import",
+    "updated_at": "2026-09-27",
+    "author": "Dérej",
+    "tags": [
+      "adam-adama",
+      "practica",
+      "fundamentos",
+      "keter",
+      "7-dias"
+    ]
+  },
+  "series": {
+    "family_id": "adam-adama",
+    "series_number": 2,
+    "series_name": "Segunda Serie - Prácticas",
+    "block_number": 1,
+    "block_name": "Fundamentos Prácticos",
+    "item_start": 1,
+    "item_end": 4,
+    "sefirot": [
+      "Keter"
+    ],
+    "palette": [
+      "#FEFEFE"
+    ]
+  }
+}
