@@ -1,10 +1,10 @@
-# DÉREJ MASTER · RC3 Candidate v1.5
+# DÉREJ MASTER · RC3 Candidate v1.6
 
 Base v0.6 + Release Shell PWA.
 
 
 
-## v1.5 · Site Key Turnstile cargada
+## v1.6 · Site Key Turnstile cargada
 
 - Site Key pública configurada: `0x4AAAAAAFH3dbY5Vj3Mu_dA`.
 - `communityCaptchaEnabled` permanece en `false` hasta que CAPTCHA esté activado en Supabase Auth con la Secret Key privada.
@@ -18,7 +18,7 @@ Base v0.6 + Release Shell PWA.
 - `config.js` incorpora `communityCaptchaEnabled`, `communityCaptchaProvider` y `turnstileSiteKey`. La Site Key es pública; la Secret Key nunca debe entrar al paquete.
 - Modo seguro de preparación: `communityCaptchaEnabled` queda en `false` hasta que exista un widget real de Cloudflare y CAPTCHA esté habilitado en Supabase Auth.
 - Se retiraron del paquete las páginas de bootstrap inicial: el primer admin ya existe y el endpoint de bootstrap está cerrado permanentemente.
-- Service Worker versionado como `derej-master-v1.5-20260928-01`; Turnstile es externo y no se cachea.
+- Service Worker versionado como `derej-master-v1.6-20260928-01`; Turnstile es externo y no se cachea.
 
 ## Nuevo en v1.2.1
 
@@ -110,7 +110,7 @@ La interfaz, los módulos JSON y las pantallas ya visitables desde el shell pued
 El primer administrador ya fue creado y autorizado. `bootstrap-moderator` está retirado (HTTP 410) y no forma parte del flujo normal. Nuevos moderadores deben incorporarse por una ruta administrativa confiable, nunca reabriendo un bootstrap público.
 
 
-## v1.5 · Turnstile activo
+## v1.6 · Turnstile activo
 
 - CAPTCHA de Cloudflare Turnstile activado para la creación de nuevas identidades anónimas.
 - La Site Key pública está en `config.js`; la Secret Key permanece exclusivamente en Supabase Auth.
@@ -119,7 +119,7 @@ El primer administrador ya fue creado y autorizado. `bootstrap-moderator` está 
 - Se retiró `moderacion-configurar.html`; el bootstrap del primer administrador está cerrado.
 
 
-## v1.5 · Lectura y Memoria
+## v1.6 · Lectura y Memoria
 
 - Lector nativo Dérej para las raíces de Camino: hebreo, transliteración, significado en español, contexto, lectura editorial y fuentes.
 - Referencias bíblicas bilingües (por ejemplo, Vayikrá · Levítico).
@@ -129,3 +129,7 @@ El primer administrador ya fue creado y autorizado. `bootstrap-moderator` está 
 - Mensajes técnicos de migración retirados de la experiencia pública.
 - Campo de reflexión privada optimizado para iPhone.
 - Radio Dérej vuelve a usar la portada histórica del repositorio como artwork canónico.
+
+
+## v1.6 · Apartados y lenguaje vivo
+Esta versión incorpora símbolos Ramak, glosario táctil, deep-link al pasaje fuente, acciones “Qué llevar contigo” y apartados HTML enriquecidos integrados en la misma aplicación.

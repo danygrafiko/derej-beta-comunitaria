@@ -1,5 +1,5 @@
 const CACHE_PREFIX = 'derej-master-';
-const CACHE = 'derej-master-v1.5-20260928-01';
+const CACHE = 'derej-master-v1.6-20260929-01';
 const SHELL = [
   './',
   './index.html',
@@ -17,7 +17,10 @@ const SHELL = [
   './content/sukkot.json',
   './content/sukkot-beit-midrash.json',
   './content/adam-adama.json',
-  './content/adam-adama-practicas-b1.json'
+  './content/adam-adama-practicas-b1.json',
+  './apartado-shabat-raiz.html',
+  './apartado-sukkot-sombra.html',
+  './apartado-adam-adama-ramak.html'
 ];
 
 self.addEventListener('install', event => {

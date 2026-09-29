@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#657253">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <title>Dérej · El Camino · v1.5</title>
+  <title>Dérej · El Camino · v1.6</title>
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="apple-touch-icon" href="icon-180.png">
   <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
@@ -18,7 +18,7 @@
       <button class="brandButton" data-route="camino" aria-label="Ir a Camino">
         <span class="brand">Dérej · דרך</span><span class="brandSub">El Camino</span><span class="brandDate" id="hebrewDateGlobal">Calendario hebreo · cargando…</span>
       </button>
-      <div class="topActions"><span class="badge">BETA COMUNITARIA · v1.5</span><button class="iconBtn" id="fontBtn" aria-label="Cambiar tamaño de texto">Aa</button></div>
+      <div class="topActions"><span class="badge">BETA COMUNITARIA · v1.6</span><button class="iconBtn" id="fontBtn" aria-label="Cambiar tamaño de texto">Aa</button></div>
     </header>
     <div id="contextBar" class="contextBar"></div>
     <div id="updateBar" class="updateBar" hidden><span>Nueva versión de Dérej disponible.</span><button id="applyUpdate" type="button">Actualizar</button></div>
@@ -125,7 +125,7 @@
       <div id="experienceStatus" class="pilotbar">Cargando experiencia…</div>
       <article id="experience"></article>
       <section class="depthCard">
-        <div class="depthIcon">📚</div><div><div class="eyebrow">Beit Midrash · opcional</div><h2>La Raíz de Toda Bendición</h2><p>Bereshit → Sod/Zohar → Jasidut → Breslev → Ramjal → Tres Seudot → Avodá.</p><button class="secondaryBtn" data-route="beit-midrash">Profundizar en Shabat</button></div>
+        <div class="depthIcon">📚</div><div><div class="eyebrow">Beit Midrash · opcional</div><h2>La Raíz de Toda Bendición</h2><p>Bereshit → Sod/Zohar → Jasidut → Breslev → Ramjal → Tres Seudot → Avodá.</p><div class="buttonStack"><button class="secondaryBtn" data-route="beit-midrash">Profundizar en Shabat</button><button class="secondaryBtn richOpenBtn" data-apartado="shabat-raiz">Abrir apartado visual</button></div></div>
       </section>
     </section>
 
@@ -146,7 +146,7 @@
     <section class="screen" data-screen="sukkot" hidden>
       <button class="backBtn" data-route="moed">← Volver a Moed</button>
       <div id="sukkotStatus" class="pilotbar">Cargando Sukot…</div><article id="sukkotExperience"></article>
-      <section class="depthCard"><div class="depthIcon">🌌</div><div><div class="eyebrow">Beit Midrash · opcional</div><h2>El Secreto de la Sombra de Emuná</h2><p>Introducción → Sod → Jasidut → R. Najmán → Ramjal → Avodá → Arizal → Shoevá → 70 Parim → Carta/Meditación → Mapa de Tishrei.</p><button class="secondaryBtn" data-route="sukkot-study">Profundizar en Sukot</button></div></section>
+      <section class="depthCard"><div class="depthIcon">🌌</div><div><div class="eyebrow">Beit Midrash · opcional</div><h2>El Secreto de la Sombra de Emuná</h2><p>Introducción → Sod → Jasidut → R. Najmán → Ramjal → Avodá → Arizal → Shoevá → 70 Parim → Carta/Meditación → Mapa de Tishrei.</p><div class="buttonStack"><button class="secondaryBtn" data-route="sukkot-study">Profundizar en Sukot</button><button class="secondaryBtn richOpenBtn" data-apartado="sukkot-sombra">Abrir apartado visual</button></div></div></section>
     </section>
 
     <section class="screen" data-screen="sukkot-study" hidden>
@@ -157,12 +157,22 @@
     <section class="screen" data-screen="adam-adama" hidden>
       <button class="backBtn" data-route="camino">← Volver a Camino</button>
       <div id="adamStatus" class="pilotbar">Cargando ADAM–ADAMÁ…</div><article id="adamExperience"></article>
-      <section class="depthCard"><div class="depthIcon">🌱</div><div><div class="eyebrow">Prueba de importación nativa</div><h2>Segunda Serie · Bloque 1</h2><p>Primer bloque convertido al nuevo modelo con checklists persistentes.</p><button class="secondaryBtn" data-route="adam-adama-b1">Abrir bloque piloto</button></div></section>
+      <section class="depthCard"><div class="depthIcon">🌱</div><div><div class="eyebrow">Colección Ramak</div><h2>Fundamentos y práctica regenerativa</h2><p>La colección conserva su riqueza visual y abre los contenidos como apartados internos de Dérej.</p><div class="buttonStack"><button class="secondaryBtn" data-route="adam-adama-b1">Abrir práctica piloto</button><button class="secondaryBtn richOpenBtn" data-apartado="adam-adama-ramak">Abrir mapa visual Ramak</button></div></div></section>
     </section>
 
     <section class="screen" data-screen="adam-adama-b1" hidden>
       <button class="backBtn" data-route="adam-adama">← Volver a ADAM–ADAMÁ</button>
       <div id="adamB1Status" class="pilotbar">Cargando bloque piloto…</div><article id="adamB1Experience"></article>
+    </section>
+
+
+    <section class="screen" data-screen="apartado" hidden>
+      <button class="backBtn" id="apartadoBack" type="button">← Volver</button>
+      <div class="eyebrow">Complemento Dérej · HTML integrado</div>
+      <h1 id="apartadoTitle">Apartado</h1>
+      <p class="lede" id="apartadoLead">Una capa ampliada de estudio que permanece dentro de Dérej.</p>
+      <div id="apartadoStatus" class="pilotbar">Preparando apartado…</div>
+      <article id="apartadoHost" class="richApartadoHost"></article>
     </section>
 
     <section class="screen" data-screen="radio" hidden>

@@ -1,0 +1,22 @@
+DÉREJ MASTER v1.6 · VALIDACIÓN
+Fecha: 2026-09-29
+
+PASS · app.js syntax
+PASS · sw.js syntax
+PASS · all JSON parse
+PASS · 112 DOM IDs referenced / 0 missing
+PASS · v1.6 title + badge
+PASS · Ramak water icon (drop + vessel)
+PASS · Biná palette #1E6A32 + #F2C94C
+PASS · tactile glossary engine incl. Havdalá
+PASS · source reader exact-passage focus
+PASS · carry-choice selection before local save
+PASS · rich HTML apartado screen
+PASS · Shabat rich apartado
+PASS · Sukot rich apartado
+PASS · ADAM–ADAMÁ Ramak rich apartado
+PASS · Service Worker v1.6 caches rich HTML apartados
+PASS · local HTTP smoke 200 for app, content and apartados
+PASS · no new external reader dependency introduced
+
+QA target: iPhone Safari / PWA manual verification after deployment.

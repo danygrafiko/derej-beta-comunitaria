@@ -1,22 +1,9 @@
-# DÉREJ v1.4 — Deploy checklist
+# DÉREJ v1.6 · despliegue desde iPhone
 
-Target: `danygrafiko/derej-beta-comunitaria` → `main` → GitHub Pages.
+1. En la raíz del repositorio, subir todos los archivos del ZIP `derej-v1.6-root-upload.zip` y reemplazar los existentes.
+   Commit sugerido: `Deploy DÉREJ v1.6 · Apartados y lenguaje vivo`
+2. Entrar en la carpeta `content` y subir los 7 JSON del ZIP `derej-v1.6-content-upload.zip`.
+   Commit sugerido: `Update DÉREJ content v1.6`
+3. Esperar la propagación de GitHub Pages y abrir la app en Safari.
 
-## Required deploy files
-Upload/replace the complete contents of this folder, preserving `content/`. Existing historical `beta-*.html` files may remain in the repository.
-
-## Post-deploy checks
-1. Open the GitHub Pages URL.
-2. Confirm the header/badge shows v1.4.
-3. Open Comunidad and start an action requiring an anonymous identity.
-4. Turnstile must render before the first anonymous session is created.
-5. Complete the challenge, register the mission, submit one testimony, then moderate it with the permanent admin account.
-6. Confirm published testimony is visible publicly and pending/hidden testimony is not.
-7. Confirm Radio and Camino still work.
-
-## Security invariants
-- `communityCaptchaEnabled` must be `true`.
-- Site Key is public and may exist in `config.js`.
-- No Cloudflare Secret Key may exist in this package.
-- No Supabase service-role/secret key may exist in browser files.
-- The first-admin bootstrap page is intentionally absent.
+No es necesario crear una nueva carpeta: los tres apartados HTML de v1.6 viajan como archivos raíz.
