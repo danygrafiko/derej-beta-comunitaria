@@ -60,11 +60,17 @@
       {
         "id": "llevar",
         "kind": "action",
-        "title": "Llevar",
-        "body": "Elegir una pequeña práctica de descanso, cuidado o justicia para la semana.",
+        "title": "Qué llevar contigo",
+        "body": "Elige una sola práctica pequeña para vivir durante la semana. No necesitas hacerlas todas.",
         "action": {
-          "label": "Guardar sólo en este dispositivo",
-          "mode": "local"
+          "label": "Guardar esta práctica para la semana",
+          "mode": "local",
+          "choices": [
+            "Reservar un tiempo breve sin pantalla",
+            "Compartir una mesa con presencia",
+            "Practicar una pausa sin producir",
+            "Hacer un gesto concreto de cuidado o justicia"
+          ]
         }
       }
     ],

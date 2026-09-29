@@ -127,11 +127,17 @@
       {
         "id": "llevar",
         "kind": "action",
-        "title": "Llevar la sombra contigo",
-        "body": "Elige una práctica pequeña de hospitalidad, gratitud o consumo más sobrio para sostener después de la festividad.",
+        "title": "Qué llevar contigo después de Sukot",
+        "body": "Elige una sola práctica que traduzca el estudio en una acción concreta, pequeña y sostenible.",
         "action": {
-          "label": "Guardar una práctica en este dispositivo",
-          "mode": "local"
+          "label": "Guardar esta práctica para la semana",
+          "mode": "local",
+          "choices": [
+            "Invitar o incluir a alguien que suele quedar fuera",
+            "Agradecer algo que normalmente doy por sentado",
+            "Reducir una compra o consumo no esencial",
+            "Habitar un momento sin intentar controlarlo"
+          ]
         },
         "source_ids": [
           "derej-editorial"
