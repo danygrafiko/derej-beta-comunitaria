@@ -624,5 +624,597 @@
     "bereshit": "https://parashot.com.ar/?section=parashot&parasha=bereshit&aliya=all",
     "catalog": "https://parashot.com.ar/parashot/",
     "haftara_bereshit": "https://parashot.com.ar/?section=parashot&parasha=bereshit&aliya=haftara"
+  },
+  "root_editorial": {
+    "2026-09-27": {
+      "context_extra": "El mandato de habitar en una suká pertenece a Israel y recuerda una historia de dependencia, protección y memoria. La morada temporal no elimina la casa permanente: introduce, por unos días, una experiencia distinta del espacio y de la seguridad.",
+      "reading_extra": "Dérej toma de aquí una pregunta sobre presencia: cuando sabemos que algo es transitorio, podemos dejar de tratarlo como garantizado. Lo temporal puede volver más visible el cuidado, la gratitud y la atención."
+    },
+    "2026-09-28": {
+      "context_extra": "Vayikrá 23:40 introduce las cuatro especies de Sukot: fruto de árbol hermoso, ramas de palmera, ramas de árbol frondoso y sauces del arroyo. El gesto pertenece a la práctica ritual de Israel y reúne elementos distintos dentro de una misma celebración.",
+      "reading_extra": "Reunir no exige borrar las diferencias. Una comunidad puede sostener ritmos, historias, capacidades y sensibilidades distintas sin convertirlas en amenaza. La unidad puede ser una relación entre diferencias, no una uniformidad impuesta."
+    },
+    "2026-09-29": {
+      "context_extra": "Yeshayahu 12:3 habla de sacar agua con alegría de las fuentes de la salvación. La tradición vinculó profundamente este lenguaje con la celebración del agua en Sukot y con la dependencia de la lluvia y de la bendición.",
+      "reading_extra": "La imagen del agua desplaza la pregunta desde producir hacia recibir. Hay momentos en que la tarea no es hacer más, sino reconocer qué nos sostiene, qué necesitamos aceptar y qué podemos agradecer."
+    },
+    "2026-09-30": {
+      "context_extra": "Devarim presenta la alegría de la festividad dentro de una vida concreta: cosecha, trabajo, familia y comunidad. No se trata de una emoción aislada, sino de una celebración situada en relaciones y provisión.",
+      "reading_extra": "Reconocer lo suficiente no significa negar carencias. Significa permitir que lo presente también tenga peso: compañía, alimento, tiempo, refugio o una oportunidad concreta que ya existe."
+    },
+    "2026-10-01": {
+      "context_extra": "Kohelet utiliza la imagen de havel —vapor, aliento, algo difícil de retener— para interrogar la permanencia y el control. Su lectura durante Sukot crea una tensión fecunda entre alegría y transitoriedad.",
+      "reading_extra": "Aceptar movimiento no equivale a resignarse. Puede significar dejar de exigir que personas, etapas o identidades permanezcan exactamente como eran para poder seguir valorándolas."
+    },
+    "2026-10-02": {
+      "context_extra": "Hosha na —“salva, por favor”— forma parte del lenguaje de Tehilim 118 y adquirió una presencia especial en las liturgias de Sukot. La petición reconoce que no toda reparación depende de la autosuficiencia.",
+      "reading_extra": "Pedir ayuda puede ser una forma de verdad. Dérej abre aquí una práctica sencilla: reconocer qué merece otra oportunidad y qué parte de ese proceso requiere compañía, tiempo o ayuda externa."
+    },
+    "2026-10-03": {
+      "context_extra": "Bamidbar 29:35 presenta Shemini Atzeret como una asamblea del octavo día, inmediatamente después de Sukot. La tradición la comprende como una festividad propia, aun cuando nace pegada al ciclo que acaba de concluir.",
+      "reading_extra": "Antes de pasar a lo siguiente, puede haber valor en permanecer un poco más. Cerrar bien también es una práctica: agradecer, recoger lo aprendido y dejar que una experiencia termine sin apresurar el próximo comienzo."
+    }
+  },
+  "native_reader": {
+    "2026-09-13": {
+      "date": "2026-09-13",
+      "week_id": "haazinu",
+      "title": "ESTAR DESPUÉS DEL COMIENZO",
+      "question": "¿Qué queda cuando termina el momento solemne?",
+      "category": "Torá",
+      "reference_he": "Bereshit 22",
+      "reference_es": "Génesis 22",
+      "hebrew_excerpt": "הִנְנִי",
+      "transliteration": "Hineni",
+      "meaning_es": "aquí estoy",
+      "text_es": null,
+      "context": "La lectura tradicional del segundo día de Rosh Hashaná abre una pregunta por la presencia consciente.",
+      "derej_reading": "Después de un comienzo importante, quizá la primera tarea no sea avanzar: puede ser comprobar dónde estamos.",
+      "sources": [
+        "Open Scriptures Hebrew Bible · texto hebreo de referencia",
+        "Sefaria · estructura y contraste editorial",
+        "Parashot · referencia semanal"
+      ]
+    },
+    "2026-09-14": {
+      "date": "2026-09-14",
+      "week_id": "haazinu",
+      "title": "RECORDAR",
+      "question": "¿Qué no quiero perder justo después de comenzar?",
+      "category": "Torá",
+      "reference_he": "Devarim 32:7",
+      "reference_es": "Deuteronomio 32:7",
+      "hebrew_excerpt": "זְכֹר יְמוֹת עוֹלָם",
+      "transliteration": "Zekhor yemot olam",
+      "meaning_es": "recuerda los días antiguos",
+      "text_es": "Recuerda los días antiguos; comprende los años de generación en generación. Pregunta a tu padre y te contará; a tus ancianos y te dirán.",
+      "context": "Haazinu pide a Israel recordar su historia y preguntar a las generaciones anteriores.",
+      "derej_reading": "La memoria no sirve sólo para mirar atrás. También puede impedir que el próximo paso nazca sin raíces.",
+      "sources": [
+        "Open Scriptures Hebrew Bible · texto hebreo de referencia",
+        "Sefaria · estructura y contraste editorial",
+        "Parashot · referencia semanal"
+      ]
+    },
+    "2026-09-15": {
+      "date": "2026-09-15",
+      "week_id": "haazinu",
+      "title": "RECIBIR COMO ROCÍO",
+      "question": "¿Qué puede entrar sin forzarlo?",
+      "category": "Torá",
+      "reference_he": "Devarim 32:2",
+      "reference_es": "Deuteronomio 32:2",
+      "hebrew_excerpt": "תִּזַּל כַּטַּל אִמְרָתִי",
+      "transliteration": "Tizal katal imrati",
+      "meaning_es": "que mi palabra destile como rocío",
+      "text_es": "Que mi enseñanza caiga como lluvia; que mi palabra destile como rocío, como llovizna sobre la hierba y como gotas sobre la vegetación.",
+      "context": "La canción de Moshe compara la enseñanza con lluvia y rocío. La imagen pertenece al poema dirigido a Israel.",
+      "derej_reading": "No todo cambio necesita intensidad. Algunas cosas entran mejor cuando no intentamos obligarlas.",
+      "sources": [
+        "Open Scriptures Hebrew Bible · texto hebreo de referencia",
+        "Sefaria · estructura y contraste editorial",
+        "Parashot · referencia semanal"
+      ]
+    },
+    "2026-09-16": {
+      "date": "2026-09-16",
+      "week_id": "haazinu",
+      "title": "RECONOCER LA ROCA",
+      "question": "¿Qué permanece cuando cambia el ánimo?",
+      "category": "Torá",
+      "reference_he": "Devarim 32:4",
+      "reference_es": "Deuteronomio 32:4",
+      "hebrew_excerpt": "הַצּוּר תָּמִים פָּעֳלוֹ",
+      "transliteration": "HaTzur tamim po'alo",
+      "meaning_es": "La Roca, perfecta es Su obra",
+      "text_es": "La Roca: perfecta es Su obra, porque todos Sus caminos son justicia; Dios de fidelidad y sin injusticia, justo y recto es Él.",
+      "context": "Moshe nombra a Dios como La Roca dentro de la canción y de la relación de Israel con el Eterno.",
+      "derej_reading": "La imagen abre una pregunta: ¿qué fundamento no debería depender de cómo me siento hoy?",
+      "sources": [
+        "Open Scriptures Hebrew Bible · texto hebreo de referencia",
+        "Sefaria · estructura y contraste editorial",
+        "Parashot · referencia semanal"
+      ]
+    },
+    "2026-09-17": {
+      "date": "2026-09-17",
+      "week_id": "haazinu",
+      "title": "NOTAR LO QUE SE VOLVIÓ OBVIO",
+      "question": "¿Qué dejo de ver cuando siempre está disponible?",
+      "category": "Torá",
+      "reference_he": "Devarim 32:15",
+      "reference_es": "Deuteronomio 32:15",
+      "hebrew_excerpt": "וַיִּשְׁמַן יְשֻׁרוּן",
+      "transliteration": "Vayishman Yeshurun",
+      "meaning_es": "Yeshurún engordó",
+      "text_es": "Yeshurún engordó y dio coces; engordaste, te hiciste grueso y te cubriste. Abandonó al Dios que lo hizo y despreció la Roca de su salvación.",
+      "context": "El poema advierte a Israel que la abundancia también puede producir olvido.",
+      "derej_reading": "La comodidad puede hacer invisible aquello que antes habríamos reconocido como regalo.",
+      "sources": [
+        "Open Scriptures Hebrew Bible · texto hebreo de referencia",
+        "Sefaria · estructura y contraste editorial",
+        "Parashot · referencia semanal"
+      ]
+    },
+    "2026-09-18": {
+      "date": "2026-09-18",
+      "week_id": "haazinu",
+      "title": "VOLVER",
+      "question": "¿Qué orientación quiero recuperar antes de Shabbat?",
+      "category": "Profetas",
+      "reference_he": "Hoshea 14:2",
+      "reference_es": "Oseas 14:2",
+      "hebrew_excerpt": "שׁוּבָה יִשְׂרָאֵל",
+      "transliteration": "Shuvah Yisrael",
+      "meaning_es": "vuelve, Israel",
+      "text_es": "Vuelve, Israel, al Eterno tu Dios, porque has tropezado por tu iniquidad.",
+      "context": "La haftará de Shabbat Shuvah se dirige explícitamente a Israel. Dérej abre una pregunta humana sobre reorientación.",
+      "derej_reading": "Volver no es fingir que nada ocurrió. Es recuperar dirección llevando contigo lo que aprendiste.",
+      "sources": [
+        "Open Scriptures Hebrew Bible · texto hebreo de referencia",
+        "Sefaria · estructura y contraste editorial",
+        "Parashot · referencia semanal"
+      ]
+    },
+    "2026-09-19": {
+      "date": "2026-09-19",
+      "week_id": "haazinu",
+      "title": "ESCUCHAR LO QUE PERMANECE",
+      "question": "¿Qué palabra de la semana sigue viva sin que la app la empuje?",
+      "category": "Torá",
+      "reference_he": "Devarim 32:1–52",
+      "reference_es": "Deuteronomio 32:1–52",
+      "hebrew_excerpt": "הַאֲזִינוּ",
+      "transliteration": "Haazinu",
+      "meaning_es": "escuchen / presten oído",
+      "text_es": null,
+      "context": "Haazinu es una canción de Moshe dirigida a Israel. Este Shabbat es también Shabbat Shuvah.",
+      "derej_reading": "Una canción puede terminar y seguir sonando. La medida no es cuánto completaste, sino qué regresó cuando la pantalla ya no estaba.",
+      "sources": [
+        "Open Scriptures Hebrew Bible · texto hebreo de referencia",
+        "Sefaria · estructura y contraste editorial",
+        "Parashot · referencia semanal"
+      ]
+    },
+    "2026-09-20": {
+      "date": "2026-09-20",
+      "week_id": "kippur-sukkot",
+      "title": "DETENERSE ANTES DEL UMBRAL",
+      "question": "¿Qué no quiero arrastrar sin mirarlo?",
+      "category": "Torá",
+      "reference_he": "Vayikrá 16:30",
+      "reference_es": "Levítico 16:30",
+      "hebrew_excerpt": "כִּי בַיּוֹם הַזֶּה",
+      "transliteration": "Ki vayom hazeh",
+      "meaning_es": "porque en este día",
+      "text_es": "Porque en este día se hará expiación por ustedes para purificarlos; de todos sus errores, delante del Eterno, serán purificados.",
+      "context": "El texto pertenece al servicio de Yom Kipur de Israel y habla de expiación y purificación. Dérej no convierte ese rito en una práctica universal.",
+      "derej_reading": "Antes de pedir un comienzo distinto, puede ser necesario mirar con claridad aquello que todavía viaja con nosotros.",
+      "sources": [
+        "Open Scriptures Hebrew Bible · texto hebreo de referencia",
+        "Sefaria · estructura y contraste editorial",
+        "Parashot · referencia semanal"
+      ]
+    },
+    "2026-09-21": {
+      "date": "2026-09-21",
+      "week_id": "kippur-sukkot",
+      "title": "HACER ESPACIO PARA REPARAR",
+      "question": "¿Qué clase de cambio sería visible fuera de mí?",
+      "category": "Profetas",
+      "reference_he": "Yeshayahu 58:6–7",
+      "reference_es": "Isaías 58:6–7",
+      "hebrew_excerpt": "הֲלוֹא זֶה צוֹם אֶבְחָרֵהוּ",
+      "transliteration": "Halo ze tzom evjarehu",
+      "meaning_es": "¿no es éste el ayuno que escogí?",
+      "text_es": null,
+      "context": "Esta haftará de Yom Kipur critica una religiosidad desconectada de justicia y cuidado del vulnerable.",
+      "derej_reading": "Una experiencia interior se vuelve más creíble cuando modifica la manera en que tratamos a otros.",
+      "sources": [
+        "Open Scriptures Hebrew Bible · texto hebreo de referencia",
+        "Sefaria · estructura y contraste editorial",
+        "Parashot · referencia semanal"
+      ]
+    },
+    "2026-09-22": {
+      "date": "2026-09-22",
+      "week_id": "kippur-sukkot",
+      "title": "BAJAR EL VOLUMEN",
+      "question": "¿Qué puedo dejar de alimentar después de un día intenso?",
+      "category": "Torá",
+      "reference_he": "Vayikrá 23:32",
+      "reference_es": "Levítico 23:32",
+      "hebrew_excerpt": "שַׁבָּתוֹן",
+      "transliteration": "Shabbaton",
+      "meaning_es": "reposo completo",
+      "text_es": "Será para ustedes un reposo completo; afligirán sus vidas. Desde el noveno día del mes al atardecer, de tarde a tarde guardarán su descanso.",
+      "context": "El término aparece en el mandato de Yom Kipur dirigido a Israel. Dérej no traslada la obligación ritual.",
+      "derej_reading": "Después de un momento profundo, quizá no toca producir más significado sino dejar que algo se asiente.",
+      "sources": [
+        "Open Scriptures Hebrew Bible · texto hebreo de referencia",
+        "Sefaria · estructura y contraste editorial",
+        "Parashot · referencia semanal"
+      ]
+    },
+    "2026-09-23": {
+      "date": "2026-09-23",
+      "week_id": "kippur-sukkot",
+      "title": "HACER LUGAR",
+      "question": "¿Qué espacio físico o interior necesita quedar disponible?",
+      "category": "Torá",
+      "reference_he": "Vayikrá 23:42",
+      "reference_es": "Levítico 23:42",
+      "hebrew_excerpt": "בַּסֻּכּוֹת תֵּשְׁבוּ",
+      "transliteration": "Basukkot teshvu",
+      "meaning_es": "habitarán en sukkot",
+      "text_es": "En sukot habitarán siete días; todo nativo de Israel habitará en sukot.",
+      "context": "La Torá ordena a Israel habitar en sukkot durante la festividad. Dérej no invita a reproducir el rito.",
+      "derej_reading": "A veces cambiar de perspectiva requiere cambiar, aunque sea un poco, el lugar desde donde miramos.",
+      "sources": [
+        "Open Scriptures Hebrew Bible · texto hebreo de referencia",
+        "Sefaria · estructura y contraste editorial",
+        "Parashot · referencia semanal"
+      ]
+    },
+    "2026-09-24": {
+      "date": "2026-09-24",
+      "week_id": "kippur-sukkot",
+      "title": "HACER LUGAR PARA OTRO",
+      "question": "¿Quién quedaría fuera si sólo pienso en mi propia alegría?",
+      "category": "Torá",
+      "reference_he": "Devarim 16:14",
+      "reference_es": "Deuteronomio 16:14",
+      "hebrew_excerpt": "וְשָׂמַחְתָּ בְּחַגֶּךָ",
+      "transliteration": "Vesamachta bejagueja",
+      "meaning_es": "te alegrarás en tu fiesta",
+      "text_es": "Te alegrarás en tu fiesta: tú, tu hijo, tu hija, tu siervo, tu sierva, el levita, el extranjero, el huérfano y la viuda que estén en tus ciudades.",
+      "context": "El texto sobre Sukkot incluye explícitamente a familia, levita, extranjero, huérfano y viuda dentro de la alegría de Israel.",
+      "derej_reading": "La alegría que sólo cabe en mí puede ser demasiado pequeña.",
+      "sources": [
+        "Open Scriptures Hebrew Bible · texto hebreo de referencia",
+        "Sefaria · estructura y contraste editorial",
+        "Parashot · referencia semanal"
+      ]
+    },
+    "2026-09-25": {
+      "date": "2026-09-25",
+      "week_id": "kippur-sukkot",
+      "title": "HABITAR LO FRÁGIL",
+      "question": "¿Qué me enseña un espacio que no pretende ser permanente?",
+      "category": "Torá",
+      "reference_he": "Vayikrá 23:43",
+      "reference_es": "Levítico 23:43",
+      "hebrew_excerpt": "לְמַעַן יֵדְעוּ דֹרֹתֵיכֶם",
+      "transliteration": "Lemaan yed'u doroteijem",
+      "meaning_es": "para que sepan sus generaciones",
+      "text_es": "Para que sepan sus generaciones que hice habitar en sukot a los hijos de Israel cuando los saqué de la tierra de Egipto. Yo soy el Eterno su Dios.",
+      "context": "La Torá conecta la sukkah con la memoria histórica de Israel. Dérej conserva ese contexto.",
+      "derej_reading": "Lo frágil puede revelar dependencias que una estructura permanente oculta.",
+      "sources": [
+        "Open Scriptures Hebrew Bible · texto hebreo de referencia",
+        "Sefaria · estructura y contraste editorial",
+        "Parashot · referencia semanal"
+      ]
+    },
+    "2026-09-26": {
+      "date": "2026-09-26",
+      "week_id": "kippur-sukkot",
+      "title": "ALEGRARSE SIN NEGAR LA FRAGILIDAD",
+      "question": "¿Puede haber alegría sin fingir que todo está bien?",
+      "category": "Torá",
+      "reference_he": "Vayikrá 23:40",
+      "reference_es": "Levítico 23:40",
+      "hebrew_excerpt": "וּשְׂמַחְתֶּם לִפְנֵי",
+      "transliteration": "Usmachtem lifnei",
+      "meaning_es": "se alegrarán delante de",
+      "text_es": "Tomarán para ustedes, el primer día, fruto de árbol hermoso, ramas de palmeras, ramas de árbol frondoso y sauces del arroyo; y se alegrarán delante del Eterno su Dios durante siete días.",
+      "context": "El verso pertenece a la celebración de Sukkot de Israel e incluye las cuatro especies. Dérej no convierte sus objetos rituales en una técnica universal.",
+      "derej_reading": "La alegría madura no exige negar la fragilidad; puede aparecer precisamente mientras la reconocemos.",
+      "sources": [
+        "Open Scriptures Hebrew Bible · texto hebreo de referencia",
+        "Sefaria · estructura y contraste editorial",
+        "Parashot · referencia semanal"
+      ]
+    },
+    "2026-09-27": {
+      "date": "2026-09-27",
+      "week_id": "sukkot-atzeret",
+      "title": "HABITAR",
+      "question": "¿Qué cambia cuando acepto que algo es temporal?",
+      "category": "Torá",
+      "reference_he": "Vayikrá 23:42",
+      "reference_es": "Levítico 23:42",
+      "hebrew_excerpt": "בַּסֻּכּוֹת תֵּשְׁבוּ",
+      "transliteration": "Basukkot teshvu",
+      "meaning_es": "habitarán en sukkot",
+      "text_es": "En sukot habitarán siete días; todo nativo de Israel habitará en sukot.",
+      "context": "Sukkot II continúa una práctica ritual propia de la vida judía. Dérej observa la tensión entre habitar y saber que el espacio es temporal.",
+      "derej_reading": "Saber que algo no dura para siempre puede ayudarnos a estar más presentes mientras existe.",
+      "sources": [
+        "Open Scriptures Hebrew Bible · texto hebreo de referencia",
+        "Sefaria · estructura y contraste editorial",
+        "Parashot · referencia semanal"
+      ]
+    },
+    "2026-09-28": {
+      "date": "2026-09-28",
+      "week_id": "sukkot-atzeret",
+      "title": "REUNIR SIN UNIFORMAR",
+      "question": "¿Qué diferencias puedo sostener sin convertirlas en amenaza?",
+      "category": "Torá",
+      "reference_he": "Vayikrá 23:40",
+      "reference_es": "Levítico 23:40",
+      "hebrew_excerpt": "וּלְקַחְתֶּם לָכֶם",
+      "transliteration": "Ulekajtem lajem",
+      "meaning_es": "tomarán para ustedes",
+      "text_es": "Tomarán para ustedes, el primer día, fruto de árbol hermoso, ramas de palmeras, ramas de árbol frondoso y sauces del arroyo; y se alegrarán delante del Eterno su Dios durante siete días.",
+      "context": "El verso introduce las cuatro especies de Sukkot. Dérej no reproduce ni reinterpreta el ritual como si le perteneciera.",
+      "derej_reading": "Unidad no siempre significa semejanza. A veces consiste en aprender a sostener diferencias sin borrarlas.",
+      "sources": [
+        "Open Scriptures Hebrew Bible · texto hebreo de referencia",
+        "Sefaria · estructura y contraste editorial",
+        "Parashot · referencia semanal"
+      ]
+    },
+    "2026-09-29": {
+      "date": "2026-09-29",
+      "week_id": "sukkot-atzeret",
+      "title": "RECIBIR AGUA",
+      "question": "¿Qué necesito recibir, no producir?",
+      "category": "Profetas",
+      "reference_he": "Yeshayahu 12:3",
+      "reference_es": "Isaías 12:3",
+      "hebrew_excerpt": "וּשְׁאַבְתֶּם מַיִם בְּשָׂשׂוֹן",
+      "transliteration": "Ushavtem mayim besason",
+      "meaning_es": "sacarán agua con alegría",
+      "text_es": "Sacarán agua con alegría de las fuentes de la salvación.",
+      "context": "Este verso quedó profundamente asociado en la tradición con la celebración del agua en Sukkot.",
+      "derej_reading": "Hay temporadas en que la tarea no es producir más, sino aprender a recibir.",
+      "sources": [
+        "Open Scriptures Hebrew Bible · texto hebreo de referencia",
+        "Sefaria · estructura y contraste editorial",
+        "Parashot · referencia semanal"
+      ]
+    },
+    "2026-09-30": {
+      "date": "2026-09-30",
+      "week_id": "sukkot-atzeret",
+      "title": "MIRAR LO SUFICIENTE",
+      "question": "¿Qué ya está aquí y sigo tratando como si faltara?",
+      "category": "Torá",
+      "reference_he": "Devarim 16:15",
+      "reference_es": "Deuteronomio 16:15",
+      "hebrew_excerpt": "וְהָיִיתָ אַךְ שָׂמֵחַ",
+      "transliteration": "Vehayita aj sameaj",
+      "meaning_es": "estarás plenamente alegre",
+      "text_es": "Siete días celebrarás la fiesta para el Eterno tu Dios, en el lugar que Él escoja, porque te bendecirá en toda tu cosecha y en toda obra de tus manos; y estarás plenamente alegre.",
+      "context": "La frase pertenece al mandato de alegría en Sukkot para Israel. Dérej no la transforma en obligación emocional.",
+      "derej_reading": "Agradecer no significa negar lo que falta. Significa permitir que lo presente también cuente.",
+      "sources": [
+        "Open Scriptures Hebrew Bible · texto hebreo de referencia",
+        "Sefaria · estructura y contraste editorial",
+        "Parashot · referencia semanal"
+      ]
+    },
+    "2026-10-01": {
+      "date": "2026-10-01",
+      "week_id": "sukkot-atzeret",
+      "title": "ACEPTAR EL MOVIMIENTO",
+      "question": "¿Qué intento fijar aunque ya está cambiando?",
+      "category": "Escritos",
+      "reference_he": "Kohelet 1:2",
+      "reference_es": "Eclesiastés 1:2",
+      "hebrew_excerpt": "הֲבֵל הֲבָלִים",
+      "transliteration": "Havel havalim",
+      "meaning_es": "vapor de vapores",
+      "text_es": "Vapor de vapores, dijo Kohelet; vapor de vapores, todo es vapor.",
+      "context": "Kohelet está asociado litúrgicamente a Sukkot en varias comunidades judías.",
+      "derej_reading": "Lo transitorio no carece de valor. Puede enseñarnos a soltar la fantasía de control.",
+      "sources": [
+        "Open Scriptures Hebrew Bible · texto hebreo de referencia",
+        "Sefaria · estructura y contraste editorial",
+        "Parashot · referencia semanal"
+      ]
+    },
+    "2026-10-02": {
+      "date": "2026-10-02",
+      "week_id": "sukkot-atzeret",
+      "title": "PEDIR OTRA OPORTUNIDAD",
+      "question": "¿Qué merece una nueva oportunidad antes de cerrar?",
+      "category": "Escritos",
+      "reference_he": "Tehilim 118:25",
+      "reference_es": "Salmos 118:25",
+      "hebrew_excerpt": "הוֹשַׁע נָא",
+      "transliteration": "Hosha na",
+      "meaning_es": "salva, por favor",
+      "text_es": "Por favor, Eterno, salva ahora; por favor, Eterno, haz prosperar ahora.",
+      "context": "Hoshana Rabbah pertenece a la liturgia y práctica judía de Sukkot. Dérej no imita sus procesiones ni fórmulas.",
+      "derej_reading": "Pedir ayuda puede ser una forma de honestidad cuando nuestra propia fuerza no alcanza.",
+      "sources": [
+        "Open Scriptures Hebrew Bible · texto hebreo de referencia",
+        "Sefaria · estructura y contraste editorial",
+        "Parashot · referencia semanal"
+      ]
+    },
+    "2026-10-03": {
+      "date": "2026-10-03",
+      "week_id": "sukkot-atzeret",
+      "title": "QUEDARSE UN POCO MÁS",
+      "question": "¿Qué merece un día más de atención antes de pasar a lo siguiente?",
+      "category": "Torá",
+      "reference_he": "Bamidbar 29:35",
+      "reference_es": "Números 29:35",
+      "hebrew_excerpt": "עֲצֶרֶת תִּהְיֶה לָכֶם",
+      "transliteration": "Atzeret tihyeh lajem",
+      "meaning_es": "será para ustedes una asamblea",
+      "text_es": "En el octavo día tendrán una asamblea; no harán trabajo de labor.",
+      "context": "Shemini Atzeret es una festividad distinta que sigue inmediatamente a Sukkot. Dérej no reproduce sus prácticas.",
+      "derej_reading": "A veces la prisa por pasar a lo nuevo nos roba la última conversación con lo que estamos dejando.",
+      "sources": [
+        "Open Scriptures Hebrew Bible · texto hebreo de referencia",
+        "Sefaria · estructura y contraste editorial",
+        "Parashot · referencia semanal"
+      ]
+    },
+    "2026-10-04": {
+      "date": "2026-10-04",
+      "week_id": "bereshit",
+      "title": "TERMINAR Y VOLVER A EMPEZAR",
+      "question": "¿Qué final contiene ya una puerta?",
+      "category": "Torá",
+      "reference_he": "Devarim 34:12 · Bereshit 1:1",
+      "reference_es": "Deuteronomio 34:12 · Bereshit 1:1",
+      "hebrew_excerpt": "לְעֵינֵי כָּל יִשְׂרָאֵל · בְּרֵאשִׁית",
+      "transliteration": "Le'einei kol Yisrael",
+      "meaning_es": "Bereshit",
+      "text_es": null,
+      "context": "Simchat Torah concluye Devarim y vuelve inmediatamente al comienzo de Bereshit. Es una celebración ritual judía.",
+      "derej_reading": "Hay finales que no piden olvidar lo vivido, sino volver al principio con otros ojos.",
+      "sources": [
+        "Open Scriptures Hebrew Bible · texto hebreo de referencia",
+        "Sefaria · estructura y contraste editorial",
+        "Parashot · referencia semanal"
+      ]
+    },
+    "2026-10-05": {
+      "date": "2026-10-05",
+      "week_id": "bereshit",
+      "title": "ANTES DE LA FORMA",
+      "question": "¿Qué existe todavía sin nombre claro?",
+      "category": "Torá",
+      "reference_he": "Bereshit 1:2",
+      "reference_es": "Génesis 1:2",
+      "hebrew_excerpt": "תֹהוּ וָבֹהוּ",
+      "transliteration": "Tohu vavohu",
+      "meaning_es": "desorden y vacío",
+      "text_es": "La tierra estaba desordenada y vacía, oscuridad sobre la faz del abismo, y el espíritu de Dios se movía sobre la faz de las aguas.",
+      "context": "Bereshit describe el estado inicial antes de la organización de la creación.",
+      "derej_reading": "No todo lo que aún no tiene forma está perdido. Algunas cosas están comenzando.",
+      "sources": [
+        "Open Scriptures Hebrew Bible · texto hebreo de referencia",
+        "Sefaria · estructura y contraste editorial",
+        "Parashot · referencia semanal"
+      ]
+    },
+    "2026-10-06": {
+      "date": "2026-10-06",
+      "week_id": "bereshit",
+      "title": "NOMBRAR UNA LUZ",
+      "question": "¿Qué pequeña claridad apareció?",
+      "category": "Torá",
+      "reference_he": "Bereshit 1:3",
+      "reference_es": "Génesis 1:3",
+      "hebrew_excerpt": "יְהִי אוֹר",
+      "transliteration": "Yehi or",
+      "meaning_es": "sea la luz",
+      "text_es": "Dios dijo: “Sea la luz”, y hubo luz.",
+      "context": "El texto bíblico presenta la luz como uno de los primeros actos de creación.",
+      "derej_reading": "A veces una vida cambia no porque todo se resuelva, sino porque aparece suficiente luz para ver el próximo paso.",
+      "sources": [
+        "Open Scriptures Hebrew Bible · texto hebreo de referencia",
+        "Sefaria · estructura y contraste editorial",
+        "Parashot · referencia semanal"
+      ]
+    },
+    "2026-10-07": {
+      "date": "2026-10-07",
+      "week_id": "bereshit",
+      "title": "SEPARAR PARA DISTINGUIR",
+      "question": "¿Qué necesito dejar de mezclar?",
+      "category": "Torá",
+      "reference_he": "Bereshit 1:4",
+      "reference_es": "Génesis 1:4",
+      "hebrew_excerpt": "וַיַּבְדֵּל",
+      "transliteration": "Vayavdel",
+      "meaning_es": "separó / distinguió",
+      "text_es": "Dios vio que la luz era buena, y distinguió entre la luz y la oscuridad.",
+      "context": "En Bereshit, separar permite distinguir luz y oscuridad. La acción no implica declarar que todo contraste es moral.",
+      "derej_reading": "Distinguir puede ser más útil que juzgar.",
+      "sources": [
+        "Open Scriptures Hebrew Bible · texto hebreo de referencia",
+        "Sefaria · estructura y contraste editorial",
+        "Parashot · referencia semanal"
+      ]
+    },
+    "2026-10-08": {
+      "date": "2026-10-08",
+      "week_id": "bereshit",
+      "title": "RECONOCER LO BUENO",
+      "question": "¿Qué cosa concreta puedo llamar buena sin exagerarla?",
+      "category": "Torá",
+      "reference_he": "Bereshit 1",
+      "reference_es": "Génesis 1",
+      "hebrew_excerpt": "וַיַּרְא ... כִּי טוֹב",
+      "transliteration": "Vayar... ki tov",
+      "meaning_es": "vio que era bueno",
+      "text_es": null,
+      "context": "La fórmula se repite en el relato de la creación. Dérej no la usa como garantía de que todo lo que ocurre sea bueno.",
+      "derej_reading": "Reconocer lo bueno no exige negar lo incompleto.",
+      "sources": [
+        "Open Scriptures Hebrew Bible · texto hebreo de referencia",
+        "Sefaria · estructura y contraste editorial",
+        "Parashot · referencia semanal"
+      ]
+    },
+    "2026-10-09": {
+      "date": "2026-10-09",
+      "week_id": "bereshit",
+      "title": "NO CREAR SOLOS",
+      "question": "¿Qué parte de mi camino necesita relación?",
+      "category": "Torá",
+      "reference_he": "Bereshit 2:18",
+      "reference_es": "Génesis 2:18",
+      "hebrew_excerpt": "לֹא טוֹב הֱיוֹת הָאָדָם לְבַדּוֹ",
+      "transliteration": "Lo tov heyot ha'adam levado",
+      "meaning_es": "no es bueno que el ser humano esté solo",
+      "text_es": "El Eterno Dios dijo: “No es bueno que el ser humano esté solo; haré para él una ayuda correspondiente”.",
+      "context": "El verso pertenece al relato de la creación del ser humano y su relación. Dérej evita convertirlo en una única norma sobre matrimonio o forma de vida.",
+      "derej_reading": "La autonomía tiene límites. Hay cosas que sólo se vuelven humanas en relación.",
+      "sources": [
+        "Open Scriptures Hebrew Bible · texto hebreo de referencia",
+        "Sefaria · estructura y contraste editorial",
+        "Parashot · referencia semanal"
+      ]
+    },
+    "2026-10-10": {
+      "date": "2026-10-10",
+      "week_id": "bereshit",
+      "title": "¿DÓNDE ESTÁS?",
+      "question": "¿Dónde estoy después de haber comenzado otra vez?",
+      "category": "Torá",
+      "reference_he": "Bereshit 3:9",
+      "reference_es": "Génesis 3:9",
+      "hebrew_excerpt": "אַיֶּכָּה",
+      "transliteration": "Ayeká",
+      "meaning_es": "¿dónde estás?",
+      "text_es": "El Eterno Dios llamó al ser humano y le dijo: “¿Dónde estás?”.",
+      "context": "La pregunta aparece cuando el ser humano se esconde. Dérej no la usa para simular la voz divina dirigida al usuario.",
+      "derej_reading": "Una buena pregunta no siempre acusa. A veces simplemente devuelve orientación.",
+      "sources": [
+        "Open Scriptures Hebrew Bible · texto hebreo de referencia",
+        "Sefaria · estructura y contraste editorial",
+        "Parashot · referencia semanal"
+      ]
+    }
   }
 }

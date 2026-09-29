@@ -11,7 +11,7 @@
     "translit": "Tzel de-Mehemanuta",
     "subtitle": "Beit Midrash digital · raíces, alegría, fragilidad y universalidad"
   },
-  "summary": "Migración del estudio completo de Sukot a Content Schema: introducción, Sod, Jasidut, Breslev, Ramjal, Avodá, Arizal, Shoevá, 70 Parim, meditación/carta y mapa de Tishrei.",
+  "summary": "Estudio de Sukot organizado en introducción, Sod, Jasidut, Breslev, Ramjal, Avodá, Arizal, Shoevá, 70 Parim, meditación/carta y mapa de Tishrei.",
   "calendar": {
     "hebrew_label": "Tishrei",
     "recurring": true,
@@ -163,7 +163,7 @@
         "id": "arba-minim",
         "kind": "reflection",
         "title": "Arbaat HaMinim",
-        "body": "El artefacto relaciona las cuatro especies con cualidades y tipos humanos. En Master, la aplicación comunitaria se formula como una analogía Dérej: pertenecer sin exigir uniformidad.",
+        "body": "El artefacto relaciona las cuatro especies con cualidades y tipos humanos. En Dérej, la aplicación comunitaria se formula como una analogía: pertenecer sin exigir uniformidad.",
         "source_ids": [
           "derej-editorial"
         ]
@@ -227,7 +227,7 @@
         "id": "ramjal",
         "kind": "source",
         "title": "Tishrei como recorrido",
-        "body": "Derej Hashem, Daat Tevunot y Mesilat Yesharim son utilizados en el artículo como marcos para conectar tiempo, providencia, alegría y finalidad. Master conserva la arquitectura pero exige verificación de cada correspondencia antes de publicación.",
+        "body": "Derej Hashem, Daat Tevunot y Mesilat Yesharim son utilizados en el artículo como marcos para conectar tiempo, providencia, alegría y finalidad. La edición Dérej conserva esta arquitectura y mantiene separadas la fuente, la interpretación y la aplicación.",
         "source_ids": [
           "derej-hashem-iv",
           "daat-tevunot",
@@ -299,7 +299,7 @@
         "id": "parim",
         "kind": "source",
         "title": "Setenta toros · setenta naciones",
-        "body": "Suká 55b vincula los setenta toros con las setenta naciones. Master conserva el dato tradicional y lo separa de interpretaciones posteriores sobre universalidad, que se identifican como lectura Dérej.",
+        "body": "Suká 55b vincula los setenta toros con las setenta naciones. La edición Dérej conserva el dato tradicional y separa las interpretaciones posteriores sobre universalidad, identificándolas como lectura Dérej.",
         "source_ids": [
           "sukka-talmud",
           "derej-editorial"

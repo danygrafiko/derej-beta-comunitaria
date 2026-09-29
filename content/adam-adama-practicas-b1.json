@@ -9,7 +9,7 @@
     "es": "ADAM–ADAMÁ · Fundamentos Prácticos",
     "subtitle": "Segunda Serie · Bloque 1 · Fichas 1–4"
   },
-  "summary": "Prueba de migración nativa del primer bloque práctico.",
+  "summary": "Primer bloque práctico de ADAM–ADAMÁ disponible en Dérej.",
   "source_refs": [
     {
       "id": "derej-source",
@@ -103,8 +103,9 @@
       {
         "id": "f3-note",
         "kind": "callout",
-        "title": "Migración incompleta",
-        "body": "La práctica detallada de esta ficha no estaba visible en la copia indexada recuperada. Se conserva pendiente en vez de reconstruirla."
+        "title": "Práctica en preparación",
+        "body": "La enseñanza ya está disponible. La práctica guiada de siete días se incorporará cuando complete su revisión editorial.",
+        "source_ids": []
       },
       {
         "id": "f4",
@@ -122,8 +123,9 @@
       {
         "id": "f4-note",
         "kind": "callout",
-        "title": "Migración incompleta",
-        "body": "La práctica detallada de esta ficha no estaba visible en la copia indexada recuperada. Se conserva pendiente en vez de reconstruirla."
+        "title": "Práctica en preparación",
+        "body": "La enseñanza ya está disponible. La práctica guiada de siete días se incorporará cuando complete su revisión editorial.",
+        "source_ids": []
       }
     ],
     "closing": {

@@ -44,16 +44,7 @@
       {
         "id": "serie-1-desc",
         "kind": "text",
-        "body": "32 fichas teóricas · bloques 1–8"
-      },
-      {
-        "id": "serie-1-status",
-        "kind": "callout",
-        "title": "Estado de migración",
-        "body": "La fuente HTML completa está referenciada por el manifiesto original, pero no está accesible actualmente para migración automática.",
-        "source_ids": [
-          "derej-editorial"
-        ]
+        "body": "32 fichas teóricas organizadas en ocho bloques de estudio. La colección se irá abriendo progresivamente dentro de Dérej."
       },
       {
         "id": "serie-2",
@@ -63,16 +54,7 @@
       {
         "id": "serie-2-desc",
         "kind": "text",
-        "body": "32 prácticas de 7 días · bloques 1–8"
-      },
-      {
-        "id": "serie-2-status",
-        "kind": "callout",
-        "title": "Estado de migración",
-        "body": "Los bloques usan estructura data-derej, Peshat/Iyun y persistencia local; la migración nativa comenzó por el Bloque 1.",
-        "source_ids": [
-          "derej-editorial"
-        ]
+        "body": "32 prácticas regenerativas de siete días. El Bloque 1 ya está disponible como piloto de práctica local."
       },
       {
         "id": "mapa-1",

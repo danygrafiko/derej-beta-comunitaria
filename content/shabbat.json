@@ -20,13 +20,53 @@
       "symbol": "🕯️"
     },
     "blocks": [
-      {"id":"preparar","kind":"practice","title":"Preparar","body":"Bajar el ritmo antes de entrar.","duration_minutes":5},
-      {"id":"recibir","kind":"reflection","title":"Recibir","body":"Entrar al descanso como algo que se recibe, no como rendimiento."},
-      {"id":"modo-shabat","kind":"practice","title":"Modo Shabat","body":"Reducir deliberadamente ruido, consumo y demandas digitales."},
-      {"id":"mesa","kind":"practice","title":"Mesa","body":"Hacer de la mesa un espacio de presencia, gratitud y vínculo."},
-      {"id":"escuchar","kind":"question","title":"Escuchar","prompt":"¿Qué aparece cuando dejamos de producir por un momento?"},
-      {"id":"havdala","kind":"reflection","title":"Havdalá","body":"Reconocer la transición entre el tiempo apartado y la semana que vuelve."},
-      {"id":"llevar","kind":"action","title":"Llevar","body":"Elegir una pequeña práctica de descanso, cuidado o justicia para la semana.","action":{"label":"Guardar sólo en este dispositivo","mode":"local"}}
+      {
+        "id": "preparar",
+        "kind": "practice",
+        "title": "Preparar",
+        "body": "Bajar el ritmo antes de entrar.",
+        "duration_minutes": 5
+      },
+      {
+        "id": "recibir",
+        "kind": "reflection",
+        "title": "Recibir",
+        "body": "Entrar al descanso como algo que se recibe, no como rendimiento."
+      },
+      {
+        "id": "modo-shabat",
+        "kind": "practice",
+        "title": "Modo Shabat",
+        "body": "Reducir deliberadamente ruido, consumo y demandas digitales."
+      },
+      {
+        "id": "mesa",
+        "kind": "practice",
+        "title": "Mesa",
+        "body": "Hacer de la mesa un espacio de presencia, gratitud y vínculo."
+      },
+      {
+        "id": "escuchar",
+        "kind": "question",
+        "title": "Escuchar",
+        "prompt": "¿Qué aparece cuando dejamos de producir por un momento?"
+      },
+      {
+        "id": "havdala",
+        "kind": "reflection",
+        "title": "Havdalá",
+        "body": "Reconocer la transición entre el tiempo apartado y la semana que vuelve."
+      },
+      {
+        "id": "llevar",
+        "kind": "action",
+        "title": "Llevar",
+        "body": "Elegir una pequeña práctica de descanso, cuidado o justicia para la semana.",
+        "action": {
+          "label": "Guardar sólo en este dispositivo",
+          "mode": "local"
+        }
+      }
     ],
     "closing": {
       "title": "El camino continúa fuera de la pantalla",
@@ -48,6 +88,11 @@
     "content_version": "0.3",
     "updated_at": "2026-09-27",
     "author": "Dérej",
-    "tags": ["shabbat", "descanso", "presencia", "comunidad"]
+    "tags": [
+      "shabbat",
+      "descanso",
+      "presencia",
+      "comunidad"
+    ]
   }
 }
