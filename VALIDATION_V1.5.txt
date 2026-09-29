@@ -1,0 +1,37 @@
+DÉREJ v1.5 · validation
+34/34 checks passed
+
+PASS · JSON adam-adama.json
+PASS · JSON sukkot.json
+PASS · JSON sukkot-beit-midrash.json
+PASS · JSON shabbat-raiz-bendicion.json
+PASS · JSON adam-adama-practicas-b1.json
+PASS · JSON shabbat.json
+PASS · JSON camino-weeks.json
+PASS · JSON radio.json
+PASS · JSON manifest.webmanifest
+PASS · No duplicate IDs
+PASS · All static DOM refs exist · []
+PASS · v1.5 UI
+PASS · Hebrew date visible
+PASS · Native reader screen
+PASS · No external reader CTA
+PASS · Spanish meaning UI
+PASS · Reference bilingual mapping
+PASS · Icon system
+PASS · Encounter icon not button
+PASS · Memory dedupe
+PASS · Private reflection in memory
+PASS · Clear Camino memory
+PASS · Mobile reflection textarea
+PASS · Technical migration titles absent
+PASS · Public source rights not rendered
+PASS · Historical Radio artwork configured
+PASS · Temporary artwork retired
+PASS · SW v1.5
+PASS · Turnstile remains enabled
+PASS · No service role secret
+PASS · 28 native reader entries · 28
+PASS · Active Vayikra bilingual
+PASS · Active Spanish text developed
+PASS · Active root editorial developed

@@ -1,5 +1,5 @@
 const CACHE_PREFIX = 'derej-master-';
-const CACHE = 'derej-master-v1.4-20260928-01';
+const CACHE = 'derej-master-v1.5-20260928-01';
 const SHELL = [
   './',
   './index.html',
@@ -8,7 +8,6 @@ const SHELL = [
   './config.js',
   './manifest.webmanifest',
   './radio.json',
-  './radio-meditacion.png',
   './icon-180.png',
   './icon-192.png',
   './icon-512.png',

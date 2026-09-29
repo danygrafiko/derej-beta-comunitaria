@@ -73,3 +73,61 @@ dialog{border:0;padding:0;background:transparent;max-width:min(92vw,440px)}dialo
 .captchaCard{width:min(92vw,420px)}
 .turnstileWidget{min-height:70px;display:flex;align-items:center;justify-content:center;margin:16px 0 8px;overflow:hidden}
 .turnstileWidget:empty::before{content:'Verificación humana';display:block;color:var(--mut);font-size:.78rem;padding:18px;border:1px dashed var(--line);border-radius:13px;width:100%;text-align:center}
+
+/* DÉREJ v1.5 · Lectura y Memoria */
+.brandDate{display:block;margin-top:4px;font-size:.58rem;line-height:1.25;color:#7f7769;letter-spacing:.04em;text-transform:none}
+.rootLanguage{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:10px 0 12px}
+.rootLanguage>div{background:#f7f0e3;border:1px solid var(--line);border-radius:14px;padding:10px 11px}
+.rootLanguage p{margin:.25rem 0 0;text-align:left}
+.rootMeaning{font-weight:800;color:var(--ink);line-height:1.4}
+.editorialExtra{margin-top:.75rem;padding-top:.75rem;border-top:1px solid #ded1bd;color:#4e493f}
+.rootDerej h2{font-size:1.25rem;margin:.2rem 0 .35rem}
+
+.encounterHebrewDate{font-size:.72rem;color:var(--mut);margin-top:5px}
+.encounterMotif{display:inline-flex;align-items:center;gap:9px;margin:13px 0 8px;padding:7px 10px;border-radius:999px;background:#f3eadb;border:1px solid var(--line);color:#4f493f}
+.encounterSymbol{display:grid;place-items:center;width:27px;height:27px;margin:0;font-size:1.25rem;line-height:1}
+.encounterMotif small{font-size:.68rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
+
+.weekDayIcon,.weekSymbol,.caminoTodayIcon{border:1px solid transparent}
+.weekDayIcon[data-tone="presencia"],.weekSymbol[data-tone="presencia"],.caminoTodayIcon[data-tone="presencia"],.encounterMotif[data-tone="presencia"]{background:#e4eadc;color:#516146;border-color:#bdc9b3}
+.weekDayIcon[data-tone="memoria"],.weekSymbol[data-tone="memoria"],.caminoTodayIcon[data-tone="memoria"],.encounterMotif[data-tone="memoria"]{background:#f2e6c9;color:#81652b;border-color:#dbc797}
+.weekDayIcon[data-tone="agua"],.weekSymbol[data-tone="agua"],.caminoTodayIcon[data-tone="agua"],.encounterMotif[data-tone="agua"]{background:#e0edf0;color:#456a72;border-color:#b8d3da}
+.weekDayIcon[data-tone="piedra"],.weekSymbol[data-tone="piedra"],.caminoTodayIcon[data-tone="piedra"],.encounterMotif[data-tone="piedra"]{background:#e8e5df;color:#625f59;border-color:#ccc7bd}
+.weekDayIcon[data-tone="atencion"],.weekSymbol[data-tone="atencion"],.caminoTodayIcon[data-tone="atencion"],.encounterMotif[data-tone="atencion"]{background:#efe8d8;color:#735f3d;border-color:#d9ccb1}
+.weekDayIcon[data-tone="retorno"],.weekSymbol[data-tone="retorno"],.caminoTodayIcon[data-tone="retorno"],.encounterMotif[data-tone="retorno"]{background:#e2eadc;color:#4e6842;border-color:#bdceb3}
+.weekDayIcon[data-tone="escucha"],.weekSymbol[data-tone="escucha"],.caminoTodayIcon[data-tone="escucha"],.encounterMotif[data-tone="escucha"]{background:#eee4ef;color:#6f4b72;border-color:#d5bfd8}
+.weekDayIcon[data-tone="umbral"],.weekSymbol[data-tone="umbral"],.caminoTodayIcon[data-tone="umbral"],.encounterMotif[data-tone="umbral"]{background:#eee5d7;color:#765f46;border-color:#d7c7b2}
+.weekDayIcon[data-tone="reparacion"],.weekSymbol[data-tone="reparacion"],.caminoTodayIcon[data-tone="reparacion"],.encounterMotif[data-tone="reparacion"]{background:#eee4dc;color:#875e4c;border-color:#d9c3b7}
+.weekDayIcon[data-tone="silencio"],.weekSymbol[data-tone="silencio"],.caminoTodayIcon[data-tone="silencio"],.encounterMotif[data-tone="silencio"]{background:#e8e6df;color:#5b5b53;border-color:#cbc9c0}
+.weekDayIcon[data-tone="espacio"],.weekSymbol[data-tone="espacio"],.caminoTodayIcon[data-tone="espacio"],.encounterMotif[data-tone="espacio"]{background:#f0e9d9;color:#736443;border-color:#d9caaa}
+.weekDayIcon[data-tone="vinculo"],.weekSymbol[data-tone="vinculo"],.caminoTodayIcon[data-tone="vinculo"],.encounterMotif[data-tone="vinculo"]{background:#efe3e0;color:#805c57;border-color:#d9c0bb}
+.weekDayIcon[data-tone="fragilidad"],.weekSymbol[data-tone="fragilidad"],.caminoTodayIcon[data-tone="fragilidad"],.encounterMotif[data-tone="fragilidad"]{background:#e6ebdc;color:#586848;border-color:#c2cdb2}
+.weekDayIcon[data-tone="vida"],.weekSymbol[data-tone="vida"],.caminoTodayIcon[data-tone="vida"],.encounterMotif[data-tone="vida"]{background:#dfead9;color:#42613a;border-color:#b6cbaa}
+.weekDayIcon[data-tone="unidad"],.weekSymbol[data-tone="unidad"],.caminoTodayIcon[data-tone="unidad"],.encounterMotif[data-tone="unidad"]{background:#e5eadc;color:#516246;border-color:#bcc8b3}
+.weekDayIcon[data-tone="movimiento"],.weekSymbol[data-tone="movimiento"],.caminoTodayIcon[data-tone="movimiento"],.encounterMotif[data-tone="movimiento"]{background:#e5e8eb;color:#56626b;border-color:#c1c8cd}
+.weekDayIcon[data-tone="cierre"],.weekSymbol[data-tone="cierre"],.caminoTodayIcon[data-tone="cierre"],.encounterMotif[data-tone="cierre"]{background:#ece6db;color:#655b49;border-color:#d2c6b3}
+.weekDayIcon[data-tone="inicio"],.weekSymbol[data-tone="inicio"],.caminoTodayIcon[data-tone="inicio"],.encounterMotif[data-tone="inicio"]{background:#e3eadf;color:#496147;border-color:#bdcdb9}
+.weekDayIcon[data-tone="origen"],.weekSymbol[data-tone="origen"],.caminoTodayIcon[data-tone="origen"],.encounterMotif[data-tone="origen"]{background:#e8e2d8;color:#5f584c;border-color:#cec4b5}
+.weekDayIcon[data-tone="luz"],.weekSymbol[data-tone="luz"],.caminoTodayIcon[data-tone="luz"],.encounterMotif[data-tone="luz"]{background:#f4ebc9;color:#8a7029;border-color:#dfce8e}
+.weekDayIcon[data-tone="distincion"],.weekSymbol[data-tone="distincion"],.caminoTodayIcon[data-tone="distincion"],.encounterMotif[data-tone="distincion"]{background:#e5e8e2;color:#59645b;border-color:#c3cbc4}
+.weekDayIcon[data-tone="bien"],.weekSymbol[data-tone="bien"],.caminoTodayIcon[data-tone="bien"],.encounterMotif[data-tone="bien"]{background:#e1eadb;color:#46633d;border-color:#b8cbae}
+.weekDayIcon[data-tone="pregunta"],.weekSymbol[data-tone="pregunta"],.caminoTodayIcon[data-tone="pregunta"],.encounterMotif[data-tone="pregunta"]{background:#ece4ee;color:#6d5572;border-color:#d1c0d5}
+
+.sourceReaderHero{background:linear-gradient(145deg,#f5f1df,#e6eadc);border:1px solid #c2cbb5;border-radius:22px;padding:17px;margin:12px 0}
+.sourceReaderHe{text-align:center;font-size:2.35rem;margin:.25rem 0 1rem}
+.sourceReaderLang{display:grid;grid-template-columns:140px 1fr;gap:10px;padding:9px 0;border-top:1px solid #d7d1c4;align-items:start}
+.sourceReaderLang span{font-size:.66rem;text-transform:uppercase;letter-spacing:.09em;font-weight:900;color:var(--mut)}
+.sourceReaderLang b{line-height:1.42}
+.sourceReaderText{font:1.18rem/1.55 Georgia,serif;margin:.65rem 0}
+.sourceTextCard{border-left:4px solid var(--gold)}
+.sourceReaderSources p{margin:.45rem 0}
+
+.missionCard .communityTextarea{display:block;width:100%;min-width:0;min-height:132px;margin:6px 0 10px;font-size:1rem}
+.reflectionMemory{border-left:3px solid var(--gold);padding-left:10px}
+
+@media(max-width:430px){
+  .rootLanguage{grid-template-columns:1fr}
+  .sourceReaderLang{grid-template-columns:1fr;gap:4px}
+  .sourceReaderHe{font-size:2rem}
+  .brandDate{font-size:.55rem}
+}

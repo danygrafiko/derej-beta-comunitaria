@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#657253">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <title>Dérej Master · RC3 Candidate v1.4</title>
+  <title>Dérej · El Camino · v1.5</title>
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="apple-touch-icon" href="icon-180.png">
   <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
@@ -16,9 +16,9 @@
   <main class="app">
     <header class="top">
       <button class="brandButton" data-route="camino" aria-label="Ir a Camino">
-        <span class="brand">Dérej · דרך</span><span class="brandSub">El Camino</span>
+        <span class="brand">Dérej · דרך</span><span class="brandSub">El Camino</span><span class="brandDate" id="hebrewDateGlobal">Calendario hebreo · cargando…</span>
       </button>
-      <div class="topActions"><span class="badge">MASTER · RC3 CANDIDATE v1.4</span><button class="iconBtn" id="fontBtn" aria-label="Cambiar tamaño de texto">Aa</button></div>
+      <div class="topActions"><span class="badge">BETA COMUNITARIA · v1.5</span><button class="iconBtn" id="fontBtn" aria-label="Cambiar tamaño de texto">Aa</button></div>
     </header>
     <div id="contextBar" class="contextBar"></div>
     <div id="updateBar" class="updateBar" hidden><span>Nueva versión de Dérej disponible.</span><button id="applyUpdate" type="button">Actualizar</button></div>
@@ -51,10 +51,10 @@
       </div>
 
       <section class="moduleCard communityModule">
-        <div class="moduleIcon">🤝</div><div><div class="eyebrow">Comunidad · LIVE</div><h2>Shabat para la Tierra</h2><p>La primera conversación comunitaria de Dérej: fuente, reflexión, una misión concreta y testimonios moderados.</p><button class="primaryBtn" data-route="community">Entrar a la conversación</button><div class="statusPill live">SUPABASE · RLS</div></div>
+        <div class="moduleIcon">🤝</div><div><div class="eyebrow">Comunidad · LIVE</div><h2>Shabat para la Tierra</h2><p>La primera conversación comunitaria de Dérej: fuente, reflexión, una misión concreta y testimonios moderados.</p><button class="primaryBtn" data-route="community">Entrar a la conversación</button><div class="statusPill live">COMUNIDAD PROTEGIDA</div></div>
       </section>
       <section class="moduleCard activeModule">
-        <div class="moduleIcon">🌱</div><div><div class="eyebrow">Profundizar · estudio temático</div><h2>ADAM–ADAMÁ</h2><p>64 fichas en dos series: fundamentos y prácticas regenerativas. La migración nativa comenzó con Content Schema v0.2.</p><button class="secondaryBtn" data-route="adam-adama">Abrir módulo</button></div>
+        <div class="moduleIcon">🌱</div><div><div class="eyebrow">Profundizar · estudio temático</div><h2>ADAM–ADAMÁ</h2><p>64 fichas en dos series: fundamentos y prácticas regenerativas. La colección se irá abriendo progresivamente dentro de Dérej.</p><button class="secondaryBtn" data-route="adam-adama">Abrir módulo</button></div>
       </section>
       <section class="installCard" id="installCard">
         <div><div class="eyebrow">Llevar Dérej contigo</div><h2>Instalar como aplicación</h2><p id="installHint" class="small">Disponible cuando tu navegador permita instalar esta PWA.</p></div>
@@ -74,7 +74,8 @@
     <section class="screen" data-screen="camino-encounter" hidden>
       <button class="backBtn" id="encounterBack">← Volver</button>
       <div id="encounterDate" class="eyebrow"></div>
-      <div class="encounterSymbol" id="encounterSymbol"></div>
+      <div id="encounterHebrewDate" class="encounterHebrewDate"></div>
+      <div class="encounterMotif" id="encounterMotif"><span class="encounterSymbol" id="encounterSymbol"></span><small id="encounterSymbolLabel">Símbolo del encuentro</small></div>
       <h1 id="encounterTitle"></h1>
       <p class="lede" id="encounterQuestion"></p>
       <section class="memoryCard"><div class="eyebrow">Qué hacer ahora</div><p id="encounterInstruction"></p><div id="encounterChoices" class="choiceList"></div></section>
@@ -83,21 +84,41 @@
 
     <section class="screen" data-screen="camino-root" hidden>
       <button class="backBtn" data-route="camino-encounter">← Volver al encuentro</button>
-      <div class="eyebrow">Raíz</div><div class="he rootHe" id="rootHe"></div><p class="rootTr" id="rootTr"></p>
-      <section class="memoryCard"><b id="rootRef"></b><p id="rootContext"></p></section>
-      <section class="memoryCard rootDerej"><div class="eyebrow">Lectura Dérej</div><p id="rootDerej"></p></section>
+      <div class="eyebrow">Raíz</div><div class="he rootHe" id="rootHe"></div>
+      <div class="rootLanguage"><div><span class="eyebrow">Transliteración</span><p class="rootTr" id="rootTranslit"></p></div><div><span class="eyebrow">Significado en español</span><p class="rootMeaning" id="rootMeaning"></p></div></div>
+      <section class="memoryCard"><div class="eyebrow">Fuente y contexto</div><b id="rootRef"></b><p id="rootContext"></p><p id="rootContextExtra" class="editorialExtra"></p></section>
+      <section class="memoryCard rootDerej"><div class="eyebrow">Lectura Dérej</div><h2 id="rootDerejTitle"></h2><p id="rootDerej"></p><p id="rootDerejExtra" class="editorialExtra"></p></section>
       <section class="principleCard"><p class="quote" id="rootClose"></p></section>
-      <a class="secondaryBtn linkBtn" id="rootSourceLink" target="_blank" rel="noopener noreferrer">📜 Abrir lectura de la semana</a>
+      <button class="secondaryBtn" id="rootSourceLink" type="button">📖 Leer en Dérej</button>
       <button class="primaryBtn" id="finishEncounter">Terminar por hoy</button>
+    </section>
+
+    <section class="screen" data-screen="source-reader" hidden>
+      <button class="backBtn" id="sourceReaderBack">← Volver</button>
+      <div class="eyebrow" id="sourceReaderKind">Lector Dérej</div>
+      <h1 id="sourceReaderRef">Fuente</h1>
+      <section class="sourceReaderHero">
+        <div class="he sourceReaderHe" id="sourceReaderHe"></div>
+        <div class="sourceReaderLang"><span>Transliteración</span><b id="sourceReaderTranslit"></b></div>
+        <div class="sourceReaderLang"><span>Significado en español</span><b id="sourceReaderMeaning"></b></div>
+      </section>
+      <section class="memoryCard sourceTextCard" id="sourceReaderTextCard">
+        <div class="eyebrow">Texto · traducción editorial Dérej</div>
+        <p class="sourceReaderText" id="sourceReaderText"></p>
+        <p class="small" id="sourceReaderTextNote"></p>
+      </section>
+      <section class="memoryCard"><div class="eyebrow">Contexto</div><p id="sourceReaderContext"></p></section>
+      <section class="memoryCard rootDerej"><div class="eyebrow">Lectura Dérej</div><p id="sourceReaderDerej"></p></section>
+      <section class="sources sourceReaderSources"><div class="eyebrow">Fuentes consultadas</div><div id="sourceReaderSources"></div><p class="small">Las fuentes externas respaldan la edición; la lectura permanece dentro de Dérej.</p></section>
     </section>
 
     <section class="screen" data-screen="haftara" hidden>
       <button class="backBtn" data-route="camino">← Volver a Camino</button>
       <div class="eyebrow">Haftará · voz profética</div><h1 id="haftaraTitle">Una segunda voz para la semana.</h1>
       <section class="principleCard"><div class="eyebrow">Antes de leer</div><p>Las lecturas proféticas pertenecen al calendario y a las tradiciones litúrgicas judías. Su extensión puede variar según el rito y la ocasión.</p></section>
-      <section class="memoryCard"><div class="he" id="haftaraHe"></div><p class="rootTr" id="haftaraTr"></p><b id="haftaraRef"></b><p id="haftaraText"></p></section>
+      <section class="memoryCard"><div class="he" id="haftaraHe"></div><div class="rootLanguage"><div><span class="eyebrow">Transliteración</span><p class="rootTr" id="haftaraTranslit"></p></div><div><span class="eyebrow">Significado en español</span><p class="rootMeaning" id="haftaraMeaning"></p></div></div><b id="haftaraRef"></b><p id="haftaraText"></p></section>
       <section class="principleCard"><p class="quote" id="haftaraQuestion"></p></section>
-      <a class="secondaryBtn linkBtn" id="haftaraSource" target="_blank" rel="noopener noreferrer">Abrir lector externo</a>
+      <button class="secondaryBtn" id="haftaraSource" type="button">📖 Leer en Dérej</button>
     </section>
 
     <section class="screen" data-screen="shabat" hidden>
@@ -117,7 +138,7 @@
       <div class="eyebrow">Moed · tiempos señalados</div><h1>El calendario también enseña.</h1>
       <p class="lede">Moed reúne experiencias ligadas al calendario. Se destaca cuando corresponde, sin desplazar la Parashá como eje común.</p>
       <section class="moduleCard activeModule">
-        <div class="moduleIcon">🌿</div><div><div class="eyebrow">Sukot · migrado</div><h2>Sukot</h2><p>La Sombra de la Fe: fragilidad, hospitalidad, alegría y memoria de que la seguridad absoluta no está en los muros.</p><div class="buttonStack"><button class="primaryBtn" data-route="sukkot">Entrar a Sukot</button><button class="secondaryBtn" data-route="sukkot-study">Abrir Beit Midrash de Sukot</button></div><div class="statusPill live">CONTENT SCHEMA v0.1</div></div>
+        <div class="moduleIcon">🌿</div><div><div class="eyebrow">Sukot · disponible</div><h2>Sukot</h2><p>La Sombra de la Fe: fragilidad, hospitalidad, alegría y memoria de que la seguridad absoluta no está en los muros.</p><div class="buttonStack"><button class="primaryBtn" data-route="sukkot">Entrar a Sukot</button><button class="secondaryBtn" data-route="sukkot-study">Abrir Beit Midrash de Sukot</button></div><div class="statusPill live">EDICIÓN DÉREJ</div></div>
       </section>
       <section class="moduleCard mutedModule"><div class="moduleIcon">🗓️</div><div><div class="eyebrow">Arquitectura</div><h2>Moed como familia de contenidos</h2><p>Las próximas festividades podrán incorporarse con el mismo motor, sin crear otra aplicación dentro de Dérej.</p></div></section>
     </section>
@@ -147,10 +168,10 @@
     <section class="screen" data-screen="radio" hidden>
       <div class="eyebrow">Radio Dérej · reproductor propio</div>
       <h1>♫ Meditación</h1>
-      <p class="lede">Un espacio sonoro para bajar el ruido, respirar y volver al centro. El audio se reproduce directamente desde Supabase dentro de Dérej Master.</p>
+      <p class="lede">Un espacio sonoro para bajar el ruido, respirar y volver al centro. El audio se reproduce directamente dentro de Dérej.</p>
 
       <section class="radioNative">
-        <img class="radioNativeCover" src="radio-meditacion.png" alt="Radio Dérej · Meditación">
+        <img class="radioNativeCover" id="radioNativeCover" src="https://raw.githubusercontent.com/danygrafiko/derej-beta-comunitaria/aeb90db649997d28fc966ea8891f24e035a61f3b/radio-meditacion.png" alt="Radio Dérej · Meditación">
         <div class="radioNativeMeta">
           <div class="radioMeta">Radio Dérej · Meditación</div>
           <h2 id="radioTitle">Radio Dérej · Meditación</h2>
@@ -202,7 +223,7 @@
 
       <section class="privacy communityPrivacy">
         <b>🔒 Identidad técnica, no perfil espiritual</b>
-        <p>Leer no requiere cuenta. Sólo al registrar una misión o enviar un testimonio, Dérej solicita a Supabase una identidad anónima técnica para que RLS proteja tu fila. No pide nombre, correo ni religión. Si borras los datos del navegador, esa identidad puede dejar de ser recuperable.</p>
+        <p>Leer no requiere cuenta. Sólo al registrar una misión o enviar un testimonio, Dérej crea una identidad técnica anónima para proteger tu participación. No pide nombre, correo ni religión. Si borras los datos del navegador, esa identidad puede dejar de ser recuperable.</p>
         <p id="communityAuthState" class="small">Comprobando disponibilidad de participación…</p>
       </section>
 
@@ -232,7 +253,7 @@
       <div class="eyebrow">Mi Camino</div><h1>Memoria, no puntuación.</h1><p class="lede">Aquí se conserva sólo lo necesario para ayudarte a recordar prácticas elegidas. No hay rachas, niveles ni comparación con otros.</p>
       <section class="metricCard"><div><strong id="localActionsCount">0</strong><span>huellas locales</span></div><div><strong>Local</strong><span>almacenamiento</span></div></section>
       <section class="memoryCard"><div class="eyebrow">En este dispositivo</div><div id="localActionsList" class="memoryList"></div></section>
-      <button id="clearLocalMemory" class="secondaryBtn">Borrar huellas de esta demo</button><p class="small">Esta acción sólo elimina los datos de prueba creados por el renderer Master en este navegador.</p>
+      <button id="clearLocalMemory" class="secondaryBtn">Borrar memoria local de este dispositivo</button><p class="small">Esta acción elimina sólo huellas y reflexiones privadas guardadas en este navegador. No elimina testimonios que hayas enviado a la comunidad.</p>
     </section>
   </main>
 
@@ -276,7 +297,7 @@
       <p id="communityReportStatus" class="small"></p>
     </form>
   </dialog>
-  <dialog id="placeholderDialog"><form method="dialog" class="dialogCard"><div class="eyebrow">Dérej Master</div><h2 id="placeholderTitle">Módulo</h2><p>Esta puerta ya tiene lugar definido en la navegación. Su contenido será migrado desde RC2 al nuevo motor sin duplicar la experiencia.</p><button class="primaryBtn" value="close">Entendido</button></form></dialog>
+  <dialog id="placeholderDialog"><form method="dialog" class="dialogCard"><div class="eyebrow">Dérej</div><h2 id="placeholderTitle">Módulo</h2><p>Esta puerta está siendo preparada para integrarse a la experiencia sin fragmentar el camino.</p><button class="primaryBtn" value="close">Entendido</button></form></dialog>
   <dialog id="installDialog"><form method="dialog" class="dialogCard"><div class="eyebrow">Instalar Dérej</div><h2>Agregar a tu pantalla de inicio</h2><p id="installDialogText">Si tu navegador no muestra instalación automática, abre el menú de compartir o del navegador y elige “Agregar a pantalla de inicio” o “Instalar app”.</p><button class="primaryBtn" value="close">Entendido</button></form></dialog>
   <script src="config.js"></script>
   <script src="app.js"></script>
