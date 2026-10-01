@@ -1,7 +1,7 @@
 {
   "schema_version": "weekly-1.0",
   "source": "RC2 migration",
-  "updated_at": "2026-09-27",
+  "updated_at": "2026-09-30",
   "weeks": [
     {
       "id": "haazinu",
@@ -153,7 +153,7 @@
       "id": "kippur-sukkot",
       "start": "2026-09-20",
       "end": "2026-09-26",
-      "title": "Entre volver y habitar",
+      "title": "Kipur–Sukot · Entre volver y habitar",
       "he": "כִּפּוּר · סֻכּוֹת",
       "symbol": "🚪",
       "symbolName": "El umbral",
@@ -298,7 +298,7 @@
       "id": "sukkot-atzeret",
       "start": "2026-09-27",
       "end": "2026-10-03",
-      "title": "Bajo un techo frágil",
+      "title": "Sukot–Atzeret · Bajo un techo frágil",
       "he": "סֻכּוֹת · עֲצֶרֶת",
       "symbol": "🍃",
       "symbolName": "La rama",
@@ -443,7 +443,7 @@
       "id": "bereshit",
       "start": "2026-10-04",
       "end": "2026-10-10",
-      "title": "Volver al principio",
+      "title": "Bereshit · Volver al principio",
       "he": "בְּרֵאשִׁית",
       "symbol": "○",
       "symbolName": "El círculo",
