@@ -10,6 +10,25 @@ const CONTENT_ROUTES={
   'adam-adama-b1':{url:'content/adam-adama-practicas-b1.json',root:'adamB1Experience',status:'adamB1Status'}
 };
 const loaded=new Set();
+const APARTADOS={
+  'shabat-raiz':{
+    title:'La Raíz de Toda Bendición',
+    lead:'Un mapa ampliado para estudiar cese, descanso, presencia y práctica sin salir de Dérej.',
+    url:'apartado-shabat-raiz.html',origin:'shabat',parent:'shabat'
+  },
+  'sukkot-sombra':{
+    title:'El Secreto de la Sombra de Emuná',
+    lead:'Fragilidad, hospitalidad, agua y alegría reunidas en un apartado de estudio.',
+    url:'apartado-sukkot-sombra.html',origin:'sukkot',parent:'moed'
+  },
+  'adam-adama-ramak':{
+    title:'ADAM–ADAMÁ · Mapa Ramak',
+    lead:'Los ocho bloques y su colorimetría de fundamento, integrados como apartado visual de Dérej.',
+    url:'apartado-adam-adama-ramak.html',origin:'adam-adama',parent:'camino'
+  }
+};
+let APARTADO_ORIGIN='camino';
+let APARTADO_PARENT='camino';
 function el(tag,cls,text){const n=document.createElement(tag);if(cls)n.className=cls;if(text!==undefined&&text!==null)n.textContent=text;return n}
 function addText(p,t,c,v){if(!v)return null;const n=el(t,c,v);p.appendChild(n);return n}
 function splitMeaning(value=''){const parts=String(value).split(' · ');return {translit:parts[0]||'',meaning:parts.slice(1).join(' · ')||''}}
@@ -45,9 +64,47 @@ function renderBlockTitle(section,title){
   if(g){const btn=el('button','glossaryBtn','ⓘ');btn.type='button';btn.setAttribute('aria-label',`Ver significado de ${title}`);btn.setAttribute('aria-expanded','false');const pop=el('div','glossaryPop');pop.hidden=true;pop.innerHTML=`<b>${g.he} · ${g.es}</b><span>${g.body}</span>`;btn.addEventListener('click',()=>{const open=pop.hidden;pop.hidden=!open;btn.setAttribute('aria-expanded',String(open))});row.append(btn,pop)}section.appendChild(row)
 }
 
-function contextMessage(route){const day=new Intl.DateTimeFormat('es-CL',{weekday:'long'}).format(new Date());return({camino:`Hoy es ${day}. La Parashá continúa siendo el eje común de Dérej.`,shabat:'Shabat abre una experiencia de descanso; la profundidad queda disponible, nunca impuesta.','beit-midrash':'Beit Midrash es profundidad opcional: fuente, atribución y contexto antes de aplicación.',moed:'Moed acompaña el calendario sin desplazar la Parashá.',sukkot:'Sukot invita a habitar la fragilidad con alegría, memoria y hospitalidad.','sukkot-study':'El Beit Midrash de Sukot distingue fuente tradicional, lectura mística y adaptación Dérej.','adam-adama':'ADAM–ADAMÁ organiza estudio y práctica regenerativa como una colección, no como una sola página.','adam-adama-b1':'Bloque piloto de ADAM–ADAMÁ con checklist local persistente.','camino-week':'Cuatro semanas de RC2, ahora separadas del motor.','camino-encounter':'El encuentro guarda la elección sólo durante la experiencia; al cerrar sólo queda una huella local.','camino-root':'La raíz devuelve fuente, contexto y una pregunta para la vida.','source-reader':'La fuente permanece dentro de Dérej: hebreo, español, contexto y trazabilidad editorial.',haftara:'La Haftará conserva su contexto litúrgico antes de abrir una pregunta contemporánea.',community:'Comunidad transforma estudio en acción compartida, con consentimiento explícito y moderación.',radio:'Radio Dérej acompaña silencio, estudio y memoria.','camino-personal':'Mi Camino conserva memoria local; no crea puntuaciones ni perfiles espirituales.',apartado:'Complemento editorial: una lectura ampliada en HTML que permanece dentro de Dérej.'})[route]||'Dérej · El Camino'}
-function navParent(route){if(['camino-week','camino-encounter','camino-root','source-reader','haftara'].includes(route))return'camino';if(['beit-midrash'].includes(route))return'shabat';if(['sukkot','sukkot-study'].includes(route))return'moed';if(['adam-adama','adam-adama-b1','community'].includes(route))return'camino';if(route==='apartado')return APARTADO_PARENT||'camino';return route}
+function contextMessage(route){const day=new Intl.DateTimeFormat('es-CL',{weekday:'long'}).format(new Date());return({camino:`Hoy es ${day}. La Parashá continúa siendo el eje común de Dérej.`,shabat:'Shabat abre una experiencia de descanso; la profundidad queda disponible, nunca impuesta.','beit-midrash':'Beit Midrash es profundidad opcional: fuente, atribución y contexto antes de aplicación.',moed:'Moed acompaña el calendario sin desplazar la Parashá.',sukkot:'Sukot invita a habitar la fragilidad con alegría, memoria y hospitalidad.','sukkot-study':'El Beit Midrash de Sukot distingue fuente tradicional, lectura mística y adaptación Dérej.','adam-adama':'ADAM–ADAMÁ organiza estudio y práctica regenerativa como una colección, no como una sola página.','adam-adama-b1':'Bloque piloto de ADAM–ADAMÁ con checklist local persistente.','camino-week':'Cuatro semanas de RC2, ahora separadas del motor.','camino-encounter':'El encuentro guarda la elección sólo durante la experiencia; al cerrar sólo queda una huella local.','camino-root':'La raíz devuelve fuente, contexto y una pregunta para la vida.','source-reader':'La fuente permanece dentro de Dérej: hebreo, español, contexto y trazabilidad editorial.',haftara:'La Haftará conserva su contexto litúrgico antes de abrir una pregunta contemporánea.',community:'Comunidad transforma estudio en acción compartida, con consentimiento explícito y moderación.',radio:'Radio Dérej acompaña silencio, estudio y memoria.','camino-personal':'Mi Camino conserva memoria local; no crea puntuaciones ni perfiles espirituales.',guia:'Recorrido de orientación: entender Dérej antes de usarlo también forma parte del camino.',apartado:'Complemento editorial: una lectura ampliada en HTML que permanece dentro de Dérej.'})[route]||'Dérej · El Camino'}
+function navParent(route){if(['camino-week','camino-encounter','camino-root','source-reader','haftara'].includes(route))return'camino';if(['beit-midrash'].includes(route))return'shabat';if(['sukkot','sukkot-study'].includes(route))return'moed';if(['adam-adama','adam-adama-b1','community','guia'].includes(route))return'camino';if(route==='apartado')return APARTADO_PARENT||'camino';return route}
 async function showRoute(route,{replace=false}={}){const target=screens.find(s=>s.dataset.screen===route)?route:'camino';screens.forEach(s=>s.hidden=s.dataset.screen!==target);const parent=navParent(target);navButtons.forEach(b=>b.classList.toggle('on',b.dataset.route===parent));$('contextBar').textContent=contextMessage(target);if(!replace)history.pushState({route:target},'',`#${target}`);window.scrollTo({top:0,behavior:'smooth'});if(CONTENT_ROUTES[target]&&!loaded.has(target))await loadContentRoute(target);if(['camino','camino-week','camino-encounter','camino-root','source-reader','haftara'].includes(target))await caminoEnsure(target);if(target==='radio')await radioInit();if(target==='community')await communityInit();if(target==='camino-personal')renderLocalMemory()}
+function sanitizeApartadoHtml(html=''){
+  const doc=new DOMParser().parseFromString(String(html),'text/html');
+  doc.querySelectorAll('script,style,iframe,object,embed,link,meta,base,form').forEach(n=>n.remove());
+  doc.querySelectorAll('*').forEach(node=>{
+    [...node.attributes].forEach(attr=>{
+      const name=attr.name.toLowerCase(),value=String(attr.value||'').trim();
+      if(name.startsWith('on'))node.removeAttribute(attr.name);
+      if((name==='href'||name==='src')&&/^javascript:/i.test(value))node.removeAttribute(attr.name);
+    });
+  });
+  return doc.body.innerHTML;
+}
+function bindApartadoActions(host){
+  host.querySelectorAll('[data-route]').forEach(b=>b.addEventListener('click',()=>showRoute(b.dataset.route)));
+  host.querySelectorAll('[data-apartado]').forEach(b=>b.addEventListener('click',()=>openApartado(b.dataset.apartado)));
+}
+async function openApartado(id){
+  const meta=APARTADOS[id];
+  if(!meta)return;
+  APARTADO_ORIGIN=meta.origin||'camino';
+  APARTADO_PARENT=meta.parent||'camino';
+  $('apartadoTitle').textContent=meta.title;
+  $('apartadoLead').textContent=meta.lead;
+  const status=$('apartadoStatus'),host=$('apartadoHost');
+  status.hidden=false;status.textContent='Abriendo apartado…';host.replaceChildren();
+  await showRoute('apartado');
+  try{
+    const res=await fetch(meta.url,{cache:'no-store'});
+    if(!res.ok)throw new Error(`Apartado ${res.status}`);
+    host.innerHTML=sanitizeApartadoHtml(await res.text());
+    bindApartadoActions(host);
+    status.hidden=true;
+    requestAnimationFrame(()=>window.scrollTo({top:0,behavior:'smooth'}));
+  }catch(e){
+    status.hidden=false;status.textContent='Este apartado no pudo abrirse. Intenta nuevamente.';
+  }
+}
+
 function renderSources(parent,ids,sourceMap){if(!Array.isArray(ids)||!ids.length)return;const wrap=el('div','source-links');ids.forEach(id=>{const src=sourceMap.get(id);if(!src||src.tradition==='derej')return;const label=referenceEs(src.citation?`${src.label} · ${src.citation}`:src.label);wrap.appendChild(el('span','source-chip',label))});if(wrap.children.length)parent.appendChild(wrap)}
 function saveLocalAction(content,block,selection=''){const key=`derej:content:${content.id}:actions`;let current=[];try{current=JSON.parse(localStorage.getItem(key)||'[]')}catch(e){}if(!Array.isArray(current))current=[];const entry={content_id:content.id,content_title:content.title?.es||content.id,block_id:block.id,block_title:block.title||block.id,selection:selection||'',at:new Date().toISOString()};const match=current.findIndex(x=>x.content_id===entry.content_id&&x.block_id===entry.block_id);if(match>=0)current[match]=entry;else current.push(entry);localStorage.setItem(key,JSON.stringify(current));renderLocalMemory()}
 function renderMedia(parent,media){if(!media)return;let node;if(media.kind==='image'){node=el('img','media');node.src=media.src;node.alt=media.alt||''}else if(media.kind==='audio'){node=el('audio','media');node.src=media.src;node.controls=true}else if(media.kind==='video'){node=el('video','media');node.src=media.src;node.controls=true;if(media.poster)node.poster=media.poster}if(node)parent.appendChild(node);addText(parent,'p','small',media.caption)}
@@ -559,13 +616,24 @@ function getMasterActions(){const found=[];for(let i=0;i<localStorage.length;i++
 function getPrivateReflections(){const found=[];for(let i=0;i<localStorage.length;i++){const key=localStorage.key(i);if(!key?.startsWith('derej:community:private:'))continue;const body=(localStorage.getItem(key)||'').trim();if(body)found.push({key,body})}return found}
 function renderLocalMemory(){const actions=getMasterActions(),reflections=getPrivateReflections(),done=caminoDoneState();const footprints=Object.entries(done).map(([date,at])=>({date,at})).sort((a,b)=>String(b.at).localeCompare(String(a.at)));$('localActionsCount').textContent=String(actions.length+footprints.length+reflections.length);const box=$('localActionsList');box.replaceChildren();if(!actions.length&&!footprints.length&&!reflections.length){box.appendChild(el('p','empty','Todavía no hay huellas guardadas en este dispositivo.'));return}footprints.slice(0,20).forEach(f=>{const item=el('div','memoryItem');addText(item,'b','',`Camino · ${new Intl.DateTimeFormat('es-CL',{dateStyle:'medium'}).format(new Date(`${f.date}T12:00:00`))}`);addText(item,'span','small','Encuentro vivido · memoria local');box.appendChild(item)});actions.slice(0,20).forEach(a=>{const item=el('div','memoryItem');addText(item,'b','',a.block_title||a.block_id);addText(item,'span','small',`${a.content_title||a.content_id} · ${new Intl.DateTimeFormat('es-CL',{dateStyle:'medium'}).format(new Date(a.at))}${a.selection?` · ${a.selection}`:''}`);box.appendChild(item)});reflections.slice(0,10).forEach(r=>{const item=el('div','memoryItem reflectionMemory');addText(item,'b','','Reflexión privada');addText(item,'span','small',r.body.length>140?`${r.body.slice(0,137)}…`:r.body);box.appendChild(item)})}
 document.querySelectorAll('[data-route]').forEach(b=>b.addEventListener('click',()=>showRoute(b.dataset.route)));
+
+/* v1.7 · orientación y primera visita */
+const WELCOME_KEY='derej:onboarding:v1.7';
+const welcomeDialog=$('welcomeDialog');
+function closeWelcome(mark=true){try{welcomeDialog?.close()}catch(e){}if(mark)localStorage.setItem(WELCOME_KEY,'1')}
+$('helpBtn')?.addEventListener('click',()=>showRoute('guia'));
+$('welcomeGuide')?.addEventListener('click',()=>{closeWelcome();showRoute('guia')});
+$('welcomeEnter')?.addEventListener('click',()=>{closeWelcome();showRoute('camino')});
+$('welcomeCloseX')?.addEventListener('click',()=>closeWelcome());
+welcomeDialog?.addEventListener('cancel',event=>{event.preventDefault();closeWelcome()});
+function maybeWelcome(){if(!welcomeDialog)return;if(localStorage.getItem(WELCOME_KEY)==='1')return;if(location.hash&&location.hash!=='#camino')return;setTimeout(()=>{try{welcomeDialog.showModal()}catch(e){}},450)};
 document.querySelectorAll('[data-apartado]').forEach(b=>b.addEventListener('click',()=>openApartado(b.dataset.apartado)));
 $('apartadoBack')?.addEventListener('click',()=>showRoute(APARTADO_ORIGIN));
 document.querySelectorAll('[data-action="placeholder"]').forEach(b=>b.addEventListener('click',()=>{$('placeholderTitle').textContent=b.dataset.title||'Módulo';$('placeholderDialog').showModal()}));
 $('fontBtn').addEventListener('click',()=>{const vals=[1,1.12,1.25],current=Number(localStorage.getItem('derej:master:font')||1),i=vals.indexOf(current),next=vals[(i+1)%vals.length];localStorage.setItem('derej:master:font',String(next));applyFont(next)});
 $('clearLocalMemory').addEventListener('click',()=>{const keys=[];for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);if((k?.startsWith('derej:content:')&&k.endsWith(':actions'))||k?.startsWith('derej:community:private:'))keys.push(k)}keys.forEach(k=>localStorage.removeItem(k));localStorage.removeItem('derej:camino:done');renderLocalMemory();caminoRenderHome?.()});
 window.addEventListener('popstate',()=>showRoute(location.hash.slice(1)||'camino',{replace:true}));function applyFont(v){document.documentElement.style.setProperty('--scale',v);$('fontBtn').textContent=v===1?'Aa':v<1.2?'Aa+':'Aa++'}
-syncGlobalDate();applyFont(Number(localStorage.getItem('derej:master:font')||1));showRoute(location.hash.slice(1)||'camino',{replace:true});
+syncGlobalDate();applyFont(Number(localStorage.getItem('derej:master:font')||1));showRoute(location.hash.slice(1)||'camino',{replace:true});maybeWelcome();
 
 /* PWA / Release Shell v0.7 */
 let deferredInstallPrompt=null;

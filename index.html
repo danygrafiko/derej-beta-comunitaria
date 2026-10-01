@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#657253">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <title>Dérej · El Camino · v1.6</title>
+  <title>Dérej · El Camino · v1.7</title>
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="apple-touch-icon" href="icon-180.png">
   <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
@@ -18,7 +18,7 @@
       <button class="brandButton" data-route="camino" aria-label="Ir a Camino">
         <span class="brand">Dérej · דרך</span><span class="brandSub">El Camino</span><span class="brandDate" id="hebrewDateGlobal">Calendario hebreo · cargando…</span>
       </button>
-      <div class="topActions"><span class="badge">BETA COMUNITARIA · v1.6</span><button class="iconBtn" id="fontBtn" aria-label="Cambiar tamaño de texto">Aa</button></div>
+      <div class="topActions"><span class="badge">PRELANZAMIENTO · v1.7</span><button class="iconBtn helpBtn" id="helpBtn" aria-label="Cómo usar Dérej">?</button><button class="iconBtn" id="fontBtn" aria-label="Cambiar tamaño de texto">Aa</button></div>
     </header>
     <div id="contextBar" class="contextBar"></div>
     <div id="updateBar" class="updateBar" hidden><span>Nueva versión de Dérej disponible.</span><button id="applyUpdate" type="button">Actualizar</button></div>
@@ -49,6 +49,10 @@
         <button class="quickCard" data-route="radio"><span>♫</span><b>Radio</b><small>Escuchar y bajar el ruido.</small></button>
         <button class="quickCard" data-route="camino-personal"><span>👣</span><b>Mi Camino</b><small>Memoria local, no puntuación.</small></button>
       </div>
+      <section class="guideInvite">
+        <div class="guideInviteIcon" aria-hidden="true">⌁</div>
+        <div><div class="eyebrow">Primera vez en Dérej</div><h2>Conoce el camino antes de recorrerlo</h2><p>Un recorrido breve explica cómo pasar de la fuente a una práctica sin convertir la experiencia en una lista de tareas.</p><button class="secondaryBtn" data-route="guia">Ver cómo funciona Dérej</button></div>
+      </section>
 
       <section class="moduleCard communityModule">
         <div class="moduleIcon">🤝</div><div><div class="eyebrow">Comunidad · LIVE</div><h2>Shabat para la Tierra</h2><p>La primera conversación comunitaria de Dérej: fuente, reflexión, una misión concreta y testimonios moderados.</p><button class="primaryBtn" data-route="community">Entrar a la conversación</button><div class="statusPill live">COMUNIDAD PROTEGIDA</div></div>
@@ -57,7 +61,7 @@
         <div class="moduleIcon">🌱</div><div><div class="eyebrow">Profundizar · estudio temático</div><h2>ADAM–ADAMÁ</h2><p>64 fichas en dos series: fundamentos y prácticas regenerativas. La colección se irá abriendo progresivamente dentro de Dérej.</p><button class="secondaryBtn" data-route="adam-adama">Abrir módulo</button></div>
       </section>
       <section class="installCard" id="installCard">
-        <div><div class="eyebrow">Llevar Dérej contigo</div><h2>Instalar como aplicación</h2><p id="installHint" class="small">Disponible cuando tu navegador permita instalar esta PWA.</p></div>
+        <div><div class="eyebrow">Instalación</div><h2>Llevar Dérej en tu pantalla de inicio</h2><p id="installHint" class="small">Disponible cuando tu navegador permita instalar esta PWA.</p></div>
         <button class="secondaryBtn" id="installAppBtn" type="button">Instalar Dérej</button>
       </section>
       <section class="principleCard"><div class="eyebrow">Principio</div><p class="quote">La pantalla abre una puerta. El camino continúa fuera de ella.</p></section>
@@ -259,6 +263,25 @@
       </section>
     </section>
 
+    <section class="screen guideScreen" data-screen="guia" hidden>
+      <button class="backBtn" data-route="camino">← Volver a Camino</button>
+      <div class="eyebrow">Recorrido Dérej · guía breve</div>
+      <h1>La pantalla abre una puerta.</h1>
+      <p class="lede">Dérej acompaña un movimiento sencillo: <b>leer → escuchar → practicar → volver a la vida</b>. No necesitas completar todo ni seguir un orden perfecto.</p>
+      <section class="guideFlow" aria-label="Flujo de Dérej">
+        <span>Fuente</span><i>→</i><span>Pregunta</span><i>→</i><span>Práctica</span><i>→</i><span>Memoria</span>
+      </section>
+      <div class="guideSteps">
+        <article class="guideStep" data-guide-tone="camino"><div class="guideNum">1</div><div><div class="eyebrow">Camino</div><h2>Empieza por el encuentro de hoy</h2><p>Una pregunta breve abre la semana. Elige una respuesta sin tener que justificarla: la elección sólo acompaña el encuentro.</p><button class="secondaryBtn" data-route="camino">Ir al encuentro de hoy</button></div></article>
+        <article class="guideStep" data-guide-tone="raiz"><div class="guideNum">2</div><div><div class="eyebrow">Raíz</div><h2>Descubre de dónde viene</h2><p>Hebreo, transliteración, significado en español y contexto aparecen antes de la lectura editorial Dérej. Las voces no se mezclan.</p><button class="secondaryBtn" data-route="camino-week">Explorar las semanas</button></div></article>
+        <article class="guideStep" data-guide-tone="fuente"><div class="guideNum">3</div><div><div class="eyebrow">Lectura</div><h2>La fuente permanece dentro de Dérej</h2><p>Cuando abras un pasaje, la lectura bíblica, su contexto y la reflexión se mantienen en una sola experiencia para no perder el foco.</p></div></article>
+        <article class="guideStep" data-guide-tone="practica"><div class="guideNum">4</div><div><div class="eyebrow">Práctica</div><h2>Elige algo pequeño para llevar contigo</h2><p>La meta no es acumular tareas. Elige una práctica concreta que pueda sobrevivir cuando cierres la pantalla. Si la guardas, queda sólo en este dispositivo.</p><button class="secondaryBtn" data-route="camino-personal">Ver Mi Camino</button></div></article>
+        <article class="guideStep" data-guide-tone="puertas"><div class="guideNum">5</div><div><div class="eyebrow">Puertas</div><h2>Profundiza cuando lo necesites</h2><p>Shabat, Moed, Radio y ADAM–ADAMÁ amplían la experiencia. Los apartados visuales abren profundidad sin fragmentar la aplicación.</p><div class="guideMiniActions"><button data-route="shabat">Shabat</button><button data-route="moed">Moed</button><button data-route="radio">Radio</button><button data-route="adam-adama">ADAM–ADAMÁ</button></div></div></article>
+        <article class="guideStep" data-guide-tone="comunidad"><div class="guideNum">6</div><div><div class="eyebrow">Comunidad · opcional</div><h2>Compartir nunca es requisito</h2><p>Leer no requiere cuenta. Las reflexiones privadas permanecen en tu dispositivo. Sólo si decides registrar una misión o enviar un testimonio se crea una identidad técnica anónima; los testimonios pasan por moderación antes de publicarse.</p><button class="secondaryBtn" data-route="community">Conocer la experiencia comunitaria</button></div></article>
+      </div>
+      <section class="guideClosing"><div class="eyebrow">Una regla sencilla</div><p class="quote">Si Dérej te ayuda a mirar mejor la vida fuera de la pantalla, está cumpliendo su propósito.</p><button class="primaryBtn" data-route="camino">Comenzar mi recorrido</button></section>
+    </section>
+
     <section class="screen" data-screen="camino-personal" hidden>
       <div class="eyebrow">Mi Camino</div><h1>Memoria, no puntuación.</h1><p class="lede">Aquí se conserva sólo lo necesario para ayudarte a recordar prácticas elegidas. No hay rachas, niveles ni comparación con otros.</p>
       <section class="metricCard"><div><strong id="localActionsCount">0</strong><span>huellas locales</span></div><div><strong>Local</strong><span>almacenamiento</span></div></section>
@@ -306,6 +329,17 @@
       </div>
       <p id="communityReportStatus" class="small"></p>
     </form>
+  </dialog>
+  <dialog id="welcomeDialog" class="welcomeDialog">
+    <div class="dialogCard welcomeCard">
+      <button id="welcomeCloseX" class="dialogX" type="button" aria-label="Cerrar">×</button>
+      <div class="eyebrow">Bienvenido a Dérej · El Camino</div>
+      <h2>Estudiar, escuchar y llevar algo a la vida.</h2>
+      <p>Dérej no busca que completes una aplicación. Cada encuentro parte de una fuente, abre una pregunta y termina con la posibilidad de una práctica pequeña.</p>
+      <div class="welcomePillars"><span><b>1</b> Fuente y contexto</span><span><b>2</b> Reflexión y práctica</span><span><b>3</b> Memoria, no puntuación</span></div>
+      <p class="small">Puedes leer sin cuenta. Tu memoria personal queda en este dispositivo salvo que elijas participar voluntariamente en Comunidad.</p>
+      <div class="dialogActions stackedMobile"><button id="welcomeGuide" class="primaryBtn" type="button">Ver recorrido breve</button><button id="welcomeEnter" class="secondaryBtn" type="button">Entrar directamente a Camino</button></div>
+    </div>
   </dialog>
   <dialog id="placeholderDialog"><form method="dialog" class="dialogCard"><div class="eyebrow">Dérej</div><h2 id="placeholderTitle">Módulo</h2><p>Esta puerta está siendo preparada para integrarse a la experiencia sin fragmentar el camino.</p><button class="primaryBtn" value="close">Entendido</button></form></dialog>
   <dialog id="installDialog"><form method="dialog" class="dialogCard"><div class="eyebrow">Instalar Dérej</div><h2>Agregar a tu pantalla de inicio</h2><p id="installDialogText">Si tu navegador no muestra instalación automática, abre el menú de compartir o del navegador y elige “Agregar a pantalla de inicio” o “Instalar app”.</p><button class="primaryBtn" value="close">Entendido</button></form></dialog>

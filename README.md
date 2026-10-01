@@ -1,4 +1,14 @@
-# DÉREJ MASTER · RC3 Candidate v1.6
+# DÉREJ MASTER · Prelanzamiento v1.7
+
+## v1.7 · Prelanzamiento Comunitario
+- Recorrido interno `#guia` para onboarding, tutoriales y demostraciones.
+- Bienvenida de primera visita, persistente sólo por dispositivo.
+- Ayuda permanente `?` en cabecera.
+- Convención semanal normalizada: Haazinu / Kipur–Sukot / Sukot–Atzeret / Bereshit.
+- Consolida el hotfix de apartados HTML de v1.6.1.
+- Nueva documentación de tutorial y checklist de lanzamiento.
+- Mantiene memoria local, privacidad por defecto, moderación y Turnstile.
+
 
 Base v0.6 + Release Shell PWA.
 
