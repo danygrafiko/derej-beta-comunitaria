@@ -1,5 +1,5 @@
 const CACHE_PREFIX = 'derej-master-';
-const CACHE = 'derej-master-v1.8-20261001-01';
+const CACHE = 'derej-master-v1.9-20261002-01';
 const SHELL = [
   './',
   './index.html',
@@ -20,7 +20,11 @@ const SHELL = [
   './content/adam-adama-practicas-b1.json',
   './apartado-shabat-raiz.html',
   './apartado-sukkot-sombra.html',
-  './apartado-adam-adama-ramak.html'
+  './apartado-adam-adama-ramak.html',
+  './estudio-camino-parasha.html',
+  './estudio-shabat.html',
+  './estudio-moed.html',
+  './estudio-adam-adama.html',
 ];
 
 self.addEventListener('install', event => {
@@ -59,8 +63,9 @@ self.addEventListener('fetch', event => {
     const isAppShell = url.pathname === scopePath || url.pathname === `${scopePath}index.html`;
 
     if (!isAppShell) {
-      // Administrative or future standalone pages must never replace the app-shell fallback.
-      event.respondWith(fetch(request));
+      const isStudyModule = /\/estudio-(camino-parasha|shabat|moed|adam-adama)\.html$/.test(url.pathname);
+      // Standalone study modules may fall back to their own cached page; admin pages never fall back to the app shell.
+      event.respondWith(fetch(request).catch(() => isStudyModule ? caches.match(request) : Promise.reject(new Error('offline'))));
       return;
     }
 
