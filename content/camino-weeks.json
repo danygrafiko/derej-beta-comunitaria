@@ -1,7 +1,7 @@
 {
   "schema_version": "weekly-1.0",
   "source": "RC2 migration",
-  "updated_at": "2026-09-30",
+  "updated_at": "2026-10-01",
   "weeks": [
     {
       "id": "haazinu",
@@ -1216,5 +1216,35 @@
         "Parashot · referencia semanal"
       ]
     }
+  },
+  "reflection_followups": {
+    "2026-09-13": "Si algo recién comenzó, ¿qué necesita asentarse antes de que vuelvas a avanzar?",
+    "2026-09-14": "¿Qué cambiaría esta semana si eso que no quieres perder tuviera un lugar concreto en tus decisiones?",
+    "2026-09-15": "¿Qué parte de ti se resiste a recibir porque está acostumbrada a controlar o producir?",
+    "2026-09-16": "¿Cómo se nota en una decisión concreta que ese fundamento realmente sostiene tu vida?",
+    "2026-09-17": "¿Qué hábito de atención podría ayudarte a volver a ver eso que la costumbre volvió invisible?",
+    "2026-09-18": "¿Qué tendrías que soltar para volver de verdad hacia esa orientación?",
+    "2026-09-19": "Si esa palabra sigue viva sin recordatorios, ¿qué te está pidiendo hacer —o dejar de hacer—?",
+    "2026-09-20": "¿Qué ocurriría si lo miraras con honestidad antes de intentar resolverlo o dejarlo atrás?",
+    "2026-09-21": "¿Qué gesto observable mostraría que la reparación no quedó sólo en intención?",
+    "2026-09-22": "¿Qué necesidad está escondida debajo de aquello que sigues alimentando?",
+    "2026-09-23": "Si realmente dejas ese espacio disponible, ¿qué podría entrar que hoy no tiene lugar?",
+    "2026-09-24": "¿Qué tendrías que mover de tu comodidad para que esa otra persona tenga un lugar real?",
+    "2026-09-25": "¿Qué cambia en tu manera de cuidar algo cuando sabes que no puedes poseerlo para siempre?",
+    "2026-09-26": "¿Qué alegría sería suficientemente verdadera como para convivir también con lo que duele o falta?",
+    "2026-09-27": "¿Qué cuidarías de otra manera si recordaras que esta etapa no es permanente?",
+    "2026-09-28": "¿Qué diferencia concreta te cuesta sostener sin intentar corregirla, reducirla o expulsarla?",
+    "2026-09-29": "¿Qué te impide pedir, aceptar o agradecer aquello que no puedes darte por ti mismo?",
+    "2026-09-30": "¿Qué deseo de “más” te está impidiendo reconocer algo que ya merece gratitud?",
+    "2026-10-01": "¿Qué temes perder de ti si permites que esa relación, etapa, imagen o expectativa cambie?",
+    "2026-10-02": "¿Qué tendría que ser distinto para que una nueva oportunidad no repita simplemente lo anterior?",
+    "2026-10-03": "¿Qué descubrirías si no cerraras todavía la pregunta y le dieras un poco más de atención?",
+    "2026-10-04": "¿Qué aprendizaje del ciclo que termina quieres llevar conscientemente al que comienza?",
+    "2026-10-05": "¿Puedes permanecer un momento con lo que aún no tiene nombre sin apresurarte a definirlo?",
+    "2026-10-06": "¿Qué decisión pequeña podría proteger esa claridad para que no se apague entre otras demandas?",
+    "2026-10-07": "¿Qué se vuelve más verdadero cuando distingues esas dos cosas en vez de mantenerlas mezcladas?",
+    "2026-10-08": "¿Cómo podrías cuidar eso bueno sin idealizarlo ni exigir que sea perfecto?",
+    "2026-10-09": "¿A quién necesitas escuchar, pedir ayuda o dejar entrar para que ese camino no dependa sólo de ti?",
+    "2026-10-10": "Si respondes con honestidad “aquí estoy”, ¿cuál sería el siguiente paso más pequeño y verdadero?"
   }
 }
