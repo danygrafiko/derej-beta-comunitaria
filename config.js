@@ -7,8 +7,10 @@ window.DEREJ_CONFIG = {
   supabasePublishableKey: "sb_publishable_NsYJH1ziasj7vfSsmeoe-g_ribPU_PG",
   communitySlug: "shabat-para-la-tierra",
   communitySubmitFunction: "submit-testimony",
+  fruitSubmitFunction: "submit-fruit",
   communityReportFunction: "report-testimony",
   moderationFunction: "moderation-console",
+  fruitModerationFunction: "fruit-moderation-console",
   communityCaptchaEnabled: true,
   communityCaptchaProvider: "turnstile",
   turnstileSiteKey: "0x4AAAAAAFH3dbY5Vj3Mu_dA"

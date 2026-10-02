@@ -1,0 +1,25 @@
+DÉREJ v1.8 · VALIDACIÓN
+PASS · index.html identifica v1.8
+PASS · 5 portales presentes
+PASS · ruta Frutos presente
+PASS · hilo Entrar/Elegir/Profundizar/Llevar presente
+PASS · 28/28 encuentros tienen segunda pregunta editorial
+PASS · rootShareFruit presente
+PASS · Mi Camino enlaza Frutos
+PASS · app.js syntax
+PASS · moderacion.js syntax
+PASS · sw.js syntax
+PASS · referencias DOM de app.js completas
+PASS · rutas data-route resuelven a screens
+PASS · no hay IDs DOM duplicados
+PASS · tabla fruits con RLS
+PASS · columnas privadas de fruits no legibles por anon
+PASS · fruit_moderation_events fail-closed para cliente
+PASS · submit-fruit ACTIVE
+PASS · fruit-moderation-console ACTIVE
+PASS · auditoría pending→published verificada en transacción y revertida
+PASS · test data cleanup: 0 frutos / 0 eventos persistentes
+PASS · Performance Advisor sin foreign keys sin índice
+PENDIENTE · E2E real iPhone: enviar fruto con identidad anónima
+PENDIENTE · E2E real moderador: publicar fruto y verlo en bitácora
+PENDIENTE · activar Supabase Leaked Password Protection antes del lanzamiento amplio

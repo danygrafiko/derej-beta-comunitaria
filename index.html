@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#657253">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <title>Dérej · El Camino · v1.7</title>
+  <title>Dérej · El Camino · v1.8</title>
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="apple-touch-icon" href="icon-180.png">
   <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
@@ -15,18 +15,31 @@
 <body>
   <main class="app">
     <header class="top">
-      <button class="brandButton" data-route="camino" aria-label="Ir a Camino">
+      <button class="brandButton" data-route="camino" aria-label="Ir a la portada de Dérej">
         <span class="brand">Dérej · דרך</span><span class="brandSub">El Camino</span><span class="brandDate" id="hebrewDateGlobal">Calendario hebreo · cargando…</span>
       </button>
-      <div class="topActions"><span class="badge">PRELANZAMIENTO · v1.7</span><button class="iconBtn helpBtn" id="helpBtn" aria-label="Cómo usar Dérej">?</button><button class="iconBtn" id="fontBtn" aria-label="Cambiar tamaño de texto">Aa</button></div>
+      <div class="topActions"><span class="badge">PRELANZAMIENTO · v1.8</span><button class="iconBtn helpBtn" id="helpBtn" aria-label="Cómo usar Dérej">?</button><button class="iconBtn" id="fontBtn" aria-label="Cambiar tamaño de texto">Aa</button></div>
     </header>
     <div id="contextBar" class="contextBar"></div>
     <div id="updateBar" class="updateBar" hidden><span>Nueva versión de Dérej disponible.</span><button id="applyUpdate" type="button">Actualizar</button></div>
 
     <section class="screen" data-screen="camino">
-      <div class="eyebrow">Camino · eje semanal</div>
-      <h1>Una raíz común, varias puertas.</h1>
-      <p class="lede">La Parashá sigue siendo el eje de Dérej. Shabat, Moed, Radio y Mi Camino acompañan ese recorrido sin competir con él.</p>
+      <section class="portalHero" aria-labelledby="portalTitle">
+        <div class="eyebrow">Puertas de Dérej · una raíz, distintos accesos</div>
+        <h1 id="portalTitle">¿Por dónde necesitas entrar hoy?</h1>
+        <p class="lede">No tienes que recorrerlo todo. Elige una puerta y profundiza sólo hasta donde el tiempo, la disposición y la voluntad lo permitan.</p>
+        <div class="portalCourtyard">
+          <button class="stonePortal portalCamino" id="portalCaminoToday" type="button"><span class="portalArch" aria-hidden="true"><i>דרך</i></span><span class="portalCopy"><small>CAMINO</small><b>Encuentro de hoy</b><em>Pregunta → raíz → práctica</em></span></button>
+          <button class="stonePortal" data-route="shabat" type="button"><span class="portalArch" aria-hidden="true"><i>שבת</i></span><span class="portalCopy"><small>SHABAT</small><b>Detener y escuchar</b><em>Tiempo, descanso y transición</em></span></button>
+          <button class="stonePortal" data-route="moed" type="button"><span class="portalArch" aria-hidden="true"><i>מועד</i></span><span class="portalCopy"><small>MOED</small><b>Habitar el calendario</b><em>Fiestas, símbolos y estaciones</em></span></button>
+          <button class="stonePortal" data-route="radio" type="button"><span class="portalArch" aria-hidden="true"><i>♫</i></span><span class="portalCopy"><small>ESCUCHA</small><b>Bajar el ruido</b><em>Radio Dérej · meditación</em></span></button>
+          <button class="stonePortal portalFruit" data-route="frutos" type="button"><span class="portalArch" aria-hidden="true"><i>פרי</i></span><span class="portalCopy"><small>FRUTOS</small><b>Lo que pasó en la vida</b><em>Bitácora anónima de acción</em></span></button>
+        </div>
+        <button class="portalStudyLink" data-route="adam-adama" type="button">🌱 Profundizar en ADAM–ADAMÁ · estudio temático</button>
+      </section>
+      <div class="eyebrow caminoAxis">Camino · eje semanal</div>
+      <h2 class="axisTitle">Una raíz común, siete encuentros.</h2>
+      <p class="lede">La Parashá sigue siendo el eje semanal. Las otras puertas acompañan el recorrido sin competir con él.</p>
       <section class="caminoHero" id="caminoHero">
         <div class="caminoDate" id="caminoDate">Cargando semana…</div>
         <div class="caminoHebrew" id="caminoWeekHe"></div>
@@ -43,12 +56,6 @@
         </div>
         <div class="caminoProgress"><span id="caminoProgressText">Memoria local</span><div class="miniProgress"><i id="caminoProgressBar"></i></div></div>
       </section>
-      <div class="quickGrid">
-        <button class="quickCard" data-route="shabat"><span>🕯️</span><b>Shabat</b><small>Entrar, descansar, escuchar, volver.</small></button>
-        <button class="quickCard" data-route="moed"><span>🌿</span><b>Moed</b><small>Tiempos señalados del calendario.</small></button>
-        <button class="quickCard" data-route="radio"><span>♫</span><b>Radio</b><small>Escuchar y bajar el ruido.</small></button>
-        <button class="quickCard" data-route="camino-personal"><span>👣</span><b>Mi Camino</b><small>Memoria local, no puntuación.</small></button>
-      </div>
       <section class="guideInvite">
         <div class="guideInviteIcon" aria-hidden="true">⌁</div>
         <div><div class="eyebrow">Primera vez en Dérej</div><h2>Conoce el camino antes de recorrerlo</h2><p>Un recorrido breve explica cómo pasar de la fuente a una práctica sin convertir la experiencia en una lista de tareas.</p><button class="secondaryBtn" data-route="guia">Ver cómo funciona Dérej</button></div>
@@ -80,10 +87,12 @@
       <div id="encounterDate" class="eyebrow"></div>
       <div id="encounterHebrewDate" class="encounterHebrewDate"></div>
       <div class="encounterMotif" id="encounterMotif"><span class="encounterSymbol" id="encounterSymbol"></span><small id="encounterSymbolLabel">Símbolo del encuentro</small></div>
+      <div class="threadRail" aria-label="Hilo del encuentro"><span class="on">1 · Entrar</span><i>→</i><span>2 · Elegir</span><i>→</i><span>3 · Profundizar</span><i>→</i><span>4 · Llevar</span></div>
       <h1 id="encounterTitle"></h1>
       <p class="lede" id="encounterQuestion"></p>
-      <section class="memoryCard"><div class="eyebrow">Qué hacer ahora</div><p id="encounterInstruction"></p><div id="encounterChoices" class="choiceList"></div></section>
-      <button class="primaryBtn" id="discoverRoot" disabled>Descubrir la raíz</button>
+      <section class="memoryCard"><div class="eyebrow">1 · Entrar en la pregunta</div><p id="encounterInstruction"></p><div id="encounterChoices" class="choiceList"></div></section>
+      <section class="deeperCard" id="encounterDeeper" hidden><div class="eyebrow">2 · Una capa más</div><p id="encounterSelectionEcho" class="small"></p><p class="deeperQuestion" id="encounterFollowup"></p></section>
+      <button class="primaryBtn" id="discoverRoot" disabled>Profundizar en la raíz</button>
     </section>
 
     <section class="screen" data-screen="camino-root" hidden>
@@ -95,6 +104,7 @@
       <section class="principleCard"><p class="quote" id="rootClose"></p></section>
       <button class="secondaryBtn" id="rootSourceLink" type="button">📖 Leer en Dérej</button>
       <button class="primaryBtn" id="finishEncounter">Terminar por hoy</button>
+      <button class="secondaryBtn fruitFromRoot" id="rootShareFruit" type="button">🍎 Compartir un fruto de este camino</button>
     </section>
 
     <section class="screen" data-screen="source-reader" hidden>
@@ -263,13 +273,39 @@
       </section>
     </section>
 
+    <section class="screen fruitsScreen" data-screen="frutos" hidden>
+      <button class="backBtn" data-route="camino-personal">← Volver a Mi Camino</button>
+      <div class="eyebrow">Frutos · bitácora anónima</div>
+      <h1>Lo que el camino produjo en la vida.</h1>
+      <p class="lede">Un fruto no es una puntuación ni una prueba de superioridad. Es una acción, cambio o comprensión que alguien relaciona con un estudio de Dérej y decide compartir para que la comunidad pueda aprender de ello.</p>
+      <section class="fruitPrinciple"><span class="fruitGlyph" aria-hidden="true">פרי</span><div><b>Fuente → reflexión → práctica → acción → fruto → memoria</b><p>Los aportes sólo aparecen aquí después de revisión editorial humana. La identidad técnica nunca se publica.</p></div></section>
+      <section class="fruitCompose">
+        <div class="eyebrow">Compartir un fruto</div><h2>¿Qué cambió, hiciste o comprendiste?</h2>
+        <p class="small">Cuenta un hecho breve y concreto. Puedes compartir algo ocurrido después de un encuentro, Shabat, Moed, ADAM–ADAMÁ o cualquier lectura de Dérej.</p>
+        <label class="fieldLabel" for="fruitOrigin">¿Con qué lo relacionas?</label>
+        <select id="fruitOrigin" class="communitySelect"><option value="camino">Camino · estudio semanal</option><option value="shabat">Shabat</option><option value="moed">Moed</option><option value="adam_adama">ADAM–ADAMÁ</option><option value="community">Comunidad</option><option value="other">Otro aprendizaje Dérej</option></select>
+        <p id="fruitOriginHint" class="small"></p>
+        <label class="fieldLabel" for="fruitDate">¿Cuándo ocurrió?</label><input id="fruitDate" class="fruitDate" type="date">
+        <label class="fieldLabel" for="fruitBody">Tu experiencia</label>
+        <textarea id="fruitBody" class="communityTextarea" rows="6" minlength="20" maxlength="1500" placeholder="Ej.: Después del encuentro sobre recibir, pedí ayuda en algo que llevaba semanas intentando resolver solo…"></textarea>
+        <label class="consentRow"><input id="fruitConsent" type="checkbox"><span>Autorizo que el equipo editorial revise este relato y pueda publicar una versión anónima que conserve su sentido.</span></label>
+        <button id="submitFruit" class="primaryBtn" type="button">Enviar fruto a revisión</button>
+        <p id="fruitSubmitStatus" class="small"></p>
+      </section>
+      <section class="fruitLedger">
+        <div class="eyebrow">Memoria compartida</div><h2>Bitácora de frutos</h2>
+        <p class="small">No hay ranking, likes ni nombres. Sólo huellas de aplicación aprobadas editorialmente.</p>
+        <div id="fruitList" class="fruitList"><div class="memoryCard"><p class="small">Cargando frutos publicados…</p></div></div>
+      </section>
+    </section>
+
     <section class="screen guideScreen" data-screen="guia" hidden>
       <button class="backBtn" data-route="camino">← Volver a Camino</button>
       <div class="eyebrow">Recorrido Dérej · guía breve</div>
       <h1>La pantalla abre una puerta.</h1>
       <p class="lede">Dérej acompaña un movimiento sencillo: <b>leer → escuchar → practicar → volver a la vida</b>. No necesitas completar todo ni seguir un orden perfecto.</p>
       <section class="guideFlow" aria-label="Flujo de Dérej">
-        <span>Fuente</span><i>→</i><span>Pregunta</span><i>→</i><span>Práctica</span><i>→</i><span>Memoria</span>
+        <span>Fuente</span><i>→</i><span>Pregunta</span><i>→</i><span>Práctica</span><i>→</i><span>Fruto</span><i>→</i><span>Memoria</span>
       </section>
       <div class="guideSteps">
         <article class="guideStep" data-guide-tone="camino"><div class="guideNum">1</div><div><div class="eyebrow">Camino</div><h2>Empieza por el encuentro de hoy</h2><p>Una pregunta breve abre la semana. Elige una respuesta sin tener que justificarla: la elección sólo acompaña el encuentro.</p><button class="secondaryBtn" data-route="camino">Ir al encuentro de hoy</button></div></article>
@@ -277,7 +313,8 @@
         <article class="guideStep" data-guide-tone="fuente"><div class="guideNum">3</div><div><div class="eyebrow">Lectura</div><h2>La fuente permanece dentro de Dérej</h2><p>Cuando abras un pasaje, la lectura bíblica, su contexto y la reflexión se mantienen en una sola experiencia para no perder el foco.</p></div></article>
         <article class="guideStep" data-guide-tone="practica"><div class="guideNum">4</div><div><div class="eyebrow">Práctica</div><h2>Elige algo pequeño para llevar contigo</h2><p>La meta no es acumular tareas. Elige una práctica concreta que pueda sobrevivir cuando cierres la pantalla. Si la guardas, queda sólo en este dispositivo.</p><button class="secondaryBtn" data-route="camino-personal">Ver Mi Camino</button></div></article>
         <article class="guideStep" data-guide-tone="puertas"><div class="guideNum">5</div><div><div class="eyebrow">Puertas</div><h2>Profundiza cuando lo necesites</h2><p>Shabat, Moed, Radio y ADAM–ADAMÁ amplían la experiencia. Los apartados visuales abren profundidad sin fragmentar la aplicación.</p><div class="guideMiniActions"><button data-route="shabat">Shabat</button><button data-route="moed">Moed</button><button data-route="radio">Radio</button><button data-route="adam-adama">ADAM–ADAMÁ</button></div></div></article>
-        <article class="guideStep" data-guide-tone="comunidad"><div class="guideNum">6</div><div><div class="eyebrow">Comunidad · opcional</div><h2>Compartir nunca es requisito</h2><p>Leer no requiere cuenta. Las reflexiones privadas permanecen en tu dispositivo. Sólo si decides registrar una misión o enviar un testimonio se crea una identidad técnica anónima; los testimonios pasan por moderación antes de publicarse.</p><button class="secondaryBtn" data-route="community">Conocer la experiencia comunitaria</button></div></article>
+        <article class="guideStep" data-guide-tone="fruto"><div class="guideNum">6</div><div><div class="eyebrow">Fruto · opcional</div><h2>Cuando algo llega a la vida, puede quedar memoria</h2><p>Si un estudio produjo una acción, una conversación, un cambio o una comprensión, puedes compartirlo anónimamente. Un editor lo revisa antes de que aparezca en la bitácora.</p><button class="secondaryBtn" data-route="frutos">Abrir Frutos</button></div></article>
+        <article class="guideStep" data-guide-tone="comunidad"><div class="guideNum">7</div><div><div class="eyebrow">Comunidad · opcional</div><h2>Compartir nunca es requisito</h2><p>Leer no requiere cuenta. Las reflexiones privadas permanecen en tu dispositivo. Sólo si decides registrar una misión, enviar un testimonio o compartir un fruto se crea una identidad técnica anónima; todo aporte público pasa por revisión humana.</p><button class="secondaryBtn" data-route="community">Conocer la experiencia comunitaria</button></div></article>
       </div>
       <section class="guideClosing"><div class="eyebrow">Una regla sencilla</div><p class="quote">Si Dérej te ayuda a mirar mejor la vida fuera de la pantalla, está cumpliendo su propósito.</p><button class="primaryBtn" data-route="camino">Comenzar mi recorrido</button></section>
     </section>
@@ -286,6 +323,7 @@
       <div class="eyebrow">Mi Camino</div><h1>Memoria, no puntuación.</h1><p class="lede">Aquí se conserva sólo lo necesario para ayudarte a recordar prácticas elegidas. No hay rachas, niveles ni comparación con otros.</p>
       <section class="metricCard"><div><strong id="localActionsCount">0</strong><span>huellas locales</span></div><div><strong>Local</strong><span>almacenamiento</span></div></section>
       <section class="memoryCard"><div class="eyebrow">En este dispositivo</div><div id="localActionsList" class="memoryList"></div></section>
+      <section class="fruitInvite"><div class="fruitInviteIcon" aria-hidden="true">פרי</div><div><div class="eyebrow">Frutos</div><h2>¿Algo de esta semana llegó a la vida?</h2><p>Si una lectura o práctica produjo una acción o comprensión concreta, puedes dejar una huella anónima para la bitácora comunitaria.</p><button class="secondaryBtn" data-route="frutos">Compartir o leer frutos</button></div></section>
       <button id="clearLocalMemory" class="secondaryBtn">Borrar memoria local de este dispositivo</button><p class="small">Esta acción elimina sólo huellas y reflexiones privadas guardadas en este navegador. No elimina testimonios que hayas enviado a la comunidad.</p>
     </section>
   </main>
@@ -335,7 +373,7 @@
       <button id="welcomeCloseX" class="dialogX" type="button" aria-label="Cerrar">×</button>
       <div class="eyebrow">Bienvenido a Dérej · El Camino</div>
       <h2>Estudiar, escuchar y llevar algo a la vida.</h2>
-      <p>Dérej no busca que completes una aplicación. Cada encuentro parte de una fuente, abre una pregunta y termina con la posibilidad de una práctica pequeña.</p>
+      <p>Dérej no busca que completes una aplicación. Cada encuentro parte de una fuente, abre una pregunta, invita a profundizar y termina con la posibilidad de una práctica pequeña. Si algo de eso llega a la vida, puede convertirse en un fruto.</p>
       <div class="welcomePillars"><span><b>1</b> Fuente y contexto</span><span><b>2</b> Reflexión y práctica</span><span><b>3</b> Memoria, no puntuación</span></div>
       <p class="small">Puedes leer sin cuenta. Tu memoria personal queda en este dispositivo salvo que elijas participar voluntariamente en Comunidad.</p>
       <div class="dialogActions stackedMobile"><button id="welcomeGuide" class="primaryBtn" type="button">Ver recorrido breve</button><button id="welcomeEnter" class="secondaryBtn" type="button">Entrar directamente a Camino</button></div>

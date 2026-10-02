@@ -1,5 +1,5 @@
 const CACHE_PREFIX = 'derej-master-';
-const CACHE = 'derej-master-v1.7-20260930-01';
+const CACHE = 'derej-master-v1.8-20261001-01';
 const SHELL = [
   './',
   './index.html',

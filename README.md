@@ -1,4 +1,13 @@
-# DÉREJ MASTER · Prelanzamiento v1.7
+# DÉREJ MASTER · Prelanzamiento v1.8
+
+
+## v1.8 · Puertas, Camino y Frutos
+
+- Portada de portales: Camino, Shabat, Moed, Escucha y Frutos.
+- Hilo conductor visible en los encuentros: Entrar → Elegir → Profundizar → Llevar → Fruto.
+- 28 preguntas de segunda capa para llevar cada elección hacia una reflexión más profunda.
+- Frutos: bitácora anónima de acciones/cambios vinculados al estudio, con moderación editorial antes de publicar.
+- Moderación separa el relato original de la versión pública y conserva auditoría.
 
 ## v1.7 · Prelanzamiento Comunitario
 - Recorrido interno `#guia` para onboarding, tutoriales y demostraciones.

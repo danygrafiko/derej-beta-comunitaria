@@ -12,3 +12,7 @@
 .moderatorSetupFoot{text-align:center;margin-top:20px;opacity:.72}
 .moderatorLinkBtn{display:inline-flex;text-decoration:none;align-items:center;justify-content:center;margin-top:8px}
 #bootstrapDone{margin-top:18px;padding-top:18px;border-top:1px solid rgba(72,82,62,.18)}
+
+/* v1.8 · Frutos */
+.moderatorResourceBar{display:flex;justify-content:space-between;gap:14px;align-items:center;flex-wrap:wrap;margin:0 0 18px;padding:14px 0;border-bottom:1px solid rgba(40,39,31,.12)}
+.moderatorEditorial{display:grid;gap:10px;margin:12px 0;padding:14px;background:#f4f3df;border:1px solid rgba(101,114,83,.25);border-radius:16px}.moderatorEditorial label{display:grid;gap:5px;font-weight:750}.moderatorEditorial input,.moderatorEditorial textarea{width:100%;box-sizing:border-box;border:1px solid rgba(40,39,31,.2);border-radius:12px;padding:10px;font:inherit;background:#fff}.moderatorOrigin{font-size:.78rem;color:#6d685f;margin-top:4px}.moderatorTagsInput{font-size:.9rem}
