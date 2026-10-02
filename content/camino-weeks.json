@@ -1,7 +1,7 @@
 {
   "schema_version": "weekly-1.0",
-  "source": "RC2 migration",
-  "updated_at": "2026-10-01",
+  "source": "Dérej v2.0 RC · claridad y consolidación",
+  "updated_at": "2026-10-02",
   "weeks": [
     {
       "id": "haazinu",
@@ -17,7 +17,7 @@
           "2026-09-13",
           "◎",
           "ESTAR DESPUÉS DEL COMIENZO",
-          "¿Qué queda cuando termina el momento solemne?",
+          "Después de algo importante, ¿qué sientes que todavía sigue abierto dentro de ti?",
           [
             "Algo recién comienza",
             "Algo necesita asentarse",
@@ -36,7 +36,7 @@
           "2026-09-14",
           "⌁",
           "RECORDAR",
-          "¿Qué no quiero perder justo después de comenzar?",
+          "Mientras avanzas, ¿qué no quieres olvidar?",
           [
             "Algo que recibí",
             "Alguien que sostuvo",
@@ -55,7 +55,7 @@
           "2026-09-15",
           "💧",
           "RECIBIR COMO ROCÍO",
-          "¿Qué puede entrar sin forzarlo?",
+          "¿Qué podrías recibir hoy sin tener que controlarlo ni producirlo tú?",
           [
             "Una frase",
             "Un gesto",
@@ -74,7 +74,7 @@
           "2026-09-16",
           "⬡",
           "RECONOCER LA ROCA",
-          "¿Qué permanece cuando cambia el ánimo?",
+          "Cuando cambia tu ánimo, ¿qué persona, valor o práctica todavía te sostiene?",
           [
             "Una persona confiable",
             "Una práctica que me ordena",
@@ -93,7 +93,7 @@
           "2026-09-17",
           "◌",
           "NOTAR LO QUE SE VOLVIÓ OBVIO",
-          "¿Qué dejo de ver cuando siempre está disponible?",
+          "¿Qué cuidado, persona o recurso se volvió tan habitual que casi dejaste de notarlo?",
           [
             "El cuidado de alguien",
             "Mi cuerpo funcionando",
@@ -112,11 +112,12 @@
           "2026-09-18",
           "↶",
           "VOLVER",
-          "¿Qué orientación quiero recuperar antes de Shabbat?",
+          "¿Qué aspecto de tu vida necesita volver a una dirección que reconoces como más verdadera?",
           [
-            "1 · RECONOCER — Me desvié de algo importante.",
-            "2 · ORIENTAR — Sé hacia dónde quiero volver.",
-            "3 · PRIMER PASO — Puedo nombrar un acto pequeño."
+            "Una dirección que abandoné",
+            "Una decisión que sigo postergando",
+            "Una práctica que me hacía bien",
+            "Una conversación que necesito retomar"
           ],
           "שׁוּבָה יִשְׂרָאֵל",
           "Shuvah Yisrael · vuelve, Israel",
@@ -124,13 +125,13 @@
           "La haftará de Shabbat Shuvah se dirige explícitamente a Israel. Dérej abre una pregunta humana sobre reorientación.",
           "Volver no es fingir que nada ocurrió. Es recuperar dirección llevando contigo lo que aprendiste.",
           "Un giro pequeño también cambia el camino.",
-          "bridge"
+          "choice"
         ],
         [
           "2026-09-19",
           "♫",
           "ESCUCHAR LO QUE PERMANECE",
-          "¿Qué palabra de la semana sigue viva sin que la app la empuje?",
+          "Al mirar esta semana, ¿qué palabra, imagen o aprendizaje sigue contigo sin esfuerzo?",
           [
             "💧 Rocío",
             "⌁ Memoria",
@@ -145,7 +146,7 @@
           "Haazinu es una canción de Moshe dirigida a Israel. Este Shabbat es también Shabbat Shuvah.",
           "Una canción puede terminar y seguir sonando. La medida no es cuánto completaste, sino qué regresó cuando la pantalla ya no estaba.",
           "Dérej se retira. La conversación continúa.",
-          "recall"
+          "choice"
         ]
       ]
     },
@@ -163,7 +164,7 @@
           "2026-09-20",
           "▯",
           "DETENERSE ANTES DEL UMBRAL",
-          "¿Qué no quiero arrastrar sin mirarlo?",
+          "Antes de seguir adelante, ¿qué asunto pendiente necesitas mirar con honestidad?",
           [
             "Una conversación pendiente",
             "Una reacción repetida",
@@ -182,7 +183,7 @@
           "2026-09-21",
           "◐",
           "HACER ESPACIO PARA REPARAR",
-          "¿Qué clase de cambio sería visible fuera de mí?",
+          "Si quisieras reparar algo, ¿qué acción concreta mostraría que el cambio ya comenzó?",
           [
             "Escuchar antes de defenderme",
             "Reparar un daño concreto",
@@ -201,7 +202,7 @@
           "2026-09-22",
           "↘",
           "BAJAR EL VOLUMEN",
-          "¿Qué puedo dejar de alimentar después de un día intenso?",
+          "¿Qué pensamiento, preocupación o reacción sigues alimentando y podrías dejar descansar?",
           [
             "La necesidad de tener razón",
             "Una preocupación repetida",
@@ -220,7 +221,7 @@
           "2026-09-23",
           "□",
           "HACER LUGAR",
-          "¿Qué espacio físico o interior necesita quedar disponible?",
+          "¿Qué espacio necesitas liberar —en tu casa, tu tiempo o dentro de ti— para que algo nuevo pueda entrar?",
           [
             "Una mesa",
             "Una hora",
@@ -239,7 +240,7 @@
           "2026-09-24",
           "🤝",
           "HACER LUGAR PARA OTRO",
-          "¿Quién quedaría fuera si sólo pienso en mi propia alegría?",
+          "¿A quién podrías hacerle un lugar real hoy, especialmente si suele quedar al margen?",
           [
             "Alguien solo",
             "Alguien que necesita ser escuchado",
@@ -258,7 +259,7 @@
           "2026-09-25",
           "⌂",
           "HABITAR LO FRÁGIL",
-          "¿Qué me enseña un espacio que no pretende ser permanente?",
+          "¿Qué parte de tu vida te recuerda que no todo puede asegurarse o controlarse?",
           [
             "No controlo todo",
             "Necesito de otros",
@@ -277,7 +278,7 @@
           "2026-09-26",
           "🌿",
           "ALEGRARSE SIN NEGAR LA FRAGILIDAD",
-          "¿Puede haber alegría sin fingir que todo está bien?",
+          "¿Qué alegría puedes reconocer hoy sin negar lo que todavía duele o falta?",
           [
             "Sí, como gratitud",
             "Sí, como compañía",
@@ -290,7 +291,7 @@
           "El verso pertenece a la celebración de Sukkot de Israel e incluye las cuatro especies. Dérej no convierte sus objetos rituales en una técnica universal.",
           "La alegría madura no exige negar la fragilidad; puede aparecer precisamente mientras la reconocemos.",
           "Deja que la alegría sea verdadera, no perfecta.",
-          "recall"
+          "choice"
         ]
       ]
     },
@@ -308,7 +309,7 @@
           "2026-09-27",
           "🌿",
           "HABITAR",
-          "¿Qué cambia cuando acepto que algo es temporal?",
+          "¿Qué estás viviendo ahora que sabes que no será para siempre?",
           [
             "Cuido más",
             "Agradezco más",
@@ -327,7 +328,7 @@
           "2026-09-28",
           "⊕",
           "REUNIR SIN UNIFORMAR",
-          "¿Qué diferencias puedo sostener sin convertirlas en amenaza?",
+          "¿Qué diferencia de otra persona te cuesta aceptar sin intentar cambiarla?",
           [
             "Ritmos distintos",
             "Opiniones distintas",
@@ -346,7 +347,7 @@
           "2026-09-29",
           "💧",
           "RECIBIR AGUA",
-          "¿Qué necesito recibir, no producir?",
+          "¿Qué necesitas hoy que no puedes producir solo y tendrías que recibir de alguien o de la vida?",
           [
             "Descanso",
             "Ayuda",
@@ -365,7 +366,7 @@
           "2026-09-30",
           "👁",
           "MIRAR LO SUFICIENTE",
-          "¿Qué ya está aquí y sigo tratando como si faltara?",
+          "¿Qué ya está presente en tu vida, pero sigues tratando como si todavía faltara?",
           [
             "Compañía",
             "Comida",
@@ -384,7 +385,7 @@
           "2026-10-01",
           "↕",
           "ACEPTAR EL MOVIMIENTO",
-          "¿Qué intento fijar aunque ya está cambiando?",
+          "¿Qué parte de tu vida ya está cambiando aunque una parte de ti quiera que siga igual?",
           [
             "Una relación",
             "Una etapa",
@@ -403,7 +404,7 @@
           "2026-10-02",
           "↶",
           "PEDIR OTRA OPORTUNIDAD",
-          "¿Qué merece una nueva oportunidad antes de cerrar?",
+          "Piensa en algo que estás por dar por cerrado. ¿Qué merece una nueva oportunidad, pero de una manera diferente?",
           [
             "Una conversación",
             "Un hábito",
@@ -416,13 +417,13 @@
           "Hoshana Rabbah pertenece a la liturgia y práctica judía de Sukkot. Dérej no imita sus procesiones ni fórmulas.",
           "Pedir ayuda puede ser una forma de honestidad cuando nuestra propia fuerza no alcanza.",
           "No todo tiene que depender sólo de ti.",
-          "bridge"
+          "choice"
         ],
         [
           "2026-10-03",
           "○",
           "QUEDARSE UN POCO MÁS",
-          "¿Qué merece un día más de atención antes de pasar a lo siguiente?",
+          "Antes de pasar a lo siguiente, ¿qué merece un poco más de tu atención?",
           [
             "Una gratitud",
             "Una conversación",
@@ -435,7 +436,7 @@
           "Shemini Atzeret es una festividad distinta que sigue inmediatamente a Sukkot. Dérej no reproduce sus prácticas.",
           "A veces la prisa por pasar a lo nuevo nos roba la última conversación con lo que estamos dejando.",
           "Antes de terminar, quédate un momento más.",
-          "recall"
+          "choice"
         ]
       ]
     },
@@ -453,7 +454,7 @@
           "2026-10-04",
           "↻",
           "TERMINAR Y VOLVER A EMPEZAR",
-          "¿Qué final contiene ya una puerta?",
+          "¿Qué final reciente podría convertirse en una puerta para comenzar de otra manera?",
           [
             "Una etapa cerrada",
             "Una enseñanza terminada",
@@ -472,7 +473,7 @@
           "2026-10-05",
           "●",
           "ANTES DE LA FORMA",
-          "¿Qué existe todavía sin nombre claro?",
+          "¿Qué intuición, deseo o preocupación todavía no sabes nombrar bien?",
           [
             "Una intuición",
             "Una preocupación",
@@ -491,7 +492,7 @@
           "2026-10-06",
           "✦",
           "NOMBRAR UNA LUZ",
-          "¿Qué pequeña claridad apareció?",
+          "¿Qué viste o entendiste con un poco más de claridad en estos días?",
           [
             "Entendí algo",
             "Puse un límite",
@@ -510,7 +511,7 @@
           "2026-10-07",
           "│",
           "SEPARAR PARA DISTINGUIR",
-          "¿Qué necesito dejar de mezclar?",
+          "¿Qué dos cosas estás mezclando y te ayudaría distinguir?",
           [
             "Hechos y temores",
             "Deseo y obligación",
@@ -529,7 +530,7 @@
           "2026-10-08",
           "✓",
           "RECONOCER LO BUENO",
-          "¿Qué cosa concreta puedo llamar buena sin exagerarla?",
+          "¿Qué cosa concreta puedes reconocer como buena hoy, aunque no sea perfecta?",
           [
             "Un gesto",
             "Un avance",
@@ -548,7 +549,7 @@
           "2026-10-09",
           "🤝",
           "NO CREAR SOLOS",
-          "¿Qué parte de mi camino necesita relación?",
+          "¿En qué parte de tu camino necesitas dejar de hacerlo todo solo?",
           [
             "Pedir ayuda",
             "Escuchar otra mirada",
@@ -567,7 +568,7 @@
           "2026-10-10",
           "?",
           "¿DÓNDE ESTÁS?",
-          "¿Dónde estoy después de haber comenzado otra vez?",
+          "Si te preguntaras hoy “¿dónde estoy?”, ¿qué opción describe mejor tu estado real?",
           [
             "Más presente",
             "Todavía confundido",
@@ -580,7 +581,7 @@
           "La pregunta aparece cuando el ser humano se esconde. Dérej no la usa para simular la voz divina dirigida al usuario.",
           "Una buena pregunta no siempre acusa. A veces simplemente devuelve orientación.",
           "El comienzo continúa con una pregunta.",
-          "recall"
+          "choice"
         ]
       ]
     }
@@ -1234,17 +1235,47 @@
     "2026-09-26": "¿Qué alegría sería suficientemente verdadera como para convivir también con lo que duele o falta?",
     "2026-09-27": "¿Qué cuidarías de otra manera si recordaras que esta etapa no es permanente?",
     "2026-09-28": "¿Qué diferencia concreta te cuesta sostener sin intentar corregirla, reducirla o expulsarla?",
-    "2026-09-29": "¿Qué te impide pedir, aceptar o agradecer aquello que no puedes darte por ti mismo?",
+    "2026-09-29": "Si necesitas recibir eso, ¿qué te cuesta más: pedirlo, aceptarlo o agradecerlo?",
     "2026-09-30": "¿Qué deseo de “más” te está impidiendo reconocer algo que ya merece gratitud?",
-    "2026-10-01": "¿Qué temes perder de ti si permites que esa relación, etapa, imagen o expectativa cambie?",
+    "2026-10-01": "Marcaste una zona que ya está cambiando. ¿Qué temes perder de ti si permites que ese cambio siga su curso?",
     "2026-10-02": "¿Qué tendría que ser distinto para que una nueva oportunidad no repita simplemente lo anterior?",
     "2026-10-03": "¿Qué descubrirías si no cerraras todavía la pregunta y le dieras un poco más de atención?",
     "2026-10-04": "¿Qué aprendizaje del ciclo que termina quieres llevar conscientemente al que comienza?",
     "2026-10-05": "¿Puedes permanecer un momento con lo que aún no tiene nombre sin apresurarte a definirlo?",
     "2026-10-06": "¿Qué decisión pequeña podría proteger esa claridad para que no se apague entre otras demandas?",
-    "2026-10-07": "¿Qué se vuelve más verdadero cuando distingues esas dos cosas en vez de mantenerlas mezcladas?",
+    "2026-10-07": "¿Qué se vuelve más claro o verdadero cuando dejas de tratar esas dos cosas como si fueran lo mismo?",
     "2026-10-08": "¿Cómo podrías cuidar eso bueno sin idealizarlo ni exigir que sea perfecto?",
     "2026-10-09": "¿A quién necesitas escuchar, pedir ayuda o dejar entrar para que ese camino no dependa sólo de ti?",
     "2026-10-10": "Si respondes con honestidad “aquí estoy”, ¿cuál sería el siguiente paso más pequeño y verdadero?"
+  },
+  "reflection_contexts": {
+    "2026-09-13": "Después de un momento importante, la vida cotidiana vuelve. Antes de avanzar, vale la pena notar qué quedó moviéndose dentro de ti.",
+    "2026-09-14": "Cuando una etapa comienza, algunas cosas merecen acompañarnos para que el siguiente paso no nazca sin memoria.",
+    "2026-09-15": "No todo lo valioso llega por esfuerzo. Hay aprendizajes, gestos y silencios que sólo pueden recibirse si dejamos espacio.",
+    "2026-09-16": "El ánimo cambia. Un fundamento es aquello que todavía puede orientarte cuando la emoción del momento ya cambió.",
+    "2026-09-17": "Lo cotidiano puede volverse invisible precisamente porque siempre está. Hoy la invitación es volver a mirar lo que sostiene tu vida.",
+    "2026-09-18": "Volver no significa retroceder. A veces es recuperar una orientación que reconocemos como más verdadera.",
+    "2026-09-19": "Al cerrar una semana, no todo necesita resumirse. A veces una sola palabra o imagen permanece y basta para mostrar lo que quedó.",
+    "2026-09-20": "Antes de cruzar hacia una etapa nueva, puede haber algo que conviene mirar con honestidad en vez de arrastrarlo sin nombre.",
+    "2026-09-21": "Una intención de reparar se vuelve más real cuando puede traducirse en un gesto observable fuera de nosotros.",
+    "2026-09-22": "Después de días intensos, la mente puede seguir alimentando discusiones, preocupaciones o exigencias aunque el momento ya haya pasado.",
+    "2026-09-23": "Hacer lugar no es llenar un espacio nuevo: primero es dejar disponible una mesa, una hora, una conversación o un poco de silencio.",
+    "2026-09-24": "Una alegría que sólo cabe para mí queda incompleta. Abrir lugar para otra persona puede cambiar el sentido de una celebración.",
+    "2026-09-25": "Habitar algo frágil recuerda que no todo puede asegurarse. Esa fragilidad también puede enseñarnos a cuidar de otra manera.",
+    "2026-09-26": "La alegría no necesita negar lo difícil. Puede convivir con lo que todavía duele, falta o no está resuelto.",
+    "2026-09-27": "Cuando recordamos que una etapa es temporal, suele cambiar la manera en que la habitamos, agradecemos y cuidamos.",
+    "2026-09-28": "Convivir no exige que todos seamos iguales. La pregunta es qué diferencias podemos sostener sin vivirlas como una amenaza.",
+    "2026-09-29": "Hay cosas importantes que no pueden producirse a voluntad. A veces necesitamos recibir ayuda, tiempo, descanso o una palabra buena.",
+    "2026-09-30": "La sensación de falta puede hacernos pasar de largo frente a algo que ya está presente y merece ser reconocido.",
+    "2026-10-01": "Una relación, una etapa o una imagen de nosotros mismos puede estar cambiando antes de que estemos preparados para aceptarlo.",
+    "2026-10-02": "Dar otra oportunidad no significa repetir exactamente lo mismo. Puede ser volver a intentar con una disposición o acción diferente.",
+    "2026-10-03": "Antes de cerrar un ciclo y correr hacia el siguiente, algunas cosas merecen permanecer un poco más bajo nuestra atención.",
+    "2026-10-04": "Los comienzos no siempre aparecen desde cero. A veces nacen dentro de algo que acaba de terminar.",
+    "2026-10-05": "Antes de que algo tenga forma clara puede sentirse como intuición, deseo, preocupación o posibilidad. No es necesario nombrarlo de inmediato.",
+    "2026-10-06": "Una pequeña claridad puede cambiar una decisión aunque todavía no resuelva todo. Hoy basta con reconocer dónde apareció luz.",
+    "2026-10-07": "Distinguir no es dividir por miedo. A veces separar dos cosas que confundimos permite ver con más verdad qué pertenece a cada una.",
+    "2026-10-08": "Reconocer algo bueno no significa idealizarlo. Puede ser simplemente nombrar con gratitud algo concreto que hoy sí existe.",
+    "2026-10-09": "Hay caminos que se vuelven más humanos cuando dejamos entrar ayuda, conversación, compañía o una mirada distinta de la propia.",
+    "2026-10-10": "Bereshit también abre una pregunta muy sencilla y exigente: antes de decidir adónde ir, reconocer con honestidad dónde estamos."
   }
 }
