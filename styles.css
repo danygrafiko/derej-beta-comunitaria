@@ -199,3 +199,28 @@ dialog{border:0;padding:0;background:transparent;max-width:min(92vw,440px)}dialo
 .moduleViewerScreen{max-width:960px}.moduleFrameWrap{margin:16px 0;border:1px solid var(--line);border-radius:24px;overflow:hidden;background:#F2EBD8;box-shadow:0 12px 30px rgba(57,48,36,.08)}
 .moduleFrameWrap iframe{display:block;width:100%;height:min(74vh,880px);min-height:620px;border:0;background:#F2EBD8}.moduleViewerNote{margin:10px 2px 22px}
 @media(max-width:560px){.threadRail{margin-right:-12px;padding-right:18px}.threadRail span{min-width:116px;font-size:.67rem}.moduleFrameWrap{margin-left:-12px;margin-right:-12px;border-radius:18px}.moduleFrameWrap iframe{height:72vh;min-height:560px}}
+
+/* v2.0 RC · claridad y consolidación */
+.top{position:relative;top:auto;background:transparent;z-index:2;align-items:flex-start}
+.topActions{flex-shrink:0}
+#fontBtn{width:auto;min-width:58px;padding:0 10px;white-space:nowrap}
+.contextBar[hidden]{display:none!important}
+.termHint{font:inherit;font-size:.72em;color:var(--mut);white-space:nowrap}
+.axisTitle{font-size:calc(2rem * var(--scale,1));line-height:1.08;margin:.25em 0 .3em}
+.secondaryDoors{margin:26px 0 18px;padding:20px 16px;border:1px solid rgba(83,73,54,.16);border-radius:28px;background:linear-gradient(180deg,#f5eedf,#ebe2d1)}
+.secondaryDoors h2{margin-top:.35rem}.homeUtilities{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:16px 0 22px}
+.portalCourtyard.portalCompact{grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin:16px 0 0}
+.portalCompact .stonePortal{min-height:112px;padding:12px 10px;display:grid;grid-template-columns:46px 1fr;gap:9px;border-radius:20px}
+.portalCompact .portalArch{width:44px;height:58px;min-width:44px;flex-basis:44px;border-radius:22px 22px 7px 7px}
+.portalCompact .portalArch i{font-size:1.03rem}.portalCompact .portalCopy b{font-size:1rem}.portalCompact .portalCopy em{font-size:.68rem}
+.threadRail{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;overflow:visible;white-space:normal;padding:8px 0 14px;font-size:.66rem;letter-spacing:.02em;text-transform:none}
+.threadRail span{display:flex;align-items:center;justify-content:center;gap:4px;min-height:38px;text-align:center;padding:6px 5px;border-radius:12px}
+.threadRail span b{font-size:.72rem}.threadRail span.on{background:#667653;color:#fff;border-color:#667653}.threadRail i{display:none}
+.encounterContextCard{margin:10px 0 18px;padding:15px 16px;border:1px solid rgba(83,73,54,.16);border-left:5px solid #a9853f;border-radius:18px;background:#f7f0e2}
+.encounterContextCard .eyebrow{margin-bottom:7px}.encounterContext{margin:0;padding:0;border:0;border-radius:0;background:transparent;color:#4f4a42;line-height:1.55;font-size:.92rem}
+.questionEyebrow{margin-top:14px}.encounterMainQuestion{font-size:calc(1.5rem * var(--scale,1));line-height:1.32}
+.stagePill{display:inline-flex;align-items:center;border:1px solid #bec9ae;border-radius:999px;background:#e8eddc;color:#4b5a3e;font-size:.72rem;font-weight:900;padding:7px 10px;margin:2px 0 12px}
+.libraryGrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0}.libraryCard{display:grid;grid-template-columns:52px 1fr;gap:12px;align-items:center;text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:22px;padding:16px;min-height:128px}.libraryGlyph{width:50px;height:50px;border-radius:50%;display:grid;place-items:center;background:#f1eadc;font-size:1.5rem}.libraryCard small{display:block;color:var(--mut);font-weight:900;letter-spacing:.12em;font-size:.64rem}.libraryCard b{display:block;font:1.14rem/1.15 Georgia,serif;margin:4px 0}.libraryCard em{display:block;font-style:normal;color:var(--mut);font-size:.75rem;line-height:1.4}
+@media(max-width:560px){.portalCourtyard.portalCompact{grid-template-columns:1fr}.portalCompact .stonePortal{min-height:96px;grid-template-columns:48px 1fr}.homeUtilities{grid-template-columns:1fr}.libraryGrid{grid-template-columns:1fr}.axisTitle{font-size:calc(1.8rem * var(--scale,1))}}
+@media(max-width:390px){.threadRail{grid-template-columns:1fr 1fr}.top{gap:6px}.brand{font-size:1.14rem}#fontBtn{min-width:54px;padding:0 7px}}
+.carryCard{margin:16px 0;padding:18px;border:1px solid #bec9ae;border-left:6px solid #667653;border-radius:22px;background:#eef1e5}.carryCard h2{margin:.3rem 0}.carryCard .quote{margin:.35rem 0 .6rem}

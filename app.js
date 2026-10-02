@@ -10,32 +10,6 @@ const CONTENT_ROUTES={
   'adam-adama-b1':{url:'content/adam-adama-practicas-b1.json',root:'adamB1Experience',status:'adamB1Status'}
 };
 const loaded=new Set();
-const APARTADOS={
-  'shabat-raiz':{
-    title:'La Raíz de Toda Bendición',
-    lead:'Un mapa ampliado para estudiar cese, descanso, presencia y práctica sin salir de Dérej.',
-    url:'apartado-shabat-raiz.html',origin:'shabat',parent:'shabat'
-  },
-  'sukkot-sombra':{
-    title:'El Secreto de la Sombra de Emuná',
-    lead:'Fragilidad, hospitalidad, agua y alegría reunidas en un apartado de estudio.',
-    url:'apartado-sukkot-sombra.html',origin:'sukkot',parent:'moed'
-  },
-  'adam-adama-ramak':{
-    title:'ADAM–ADAMÁ · Mapa Ramak',
-    lead:'Los ocho bloques y su colorimetría de fundamento, integrados como apartado visual de Dérej.',
-    url:'apartado-adam-adama-ramak.html',origin:'adam-adama',parent:'camino'
-  }
-};
-const RICH_MODULES={
-  'camino-parasha':{title:'Camino · Lectura semanal de la Torá (Parashá)',lead:'Un recorrido de 28 días que conecta la lectura semanal con preguntas, raíces y prácticas.',url:'estudio-camino-parasha.html',parent:'camino'},
-  'shabat':{title:'Shabat · Detener y escuchar',lead:'Una experiencia amplia para entrar por preparación, cese, mesa, escucha y transición.',url:'estudio-shabat.html',parent:'shabat'},
-  'moed':{title:'Moed · Habitar el calendario',lead:'Un portal de tiempos señalados, símbolos, prácticas y profundidad opcional.',url:'estudio-moed.html',parent:'moed'},
-  'adam-adama':{title:'ADAM–ADAMÁ · 32 caminos',lead:'Ocho bloques, 32 fichas y dos capas de lectura: Abierta y Profunda.',url:'estudio-adam-adama.html',parent:'camino'}
-};
-let MODULE_VIEWER_PARENT='camino';
-let APARTADO_ORIGIN='camino';
-let APARTADO_PARENT='camino';
 function el(tag,cls,text){const n=document.createElement(tag);if(cls)n.className=cls;if(text!==undefined&&text!==null)n.textContent=text;return n}
 function addText(p,t,c,v){if(!v)return null;const n=el(t,c,v);p.appendChild(n);return n}
 function splitMeaning(value=''){const parts=String(value).split(' · ');return {translit:parts[0]||'',meaning:parts.slice(1).join(' · ')||''}}
@@ -71,61 +45,9 @@ function renderBlockTitle(section,title){
   if(g){const btn=el('button','glossaryBtn','ⓘ');btn.type='button';btn.setAttribute('aria-label',`Ver significado de ${title}`);btn.setAttribute('aria-expanded','false');const pop=el('div','glossaryPop');pop.hidden=true;pop.innerHTML=`<b>${g.he} · ${g.es}</b><span>${g.body}</span>`;btn.addEventListener('click',()=>{const open=pop.hidden;pop.hidden=!open;btn.setAttribute('aria-expanded',String(open))});row.append(btn,pop)}section.appendChild(row)
 }
 
-function contextMessage(route){const day=new Intl.DateTimeFormat('es-CL',{weekday:'long'}).format(new Date());return({camino:`Hoy es ${day}. Camino sigue la lectura semanal de la Torá (Parashá) y la lleva a una pregunta para la vida.`,shabat:'Shabat abre una experiencia de descanso; la profundidad queda disponible, nunca impuesta.','beit-midrash':'Beit Midrash es profundidad opcional: fuente, atribución y contexto antes de aplicación.',moed:'Moed acompaña el calendario sin desplazar la Parashá.',sukkot:'Sukot invita a habitar la fragilidad con alegría, memoria y hospitalidad.','sukkot-study':'El Beit Midrash de Sukot distingue fuente tradicional, lectura mística y adaptación Dérej.','adam-adama':'ADAM–ADAMÁ organiza estudio y práctica regenerativa como una colección, no como una sola página.','adam-adama-b1':'Bloque piloto de ADAM–ADAMÁ con checklist local persistente.','camino-week':'Cuatro semanas de RC2, ahora separadas del motor.','camino-encounter':'El encuentro guarda la elección sólo durante la experiencia; al cerrar sólo queda una huella local.','camino-root':'La raíz devuelve fuente, contexto y una pregunta para la vida.','source-reader':'La fuente permanece dentro de Dérej: hebreo, español, contexto y trazabilidad editorial.',haftara:'La Haftará conserva su contexto litúrgico antes de abrir una pregunta contemporánea.',community:'Comunidad transforma estudio en acción compartida, con consentimiento explícito y moderación.',radio:'Radio Dérej acompaña silencio, estudio y memoria.','camino-personal':'Mi Camino conserva memoria local; no crea puntuaciones ni perfiles espirituales.',frutos:'Frutos conserva memoria comunitaria de acciones vividas, siempre anónima y moderada.',guia:'Recorrido de orientación: entender Dérej antes de usarlo también forma parte del camino.',apartado:'Complemento editorial: una lectura ampliada en HTML que permanece dentro de Dérej.'})[route]||'Dérej · El Camino'}
-function navParent(route){if(['camino-week','camino-encounter','camino-root','source-reader','haftara'].includes(route))return'camino';if(['beit-midrash'].includes(route))return'shabat';if(['sukkot','sukkot-study'].includes(route))return'moed';if(['adam-adama','adam-adama-b1','community','guia'].includes(route))return'camino';if(route==='frutos')return'camino-personal';if(route==='apartado')return APARTADO_PARENT||'camino';if(route==='module-viewer')return MODULE_VIEWER_PARENT||'camino';return route}
-async function showRoute(route,{replace=false}={}){const target=screens.find(s=>s.dataset.screen===route)?route:'camino';screens.forEach(s=>s.hidden=s.dataset.screen!==target);const parent=navParent(target);navButtons.forEach(b=>b.classList.toggle('on',b.dataset.route===parent));$('contextBar').textContent=contextMessage(target);if(!replace)history.pushState({route:target},'',`#${target}`);window.scrollTo({top:0,behavior:'smooth'});if(CONTENT_ROUTES[target]&&!loaded.has(target))await loadContentRoute(target);if(['camino','camino-week','camino-encounter','camino-root','source-reader','haftara'].includes(target))await caminoEnsure(target);if(target==='radio')await radioInit();if(target==='community')await communityInit();if(target==='frutos')await fruitInit();if(target==='camino-personal')renderLocalMemory()}
-function sanitizeApartadoHtml(html=''){
-  const doc=new DOMParser().parseFromString(String(html),'text/html');
-  doc.querySelectorAll('script,style,iframe,object,embed,link,meta,base,form').forEach(n=>n.remove());
-  doc.querySelectorAll('*').forEach(node=>{
-    [...node.attributes].forEach(attr=>{
-      const name=attr.name.toLowerCase(),value=String(attr.value||'').trim();
-      if(name.startsWith('on'))node.removeAttribute(attr.name);
-      if((name==='href'||name==='src')&&/^javascript:/i.test(value))node.removeAttribute(attr.name);
-    });
-  });
-  return doc.body.innerHTML;
-}
-function bindApartadoActions(host){
-  host.querySelectorAll('[data-route]').forEach(b=>b.addEventListener('click',()=>showRoute(b.dataset.route)));
-  host.querySelectorAll('[data-apartado]').forEach(b=>b.addEventListener('click',()=>openApartado(b.dataset.apartado)));
-}
-async function openApartado(id){
-  const meta=APARTADOS[id];
-  if(!meta)return;
-  APARTADO_ORIGIN=meta.origin||'camino';
-  APARTADO_PARENT=meta.parent||'camino';
-  $('apartadoTitle').textContent=meta.title;
-  $('apartadoLead').textContent=meta.lead;
-  const status=$('apartadoStatus'),host=$('apartadoHost');
-  status.hidden=false;status.textContent='Abriendo apartado…';host.replaceChildren();
-  await showRoute('apartado');
-  try{
-    const res=await fetch(meta.url,{cache:'no-store'});
-    if(!res.ok)throw new Error(`Apartado ${res.status}`);
-    host.innerHTML=sanitizeApartadoHtml(await res.text());
-    bindApartadoActions(host);
-    status.hidden=true;
-    requestAnimationFrame(()=>window.scrollTo({top:0,behavior:'smooth'}));
-  }catch(e){
-    status.hidden=false;status.textContent='Este apartado no pudo abrirse. Intenta nuevamente.';
-  }
-}
-
-function openRichModule(id){
-  const meta=RICH_MODULES[id];if(!meta)return;
-  MODULE_VIEWER_PARENT=meta.parent||'camino';
-  $('moduleViewerTitle').textContent=meta.title;
-  $('moduleViewerLead').textContent=meta.lead;
-  const status=$('moduleViewerStatus'),frame=$('moduleViewerFrame');
-  status.hidden=false;status.textContent='Abriendo estudio completo…';
-  frame.removeAttribute('src');
-  showRoute('module-viewer').then(()=>{
-    frame.onload=()=>{status.hidden=true};
-    frame.onerror=()=>{status.hidden=false;status.textContent='No se pudo abrir este estudio. Intenta nuevamente.'};
-    frame.src=meta.url;
-  });
-}
+function contextMessage(route){const day=new Intl.DateTimeFormat('es-CL',{weekday:'long'}).format(new Date());return({camino:`Hoy es ${day}. Camino sigue la lectura semanal de la Torá (Parashá) y la lleva a una pregunta para la vida.`,shabat:'Shabat abre una experiencia de descanso; la profundidad queda disponible, nunca impuesta.','beit-midrash':'Beit Midrash es profundidad opcional: fuente, atribución y contexto antes de aplicación.',moed:'Moed acompaña el calendario sin desplazar la Parashá.',sukkot:'Sukot invita a habitar la fragilidad con alegría, memoria y hospitalidad.','sukkot-study':'El Beit Midrash de Sukot distingue fuente tradicional, lectura mística y adaptación Dérej.','adam-adama':'ADAM–ADAMÁ organiza estudio y práctica regenerativa como una colección, no como una sola página.','adam-adama-b1':'Bloque piloto de ADAM–ADAMÁ con checklist local persistente.','camino-week':'Explora las semanas y sus encuentros sin perder la Parashá como eje.','camino-encounter':'Una situación, una pregunta y una sola elección. Después se abre una capa más profunda.','camino-root':'La raíz devuelve fuente, contexto y una pregunta para la vida.','source-reader':'La fuente permanece dentro de Dérej: hebreo, español, contexto y trazabilidad editorial.',haftara:'La Haftará conserva su contexto litúrgico antes de abrir una pregunta contemporánea.',community:'Comunidad transforma estudio en acción compartida, con consentimiento explícito y moderación.',radio:'Radio Dérej acompaña silencio, estudio y memoria.','camino-personal':'Mi Camino conserva memoria local; no crea puntuaciones ni perfiles espirituales.',frutos:'Frutos conserva memoria comunitaria de acciones vividas, siempre anónima y moderada.',guia:'Recorrido de orientación: entender Dérej antes de usarlo también forma parte del camino.',biblioteca:'Biblioteca conserva los estudios originales como puertas de profundidad, separados de la navegación principal.'})[route]||'Dérej · El Camino'}
+function navParent(route){if(['camino-week','camino-encounter','camino-root','source-reader','haftara','biblioteca','guia'].includes(route))return'camino';if(['beit-midrash'].includes(route))return'shabat';if(['sukkot','sukkot-study'].includes(route))return'moed';if(['adam-adama','adam-adama-b1','community'].includes(route))return'camino';if(route==='frutos')return'camino-personal';return route}
+async function showRoute(route,{replace=false}={}){const target=screens.find(s=>s.dataset.screen===route)?route:'camino';screens.forEach(s=>s.hidden=s.dataset.screen!==target);const parent=navParent(target);navButtons.forEach(b=>b.classList.toggle('on',b.dataset.route===parent));const context=$('contextBar');if(context){const hideContext=['camino','camino-encounter'].includes(target);context.hidden=hideContext;if(!hideContext)context.textContent=contextMessage(target)}if(!replace)history.pushState({route:target},'',`#${target}`);window.scrollTo({top:0,behavior:'smooth'});if(CONTENT_ROUTES[target]&&!loaded.has(target))await loadContentRoute(target);if(['camino','camino-week','camino-encounter','camino-root','source-reader','haftara'].includes(target))await caminoEnsure(target);if(target==='radio')await radioInit();if(target==='community')await communityInit();if(target==='frutos')await fruitInit();if(target==='camino-personal')renderLocalMemory()}
 function renderSources(parent,ids,sourceMap){if(!Array.isArray(ids)||!ids.length)return;const wrap=el('div','source-links');ids.forEach(id=>{const src=sourceMap.get(id);if(!src||src.tradition==='derej')return;const label=referenceEs(src.citation?`${src.label} · ${src.citation}`:src.label);wrap.appendChild(el('span','source-chip',label))});if(wrap.children.length)parent.appendChild(wrap)}
 function saveLocalAction(content,block,selection=''){const key=`derej:content:${content.id}:actions`;let current=[];try{current=JSON.parse(localStorage.getItem(key)||'[]')}catch(e){}if(!Array.isArray(current))current=[];const entry={content_id:content.id,content_title:content.title?.es||content.id,block_id:block.id,block_title:block.title||block.id,selection:selection||'',at:new Date().toISOString()};const match=current.findIndex(x=>x.content_id===entry.content_id&&x.block_id===entry.block_id);if(match>=0)current[match]=entry;else current.push(entry);localStorage.setItem(key,JSON.stringify(current));renderLocalMemory()}
 function renderMedia(parent,media){if(!media)return;let node;if(media.kind==='image'){node=el('img','media');node.src=media.src;node.alt=media.alt||''}else if(media.kind==='audio'){node=el('audio','media');node.src=media.src;node.controls=true}else if(media.kind==='video'){node=el('video','media');node.src=media.src;node.controls=true;if(media.poster)node.poster=media.poster}if(node)parent.appendChild(node);addText(parent,'p','small',media.caption)}
@@ -169,19 +91,42 @@ function caminoRenderWeekList(){
   CAMINO.weeks.forEach((w,wi)=>{const card=el('section','weekCard');const head=el('div','weekHead');const weekMeta=caminoIconMeta(w.days[0]?.[1]);const sym=el('div','weekSymbol');setCaminoIcon(sym,weekMeta);const copy=el('div');addText(copy,'div','eyebrow',`${w.start} → ${w.end}`);addText(copy,'h2','',w.title);addText(copy,'div','he weekHe',w.he);head.append(sym,copy);card.appendChild(head);const days=el('div','weekDays');w.days.forEach((d,di)=>{const meta=caminoIconMeta(d[1]);const b=el('button',`weekDay${done[d[0]]?' done':''}`);b.type='button';b.innerHTML=`<span class="weekDayIcon" data-tone="${meta.tone}" aria-hidden="true">${caminoIconMarkup(meta)}</span><span><b>${d[2]}</b><small>${d[3]}</small></span><span class="weekDayState">${done[d[0]]?'✓':'→'}</span>`;b.setAttribute('aria-label',`${d[2]}. ${meta.label}. ${d[3]}`);b.addEventListener('click',()=>caminoOpenEncounter(wi,di,'camino-week'));days.appendChild(b)});card.appendChild(days);box.appendChild(card)})
 }
 function choiceButton(text){const b=el('button','choice',text);b.type='button';return b}
+function setEncounterStep(step=1){
+  document.querySelectorAll('#encounterThread [data-step]').forEach(n=>n.classList.toggle('on',Number(n.dataset.step)===Number(step)));
+}
 function caminoRevealDepth(d,selection=''){
   caminoSelection=selection||'';
   const card=$('encounterDeeper'),echo=$('encounterSelectionEcho'),q=$('encounterFollowup');
   if(!card||!q)return;
-  echo.textContent=selection?`Tu elección no es un resultado; es una pista. Marcaste: ${selection}`:'Ya abriste la primera capa de la pregunta.';
+  echo.textContent=selection?`Elegiste una sola pista: ${selection}. No necesitas marcar las demás.`:'Ya abriste la primera capa de la pregunta.';
   q.textContent=CAMINO.reflection_followups?.[d[0]]||'¿Qué hay detrás de esta elección y qué podría cambiar si la miras con más honestidad?';
-  card.hidden=false;$('discoverRoot').disabled=false;
+  card.hidden=false;$('discoverRoot').disabled=false;setEncounterStep(2);
 }
 function caminoOpenEncounter(wi,di,origin='camino'){
-  caminoWeekIndex=wi;caminoDayIndex=di;caminoOrigin=origin;caminoBridgeStep=0;caminoSelection='';const d=CAMINO.weeks[wi].days[di],meta=caminoIconMeta(d[1]);$('encounterDate').textContent=d[0];$('encounterHebrewDate').textContent=`Israel · ${hebrewCalendarLabel(new Date(`${d[0]}T12:00:00Z`))}`;setCaminoIcon($('encounterSymbol'),meta);$('encounterMotif').dataset.tone=meta.tone;$('encounterSymbolLabel').textContent=`${meta.label} · símbolo del encuentro`;$('encounterTitle').textContent=d[2];$('encounterContext').textContent=CAMINO.reflection_contexts?.[d[0]]||'';$('encounterQuestion').textContent=d[3];$('discoverRoot').disabled=true;$('encounterDeeper').hidden=true;$('encounterSelectionEcho').textContent='';$('encounterFollowup').textContent='';const box=$('encounterChoices');box.replaceChildren();
-  if(d[11]==='bridge'){$('encounterInstruction').textContent='Construye la experiencia en orden.';const chosen=[];d[4].forEach((c,j)=>{const b=choiceButton(c);b.addEventListener('click',()=>{if(j!==caminoBridgeStep){$('encounterInstruction').textContent=`Sigue con la pieza ${caminoBridgeStep+1}.`;return}caminoBridgeStep++;chosen.push(c);b.classList.add('on');b.disabled=true;if(caminoBridgeStep===d[4].length)caminoRevealDepth(d,chosen.join(' → '))});box.appendChild(b)})}
-  else if(d[11]==='recall'){$('encounterInstruction').textContent='Primero intenta recordar sin pistas.';const yes=choiceButton('Sí · algo volvió'),no=choiceButton('Todavía no aparece'),opts=el('div','choiceList');const reveal=()=>{yes.remove();no.remove();d[4].forEach(c=>{const b=choiceButton(c);b.addEventListener('click',()=>{opts.querySelectorAll('.choice').forEach(x=>x.classList.remove('on'));b.classList.add('on');caminoRevealDepth(d,c)});opts.appendChild(b)})};yes.addEventListener('click',reveal);no.addEventListener('click',reveal);box.append(yes,no,opts)}
-  else {$('encounterInstruction').textContent='Lee la situación con calma y elige la opción que más se acerque a lo que hoy reconoces. No hay una respuesta correcta: tu elección sólo abre la siguiente capa.';d[4].forEach(c=>{const b=choiceButton(c);b.addEventListener('click',()=>{box.querySelectorAll('.choice').forEach(x=>x.classList.remove('on'));b.classList.add('on');caminoRevealDepth(d,c)});box.appendChild(b)})}
+  caminoWeekIndex=wi;caminoDayIndex=di;caminoOrigin=origin;caminoBridgeStep=0;caminoSelection='';
+  const d=CAMINO.weeks[wi].days[di],meta=caminoIconMeta(d[1]);
+  $('encounterDate').textContent=d[0];
+  $('encounterHebrewDate').textContent=`Israel · ${hebrewCalendarLabel(new Date(`${d[0]}T12:00:00Z`))}`;
+  setCaminoIcon($('encounterSymbol'),meta);
+  $('encounterMotif').dataset.tone=meta.tone;
+  $('encounterSymbolLabel').textContent=`${meta.label} · símbolo del encuentro`;
+  $('encounterTitle').textContent=d[2];
+  $('encounterContext').textContent=CAMINO.reflection_contexts?.[d[0]]||'Detente un momento y ubica esta pregunta en una situación concreta de tu vida.';
+  $('encounterQuestion').textContent=d[3];
+  $('discoverRoot').disabled=true;
+  $('encounterDeeper').hidden=true;
+  $('encounterSelectionEcho').textContent='';
+  $('encounterFollowup').textContent='';
+  $('encounterInstruction').textContent='Elige UNA sola opción: la que hoy se acerque más a tu experiencia. No hay una respuesta correcta. Al elegir, Dérej abrirá una pregunta más profunda.';
+  setEncounterStep(1);
+  const box=$('encounterChoices');box.replaceChildren();
+  d[4].forEach(c=>{
+    const b=choiceButton(c);b.addEventListener('click',()=>{
+      box.querySelectorAll('.choice').forEach(x=>x.classList.remove('on'));
+      b.classList.add('on');
+      caminoRevealDepth(d,c);
+    });box.appendChild(b)
+  });
   showRoute('camino-encounter');
 }
 let SOURCE_READER_STATE=null;
@@ -520,7 +465,6 @@ $('fruitOrigin')?.addEventListener('change',()=>{FRUIT_CONTEXT=null;fruitSetCont
 document.querySelectorAll('[data-route="frutos"]').forEach(b=>b.addEventListener('click',()=>{FRUIT_CONTEXT=null}));
 $('submitFruit')?.addEventListener('click',fruitSubmit);
 $('rootShareFruit')?.addEventListener('click',fruitOpenFromCurrent);
-$('portalCaminoToday')?.addEventListener('click',()=>{const n=$('caminoHero');if(n)n.scrollIntoView({behavior:'smooth',block:'start'})});
 
 /* Radio Dérej · migrado desde RC2 */
 let RADIO_TRACKS=[];
@@ -667,8 +611,6 @@ function getMasterActions(){const found=[];for(let i=0;i<localStorage.length;i++
 function getPrivateReflections(){const found=[];for(let i=0;i<localStorage.length;i++){const key=localStorage.key(i);if(!key?.startsWith('derej:community:private:'))continue;const body=(localStorage.getItem(key)||'').trim();if(body)found.push({key,body})}return found}
 function renderLocalMemory(){const actions=getMasterActions(),reflections=getPrivateReflections(),done=caminoDoneState();const footprints=Object.entries(done).map(([date,at])=>({date,at})).sort((a,b)=>String(b.at).localeCompare(String(a.at)));$('localActionsCount').textContent=String(actions.length+footprints.length+reflections.length);const box=$('localActionsList');box.replaceChildren();if(!actions.length&&!footprints.length&&!reflections.length){box.appendChild(el('p','empty','Todavía no hay huellas guardadas en este dispositivo.'));return}footprints.slice(0,20).forEach(f=>{const item=el('div','memoryItem');addText(item,'b','',`Camino · ${new Intl.DateTimeFormat('es-CL',{dateStyle:'medium'}).format(new Date(`${f.date}T12:00:00`))}`);addText(item,'span','small','Encuentro vivido · memoria local');box.appendChild(item)});actions.slice(0,20).forEach(a=>{const item=el('div','memoryItem');addText(item,'b','',a.block_title||a.block_id);addText(item,'span','small',`${a.content_title||a.content_id} · ${new Intl.DateTimeFormat('es-CL',{dateStyle:'medium'}).format(new Date(a.at))}${a.selection?` · ${a.selection}`:''}`);box.appendChild(item)});reflections.slice(0,10).forEach(r=>{const item=el('div','memoryItem reflectionMemory');addText(item,'b','','Reflexión privada');addText(item,'span','small',r.body.length>140?`${r.body.slice(0,137)}…`:r.body);box.appendChild(item)})}
 document.querySelectorAll('[data-route]').forEach(b=>b.addEventListener('click',()=>showRoute(b.dataset.route)));
-document.querySelectorAll('[data-rich-module]').forEach(b=>b.addEventListener('click',()=>openRichModule(b.dataset.richModule)));
-$('moduleViewerBack')?.addEventListener('click',()=>showRoute(MODULE_VIEWER_PARENT||'camino'));
 
 
 /* v1.8 · orientación, puertas y primera visita */
@@ -681,8 +623,6 @@ $('welcomeEnter')?.addEventListener('click',()=>{closeWelcome();showRoute('camin
 $('welcomeCloseX')?.addEventListener('click',()=>closeWelcome());
 welcomeDialog?.addEventListener('cancel',event=>{event.preventDefault();closeWelcome()});
 function maybeWelcome(){if(!welcomeDialog)return;if(localStorage.getItem(WELCOME_KEY)==='1')return;if(location.hash&&location.hash!=='#camino')return;setTimeout(()=>{try{welcomeDialog.showModal()}catch(e){}},450)};
-document.querySelectorAll('[data-apartado]').forEach(b=>b.addEventListener('click',()=>openApartado(b.dataset.apartado)));
-$('apartadoBack')?.addEventListener('click',()=>showRoute(APARTADO_ORIGIN));
 document.querySelectorAll('[data-action="placeholder"]').forEach(b=>b.addEventListener('click',()=>{$('placeholderTitle').textContent=b.dataset.title||'Módulo';$('placeholderDialog').showModal()}));
 $('fontBtn').addEventListener('click',()=>{const vals=[1,1.12,1.25],current=Number(localStorage.getItem('derej:master:font')||1),i=vals.indexOf(current),next=vals[(i+1)%vals.length];localStorage.setItem('derej:master:font',String(next));applyFont(next)});
 $('clearLocalMemory').addEventListener('click',()=>{const keys=[];for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);if((k?.startsWith('derej:content:')&&k.endsWith(':actions'))||k?.startsWith('derej:community:private:'))keys.push(k)}keys.forEach(k=>localStorage.removeItem(k));localStorage.removeItem('derej:camino:done');renderLocalMemory();caminoRenderHome?.()});
