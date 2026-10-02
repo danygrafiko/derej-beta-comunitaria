@@ -5,7 +5,7 @@
   "description": "Una experiencia comunitaria de estudio, reflexión, práctica y memoria.",
   "lang": "es",
   "dir": "ltr",
-  "start_url": "./#camino",
+  "start_url": "./#inicio",
   "scope": "./",
   "display": "standalone",
   "display_override": [
@@ -15,7 +15,7 @@
   ],
   "orientation": "portrait-primary",
   "background_color": "#efe7d7",
-  "theme_color": "#657253",
+  "theme_color": "#3f5141",
   "categories": [
     "education",
     "lifestyle"
@@ -36,7 +36,12 @@
   ],
   "shortcuts": [
     {
-      "name": "Camino",
+      "name": "Inicio Dérej",
+      "short_name": "Inicio",
+      "url": "./#inicio"
+    },
+    {
+      "name": "Camino · Parashá",
       "short_name": "Camino",
       "url": "./#camino"
     },
@@ -44,6 +49,11 @@
       "name": "Shabat",
       "short_name": "Shabat",
       "url": "./#shabat"
+    },
+    {
+      "name": "Moed",
+      "short_name": "Moed",
+      "url": "./#moed"
     },
     {
       "name": "Radio Dérej",
@@ -54,11 +64,6 @@
       "name": "Mi Camino",
       "short_name": "Mi Camino",
       "url": "./#camino-personal"
-    },
-    {
-      "name": "Cómo usar Dérej",
-      "short_name": "Guía",
-      "url": "./#guia"
     }
   ]
 }

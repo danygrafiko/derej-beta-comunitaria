@@ -1,5 +1,5 @@
 const CACHE_PREFIX = 'derej-master-';
-const CACHE = 'derej-master-v2.0-rc1-20261002-01';
+const CACHE = 'derej-master-v2.0-rc2-20261002-02';
 const SHELL = [
   './',
   './index.html',
@@ -18,10 +18,10 @@ const SHELL = [
   './content/sukkot-beit-midrash.json',
   './content/adam-adama.json',
   './content/adam-adama-practicas-b1.json',
-  './biblioteca-camino-parasha.html',
-  './biblioteca-shabat.html',
-  './biblioteca-moed.html',
-  './biblioteca-adam-adama.html',
+  './artefacto-camino-parasha.html',
+  './artefacto-shabat.html',
+  './artefacto-moed.html',
+  './artefacto-adam-adama.html',
 ];
 
 self.addEventListener('install', event => {
@@ -60,7 +60,7 @@ self.addEventListener('fetch', event => {
     const isAppShell = url.pathname === scopePath || url.pathname === `${scopePath}index.html`;
 
     if (!isAppShell) {
-      const isStudyModule = /\/biblioteca-(camino-parasha|shabat|moed|adam-adama)\.html$/.test(url.pathname);
+      const isStudyModule = /\/artefacto-(camino-parasha|shabat|moed|adam-adama)\.html$/.test(url.pathname);
       // Standalone study modules may fall back to their own cached page; admin pages never fall back to the app shell.
       event.respondWith(fetch(request).catch(() => isStudyModule ? caches.match(request) : Promise.reject(new Error('offline'))));
       return;

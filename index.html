@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#657253">
+  <meta name="theme-color" content="#3f5141">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <title>Dérej · El Camino · v2.0 RC</title>
+  <title>Dérej · El Camino · v2.0 RC2</title>
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="apple-touch-icon" href="icon-180.png">
   <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
@@ -15,13 +15,45 @@
 <body>
   <main class="app">
     <header class="top">
-      <button class="brandButton" data-route="camino" aria-label="Ir a la portada de Dérej">
-        <span class="brand">Dérej · דרך</span><span class="brandSub">El Camino</span><span class="brandDate" id="hebrewDateGlobal">Calendario hebreo · cargando…</span>
+      <button class="brandButton" data-route="inicio" aria-label="Ir al inicio de Dérej">
+        <img class="brandMark" src="icon-192.png" alt="" aria-hidden="true">
+        <span class="brandCopy"><span class="brand">Dérej · דרך</span><span class="brandSub">El Camino</span><span class="brandDate" id="hebrewDateGlobal">Calendario hebreo · cargando…</span></span>
       </button>
-      <div class="topActions"><span class="badge">RC · v2.0</span><button class="iconBtn helpBtn" id="helpBtn" aria-label="Cómo usar Dérej">?</button><button class="iconBtn" id="fontBtn" aria-label="Cambiar tamaño de texto">Aa</button></div>
+      <div class="topActions"><span class="badge">RC2 · v2.0</span><button class="iconBtn helpBtn" id="helpBtn" aria-label="Cómo usar Dérej">?</button><button class="iconBtn" id="fontBtn" aria-label="Cambiar tamaño de texto">Aa</button></div>
     </header>
     <div id="contextBar" class="contextBar"></div>
     <div id="updateBar" class="updateBar" hidden><span>Nueva versión de Dérej disponible.</span><button id="applyUpdate" type="button">Actualizar</button></div>
+
+    <section class="screen homeScreen" data-screen="inicio">
+      <section class="homePortalHero" aria-labelledby="homePortalTitle">
+        <div class="eyebrow homeEyebrow">Dérej · una raíz, cinco puertas</div>
+        <h1 id="homePortalTitle">¿Por dónde quieres entrar hoy?</h1>
+        <p class="lede">Una puerta puede bastar. Entra por lo que hoy resuene contigo y profundiza sólo si tienes tiempo y disposición.</p>
+        <div class="homeDoorSet">
+          <button class="homeDoor homeDoorCamino" data-route="camino" type="button">
+            <span class="homeDoorArch" aria-hidden="true"><i>דרך</i></span>
+            <span class="homeDoorCopy"><small>CAMINO · PARASHÁ</small><b>Encuentro de hoy</b><em id="homeCaminoToday">Cargando encuentro…</em><span class="homeDoorMeta" id="homeCaminoWeek"></span></span>
+          </button>
+          <button class="homeDoor homeDoorShabat" data-route="shabat" type="button">
+            <span class="homeDoorArch" aria-hidden="true"><i>שבת</i></span>
+            <span class="homeDoorCopy"><small>SHABAT</small><b>Detener y escuchar</b><em>Descanso · mesa · transición</em></span>
+          </button>
+          <button class="homeDoor homeDoorMoed" data-route="moed" type="button">
+            <span class="homeDoorArch" aria-hidden="true"><i>מועד</i></span>
+            <span class="homeDoorCopy"><small>MOED</small><b>Habitar el calendario</b><em>Festividades · símbolos · estaciones</em></span>
+          </button>
+          <button class="homeDoor homeDoorRadio" data-route="radio" type="button">
+            <span class="homeDoorArch" aria-hidden="true"><i>♫</i></span>
+            <span class="homeDoorCopy"><small>RADIO</small><b>Bajar el ruido</b><em>Meditación · Parashá · Hitbodedut</em></span>
+          </button>
+          <button class="homeDoor homeDoorPersonal" data-route="camino-personal" type="button">
+            <span class="homeDoorArch" aria-hidden="true"><i>👣</i></span>
+            <span class="homeDoorCopy"><small>MI CAMINO</small><b>Recordar y continuar</b><em>Huellas · Frutos · Comunidad</em></span>
+          </button>
+        </div>
+      </section>
+      <div class="homeHint"><button class="textLinkBtn" data-route="guia" type="button">? Primera vez: ver cómo se recorre Dérej</button><p>La pantalla abre una puerta. El camino continúa fuera de ella.</p></div>
+    </section>
 
     <section class="screen" data-screen="camino">
       <div class="eyebrow caminoAxis">Camino · Parashá semanal</div>
@@ -45,23 +77,7 @@
         <div class="caminoProgress"><span id="caminoProgressText">Memoria local</span><div class="miniProgress"><i id="caminoProgressBar"></i></div></div>
       </section>
 
-      <section class="secondaryDoors" aria-labelledby="secondaryDoorsTitle">
-        <div class="eyebrow">Otras puertas · cuando las necesites</div>
-        <h2 id="secondaryDoorsTitle">No tienes que recorrerlo todo.</h2>
-        <p class="small">Camino es el eje semanal. Shabat, Moed y Radio acompañan sin competir con él.</p>
-        <div class="portalCourtyard portalCompact">
-          <button class="stonePortal" data-route="shabat" type="button"><span class="portalArch" aria-hidden="true"><i>שבת</i></span><span class="portalCopy"><small>SHABAT</small><b>Detener y escuchar</b><em>Tiempo, descanso y transición</em></span></button>
-          <button class="stonePortal" data-route="moed" type="button"><span class="portalArch" aria-hidden="true"><i>מועד</i></span><span class="portalCopy"><small>MOED</small><b>Habitar el calendario</b><em>Fiestas, símbolos y estaciones</em></span></button>
-          <button class="stonePortal" data-route="radio" type="button"><span class="portalArch" aria-hidden="true"><i>♫</i></span><span class="portalCopy"><small>ESCUCHA</small><b>Radio Dérej</b><em>Meditación · nuevas colecciones en preparación</em></span></button>
-        </div>
-      </section>
-
-      <section class="homeUtilities">
-        <button class="secondaryBtn" data-route="biblioteca">📚 Biblioteca · estudios originales</button>
-        <button class="secondaryBtn" data-route="guia">? Cómo recorrer Dérej</button>
-      </section>
-
-      <section class="principleCard"><div class="eyebrow">Principio</div><p class="quote">La pantalla abre una puerta. El camino continúa fuera de ella.</p></section>
+      <section class="contextualDepthLink"><div><div class="eyebrow">Si hoy quieres estudiar más</div><p>El encuentro breve permanece simple. El artefacto original de Camino conserva el recorrido amplio de 28 días.</p></div><a class="secondaryBtn linkBtn" href="artefacto-camino-parasha.html" target="_blank" rel="noopener">Abrir estudio original de Camino ↗</a></section>
     </section>
 
 
@@ -132,7 +148,7 @@
       <div id="experienceStatus" class="pilotbar">Cargando experiencia…</div>
       <article id="experience"></article>
       <section class="depthCard">
-        <div class="depthIcon">📚</div><div><div class="eyebrow">Beit Midrash · opcional</div><h2>La Raíz de Toda Bendición</h2><p>Bereshit → Sod/Zohar → Jasidut → Breslev → Ramjal → Tres Seudot → Avodá.</p><div class="buttonStack"><button class="secondaryBtn" data-route="beit-midrash">Profundizar en Shabat</button><button class="secondaryBtn" data-route="biblioteca">Abrir biblioteca de estudios</button></div></div>
+        <div class="depthIcon">📚</div><div><div class="eyebrow">Beit Midrash · opcional</div><h2>La Raíz de Toda Bendición</h2><p>Bereshit → Sod/Zohar → Jasidut → Breslev → Ramjal → Tres Seudot → Avodá.</p><div class="buttonStack"><button class="secondaryBtn" data-route="beit-midrash">Profundizar en Shabat</button><a class="secondaryBtn linkBtn" href="artefacto-shabat.html" target="_blank" rel="noopener">Abrir artefacto original de Shabat ↗</a></div></div>
       </section>
     </section>
 
@@ -145,14 +161,14 @@
       <div class="eyebrow">Moed · tiempos señalados</div><h1>El calendario también enseña.</h1>
       <p class="lede">Moed reúne experiencias ligadas al calendario. Se destaca cuando corresponde, sin desplazar la Parashá como eje común.</p>
       <section class="moduleCard activeModule">
-        <div class="moduleIcon">🌿</div><div><div class="eyebrow">Sukot · disponible</div><h2>Sukot</h2><p>La Sombra de la Fe: fragilidad, hospitalidad, alegría y memoria de que la seguridad absoluta no está en los muros.</p><div class="buttonStack"><button class="primaryBtn" data-route="sukkot">Entrar a Sukot</button><button class="secondaryBtn" data-route="sukkot-study">Abrir Beit Midrash de Sukot</button><button class="secondaryBtn" data-route="biblioteca">Abrir biblioteca de estudios</button></div><div class="statusPill live">EDICIÓN DÉREJ</div></div>
+        <div class="moduleIcon">🌿</div><div><div class="eyebrow">Sukot · disponible</div><h2>Sukot</h2><p>La Sombra de la Fe: fragilidad, hospitalidad, alegría y memoria de que la seguridad absoluta no está en los muros.</p><div class="buttonStack"><button class="primaryBtn" data-route="sukkot">Entrar a Sukot</button><button class="secondaryBtn" data-route="sukkot-study">Abrir Beit Midrash de Sukot</button><a class="secondaryBtn linkBtn" href="artefacto-moed.html" target="_blank" rel="noopener">Abrir artefacto original de Moed ↗</a></div><div class="statusPill live">EDICIÓN DÉREJ</div></div>
       </section>
     </section>
 
     <section class="screen" data-screen="sukkot" hidden>
       <button class="backBtn" data-route="moed">← Volver a Moed</button>
       <div id="sukkotStatus" class="pilotbar">Cargando Sukot…</div><article id="sukkotExperience"></article>
-      <section class="depthCard"><div class="depthIcon">🌌</div><div><div class="eyebrow">Beit Midrash · opcional</div><h2>El Secreto de la Sombra de Emuná</h2><p>Introducción → Sod → Jasidut → R. Najmán → Ramjal → Avodá → Arizal → Shoevá → 70 Parim → Carta/Meditación → Mapa de Tishrei.</p><div class="buttonStack"><button class="secondaryBtn" data-route="sukkot-study">Profundizar en Sukot</button><button class="secondaryBtn" data-route="biblioteca">Abrir biblioteca de estudios</button></div></div></section>
+      <section class="depthCard"><div class="depthIcon">🌌</div><div><div class="eyebrow">Beit Midrash · opcional</div><h2>El Secreto de la Sombra de Emuná</h2><p>Introducción → Sod → Jasidut → R. Najmán → Ramjal → Avodá → Arizal → Shoevá → 70 Parim → Carta/Meditación → Mapa de Tishrei.</p><div class="buttonStack"><button class="secondaryBtn" data-route="sukkot-study">Profundizar en Sukot</button><a class="secondaryBtn linkBtn" href="artefacto-moed.html" target="_blank" rel="noopener">Abrir artefacto original de Moed ↗</a></div></div></section>
     </section>
 
     <section class="screen" data-screen="sukkot-study" hidden>
@@ -163,7 +179,7 @@
     <section class="screen" data-screen="adam-adama" hidden>
       <button class="backBtn" data-route="camino">← Volver a Camino</button>
       <div id="adamStatus" class="pilotbar">Cargando ADAM–ADAMÁ…</div><article id="adamExperience"></article>
-      <section class="depthCard"><div class="depthIcon">🌱</div><div><div class="eyebrow">Colección Ramak</div><h2>Fundamentos y práctica regenerativa</h2><p>La colección conserva una práctica piloto nativa y remite al estudio original cuando quieras entrar más hondo.</p><div class="buttonStack"><button class="secondaryBtn" data-route="adam-adama-b1">Abrir práctica piloto</button><button class="secondaryBtn" data-route="biblioteca">Abrir ADAM–ADAMÁ original en Biblioteca</button></div></div></section>
+      <section class="depthCard"><div class="depthIcon">🌱</div><div><div class="eyebrow">Colección Ramak</div><h2>Fundamentos y práctica regenerativa</h2><p>La colección conserva una práctica piloto nativa y remite al estudio original cuando quieras entrar más hondo.</p><div class="buttonStack"><button class="secondaryBtn" data-route="adam-adama-b1">Abrir práctica piloto</button><a class="secondaryBtn linkBtn" href="artefacto-adam-adama.html" target="_blank" rel="noopener">Abrir artefacto original ADAM–ADAMÁ ↗</a></div></div></section>
     </section>
 
     <section class="screen" data-screen="adam-adama-b1" hidden>
@@ -175,6 +191,7 @@
       <div class="eyebrow">Radio Dérej · reproductor propio</div>
       <h1>♫ Meditación</h1>
       <p class="lede">Un espacio sonoro para bajar el ruido, respirar y volver al centro. El audio se reproduce directamente dentro de Dérej.</p>
+      <div class="radioCollections" aria-label="Colecciones de Radio Dérej"><span class="on">Meditación · disponible</span><span>Parashá · en preparación</span><span>Hitbodedut · en preparación</span></div>
 
       <section class="radioNative">
         <img class="radioNativeCover" id="radioNativeCover" src="https://raw.githubusercontent.com/danygrafiko/derej-beta-comunitaria/aeb90db649997d28fc966ea8891f24e035a61f3b/radio-meditacion.png" alt="Radio Dérej · Meditación">
@@ -282,37 +299,18 @@
     </section>
 
     <section class="screen guideScreen" data-screen="guia" hidden>
-      <button class="backBtn" data-route="camino">← Volver a Camino</button>
-      <div class="eyebrow">Recorrido Dérej · guía breve</div>
-      <h1>La pantalla abre una puerta.</h1>
-      <p class="lede">Dérej acompaña un movimiento sencillo: <b>leer → escuchar → practicar → volver a la vida</b>. No necesitas completar todo ni seguir un orden perfecto.</p>
-      <section class="guideFlow" aria-label="Flujo de Dérej">
-        <span>Fuente</span><i>→</i><span>Pregunta</span><i>→</i><span>Práctica</span><i>→</i><span>Fruto</span><i>→</i><span>Memoria</span>
-      </section>
-      <div class="guideSteps">
-        <article class="guideStep" data-guide-tone="camino"><div class="guideNum">1</div><div><div class="eyebrow">Camino</div><h2>Empieza por el encuentro de hoy</h2><p>Una pregunta breve abre la semana. Elige una respuesta sin tener que justificarla: la elección sólo acompaña el encuentro.</p><button class="secondaryBtn" data-route="camino">Ir al encuentro de hoy</button></div></article>
-        <article class="guideStep" data-guide-tone="raiz"><div class="guideNum">2</div><div><div class="eyebrow">Raíz</div><h2>Descubre de dónde viene</h2><p>Hebreo, transliteración, significado en español y contexto aparecen antes de la lectura editorial Dérej. Las voces no se mezclan.</p><button class="secondaryBtn" data-route="camino-week">Explorar las semanas</button></div></article>
-        <article class="guideStep" data-guide-tone="fuente"><div class="guideNum">3</div><div><div class="eyebrow">Lectura</div><h2>La fuente permanece dentro de Dérej</h2><p>Cuando abras un pasaje, la lectura bíblica, su contexto y la reflexión se mantienen en una sola experiencia para no perder el foco.</p></div></article>
-        <article class="guideStep" data-guide-tone="practica"><div class="guideNum">4</div><div><div class="eyebrow">Práctica</div><h2>Elige algo pequeño para llevar contigo</h2><p>La meta no es acumular tareas. Elige una práctica concreta que pueda sobrevivir cuando cierres la pantalla. Si la guardas, queda sólo en este dispositivo.</p><button class="secondaryBtn" data-route="camino-personal">Ver Mi Camino</button></div></article>
-        <article class="guideStep" data-guide-tone="puertas"><div class="guideNum">5</div><div><div class="eyebrow">Puertas</div><h2>Profundiza cuando lo necesites</h2><p>Shabat, Moed y Radio acompañan el recorrido. Los estudios originales quedan en Biblioteca para cuando tengas más tiempo y disposición.</p><div class="guideMiniActions"><button data-route="shabat">Shabat</button><button data-route="moed">Moed</button><button data-route="radio">Radio</button><button data-route="biblioteca">Biblioteca</button></div></div></article>
-        <article class="guideStep" data-guide-tone="fruto"><div class="guideNum">6</div><div><div class="eyebrow">Fruto · opcional</div><h2>Cuando algo llega a la vida, puede quedar memoria</h2><p>Si un estudio produjo una acción, una conversación, un cambio o una comprensión, puedes compartirlo anónimamente. Un editor lo revisa antes de que aparezca en la bitácora.</p><button class="secondaryBtn" data-route="frutos">Abrir Frutos</button></div></article>
-        <article class="guideStep" data-guide-tone="comunidad"><div class="guideNum">7</div><div><div class="eyebrow">Comunidad · opcional</div><h2>Compartir nunca es requisito</h2><p>Leer no requiere cuenta. Las reflexiones privadas permanecen en tu dispositivo. Sólo si decides registrar una misión, enviar un testimonio o compartir un fruto se crea una identidad técnica anónima; todo aporte público pasa por revisión humana.</p><button class="secondaryBtn" data-route="community">Conocer la experiencia comunitaria</button></div></article>
+      <button class="backBtn" data-route="inicio">← Volver al inicio</button>
+      <div class="eyebrow">Cómo recorrer Dérej</div>
+      <h1>Una puerta. Un camino. La profundidad cuando quieras.</h1>
+      <p class="lede">No tienes que completar la aplicación. Empieza por una puerta y deja que el recorrido te lleve sólo hasta donde hoy tenga sentido.</p>
+      <div class="guideSteps compactGuide">
+        <article class="guideStep" data-guide-tone="puertas"><div class="guideNum">1</div><div><div class="eyebrow">Entrar</div><h2>Elige una puerta</h2><p>Camino, Shabat, Moed, Radio o Mi Camino. Cada puerta cumple una función distinta; ninguna exige recorrer las demás.</p><button class="secondaryBtn" data-route="inicio">Ver las cinco puertas</button></div></article>
+        <article class="guideStep" data-guide-tone="camino"><div class="guideNum">2</div><div><div class="eyebrow">Camino</div><h2>Una pregunta y una sola elección</h2><p>La Parashá semanal abre un encuentro breve. Lee el contexto, elige una sola opción y recién después aparece una pregunta más profunda.</p><button class="secondaryBtn" data-route="camino">Entrar a Camino</button></div></article>
+        <article class="guideStep" data-guide-tone="raiz"><div class="guideNum">3</div><div><div class="eyebrow">Profundizar</div><h2>Descubre la raíz cuando quieras</h2><p>Hebreo, significado en español, fuente y contexto aparecen antes de la lectura editorial. Profundizar es una invitación, no un requisito.</p></div></article>
+        <article class="guideStep" data-guide-tone="practica"><div class="guideNum">4</div><div><div class="eyebrow">Llevar</div><h2>Sal con algo pequeño</h2><p>Una frase, una práctica o una pregunta pueden acompañarte fuera de la pantalla. Si quieres conservarla, Mi Camino guarda memoria local.</p><button class="secondaryBtn" data-route="camino-personal">Abrir Mi Camino</button></div></article>
+        <article class="guideStep" data-guide-tone="fruto"><div class="guideNum">5</div><div><div class="eyebrow">Compartir · opcional</div><h2>Un fruto sólo aparece si algo ocurrió en la vida</h2><p>Frutos y Comunidad viven dentro de Mi Camino. Compartir nunca es requisito y todo aporte público pasa por revisión humana.</p></div></article>
       </div>
-      <section class="guideClosing"><div class="eyebrow">Una regla sencilla</div><p class="quote">Si Dérej te ayuda a mirar mejor la vida fuera de la pantalla, está cumpliendo su propósito.</p><button class="primaryBtn" data-route="camino">Comenzar mi recorrido</button></section>
-    </section>
-
-    <section class="screen libraryScreen" data-screen="biblioteca" hidden>
-      <button class="backBtn" data-route="camino">← Volver a Camino</button>
-      <div class="eyebrow">Biblioteca Dérej · estudios originales</div>
-      <h1>Entrar más hondo, sin alterar el original.</h1>
-      <p class="lede">Estos estudios se conservan en su forma original. No reemplazan el encuentro breve de Camino: son puertas de profundidad para abrir cuando tengas tiempo y disposición.</p>
-      <div class="libraryGrid">
-        <a class="libraryCard" href="biblioteca-camino-parasha.html" target="_blank" rel="noopener"><span class="libraryGlyph">📖</span><div><small>CAMINO</small><b>Parashá · 28 días</b><em>Recorrido original de lectura, preguntas y práctica.</em></div></a>
-        <a class="libraryCard" href="biblioteca-shabat.html" target="_blank" rel="noopener"><span class="libraryGlyph">🕯️</span><div><small>SHABAT</small><b>Detener y escuchar</b><em>Portal original de cese, mesa, escucha y transición.</em></div></a>
-        <a class="libraryCard" href="biblioteca-moed.html" target="_blank" rel="noopener"><span class="libraryGlyph">🌿</span><div><small>MOED</small><b>Habitar el calendario</b><em>Portal original de tiempos, símbolos y estaciones.</em></div></a>
-        <a class="libraryCard" href="biblioteca-adam-adama.html" target="_blank" rel="noopener"><span class="libraryGlyph">🌱</span><div><small>ADAM–ADAMÁ</small><b>32 caminos</b><em>Ocho bloques, lectura abierta/profunda y prácticas.</em></div></a>
-      </div>
-      <section class="principleCard"><div class="eyebrow">Cómo usar Biblioteca</div><p>Los estudios originales se abren aparte para no mezclar sus controles con la navegación principal. Dérej permanece abierto y puedes volver cuando quieras.</p></section>
+      <section class="guideClosing"><div class="eyebrow">Regla sencilla</div><p class="quote">Entra fácil. Profundiza si quieres. Lleva algo a la vida.</p><button class="primaryBtn" data-route="inicio">Volver a las puertas</button></section>
     </section>
 
     <section class="screen" data-screen="camino-personal" hidden>
@@ -323,6 +321,7 @@
       <section class="communityModule moduleCard">
         <div class="moduleIcon">🤝</div><div><div class="eyebrow">Comunidad · opcional</div><h2>Shabat para la Tierra</h2><p>Fuente, reflexión, misión concreta y testimonios moderados. Compartir nunca es requisito.</p><button class="secondaryBtn" data-route="community">Entrar a la conversación</button></div>
       </section>
+      <section class="originalStudyCard"><div class="eyebrow">Estudio temático original</div><h2>ADAM–ADAMÁ · 32 caminos</h2><p>Un artefacto completo de fundamentos y prácticas regenerativas. Se abre aparte para conservar su navegación original.</p><a class="secondaryBtn linkBtn" href="artefacto-adam-adama.html" target="_blank" rel="noopener">Abrir ADAM–ADAMÁ original ↗</a></section>
       <section class="installCard" id="installCard">
         <div><div class="eyebrow">Instalación</div><h2>Dérej en tu pantalla de inicio</h2><p id="installHint" class="small">Disponible cuando tu navegador permita instalar esta PWA.</p></div>
         <button class="secondaryBtn" id="installAppBtn" type="button">Instalar Dérej</button>
@@ -370,17 +369,6 @@
       </div>
       <p id="communityReportStatus" class="small"></p>
     </form>
-  </dialog>
-  <dialog id="welcomeDialog" class="welcomeDialog">
-    <div class="dialogCard welcomeCard">
-      <button id="welcomeCloseX" class="dialogX" type="button" aria-label="Cerrar">×</button>
-      <div class="eyebrow">Bienvenido a Dérej · El Camino</div>
-      <h2>Estudiar, escuchar y llevar algo a la vida.</h2>
-      <p>Dérej no busca que completes una aplicación. Cada encuentro parte de una fuente, abre una pregunta, invita a profundizar y termina con la posibilidad de una práctica pequeña. Si algo de eso llega a la vida, puede convertirse en un fruto.</p>
-      <div class="welcomePillars"><span><b>1</b> Fuente y contexto</span><span><b>2</b> Reflexión y práctica</span><span><b>3</b> Memoria, no puntuación</span></div>
-      <p class="small">Puedes leer sin cuenta. Tu memoria personal queda en este dispositivo salvo que elijas participar voluntariamente en Comunidad.</p>
-      <div class="dialogActions stackedMobile"><button id="welcomeGuide" class="primaryBtn" type="button">Ver recorrido breve</button><button id="welcomeEnter" class="secondaryBtn" type="button">Entrar directamente a Camino</button></div>
-    </div>
   </dialog>
   <dialog id="placeholderDialog"><form method="dialog" class="dialogCard"><div class="eyebrow">Dérej</div><h2 id="placeholderTitle">Módulo</h2><p>Esta puerta está siendo preparada para integrarse a la experiencia sin fragmentar el camino.</p><button class="primaryBtn" value="close">Entendido</button></form></dialog>
   <dialog id="installDialog"><form method="dialog" class="dialogCard"><div class="eyebrow">Instalar Dérej</div><h2>Agregar a tu pantalla de inicio</h2><p id="installDialogText">Si tu navegador no muestra instalación automática, abre el menú de compartir o del navegador y elige “Agregar a pantalla de inicio” o “Instalar app”.</p><button class="primaryBtn" value="close">Entendido</button></form></dialog>
