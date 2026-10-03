@@ -1,6 +1,6 @@
 :root{
   --bg:#efe7d7;--card:#fffaf0;--ink:#2d2922;--mut:#70695e;--line:#d8cbb7;
-  --ol:#657253;--soft:#e8eddc;--gold:#ae8a47;--deep:#282137;--scale:1;--ramak-bina:#1E6A32;--ramak-bina-accent:#F2C94C;--ramak-maljut:#1E2A5A;
+ --ol:#657253;--soft:#e8eddc;--gold:#ae8a47;--deep:#282137;--scale:1;--ramak-bina:#1E6A32;--ramak-bina-accent:#F2C94C;--ramak-maljut:#1E2A5A;
 }
 *{box-sizing:border-box}
 html{font-size:calc(16px * var(--scale));scroll-behavior:smooth}
