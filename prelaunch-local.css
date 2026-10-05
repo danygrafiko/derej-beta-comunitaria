@@ -11,3 +11,44 @@
 .heroEditorial{margin:7px auto 16px!important;color:#ddcfb5!important;font:.82rem/1.35 Georgia,serif}.encounterChooser{margin:14px 12px 4px;padding:19px;border:1px solid #d3c4a9;border-radius:28px;background:#fff7e8;color:#332d25;box-shadow:0 12px 28px rgba(49,38,24,.08);scroll-margin-top:70px}.chooserHead h2{font:2rem/1.05 Georgia,serif;margin:.3em 0}.chooserHead p{color:#6d6253;line-height:1.5;margin:.4rem 0 1rem}.parashaTabs{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}.parashaTab{border:1px solid #ccbda3;border-radius:16px;background:#f4ead8;color:#433a30;padding:9px 6px;display:grid;gap:3px;text-align:center}.parashaTab span{direction:rtl;font:1.05rem Georgia,serif;color:#617056}.parashaTab b{font-size:.7rem}.parashaTab.on{background:#354532;color:#fff;border-color:#354532}.parashaTab.on span{color:#ecd89f}.encounterStrip{display:flex;gap:7px;overflow-x:auto;padding:11px 0 7px;scrollbar-width:none}.encounterStrip::-webkit-scrollbar{display:none}.encounterChip{flex:0 0 68px;border:1px solid #cbbb9f;border-radius:14px;background:#fffaf1;color:#443a31;padding:8px 5px;display:grid;gap:2px;text-align:center}.encounterChip small{font:1rem Georgia,serif;color:#7f6c4b}.encounterChip b{font-size:.58rem;letter-spacing:.05em}.encounterChip.on{background:#786c54;color:#fff;border-color:#786c54}.encounterChip.on small{color:#f1d999}.selectedEncounterBanner{display:flex;gap:10px;align-items:center;justify-content:space-between;margin-top:9px;padding:14px;border-radius:18px;background:#e7eadb;border:1px solid #bdc6ac}.selectedEncounterBanner div{display:grid;gap:5px;min-width:0}.selectedEncounterBanner small{font-size:.54rem;letter-spacing:.11em;color:#6a7556;font-weight:900}.selectedEncounterBanner b{font:1rem/1.3 Georgia,serif}.compactEnter{flex:0 0 auto;border:1px solid #43523f;border-radius:999px;background:#43523f;color:white;padding:10px 12px;font-size:.7rem;font-weight:850}.textualToggle{width:100%;display:flex;justify-content:space-between;gap:10px;border:0;border-top:1px solid #dbcbb0;background:transparent;color:#655a49;padding:14px 3px 4px;margin-top:12px;text-align:left;font-size:.7rem;font-weight:850}.roadmapGrid{display:grid;grid-template-columns:1fr;gap:7px;margin-top:10px}.roadmapCard{display:grid;gap:3px;padding:12px;border:1px solid #dacbb2;border-radius:15px;background:#f6eddd}.roadmapCard small{font-size:.52rem;letter-spacing:.12em;color:#8a7758}.roadmapCard b{font:1.05rem Georgia,serif}.roadmapCard em{font-size:.65rem;font-style:normal;font-weight:850;color:#68745a}.roadmapCard p{margin:2px 0 0!important;font-size:.72rem!important;line-height:1.4!important}.shoreshLine{direction:rtl;text-align:left;font:1rem/1.3 Georgia,serif;color:#65745b;margin:9px 0}.mirrorIntro{font-size:.8rem!important;color:#776d60!important}.finalChoices .choice{display:flex;align-items:flex-start;gap:10px;padding:12px}.choiceLetter{flex:0 0 28px;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:#eee2cf;color:#655841;font-weight:900;font-size:.72rem}.choiceCopy{display:grid;gap:6px;min-width:0}.choiceCopy>b{font:.9rem/1.35 Georgia,serif}.choiceCopy>small{display:flex;align-items:center;gap:7px;font-size:.62rem;color:#7b7062}.midah{font-style:normal;border-radius:999px;padding:3px 6px;font-size:.52rem;letter-spacing:.08em;text-transform:uppercase;font-weight:900}.midahShomer{background:#e9ddca;color:#6e5e48}.midahBore{background:#dfe7d5;color:#40533d}.choice.on .choiceLetter{background:#52634a;color:#fff}.choice.on{background:#edf0e2}.sourceQuote{font:1rem/1.5 Georgia,serif!important;color:#4f483e!important}.adamConnection p{font:1.02rem/1.55 Georgia,serif}.practiceDuration{display:inline-block;border:1px solid #a9b296;background:#e3e8d7;color:#53604b;border-radius:999px;padding:5px 9px;font-size:.62rem;font-weight:900;letter-spacing:.08em}.finalPractice p{margin:0!important;font:.98rem/1.55 Georgia,serif;color:#4d453b!important}.practicePrinciple{font-size:.75rem!important;color:#786f63!important}.kavanaCard{margin:16px 0;padding:19px;border-left:4px solid #a98a50;border-radius:0 18px 18px 0;background:#302d27;color:#f3e4c7;font:italic 1.2rem/1.5 Georgia,serif}.studyGlyph{font-size:1.55rem}
 @media(min-width:700px){.encounterChooser{margin:20px 18px;padding:26px}.roadmapGrid{grid-template-columns:1fr 1fr}.parashaTabs{max-width:540px}.encounterStrip{padding-right:10px}}
 @media(max-width:390px){.encounterChooser{margin:10px 8px;padding:14px;border-radius:22px}.chooserHead h2{font-size:1.65rem}.parashaTab{padding:8px 3px}.parashaTab span{font-size:.9rem}.parashaTab b{font-size:.61rem}.selectedEncounterBanner{align-items:flex-start}.compactEnter{padding:9px}.choiceCopy>b{font-size:.84rem}}
+
+/* HOME · alineación móvil v2.1 · 2026-10-05 */
+@media(max-width:699px){
+  .homeIntro{top:2.2%;left:6.5%;right:6.5%}
+  .homeIntro .eyebrow{font-size:.59rem;letter-spacing:.23em}
+  .homeIntro h1{font-size:clamp(2.05rem,9vw,2.72rem);line-height:.94;margin:.24em 0 .22em}
+  .homeIntro p{max-width:21rem;margin:0 auto;font-size:.86rem;line-height:1.38}
+
+  .portalShabat{left:3%;top:21%;width:30%;height:28%}
+  .portalMoed{right:3%;top:21%;width:30%;height:28%}
+  .portalCamino{left:32%;top:34.5%;width:36%;height:40%}
+  .portalRadio{left:3%;top:50%;width:30%;height:27%}
+  .portalPersonal{right:3%;top:50%;width:30%;height:27%}
+
+  .portalSigil{margin-bottom:6px}
+  .portalLabel{
+    min-width:108px;
+    padding:5px 7px 6px;
+    gap:2px;
+    background:linear-gradient(180deg,rgba(7,10,8,.03),rgba(5,8,6,.72));
+  }
+  .portalLabel small{font-size:.45rem;letter-spacing:.15em;line-height:1.25}
+  .portalLabel b{font-size:1.04rem;line-height:1.05}
+  .portalCamino .portalLabel{min-width:126px}
+  .portalCamino .portalLabel b{font-size:1.38rem}
+  .portalCamino .portalLabel em{font-size:.52rem;letter-spacing:.18em}
+
+  .homeFooter{left:7%;right:7%;bottom:max(16px,env(safe-area-inset-bottom));font-size:.72rem}
+}
+
+@media(max-width:390px){
+  .homeIntro{top:2%}
+  .homeIntro h1{font-size:1.98rem}
+  .homeIntro p{font-size:.82rem}
+  .portalLabel{min-width:100px}
+  .portalLabel small{font-size:.42rem}
+  .portalLabel b{font-size:.98rem}
+  .portalCamino .portalLabel{min-width:118px}
+  .portalCamino .portalLabel b{font-size:1.3rem}
+  .homeFooter{font-size:.68rem}
+}
