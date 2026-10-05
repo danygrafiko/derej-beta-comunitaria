@@ -231,10 +231,48 @@ renderRoadmap(); renderEncounter(1,false);
     document.head.appendChild(style);
   }
 
+
+
+  if(!document.getElementById('shabatV21Polish')){
+    const style2=document.createElement('style');
+    style2.id='shabatV21Polish';
+    style2.textContent=`
+      .shabatHero{background-position:14% 34%}
+      .shabatHeroShade{background:linear-gradient(180deg,rgba(7,10,8,.16),rgba(8,11,8,.10) 28%,rgba(8,10,7,.34) 62%,rgba(7,9,7,.9) 100%),radial-gradient(circle at 16% 35%,rgba(229,167,73,.28),transparent 34%),radial-gradient(circle at 68% 42%,rgba(255,220,140,.08),transparent 28%)}
+      .shabatDetailScene:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,10,8,.08),rgba(8,10,8,.46) 54%,rgba(8,10,8,.78) 100%)}
+      .shabatDetailScene > *{position:relative;z-index:1}
+      .shabatAction{background:#eef0e6;color:#332d25;border:1px solid #d7dbc8}
+      .shabatKavana{background:#2f2a24;border-left:4px solid #cfa95f;box-shadow:inset 0 0 0 1px rgba(241,220,180,.08)}
+      .shabatKavana small{color:#e4c891;opacity:1}
+      .shabatKavana p{color:#f5e8cf;opacity:1;text-shadow:none}
+      .shabatNav button{background:#fff5e7}
+      @media(max-width:699px){
+        .shabatHero{min-height:64dvh;background-position:15% 34%}
+        .shabatHeroCopy{left:18px;right:18px;bottom:20px}
+        .shabatHero h1{font-size:clamp(2.45rem,12vw,3.9rem);line-height:.9}
+        .shabatHero p{font-size:.95rem;line-height:1.36;margin-bottom:14px;max-width:20rem}
+        .shabatEnter{padding:13px 16px}
+        .shabatJourneyHead h2{text-wrap:balance}
+        .shabatPracticeTitle{display:block}
+        .shabatPracticeTitle b{display:block;margin-bottom:4px}
+        .shabatPracticeTitle span{display:block}
+        .shabatDays{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;overflow:visible;padding:2px 0 10px}
+        .shabatDay{min-width:0;flex:unset;padding:9px 4px;font-size:.7rem}
+        .shabatAction{font-size:1.02rem;line-height:1.58;padding:15px}
+        .shabatKavana p{font-size:1.02rem;line-height:1.48}
+      }
+      @media(max-width:390px){
+        .shabatHero{min-height:61dvh}
+        .shabatDays{grid-template-columns:repeat(3,minmax(0,1fr))}
+      }
+    `;
+    document.head.appendChild(style2);
+  }
+
   let selectedId=1;
   let selectedTab='abierta';
   let selectedDay=0;
-  const positions=['15% 37%','12% 31%','24% 44%','18% 39%','51% 48%','72% 46%'];
+  const positions=['10% 33%','8% 58%','22% 43%','10% 36%','48% 52%','6% 74%'];
 
   function selected(){return SHABAT_DATA.find(x=>x.id===selectedId)||SHABAT_DATA[0];}
 
