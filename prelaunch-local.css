@@ -131,3 +131,85 @@
   .threshold span{font-size:.47rem}
   .hebrewRoot{font-size:1.95rem}
 }
+
+/* CAMINO · cierre visual robusto v2.1 · 2026-10-05 */
+@media(max-width:699px){
+  /* Profundizar: lectura contenida y respiración */
+  .stepStudy h2{
+    font-size:clamp(1.8rem,7.4vw,2.2rem);
+    line-height:1.04;
+    text-wrap:balance;
+  }
+  .adamConnection p{
+    font-size:clamp(.94rem,3.7vw,1.02rem);
+    line-height:1.53;
+  }
+  .studyLink{padding:12px 14px}
+
+  /* Práctica: soporta títulos largos sin romper jerarquía */
+  .stepPractice h2{
+    font-size:clamp(1.72rem,7vw,2.15rem);
+    line-height:1.03;
+    letter-spacing:-.018em;
+    text-wrap:balance;
+    overflow-wrap:break-word;
+    margin-bottom:.32em;
+  }
+  .practiceDuration{margin:2px 0 2px}
+  .finalPractice{
+    padding:15px 15px 16px;
+    margin:14px 0 15px;
+  }
+  .finalPractice p{
+    font-size:clamp(.91rem,3.7vw,.98rem)!important;
+    line-height:1.52!important;
+    overflow-wrap:break-word;
+  }
+  .practicePrinciple{line-height:1.48!important;margin-top:13px}
+  .reflectionLabel{line-height:1.4}
+
+  /* Llevar: cierre contemplativo, no pantalla de gestión */
+  .stepCarry h2{
+    font-size:clamp(1.9rem,7.8vw,2.35rem);
+    line-height:1.04;
+    text-wrap:balance;
+  }
+  .kavanaCard{
+    margin:14px 0 15px;
+    padding:17px 17px 18px;
+    font-size:clamp(1.05rem,4.55vw,1.2rem);
+    line-height:1.48;
+  }
+  .carrySummary{padding:15px 16px;margin:14px 0}
+  .carrySummary p{line-height:1.46}
+  .stepCarry .primary{margin-top:8px}
+  .stepCarry .secondary{
+    padding:10px 13px;
+    margin-top:7px;
+    font-size:.84rem;
+    border-radius:14px;
+  }
+
+  /* Encuentros con preguntas / respuestas más largas */
+  .stepEncounter h2{
+    text-wrap:balance;
+    overflow-wrap:break-word;
+  }
+  .choiceCopy>b{
+    overflow-wrap:break-word;
+    hyphens:auto;
+  }
+  .choiceCopy>small{
+    flex-wrap:wrap;
+    line-height:1.25;
+  }
+}
+
+@media(max-width:390px){
+  .stepPractice h2{font-size:1.7rem}
+  .finalPractice{padding:14px}
+  .stepCarry h2{font-size:1.9rem}
+  .kavanaCard{padding:15px;font-size:1.03rem}
+  .stepCarry .secondary{padding:9px 12px;font-size:.8rem}
+}
+
