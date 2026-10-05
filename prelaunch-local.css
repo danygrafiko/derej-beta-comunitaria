@@ -67,3 +67,67 @@
   .portalRadio{left:0;top:47.4%}
   .portalPersonal{right:0;top:47.4%}
 }
+
+/* CAMINO · pulido móvil v2.1 · 2026-10-05 */
+@media(max-width:699px){
+  .chooserHead h2{
+    font-size:clamp(1.72rem,7.5vw,2.05rem);
+    line-height:1.02;
+    letter-spacing:-.02em;
+    text-wrap:balance;
+  }
+
+  .parashaTabs{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .parashaTab b{white-space:nowrap}
+
+  .encounterStrip{
+    scroll-snap-type:x mandatory;
+    overscroll-behavior-inline:contain;
+    -webkit-overflow-scrolling:touch;
+    padding-right:30px;
+  }
+  .encounterChip{
+    flex:0 0 66px;
+    scroll-snap-align:start;
+  }
+
+  .thresholdRail{
+    display:grid;
+    grid-template-columns:repeat(5,minmax(0,1fr));
+    gap:5px;
+    overflow:visible;
+    padding:9px 8px;
+  }
+  .threshold{
+    min-width:0;
+    width:100%;
+    padding:8px 5px;
+    border-radius:16px;
+    overflow:hidden;
+  }
+  .threshold span{font-size:.5rem}
+  .threshold b{
+    font-size:.63rem;
+    line-height:1.08;
+    letter-spacing:-.01em;
+    white-space:normal;
+  }
+
+  .stageBody{padding:18px 17px 20px}
+  .hebrewRoot{
+    font-size:clamp(1.95rem,8.6vw,2.25rem);
+    line-height:1.18;
+    margin:13px 0 15px;
+  }
+  .sourceStone{gap:10px;padding:13px}
+  .sourceStone>span{flex-basis:46px;width:46px;height:46px}
+}
+
+@media(max-width:390px){
+  .chooserHead h2{font-size:1.72rem}
+  .thresholdRail{gap:4px;padding-left:6px;padding-right:6px}
+  .threshold{padding:7px 3px;border-radius:15px}
+  .threshold b{font-size:.58rem}
+  .threshold span{font-size:.47rem}
+  .hebrewRoot{font-size:1.95rem}
+}
