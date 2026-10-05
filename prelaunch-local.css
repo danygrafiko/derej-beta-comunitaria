@@ -213,3 +213,36 @@
   .stepCarry .secondary{padding:9px 12px;font-size:.8rem}
 }
 
+/* CAMINO · cierre Home + Camino · hero + safe area · 2026-10-05 */
+@media(max-width:699px){
+  .caminoScreen{
+    padding-bottom:calc(44px + env(safe-area-inset-bottom));
+  }
+  .caminoPortalHero{
+    min-height:68dvh;
+  }
+  .heroCopy{
+    bottom:18px;
+  }
+  .heroEnter{
+    padding:13px 18px;
+  }
+  .encounterChooser{
+    scroll-margin-top:calc(64px + env(safe-area-inset-top));
+  }
+  .stepPanels{
+    padding-bottom:calc(16px + env(safe-area-inset-bottom));
+  }
+  .logicLine{
+    margin-bottom:calc(8px + env(safe-area-inset-bottom));
+  }
+}
+
+@media(max-width:390px){
+  .caminoPortalHero{
+    min-height:65dvh;
+  }
+  .heroCopy{
+    bottom:16px;
+  }
+}
