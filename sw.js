@@ -1,94 +1,22 @@
-const CACHE_PREFIX = 'derej-master-';
-const CACHE = 'derej-master-v2.0-rc2-20261002-02';
-const SHELL = [
-  './',
-  './index.html',
-  './styles.css',
-  './app.js',
-  './config.js',
-  './manifest.webmanifest',
-  './radio.json',
-  './icon-180.png',
-  './icon-192.png',
-  './icon-512.png',
-  './content/camino-weeks.json',
-  './content/shabbat.json',
-  './content/shabbat-raiz-bendicion.json',
-  './content/sukkot.json',
-  './content/sukkot-beit-midrash.json',
-  './content/adam-adama.json',
-  './content/adam-adama-practicas-b1.json',
-  './artefacto-camino-parasha.html',
-  './artefacto-shabat.html',
-  './artefacto-moed.html',
-  './artefacto-adam-adama.html',
-];
-
-self.addEventListener('install', event => {
-  event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(SHELL)));
+const CACHE='derej-public-rc2-shabbat-v06-escuchar-20261004';
+const SHELL=['./','./index.html','./config.js','./radio.json','./manifest.webmanifest','./icon-180.png','./icon-192.png','./icon-512.png','./assets/radio-meditacion.png'];
+self.addEventListener('install',e=>{
+  e.waitUntil(caches.open(CACHE).then(c=>c.addAll(SHELL)).catch(()=>{}));
+  self.skipWaiting();
 });
-
-self.addEventListener('activate', event => {
-  event.waitUntil(
-    caches.keys().then(keys => Promise.all(
-      keys
-        .filter(key => key.startsWith(CACHE_PREFIX) && key !== CACHE)
-        .map(key => caches.delete(key))
-    ))
-  );
+self.addEventListener('activate',e=>{
+  e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))));
   self.clients.claim();
 });
-
-self.addEventListener('message', event => {
-  if (event.data?.type === 'SKIP_WAITING') self.skipWaiting();
-});
-
-self.addEventListener('fetch', event => {
-  const request = event.request;
-  if (request.method !== 'GET') return;
-
-  const url = new URL(request.url);
-
-  // Audio/streaming and range requests stay under native browser/network control.
-  if (request.headers.has('range') || /\.(mp3|m4a|wav|ogg)$/i.test(url.pathname)) return;
-
-  // Never intercept Supabase, Drive, external readers, fonts, etc.
-  if (url.origin !== self.location.origin) return;
-
-  if (request.mode === 'navigate') {
-    const scopePath = new URL(self.registration.scope).pathname;
-    const isAppShell = url.pathname === scopePath || url.pathname === `${scopePath}index.html`;
-
-    if (!isAppShell) {
-      const isStudyModule = /\/artefacto-(camino-parasha|shabat|moed|adam-adama)\.html$/.test(url.pathname);
-      // Standalone study modules may fall back to their own cached page; admin pages never fall back to the app shell.
-      event.respondWith(fetch(request).catch(() => isStudyModule ? caches.match(request) : Promise.reject(new Error('offline'))));
-      return;
-    }
-
-    event.respondWith(
-      fetch(request)
-        .then(response => {
-          if (response.ok) {
-            const copy = response.clone();
-            caches.open(CACHE).then(cache => cache.put('./index.html', copy)).catch(() => {});
-          }
-          return response;
-        })
-        .catch(() => caches.match('./index.html'))
-    );
-    return;
-  }
-
-  event.respondWith(
-    fetch(request)
-      .then(response => {
-        if (response.ok) {
-          const copy = response.clone();
-          caches.open(CACHE).then(cache => cache.put(request, copy)).catch(() => {});
-        }
-        return response;
-      })
-      .catch(() => caches.match(request))
+self.addEventListener('fetch',e=>{
+  if(e.request.method!=='GET') return;
+  const u=new URL(e.request.url);
+  if(/\.(mp3|m4a|wav|ogg)$/i.test(u.pathname)) return;
+  e.respondWith(
+    fetch(e.request).then(r=>{
+      const cp=r.clone();
+      caches.open(CACHE).then(c=>c.put(e.request,cp)).catch(()=>{});
+      return r;
+    }).catch(()=>caches.match(e.request))
   );
 });
