@@ -148,7 +148,7 @@ renderRoadmap(); renderEncounter(1,false);
     style.id='shabatV21Styles';
     style.textContent=`
       .shabatScreen{background:#efe2ca;color:#312b23;padding-bottom:calc(36px + env(safe-area-inset-bottom))}
-      .shabatHero{position:relative;min-height:70dvh;overflow:hidden;background:url('assets/home-courtyard-v21.webp') 11% 34%/cover no-repeat;border-bottom:1px solid rgba(217,184,111,.25)}
+      .shabatHero{position:relative;min-height:70dvh;overflow:hidden;background:url('assets/shabat-evening-v21.webp') 11% 34%/cover no-repeat;border-bottom:1px solid rgba(217,184,111,.25)}
       .shabatHeroShade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,10,8,.18),rgba(8,11,8,.10) 28%,rgba(8,10,7,.38) 62%,rgba(7,9,7,.92) 100%),radial-gradient(circle at 18% 36%,rgba(222,153,61,.20),transparent 38%)}
       .shabatBack{position:absolute;top:12px;left:12px;z-index:4}
       .shabatHeroCopy{position:absolute;z-index:3;left:20px;right:20px;bottom:24px;color:#fff1d4;text-shadow:0 2px 16px #000}
@@ -177,7 +177,7 @@ renderRoadmap(); renderEncounter(1,false);
       .shabatGate.on{background:#354532;color:#fff;border-color:#354532;box-shadow:0 12px 30px rgba(53,69,50,.18)}
       .shabatGate.on .shabatGateNum,.shabatGate.on .shabatGateHeb,.shabatGate.on small,.shabatGate.on p{color:#f0dfbb}
       .shabatDetail{margin:0 12px 12px;border:1px solid #d1c1a5;border-radius:30px;overflow:hidden;background:#fff7e8;box-shadow:0 16px 38px rgba(61,46,26,.09)}
-      .shabatDetailScene{position:relative;height:220px;background-image:linear-gradient(180deg,rgba(7,10,8,.08),rgba(7,10,8,.76)),url('assets/home-courtyard-v21.webp');background-size:cover;background-position:var(--shabat-pos,18% 40%);color:#fff0d3;padding:16px}
+      .shabatDetailScene{position:relative;height:220px;background-image:linear-gradient(180deg,rgba(7,10,8,.08),rgba(7,10,8,.76)),url('assets/shabat-evening-v21.webp');background-size:cover;background-position:var(--shabat-pos,18% 40%);color:#fff0d3;padding:16px}
       .shabatDetailScene .num{display:grid;place-items:center;width:46px;height:46px;border:1px solid rgba(255,232,190,.7);border-radius:50%;background:rgba(10,14,10,.42);font:1rem Georgia,serif}
       .shabatDetailHeb{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);direction:rtl;font:2.5rem Georgia,serif;color:#f5ddb0;text-shadow:0 2px 14px #000;white-space:nowrap}
       .shabatDetailBody{padding:19px}
@@ -237,7 +237,7 @@ renderRoadmap(); renderEncounter(1,false);
     const style2=document.createElement('style');
     style2.id='shabatV21Polish';
     style2.textContent=`
-      .shabatHero{background-position:14% 34%}
+      .shabatHero{background-position:56% 48%}
       .shabatHeroShade{background:linear-gradient(180deg,rgba(7,10,8,.16),rgba(8,11,8,.10) 28%,rgba(8,10,7,.34) 62%,rgba(7,9,7,.9) 100%),radial-gradient(circle at 16% 35%,rgba(229,167,73,.28),transparent 34%),radial-gradient(circle at 68% 42%,rgba(255,220,140,.08),transparent 28%)}
       .shabatDetailScene:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,10,8,.08),rgba(8,10,8,.46) 54%,rgba(8,10,8,.78) 100%)}
       .shabatDetailScene > *{position:relative;z-index:1}
@@ -247,7 +247,7 @@ renderRoadmap(); renderEncounter(1,false);
       .shabatKavana p{color:#f5e8cf;opacity:1;text-shadow:none}
       .shabatNav button{background:#fff5e7}
       @media(max-width:699px){
-        .shabatHero{min-height:64dvh;background-position:15% 34%}
+        .shabatHero{min-height:64dvh;background-position:58% 50%}
         .shabatHeroCopy{left:18px;right:18px;bottom:20px}
         .shabatHero h1{font-size:clamp(2.45rem,12vw,3.9rem);line-height:.9}
         .shabatHero p{font-size:.95rem;line-height:1.36;margin-bottom:14px;max-width:20rem}
@@ -272,7 +272,7 @@ renderRoadmap(); renderEncounter(1,false);
   let selectedId=1;
   let selectedTab='abierta';
   let selectedDay=0;
-  const positions=['10% 33%','8% 58%','22% 43%','10% 36%','48% 52%','6% 74%'];
+  const positions=['22% 36%','72% 64%','65% 72%','76% 80%','38% 46%','80% 58%'];
 
   function selected(){return SHABAT_DATA.find(x=>x.id===selectedId)||SHABAT_DATA[0];}
 
