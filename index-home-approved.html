@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#182016">
+<title>DÉREJ · El Camino · v2.1 Prelanzamiento</title>
+<link rel="stylesheet" href="prelaunch-local.css">
+</head>
+<body>
+<main class="appShell">
+  <header class="brandBar">
+    <button class="brandButton" data-route="home" aria-label="Ir al patio de entrada">
+      <span class="daletMark" aria-hidden="true"><span>ד</span><i>⌁</i></span>
+      <span class="brandWords"><b>DÉREJ</b><small>EL CAMINO</small></span>
+    </button>
+    <span class="preBadge">PRE · v2.1</span>
+  </header>
+
+  <section class="screen homeScreen active" data-screen="home" aria-labelledby="homeTitle">
+    <div class="courtyard" role="group" aria-label="Cinco puertas de Dérej">
+      <img class="courtyardBg" src="assets/home-courtyard-v21.webp" alt="Patio de piedra con cinco portales, vegetación, luz cálida y un sendero central al amanecer">
+      <div class="courtyardShade" aria-hidden="true"></div>
+      <div class="homeIntro">
+        <div class="eyebrow">DÉREJ · EL CAMINO</div>
+        <h1 id="homeTitle">Cinco puertas.<br>Un mismo Camino.</h1>
+        <p>Entra por lo que hoy resuene contigo.</p>
+      </div>
+
+      <button class="portal portalShabat" data-route="shabat" aria-label="Entrar a Shabat">
+        <span class="portalSigil">שבת</span><span class="portalLabel"><small>LUZ · REFUGIO · MESA</small><b>Shabat</b></span>
+      </button>
+      <button class="portal portalMoed" data-route="moed" aria-label="Entrar a Moed">
+        <span class="portalSigil">מועד</span><span class="portalLabel"><small>TIEMPO · ESTACIONES</small><b>Moed</b></span>
+      </button>
+      <button class="portal portalCamino" data-route="camino" aria-label="Entrar a Camino">
+        <span class="portalSigil">דרך</span><span class="portalLabel"><small>SENDERO · AMANECER</small><b>Camino</b><em>Entrar</em></span>
+      </button>
+      <button class="portal portalRadio" data-route="radio" aria-label="Entrar a Radio">
+        <span class="portalSigil">◔</span><span class="portalLabel"><small>NOCHE · ESCUCHA</small><b>Radio</b></span>
+      </button>
+      <button class="portal portalPersonal" data-route="personal" aria-label="Entrar a Mi Camino">
+        <span class="portalSigil">⌁</span><span class="portalLabel"><small>HUELLAS · BROTES</small><b>Mi Camino</b></span>
+      </button>
+      <div class="homeFooter">La pantalla abre una puerta. El Camino continúa fuera de ella.</div>
+    </div>
+  </section>
+
+  <section class="screen caminoScreen" data-screen="camino" hidden aria-labelledby="caminoTitle">
+    <button class="backBtn" data-route="home">← Volver al patio</button>
+    <section class="caminoPortalHero">
+      <div class="heroScrim"></div>
+      <div class="heroCopy">
+        <span class="eyebrow">CAMINO · ENCUENTRO SEMANAL</span>
+        <span class="heroHebrew">דרך</span>
+        <h1 id="caminoTitle">El sendero comienza con una pregunta.</h1>
+        <p>Fuente, estudio, reflexión y una práctica posible para llevar fuera de la pantalla.</p>
+      </div>
+    </section>
+
+    <nav class="thresholdRail" aria-label="Recorrido de Camino">
+      <button class="threshold on" data-step="encuentro"><span>01</span><b>Encuentro</b></button>
+      <button class="threshold" data-step="raiz"><span>02</span><b>Raíz</b></button>
+      <button class="threshold" data-step="profundizar"><span>03</span><b>Profundizar</b></button>
+      <button class="threshold" data-step="practica"><span>04</span><b>Práctica</b></button>
+      <button class="threshold" data-step="llevar"><span>05</span><b>Llevar</b></button>
+    </nav>
+
+    <div class="stepPanels">
+      <article class="stepPanel on" data-panel="encuentro">
+        <div class="stepEyebrow">ENCUENTRO</div><h2>Una raíz para mirar el día</h2>
+        <p>La experiencia breve conserva el eje actual de Dérej: una fuente, una pregunta clara y una sola elección para comenzar.</p>
+        <div class="questionCard"><small>PREGUNTA DE HOY</small><b>¿Qué merece hoy tu atención antes de seguir caminando?</b></div>
+        <button class="primary nextStep" data-next="raiz">Descubrir la raíz</button>
+      </article>
+      <article class="stepPanel" data-panel="raiz">
+        <div class="stepEyebrow">RAÍZ</div><h2>Antes de interpretar, volver a la fuente.</h2>
+        <p>Hebreo, significado, contexto y procedencia aparecen sin convertir la lectura en una obligación.</p>
+        <div class="sourceStone"><span>מקור</span><div><small>FUENTE Y CONTEXTO</small><b>La raíz sostiene el estudio.</b></div></div>
+        <button class="primary nextStep" data-next="profundizar">Profundizar</button>
+      </article>
+      <article class="stepPanel" data-panel="profundizar">
+        <div class="stepEyebrow">PROFUNDIZAR</div><h2>Estudio cuando quieras entrar más hondo.</h2>
+        <p>Los Estudios originales se conservan completos como profundidad contextual. No constituyen una sexta puerta.</p>
+        <button class="secondary">Abrir Estudio completo ↗</button>
+        <button class="primary nextStep" data-next="practica">Ir a la práctica</button>
+      </article>
+      <article class="stepPanel" data-panel="practica">
+        <div class="stepEyebrow">PRÁCTICA</div><h2>Algo pequeño que pueda llegar a la vida.</h2>
+        <p>No hay puntos, niveles ni rachas. La práctica sólo intenta acompañar una acción concreta.</p>
+        <div class="practiceCard"><small>PRÁCTICA POSIBLE</small><b>Detenerte unos minutos antes de responder automáticamente.</b></div>
+        <button class="primary nextStep" data-next="llevar">Llevar conmigo</button>
+      </article>
+      <article class="stepPanel" data-panel="llevar">
+        <div class="stepEyebrow">LLEVAR</div><h2>Memoria, no puntuación.</h2>
+        <p>Una frase, una pregunta o una acción pueden quedar en Mi Camino. Si algo fructifica, podrá convertirse después en memoria compartida.</p>
+        <button class="primary" data-route="personal">Guardar en Mi Camino</button>
+      </article>
+    </div>
+
+    <section class="logicLine" aria-label="Lógica editorial de Dérej">
+      <span>Fuente</span><i>→</i><span>Estudio</span><i>→</i><span>Reflexión</span><i>→</i><span>Conversación</span><i>→</i><span>Práctica</span><i>→</i><span>Acción</span><i>→</i><span>Fruto</span><i>→</i><span>Memoria</span>
+    </section>
+  </section>
+
+  <section class="screen placeholder" data-screen="shabat" hidden><button class="backBtn" data-route="home">← Volver al patio</button><div><small>SHABAT</small><h1>Luz cálida · refugio · mesa</h1><p>La lógica RC2 se conservará intacta. Esta pantalla se trabajará después de cerrar Home + Camino.</p></div></section>
+  <section class="screen placeholder" data-screen="moed" hidden><button class="backBtn" data-route="home">← Volver al patio</button><div><small>MOED</small><h1>Tiempo · estaciones · memoria</h1><p>La lógica RC2 se conservará intacta. Esta pantalla se trabajará después de cerrar Home + Camino.</p></div></section>
+  <section class="screen placeholder dark" data-screen="radio" hidden><button class="backBtn" data-route="home">← Volver al patio</button><div><small>RADIO</small><h1>Noche · escucha · contemplación</h1><p>Una sola puerta. Futuras colecciones: Meditación · Parashá · Hitbodedut.</p></div></section>
+  <section class="screen placeholder" data-screen="personal" hidden><button class="backBtn" data-route="home">← Volver al patio</button><div><small>MI CAMINO</small><h1>Huellas · brotes · memoria</h1><p>Memoria personal sin puntuación, niveles ni rachas.</p></div></section>
+</main>
+<script src="prelaunch-local.js"></script>
+</body>
+</html>

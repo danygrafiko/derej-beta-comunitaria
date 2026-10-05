@@ -1,0 +1,1299 @@
+{
+  "schema_version": "encuentros-v2.1-final-1.0",
+  "source": "React Artifact 15 · edición final entregada por el usuario",
+  "editorial_title": "90 DÍAS DE LEJEM",
+  "editorial_subtitle": "Alimento diario para el alma",
+  "developed_encounters": 21,
+  "developed_parashot": [
+    "Bereshit",
+    "Noaj",
+    "Lej Lejá"
+  ],
+  "note": "El archivo fuente declara 90 días, pero su bloque de cierre está rotulado días 85–91. Se conserva sin normalizar.",
+  "weeks": [
+    {
+      "id": 1,
+      "nombre": "Bereshit",
+      "heb": "בְּרֵאשִׁית",
+      "fecha": "25 Elul - 2 Tishrei",
+      "tema": "De Tohu a Tikun — traer luz al caos",
+      "pregunta": "¿Qué mundo estás creando con lo que haces hoy?",
+      "status": "Desarrollada",
+      "color": "bg-[#1a1a1a] text-white"
+    },
+    {
+      "id": 2,
+      "nombre": "Noaj",
+      "heb": "נֹחַ",
+      "fecha": "3 - 9 Tishrei",
+      "tema": "Sostener el arca cuando afuera diluvia",
+      "pregunta": "¿Qué preservas cuando todo se derrumba?",
+      "status": "Desarrollada",
+      "color": "bg-[#E8DDD0] text-[#1a1a1a]"
+    },
+    {
+      "id": 3,
+      "nombre": "Lej Lejá",
+      "heb": "לֶךְ-לְךָ",
+      "fecha": "10 - 16 Tishrei",
+      "tema": "Irte para encontrarte",
+      "pregunta": "¿De qué tierra tienes que salir para volver a ti?",
+      "status": "Desarrollada",
+      "color": "bg-[#1a1a1a] text-white"
+    },
+    {
+      "id": 4,
+      "nombre": "Vayerá",
+      "heb": "וַיֵּרָא",
+      "fecha": "17 - 23 Tishrei",
+      "tema": "Abrir la tienda en tiempos cerrados",
+      "pregunta": "¿A quién le abres la puerta cuando es incómodo?",
+      "status": "Estructura lista",
+      "color": "bg-white border border-[#E8DDD0] text-[#1a1a1a]"
+    },
+    {
+      "id": 5,
+      "nombre": "Jayé Sará",
+      "heb": "חַיֵּי שָׂרָה",
+      "fecha": "24 - 30 Tishrei",
+      "tema": "Comprar tierra con futuro",
+      "pregunta": "¿Qué lugar eliges para enterrar tu amor?",
+      "status": "Estructura lista",
+      "color": "bg-white border border-[#E8DDD0] text-[#1a1a1a]"
+    },
+    {
+      "id": 6,
+      "nombre": "Toldot",
+      "heb": "תּוֹלְדֹת",
+      "fecha": "1 - 7 Jeshván",
+      "tema": "¿Qué herencia dejas?",
+      "pregunta": "¿Qué bendición estás peleando que no te corresponde?",
+      "status": "Estructura lista",
+      "color": "bg-white border border-[#E8DDD0] text-[#1a1a1a]"
+    },
+    {
+      "id": 7,
+      "nombre": "Vayetzé",
+      "heb": "וַיֵּצֵא",
+      "fecha": "8 - 14 Jeshván",
+      "tema": "Convertir piedra en altar",
+      "pregunta": "¿Dónde duermes incómodo y despiertas con promesa?",
+      "status": "Estructura lista",
+      "color": "bg-[#E8DDD0] text-[#1a1a1a]"
+    },
+    {
+      "id": 8,
+      "nombre": "Vayishlaj",
+      "heb": "וַיִּשְׁלַח",
+      "fecha": "15 - 21 Jeshván",
+      "tema": "Luchar con el ángel y no soltarte hasta bendecir",
+      "pregunta": "¿Con qué parte de ti tienes que pelear para nombrarte?",
+      "status": "Estructura lista",
+      "color": "bg-white border border-[#E8DDD0] text-[#1a1a1a]"
+    },
+    {
+      "id": 9,
+      "nombre": "Vayéshev",
+      "heb": "וַיֵּשֶׁב",
+      "fecha": "22 - 28 Jeshván",
+      "tema": "Sostener el sueño cuando te venden",
+      "pregunta": "¿Qué sueño tuyo sigue vivo en el pozo?",
+      "status": "Estructura lista",
+      "color": "bg-white border border-[#E8DDD0] text-[#1a1a1a]"
+    },
+    {
+      "id": 10,
+      "nombre": "Miketz",
+      "heb": "מִקֵּץ",
+      "fecha": "29 Jeshván - 5 Kislev",
+      "tema": "Interpretar el hambre ajena",
+      "pregunta": "¿Qué escasez sabes leer en otros?",
+      "status": "Estructura lista",
+      "color": "bg-white border border-[#E8DDD0] text-[#1a1a1a]"
+    },
+    {
+      "id": 11,
+      "nombre": "Vayigash",
+      "heb": "וַיִּגַּשׁ",
+      "fecha": "6 - 12 Kislev",
+      "tema": "Acercarte cuando podrías vengarte",
+      "pregunta": "¿Te acercas o cobras la cuenta?",
+      "status": "Estructura lista",
+      "color": "bg-[#E8DDD0] text-[#1a1a1a]"
+    },
+    {
+      "id": 12,
+      "nombre": "Vayejí",
+      "heb": "וַיְחִי",
+      "fecha": "13 - 19 Kislev",
+      "tema": "Bendecir antes de irte",
+      "pregunta": "¿Cómo te despides dejando vida?",
+      "status": "Estructura lista",
+      "color": "bg-[#1a1a1a] text-white"
+    }
+  ],
+  "encounters": [
+    {
+      "num": 1,
+      "parasha": "Bereshit",
+      "parashaHeb": "בראשית",
+      "aliyah": "Rishon · 1:1-1:5",
+      "shoresh": "תֹהוּ · Tohu vaVohu",
+      "pregunta": "¿Qué haces cuando todo es caos?",
+      "alternativas": [
+        {
+          "id": "A",
+          "texto": "Te paralizas. Esperas que el orden venga de afuera.",
+          "mida": "Shomer",
+          "midahDesc": "Custodia temerosa"
+        },
+        {
+          "id": "B",
+          "texto": "Intentas controlar todo. Pones orden rápido para no sentir.",
+          "mida": "Shomer",
+          "midahDesc": "Custodia ansiosa"
+        },
+        {
+          "id": "C",
+          "texto": "Nombras el caos sin huir. Dices: esto es tohu, y aún así estoy.",
+          "mida": "Bore",
+          "midahDesc": "Crea presencia"
+        },
+        {
+          "id": "D",
+          "texto": "Traes un gesto mínimo de orden que otros puedan continuar.",
+          "mida": "Bore",
+          "midahDesc": "Crea futuro"
+        }
+      ],
+      "raiz": {
+        "pasukHeb": "וְהָאָרֶץ הָיְתָה תֹהוּ וָבֹהוּ וְחֹשֶׁךְ עַל פְּנֵי תְהוֹם",
+        "pasukEsp": "Y la tierra era caos y vacío, y oscuridad sobre la faz del abismo (Bereshit 1:2)",
+        "fuente": "Rashi",
+        "cita": "Tohu es asombro, estupor. Bohu es vacío que contiene. No es nada: es un algo aún sin forma."
+      },
+      "adamAdama": {
+        "titulo": "ADAM-ADAMÁ #1",
+        "ficha": "Cuando tu casa está en tohu (platos, mensajes sin responder, mente), no empieces por el todo. Elige 1 metro cuadrado de adamá — tu mesa, tu cama — y hazlo habitable. El mundo no se creó de golpe, sino por separación."
+      },
+      "practica": {
+        "titulo": "Práctica 7 minutos: Geulat 1m²",
+        "duracion": "7 min",
+        "accion": "Elige el rincón más caótico que ves ahora. Pon timer 7 min. No ordenes todo: solo separa (or / joshej): lo que va, lo que se queda, lo que necesita otro lugar. Deja una vela, una planta o una nota: \"aquí ya hay luz\". Foto antes/después para ti."
+      },
+      "kavana": "Hoy no corrijo el mundo. Separo luz de oscuridad en un punto."
+    },
+    {
+      "num": 2,
+      "parasha": "Bereshit",
+      "parashaHeb": "בראשית",
+      "aliyah": "Sheni · 1:6-1:8",
+      "shoresh": "אוֹר · Yehi Or",
+      "pregunta": "¿Dónde eliges traer luz hoy?",
+      "alternativas": [
+        {
+          "id": "A",
+          "texto": "Esperas a sentirte iluminado para actuar.",
+          "mida": "Shomer",
+          "midahDesc": "Pasividad luminosa"
+        },
+        {
+          "id": "B",
+          "texto": "Iluminas donde ya hay luz, donde es fácil que te aplaudan.",
+          "mida": "Shomer",
+          "midahDesc": "Luz de vitrina"
+        },
+        {
+          "id": "C",
+          "texto": "Nombras una oscuridad concreta en tu entorno y llevas ahí una palabra.",
+          "mida": "Bore",
+          "midahDesc": "Luz que nombra"
+        },
+        {
+          "id": "D",
+          "texto": "Eres luz sin decir que eres luz: haces visible algo invisible de otro.",
+          "mida": "Bore",
+          "midahDesc": "Luz que revela"
+        }
+      ],
+      "raiz": {
+        "pasukHeb": "וַיֹּאמֶר אֱלֹהִים יְהִי אוֹר וַיְהִי אוֹר",
+        "pasukEsp": "Y dijo Dios: Sea luz, y fue luz (1:3)",
+        "fuente": "Seforno",
+        "cita": "No creó la luz como objeto. La hizo posible. Yehi es permitir que sea."
+      },
+      "adamAdama": {
+        "titulo": "ADAM-ADAMÁ #2",
+        "ficha": "La luz primera no era solar. Era conciencia. Pregunta hoy: ¿qué en tu adamá (tu cuerpo-tierra) necesita ser visto? No iluminar afuera, sino adentro: tu cansancio, tu enojo no dicho."
+      },
+      "practica": {
+        "titulo": "Práctica: Mensaje de Or",
+        "duracion": "7 min",
+        "accion": "Elige a alguien que esté en oscuridad (no crisis grande, algo cotidiano). Escríbele un mensaje de 3 líneas que nombre una luz real que viste en él esta semana. Sin consejo. Solo: \"Vi esto en ti\". Envíalo."
+      },
+      "kavana": "Sea luz significa: dejo que haya luz."
+    },
+    {
+      "num": 3,
+      "parasha": "Bereshit",
+      "parashaHeb": "בראשית",
+      "aliyah": "Shlishi · 1:9-1:13",
+      "shoresh": "פְּרִי · Etz Pri",
+      "pregunta": "¿Das fruto o solo sombra?",
+      "alternativas": [
+        {
+          "id": "A",
+          "texto": "Das sombra: estás, pero nadie puede comer de ti.",
+          "mida": "Shomer",
+          "midahDesc": "Presencia estéril"
+        },
+        {
+          "id": "B",
+          "texto": "Das fruto pero amargo: ayudas con culpa, con cuenta.",
+          "mida": "Shomer",
+          "midahDesc": "Fruto con espina"
+        },
+        {
+          "id": "C",
+          "texto": "Das fruto que contiene semilla: lo que das puede reproducirse sin ti.",
+          "mida": "Bore",
+          "midahDesc": "Fruto generativo"
+        },
+        {
+          "id": "D",
+          "texto": "Eres árbol frutal, no solo fruto: sostienes proceso.",
+          "mida": "Bore",
+          "midahDesc": "Fruto enraizado"
+        }
+      ],
+      "raiz": {
+        "pasukHeb": "עֵץ פְּרִי עֹשֶׂה פְּרִי לְמִינוֹ",
+        "pasukEsp": "Árbol frutal que hace fruto según su especie (1:11)",
+        "fuente": "Ramban",
+        "cita": "El Midrash dice: al principio, el sabor del árbol debía ser como el sabor del fruto. Nosotros separamos ser y hacer."
+      },
+      "adamAdama": {
+        "titulo": "ADAM-ADAMÁ #3",
+        "ficha": "Adamá da fruto si es cuidada, no explotada. ¿Qué relación tuya hoy solo da sombra? ¿Qué proyecto da fruto que otros pueden comer mañana? La pregunta de Tikun no es cuánto produces, sino qué puede vivir de ti."
+      },
+      "practica": {
+        "titulo": "Práctica: Fruto compartible",
+        "duracion": "7 min",
+        "accion": "Toma algo que sabes hacer bien y que hoy solo haces para ti (una receta, un template, una explicación). Documentalo en 5 pasos simples en una nota de voz o texto y compártelo a 1 persona que lo necesite. Que lleve semilla."
+      },
+      "kavana": "Hoy no quiero ser impresionante, quiero ser comestible."
+    },
+    {
+      "num": 4,
+      "parasha": "Bereshit",
+      "parashaHeb": "בראשית",
+      "aliyah": "Revií · 1:14-1:19",
+      "shoresh": "מוֹעֵד · Meorot",
+      "pregunta": "¿Qué tiempo gobierna tu tiempo?",
+      "alternativas": [
+        {
+          "id": "A",
+          "texto": "El tiempo del reloj externo: corres atrás de urgencias.",
+          "mida": "Shomer",
+          "midahDesc": "Tiempo esclavo"
+        },
+        {
+          "id": "B",
+          "texto": "El tiempo infinito: todo es \"algún día\", nada aterriza.",
+          "mida": "Shomer",
+          "midahDesc": "Tiempo etéreo"
+        },
+        {
+          "id": "C",
+          "texto": "El tiempo de moed: marcas hitos, fiestas, cierres que te ordenan.",
+          "mida": "Bore",
+          "midahDesc": "Tiempo sagrado"
+        },
+        {
+          "id": "D",
+          "texto": "El tiempo que gobiernas tú: decides qué no entra en tu calendario.",
+          "mida": "Bore",
+          "midahDesc": "Tiempo soberano"
+        }
+      ],
+      "raiz": {
+        "pasukHeb": "וְהָיוּ לְאֹתֹת וּלְמוֹעֲדִים וּלְיָמִים וְשָׁנִים",
+        "pasukEsp": "Y sean para señales, para tiempos señalados, días y años (1:14)",
+        "fuente": "Sfat Emet",
+        "cita": "Moed es encuentro. El tiempo no es para medir, es para encontrarse."
+      },
+      "adamAdama": {
+        "titulo": "ADAM-ADAMÁ #4",
+        "ficha": "La luna se renueva, el sol constancia. Tu adamá necesita ambos: rutina que sostiene y renovación que sorprende. ¿Dónde tu vida es solo sol (rutina quemante) o solo luna (cambiante sin raíz)?"
+      },
+      "practica": {
+        "titulo": "Práctica: Moed de 7 minutos",
+        "duracion": "7 min",
+        "accion": "Abre tu calendario. Bloquea mañana un moed de 7 min sin propósito productivo: mirar el cielo, pan con aceite, caminar sin podcast. Ponle nombre. Trátalo como cita inamovible. Es tu meor, tu luminaria."
+      },
+      "kavana": "No administro tiempo, santifico encuentros."
+    },
+    {
+      "num": 5,
+      "parasha": "Bereshit",
+      "parashaHeb": "בראשית",
+      "aliyah": "Jamishi · 1:20-1:23",
+      "shoresh": "נֶפֶשׁ חַיָּה · Nefesh Jaya",
+      "pregunta": "¿Cómo cuidas la vida que no habla?",
+      "alternativas": [
+        {
+          "id": "A",
+          "texto": "Ni la ves. La vida no humana es fondo, no figura.",
+          "mida": "Shomer",
+          "midahDesc": "Ceguera"
+        },
+        {
+          "id": "B",
+          "texto": "La usas. Te sirve mientras sea útil.",
+          "mida": "Shomer",
+          "midahDesc": "Utilitarismo"
+        },
+        {
+          "id": "C",
+          "texto": "La reconoces como nefesh: alma viviente, no recurso.",
+          "mida": "Bore",
+          "midahDesc": "Reconocimiento"
+        },
+        {
+          "id": "D",
+          "texto": "Te haces responsable de una vida concreta que depende de ti hoy.",
+          "mida": "Bore",
+          "midahDesc": "Ahrayut"
+        }
+      ],
+      "raiz": {
+        "pasukHeb": "יִשְׁרְצוּ הַמַּיִם שֶׁרֶץ נֶפֶשׁ חַיָּה",
+        "pasukEsp": "Que pululen las aguas con seres de alma viviente (1:20)",
+        "fuente": "Rambam, Moreh 3:13",
+        "cita": "La Torá llama nefesh jayá incluso a lo que no habla. Para enseñarte que la vida no se mide por voz."
+      },
+      "adamAdama": {
+        "titulo": "ADAM-ADAMÁ #5",
+        "ficha": "Tikun Olam empieza donde no hay like. Animales, plantas, agua. Si no puedes cuidar lo que no te aplaude, no podrás cuidar lo humano cuando no te conviene."
+      },
+      "practica": {
+        "titulo": "Práctica: Cuidado sin testigo",
+        "duracion": "7 min",
+        "accion": "Hoy: alimenta, riega, limpia algo vivo no humano sin contarlo. Cambia agua de flores, deja agua a pájaros, saca a pasear lento oliendo. Hazlo sin foto. Sin relato. Solo cuida."
+      },
+      "kavana": "Hay nefesh donde yo creía que había cosa."
+    },
+    {
+      "num": 6,
+      "parasha": "Bereshit",
+      "parashaHeb": "בראשית",
+      "aliyah": "Shishi · 1:24-2:3",
+      "shoresh": "נַעֲשֶׂה · Naasé Adam",
+      "pregunta": "¿Con quién co-creas?",
+      "alternativas": [
+        {
+          "id": "A",
+          "texto": "Crees solo. Dios en plural te da miedo.",
+          "mida": "Shomer",
+          "midahDesc": "Soledad creadora"
+        },
+        {
+          "id": "B",
+          "texto": "Co-creas solo con quien piensa como tú.",
+          "mida": "Shomer",
+          "midahDesc": "Tribu cerrada"
+        },
+        {
+          "id": "C",
+          "texto": "Invitas a otros a decir \"hagamos\" aunque sea incómodo.",
+          "mida": "Bore",
+          "midahDesc": "Plural sagrado"
+        },
+        {
+          "id": "D",
+          "texto": "Co-creas con tu adamá, con tu cuerpo: no solo ideas.",
+          "mida": "Bore",
+          "midahDesc": "Creación encarnada"
+        }
+      ],
+      "raiz": {
+        "pasukHeb": "נַעֲשֶׂה אָדָם בְּצַלְמֵנוּ כִּדְמוּתֵנוּ",
+        "pasukEsp": "Hagamos al humano a nuestra imagen (1:26)",
+        "fuente": "Midrash Rabá 8:3",
+        "cita": "¿Con quién consultó? Con las obras de cielo y tierra, con su propio corazón. Para enseñar que el grande pide consejo al pequeño."
+      },
+      "adamAdama": {
+        "titulo": "ADAM-ADAMÁ #6",
+        "ficha": "Naasé es plural. Adam es de adamá. No puedes hacer Adam sin adamá, sin otro. Tikun Olam nunca es solo tuyo. Si tu proyecto no tiene naasé, es torre, no mundo."
+      },
+      "practica": {
+        "titulo": "Práctica: Naasé de 7 min",
+        "duracion": "7 min",
+        "accion": "Identifica una tarea que hoy harías solo. Invita a alguien a hacerla contigo 7 minutos. No para delegar, para co-crear. Cocinar, ordenar, escribir un mail. Di explícito: \"¿Hacemos?\"."
+      },
+      "kavana": "Hoy no hago solo. Hacemos."
+    },
+    {
+      "num": 7,
+      "parasha": "Bereshit",
+      "parashaHeb": "בראשית",
+      "aliyah": "Shevií · 2:4-4:26",
+      "shoresh": "שַׁבָּת · Vayejal",
+      "pregunta": "¿Sabes detenerte para que el mundo respire?",
+      "alternativas": [
+        {
+          "id": "A",
+          "texto": "Descansas cuando te caes. El cuerpo te para.",
+          "mida": "Shomer",
+          "midahDesc": "Shabat forzado"
+        },
+        {
+          "id": "B",
+          "texto": "Paras el hacer pero no la mente. Estás en pausa ansiosa.",
+          "mida": "Shomer",
+          "midahDesc": "Pausa sin presencia"
+        },
+        {
+          "id": "C",
+          "texto": "Detienes tu obra para verla. Te preguntas si es buena.",
+          "mida": "Bore",
+          "midahDesc": "Contemplación"
+        },
+        {
+          "id": "D",
+          "texto": "Dejas que otros y la tierra existan sin tu intervención.",
+          "mida": "Bore",
+          "midahDesc": "Shabat del mundo"
+        }
+      ],
+      "raiz": {
+        "pasukHeb": "וַיְכַל אֱלֹהִים בַּיּוֹם הַשְּׁבִיעִי מְלַאכְתּוֹ",
+        "pasukEsp": "Y culminó Dios en el día séptimo Su obra (2:2)",
+        "fuente": "Rashi: ¿Qué faltaba? Menuhá.",
+        "cita": "¿Qué faltaba al mundo? Descanso. Vino Shabat, vino menujá, y la obra estuvo completa."
+      },
+      "adamAdama": {
+        "titulo": "ADAM-ADAMÁ #7 · Shabat Bereshit",
+        "ficha": "Shabat no es premio por trabajar. Es parte de la creación. Sin Shabat, el mundo es proyecto infinito. Con Shabat, es hogar. Adamá también necesita shemitá: no todo es extraer."
+      },
+      "practica": {
+        "titulo": "Práctica: 7 min de Vayejal",
+        "duracion": "7 min + Shabat",
+        "accion": "Hoy, 7 min antes de Shabat (o antes de dormir si no guardas Shabat): apaga pantallas, enciende una vela real. No hagas nada útil. Mira una cosa que hiciste esta semana y di: \"Rai-ti ki tov\". Vi que es bueno. Sin mejorar."
+      },
+      "kavana": "No termino porque acabé. Termino porque elijo que sea suficiente."
+    },
+    {
+      "num": 8,
+      "parasha": "Noaj",
+      "parashaHeb": "נח",
+      "aliyah": "Rishon · 6:9-6:22",
+      "shoresh": "צַדִּיק · Ish Tzadik",
+      "pregunta": "¿Qué es ser justo cuando todos se desvían?",
+      "alternativas": [
+        {
+          "id": "A",
+          "texto": "Justo para ti: te comparas con peores para sentirte bien.",
+          "mida": "Shomer",
+          "midahDesc": "Tzidkut comparativa"
+        },
+        {
+          "id": "B",
+          "texto": "Justo solo en privado, en público te adaptas.",
+          "mida": "Shomer",
+          "midahDesc": "Tzidkut dividida"
+        },
+        {
+          "id": "C",
+          "texto": "Justo con coherencia, aunque no sea perfecto, en tus generaciones.",
+          "mida": "Bore",
+          "midahDesc": "Tzadik bedorotav"
+        },
+        {
+          "id": "D",
+          "texto": "Justo que camina con Dios, no solo que cumple normas.",
+          "mida": "Bore",
+          "midahDesc": "Et haElohim hithalej"
+        }
+      ],
+      "raiz": {
+        "pasukHeb": "נֹחַ אִישׁ צַדִּיק תָּמִים הָיָה בְּדֹרֹתָיו",
+        "pasukEsp": "Noaj era hombre justo, íntegro en sus generaciones (6:9)",
+        "fuente": "Rashi y Ramban discuten",
+        "cita": "Algunos lo alaban: si en su generación mala era tzadik, cuánto más en otra. Otros lo critican: solo comparado a su generación. ¿Qué tipo de justo quieres ser?"
+      },
+      "adamAdama": {
+        "titulo": "ADAM-ADAMÁ #8",
+        "ficha": "En un mundo que se corrompe (jamás), ser tzadik no es ser puro, es no corromper tu parte. Adamá también se corrompe cuando todos extraen sin devolver. Ser justo es devolver."
+      },
+      "practica": {
+        "titulo": "Práctica: Un acto justo incómodo",
+        "duracion": "7 min",
+        "accion": "Hoy haz un acto de justicia que no te conviene pero que sabes correcto: devolver algo, decir verdad incómoda con amor, pagar lo justo aunque puedas pagar menos. 7 min para hacerlo, sin discurso."
+      },
+      "kavana": "Justo no es quien no se equivoca, sino quien no se corrompe."
+    },
+    {
+      "num": 9,
+      "parasha": "Noaj",
+      "parashaHeb": "נח",
+      "aliyah": "Sheni · 7:1-7:16",
+      "shoresh": "תֵּבָה · Bo el Teivá",
+      "pregunta": "¿Cuál es tu arca hoy?",
+      "alternativas": [
+        {
+          "id": "A",
+          "texto": "No tienes arca. Te mojas con todos y llamas a eso empatía.",
+          "mida": "Shomer",
+          "midahDesc": "Sin límite"
+        },
+        {
+          "id": "B",
+          "texto": "Tu arca es bunker: nadie entra, solo tú sobrevives.",
+          "mida": "Shomer",
+          "midahDesc": "Arca ego"
+        },
+        {
+          "id": "C",
+          "texto": "Tu arca tiene puertas y ventanas, entra vida diversa.",
+          "mida": "Bore",
+          "midahDesc": "Arca abierta"
+        },
+        {
+          "id": "D",
+          "texto": "Tu arca navega: no es esconderte, es preservar para volver a salir.",
+          "mida": "Bore",
+          "midahDesc": "Arca misión"
+        }
+      ],
+      "raiz": {
+        "pasukHeb": "בֹּא אֶל הַתֵּבָה אַתָּה וְכָל בֵּיתֶךָ",
+        "pasukEsp": "Entra al arca, tú y toda tu casa (7:1)",
+        "fuente": "Baal Shem Tov sobre Teivá",
+        "cita": "Teivá es también palabra. Cuando el mundo diluvia, entra en la palabra, en la plegaria, y rescata chispas."
+      },
+      "adamAdama": {
+        "titulo": "ADAM-ADAMÁ #9",
+        "ficha": "Tu casa puede ser teivá: lugar que sostiene cuando afuera diluvia. ¿Qué necesitas para que tu casa sea arca? Luz (tzohar), pisos (orden), ventana para respirar. No es aislarte, es sostener vida."
+      },
+      "practica": {
+        "titulo": "Práctica: Hacer Teivá en casa",
+        "duracion": "7 min",
+        "accion": "Elige un espacio de tu casa. 7 min para convertirlo en teivá: quita pantallas, pon agua, pan, una manta, una luz cálida. Invita a alguien de tu casa (pareja, hijo, tú mismo) a estar ahí 7 min sin resolver el diluvio afuera. Solo estar a salvo juntos."
+      },
+      "kavana": "Hoy construyo arca, no muro."
+    },
+    {
+      "num": 10,
+      "parasha": "Noaj",
+      "parashaHeb": "נח",
+      "aliyah": "Shlishi · 7:17-8:14",
+      "shoresh": "יוֹנָה · Vayishlaj et haYoná",
+      "pregunta": "¿Cómo sabes cuándo soltar?",
+      "alternativas": [
+        {
+          "id": "A",
+          "texto": "No sueltas nunca. Controlas por si acaso.",
+          "mida": "Shomer",
+          "midahDesc": "Aferramiento"
+        },
+        {
+          "id": "B",
+          "texto": "Sueltas todo rápido para no sentir espera.",
+          "mida": "Shomer",
+          "midahDesc": "Soltar evasivo"
+        },
+        {
+          "id": "C",
+          "texto": "Soltas con señal: mandas paloma, esperas rama de olivo.",
+          "mida": "Bore",
+          "midahDesc": "Soltar con escucha"
+        },
+        {
+          "id": "D",
+          "texto": "Soltas y aprendes del regreso: si vuelve, aún no es tiempo.",
+          "mida": "Bore",
+          "midahDesc": "Soltar que enseña"
+        }
+      ],
+      "raiz": {
+        "pasukHeb": "וַיְשַׁלַּח אֶת הַיּוֹנָה",
+        "pasukEsp": "Y envió a la paloma (8:8)",
+        "fuente": "Midrash",
+        "cita": "La paloma no encontró descanso. Enseñó que aún no era tiempo de salir. A veces soltar es la forma de saber."
+      },
+      "adamAdama": {
+        "titulo": "ADAM-ADAMÁ #10",
+        "ficha": "Noaj no abrió la puerta por ansiedad. Envió señales. Tu adamá también necesita señales: ¿ya está seca la tierra? ¿Ya se puede pisar? No todo brote es tiempo de cosecha."
+      },
+      "practica": {
+        "titulo": "Práctica: Paloma de 7 min",
+        "duracion": "7 min",
+        "accion": "Piensa en algo que estás sosteniendo (un proyecto, un enojo, un control). Escribe en papelito, ponlo en una ventana o mándalo como mensaje a alguien de confianza diciendo: \"Estoy soltando esto por hoy, ¿cómo lo ves?\". Escucha si vuelve o trae olivo."
+      },
+      "kavana": "Soltar no es abandonar, es preguntar si ya es tiempo."
+    },
+    {
+      "num": 11,
+      "parasha": "Noaj",
+      "parashaHeb": "נח",
+      "aliyah": "Revií · 8:15-9:7",
+      "shoresh": "קֶשֶׁת · Brit Keshet",
+      "pregunta": "¿Qué pacto renuevas después del diluvio?",
+      "alternativas": [
+        {
+          "id": "A",
+          "texto": "Haces como si nada pasó. Sigues igual.",
+          "mida": "Shomer",
+          "midahDesc": "Negación"
+        },
+        {
+          "id": "B",
+          "texto": "Prometes que nunca más te va a doler, te endureces.",
+          "mida": "Shomer",
+          "midahDesc": "Pacto de piedra"
+        },
+        {
+          "id": "C",
+          "texto": "Haces pacto de no destruir, aunque puedas.",
+          "mida": "Bore",
+          "midahDesc": "Pacto de arco"
+        },
+        {
+          "id": "D",
+          "texto": "Pones señal en el cielo: que todos recuerden tu pacto.",
+          "mida": "Bore",
+          "midahDesc": "Pacto visible"
+        }
+      ],
+      "raiz": {
+        "pasukHeb": "אֶת קַשְׁתִּי נָתַתִּי בֶּעָנָן",
+        "pasukEsp": "Mi arco he puesto en la nube (9:13)",
+        "fuente": "Ramban",
+        "cita": "El arco es arma invertida: apunta al cielo, no a la tierra. Dios cuelga su arma para decir: no dispararé más."
+      },
+      "adamAdama": {
+        "titulo": "ADAM-ADAMÁ #11",
+        "ficha": "Después de cada diluvio personal (ruptura, pérdida, pandemia interna), necesitamos brit. No promesa romántica, sino señal: ¿qué no volverás a hacer aunque puedas? Eso es keshet."
+      },
+      "practica": {
+        "titulo": "Práctica: Keshet en tu nube",
+        "duracion": "7 min",
+        "accion": "Elige un pacto post-diluvio. Ej: no volver a gritar para tener razón, no volver a trabajar sin comer. Escríbelo y ponlo donde lo veas (fondo de pantalla, espejo). Dile a alguien: \"Este es mi keshet\". Hazlo visible."
+      },
+      "kavana": "Hoy cuelgo mi arma. Elijo no destruir."
+    },
+    {
+      "num": 12,
+      "parasha": "Noaj",
+      "parashaHeb": "נח",
+      "aliyah": "Jamishi · 9:8-10:32",
+      "shoresh": "כֶּרֶם · Vayajel Noaj Ish HaAdamá",
+      "pregunta": "¿Qué plantas después de sobrevivir?",
+      "alternativas": [
+        {
+          "id": "A",
+          "texto": "Nada. Te quedas en sobreviviente eterno.",
+          "mida": "Shomer",
+          "midahDesc": "Trauma"
+        },
+        {
+          "id": "B",
+          "texto": "Plantas viña para emborracharte y olvidar.",
+          "mida": "Shomer",
+          "midahDesc": "Escape"
+        },
+        {
+          "id": "C",
+          "texto": "Plantas viña para alegrar, pero aprendes límite.",
+          "mida": "Bore",
+          "midahDesc": "Alegría con conciencia"
+        },
+        {
+          "id": "D",
+          "texto": "Vuelves a ser Ish HaAdamá: hombre de la tierra, no solo del arca.",
+          "mida": "Bore",
+          "midahDesc": "Retorno a la tierra"
+        }
+      ],
+      "raiz": {
+        "pasukHeb": "וַיָּחֶל נֹחַ אִישׁ הָאֲדָמָה וַיִּטַּע כָּרֶם",
+        "pasukEsp": "Y comenzó Noaj, hombre de la tierra, y plantó una viña (9:20)",
+        "fuente": "Midrash Rabá",
+        "cita": "Dejó de ser Ish Tzadik y pasó a ser Ish HaAdamá. Volvió a la tierra. El riesgo de volver a plantar después de ver morir todo."
+      },
+      "adamAdama": {
+        "titulo": "ADAM-ADAMÁ #12",
+        "ficha": "Sobrevivir no es vivir. Noaj tuvo que volver a tocar tierra. ¿Qué vas a plantar tú ahora que lo peor pasó? No para olvidar el diluvio, sino para decir: la tierra sigue dando."
+      },
+      "practica": {
+        "titulo": "Práctica: Plantar real",
+        "duracion": "7 min",
+        "accion": "Planta algo literal hoy: semilla, esqueje, hierba en maceta. O simbólico: empieza algo que da alegría (lista de música, pan). Hazlo con manos en tierra, no solo en cabeza. Riega."
+      },
+      "kavana": "Después del diluvio, vuelvo a plantar."
+    },
+    {
+      "num": 13,
+      "parasha": "Noaj",
+      "parashaHeb": "נח",
+      "aliyah": "Shishi · 11:1-11:32",
+      "shoresh": "מִגְדָּל · Dor HaFlagá",
+      "pregunta": "¿Construyes torre o ciudad?",
+      "alternativas": [
+        {
+          "id": "A",
+          "texto": "Torre: quieres llegar al cielo para no depender.",
+          "mida": "Shomer",
+          "midahDesc": "Torre de control"
+        },
+        {
+          "id": "B",
+          "texto": "Torre con tu nombre: que sepan que tú la hiciste.",
+          "mida": "Shomer",
+          "midahDesc": "Torre de ego"
+        },
+        {
+          "id": "C",
+          "texto": "Ciudad: lugar para vivir juntos, no monumento.",
+          "mida": "Bore",
+          "midahDesc": "Ir"
+        },
+        {
+          "id": "D",
+          "texto": "Lengua compartida pero no única: celebras Babel como diversidad.",
+          "mida": "Bore",
+          "midahDesc": "Ciudad de lenguas"
+        }
+      ],
+      "raiz": {
+        "pasukHeb": "הָבָה נִבְנֶה לָּנוּ עִיר וּמִגְדָּל וְרֹאשׁוֹ בַשָּׁמַיִם",
+        "pasukEsp": "Vamos, construyamos una ciudad y una torre con su cabeza en el cielo (11:4)",
+        "fuente": "Seforno",
+        "cita": "Querían una sociedad sin Dios, solo técnica. La Torá prefiere ciudad (convivencia) a torre (poder)."
+      },
+      "adamAdama": {
+        "titulo": "ADAM-ADAMÁ #13",
+        "ficha": "Torre es vertical, extractiva, quiere tocar cielo sin raíz. Ciudad es horizontal, relacional, necesita calles, mercados, hospitales. Tikun Olam es ciudad, no torre."
+      },
+      "practica": {
+        "titulo": "Práctica: De torre a ciudad",
+        "duracion": "7 min",
+        "accion": "Detecta hoy una \"torre\" tuya: un proyecto donde quieres brillar solo. Conviértelo en ciudad: invita a 2 personas a sumar, aunque baje tu brillo. Pregunta: ¿cómo hacemos esto más habitable para todos?"
+      },
+      "kavana": "Hoy no construyo para que me vean alto, sino para que podamos vivir juntos."
+    },
+    {
+      "num": 14,
+      "parasha": "Noaj",
+      "parashaHeb": "נח",
+      "aliyah": "Shevií · Shabat",
+      "shoresh": "מְנוּחָה · Shabat Noaj",
+      "pregunta": "¿Qué arca dejas abierta en Shabat?",
+      "alternativas": [
+        {
+          "id": "A",
+          "texto": "Cierras todo. Shabat como bunker.",
+          "mida": "Shomer",
+          "midahDesc": "Cierre"
+        },
+        {
+          "id": "B",
+          "texto": "Abres todo y te diluyes.",
+          "mida": "Shomer",
+          "midahDesc": "Sin borde"
+        },
+        {
+          "id": "C",
+          "texto": "Dejas una ventana abierta: entra luz, no tormenta.",
+          "mida": "Bore",
+          "midahDesc": "Ventana de teivá"
+        },
+        {
+          "id": "D",
+          "texto": "Descansas de salvar al mundo y dejas que el mundo te sostenga.",
+          "mida": "Bore",
+          "midahDesc": "Menuhá"
+        }
+      ],
+      "raiz": {
+        "pasukHeb": "וַיָּנַח בַּשְּׁבִיעִי",
+        "pasukEsp": "Y descansó en el séptimo (Bereshit 2:2) — leído en Noaj como respiro post-diluvio",
+        "fuente": "Mei HaShiloaj",
+        "cita": "Noaj es menujá. Después de tanto sostener, necesitas que te sostengan."
+      },
+      "adamAdama": {
+        "titulo": "ADAM-ADAMÁ #14 · Shabat",
+        "ficha": "Shabat Noaj es descanso de quien sostuvo el mundo. No hagas balance de lo que salvaste. Deja que la tierra se seque sola."
+      },
+      "practica": {
+        "titulo": "Práctica: Shabat de Noaj",
+        "duracion": "7 min + día",
+        "accion": "Hoy no rescates a nadie. Si alguien te cuenta su diluvio, escucha sin ofrecer arca. Di: \"Estoy aquí, no te voy a arreglar\". Eso también es teivá."
+      },
+      "kavana": "Hoy no soy Noaj. Hoy soy tierra que descansa después del agua."
+    },
+    {
+      "num": 15,
+      "parasha": "Lej Lejá",
+      "parashaHeb": "לך לך",
+      "aliyah": "Rishon · 12:1-12:13",
+      "shoresh": "לֶךְ · Lej Lejá",
+      "pregunta": "¿De qué tienes que irte para crecer?",
+      "alternativas": [
+        {
+          "id": "A",
+          "texto": "Te vas físicamente pero llevas todo adentro igual.",
+          "mida": "Shomer",
+          "midahDesc": "Fuga geográfica"
+        },
+        {
+          "id": "B",
+          "texto": "No te vas, aunque sabes que tienes que irte.",
+          "mida": "Shomer",
+          "midahDesc": "Apego"
+        },
+        {
+          "id": "C",
+          "texto": "Te vas de tu tierra, tu lugar, tu casa paterna — capas de identidad.",
+          "mida": "Bore",
+          "midahDesc": "Lej Lejá de verdad"
+        },
+        {
+          "id": "D",
+          "texto": "Te vas hacia ti: lech lejá es ir a ti, no huir de.",
+          "mida": "Bore",
+          "midahDesc": "Retorno"
+        }
+      ],
+      "raiz": {
+        "pasukHeb": "לֶךְ לְךָ מֵאַרְצְךָ וּמִמּוֹלַדְתְּךָ וּמִבֵּית אָבִיךָ",
+        "pasukEsp": "Vete de tu tierra, de tu lugar de nacimiento, de casa de tu padre (12:1)",
+        "fuente": "Rashi / Ramban",
+        "cita": "Lej Lejá: vete para ti, por tu bien, hacia ti. No es castigo, es revelación."
+      },
+      "adamAdama": {
+        "titulo": "ADAM-ADAMÁ #15",
+        "ficha": "Avram tuvo que dejar adamá para encontrar adamá. A veces tu tierra ya no te da. Tikun empieza cuando reconoces: aquí ya no crezco."
+      },
+      "practica": {
+        "titulo": "Práctica: Mapa de Lej Lejá",
+        "duracion": "7 min",
+        "accion": "Dibuja 3 círculos: Artzaj (tierra - trabajo/lugar), Moladteja (narrativas familiares), Beit Avija (creencias heredadas). En cada uno escribe 1 cosa de la que necesitas irte 10% esta semana. No 100%, 10%."
+      },
+      "kavana": "Irme no es abandonar, es hacerme espacio para ser."
+    },
+    {
+      "num": 16,
+      "parasha": "Lej Lejá",
+      "parashaHeb": "לך לך",
+      "aliyah": "Sheni · 12:14-13:4",
+      "shoresh": "בְּרָכָה · VeEseja LeGoy Gadol",
+      "pregunta": "¿Qué bendición traes que aún no das?",
+      "alternativas": [
+        {
+          "id": "A",
+          "texto": "Crees que no tienes bendición. Te achicas.",
+          "mida": "Shomer",
+          "midahDesc": "Brajá escondida"
+        },
+        {
+          "id": "B",
+          "texto": "Bendices solo a los tuyos.",
+          "mida": "Shomer",
+          "midahDesc": "Brajá tribal"
+        },
+        {
+          "id": "C",
+          "texto": "Entiendes que fuiste bendecido para ser bendición.",
+          "mida": "Bore",
+          "midahDesc": "Venivrejú"
+        },
+        {
+          "id": "D",
+          "texto": "Bendices sin saberlo: tu forma de estar bendice.",
+          "mida": "Bore",
+          "midahDesc": "Heyé Brajá"
+        }
+      ],
+      "raiz": {
+        "pasukHeb": "וְאֶעֶשְׂךָ לְגוֹי גָּדוֹל וַאֲבָרֶכְךָ וֶהְיֵה בְּרָכָה",
+        "pasukEsp": "Te haré pueblo grande, te bendeciré y serás bendición (12:2)",
+        "fuente": "Seforno",
+        "cita": "No dice \"te daré bendición\", dice \"sé bendición\". Tu ser es el canal."
+      },
+      "adamAdama": {
+        "titulo": "ADAM-ADAMÁ #16",
+        "ficha": "Adamá bendice cuando es bendecida. ¿Qué en ti ya es brajá y no lo compartes por vergüenza o por \"quién soy yo para\"? Tikun es animarte a ser canal."
+      },
+      "practica": {
+        "titulo": "Práctica: Heyé Brajá",
+        "duracion": "7 min",
+        "accion": "Piensa en 1 talento que escondes. Hoy úsalo para bendecir a alguien concreto fuera de tu círculo cercano: cocina, escucha, explica, reza, organiza. Hazlo sin atribuirte: \"que esto te sirva\"."
+      },
+      "kavana": "No vine a juntar bendiciones, vine a ser bendición."
+    },
+    {
+      "num": 17,
+      "parasha": "Lej Lejá",
+      "parashaHeb": "לך לך",
+      "aliyah": "Shlishi · 13:5-13:18",
+      "shoresh": "רָעָב · VaYehi Raav",
+      "pregunta": "¿Qué haces cuando tu promesa pasa hambre?",
+      "alternativas": [
+        {
+          "id": "A",
+          "texto": "Culpas a la promesa. Dios no cumplió.",
+          "mida": "Shomer",
+          "midahDesc": "Desilusión"
+        },
+        {
+          "id": "B",
+          "texto": "Bajas a Egipto y te olvidas de quién eres para sobrevivir.",
+          "mida": "Shomer",
+          "midahDesc": "Asimilación"
+        },
+        {
+          "id": "C",
+          "texto": "Bajas pero mantienes tu nombre, vuelves enriquecido.",
+          "mida": "Bore",
+          "midahDesc": "Descenso con retorno"
+        },
+        {
+          "id": "D",
+          "texto": "Entiendes que el hambre es parte del camino de la promesa.",
+          "mida": "Bore",
+          "midahDesc": "Raav como maestro"
+        }
+      ],
+      "raiz": {
+        "pasukHeb": "וַיְהִי רָעָב בָּאָרֶץ וַיֵּרֶד אַבְרָם מִצְרַיְמָה",
+        "pasukEsp": "Y hubo hambre en la tierra y descendió Avram a Egipto (12:10)",
+        "fuente": "Ramban",
+        "cita": "El hambre vino para probar si Avram podía sostener promesa sin pan. A veces la tierra prometida tiene hambre primero."
+      },
+      "adamAdama": {
+        "titulo": "ADAM-ADAMÁ #17",
+        "ficha": "Toda tierra prometida tiene un momento de raav. No es señal de que te equivocaste. Es prueba de si puedes sostener visión con estómago vacío."
+      },
+      "practica": {
+        "titulo": "Práctica: Pan en el hambre",
+        "duracion": "7 min",
+        "accion": "Hoy, en lugar de resolver tu hambre existencial, alimenta a otro con hambre real: compra pan a alguien en calle, lleva comida a vecino, comparte tu comida. Haz de tu raav un canal, no un pozo."
+      },
+      "kavana": "Mi promesa también puede tener hambre, y aún así la sostengo."
+    },
+    {
+      "num": 18,
+      "parasha": "Lej Lejá",
+      "parashaHeb": "לך לך",
+      "aliyah": "Revií · 14:1-14:20",
+      "shoresh": "נָשָׂא · Al tira, Avram",
+      "pregunta": "¿A quién levantas la mirada?",
+      "alternativas": [
+        {
+          "id": "A",
+          "texto": "Miras abajo, a lo que perdiste en la pelea con Lot.",
+          "mida": "Shomer",
+          "midahDesc": "Mirada de carencia"
+        },
+        {
+          "id": "B",
+          "texto": "Miras solo tu tienda, tu ombligo.",
+          "mida": "Shomer",
+          "midahDesc": "Mirada corta"
+        },
+        {
+          "id": "C",
+          "texto": "Levantas ojos: norte, sur, este, oeste — todo lo que ves será tuyo si miras amplio.",
+          "mida": "Bore",
+          "midahDesc": "Seet"
+        },
+        {
+          "id": "D",
+          "texto": "Miras al cielo para contar estrellas: aprendes a contar lo incontable.",
+          "mida": "Bore",
+          "midahDesc": "Mirada de promesa"
+        }
+      ],
+      "raiz": {
+        "pasukHeb": "שָׂא נָא עֵינֶיךָ וּרְאֵה",
+        "pasukEsp": "Alza por favor tus ojos y mira (13:14)",
+        "fuente": "Midrash",
+        "cita": "Cuando Lot se fue, Dios le dijo a Avram: ahora que dejaste de mirar lo pequeño (la pelea), puedes mirar lo grande."
+      },
+      "adamAdama": {
+        "titulo": "ADAM-ADAMÁ #18",
+        "ficha": "Adamá se ve chica si miras desde el enojo. Cuando sueltas la pelea, el horizonte se abre. ¿A quién necesitas dejar de mirar para poder ver tierra?"
+      },
+      "practica": {
+        "titulo": "Práctica: Alzar ojos",
+        "duracion": "7 min",
+        "accion": "Sube a un lugar alto (azotea, cerro, 5to piso). 7 min sin celular mirando los 4 puntos cardinales. En cada dirección nombra algo que sí tienes hoy en esa dirección (gente, posibilidad). Baja con lista."
+      },
+      "kavana": "Levanto los ojos del conflicto a la promesa."
+    },
+    {
+      "num": 19,
+      "parasha": "Lej Lejá",
+      "parashaHeb": "לך לך",
+      "aliyah": "Jamishi · 14:21-15:21",
+      "shoresh": "בְּתָרִים · Brit Bein HaBetarim",
+      "pregunta": "¿Qué pacto estás dispuesto a partirte?",
+      "alternativas": [
+        {
+          "id": "A",
+          "texto": "Quieres pacto sin costo, sin partir nada tuyo.",
+          "mida": "Shomer",
+          "midahDesc": "Pacto light"
+        },
+        {
+          "id": "B",
+          "texto": "Partes al otro, no a ti.",
+          "mida": "Shomer",
+          "midahDesc": "Pacto violento"
+        },
+        {
+          "id": "C",
+          "texto": "Te partes tú: tus certezas, en medio, y dejas que Dios pase entre las partes.",
+          "mida": "Bore",
+          "midahDesc": "Brit que duele"
+        },
+        {
+          "id": "D",
+          "texto": "Haces pacto de noche, con miedo, pero con fuego que pasa.",
+          "mida": "Bore",
+          "midahDesc": "Brit de antorcha"
+        }
+      ],
+      "raiz": {
+        "pasukHeb": "וַיְבַתֵּר אֹתָם בַּתָּוֶךְ",
+        "pasukEsp": "Y los partió por la mitad (15:10)",
+        "fuente": "Zohar",
+        "cita": "Para hacer pacto hay que partirse. No hay brit sin betarim. La antorcha pasa donde tú te abriste."
+      },
+      "adamAdama": {
+        "titulo": "ADAM-ADAMÁ #19",
+        "ficha": "Pacto no es contrato. Contrato se firma con mano, pacto se firma con entrañas partidas. ¿Qué en ti estás dispuesto a partir para que pase algo más grande?"
+      },
+      "practica": {
+        "titulo": "Práctica: Partirte 7 min",
+        "duracion": "7 min",
+        "accion": "Escribe una creencia que te parte al medio (ej: \"si pongo límite, no me querrán\"). Pártela en dos columnas: qué te protege y qué te impide. En medio, escribe: \"Que pase el fuego\". Léelo en voz alta. Ese es tu brit hoy."
+      },
+      "kavana": "Me parto para que pase luz, no para destruirme."
+    },
+    {
+      "num": 20,
+      "parasha": "Lej Lejá",
+      "parashaHeb": "לך לך",
+      "aliyah": "Shishi · 16:1-16:16",
+      "shoresh": "רָאָה · Hagar",
+      "pregunta": "¿Ves a quien nadie ve?",
+      "alternativas": [
+        {
+          "id": "A",
+          "texto": "No ves. Usas y descartas.",
+          "mida": "Shomer",
+          "midahDesc": "Invisibilización"
+        },
+        {
+          "id": "B",
+          "texto": "Ves pero tarde, cuando ya se fue al desierto.",
+          "mida": "Shomer",
+          "midahDesc": "Visión tardía"
+        },
+        {
+          "id": "C",
+          "texto": "Dices: tú eres El Roí, Dios que me ve, y ves a quien llora.",
+          "mida": "Bore",
+          "midahDesc": "Roí"
+        },
+        {
+          "id": "D",
+          "texto": "Nombras al pozo: Beer Lajai Roí, pozo del Viviente que me ve.",
+          "mida": "Bore",
+          "midahDesc": "Pozo de visión"
+        }
+      ],
+      "raiz": {
+        "pasukHeb": "אַתָּה אֵל רֳאִי",
+        "pasukEsp": "Tú eres Dios que ve (16:13) — lo dice Hagar, la sierva",
+        "fuente": "Midrash",
+        "cita": "La primera persona que nombra a Dios como El que ve es una mujer egipcia, sierva, en el desierto. No Avraham. Ella enseña a ver."
+      },
+      "adamAdama": {
+        "titulo": "ADAM-ADAMÁ #20",
+        "ficha": "Tikun Olam es ver a Hagar. ¿A quién en tu adamá cotidiana nadie ve? La persona que limpia, que cuida, que está en margen. Ver es primer tikun."
+      },
+      "practica": {
+        "titulo": "Práctica: El Roí",
+        "duracion": "7 min",
+        "accion": "Hoy mira a alguien invisible en tu día (portero, cajera, persona en situación de calle, niño). Míralo a los ojos 3 segundos, di su nombre si lo sabes, agradece algo concreto. No le des consejo, dale visión."
+      },
+      "kavana": "Hoy veo a quien nadie ve, porque Dios me vio a mí."
+    },
+    {
+      "num": 21,
+      "parasha": "Lej Lejá",
+      "parashaHeb": "לך לך",
+      "aliyah": "Shevií · 17:1-17:27",
+      "shoresh": "בְּרִית · Brit Milá",
+      "pregunta": "¿Qué marca eliges llevar en tu cuerpo?",
+      "alternativas": [
+        {
+          "id": "A",
+          "texto": "Llevas marcas que te pusieron, no que elegiste.",
+          "mida": "Shomer",
+          "midahDesc": "Marca heredada"
+        },
+        {
+          "id": "B",
+          "texto": "No marcas nada, todo es fluido, nada te compromete.",
+          "mida": "Shomer",
+          "midahDesc": "Sin marca"
+        },
+        {
+          "id": "C",
+          "texto": "Eliges marcar tu carne con pacto: duele, pero dice quién eres.",
+          "mida": "Bore",
+          "midahDesc": "Brit en carne"
+        },
+        {
+          "id": "D",
+          "texto": "Tu marca es para que otros sepan que pertenecen.",
+          "mida": "Bore",
+          "midahDesc": "Marca que incluye"
+        }
+      ],
+      "raiz": {
+        "pasukHeb": "וְהָיָה לְאוֹת בְּרִית בֵּינִי וּבֵינֵיכֶם",
+        "pasukEsp": "Y será señal de pacto entre Yo y ustedes (17:11)",
+        "fuente": "Ramban",
+        "cita": "Brit Milá es en el lugar de la pasión, para decir: incluso ahí hay pacto, incluso el deseo entra en brit."
+      },
+      "adamAdama": {
+        "titulo": "ADAM-ADAMÁ #21 · Shabat Lej Lejá",
+        "ficha": "Cuerpo es adamá. Brit es marcar adamá con sentido. ¿Qué marca tuya dice: yo pertenezco, yo elegí? No tiene que ser milá, puede ser tatuaje, cicatriz elegida, ayuno, forma de vestir que te recuerda pacto."
+      },
+      "practica": {
+        "titulo": "Práctica: Ot Brit",
+        "duracion": "7 min",
+        "accion": "Elige una marca visible para esta semana que te recuerde tu Lej Lejá: pulsera, trenza, piedra en bolsillo, no comer algo. Cada vez que la veas, di: \"Lej Lejá, voy hacia mí\". Llévala 7 días."
+      },
+      "kavana": "Mi cuerpo también es tierra prometida, y la marco con pacto."
+    }
+  ],
+  "roadmap": [
+    {
+      "dias": "22-28",
+      "parasha": "Vayerá",
+      "preguntaMadre": "¿A quién le abres la tienda en tiempos cerrados?",
+      "practicas": [
+        "Hospitalidad radical: invita a alguien distinto a tu mesa",
+        "Intercede: reza/discute por Sodoma, por quien no te cae bien",
+        "Ríe: permite que lo imposible (Itzjak) nazca"
+      ],
+      "tema": "Abrir la tienda"
+    },
+    {
+      "dias": "29-35",
+      "parasha": "Jayé Sará",
+      "preguntaMadre": "¿Qué tierra compras con lágrimas para que otros vivan?",
+      "practicas": [
+        "Compra lugar: invierte en tierra comunitaria",
+        "Duelo que funda: convierte pérdida en herencia",
+        "Shiduj: sé casamentero de futuros"
+      ],
+      "tema": "Comprar futuro"
+    },
+    {
+      "dias": "36-42",
+      "parasha": "Toldot",
+      "preguntaMadre": "¿Qué herencia peleas que no es tuya?",
+      "practicas": [
+        "Revisar bendición robada: ¿dónde manipulas para ser amado?",
+        "Cavar pozos: volver a abrir lo que tus padres cavaron",
+        "Dejar ir: bendecir aunque te quiten"
+      ],
+      "tema": "Herencia"
+    },
+    {
+      "dias": "43-49",
+      "parasha": "Vayetzé",
+      "preguntaMadre": "¿Dónde duermes incómodo y despiertas con escala al cielo?",
+      "practicas": [
+        "Piedra como almohada: dormir en incomodidad con promesa",
+        "Trabajar 7 años por amor: amor como trabajo",
+        "Poner altar donde hubo piedra"
+      ],
+      "tema": "Piedra en altar"
+    },
+    {
+      "dias": "50-56",
+      "parasha": "Vayishlaj",
+      "preguntaMadre": "¿Con qué ángel tienes que pelear para cambiar de nombre?",
+      "practicas": [
+        "Lucha nocturna: enfrenta miedo de encuentro con Esaú",
+        "Mandar regalos al que te odia",
+        "Cojear bendecido: llevar marca de lucha"
+      ],
+      "tema": "Lucha que bendice"
+    },
+    {
+      "dias": "57-63",
+      "parasha": "Vayéshev",
+      "preguntaMadre": "¿Sostienes tu sueño cuando te venden?",
+      "practicas": [
+        "No vender sueños ajenos",
+        "Resistir acoso: Yosef y esposa de Potifar",
+        "Interpretar sueños en la cárcel"
+      ],
+      "tema": "Sueño en pozo"
+    },
+    {
+      "dias": "64-70",
+      "parasha": "Miketz",
+      "preguntaMadre": "¿Sabes leer el hambre de otros?",
+      "practicas": [
+        "Administrar escasez con generosidad",
+        "Interpretar sin humillar",
+        "Guardar grano para el futuro"
+      ],
+      "tema": "Leer el hambre"
+    },
+    {
+      "dias": "71-77",
+      "parasha": "Vayigash",
+      "preguntaMadre": "¿Te acercas cuando podrías vengarte?",
+      "practicas": [
+        "Vayigash: acercamiento radical a quien te dañó",
+        "Llorar fuerte para que se escuche",
+        "Traer a toda la familia a tierra nueva"
+      ],
+      "tema": "Acercarse"
+    },
+    {
+      "dias": "78-84",
+      "parasha": "Vayejí",
+      "preguntaMadre": "¿Cómo bendices antes de irte?",
+      "practicas": [
+        "Bendecir a cada hijo según su camino",
+        "Pedir no ser enterrado en lugar ajeno",
+        "Vivir para que tu vida sea bendición que perdura"
+      ],
+      "tema": "Bendecir al irse"
+    },
+    {
+      "dias": "85-91",
+      "parasha": "Cierre Sefer Bereshit",
+      "preguntaMadre": "¿Qué libro dejas escrito con tu vida?",
+      "practicas": [
+        "Escribir tu Bereshit personal",
+        "Cerrar ciclos con brajá",
+        "Preparar tu propio Vayejí"
+      ],
+      "tema": "Cierre e inicio"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "source_commit": "d8eaab4c5d85e928ac6c9a7848035b7dc5e27423",
+  "source_file": "content/camino-weeks.json",
+  "date": "2026-10-03",
+  "week": {
+    "id": "sukkot-atzeret",
+    "title": "Sukot–Atzeret · Bajo un techo frágil",
+    "he": "סֻּכּוֹת · עֲצֶרֶת",
+    "symbol": "🍃",
+    "symbolName": "La rama",
+    "symbolText": "Lo vivo se mueve con el viento. Permanecer no significa volverse rígido."
+  },
+  "encounter": {
+    "symbol": "○",
+    "title": "QUEDARSE UN POCO MÁS",
+    "question": "Antes de pasar a lo siguiente, ¿qué merece un poco más de tu atención?",
+    "choices": ["Una gratitud", "Una conversación", "Una enseñanza", "Una presencia"],
+    "context": "Antes de cerrar un ciclo y correr hacia el siguiente, algunas cosas merecen permanecer un poco más bajo nuestra atención.",
+    "followup": "¿Qué descubrirías si no cerraras todavía la pregunta y le dieras un poco más de atención?"
+  },
+  "root": {
+    "he": "עֲצֶרֶת תִּהְיֶה לָכֶם",
+    "transliteration": "Atzeret tihyeh lajem",
+    "meaning": "será para ustedes una asamblea",
+    "reference": "Bamidbar 29:35",
+    "reference_es": "Números 29:35",
+    "text_es": "En el octavo día tendrán una asamblea; no harán trabajo de labor.",
+    "context": "Shemini Atzeret es una festividad distinta que sigue inmediatamente a Sukkot. Dérej no reproduce sus prácticas.",
+    "context_extra": "Bamidbar 29:35 presenta Shemini Atzeret como una asamblea del octavo día, inmediatamente después de Sukot. La tradición la comprende como una festividad propia, aun cuando nace pegada al ciclo que acaba de concluir.",
+    "derej": "A veces la prisa por pasar a lo nuevo nos roba la última conversación con lo que estamos dejando.",
+    "derej_extra": "Antes de pasar a lo siguiente, puede haber valor en permanecer un poco más. Cerrar bien también es una práctica: agradecer, recoger lo aprendido y dejar que una experiencia termine sin apresurar el próximo comienzo.",
+    "close": "Antes de terminar, quédate un momento más."
+  },
+  "sources": [
+    "Open Scriptures Hebrew Bible · texto hebreo de referencia",
+    "Sefaria · estructura y contraste editorial",
+    "Parashot · referencia semanal"
+  ]
+}
