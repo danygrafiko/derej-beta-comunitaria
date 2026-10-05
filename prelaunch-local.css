@@ -52,3 +52,18 @@
   .portalCamino .portalLabel b{font-size:1.3rem}
   .homeFooter{font-size:.68rem}
 }
+
+/* HOME · apertura de los cuatro portales externos · 2026-10-05 */
+@media(max-width:699px){
+  .portalShabat{left:.5%;top:18.7%;width:30%;height:28%}
+  .portalMoed{right:.5%;top:18.7%;width:30%;height:28%}
+  .portalRadio{left:.5%;top:47.8%;width:30%;height:27%}
+  .portalPersonal{right:.5%;top:47.8%;width:30%;height:27%}
+}
+
+@media(max-width:390px){
+  .portalShabat{left:0;top:18.4%}
+  .portalMoed{right:0;top:18.4%}
+  .portalRadio{left:0;top:47.4%}
+  .portalPersonal{right:0;top:47.4%}
+}
