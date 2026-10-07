@@ -2,6 +2,7 @@
 const screens=[...document.querySelectorAll('[data-screen]')];
 const $=id=>document.getElementById(id);
 const RAMAK_URL='content/caminos-ramak-v21.json';
+const RAMAK_GLOSS={"OR":"Luz","RAKIA":"Firmamento · espacio que separa","YABASHA":"Tierra seca","MEOROT":"Luminarias","NEFESH JAYA":"Ser viviente · alma viviente","NAASE ADAM":"Hagamos al ser humano","TZADIK TAMIM":"Justo e íntegro","VE'ELE SHEMOT":"Estos son los nombres","MELEJ JADASH":"Rey nuevo","VAYIZAKU":"Clamaron","VAYAR":"Vio","SHLAJ ET AMI":"Deja ir a mi pueblo","EHIE ASHER EHIE":"Seré el que seré","VAYISHMA MOSHE":"Moisés escuchó","VAERA":"Me aparecí","AKSHE":"Endureceré","DAM":"Sangre","TZEFAREA":"Rana","KINIM":"Piojos","BARAD":"Granizo","KAVED LEV":"Corazón pesado · endurecido","BO EL PARO":"Ven a Faraón","JOSHEJ":"Oscuridad","JATZI LAILA":"Medianoche","PESAJ":"Paso · salto · pasar por encima","MATZA":"Pan ácimo","KADESH LI":"Santifica para mí","VEHAYA KI":"Y sucederá cuando","BESHLAJ":"Cuando dejó ir","VAHAFOJ LEV":"Se volvió el corazón","MA TITZAK":"¿Por qué clamas?","VAYIBAKEU":"Se partieron","AZ YASHIR":"Entonces cantó","VAYILONU":"Se quejaron · murmuraron","MILJAMA AMALEK":"Guerra con Amalek","VAYISHMA YITRO":"Yitró escuchó","LO TOV":"No es bueno","ANOJI":"Yo soy","VE'ELE HAMISHPATIM":"Estas son las leyes","EIN TAJAT EIN":"Ojo por ojo","IM KESEF TALVE":"Si prestas dinero","LO TEVASHEL GDI":"No cocerás el cabrito","NASE VENISHMA":"Haremos y escucharemos","VAJAZU ET HAELOKIM":"Vieron a Dios","VA'AL MOSHE AMAR":"Y a Moisés dijo: sube","VEIKJU LI TERUMA":"Tomarán para Mí una ofrenda","MIKOL ISH":"De toda persona","VEASU LI MIKDASH":"Harán para Mí un santuario","VEATA TETZAVE":"Y tú ordenarás","VEHAYU AL AHARON":"Estarán sobre Aharón","URIM VETUMIM":"Luces y perfecciones"};
 const caminoScreen=document.querySelector('[data-screen="camino"]');
 
 let RAMAK_DATA=null;
@@ -32,6 +33,12 @@ function esc(v=''){
 function slug(v=''){
   return String(v).normalize('NFD').replace(/[\u0300-\u036f]/g,'')
     .toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+}
+
+function caminoMeaning(c){
+  const title=String(c?.titulo||'').trim();
+  const editorial=title.includes(' - ')?title.split(' - ').slice(1).join(' - ').trim():'';
+  return editorial || RAMAK_GLOSS[title] || '';
 }
 
 function luminanceText(hex='#E8EAED'){
@@ -91,7 +98,8 @@ function prepareCaminoShell(){
     <section class="caminoPortalHero ramakHero">
       <div class="heroScrim"></div>
       <div class="heroCopy">
-        <span class="eyebrow">CAMINO · EDICIÓN RAMAK</span>
+        <span class="eyebrow">CAMINO</span>
+        <span class="ramakSignature">ED. RAMAK</span>
         <span class="heroHebrew" aria-hidden="true">דרך</span>
         <h1 id="caminoTitle">Caminos Diarios</h1>
         <p class="weekTitle">Bereshit a Tetzavé</p>
@@ -102,8 +110,8 @@ function prepareCaminoShell(){
 
     <section class="ramakChooser" id="ramakChooser" aria-labelledby="ramakChooserTitle">
       <header class="ramakChooserHead">
-        <span>20 PARASHOT · 134 CAMINOS</span>
-        <h2 id="ramakChooserTitle">Edición Ramak</h2>
+        <span>20 PARASHOT · 134 CAMINOS <i class="ramakTinyMark">ED. RAMAK</i></span>
+        <h2 id="ramakChooserTitle">Caminos Diarios</h2>
         <p>Recorre una Parashá, elige un día y entra por cinco umbrales: Encuentro, Raíz, Profundizar, Práctica y Llevar.</p>
       </header>
 
@@ -150,6 +158,14 @@ function prepareCaminoShell(){
       <article class="ramakPanel" data-ramak-panel="practica"></article>
       <article class="ramakPanel" data-ramak-panel="llevar"></article>
     </div>
+
+    <div class="ramakGlossBackdrop" id="ramakGlossBackdrop" hidden></div>
+    <aside class="ramakGlossSheet" id="ramakGlossSheet" hidden role="dialog" aria-modal="true" aria-labelledby="ramakGlossTitle">
+      <button class="ramakGlossClose" type="button" data-ramak-gloss-close aria-label="Cerrar">×</button>
+      <small>SIGNIFICADO</small>
+      <h3 id="ramakGlossTitle"></h3>
+      <p id="ramakGlossMeaning"></p>
+    </aside>
   `;
 
   if(!document.getElementById('ramakCaminoStyles')){
@@ -158,6 +174,21 @@ function prepareCaminoShell(){
     style.textContent=`
       .ramakCaminoScreen{--ramak-accent:#E8EAED;--ramak-ink:#1F2937}
       .ramakHero:after{content:"";position:absolute;inset:auto 0 0;height:8px;background:var(--ramak-accent);opacity:.72}
+      .ramakSignature{position:absolute;z-index:3;top:17px;right:16px;font-size:.46rem;letter-spacing:.17em;font-weight:900;color:rgba(255,235,199,.65);text-shadow:0 1px 8px #000}
+      .ramakTinyMark{font-style:normal;font-size:.46rem;letter-spacing:.14em;opacity:.62;margin-left:5px}
+      .ramakTitleLine{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+      .ramakTitleLine h2{margin-right:auto}
+      .ramakGlossBtn{display:inline-grid;place-items:center;width:29px;height:29px;border:1px solid #baa987;border-radius:50%;background:#fff5e4;color:#66573e;font-size:.72rem;font-weight:900}
+      .ramakGlossBackdrop{position:fixed;z-index:70;inset:0;background:rgba(10,12,9,.48);backdrop-filter:blur(3px)}
+      .ramakGlossSheet{position:fixed;z-index:71;left:12px;right:12px;bottom:max(12px,env(safe-area-inset-bottom));max-width:520px;margin:0 auto;padding:22px 20px 20px;border:1px solid #c6b390;border-radius:26px;background:#fff5e4;color:#362f27;box-shadow:0 24px 70px rgba(0,0,0,.35)}
+      .ramakGlossSheet>small{font-size:.52rem;letter-spacing:.16em;font-weight:900;color:#786747}
+      .ramakGlossSheet h3{font:1.8rem/1 Georgia,serif;margin:.35em 38px .25em 0}
+      .ramakGlossSheet p{margin:0;font:1.02rem/1.5 Georgia,serif;color:#675b4c}
+      .ramakGlossClose{position:absolute;right:13px;top:12px;width:34px;height:34px;border:1px solid #c4b291;border-radius:50%;background:#f6ead5;color:#4a4034;font-size:1.25rem}
+      .ramakGuides{display:grid;gap:7px;margin:9px 0 12px}
+      .ramakGuide{width:100%;border:1px dashed #bda98a;border-radius:14px;background:#f8efdf;color:#5d5141;padding:10px 12px;text-align:left;font:.8rem/1.35 Georgia,serif}
+      .ramakGuide:before{content:"↳ ";color:#7a8466;font-weight:900}
+
       .ramakChooser{padding:31px 12px 18px;background:linear-gradient(180deg,#efe2ca,#f7ecda 48%,#ece0c8);scroll-margin-top:66px}
       .ramakChooserHead{text-align:center;max-width:42rem;margin:0 auto 21px}
       .ramakChooserHead>span{font-size:.58rem;letter-spacing:.2em;font-weight:900;color:#786847}
@@ -280,12 +311,19 @@ function navButtons(step){
 }
 
 function scene(c,label){
+  const meaning=caminoMeaning(c);
   return `<div class="ramakScene">
     <div class="ramakSceneTop">
       <span class="ramakSceneBadge">DÍA ${esc(c.dia)}</span>
       <span class="ramakSceneBadge">${esc(c.sefira)}</span>
     </div>
-    <div class="ramakSceneTitle"><small>${label}</small><h2>${esc(c.titulo)}</h2></div>
+    <div class="ramakSceneTitle">
+      <small>${label}</small>
+      <div class="ramakTitleLine">
+        <h2>${esc(c.titulo)}</h2>
+        ${meaning?`<button type="button" class="ramakGlossBtn" data-ramak-gloss="${esc(c.titulo)}" data-ramak-meaning="${esc(meaning)}" aria-label="Ver significado de ${esc(c.titulo)}">א?</button>`:''}
+      </div>
+    </div>
   </div>`;
 }
 
@@ -308,13 +346,15 @@ function renderPanels(p,c){
   caminoScreen.querySelector('[data-ramak-panel="raiz"]').innerHTML=`
     ${scene(c,'02 · RAÍZ')}
     <div class="ramakBody">
-      <span class="ramakBodyEyebrow">PASUK · ${esc(p.parasha)}</span>
-      <div class="ramakHebrew">${esc(pasuk.hebreo||'')}</div>
-      <div class="ramakPasukMeta">
-        ${pasuk.trans?`<span><b>Transliteración</b><br>${esc(pasuk.trans)}</span>`:''}
-        ${pasuk.ref?`<span><b>Referencia</b><br>${esc(pasuk.ref)}</span>`:''}
+      <span class="ramakBodyEyebrow">VERSÍCULO · ${esc(p.parasha)}</span>
+      <div class="ramakCard ramakVerseCard">
+        <small>VERSÍCULO</small>
+        <div class="ramakHebrew">${esc(pasuk.hebreo||'')}</div>
+        <div class="ramakPasukMeta">
+          ${pasuk.trans?`<span><b>Transliteración</b><br>${esc(pasuk.trans)}</span>`:''}
+          ${pasuk.ref?`<span><b>Referencia</b><br>${esc(pasuk.ref)}</span>`:''}
+        </div>
       </div>
-      <div class="ramakCard"><small>COLOR RAMAK</small><strong>${esc(c.sefira)}${colorName}</strong><p>${esc(rc.hex||'')}</p></div>
       ${navButtons('raiz')}
     </div>`;
 
@@ -340,7 +380,12 @@ function renderPanels(p,c){
       <span class="ramakBodyEyebrow">AVODÁ · LLEVAR EL ESTUDIO A LA VIDA</span>
       <div class="ramakCard ramakPractice"><small>AVODÁ DE HOY</small><strong>${esc(carry.avoda||'')}</strong></div>
       <label for="ramakNote">Una nota privada para recordar</label>
-      <textarea id="ramakNote" rows="4" maxlength="700" placeholder="¿Qué quieres llevar de esta práctica?">${esc(saved.note||'')}</textarea>
+      <div class="ramakGuides" aria-label="Sugerencias para comenzar">
+        <button type="button" class="ramakGuide" data-note-starter="Lo que más me cuesta de esta práctica es…">Lo que más me cuesta de esta práctica es…</button>
+        <button type="button" class="ramakGuide" data-note-starter="Hoy podría empezar por algo pequeño: …">Hoy podría empezar por algo pequeño: …</button>
+        <button type="button" class="ramakGuide" data-note-starter="Quiero prestar atención a lo que ocurre cuando…">Quiero prestar atención a lo que ocurre cuando…</button>
+      </div>
+      <textarea id="ramakNote" rows="4" maxlength="700" placeholder="Puedes escribir libremente o tocar una de las frases de arriba.">${esc(saved.note||'')}</textarea>
       ${navButtons('practica')}
     </div>`;
 
@@ -361,6 +406,8 @@ function renderPanels(p,c){
 
 function renderRamak(scrollToChooser=false){
   if(!RAMAK_DATA||!caminoScreen) return;
+  if($('ramakGlossSheet')) $('ramakGlossSheet').hidden=true;
+  if($('ramakGlossBackdrop')) $('ramakGlossBackdrop').hidden=true;
   let p=currentParasha();
   if(!p){selectedParasha=RAMAK_DATA.parashot[0].parasha;p=currentParasha();}
   let c=currentCamino();
@@ -453,6 +500,34 @@ document.addEventListener('click',e=>{
   if(step){
     saveRamakDraft();
     activateRamakStep(step.dataset.ramakStep,true);
+    return;
+  }
+
+  const gloss=e.target.closest('[data-ramak-gloss]');
+  if(gloss){
+    const sheet=$('ramakGlossSheet'),back=$('ramakGlossBackdrop');
+    $('ramakGlossTitle').textContent=gloss.dataset.ramakGloss||'';
+    $('ramakGlossMeaning').textContent=gloss.dataset.ramakMeaning||'';
+    sheet.hidden=false;back.hidden=false;
+    return;
+  }
+
+  if(e.target.closest('[data-ramak-gloss-close]')||e.target.closest('#ramakGlossBackdrop')){
+    $('ramakGlossSheet').hidden=true;
+    $('ramakGlossBackdrop').hidden=true;
+    return;
+  }
+
+  const starter=e.target.closest('[data-note-starter]');
+  if(starter){
+    const note=$('ramakNote');
+    if(note){
+      const prefix=starter.dataset.noteStarter||'';
+      note.value=note.value.trim()?`${note.value.trim()}\n${prefix}`:prefix;
+      note.focus();
+      note.setSelectionRange(note.value.length,note.value.length);
+      saveRamakDraft();
+    }
     return;
   }
 
