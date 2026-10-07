@@ -875,3 +875,340 @@ renderRoadmap(); renderEncounter(1,false);
     }catch{}
   }
 })();
+
+/* MI CAMINO v2.1 · memoria local · sin puntuación */
+(()=>{
+  const screen=document.querySelector('[data-screen="personal"]');
+  if(!screen) return;
+
+  const BROTE_KEY='derej-v21-mi-camino-brote';
+  let activeTab='huellas';
+
+  screen.className='screen personalScreen';
+  screen.setAttribute('aria-labelledby','personalV21Title');
+  screen.innerHTML=`
+    <section class="personalHero">
+      <div class="personalHeroShade" aria-hidden="true"></div>
+      <button class="backBtn personalBack" data-route="home">← Patio</button>
+      <div class="personalHeroCopy">
+        <span class="personalEyebrow">MI CAMINO · זיכרון</span>
+        <h1 id="personalV21Title">Huellas<br>que florecen.</h1>
+        <p>Un espacio privado para reconocer lo vivido, cuidar lo que nace y recordar lo que quieres llevar contigo.</p>
+        <button class="personalEnter" type="button" data-personal-scroll="personalGarden">Entrar a mi jardín <span>↓</span></button>
+      </div>
+    </section>
+
+    <section class="personalIntro">
+      <span>MEMORIA · NO PUNTUACIÓN</span>
+      <h2>Lo vivido<br>también deja raíz.</h2>
+      <p>No hay niveles, rachas ni comparación. Sólo memoria local para volver a mirar.</p>
+    </section>
+
+    <section class="personalGarden" id="personalGarden">
+      <div class="personalPrivacy">
+        <span class="personalPrivacyIcon">⌁</span>
+        <div><b id="personalMemoryCount">Tu jardín está vacío.</b><small>Nada de esta memoria sale de este dispositivo.</small></div>
+      </div>
+
+      <div class="personalTabs" role="tablist" aria-label="Mi Camino">
+        <button type="button" class="personalTab on" data-personal-tab="huellas">Huellas</button>
+        <button type="button" class="personalTab" data-personal-tab="brotes">Brotes</button>
+        <button type="button" class="personalTab" data-personal-tab="memoria">Memoria</button>
+      </div>
+
+      <section class="personalPanel on" data-personal-panel="huellas">
+        <header class="personalPanelHead">
+          <small>HUELLAS</small>
+          <h3>Lo que ya caminaste.</h3>
+          <p>Encuentros que elegiste guardar deliberadamente en Mi Camino.</p>
+        </header>
+        <div id="personalFootprints" class="personalMemoryList"></div>
+      </section>
+
+      <section class="personalPanel" data-personal-panel="brotes">
+        <header class="personalPanelHead">
+          <small>BROTES</small>
+          <h3>¿Qué está naciendo?</h3>
+          <p>Una frase privada para reconocer algo pequeño que comienza a crecer.</p>
+        </header>
+        <div class="personalSproutCard">
+          <label for="personalSproutNote">Hoy noto que…</label>
+          <textarea id="personalSproutNote" rows="5" maxlength="420" placeholder="Escribe sólo para ti."></textarea>
+          <button type="button" class="personalSave" id="personalSaveSprout">Guardar este brote</button>
+          <p id="personalSproutStatus" class="personalStatus" role="status"></p>
+        </div>
+      </section>
+
+      <section class="personalPanel" data-personal-panel="memoria">
+        <header class="personalPanelHead">
+          <small>MEMORIA</small>
+          <h3>Frases para volver.</h3>
+          <p>Kavanot, notas privadas y memoria local de tus recorridos.</p>
+        </header>
+        <div id="personalMemories" class="personalMemoryList"></div>
+      </section>
+
+      <div class="personalClosing">
+        <span>⌁</span>
+        <p>La memoria no te dice cuánto avanzaste. Sólo te ayuda a reconocer por dónde has pasado.</p>
+      </div>
+
+      <div class="personalNav">
+        <button type="button" data-route="camino">Volver a Camino</button>
+        <button type="button" data-route="home">Volver al patio</button>
+      </div>
+    </section>
+  `;
+
+  if(!document.getElementById('personalV21Styles')){
+    const style=document.createElement('style');
+    style.id='personalV21Styles';
+    style.textContent=`
+      .personalScreen{background:#eee1c7;color:#312b23;padding-bottom:calc(38px + env(safe-area-inset-bottom))}
+      .personalHero{position:relative;min-height:67dvh;overflow:hidden;background:url('assets/mi-camino-garden-v21.webp') 50% 48%/cover no-repeat;border-bottom:1px solid rgba(217,184,111,.25)}
+      .personalHeroShade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,10,7,.09),rgba(8,10,7,.08) 26%,rgba(8,10,7,.26) 56%,rgba(8,10,7,.88) 100%),linear-gradient(90deg,rgba(7,9,6,.45),transparent 64%)}
+      .personalBack{position:absolute;top:12px;left:12px;z-index:4}
+      .personalHeroCopy{position:absolute;z-index:3;left:20px;right:20px;bottom:23px;color:#fff0d4;text-shadow:0 2px 18px #000}
+      .personalEyebrow{font-size:.62rem;letter-spacing:.23em;font-weight:900;color:#e0c47e}
+      .personalHero h1{font:clamp(2.85rem,12vw,4.7rem)/.89 Georgia,serif;margin:.22em 0 .24em;letter-spacing:-.03em;max-width:580px}
+      .personalHero p{max-width:30rem;margin:0 0 17px;font:1rem/1.43 Georgia,serif;color:#eee1ca}
+      .personalEnter{display:flex;align-items:center;justify-content:center;gap:18px;width:min(100%,430px);border:1px solid rgba(248,226,183,.72);border-radius:999px;background:#f1e4ca;color:#30291f;padding:14px 18px;font-weight:850}
+      .personalIntro{text-align:center;padding:30px 17px 27px;background:#efe2ca;color:#312b23}
+      .personalIntro>span,.personalPanelHead small{font-size:.58rem;letter-spacing:.2em;font-weight:900;color:#786845}
+      .personalIntro h2{font:clamp(2rem,8.4vw,3rem)/1 Georgia,serif;margin:.35em 0 .25em;text-wrap:balance}
+      .personalIntro p{margin:0 auto;max-width:31rem;color:#706556;font:italic .92rem/1.45 Georgia,serif}
+      .personalGarden{padding:14px 12px 28px;background:linear-gradient(180deg,#e9ddc7,#f7eddd 45%,#e9dcc3);scroll-margin-top:70px}
+      .personalPrivacy{display:flex;gap:12px;align-items:center;padding:14px;border:1px solid #c9b99d;border-radius:20px;background:#fff7e8;margin-bottom:11px}
+      .personalPrivacyIcon{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:#40523d;color:#f6e5bf;font-size:1.25rem;flex:0 0 auto}
+      .personalPrivacy div{display:grid;gap:3px}
+      .personalPrivacy b{font:1rem/1.2 Georgia,serif;color:#393126}
+      .personalPrivacy small{font-size:.65rem;line-height:1.35;color:#756a5b}
+      .personalTabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin-bottom:11px}
+      .personalTab{border:1px solid #c7b79c;border-radius:15px;background:#f7ecd9;color:#493f32;padding:11px 5px;font-size:.72rem;font-weight:850}
+      .personalTab.on{background:#40523d;color:#fff;border-color:#40523d}
+      .personalPanel{display:none;padding:18px;border:1px solid #cfbea1;border-radius:27px;background:#fff8e9;box-shadow:0 13px 32px rgba(65,49,27,.08)}
+      .personalPanel.on{display:block}
+      .personalPanelHead{margin-bottom:14px}
+      .personalPanelHead h3{font:clamp(1.9rem,7.7vw,2.6rem)/1 Georgia,serif;margin:.3em 0 .18em;color:#332c24}
+      .personalPanelHead p{margin:0;color:#74695a;font-size:.82rem;line-height:1.45}
+      .personalMemoryList{display:grid;gap:9px}
+      .personalMemoryCard{position:relative;padding:15px;border:1px solid #d2c3aa;border-radius:19px;background:#fbf3e5}
+      .personalMemoryCard:before{content:"";position:absolute;left:0;top:16px;bottom:16px;width:4px;border-radius:0 4px 4px 0;background:#7b8563}
+      .personalMemoryCard small{display:block;font-size:.55rem;letter-spacing:.13em;font-weight:900;color:#7c6b4c;margin-bottom:7px}
+      .personalMemoryCard h4{font:1.18rem/1.15 Georgia,serif;margin:0 0 7px;color:#3a3229}
+      .personalMemoryCard p{margin:4px 0;color:#655c50;font:.86rem/1.48 Georgia,serif}
+      .personalMemoryCard blockquote{margin:10px 0 0;padding:10px 12px;border-radius:13px;background:#323129;color:#f0dfbd;font:italic .9rem/1.48 Georgia,serif}
+      .personalMemoryCard time{display:block;margin-top:8px;font-size:.56rem;color:#8b7d6a}
+      .personalEmpty{padding:18px;border:1px dashed #c9b99d;border-radius:18px;background:#f8efdf;color:#706657;font:italic .9rem/1.5 Georgia,serif;text-align:center}
+      .personalSproutCard{padding:16px;border-radius:20px;background:#edf0e4;border:1px solid #c7cdb9}
+      .personalSproutCard label{display:block;font:1.18rem Georgia,serif;margin-bottom:9px;color:#3a4434}
+      .personalSproutCard textarea{width:100%;box-sizing:border-box;border:1px solid #aeb99f;border-radius:15px;background:#fffdf7;color:#332d25;padding:13px;font:1rem/1.5 Georgia,serif;resize:vertical}
+      .personalSave{width:100%;margin-top:10px;border:0;border-radius:15px;background:#40523d;color:#fff;padding:13px 15px;font-weight:850}
+      .personalStatus{min-height:1rem;margin:8px 0 0;font-size:.66rem;color:#68705d}
+      .personalClosing{display:flex;gap:12px;align-items:flex-start;margin:13px 0 0;padding:16px;border-radius:20px;background:#2e3028;color:#f0dfbd}
+      .personalClosing span{font-size:1.5rem;color:#d7bb76}
+      .personalClosing p{margin:0;font:italic .93rem/1.5 Georgia,serif}
+      .personalNav{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:12px}
+      .personalNav button{border:1px solid #9c8b70;border-radius:15px;background:#fff5e7;color:#443c32;padding:11px 8px;font-size:.72rem;font-weight:850}
+      @media(min-width:700px){
+        .personalHero{min-height:720px;border-radius:0 0 34px 34px}
+        .personalGarden{padding:20px 18px 38px}
+        .personalPanel{padding:28px}
+        .personalMemoryList{grid-template-columns:1fr 1fr}
+      }
+      @media(max-width:390px){
+        .personalHero{min-height:63dvh}
+        .personalHero h1{font-size:2.55rem}
+        .personalHero p{font-size:.93rem}
+        .personalGarden{padding-left:8px;padding-right:8px}
+        .personalPanel{padding:15px}
+      }
+    `;
+    document.head.appendChild(style);
+  }
+
+  const countNode=document.getElementById('personalMemoryCount');
+  const footprintsNode=document.getElementById('personalFootprints');
+  const memoriesNode=document.getElementById('personalMemories');
+  const sprout=document.getElementById('personalSproutNote');
+  const sproutStatus=document.getElementById('personalSproutStatus');
+
+  function formatDate(value){
+    if(!value) return '';
+    try{return new Intl.DateTimeFormat('es-CL',{dateStyle:'medium'}).format(new Date(value));}
+    catch{return '';}
+  }
+
+  function encounterMemories(){
+    const out=[];
+    for(let i=0;i<localStorage.length;i++){
+      const key=localStorage.key(i);
+      if(!key?.startsWith('derej-v21-encuentro-')) continue;
+      try{
+        const x=JSON.parse(localStorage.getItem(key)||'null');
+        if(x&&x.savedAt) out.push(x);
+      }catch{}
+    }
+    return out.sort((a,b)=>String(b.savedAt||'').localeCompare(String(a.savedAt||'')));
+  }
+
+  function legacyActions(){
+    const out=[];
+    for(let i=0;i<localStorage.length;i++){
+      const key=localStorage.key(i);
+      if(!key?.startsWith('derej:content:')||!key.endsWith(':actions')) continue;
+      try{
+        const arr=JSON.parse(localStorage.getItem(key)||'[]');
+        if(Array.isArray(arr)) out.push(...arr);
+      }catch{}
+    }
+    return out.sort((a,b)=>String(b.at||'').localeCompare(String(a.at||'')));
+  }
+
+  function legacyReflections(){
+    const out=[];
+    for(let i=0;i<localStorage.length;i++){
+      const key=localStorage.key(i);
+      if(!key?.startsWith('derej:community:private:')) continue;
+      const body=(localStorage.getItem(key)||'').trim();
+      if(body) out.push({key,body});
+    }
+    return out;
+  }
+
+  function legacyFootprints(){
+    try{
+      const done=JSON.parse(localStorage.getItem('derej:camino:done')||'{}');
+      return Object.entries(done||{}).map(([date,at])=>({date,at})).sort((a,b)=>String(b.at).localeCompare(String(a.at)));
+    }catch{return [];}
+  }
+
+  function loadSprout(){
+    try{
+      const value=JSON.parse(localStorage.getItem(BROTE_KEY)||'null');
+      sprout.value=value?.body||'';
+      return value;
+    }catch{
+      sprout.value='';
+      return null;
+    }
+  }
+
+  function render(){
+    const encounters=encounterMemories();
+    const actions=legacyActions();
+    const reflections=legacyReflections();
+    const oldFootprints=legacyFootprints();
+    const brote=loadSprout();
+    const total=encounters.length+actions.length+reflections.length+oldFootprints.length+(brote?.body?1:0);
+
+    countNode.textContent=total
+      ? `Este jardín guarda ${total} ${total===1?'memoria local':'memorias locales'}.`
+      : 'Tu jardín está vacío.';
+
+    const footprintCards=[];
+    encounters.forEach(x=>{
+      const enc=window.DEREJ_ENCUENTROS_V21?.encounters?.find?.(e=>e.num===Number(x.encounter));
+      const title=enc?`Encuentro ${enc.num} · ${enc.parasha}`:`Encuentro ${x.encounter||''}`;
+      footprintCards.push(`
+        <article class="personalMemoryCard">
+          <small>CAMINO · ENCUENTRO GUARDADO</small>
+          <h4>${title}</h4>
+          ${x.choice?`<p>${x.choice}${x.midah?` — ${x.midah}`:''}</p>`:''}
+          ${x.kavana?`<blockquote>“${x.kavana}”</blockquote>`:''}
+          ${x.savedAt?`<time>${formatDate(x.savedAt)}</time>`:''}
+        </article>`);
+    });
+    oldFootprints.slice(0,12).forEach(x=>{
+      footprintCards.push(`
+        <article class="personalMemoryCard">
+          <small>CAMINO · HUELLA RC2</small>
+          <h4>Encuentro vivido</h4>
+          <p>${x.date}</p>
+          ${x.at?`<time>${formatDate(x.at)}</time>`:''}
+        </article>`);
+    });
+    footprintsNode.innerHTML=footprintCards.length
+      ? footprintCards.join('')
+      : `<div class="personalEmpty">Todavía no hay huellas guardadas. Cuando cierres un Encuentro con “Guardar en Mi Camino”, aparecerá aquí.</div>`;
+
+    const memoryCards=[];
+    encounters.forEach(x=>{
+      if(!x.note&&!x.kavana) return;
+      memoryCards.push(`
+        <article class="personalMemoryCard">
+          <small>MEMORIA DE CAMINO</small>
+          <h4>${x.parasha||'Encuentro'}${x.encounter?` · ${x.encounter}`:''}</h4>
+          ${x.note?`<p>“${x.note}”</p>`:''}
+          ${x.kavana?`<blockquote>“${x.kavana}”</blockquote>`:''}
+          ${x.savedAt?`<time>${formatDate(x.savedAt)}</time>`:''}
+        </article>`);
+    });
+    actions.slice(0,15).forEach(a=>{
+      memoryCards.push(`
+        <article class="personalMemoryCard">
+          <small>PRÁCTICA GUARDADA · RC2</small>
+          <h4>${a.block_title||a.block_id||'Práctica'}</h4>
+          <p>${a.content_title||a.content_id||''}${a.selection?` · ${a.selection}`:''}</p>
+          ${a.at?`<time>${formatDate(a.at)}</time>`:''}
+        </article>`);
+    });
+    reflections.slice(0,10).forEach(r=>{
+      memoryCards.push(`
+        <article class="personalMemoryCard">
+          <small>REFLEXIÓN PRIVADA · RC2</small>
+          <h4>Una frase que guardaste</h4>
+          <p>“${r.body.length>220?r.body.slice(0,217)+'…':r.body}”</p>
+        </article>`);
+    });
+    if(brote?.body){
+      memoryCards.unshift(`
+        <article class="personalMemoryCard">
+          <small>BROTE ACTUAL</small>
+          <h4>Lo que está naciendo</h4>
+          <p>“${brote.body}”</p>
+          ${brote.updatedAt?`<time>${formatDate(brote.updatedAt)}</time>`:''}
+        </article>`);
+    }
+    memoriesNode.innerHTML=memoryCards.length
+      ? memoryCards.join('')
+      : `<div class="personalEmpty">Aquí aparecerán las kavanot, notas y prácticas que decidas conservar.</div>`;
+  }
+
+  function activate(tab){
+    activeTab=tab;
+    screen.querySelectorAll('[data-personal-tab]').forEach(b=>b.classList.toggle('on',b.dataset.personalTab===tab));
+    screen.querySelectorAll('[data-personal-panel]').forEach(p=>p.classList.toggle('on',p.dataset.personalPanel===tab));
+  }
+
+  screen.addEventListener('click',e=>{
+    const scroll=e.target.closest('[data-personal-scroll]');
+    if(scroll){document.getElementById(scroll.dataset.personalScroll)?.scrollIntoView({behavior:'smooth',block:'start'});return;}
+
+    const tab=e.target.closest('[data-personal-tab]');
+    if(tab){activate(tab.dataset.personalTab);return;}
+
+    if(e.target.closest('#personalSaveSprout')){
+      const body=sprout.value.trim();
+      try{
+        if(body){
+          localStorage.setItem(BROTE_KEY,JSON.stringify({body,updatedAt:new Date().toISOString()}));
+          sproutStatus.textContent='Brote guardado sólo en este dispositivo.';
+        }else{
+          localStorage.removeItem(BROTE_KEY);
+          sproutStatus.textContent='El brote quedó vacío.';
+        }
+        render();
+      }catch{
+        sproutStatus.textContent='No fue posible guardar en este navegador.';
+      }
+    }
+  });
+
+  document.addEventListener('click',e=>{
+    if(e.target.closest('[data-route="personal"]')) setTimeout(render,0);
+  });
+
+  activate('huellas');
+  render();
+})();
