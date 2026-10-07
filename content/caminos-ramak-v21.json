@@ -1,0 +1,3610 @@
+{
+  "proyecto": "Caminos Diarios - Edicion Ramak - Bereshit a Tetzave",
+  "fuente_colores": "Ramak - Pardes Rimonim Shaar HaGvanim - KAVConnect",
+  "paleta_ramak": {
+    "keter": "#FFFEFB",
+    "chochma": "7 circulos concentricos - incluye todos los colores",
+    "bina": "#1B7A3D + #FFD93D",
+    "chesed": "#E8EAED",
+    "gevurah": "#B85C38",
+    "tiferet": "#FFFBEB",
+    "netzach": "#F9C6D0",
+    "hod": "#D46A8C",
+    "yesod": "#E9A426",
+    "malchut": "#1E2A5A"
+  },
+  "total_parashot": 20,
+  "total_caminos": 134,
+  "parashot": [
+    {
+      "proyecto": "Encuentros Diarios - Edicion Ramak",
+      "fuente_colores": "Ramak - Pardes Rimonim - Shaar HaGvanim / Shaar HaAsiri - KAVConnect",
+      "nota_ramak": "No imaginar literal. El color es fisico, las sefirot espirituales. Son vasos por donde pasa el agua.",
+      "parasha": "Bereshit",
+      "haftarah": "Yeshayahu 42:5-43:10",
+      "paleta_ramak": {
+        "keter": {
+          "nombre": "Blanco cegador",
+          "hex": "#FFFEFB",
+          "significado": "Or Makif, luz envolvente"
+        },
+        "chochma": {
+          "nombre": "Incluye todos los colores - 7 circulos concentricos",
+          "hex": [
+            "#7f1d1d",
+            "#ffffff",
+            "#14532d",
+            "#84cc16",
+            "#1e40af"
+          ],
+          "significado": "Flash, sabiduria que contiene todo"
+        },
+        "bina": {
+          "nombre": "Verde vernal con filas amarillo yema",
+          "hex": [
+            "#1B7A3D",
+            "#FFD93D"
+          ],
+          "significado": "Entendimiento que analiza y colorea"
+        },
+        "chesed": {
+          "nombre": "Plateado - Blanco plateado",
+          "hex": "#E8EAED",
+          "significado": "Amor expansivo que refleja sin retener"
+        },
+        "gevurah": {
+          "nombre": "Oro rojizo",
+          "hex": "#B85C38",
+          "significado": "Fuerza, limite, disciplina"
+        },
+        "tiferet": {
+          "nombre": "Blanco con vetas rojas / Amarillo y purpura",
+          "hex": [
+            "#FFFBEB",
+            "#A855F7",
+            "#FACC15"
+          ],
+          "significado": "Belleza, verdad, armonia"
+        },
+        "netzach": {
+          "nombre": "Rosa claro",
+          "hex": "#F9C6D0",
+          "significado": "Victoria, perseverancia"
+        },
+        "hod": {
+          "nombre": "Rosa oscuro",
+          "hex": "#D46A8C",
+          "significado": "Esplendor, agradecimiento, humildad"
+        },
+        "yesod": {
+          "nombre": "Amarillo anaranjado curcuma",
+          "hex": "#E9A426",
+          "significado": "Fundacion, conexion, creatividad"
+        },
+        "malchut": {
+          "nombre": "Azul real oscuro",
+          "hex": "#1E2A5A",
+          "significado": "Reino, receptividad, palabra"
+        }
+      },
+      "caminos": [
+        {
+          "dia": 1,
+          "titulo": "OR",
+          "sefira": "Chesed",
+          "ramak_color": {
+            "nombre": "Blanco plateado",
+            "hex": "#E8EAED",
+            "texto": "#1F2937"
+          },
+          "pasuk": {
+            "hebreo": "וַיֹּאמֶר אֱלֹהִים יְהִי אוֹר וַיְהִי אוֹר",
+            "trans": "Yehi Or",
+            "ref": "Bereshit 1:3"
+          },
+          "voces": {
+            "rambam": "Moreh Nevujim 2:30 - La luz del dia 1 no es del sol, es intelectual. No se entiende, se recibe.",
+            "ramak": "Pardes Rimonim Shaar HaGvanim - Chesed es plateado porque como el agua pura, refleja toda luz sin mancha. Tomer Devorah cap 1: se como El, expande tu bien sin calculo.",
+            "ramjal": "Derej Hashem 1:5 - Leheitiv, dar bien. El mayor bien es crear luz donde no habia.",
+            "rabiNajman": "Likutei Moharan I:64 Azamra - Busca la nekuda tova en tu Tohu, esa es tu Or."
+          },
+          "reflexion": "¿Donde estas esperando luz en vez de decir Yehi Or? Hoy tu trabajo no es encontrar luz, es permitirla.",
+          "paraLlevar": {
+            "avoda": "Di un punto bueno a alguien en oscuridad hoy, sin consejo.",
+            "kavana": "Yehi Or bejayay - Que haya luz en mi vida aun aqui.",
+            "hitbodedut": "3 min: agradece una luz obvia que das por sentada."
+          }
+        },
+        {
+          "dia": 2,
+          "titulo": "RAKIA",
+          "sefira": "Gevurah",
+          "ramak_color": {
+            "nombre": "Oro rojizo",
+            "hex": "#B85C38",
+            "texto": "#FFFBEB"
+          },
+          "pasuk": {
+            "hebreo": "יְהִי רָקִיעַ בְּתוֹךְ הַמָּיִם",
+            "trans": "Yehi Rakia",
+            "ref": "Bereshit 1:6"
+          },
+          "voces": {
+            "rambam": "Hiljot Deot 1:4 - Sin separacion no hay santidad.",
+            "ramak": "Pardes - Gevurah oro rojizo es fuego contenido en oro. No destruye, refina. Tomer Devorah: se como El, pon limite con amor.",
+            "ramjal": "Mesilat Yesharim 9 - Sin Guevura no hay Jesed que dure.",
+            "rabiNajman": "Likutei Moharan I:23 - Tu Rakia es tu hitbodedut, tu limite sagrado contra la ansiedad."
+          },
+          "reflexion": "¿Que tienes mezclado y por eso sin fuerza? Trabajo y familia, descanso y celular.",
+          "paraLlevar": {
+            "avoda": "Crea un Rakia de 30 min sin interrupcion hoy. Defiendelo.",
+            "kavana": "Mavdil ben kodesh lejol - Separo para unir mas alto.",
+            "hitbodedut": "¿Que debo dejar de mezclar para no apagar mi luz?"
+          }
+        },
+        {
+          "dia": 3,
+          "titulo": "YABASHA",
+          "sefira": "Tiferet",
+          "ramak_color": {
+            "nombre": "Blanco con vetas rojas",
+            "hex": "#FFFBEB",
+            "acento": "#A855F7",
+            "texto": "#1F2937"
+          },
+          "pasuk": {
+            "hebreo": "תַּדְשֵׁא הָאָרֶץ דֶּשֶׁא",
+            "trans": "Tadshe Haaretz",
+            "ref": "Bereshit 1:11"
+          },
+          "voces": {
+            "rambam": "Moreh 3:13 - Tu naturaleza tiene semillas divinas esperando brotar.",
+            "ramak": "Tiferet blanco con vetas rojas es verdad con compasion. Amarillo y purpura: sol y humildad. Tomer Devorah: armoniza tu dia.",
+            "ramjal": "Daat Tevunot 36 - El mundo fue creado imperfecto para que tu lo completes.",
+            "rabiNajman": "Sijot HaRan 11 - Habla con las hierbas, cada una tiene un canto."
+          },
+          "reflexion": "¿Que semilla abandonaste por no ver fruto rapido?",
+          "paraLlevar": {
+            "avoda": "Riega 15 min un proyecto olvidado.",
+            "kavana": "Tadshe - Que mi tierra brote hoy.",
+            "hitbodedut": "5 min mirando una planta, que te enseña de paciencia?"
+          }
+        },
+        {
+          "dia": 4,
+          "titulo": "MEOROT",
+          "sefira": "Netzach",
+          "ramak_color": {
+            "nombre": "Rosa claro",
+            "hex": "#F9C6D0",
+            "texto": "#1F2937"
+          },
+          "pasuk": {
+            "hebreo": "יְהִי מְאֹרֹת בִּרְקִיעַ הַשָּׁמַיִם",
+            "trans": "Yehi Meorot",
+            "ref": "Bereshit 1:14"
+          },
+          "voces": {
+            "rambam": "Hiljot Kiddush HaJodesh - Santifica tu tiempo, no solo lo cuentes.",
+            "ramak": "Netzach rosa claro es confianza que persevera. Luz que no se apaga aunque la luna mengue.",
+            "ramjal": "Derej Hashem 4:7 - El tiempo judio es creado por ti con tus moedim.",
+            "rabiNajman": "Likutei Moharan II:48 - Aunque te achicaste como la luna, puedes renovarte."
+          },
+          "reflexion": "¿Tu tiempo es urgencia o significado? ¿Vives por reloj o por luna?",
+          "paraLlevar": {
+            "avoda": "Bloquea 1 hora esta semana no productiva sino significativa.",
+            "kavana": "Meorot - Mi tiempo marca mi alma, no solo mi agenda.",
+            "hitbodedut": "Mira la luna y pide renovacion en lo menguado."
+          }
+        },
+        {
+          "dia": 5,
+          "titulo": "NEFESH JAYA",
+          "sefira": "Hod",
+          "ramak_color": {
+            "nombre": "Rosa oscuro",
+            "hex": "#D46A8C",
+            "texto": "#FFFBEB"
+          },
+          "pasuk": {
+            "hebreo": "יִשְׁרְצוּ הַמַּיִם שֶׁרֶץ נֶפֶשׁ חַיָּה",
+            "trans": "Yishretzu",
+            "ref": "Bereshit 1:20"
+          },
+          "voces": {
+            "rambam": "Moreh 3:48 - Contemplar la naturaleza cura la tristeza.",
+            "ramak": "Hod rosa oscuro es esplendor con sumision. Agradecimiento que reconoce que todo viene de arriba.",
+            "ramjal": "Mesilat Yesharim 26 - Sin simja no hay servicio.",
+            "rabiNajman": "Likutei Moharan II:10 - Saca agua de lo profundo, como los peces alegres en lo oculto."
+          },
+          "reflexion": "¿Donde perdiste la liviandad? ¿Cuando todo se volvio pesado?",
+          "paraLlevar": {
+            "avoda": "Haz algo liviano hoy: baila, canta, nada sin destino.",
+            "kavana": "Nefesh Jaya - Elijo vida que nada, no que pesa.",
+            "hitbodedut": "Agradece 5 cosas vivas que te rodean."
+          }
+        },
+        {
+          "dia": 6,
+          "titulo": "NAASE ADAM",
+          "sefira": "Yesod",
+          "ramak_color": {
+            "nombre": "Amarillo curcuma",
+            "hex": "#E9A426",
+            "texto": "#1F2937"
+          },
+          "pasuk": {
+            "hebreo": "נַעֲשֶׂה אָדָם בְּצַלְמֵנוּ",
+            "trans": "Naase Adam",
+            "ref": "Bereshit 1:26"
+          },
+          "voces": {
+            "rambam": "Moreh 1:1 - Betzalmenu es intelecto y eleccion, ese es tu yo real.",
+            "ramak": "Yesod curcuma es fundamento que conecta cielo y tierra. Es brit, pacto. Tomer Devorah: conecta con santidad.",
+            "ramjal": "Derej Hashem 1:3 - Bejira, eleccion, es tu Tzelem.",
+            "rabiNajman": "Likutei Moharan I:65 - Naase es plural, nunca te haces solo, siempre con Hashem."
+          },
+          "reflexion": "¿Con quien te estas haciendo? ¿Con tu miedo o con Hashem? Hoy eres socio en tu creacion.",
+          "paraLlevar": {
+            "avoda": "Toma una decision creativa hoy, no reactiva.",
+            "kavana": "Betzalmenu - Actuo como imagen de Dios.",
+            "hitbodedut": "¿Que Adam estoy creando esta semana?"
+          }
+        },
+        {
+          "dia": 7,
+          "titulo": "VAYEJAL - SHABAT",
+          "sefira": "Malchut",
+          "ramak_color": {
+            "nombre": "Azul real oscuro",
+            "hex": "#1E2A5A",
+            "texto": "#E8EAED"
+          },
+          "pasuk": {
+            "hebreo": "וַיְכַל אֱלֹהִים בַּיּוֹם הַשְּׁבִיעִי",
+            "trans": "Vayejal",
+            "ref": "Bereshit 2:2"
+          },
+          "voces": {
+            "rambam": "Moreh 2:31 - Shabat no es descanso por cansancio, es proposito.",
+            "ramak": "Malchut azul real oscuro es vasija humilde que recibe todo. Tomer Devorah: humildad es reinar.",
+            "ramjal": "Derej Hashem 4:7 - Meein Olam Haba, muestra del mundo venidero.",
+            "rabiNajman": "Likutei Moharan I:17 - En Shabat todo juicio se endulza."
+          },
+          "reflexion": "¿Para que trabajaste 6 dias? Sin Shabat, Bereshit no tiene sentido. ¿Cual es tu proposito?",
+          "paraLlevar": {
+            "avoda": "Deja un espacio vacio hoy para que entre la Neshama Yetera.",
+            "kavana": "Vayejal - Hoy culmino, no solo termino.",
+            "hitbodedut": "¿Que necesita pasar de hacer a ser en mi vida?"
+          }
+        }
+      ],
+      "ref": "Bereshit 1:1-6:8"
+    },
+    {
+      "ref": "Bereshit 6:9-11:32",
+      "haftarah": "Yeshayahu 54:1-55:5",
+      "principio": "Del Mabul al Brit - De la destruccion al arcoiris",
+      "caminos": [
+        {
+          "dia": 1,
+          "sefira": "Chesed",
+          "titulo": "TZADIK TAMIM",
+          "pasuk": {
+            "hebreo": "Noaj ish tzadik tamim haya bedorotav"
+          },
+          "voces": {
+            "rambam": "Moreh 3:51 - Tzadik no es perfecto, es integro en su generacion. El Rambam mide al hombre por su contexto.",
+            "ramak": "Chesed plateado - Tomer Devorah: como Noaj, se como Hashem, ama incluso a una generacion perdida. El plateado refleja sin mancharse.",
+            "ramjal": "Mesilat Yesharim 1 - La perfeccion no es no caer, es caminar integro en tu dor.",
+            "rabiNajman": "Likutei Moharan I:282 - Incluso en un dor mabul, hay un tzadik que sostiene el mundo. Tu puedes ser ese punto."
+          },
+          "reflexion": "¿Te comparas con otros o eres tamim en tu dor, integro en tu contexto?",
+          "paraLlevar": {
+            "avoda": "Hoy se integro en una cosa pequeña aunque nadie lo vea.",
+            "kavana": "Tamim - Hoy camino integro en mi generacion.",
+            "hitbodedut": "¿Donde puedo ser Noaj en mi entorno?"
+          },
+          "ramak_color": {
+            "hex": "#E8EAED"
+          }
+        },
+        {
+          "dia": 2,
+          "sefira": "Gevurah",
+          "titulo": "TEVA - La caja que salva",
+          "pasuk": {
+            "hebreo": "Ase leja tevat atze gofer"
+          },
+          "voces": {
+            "rambam": "Hiljot Teshuva - La teva es teshuva, entrar adentro para salvarte.",
+            "ramak": "Gevurah oro rojizo - El limite que salva. La teva tiene medidas exactas, sin limite no hay salvacion.",
+            "ramjal": "Derej Hashem 2:3 - Dios no destruye sin dar refugio antes.",
+            "rabiNajman": "Likutei Moharan II:12 - La teva es la palabra, entra en las palabras de tefila y te salvaras del mabul de pensamientos."
+          },
+          "reflexion": "¿Cual es tu teva hoy cuando todo afuera es mabul?",
+          "paraLlevar": {
+            "avoda": "15 min de teva: sin noticias, sin ruido, solo tefila o estudio.",
+            "kavana": "Mi teva me guarda.",
+            "hitbodedut": "Entra en una palabra de Tehilim y quedate ahi."
+          },
+          "ramak_color": {
+            "hex": "#B85C38"
+          }
+        },
+        {
+          "dia": 3,
+          "sefira": "Tiferet",
+          "titulo": "MABUL - Agua que purifica",
+          "pasuk": {
+            "hebreo": "Va Yehi haMabul al haaretz"
+          },
+          "voces": {
+            "rambam": "Moreh 3:10 - El mabul no es venganza, es limpieza de una herida infectada.",
+            "ramak": "Tiferet blanco con rojo - Belleza que duele. El agua borra para revelar verdad.",
+            "ramjal": "Daat Tevunot 28 - Todo juicio es jesed oculto, el mabul prepara el mundo nuevo.",
+            "rabiNajman": "Likutei Moharan I:56 - A veces necesitas un mabul interno que arrase lo que ya no sirve."
+          },
+          "reflexion": "¿Que parte de tu vida necesita un mabul para volver a empezar limpio?",
+          "paraLlevar": {
+            "avoda": "Limpia algo fisico hoy como ritual de mabul interno.",
+            "kavana": "Mayim tahorim - Agua pura que limpia.",
+            "hitbodedut": "¿Que necesito dejar que se inunde para que se purifique?"
+          },
+          "ramak_color": {
+            "hex": "#FFFBEB"
+          }
+        },
+        {
+          "dia": 4,
+          "sefira": "Netzach",
+          "titulo": "YAYIN - Noaj se emborracha",
+          "pasuk": {
+            "hebreo": "Vayachel Noaj ish haadama vayita karem"
+          },
+          "voces": {
+            "rambam": "Hiljot Deot - El tzadik despues del milagro tambien puede caer, la guardia no termina.",
+            "ramak": "Netzach rosa claro - Victoria que requiere cuidado post victoria.",
+            "ramjal": "Mesilat Yesharim 11 - El yetzer espera despues de la gran salvacion.",
+            "rabiNajman": "Likutei Moharan I:72 - No te emborraches de tu propio milagro, vuelve a la humildad rapido."
+          },
+          "reflexion": "Despues de salvarte, ¿te cuidas o te relajas y caes?",
+          "paraLlevar": {
+            "avoda": "Despues de un logro hoy, haz algo humilde a proposito.",
+            "kavana": "Noaj y su yayin - Me cuido despues de la luz.",
+            "hitbodedut": "¿Donde me confio demasiado?"
+          },
+          "ramak_color": {
+            "hex": "#F9C6D0"
+          }
+        },
+        {
+          "dia": 5,
+          "sefira": "Hod",
+          "titulo": "MIGDAL BAVEL - Torre de ego",
+          "pasuk": {
+            "hebreo": "Hava nivne lanu ir umigdal"
+          },
+          "voces": {
+            "rambam": "Moreh 1:10 - Torre que quiere llegar al cielo es filosofia sin humildad.",
+            "ramak": "Hod rosa oscuro - Esplendor que se vuelve ego cuando olvida que viene de arriba.",
+            "ramjal": "Derej Hashem 1:4 - La unidad forzada sin Dios es dispersion.",
+            "rabiNajman": "Likutei Moharan I:12 - Hablar lashon sin fin, torre de palabras vacias, rompe la unidad."
+          },
+          "reflexion": "¿Que torre estas construyendo para hacerte nombre en vez de hacerte puente?",
+          "paraLlevar": {
+            "avoda": "Hoy haz una cosa sin que nadie sepa que fuiste tu.",
+            "kavana": "Shem - No busco nombre, busco conexion.",
+            "hitbodedut": "¿Mi proyecto une o divide?"
+          },
+          "ramak_color": {
+            "hex": "#D46A8C"
+          }
+        },
+        {
+          "dia": 6,
+          "sefira": "Yesod",
+          "titulo": "BRIT - Pacto de arcoiris",
+          "pasuk": {
+            "hebreo": "Et kashti natati beanan"
+          },
+          "voces": {
+            "rambam": "Hiljot Teshuva 3 - El arcoiris es pacto cosmico, Dios se ata a no destruir, tu tambien atate a no autodestruirte.",
+            "ramak": "Yesod curcuma - Fundamento que conecta cielo y tierra, el arcoiris es puente.",
+            "ramjal": "Derej Hashem 2:5 - Un brit es Dios limitandose a si mismo por amor.",
+            "rabiNajman": "Likutei Moharan I:49 - El arcoiris es el brit de la imaginacion rectificada, ver colores y recordar pacto."
+          },
+          "reflexion": "¿Que pacto necesitas renovar contigo mismo para no destruirte cuando te enojas contigo?",
+          "paraLlevar": {
+            "avoda": "Escribe un brit personal de una frase y firmalo hoy.",
+            "kavana": "Kashti beanan - Mi arcoiris me recuerda mi pacto.",
+            "hitbodedut": "Renueva tu brit con Hashem en voz alta."
+          },
+          "ramak_color": {
+            "hex": "#E9A426"
+          }
+        },
+        {
+          "dia": 7,
+          "sefira": "Malchut",
+          "titulo": "VAYEJAL - Descanso despues del mabul",
+          "pasuk": {
+            "hebreo": "Vayishbot mi maasehu"
+          },
+          "voces": {
+            "rambam": "Shabat es pacto como el arcoiris, señal eterna.",
+            "ramak": "Malchut azul real - Realeza que recibe el mundo nuevo despues del caos.",
+            "ramjal": "Shabat es menucha de haber sobrevivido, no solo de trabajar.",
+            "rabiNajman": "Shabat es el arca final donde ya no hay mabul."
+          },
+          "reflexion": "Despues de tu semana mabul, ¿donde esta tu Shabat-arca?",
+          "paraLlevar": {
+            "avoda": "Entra a Shabat 10 min antes hoy, como quien entra al arca.",
+            "kavana": "Menucha despues del mabul.",
+            "hitbodedut": "Agradece por haber sobrevivido esta semana."
+          },
+          "ramak_color": {
+            "hex": "#1E2A5A"
+          }
+        }
+      ],
+      "parasha": "Noaj"
+    },
+    {
+      "ref": "Bereshit 12:1-17:27",
+      "haftarah": "Yeshayahu 40:27-41:16",
+      "principio": "De tu tierra a tu tierra - Salir para encontrar",
+      "caminos": [
+        {
+          "dia": 1,
+          "sefira": "Chesed",
+          "titulo": "LEJ LEJA - Vete a ti",
+          "pasuk": {
+            "hebreo": "Lej leja meartzeja"
+          },
+          "voces": {
+            "rambam": "Moreh 3:32 - Avraham deja idolatria por busqueda intelectual, primer filosofo.",
+            "ramak": "Chesed plateado - Salir de lo conocido por amor, no por huida. Tomer Devorah: ama tu futuro mas que tu pasado.",
+            "ramjal": "Derej Hashem 1:2 - El hombre debe ganarse su tierra, no heredarla.",
+            "rabiNajman": "Likutei Moharan I:22 - Lej Leja es ir hacia ti mismo, tu punto interior."
+          },
+          "reflexion": "¿De que tierra comoda Dios te pide salir hoy para ir hacia ti?",
+          "paraLlevar": {
+            "avoda": "Da un paso pequeño fuera de tu zona comoda hoy.",
+            "kavana": "Lej Leja - Me voy hacia mi.",
+            "hitbodedut": "¿Cual es mi Eretz que me mostrara?"
+          },
+          "ramak_color": {
+            "hex": "#E8EAED"
+          }
+        }
+      ],
+      "parasha": "Lej Lejá"
+    },
+    {
+      "parasha": "Vayera",
+      "ref": "Bereshit 18:1-22:24",
+      "haftarah": "Melajim II 4:1-37",
+      "principio": "De la tienda abierta al altar cerrado - Jesed que aprende Gevurah",
+      "caminos": [
+        {
+          "dia": 1,
+          "sefira": "Chesed",
+          "ramak_color": {
+            "hex": "#E8EAED"
+          },
+          "titulo": "VAYERA - Tienda abierta",
+          "pasuk": {
+            "hebreo": "וַיֵּרָא אֵלָיו ה' בְּאֵלֹנֵי מַמְרֵא",
+            "trans": "Vayera elav Hashem",
+            "ref": "18:1"
+          },
+          "voces": {
+            "rambam": "Rambam Hiljot Deot: Gadol hachnasat orjim yoter mekabalat pnei Shejina. Avraham deja a Dios para recibir invitados.",
+            "ramak": "Ramak Chesed plateado: Tomer Devorah - Se como El, abre tu tienda a los 4 vientos. El plateado no retiene luz, la deja pasar a otros.",
+            "ramjal": "Ramjal Mesilat Yesharim 19: Jesed sin limite es la puerta a la profecia. Vayera ocurre justo despues del Brit Mila.",
+            "rabiNajman": "Rabi Najman Likutei Moharan I:5: El que hace jesed con alegria, ve a Hashem en sus invitados."
+          },
+          "reflexion": "¿Tu tienda esta abierta o cerrada? ¿Dejas a Dios para recibir a otro humano hoy?",
+          "paraLlevar": {
+            "avoda": "Hoy invita a alguien sin agenda, solo para dar. 20 min.",
+            "kavana": "Vayera - Me muestro abriendo mi tienda.",
+            "hitbodedut": "¿A quien puedo hospedar hoy en mi tiempo?"
+          }
+        },
+        {
+          "dia": 2,
+          "sefira": "Gevurah",
+          "ramak_color": {
+            "hex": "#B85C38"
+          },
+          "titulo": "TZEAKAT SEDOM - El clamor",
+          "pasuk": {
+            "hebreo": "זַעֲקַת סְדֹם וַעֲמֹרָה כִּי רָבָּה",
+            "trans": "Zaakat Sedom",
+            "ref": "18:20"
+          },
+          "voces": {
+            "rambam": "Rambam Moreh 3:22: Sedom es sociedad sin jesed, donde la ley mata la compasion.",
+            "ramak": "Ramak Gevurah oro rojizo: Oro que quema impureza. No es crueldad, es cirugia. Sedom debia ser cortada.",
+            "ramjal": "Ramjal Daat Tevunot 58: El juicio es amor que no puede tolerar el mal que destruye al otro.",
+            "rabiNajman": "Rabi Najman I:23: Cuando ves injusticia y no duele, tu Gevurah esta dormida."
+          },
+          "reflexion": "¿Donde en tu vida toleras Sedom por no poner limite?",
+          "paraLlevar": {
+            "avoda": "Pon un limite Gevurah hoy donde siempre cedes y te hace daño.",
+            "kavana": "Gevurah de Jesed - Pongo limite por amor.",
+            "hitbodedut": "¿Que Sedom interior debo dejar de justificar?"
+          }
+        },
+        {
+          "dia": 3,
+          "sefira": "Tiferet",
+          "ramak_color": {
+            "hex": "#FFFBEB"
+          },
+          "titulo": "VATISHJAK SARA - Risa",
+          "pasuk": {
+            "hebreo": "וַתִּצְחַק שָׂרָה בְּקִרְבָּהּ",
+            "trans": "Vatitzjak Sara",
+            "ref": "18:12"
+          },
+          "voces": {
+            "rambam": "Rambam Hiljot Teshuva: La risa de Sara es incredulidad sana que se vuelve fe.",
+            "ramak": "Ramak Tiferet blanco con rojo: Verdad con compasion. La risa que era duda se vuelve Yitzjak, risa sagrada.",
+            "ramjal": "Ramjal Derej Hashem 1:3: El milagro ríe de la logica, Tiferet une razon y fe.",
+            "rabiNajman": "Rabi Najman II:24: La risa rompe la amargura. Yitzjak nace de risa imposible."
+          },
+          "reflexion": "¿Que en tu vida te hace reir de incredulo y Dios quiere convertir en risa de milagro?",
+          "paraLlevar": {
+            "avoda": "Rie hoy de algo imposible y di: esto tambien puede nacer.",
+            "kavana": "Yitzjak - Mi risa se vuelve sagrada.",
+            "hitbodedut": "¿Donde mi risa cinica puede ser risa de emuna?"
+          }
+        },
+        {
+          "dia": 4,
+          "sefira": "Netzach",
+          "ramak_color": {
+            "hex": "#F9C6D0"
+          },
+          "titulo": "VAYASHKEM AVRAHAM - Madrugador",
+          "pasuk": {
+            "hebreo": "וַיַּשְׁכֵּם אַבְרָהָם בַּבֹּקֶר",
+            "trans": "Vayashkem Avraham",
+            "ref": "19:27"
+          },
+          "voces": {
+            "rambam": "Rambam Hiljot Tefila: Avraham instituye Shajarit, perseverancia diaria.",
+            "ramak": "Ramak Netzach rosa claro: Victoria es levantarse temprano por lo que amas aunque ayer fue duro.",
+            "ramjal": "Ramjal Mesilat Yesharim 7: Netzach es zerizut, alacridad.",
+            "rabiNajman": "Rabi Najman I:2: Madrugar es vencer a la tristeza antes de que despierte."
+          },
+          "reflexion": "¿Que haces con tu mañana? ¿Perseveras o reaccionas?",
+          "paraLlevar": {
+            "avoda": "Mañana levántate 15 min antes para algo sagrado, no urgente.",
+            "kavana": "Netzach - Persevero aunque ayer dolio.",
+            "hitbodedut": "¿Donde necesito vayashkem?"
+          }
+        },
+        {
+          "dia": 5,
+          "sefira": "Hod",
+          "ramak_color": {
+            "hex": "#D46A8C"
+          },
+          "titulo": "HAFLO YAFLI - ¿Hay algo imposible?",
+          "pasuk": {
+            "hebreo": "הֲיִפָּלֵא מֵה' דָּבָר",
+            "trans": "Haflo yipale",
+            "ref": "18:14"
+          },
+          "voces": {
+            "rambam": "Rambam Yesodei HaTorah: Nada es imposible para Dios, la naturaleza es voluntad constante.",
+            "ramak": "Ramak Hod rosa oscuro: Esplendor es reconocer que todo viene de arriba, por eso puedes agradecer incluso lo imposible.",
+            "ramjal": "Ramjal Daat Tevunot 30: Lo imposible es solo lo que aun no viste como milagro continuo.",
+            "rabiNajman": "Rabi Najman II:48: Tzoar, siempre hay abertura. Lo imposible tiene puerta pequeña."
+          },
+          "reflexion": "¿Que declaraste imposible y por eso dejaste de pedir?",
+          "paraLlevar": {
+            "avoda": "Pide hoy algo que habias archivado como imposible.",
+            "kavana": "Haflo - Nada es demasiado maravilloso para Hashem.",
+            "hitbodedut": "¿Que imposible puedo volver a pedir hoy?"
+          }
+        },
+        {
+          "dia": 6,
+          "sefira": "Yesod",
+          "ramak_color": {
+            "hex": "#E9A426"
+          },
+          "titulo": "AKEDAT YITZJAK - Atar",
+          "pasuk": {
+            "hebreo": "וַיֶּאֱסֹר אֶת יִצְחָק בְּנוֹ",
+            "trans": "Vaye'esor et Yitzjak",
+            "ref": "22:9"
+          },
+          "voces": {
+            "rambam": "Rambam Moreh 3:24: Akeda es limite de la fe, donde intelecto y amor se entregan.",
+            "ramak": "Ramak Yesod curcuma: Fundamento es pacto que duele. El amarillo curcuma es fuego que purifica y une.",
+            "ramjal": "Ramjal Derej Hashem 2:1: El hombre debe estar dispuesto a entregar lo mas amado para ganar eternidad.",
+            "rabiNajman": "Rabi Najman I:26: Akeda es anular tu yo, tu Yitzjak interior, para que nazca algo mas grande."
+          },
+          "reflexion": "¿Que Yitzjak necesitas atar hoy, que amas tanto que te impide crecer?",
+          "paraLlevar": {
+            "avoda": "Entrega hoy un apego pequeño como Akeda: no lo uses, ofrecelo.",
+            "kavana": "Akeda - Ato mi Yitzjak para liberarlo.",
+            "hitbodedut": "¿Que estoy dispuesto a entregar para recibir mas?"
+          }
+        },
+        {
+          "dia": 7,
+          "sefira": "Malchut",
+          "ramak_color": {
+            "hex": "#1E2A5A"
+          },
+          "titulo": "VAYEHI AJARE - Despues",
+          "pasuk": {
+            "hebreo": "וַיְהִי אַחֲרֵי הַדְּבָרִים הָאֵלֶּה",
+            "trans": "Vayehi ajare",
+            "ref": "22:1"
+          },
+          "voces": {
+            "rambam": "Rambam: Despues de cada prueba hay revelacion, Malchut recibe.",
+            "ramak": "Ramak Malchut azul real: Realeza que viene despues de entregar todo. Azul profundo que contiene todo lo anterior.",
+            "ramjal": "Ramjal: Shabat es despues de la Akeda, menucha despues de entregar.",
+            "rabiNajman": "Rabi Najman: Despues de la Akeda hay carnero, siempre hay sustituto misericordioso."
+          },
+          "reflexion": "Despues de tu Akeda de esta semana, ¿que carnero aparecio?",
+          "paraLlevar": {
+            "avoda": "Entra a Shabat sin pedir, solo recibiendo lo que viene despues.",
+            "kavana": "Ajare - Despues de entregar, recibo.",
+            "hitbodedut": "¿Que recibo hoy despues de soltar?"
+          }
+        }
+      ]
+    },
+    {
+      "parasha": "Jaye Sara",
+      "ref": "Bereshit 23:1-25:18",
+      "haftarah": "Melajim I 1:1-31",
+      "principio": "De la muerte a la pareja - Comprar tierra para sembrar eternidad",
+      "caminos": [
+        {
+          "dia": 1,
+          "sefira": "Chesed",
+          "ramak_color": {
+            "hex": "#E8EAED"
+          },
+          "titulo": "VAYIHYU JAYE SARA - Fueron vida",
+          "pasuk": {
+            "hebreo": "וַיִּהְיוּ חַיֵּי שָׂרָה",
+            "trans": "Vayihyu Jaye Sara",
+            "ref": "23:1"
+          },
+          "voces": {
+            "rambam": "Rambam: Sara vive incluso despues de morir porque su vida fue integra.",
+            "ramak": "Ramak Chesed plateado: Tomer Devorah - La muerte de la tzadeket es solo cambio de vestido, su jesed sigue brillando plateado.",
+            "ramjal": "Ramjal: La vida verdadera no termina, se transforma.",
+            "rabiNajman": "Rabi Najman I:21: La muerte de Sara es para que compres tierra, para que bajes lo espiritual a lo fisico."
+          },
+          "reflexion": "¿Tu vida hoy es jaye o solo existencia?",
+          "paraLlevar": {
+            "avoda": "Haz hoy algo que siga vivo despues de ti.",
+            "kavana": "Jaye Sara - Vivo incluso despues.",
+            "hitbodedut": "¿Que dejo que viva mas que yo?"
+          }
+        },
+        {
+          "dia": 2,
+          "sefira": "Gevurah",
+          "ramak_color": {
+            "hex": "#B85C38"
+          },
+          "titulo": "BEERBEJ - 400 shekels",
+          "pasuk": {
+            "hebreo": "אַרְבַּע מֵאוֹת שֶׁקֶל כֶּסֶף",
+            "trans": "Arba meot shekel kesef",
+            "ref": "23:15"
+          },
+          "voces": {
+            "rambam": "Rambam Hiljot Mejira: Avraham paga precio completo, no quiere regalo. Gevurah es pagar valor.",
+            "ramak": "Ramak oro rojizo: El que quiere tierra eterna paga completo, sin atajos. Gevurah refina posesion.",
+            "ramjal": "Ramjal: Lo gratis no se valora, lo que pagas con tu esfuerzo es eterno.",
+            "rabiNajman": "Rabi Najman I:29: La tierra de Israel se compra con dinero y con dolor."
+          },
+          "reflexion": "¿Que en tu vida quieres gratis y por eso no valoras?",
+          "paraLlevar": {
+            "avoda": "Paga completo hoy: tiempo, atencion, dinero por algo que valoras.",
+            "kavana": "Kesef male - Pago completo por lo eterno.",
+            "hitbodedut": "¿Que debo dejar de mendigar y empezar a comprar?"
+          }
+        },
+        {
+          "dia": 3,
+          "sefira": "Tiferet",
+          "ramak_color": {
+            "hex": "#FFFBEB"
+          },
+          "titulo": "ELIEZER - Shlijut",
+          "pasuk": {
+            "hebreo": "וַיֹּאמֶר אַבְרָהָם אֶל עַבְדּוֹ",
+            "trans": "Vayomer Avraham el avdo",
+            "ref": "24:2"
+          },
+          "voces": {
+            "rambam": "Rambam Hiljot Shelujim: Eliezer es primer shaliaj, su mano es mano de Avraham.",
+            "ramak": "Ramak Tiferet: Belleza es ser puente fiel, blanco con rojo, verdad con amor por tu amo.",
+            "ramjal": "Ramjal: El shaliaj anula su yo para ser otro, Tiferet es anulacion armoniosa.",
+            "rabiNajman": "Rabi Najman I:40: Ser shaliaj fiel es tikkun de la palabra."
+          },
+          "reflexion": "¿Eres shaliaj fiel o distorsionas el mensaje de quien te envia?",
+          "paraLlevar": {
+            "avoda": "Hoy se shaliaj fiel de alguien: lleva su mensaje exacto sin agregar.",
+            "kavana": "Shaliaj - Soy puente, no fuente.",
+            "hitbodedut": "¿De quien soy shaliaj hoy?"
+          }
+        },
+        {
+          "dia": 4,
+          "sefira": "Netzach",
+          "ramak_color": {
+            "hex": "#F9C6D0"
+          },
+          "titulo": "VEEHINE RIVKA YOTZET - Y he aqui",
+          "pasuk": {
+            "hebreo": "וְהִנֵּה רִבְקָה יֹצֵאת",
+            "trans": "Vehine Rivka yotzet",
+            "ref": "24:15"
+          },
+          "voces": {
+            "rambam": "Rambam: Rivka sale, iniciativa, Netzach es salir al encuentro.",
+            "ramak": "Ramak rosa claro: Victoria es la doncella que sale con cantaro, perseverancia femenina.",
+            "ramjal": "Ramjal: El zivug llega cuando sales, no cuando esperas.",
+            "rabiNajman": "Rabi Najman I:59: Rivka es el alma que sale a dar agua incluso a camellos ajenos."
+          },
+          "reflexion": "¿Sales al encuentro de tu destino o esperas que llegue?",
+          "paraLlevar": {
+            "avoda": "Sal hoy al encuentro: escribe, llama, ve a donde esta tu Rivka.",
+            "kavana": "Yotzet - Salgo al encuentro.",
+            "hitbodedut": "¿Donde debo salir yo?"
+          }
+        },
+        {
+          "dia": 5,
+          "sefira": "Hod",
+          "ramak_color": {
+            "hex": "#D46A8C"
+          },
+          "titulo": "VATIPEl - Se inclino",
+          "pasuk": {
+            "hebreo": "וַתִּפֹּל מֵעַל הַגָּמָל",
+            "trans": "Vatipol meal hagamal",
+            "ref": "24:64"
+          },
+          "voces": {
+            "rambam": "Rambam Hiljot Ishut: Hod es recato y caida por humildad ante Yitzjak.",
+            "ramak": "Ramak rosa oscuro: Esplendor es caer del camello, bajar de tu altura por humildad.",
+            "ramjal": "Ramjal: Hod es reconocer grandeza en otro.",
+            "rabiNajman": "Rabi Najman I:22: Caer del camello es caer del ego intelectual."
+          },
+          "reflexion": "¿De que camello alto necesitas bajarte para encontrar pareja verdadera?",
+          "paraLlevar": {
+            "avoda": "Bajate hoy de un camello: pide perdon, reconoce que no sabes.",
+            "kavana": "Vatipol - Caigo por humildad para elevarme.",
+            "hitbodedut": "¿Donde mi altura me impide amar?"
+          }
+        },
+        {
+          "dia": 6,
+          "sefira": "Yesod",
+          "ramak_color": {
+            "hex": "#E9A426"
+          },
+          "titulo": "VAYEVAREJ ET YITZJAK - Bendijo",
+          "pasuk": {
+            "hebreo": "וַיְבָרֶךְ אֱלֹהִים אֶת יִצְחָק",
+            "trans": "Vayevarej Elokim et Yitzjak",
+            "ref": "25:11"
+          },
+          "voces": {
+            "rambam": "Rambam: Despues de muerte de Avraham, bendicion pasa a Yitzjak, transmision Yesod.",
+            "ramak": "Ramak curcuma: Fundamento es bendicion que pasa de padre a hijo, hilo amarillo que no se corta.",
+            "ramjal": "Ramjal: La bendicion es flujo que necesita recipiente, Yesod es recipiente.",
+            "rabiNajman": "Rabi Najman II:7: La bendicion es cuando tu yesod esta rectificado."
+          },
+          "reflexion": "¿Eres canal de bendicion o la retienes?",
+          "paraLlevar": {
+            "avoda": "Bendice hoy a alguien en voz alta con nombre, transfiere flujo.",
+            "kavana": "Yesod - Soy canal de bendicion.",
+            "hitbodedut": "¿A quien puedo bendecir hoy?"
+          }
+        },
+        {
+          "dia": 7,
+          "sefira": "Malchut",
+          "ramak_color": {
+            "hex": "#1E2A5A"
+          },
+          "titulo": "VAYIKBERU OTO - Y lo enterraron",
+          "pasuk": {
+            "hebreo": "וַיִּקְבְּרוּ אֹתוֹ יִצְחָק וְיִשְׁמָעֵאל",
+            "trans": "Vayikberu oto",
+            "ref": "25:9"
+          },
+          "voces": {
+            "rambam": "Rambam Hiljot Avel: Yitzjak e Yishmael juntos entierran, Malchut une opuestos al final.",
+            "ramak": "Ramak azul real: Realeza que une hijos enemigos en entierro del padre, paz final.",
+            "ramjal": "Ramjal: La muerte del tzadik trae shalom entre hijos.",
+            "rabiNajman": "Rabi Najman: Incluso Yishmael hace teshuva al ver muerte de Avraham."
+          },
+          "reflexion": "¿Que entierro en tu vida podria unir lo que esta separado?",
+          "paraLlevar": {
+            "avoda": "Une hoy a dos partes separadas tuyas en un acto de paz.",
+            "kavana": "Malchut - Uno incluso en la muerte.",
+            "hitbodedut": "¿Que puedo unir hoy?"
+          }
+        }
+      ]
+    },
+    {
+      "parasha": "Toldot",
+      "ref": "Bereshit 25:19-28:9",
+      "haftarah": "Malaji 1:1-2:7",
+      "principio": "Dos pueblos en tu vientre - La lucha que forma",
+      "caminos": [
+        {
+          "dia": 1,
+          "sefira": "Chesed",
+          "ramak_color": {
+            "hex": "#E8EAED"
+          },
+          "titulo": "VAYETAR YITZJAK - Rezo",
+          "pasuk": {
+            "hebreo": "וַיֶּעְתַּר יִצְחָק לַה'",
+            "trans": "Vayetar Yitzjak",
+            "ref": "25:21"
+          },
+          "voces": {
+            "rambam": "Rambam Hiljot Tefila: Yitzjak y Rivka rezan uno frente al otro, tefila de pareja.",
+            "ramak": "Ramak Chesed plateado: Rezo que no pide para si sino para otro, amor que refleja.",
+            "ramjal": "Ramjal: La esterilidad es para que recen, el mundo necesita su tefila.",
+            "rabiNajman": "Rabi Najman II:14: Vayetar es como horca, rezo que remueve mucho."
+          },
+          "reflexion": "¿Rezas por lo que te falta o te quejas?",
+          "paraLlevar": {
+            "avoda": "Reza hoy por alguien esteril en algo, 5 min frente a frente con Hashem.",
+            "kavana": "Vayetar - Rezo que horca el cielo.",
+            "hitbodedut": "¿Por que estoy dispuesto a rezar mucho?"
+          }
+        },
+        {
+          "dia": 2,
+          "sefira": "Gevurah",
+          "ramak_color": {
+            "hex": "#B85C38"
+          },
+          "titulo": "VAYITROTZETZU - Se peleaban",
+          "pasuk": {
+            "hebreo": "וַיִּתְרוֹצְצוּ הַבָּנִים בְּקִרְבָּהּ",
+            "trans": "Vayitrotzetzou habanim",
+            "ref": "25:22"
+          },
+          "voces": {
+            "rambam": "Rambam Moreh: Dos pueblos en tu vientre es cuerpo y alma que pelean.",
+            "ramak": "Ramak oro rojizo: Gevurah es lucha interna necesaria, fuego que forja.",
+            "ramjal": "Ramjal: Sin lucha no hay eleccion, sin dos pueblos no hay bejira.",
+            "rabiNajman": "Rabi Najman I:27: La pelea en tu vientre es Yitzjak y Yishmael interior."
+          },
+          "reflexion": "¿Que dos pueblos pelean en tu vientre hoy?",
+          "paraLlevar": {
+            "avoda": "Nombra tus dos voces internas hoy sin juzgar, solo escuchalas.",
+            "kavana": "Mitrotzetzim - Mis dos pueblos pelean dentro.",
+            "hitbodedut": "¿Que lucha debo honrar en vez de reprimir?"
+          }
+        },
+        {
+          "dia": 3,
+          "sefira": "Tiferet",
+          "ramak_color": {
+            "hex": "#FFFBEB"
+          },
+          "titulo": "VAYE'EHAV - Amo",
+          "pasuk": {
+            "hebreo": "וַיֶּאֱהַב יִצְחָק אֶת עֵשָׂו",
+            "trans": "Vayeehav Yitzjak et Esav",
+            "ref": "25:28"
+          },
+          "voces": {
+            "rambam": "Rambam Hiljot Deot: Amor de Yitzjak por Esav es esperanza de tikkun, amor que ve potencial.",
+            "ramak": "Ramak Tiferet blanco con rojo: Amor que duele, verdad que ama incluso lo torcido.",
+            "ramjal": "Ramjal: El padre ama distinto a cada hijo segun su raiz.",
+            "rabiNajman": "Rabi Najman I:64: Incluso en Esav hay nekuda tova que Yitzjak veia."
+          },
+          "reflexion": "¿Amas solo lo que te refleja o amas lo diferente que te cuesta?",
+          "paraLlevar": {
+            "avoda": "Ama hoy a alguien Esav en tu vida, ve su punto bueno.",
+            "kavana": "Ahavat Yitzjak - Amo incluso lo que me cuesta.",
+            "hitbodedut": "¿A quien me cuesta amar y puedo ver su bien?"
+          }
+        },
+        {
+          "dia": 4,
+          "sefira": "Netzach",
+          "ramak_color": {
+            "hex": "#F9C6D0"
+          },
+          "titulo": "HALITENI NA - Dame de comer",
+          "pasuk": {
+            "hebreo": "הַלְעִיטֵנִי נָא",
+            "trans": "Haliteni na",
+            "ref": "25:30"
+          },
+          "voces": {
+            "rambam": "Rambam: Esav vende eternidad por plato de lentejas, falta de Netzach.",
+            "ramak": "Ramak rosa claro: El que no persevera vende su bejora por inmediatez.",
+            "ramjal": "Ramjal: Bejora es responsabilidad, no privilegio.",
+            "rabiNajman": "Rabi Najman I:19: Esav es el que corre tras lo inmediato."
+          },
+          "reflexion": "¿Que bejora estas vendiendo por un plato de lentejas hoy?",
+          "paraLlevar": {
+            "avoda": "No vendas tu bejora hoy: di no a una gratificacion inmediata por algo eterno.",
+            "kavana": "Bejora - No vendo eternidad por lentejas.",
+            "hitbodedut": "¿Que lentejas me tientan hoy?"
+          }
+        },
+        {
+          "dia": 5,
+          "sefira": "Hod",
+          "ramak_color": {
+            "hex": "#D46A8C"
+          },
+          "titulo": "VAYAMSH... - Toco",
+          "pasuk": {
+            "hebreo": "וַיָּמָשׁ...",
+            "trans": "Vayamash",
+            "ref": "27:22"
+          },
+          "voces": {
+            "rambam": "Rambam: Yitzjak toca y duda, Hod es duda humilde.",
+            "ramak": "Ramak rosa oscuro: Tocar y no ver claro es humildad, esplendor que reconoce limite.",
+            "ramjal": "Ramjal: La bendicion va donde la voz de Yaakov, aunque manos de Esav.",
+            "rabiNajman": "Rabi Najman I:62: La voz es Yaakov, las manos Esav, integra ambos."
+          },
+          "reflexion": "¿Tu voz y tus manos coinciden? ¿Dices Yaakov y haces Esav?",
+          "paraLlevar": {
+            "avoda": "Alinea hoy voz y manos: que tu hacer refleje tu decir.",
+            "kavana": "Kol Yaakov - Mi voz y mis manos una.",
+            "hitbodedut": "¿Donde digo y no hago?"
+          }
+        },
+        {
+          "dia": 6,
+          "sefira": "Yesod",
+          "ramak_color": {
+            "hex": "#E9A426"
+          },
+          "titulo": "VAYIVKE - Lloro",
+          "pasuk": {
+            "hebreo": "וַיֵּבְךְּ",
+            "trans": "Vayevk",
+            "ref": "27:38"
+          },
+          "voces": {
+            "rambam": "Rambam Hiljot Teshuva: Llanto de Esav es teshuva no completada.",
+            "ramak": "Ramak curcuma: Yesod herido llora, fundamento que no pudo conectar.",
+            "ramjal": "Ramjal: El llanto abre canales aunque sea tarde.",
+            "rabiNajman": "Rabi Najman II:8: El llanto de Esav aun resuena, todo llanto sincero abre puerta."
+          },
+          "reflexion": "¿Cuando lloraste por ultima vez por algo que perdiste por tus elecciones?",
+          "paraLlevar": {
+            "avoda": "Llora hoy 2 min sin explicar, solo llanto que limpia Yesod.",
+            "kavana": "Bechi - Mi llanto limpia mi fundamento.",
+            "hitbodedut": "¿Que llanto tengo guardado?"
+          }
+        },
+        {
+          "dia": 7,
+          "sefira": "Malchut",
+          "ramak_color": {
+            "hex": "#1E2A5A"
+          },
+          "titulo": "VAYELEJ - Se fue",
+          "pasuk": {
+            "hebreo": "וַיֵּלֶךְ עֵשָׂו",
+            "trans": "Vayelej Esav",
+            "ref": "28:9"
+          },
+          "voces": {
+            "rambam": "Rambam: Esav se va a Yishmael, se une a lo similar, Malchut cae cuando se va de casa.",
+            "ramak": "Ramak azul real: Malchut que se va por no poder recibir bendicion, realeza exiliada.",
+            "ramjal": "Ramjal: Cuando no puedes recibir bendicion, te vas a lo que te refleja.",
+            "rabiNajman": "Rabi Najman: Esav se va pero volvera al final, nada se pierde."
+          },
+          "reflexion": "¿A donde te vas cuando no recibes lo que esperabas?",
+          "paraLlevar": {
+            "avoda": "Hoy quedate en vez de irte cuando algo duele. No huyas.",
+            "kavana": "Vayelej - Me quedo aunque duela.",
+            "hitbodedut": "¿Donde huyo en vez de quedarme?"
+          }
+        }
+      ]
+    },
+    {
+      "parasha": "Vayetze",
+      "ref": "Bereshit 28:10-32:3",
+      "haftarah": "Hoshea 12:13-14:10",
+      "principio": "De la escalera al campamento - Saliendo para volver",
+      "caminos": [
+        {
+          "dia": 1,
+          "sefira": "Chesed",
+          "ramak_color": {
+            "hex": "#E8EAED"
+          },
+          "titulo": "VAYETZE - Y salio",
+          "pasuk": {
+            "hebreo": "וַיֵּצֵא יַעֲקֹב מִבְּאֵר שָׁבַע",
+            "trans": "Vayetze Yaakov",
+            "ref": "28:10"
+          },
+          "voces": {
+            "rambam": "Rambam Moreh 1:15: Vayetze es salir de la perfeccion intelectual a la lucha del mundo.",
+            "ramak": "Ramak Chesed plateado: Salir de Beersheva, pozo del juramento, al mundo. Chesed que se aventura.",
+            "ramjal": "Ramjal Derej Hashem 4:5: El tzadik debe salir para encontrar su zivug y su trabajo.",
+            "rabiNajman": "Rabi Najman I:54: Vayetze es salir de tu mente a tu corazon."
+          },
+          "reflexion": "¿De que Beersheva comoda debes salir hoy?",
+          "paraLlevar": {
+            "avoda": "Sal de tu rutina 20 min hoy hacia algo desconocido sagrado.",
+            "kavana": "Vayetze - Salgo para encontrar.",
+            "hitbodedut": "¿De donde debo salir?"
+          }
+        },
+        {
+          "dia": 2,
+          "sefira": "Gevurah",
+          "ramak_color": {
+            "hex": "#B85C38"
+          },
+          "titulo": "VAYAJALOM - Y soño",
+          "pasuk": {
+            "hebreo": "וַיַּחֲלֹם וְהִנֵּה סֻלָּם",
+            "trans": "Vayajalom vehine sulam",
+            "ref": "28:12"
+          },
+          "voces": {
+            "rambam": "Rambam Yesodei: Sulam es profecia, escalera entre intelecto y mundo.",
+            "ramak": "Ramak oro rojizo: Gevurah es escalera con angeles que suben y bajan, limite que conecta cielo y tierra.",
+            "ramjal": "Ramjal: Sulam es trabajo espiritual, subir y bajar sin quedarse.",
+            "rabiNajman": "Rabi Najman I:21: La escalera es tefila, subes y bajas pero estas en el mismo lugar sagrado."
+          },
+          "reflexion": "¿Tu escalera sube o solo sueñas con subir?",
+          "paraLlevar": {
+            "avoda": "Reza hoy con imagen de escalera, sube cada beraja.",
+            "kavana": "Sulam - Mi escalera entre cielo y tierra.",
+            "hitbodedut": "¿Donde esta mi escalera hoy?"
+          }
+        },
+        {
+          "dia": 3,
+          "sefira": "Tiferet",
+          "ramak_color": {
+            "hex": "#FFFBEB"
+          },
+          "titulo": "VEHINE HASHEM NITZAV - Y he aqui Hashem",
+          "pasuk": {
+            "hebreo": "וְהִנֵּה ה' נִצָּב עָלָיו",
+            "trans": "Vehine Hashem nitzav alav",
+            "ref": "28:13"
+          },
+          "voces": {
+            "rambam": "Rambam Moreh 1:10: Nitzav es presencia constante, Dios no sube ni baja.",
+            "ramak": "Ramak Tiferet blanco con rojo: Verdad que Hashem esta sobre tu escalera aunque tu estes abajo.",
+            "ramjal": "Ramjal: Incluso en galut, Hashem nitzav sobre ti.",
+            "rabiNajman": "Rabi Najman I:33: Incluso en el sueño, Hashem esta sobre ti."
+          },
+          "reflexion": "¿Sientes que Hashem esta nitzav sobre ti incluso en tu sueño?",
+          "paraLlevar": {
+            "avoda": "Di hoy 3 veces: Vehine Hashem nitzav alay, incluso aqui.",
+            "kavana": "Nitzav - Hashem esta sobre mi escalera.",
+            "hitbodedut": "¿Donde olvido que esta sobre mi?"
+          }
+        },
+        {
+          "dia": 4,
+          "sefira": "Netzach",
+          "ramak_color": {
+            "hex": "#F9C6D0"
+          },
+          "titulo": "VAYIDOR - Promesa",
+          "pasuk": {
+            "hebreo": "וַיִּדַּר יַעֲקֹב נֶדֶר",
+            "trans": "Vayidar Yaakov neder",
+            "ref": "28:20"
+          },
+          "voces": {
+            "rambam": "Rambam Hiljot Nedarim: Neder de Yaakov es pacto de perseverancia.",
+            "ramak": "Ramak rosa claro: Netzach es prometer para perseverar.",
+            "ramjal": "Ramjal: El neder ata tu futuro a tu proposito.",
+            "rabiNajman": "Rabi Najman II:5: Haz un neder pequeño y cumple, eso es Netzach."
+          },
+          "reflexion": "¿Que promesa te hiciste y olvidaste?",
+          "paraLlevar": {
+            "avoda": "Renueva hoy un neder pequeño y cumplible.",
+            "kavana": "Neder - Me ato a mi proposito.",
+            "hitbodedut": "¿Que promesa debo renovar?"
+          }
+        },
+        {
+          "dia": 5,
+          "sefira": "Hod",
+          "ramak_color": {
+            "hex": "#D46A8C"
+          },
+          "titulo": "VAYAAVOD - Y trabajo",
+          "pasuk": {
+            "hebreo": "וַיַּעֲבֹד יַעֲקֹב בְּרָחֵל שֶׁבַע שָׁנִים",
+            "trans": "Vayaavod Yaakov",
+            "ref": "29:20"
+          },
+          "voces": {
+            "rambam": "Rambam: Yaakov trabaja 7 años que parecen dias por amor, trabajo con Hod.",
+            "ramak": "Ramak rosa oscuro: Esplendor es trabajar por amor y que parezcan dias.",
+            "ramjal": "Ramjal: El amor hace liviano el esfuerzo.",
+            "rabiNajman": "Rabi Najman I:22: Trabajo con amor es tikkun de Adam."
+          },
+          "reflexion": "¿Trabajas con amor o solo por obligacion?",
+          "paraLlevar": {
+            "avoda": "Trabaja hoy 1 hora con amor consciente, aunque sea duro.",
+            "kavana": "Avoda mea hava - Trabajo con amor.",
+            "hitbodedut": "¿Donde trabajo sin amor?"
+          }
+        },
+        {
+          "dia": 6,
+          "sefira": "Yesod",
+          "ramak_color": {
+            "hex": "#E9A426"
+          },
+          "titulo": "VAYIVATER - Y quedo solo",
+          "pasuk": {
+            "hebreo": "וַיִּוָּתֵר יַעֲקֹב לְבַדּוֹ",
+            "trans": "Vayivater Yaakov levado",
+            "ref": "32:25"
+          },
+          "voces": {
+            "rambam": "Rambam Moreh: Levado es hitbodedut, soledad para luchar con angel.",
+            "ramak": "Ramak curcuma: Yesod es estar solo de noche peleando para ser Israel.",
+            "ramjal": "Ramjal: Solo en soledad te conviertes en Israel.",
+            "rabiNajman": "Rabi Najman II:11: Hitbodedut de medianoche, quedarse solo y pelear."
+          },
+          "reflexion": "¿Cuando te quedas solo de verdad para pelear tu pelea?",
+          "paraLlevar": {
+            "avoda": "Quedate solo 10 min esta noche sin distraccion, pelea tu angel.",
+            "kavana": "Levado - Solo para convertirme.",
+            "hitbodedut": "¿Donde evito quedarme solo?"
+          }
+        },
+        {
+          "dia": 7,
+          "sefira": "Malchut",
+          "ramak_color": {
+            "hex": "#1E2A5A"
+          },
+          "titulo": "VAYAZOV - Y se fue",
+          "pasuk": {
+            "hebreo": "וַיַּעֲזָב אֶת אֲשֶׁר לוֹ",
+            "trans": "Vayaazov",
+            "ref": "32:24"
+          },
+          "voces": {
+            "rambam": "Rambam: Yaakov deja todo para cruzar, Malchut es dejar para recibir nuevo nombre.",
+            "ramak": "Ramak azul real: Realeza que deja todo lo que tiene para recibir nombre Israel.",
+            "ramjal": "Ramjal: Para ser rey debes dejar lo que eras.",
+            "rabiNajman": "Rabi Najman: Dejar es recibir nuevo nombre."
+          },
+          "reflexion": "¿Que debes dejar para recibir tu nombre nuevo?",
+          "paraLlevar": {
+            "avoda": "Deja algo hoy que te define viejo para recibir nuevo nombre.",
+            "kavana": "Israel - Dejo para ser.",
+            "hitbodedut": "¿Que dejo hoy?"
+          }
+        }
+      ]
+    },
+    {
+      "parasha": "Vayishlaj",
+      "ref": "Bereshit 32:4-36:43",
+      "haftarah": "Ovadyah 1:1-21",
+      "principio": "De Yaakov a Israel - El que lucha con Dios",
+      "caminos": [
+        {
+          "dia": 1,
+          "sefira": "Chesed",
+          "ramak_color": {
+            "hex": "#E8EAED"
+          },
+          "titulo": "VAYISHLAJ - Y envio",
+          "pasuk": {
+            "hebreo": "וַיִּשְׁלַח יַעֲקֹב מַלְאָכִים",
+            "trans": "Vayishlaj Yaakov malajim",
+            "ref": "32:4"
+          },
+          "voces": {
+            "rambam": "Rambam Hiljot Deot: Yaakov envia malajim, no soldados, usa palabra antes que espada.",
+            "ramak": "Ramak plateado: Chesed que envia angeles incluso a Esav, amor que precede.",
+            "ramjal": "Ramjal: El que quiere paz envia primero.",
+            "rabiNajman": "Rabi Najman I:57: Enviar malajim es enviar tefilot antes que acciones."
+          },
+          "reflexion": "¿Envias malajim o piedras a tu Esav?",
+          "paraLlevar": {
+            "avoda": "Envia un mensaje de paz hoy a alguien dificil.",
+            "kavana": "Malajim - Envio angeles antes.",
+            "hitbodedut": "¿A quien debo enviar paz?"
+          }
+        },
+        {
+          "dia": 2,
+          "sefira": "Gevurah",
+          "ramak_color": {
+            "hex": "#B85C38"
+          },
+          "titulo": "VAYIRA - Y temio",
+          "pasuk": {
+            "hebreo": "וַיִּירָא יַעֲקֹב מְאֹד",
+            "trans": "Vayira Yaakov meod",
+            "ref": "32:8"
+          },
+          "voces": {
+            "rambam": "Rambam Moreh 3:24: Yira de Yaakov no es miedo fisico, es yira de causar daño.",
+            "ramak": "Ramak oro rojizo: Gevurah es temer tu propio poder.",
+            "ramjal": "Ramjal: El tzadik teme su propia fuerza.",
+            "rabiNajman": "Rabi Najman I:15: Yira es principio de sabiduria."
+          },
+          "reflexion": "¿A que temes de verdad?",
+          "paraLlevar": {
+            "avoda": "Nombra tu miedo hoy en voz alta y transformalo en tefila.",
+            "kavana": "Yira - Temo y avanzo.",
+            "hitbodedut": "¿Que temo nombrar?"
+          }
+        },
+        {
+          "dia": 3,
+          "sefira": "Tiferet",
+          "ramak_color": {
+            "hex": "#FFFBEB"
+          },
+          "titulo": "VAYEAVEK - Y lucho",
+          "pasuk": {
+            "hebreo": "וַיֵּאָבֵק אִישׁ עִמּוֹ",
+            "trans": "Vayeavek ish imo",
+            "ref": "32:25"
+          },
+          "voces": {
+            "rambam": "Rambam: Lucha con angel es lucha intelectual con yetzer.",
+            "ramak": "Ramak Tiferet: Lucha de verdad que deja herida pero da nombre.",
+            "ramjal": "Ramjal: Tiferet es armonia que nace de lucha.",
+            "rabiNajman": "Rabi Najman II:83: Toda persona tiene su angel con quien luchar hasta amanecer."
+          },
+          "reflexion": "¿Con que angel luchas esta noche?",
+          "paraLlevar": {
+            "avoda": "Lucha hoy con una idea hasta amanecer interno, no huyas.",
+            "kavana": "Aveka - Lucho y no me suelta.",
+            "hitbodedut": "¿Con quien lucho?"
+          }
+        },
+        {
+          "dia": 4,
+          "sefira": "Netzach",
+          "ramak_color": {
+            "hex": "#F9C6D0"
+          },
+          "titulo": "LO YAakov - No Yaakov",
+          "pasuk": {
+            "hebreo": "לֹא יַעֲקֹב יֵאָמֵר עוֹד שִׁמְךָ כִּי אִם יִשְׂרָאֵל",
+            "trans": "Lo Yaakov yeamer od shimja ki im Yisrael",
+            "ref": "32:29"
+          },
+          "voces": {
+            "rambam": "Rambam Moreh 2:42: Cambio de nombre es cambio de conciencia.",
+            "ramak": "Ramak rosa claro: Netzach es nuevo nombre que viene de victoria nocturna.",
+            "ramjal": "Ramjal: Yaakov es talon, Israel es cabeza.",
+            "rabiNajman": "Rabi Najman I:4: Nuevo nombre, nueva alma."
+          },
+          "reflexion": "¿Sigues siendo Yaakov talon o ya eres Israel que lucha con Dios?",
+          "paraLlevar": {
+            "avoda": "Pide hoy nuevo nombre interno, escribe: hoy me llamo Israel porque...",
+            "kavana": "Israel - Ya no soy talon.",
+            "hitbodedut": "¿Cual es mi nombre nuevo?"
+          }
+        },
+        {
+          "dia": 5,
+          "sefira": "Hod",
+          "ramak_color": {
+            "hex": "#D46A8C"
+          },
+          "titulo": "VAYAVO - Y llego Dina",
+          "pasuk": {
+            "hebreo": "וַתֵּצֵא דִינָה",
+            "trans": "Vatetze Dina",
+            "ref": "34:1"
+          },
+          "voces": {
+            "rambam": "Rambam Hiljot Deot: Dina sale sin limite, falta de Gevurah, tragedia de falta de cuidado.",
+            "ramak": "Ramak rosa oscuro: Hod herido cuando no hay limite.",
+            "ramjal": "Ramjal: La salida sin proteccion trae dolor.",
+            "rabiNajman": "Rabi Najman I:35: Dina es juicio que sale sin misericordia."
+          },
+          "reflexion": "¿Donde sales sin cuidado y te expones?",
+          "paraLlevar": {
+            "avoda": "Pon Gevurah hoy donde sales vulnerable.",
+            "kavana": "Dina - Salgo con cuidado.",
+            "hitbodedut": "¿Donde me expongo de mas?"
+          }
+        },
+        {
+          "dia": 6,
+          "sefira": "Yesod",
+          "ramak_color": {
+            "hex": "#E9A426"
+          },
+          "titulo": "VAYIKRA LO EL - Y llamo",
+          "pasuk": {
+            "hebreo": "וַיִּקְרָא לוֹ אֵל אֱלֹהֵי יִשְׂרָאֵל",
+            "trans": "Vayikra lo El Elokei Yisrael",
+            "ref": "33:20"
+          },
+          "voces": {
+            "rambam": "Rambam Yesodei: Yaakov llama a Dios Dios de Israel, Yesod que reconoce fuente.",
+            "ramak": "Ramak curcuma: Yesod es altar que conecta, llamas a Dios con tu nombre nuevo.",
+            "ramjal": "Ramjal: Despues de lucha, altar de gratitud.",
+            "rabiNajman": "Rabi Najman I:9: Despues de ser Israel, levantas altar."
+          },
+          "reflexion": "¿A que Dios llamas despues de tu lucha?",
+          "paraLlevar": {
+            "avoda": "Levanta un altar hoy: agradece con piedra, nota, acto.",
+            "kavana": "El Elokei Yisrael - Mi Dios es mi Dios.",
+            "hitbodedut": "¿Que altar levanto?"
+          }
+        },
+        {
+          "dia": 7,
+          "sefira": "Malchut",
+          "ramak_color": {
+            "hex": "#1E2A5A"
+          },
+          "titulo": "VAYEHI - Y fue",
+          "pasuk": {
+            "hebreo": "וַיְהִי בְּצֵאתָהּ נַפְשָׁהּ",
+            "trans": "Vayehi betzeta nafsha",
+            "ref": "35:18"
+          },
+          "voces": {
+            "rambam": "Rambam: Rajel muere dando vida, Malchut que da vida muriendo.",
+            "ramak": "Ramak azul real: Malchut que muere en camino a Efrat, realeza que sangra.",
+            "ramjal": "Ramjal: Rajel es Malchut que llora por sus hijos.",
+            "rabiNajman": "Rabi Najman II:10: Rajel llora y su llanto abre camino."
+          },
+          "reflexion": "¿Que parte tuya muere dando vida a otra?",
+          "paraLlevar": {
+            "avoda": "Honra hoy a tu Rajel interior que dio vida muriendo.",
+            "kavana": "Rajel - Llora por sus hijos.",
+            "hitbodedut": "¿Que llora en mi que da vida?"
+          }
+        }
+      ]
+    },
+    {
+      "parasha": "Vayeshev",
+      "ref": "Bereshit 37:1-40:23",
+      "haftarah": "Amos 2:6-3:8",
+      "principio": "De la tunica al pozo - Caer para reinar",
+      "caminos": [
+        {
+          "dia": 1,
+          "sefira": "Chesed",
+          "ramak_color": {
+            "hex": "#E8EAED"
+          },
+          "titulo": "VAYESHEV - Y se asento",
+          "pasuk": {
+            "hebreo": "וַיֵּשֶׁב יַעֲקֹב",
+            "trans": "Vayeshev Yaakov",
+            "ref": "37:1"
+          },
+          "voces": {
+            "rambam": "Rambam: Vayeshev busca tranquilidad y le viene tormenta, tzadik no descansa en este mundo.",
+            "ramak": "Ramak plateado: Chesed que quiere asentarse y debe aprender a no asentarse aun.",
+            "ramjal": "Ramjal Mesilat Yesharim 1: Quiso asentarse y vino prueba de Yosef.",
+            "rabiNajman": "Rabi Najman I:4: Vayeshev es deseo de Olam Haba en Olam Haze, aun no."
+          },
+          "reflexion": "¿Quieres asentarte cuando aun debes crecer?",
+          "paraLlevar": {
+            "avoda": "No te asientes hoy comodo, busca crecimiento incomodo.",
+            "kavana": "Vayeshev - No es tiempo de asentarme.",
+            "hitbodedut": "¿Donde me quiero asentar antes de tiempo?"
+          }
+        },
+        {
+          "dia": 2,
+          "sefira": "Gevurah",
+          "ramak_color": {
+            "hex": "#B85C38"
+          },
+          "titulo": "KTONET PASIM - Tunica de colores",
+          "pasuk": {
+            "hebreo": "כְּתֹנֶת פַּסִּים",
+            "trans": "Ktonet pasim",
+            "ref": "37:3"
+          },
+          "voces": {
+            "rambam": "Rambam Deot: Tunica de colores es favoritismo que trae odio, falta de Gevurah en educacion.",
+            "ramak": "Ramak oro rojizo: Colores sin limite generan envidia, Gevurah es vestir con medida.",
+            "ramjal": "Ramjal: El padre debe vestir a cada hijo segun su alma, no su capricho.",
+            "rabiNajman": "Rabi Najman I:65: Ktonet pasim es pnimiyut que hermanos no toleran."
+          },
+          "reflexion": "¿Vistes a alguien con ktonet pasim que genera envidia?",
+          "paraLlevar": {
+            "avoda": "Viste con humildad hoy, no provoques envidia innecesaria.",
+            "kavana": "Pasim - Visto sin provocar.",
+            "hitbodedut": "¿Donde visto provocando?"
+          }
+        },
+        {
+          "dia": 3,
+          "sefira": "Tiferet",
+          "ramak_color": {
+            "hex": "#FFFBEB"
+          },
+          "titulo": "VAJALOM - Y soño",
+          "pasuk": {
+            "hebreo": "וַיַּחֲלֹם יוֹסֵף חֲלוֹם",
+            "trans": "Vayajalom Yosef jalom",
+            "ref": "37:5"
+          },
+          "voces": {
+            "rambam": "Rambam Moreh 2:36: Jalom de Yosef es nevuah baja, pero nevuah.",
+            "ramak": "Ramak Tiferet: Sueño de gavillas y estrellas, verdad que une cielo y tierra.",
+            "ramjal": "Ramjal: El soñador es odiado porque dice verdad futura.",
+            "rabiNajman": "Rabi Najman I:60: El sueño es profecia que hermanos no pueden contener."
+          },
+          "reflexion": "¿Te atreves a contar tu sueño aunque te odien?",
+          "paraLlevar": {
+            "avoda": "Cuenta hoy tu sueño a alguien que pueda contenerlo.",
+            "kavana": "Jalom - Sueño aunque duela.",
+            "hitbodedut": "¿Cual es mi sueño que temo contar?"
+          }
+        },
+        {
+          "dia": 4,
+          "sefira": "Netzach",
+          "ramak_color": {
+            "hex": "#F9C6D0"
+          },
+          "titulo": "VAYASHLIJU OT O HABORA - Y lo tiraron al pozo",
+          "pasuk": {
+            "hebreo": "וַיַּשְׁלִכוּ אֹתוֹ הַבֹּרָה",
+            "trans": "Vayashliju oto habora",
+            "ref": "37:24"
+          },
+          "voces": {
+            "rambam": "Rambam: Bor sin agua es caida sin Torah, pozo vacio.",
+            "ramak": "Ramak rosa claro: Netzach es caer al pozo y no romperte, perseverar en pozo.",
+            "ramjal": "Ramjal: El pozo vacio es galut sin agua de Torah.",
+            "rabiNajman": "Rabi Najman II:50: Incluso en el pozo sin agua hay serpientes, pero sigues vivo."
+          },
+          "reflexion": "¿En que pozo sin agua caiste y sigues vivo?",
+          "paraLlevar": {
+            "avoda": "Escribe hoy desde tu pozo: que ves desde abajo?",
+            "kavana": "Bor - Caido pero vivo.",
+            "hitbodedut": "¿Que pozo me sostiene?"
+          }
+        },
+        {
+          "dia": 5,
+          "sefira": "Hod",
+          "ramak_color": {
+            "hex": "#D46A8C"
+          },
+          "titulo": "VAYET - Yehuda y Tamar",
+          "pasuk": {
+            "hebreo": "וַיֵּט יְהוּדָה",
+            "trans": "Vayet Yehuda",
+            "ref": "38:1"
+          },
+          "voces": {
+            "rambam": "Rambam Hiljot Teshuva: Yehuda reconoce, Hod es reconocer culpa.",
+            "ramak": "Ramak rosa oscuro: Esplendor es decir Tzadka mimeni, ella es mas justa que yo.",
+            "ramjal": "Ramjal: Hod es hoda'a, confesion que eleva.",
+            "rabiNajman": "Rabi Najman I:121: Yehuda baja para subir, Tamar fuerza redencion."
+          },
+          "reflexion": "¿Puedes decir Tzadka mimeni hoy?",
+          "paraLlevar": {
+            "avoda": "Reconoce hoy una culpa sin justificarte.",
+            "kavana": "Tzadka mimeni - Reconozco.",
+            "hitbodedut": "¿Donde debo decir ella es mas justa?"
+          }
+        },
+        {
+          "dia": 6,
+          "sefira": "Yesod",
+          "ramak_color": {
+            "hex": "#E9A426"
+          },
+          "titulo": "VAYEHI HASHEM ET YOSEF - Hashem con Yosef",
+          "pasuk": {
+            "hebreo": "וַיְהִי ה' אֶת יוֹסֵף",
+            "trans": "Vayehi Hashem et Yosef",
+            "ref": "39:2"
+          },
+          "voces": {
+            "rambam": "Rambam: Hashem et Yosef incluso esclavo y preso, Yesod no se corta.",
+            "ramak": "Ramak curcuma: Yesod es Hashem contigo incluso en casa de Potifar.",
+            "ramjal": "Ramjal: El tzadik lleva Shejina incluso a prision.",
+            "rabiNajman": "Rabi Najman I:33: Vayehi Hashem et Yosef incluso en tumah."
+          },
+          "reflexion": "¿Sientes a Hashem contigo incluso en tu prision?",
+          "paraLlevar": {
+            "avoda": "Di hoy Vayehi Hashem iti incluso aqui, en tu prision actual.",
+            "kavana": "Imi - Hashem conmigo incluso aqui.",
+            "hitbodedut": "¿Donde olvido que esta conmigo?"
+          }
+        },
+        {
+          "dia": 7,
+          "sefira": "Malchut",
+          "ramak_color": {
+            "hex": "#1E2A5A"
+          },
+          "titulo": "VAYISHKAJ - Y olvido",
+          "pasuk": {
+            "hebreo": "וְלֹא זָכַר שַׂר הַמַּשְׁקִים",
+            "trans": "Velo zajar sar hamashkim",
+            "ref": "40:23"
+          },
+          "voces": {
+            "rambam": "Rambam Deot: Yosef confia en hombre y es olvidado, Malchut que espera de humano cae.",
+            "ramak": "Ramak azul real: Realeza olvidada en prision, pero Malchut espera tiempo divino.",
+            "ramjal": "Ramjal: El olvido del copero es providencia para que llegue tiempo.",
+            "rabiNajman": "Rabi Najman I:15: Olvidado por hombre para ser recordado por Dios."
+          },
+          "reflexion": "¿Donde confias en copero que te olvida?",
+          "paraLlevar": {
+            "avoda": "Deja hoy de esperar de copero y espera de Hashem.",
+            "kavana": "Nishkaj - Olvidado por hombre, recordado por Dios.",
+            "hitbodedut": "¿De quien espero que me recuerde?"
+          }
+        }
+      ]
+    },
+    {
+      "parasha": "Miketz",
+      "ref": "Bereshit 41:1-44:17",
+      "haftarah": "Melajim I 3:15-4:1",
+      "principio": "Del pozo al palacio - Interpretar sueños para reinar",
+      "caminos": [
+        {
+          "dia": 1,
+          "sefira": "Chesed",
+          "ramak_color": {
+            "hex": "#E8EAED"
+          },
+          "titulo": "MIKETZ - Al fin",
+          "pasuk": {
+            "hebreo": "מִקֵּץ שְׁנָתַיִם יָמִים",
+            "trans": "Miket shnatayim yamim",
+            "ref": "41:1"
+          },
+          "voces": {
+            "rambam": "Rambam Moreh: Miketz es tiempo divino, no humano, fin de espera.",
+            "ramak": "Ramak plateado: Chesed que llega al fin del tiempo, al fin te recuerdan.",
+            "ramjal": "Ramjal: Todo tiene ketz, fin, incluso prision.",
+            "rabiNajman": "Rabi Najman I:65: Miketz es cuando terminas de contar tus dos años."
+          },
+          "reflexion": "¿Estas en tu Miketz? ¿Fin de espera?",
+          "paraLlevar": {
+            "avoda": "Celebra hoy un fin de espera aunque pequeño.",
+            "kavana": "Ketz - Al fin llega.",
+            "hitbodedut": "¿Que ketz estoy viviendo?"
+          }
+        },
+        {
+          "dia": 2,
+          "sefira": "Gevurah",
+          "ramak_color": {
+            "hex": "#B85C38"
+          },
+          "titulo": "VATARITZNA - Flacas",
+          "pasuk": {
+            "hebreo": "שֶׁבַע פָּרוֹת רָקוֹת וְרָעוֹת",
+            "trans": "Sheva parot rakot verao",
+            "ref": "41:3"
+          },
+          "voces": {
+            "rambam": "Rambam Hiljot Taaniot: Vacas flacas son años de juicio, Gevurah necesaria.",
+            "ramak": "Ramak oro rojizo: Sueño de hambre que viene, Gevurah que avisa.",
+            "ramjal": "Ramjal: Los sueños de Faraon son providencia para alimentar mundo.",
+            "rabiNajman": "Rabi Najman I:23: Vacas flacas son pensamientos de carencia."
+          },
+          "reflexion": "¿Que vacas flacas temes?",
+          "paraLlevar": {
+            "avoda": "Prepara hoy una vaca gorda para tu vaca flaca futura.",
+            "kavana": "Rakot - Flacas que avisan.",
+            "hitbodedut": "¿Que carencia temo?"
+          }
+        },
+        {
+          "dia": 3,
+          "sefira": "Tiferet",
+          "ramak_color": {
+            "hex": "#FFFBEB"
+          },
+          "titulo": "POTRON - Interpreta",
+          "pasuk": {
+            "hebreo": "פָּתַר אֹתָם יוֹסֵף",
+            "trans": "Patar otam Yosef",
+            "ref": "41:12"
+          },
+          "voces": {
+            "rambam": "Rambam Moreh 2:38: Poter jalom es jojma, no magia.",
+            "ramak": "Ramak Tiferet: Interpretar es unir sueño y realidad, blanco con rojo.",
+            "ramjal": "Ramjal: Yosef interpreta porque vivio ambos mundos, pozo y palacio.",
+            "rabiNajman": "Rabi Najman I:35: Poter jalom es encontrar sentido a tu caos."
+          },
+          "reflexion": "¿Sabes interpretar tus sueños o los temes?",
+          "paraLlevar": {
+            "avoda": "Interpreta hoy un sueño reciente, buscale sentido.",
+            "kavana": "Poter - Interpreto mi sueño.",
+            "hitbodedut": "¿Que sueño debo interpretar?"
+          }
+        },
+        {
+          "dia": 4,
+          "sefira": "Netzach",
+          "ramak_color": {
+            "hex": "#F9C6D0"
+          },
+          "titulo": "VAYARITZUHU - Lo corrieron",
+          "pasuk": {
+            "hebreo": "וַיְרִיצֻהוּ מִן הַבּוֹר",
+            "trans": "Vayaritzuhu min habor",
+            "ref": "41:14"
+          },
+          "voces": {
+            "rambam": "Rambam: Del pozo al palacio en un instante, Netzach es cambio rapido.",
+            "ramak": "Ramak rosa claro: Victoria que te corre del pozo, no caminas, te corren.",
+            "ramjal": "Ramjal: La salvacion viene corriendo cuando llega tiempo.",
+            "rabiNajman": "Rabi Najman I:30: Te sacan del pozo corriendo, no hay tiempo para peinarte."
+          },
+          "reflexion": "¿Estas listo para que te corran del pozo hoy?",
+          "paraLlevar": {
+            "avoda": "Preparate hoy para ser corrido del pozo: afeitada, ropa limpia, listo.",
+            "kavana": "Ratz - Corrido del pozo al palacio.",
+            "hitbodedut": "¿Estoy listo para salir corriendo?"
+          }
+        },
+        {
+          "dia": 5,
+          "sefira": "Hod",
+          "ramak_color": {
+            "hex": "#D46A8C"
+          },
+          "titulo": "VAYALBESH - Y vistio",
+          "pasuk": {
+            "hebreo": "וַיַּלְבֵּשׁ אֹתוֹ בִּגְדֵי שֵׁשׁ",
+            "trans": "Vayalbesh oto bigde shesh",
+            "ref": "41:42"
+          },
+          "voces": {
+            "rambam": "Rambam Hiljot Melajim: Vestir a Yosef es investirlo, Hod es vestidura.",
+            "ramak": "Ramak rosa oscuro: Nuevo vestido es nuevo rol, esplendor que se viste.",
+            "ramjal": "Ramjal: La ropa hace al rey, Malchut necesita vestidura.",
+            "rabiNajman": "Rabi Najman I:25: Bigde shesh son vestiduras de luz."
+          },
+          "reflexion": "¿Que vestidura necesitas para tu nuevo rol?",
+          "paraLlevar": {
+            "avoda": "Vistete hoy como tu nuevo rol, no como tu pozo.",
+            "kavana": "Bigde shesh - Me visto de nuevo.",
+            "hitbodedut": "¿Como me visto hoy?"
+          }
+        },
+        {
+          "dia": 6,
+          "sefira": "Yesod",
+          "ramak_color": {
+            "hex": "#E9A426"
+          },
+          "titulo": "VAYAKER - Y reconocio",
+          "pasuk": {
+            "hebreo": "וַיַּכֵּר יוֹסֵף אֶת אֶחָיו",
+            "trans": "Vayaker Yosef et ejav",
+            "ref": "42:8"
+          },
+          "voces": {
+            "rambam": "Rambam: Yosef reconoce y no se revela, Yesod que contiene.",
+            "ramak": "Ramak curcuma: Fundamento que reconoce pero guarda secreto hasta tiempo.",
+            "ramjal": "Ramjal: Reconocer sin venganza es Yesod rectificado.",
+            "rabiNajman": "Rabi Najman I:82: Reconocer hermanos que te vendieron y no vengarte."
+          },
+          "reflexion": "¿Puedes reconocer a quien te hirio sin venganza?",
+          "paraLlevar": {
+            "avoda": "Reconoce hoy a alguien que te hirio y no te vengues, contiene.",
+            "kavana": "Maker - Reconozco y contengo.",
+            "hitbodedut": "¿A quien reconozco hoy?"
+          }
+        },
+        {
+          "dia": 7,
+          "sefira": "Malchut",
+          "ramak_color": {
+            "hex": "#1E2A5A"
+          },
+          "titulo": "VAYEHI - Y fue traido",
+          "pasuk": {
+            "hebreo": "וַיּוּבָא",
+            "trans": "Vayuva",
+            "ref": "43:26"
+          },
+          "voces": {
+            "rambam": "Rambam: Yosef es rey que llora escondido, Malchut con corazon blando.",
+            "ramak": "Ramak azul real: Realeza que llora en camara privada, azul profundo que esconde llanto.",
+            "ramjal": "Ramjal: El rey que siente es rey verdadero.",
+            "rabiNajman": "Rabi Najman I:68: Yosef llora porque no puede revelarse aun."
+          },
+          "reflexion": "¿Lloras escondido como Yosef?",
+          "paraLlevar": {
+            "avoda": "Llora hoy escondido y luego vuelve a reinar.",
+            "kavana": "Boje - Llora y reina.",
+            "hitbodedut": "¿Donde lloro escondido?"
+          }
+        }
+      ]
+    },
+    {
+      "parasha": "Vayigash",
+      "ref": "Bereshit 44:18-47:27",
+      "haftarah": "Yejezkel 37:15-28",
+      "principio": "De Yehuda a Yosef - Acercarse para revelar",
+      "caminos": [
+        {
+          "dia": 1,
+          "sefira": "Chesed",
+          "ramak_color": {
+            "hex": "#E8EAED"
+          },
+          "titulo": "VAYIGASH - Y se acerco",
+          "pasuk": {
+            "hebreo": "וַיִּגַּשׁ אֵלָיו יְהוּדָה",
+            "trans": "Vayigash elav Yehuda",
+            "ref": "44:18"
+          },
+          "voces": {
+            "rambam": "Rambam Hiljot Deot: Vayigash es acercarse con riesgo, Chesed que arriesga.",
+            "ramak": "Ramak plateado: Acercarse a Yosef rey es acercarse a tu hermano que es tu juez.",
+            "ramjal": "Ramjal: Yehuda se acerca con mesirut nefesh por Binyamin.",
+            "rabiNajman": "Rabi Najman I:15: Vayigash es tefila que se acerca sin miedo."
+          },
+          "reflexion": "¿A quien necesitas acercarte aunque sea tu juez?",
+          "paraLlevar": {
+            "avoda": "Acercate hoy a alguien dificil con corazon Yehuda.",
+            "kavana": "Nigash - Me acerco aunque temo.",
+            "hitbodedut": "¿A quien me acerco?"
+          }
+        },
+        {
+          "dia": 2,
+          "sefira": "Gevurah",
+          "ramak_color": {
+            "hex": "#B85C38"
+          },
+          "titulo": "KI KAMOJA - Como tu",
+          "pasuk": {
+            "hebreo": "כִּי כָמוֹךָ כְּפַרְעֹה",
+            "trans": "Ki kamoja keFarao",
+            "ref": "44:18"
+          },
+          "voces": {
+            "rambam": "Rambam: Yehuda dice a Yosef eres como Faraon, reconoce poder pero no se somete.",
+            "ramak": "Ramak oro rojizo: Decirle al poder tu poder pero yo no me arrodillo por mi hermano.",
+            "ramjal": "Ramjal: Gevurah es pararse frente a rey por otro.",
+            "rabiNajman": "Rabi Najman: Decirle a tu yetzer eres como Faraon pero no te temo."
+          },
+          "reflexion": "¿Frente a que Faraon necesitas pararte por tu Binyamin?",
+          "paraLlevar": {
+            "avoda": "Parate hoy frente a un Faraon por alguien pequeño.",
+            "kavana": "KeFarao - Frente a Faraon por mi hermano.",
+            "hitbodedut": "¿Donde debo pararme?"
+          }
+        },
+        {
+          "dia": 3,
+          "sefira": "Tiferet",
+          "ramak_color": {
+            "hex": "#FFFBEB"
+          },
+          "titulo": "ANI YOSEF - Yo soy Yosef",
+          "pasuk": {
+            "hebreo": "אֲנִי יוֹסֵף",
+            "trans": "Ani Yosef",
+            "ref": "45:3"
+          },
+          "voces": {
+            "rambam": "Rambam: Ani Yosef es revelacion que cambia identidad, momento de verdad.",
+            "ramak": "Ramak Tiferet: Blanco con rojo, verdad que rompe disfraz, belleza de revelacion.",
+            "ramjal": "Ramjal: La verdad dicha simple rompe todo disfraz.",
+            "rabiNajman": "Rabi Najman I:68: Ani Yosef es tu yo que se revela despues de disfraz."
+          },
+          "reflexion": "¿Cuando diras Ani Yosef y te revelaras?",
+          "paraLlevar": {
+            "avoda": "Revelate hoy en algo que ocultas por miedo.",
+            "kavana": "Ani - Yo soy.",
+            "hitbodedut": "¿Donde debo decir yo soy?"
+          }
+        },
+        {
+          "dia": 4,
+          "sefira": "Netzach",
+          "ramak_color": {
+            "hex": "#F9C6D0"
+          },
+          "titulo": "VAYIPOL - Y cayo",
+          "pasuk": {
+            "hebreo": "וַיִּפֹּל עַל צַוְּארֵי בִנְיָמִן",
+            "trans": "Vayipol al tzavare Binyamin",
+            "ref": "45:14"
+          },
+          "voces": {
+            "rambam": "Rambam: Abrazo de Yosef y Binyamin es reencuentro de hijos de Rajel, Netzach de familia.",
+            "ramak": "Ramak rosa claro: Victoria es abrazo que llora, rosa que se abre.",
+            "ramjal": "Ramjal: El llanto de reencuentro es Netzach que vence tiempo.",
+            "rabiNajman": "Rabi Najman I:22: Abrazo que sana años de separacion."
+          },
+          "reflexion": "¿A quien necesitas caer sobre su cuello y llorar?",
+          "paraLlevar": {
+            "avoda": "Abraza hoy con llanto a alguien que extrañaste.",
+            "kavana": "Nofel - Caigo en abrazo.",
+            "hitbodedut": "¿A quien abrazo hoy?"
+          }
+        },
+        {
+          "dia": 5,
+          "sefira": "Hod",
+          "ramak_color": {
+            "hex": "#D46A8C"
+          },
+          "titulo": "VAHAVIU - Y traigan",
+          "pasuk": {
+            "hebreo": "וְהָבִיאוּ אֶת אֲבִיכֶם",
+            "trans": "Vehaviu et avijem",
+            "ref": "45:19"
+          },
+          "voces": {
+            "rambam": "Rambam: Yosef manda traer a Yaakov, Hod es traer padre a ver hijo rey.",
+            "ramak": "Ramak rosa oscuro: Traer a padre es honra, esplendor de hijo que honra.",
+            "ramjal": "Ramjal: El hijo rey trae a padre a su reino.",
+            "rabiNajman": "Rabi Najman I:22: Traer a padre es tikkun de kibud av."
+          },
+          "reflexion": "¿Traes a tu padre a tu palacio o lo dejas en Canaan?",
+          "paraLlevar": {
+            "avoda": "Trae hoy a tu padre interior a tu logro, no lo excluyas.",
+            "kavana": "Avi - Traigo a mi padre a mi palacio.",
+            "hitbodedut": "¿Donde dejo fuera a mi padre?"
+          }
+        },
+        {
+          "dia": 6,
+          "sefira": "Yesod",
+          "ramak_color": {
+            "hex": "#E9A426"
+          },
+          "titulo": "ANOJI EERED - Yo bajare",
+          "pasuk": {
+            "hebreo": "אָנֹכִי אֵרֵד עִמְּךָ",
+            "trans": "Anoji ered imja",
+            "ref": "46:4"
+          },
+          "voces": {
+            "rambam": "Rambam Moreh: Anoji ered imja es Shejina que baja a Mitzrayim con Yaakov.",
+            "ramak": "Ramak curcuma: Yesod es Dios que baja contigo a galut para subir contigo.",
+            "ramjal": "Ramjal: Incluso en galut, Anoji imja.",
+            "rabiNajman": "Rabi Najman I:33: Incluso en Mitzrayim, Anoji ered imja."
+          },
+          "reflexion": "¿Sientes que Anoji baja contigo incluso a tu Mitzrayim?",
+          "paraLlevar": {
+            "avoda": "Di hoy Anoji ered imja incluso aqui.",
+            "kavana": "Imja - Baja conmigo.",
+            "hitbodedut": "¿Donde necesito saber que baja conmigo?"
+          }
+        },
+        {
+          "dia": 7,
+          "sefira": "Malchut",
+          "ramak_color": {
+            "hex": "#1E2A5A"
+          },
+          "titulo": "VAYEJI - Y vivio",
+          "pasuk": {
+            "hebreo": "וַיְחִי יַעֲקֹב בְּאֶרֶץ מִצְרַיִם",
+            "trans": "Vayeji Yaakov beeretz Mitzrayim",
+            "ref": "47:28"
+          },
+          "voces": {
+            "rambam": "Rambam: Vayeji en Mitzrayim es vida incluso en galut, Malchut en exilio.",
+            "ramak": "Ramak azul real: Realeza que vive incluso en Mitzrayim, azul que no se destiñe.",
+            "ramjal": "Ramjal: Vayeji en Mitzrayim es Olam Haba en galut.",
+            "rabiNajman": "Rabi Najman I:26: Incluso en Mitzrayim puedes vivir, no solo existir."
+          },
+          "reflexion": "¿Vives en tu Mitzrayim o solo existes?",
+          "paraLlevar": {
+            "avoda": "Vive hoy en tu Mitzrayim, no esperes salir para vivir.",
+            "kavana": "Jai beMitzrayim - Vivo incluso aqui.",
+            "hitbodedut": "¿Vivo o existo en mi Mitzrayim?"
+          }
+        }
+      ]
+    },
+    {
+      "parasha": "Vayechi",
+      "ref": "Bereshit 47:28-50:26",
+      "haftarah": "Melajim I 2:1-12",
+      "principio": "De bendicion a entierro - Cerrar para abrir",
+      "caminos": [
+        {
+          "dia": 1,
+          "sefira": "Chesed",
+          "ramak_color": {
+            "hex": "#E8EAED"
+          },
+          "titulo": "VAYECHI - Y vivio",
+          "pasuk": {
+            "hebreo": "וַיְחִי יַעֲקֹב",
+            "trans": "Vayechi Yaakov",
+            "ref": "47:28"
+          },
+          "voces": {
+            "rambam": "Rambam Hiljot Deot: Vayechi es vida con proposito incluso en galut.",
+            "ramak": "Ramak plateado: Chesed que vive 17 años en Mitzrayim con luz.",
+            "ramjal": "Ramjal: Vayechi es Olam Haba en este mundo.",
+            "rabiNajman": "Rabi Najman I:52: Vayechi es vivir de verdad."
+          },
+          "reflexion": "¿Vives o sobrevives?",
+          "paraLlevar": {
+            "avoda": "Vive hoy con proposito, no sobrevivas.",
+            "kavana": "Jai - Vivo con proposito.",
+            "hitbodedut": "¿Vivo hoy?"
+          }
+        },
+        {
+          "dia": 2,
+          "sefira": "Gevurah",
+          "ramak_color": {
+            "hex": "#B85C38"
+          },
+          "titulo": "VAYIKREVU - Se acercaron",
+          "pasuk": {
+            "hebreo": "וַיִּקְרְבוּ יְמֵי יִשְׂרָאֵל לָמוּת",
+            "trans": "Vayikrevu yemei Yisrael lamut",
+            "ref": "47:29"
+          },
+          "voces": {
+            "rambam": "Rambam Hiljot Avel: Cercania de muerte es tiempo de orden y bendicion.",
+            "ramak": "Ramak oro rojizo: Gevurah es acercarse a muerte con orden.",
+            "ramjal": "Ramjal: El tzadik ordena antes de morir.",
+            "rabiNajman": "Rabi Najman II:72: Cercania de muerte es despertador."
+          },
+          "reflexion": "¿Si se acercaran tus dias, que ordenarias?",
+          "paraLlevar": {
+            "avoda": "Ordena hoy algo como si fuera tu ultimo dia.",
+            "kavana": "Krov - Me acerco a mi fin para ordenar.",
+            "hitbodedut": "¿Que ordeno hoy?"
+          }
+        },
+        {
+          "dia": 3,
+          "sefira": "Tiferet",
+          "ramak_color": {
+            "hex": "#FFFBEB"
+          },
+          "titulo": "VAYEVAREJ - Y bendijo",
+          "pasuk": {
+            "hebreo": "וַיְבָרֶךְ אֶת יוֹסֵף",
+            "trans": "Vayevarej et Yosef",
+            "ref": "48:15"
+          },
+          "voces": {
+            "rambam": "Rambam: Birkat Yaakov a Efrayim y Menashe es Tiferet que cruza manos.",
+            "ramak": "Ramak Tiferet blanco con rojo: Bendecir cruzando manos es verdad que ve futuro.",
+            "ramjal": "Ramjal: Yaakov ve mas que Yosef, Tiferet ve lejos.",
+            "rabiNajman": "Rabi Najman I:19: Cruzar manos es cambiar naturaleza."
+          },
+          "reflexion": "¿Puedes bendecir cruzando manos, contra logica?",
+          "paraLlevar": {
+            "avoda": "Bendice hoy contra logica, cruza tus manos.",
+            "kavana": "Mebaraj - Bendigo cruzando.",
+            "hitbodedut": "¿A quien bendigo contra logica?"
+          }
+        },
+        {
+          "dia": 4,
+          "sefira": "Netzach",
+          "ramak_color": {
+            "hex": "#F9C6D0"
+          },
+          "titulo": "YIKAVU - Reunanse",
+          "pasuk": {
+            "hebreo": "הִקָּבְצוּ וְשִׁמְעוּ",
+            "trans": "Hikabtzu veshimu",
+            "ref": "49:2"
+          },
+          "voces": {
+            "rambam": "Rambam: Yaakov reune tribus para decir futuro, Netzach es reunir para revelar.",
+            "ramak": "Ramak rosa claro: Reunir hijos para bendecir es victoria sobre dispersion.",
+            "ramjal": "Ramjal: Reunion es fuerza.",
+            "rabiNajman": "Rabi Najman I:13: Reunir tribus es reunir partes de alma."
+          },
+          "reflexion": "¿Reunes tus partes o las dispersas?",
+          "paraLlevar": {
+            "avoda": "Reune hoy tus partes internas y escuchalas.",
+            "kavana": "Kibutz - Reuno mis tribus.",
+            "hitbodedut": "¿Que parte mia esta dispersa?"
+          }
+        },
+        {
+          "dia": 5,
+          "sefira": "Hod",
+          "ramak_color": {
+            "hex": "#D46A8C"
+          },
+          "titulo": "VAYISHMA YISRAEL - Y escucho",
+          "pasuk": {
+            "hebreo": "וַיִּשְׁמַע יִשְׂרָאֵל",
+            "trans": "Vayishma Yisrael",
+            "ref": "48:2"
+          },
+          "voces": {
+            "rambam": "Rambam: Yaakov se sienta para escuchar, Hod es escuchar con humildad.",
+            "ramak": "Ramak rosa oscuro: Escuchar es esplendor humilde.",
+            "ramjal": "Ramjal: El que escucha vive.",
+            "rabiNajman": "Rabi Najman I:6: Escucha es tikkun."
+          },
+          "reflexion": "¿Escuchas o solo oyes?",
+          "paraLlevar": {
+            "avoda": "Escucha hoy 5 min sin interrumpir.",
+            "kavana": "Shomea - Escucho de verdad.",
+            "hitbodedut": "¿A quien debo escuchar?"
+          }
+        },
+        {
+          "dia": 6,
+          "sefira": "Yesod",
+          "ramak_color": {
+            "hex": "#E9A426"
+          },
+          "titulo": "VAYTZAV - Y ordeno",
+          "pasuk": {
+            "hebreo": "וַיְצַו אֶת בָּנָיו",
+            "trans": "Vaytzav et banav",
+            "ref": "49:29"
+          },
+          "voces": {
+            "rambam": "Rambam: Tzava'a de Yaakov es ordenar entierro en tierra, Yesod que pide tierra.",
+            "ramak": "Ramak curcuma: Fundamento que pide volver a Me'ara, a origen.",
+            "ramjal": "Ramjal: Volver a tierra es volver a raiz.",
+            "rabiNajman": "Rabi Najman I:21: Pedir ser enterrado en Israel es Yesod rectificado."
+          },
+          "reflexion": "¿Donde pides ser enterrado? ¿Donde esta tu raiz?",
+          "paraLlevar": {
+            "avoda": "Conecta hoy con tu raiz, tu Me'arat HaMachpela interna.",
+            "kavana": "Tzava'a - Ordeno volver a mi raiz.",
+            "hitbodedut": "¿Cual es mi raiz?"
+          }
+        },
+        {
+          "dia": 7,
+          "sefira": "Malchut",
+          "ramak_color": {
+            "hex": "#1E2A5A"
+          },
+          "titulo": "VAYAMOT YOSEF - Y murio Yosef",
+          "pasuk": {
+            "hebreo": "וַיָּמָת יוֹסֵף",
+            "trans": "Vayamot Yosef",
+            "ref": "50:26"
+          },
+          "voces": {
+            "rambam": "Rambam: Yosef muere en Mitzrayim con pacto, Malchut que muere en galut esperando geula.",
+            "ramak": "Ramak azul real: Realeza que muere en galut pero con promesa de subir huesos, azul que espera.",
+            "ramjal": "Ramjal: Muerte de Yosef cierra Bereshit y abre Shemot, Malchut que pasa antorcha.",
+            "rabiNajman": "Rabi Najman II:12: Yosef muere pero promete pakod yifkod, Dios recordara."
+          },
+          "reflexion": "¿Mueres con promesa de subir?",
+          "paraLlevar": {
+            "avoda": "Muere hoy a algo viejo con promesa de subir tus huesos.",
+            "kavana": "Pakod - Recordara y subira.",
+            "hitbodedut": "¿Que muere hoy con promesa?"
+          }
+        }
+      ]
+    },
+    {
+      "parasha": "Shemot",
+      "ref": "Shemot 1:1-6:1",
+      "haftarah": "Yirmiyahu 1:1-2:3",
+      "principio": "De nombres a gritos",
+      "caminos": [
+        {
+          "dia": 1,
+          "sefira": "Chesed",
+          "ramak_color": {
+            "hex": "#E8EAED"
+          },
+          "titulo": "VE'ELE SHEMOT",
+          "pasuk": {
+            "hebreo": "וְאֵלֶּה שְׁמוֹת בְּנֵי יִשְׂרָאֵל",
+            "trans": "Ve'ele Shemot",
+            "ref": "1:1"
+          },
+          "voces": {
+            "rambam": "Rambam: Shemot es memoria de nombres en galut.",
+            "ramak": "Ramak plateado: Luz que recuerda nombres en oscuridad.",
+            "ramjal": "Ramjal: Galut empieza con nombres.",
+            "rabiNajman": "Rabi Najman: Tu nombre sigue siendo Israel en Mitzrayim."
+          },
+          "reflexion": "¿Recuerdas tu nombre en tu Mitzrayim?",
+          "paraLlevar": {
+            "avoda": "Di tu nombre hebreo hoy en voz alta.",
+            "kavana": "Shemot - Recuerdo mi nombre.",
+            "hitbodedut": "¿Cual es mi nombre verdadero?"
+          }
+        },
+        {
+          "dia": 2,
+          "sefira": "Gevurah",
+          "ramak_color": {
+            "hex": "#B85C38"
+          },
+          "titulo": "MELEJ JADASH",
+          "pasuk": {
+            "hebreo": "וַיָּקָם מֶלֶךְ חָדָשׁ",
+            "trans": "Vayakam melej jadash",
+            "ref": "1:8"
+          },
+          "voces": {
+            "rambam": "Rambam: Melej que olvida favor.",
+            "ramak": "Ramak oro rojizo: Oro que se vuelve hierro opresor.",
+            "ramjal": "Ramjal: Olvido del bien inicia opresion.",
+            "rabiNajman": "Rabi Najman: Yetzer nuevo que no conoce tu Yosef."
+          },
+          "reflexion": "¿Que melej jadash te oprime hoy?",
+          "paraLlevar": {
+            "avoda": "Nombra tu melej jadash interno.",
+            "kavana": "Melej jadash - Rey que olvida.",
+            "hitbodedut": "¿Que rey nuevo me oprime?"
+          }
+        },
+        {
+          "dia": 3,
+          "sefira": "Tiferet",
+          "ramak_color": {
+            "hex": "#FFFBEB"
+          },
+          "titulo": "VAYIZAKU",
+          "pasuk": {
+            "hebreo": "וַיִּזְעֲקוּ וַתַּעַל שַׁוְעָתָם",
+            "trans": "Vayizaku",
+            "ref": "2:23"
+          },
+          "voces": {
+            "rambam": "Rambam: Clamor rompe decretos.",
+            "ramak": "Ramak Tiferet: Clamor blanco con rojo, dolor bello.",
+            "ramjal": "Ramjal: Geula empieza con grito.",
+            "rabiNajman": "Rabi Najman: Gritar sin palabras."
+          },
+          "reflexion": "¿Cuando fue tu ultimo grito?",
+          "paraLlevar": {
+            "avoda": "Grita sin palabras 30 seg hoy.",
+            "kavana": "Zaaka - Mi grito sube.",
+            "hitbodedut": "¿Que grito guardo?"
+          }
+        },
+        {
+          "dia": 4,
+          "sefira": "Netzach",
+          "ramak_color": {
+            "hex": "#F9C6D0"
+          },
+          "titulo": "VAYAR",
+          "pasuk": {
+            "hebreo": "וַיַּרְא אֱלֹהִים אֶת בְּנֵי יִשְׂרָאֵל",
+            "trans": "Vayar Elokim",
+            "ref": "2:25"
+          },
+          "voces": {
+            "rambam": "Rambam: Vayar es providencia.",
+            "ramak": "Ramak rosa claro: Dios ve con corazon.",
+            "ramjal": "Ramjal: Ver es primer paso redencion.",
+            "rabiNajman": "Rabi Najman: Ve incluso dolor oculto."
+          },
+          "reflexion": "¿Te sientes visto?",
+          "paraLlevar": {
+            "avoda": "Deja que te vean hoy en tu dolor.",
+            "kavana": "Vayar - Soy visto.",
+            "hitbodedut": "¿Donde me escondo?"
+          }
+        },
+        {
+          "dia": 5,
+          "sefira": "Hod",
+          "ramak_color": {
+            "hex": "#D46A8C"
+          },
+          "titulo": "SHLAJ ET AMI",
+          "pasuk": {
+            "hebreo": "שַׁלַּח אֶת עַמִּי",
+            "trans": "Shalaj et ami",
+            "ref": "5:1"
+          },
+          "voces": {
+            "rambam": "Rambam: Demanda libertad.",
+            "ramak": "Ramak rosa oscuro: Pedir libertad con humildad firme.",
+            "ramjal": "Ramjal: Libertad es proposito creacion.",
+            "rabiNajman": "Rabi Najman: Liberar pueblo interno."
+          },
+          "reflexion": "¿A que Faraon dices shalaj?",
+          "paraLlevar": {
+            "avoda": "Di shalaj a un habito esclavizante.",
+            "kavana": "Shalaj - Soy libre.",
+            "hitbodedut": "¿Que libero hoy?"
+          }
+        },
+        {
+          "dia": 6,
+          "sefira": "Yesod",
+          "ramak_color": {
+            "hex": "#E9A426"
+          },
+          "titulo": "EHIE ASHER EHIE",
+          "pasuk": {
+            "hebreo": "אֶהְיֶה אֲשֶׁר אֶהְיֶה",
+            "trans": "Ehye asher ehye",
+            "ref": "3:14"
+          },
+          "voces": {
+            "rambam": "Rambam: Existencia necesaria.",
+            "ramak": "Ramak curcuma: Ser que sera, fundamento.",
+            "ramjal": "Ramjal: Ehye con nosotros en galut.",
+            "rabiNajman": "Rabi Najman: Ehye contigo en Mitzrayim."
+          },
+          "reflexion": "¿Sientes Ehye contigo?",
+          "paraLlevar": {
+            "avoda": "Repite Ehye hoy como mantra.",
+            "kavana": "Ehye - Sere contigo.",
+            "hitbodedut": "¿Donde necesito Ehye?"
+          }
+        },
+        {
+          "dia": 7,
+          "sefira": "Malchut",
+          "ramak_color": {
+            "hex": "#1E2A5A"
+          },
+          "titulo": "VAYISHMA MOSHE",
+          "pasuk": {
+            "hebreo": "וַיִּשְׁמַע מֹשֶׁה",
+            "trans": "Vayishma Moshe",
+            "ref": "6:1"
+          },
+          "voces": {
+            "rambam": "Rambam: Moshe escucha mision.",
+            "ramak": "Ramak azul real: Realeza que escucha.",
+            "ramjal": "Ramjal: Escuchar mision es corona.",
+            "rabiNajman": "Rabi Najman: Escuchar es tikkun Malchut."
+          },
+          "reflexion": "¿Escuchas tu mision?",
+          "paraLlevar": {
+            "avoda": "Escucha tu mision 5 min.",
+            "kavana": "Shomea - Escucho mision.",
+            "hitbodedut": "¿Cual es mi mision?"
+          }
+        }
+      ]
+    },
+    {
+      "parasha": "Vaera",
+      "ref": "Shemot 6:2-9:35",
+      "haftarah": "Yejezkel 28:25-29:21",
+      "principio": "De Ehye a Makot",
+      "caminos": [
+        {
+          "dia": 1,
+          "sefira": "Chesed",
+          "ramak_color": {
+            "hex": "#E8EAED"
+          },
+          "titulo": "VAERA",
+          "pasuk": {
+            "hebreo": "וָאֵרָא אֶל אַבְרָהָם",
+            "trans": "Vaera",
+            "ref": "6:3"
+          },
+          "voces": {
+            "rambam": "Rambam: Vaera es Havaya superior a El Shadai.",
+            "ramak": "Ramak plateado: Revelacion intima.",
+            "ramjal": "Ramjal: De promesa a cumplimiento.",
+            "rabiNajman": "Rabi Najman: Verte aunque no te veias."
+          },
+          "reflexion": "¿Que revelacion necesitas?",
+          "paraLlevar": {
+            "avoda": "Pide Vaera hoy.",
+            "kavana": "Vaera - Muestrate mas.",
+            "hitbodedut": "¿Que no veo?"
+          }
+        },
+        {
+          "dia": 2,
+          "sefira": "Gevurah",
+          "ramak_color": {
+            "hex": "#B85C38"
+          },
+          "titulo": "AKSHE",
+          "pasuk": {
+            "hebreo": "וַאֲנִי אַקְשֶׁה אֶת לֵב פַּרְעֹה",
+            "trans": "Akshe lev Paro",
+            "ref": "7:3"
+          },
+          "voces": {
+            "rambam": "Rambam Teshuva: Paro endurece por libre albedrio previo.",
+            "ramak": "Ramak oro rojizo: Corazon que se enfria.",
+            "ramjal": "Ramjal: Quitar teshuva por justicia.",
+            "rabiNajman": "Rabi Najman: Corazon endurecido."
+          },
+          "reflexion": "¿Donde se endurecio tu corazon?",
+          "paraLlevar": {
+            "avoda": "Ablanda corazon con llanto.",
+            "kavana": "Lev kasha - Ablando.",
+            "hitbodedut": "¿Donde me endureci?"
+          }
+        },
+        {
+          "dia": 3,
+          "sefira": "Tiferet",
+          "ramak_color": {
+            "hex": "#FFFBEB"
+          },
+          "titulo": "DAM",
+          "pasuk": {
+            "hebreo": "וְהַמַּיִם אֲשֶׁר בַּיְאוֹר יִהְיוּ לְדָם",
+            "trans": "Dam",
+            "ref": "7:17"
+          },
+          "voces": {
+            "rambam": "Rambam: Agua en sangre, fuente de vida se vuelve muerte si es de Paro.",
+            "ramak": "Ramak Tiferet: Vida que se revela.",
+            "ramjal": "Ramjal: Nilo dios falso se vuelve sangre.",
+            "rabiNajman": "Rabi Najman: Daat corrompida."
+          },
+          "reflexion": "¿Que agua se volvio sangre?",
+          "paraLlevar": {
+            "avoda": "Purifica fuente hoy.",
+            "kavana": "Dam - Agua vuelve a vida.",
+            "hitbodedut": "¿Que fuente contamine?"
+          }
+        },
+        {
+          "dia": 4,
+          "sefira": "Netzach",
+          "ramak_color": {
+            "hex": "#F9C6D0"
+          },
+          "titulo": "TZEFAREA",
+          "pasuk": {
+            "hebreo": "וַתַּעַל הַצְּפַרְדֵּעַ",
+            "trans": "Tzefarea",
+            "ref": "8:1"
+          },
+          "voces": {
+            "rambam": "Rambam: Ruido incesante.",
+            "ramak": "Ramak rosa claro: Perseverancia negativa.",
+            "ramjal": "Ramjal: Pensamiento que no deja dormir.",
+            "rabiNajman": "Rabi Najman: Charla vacia."
+          },
+          "reflexion": "¿Que ranas croan en tu cama?",
+          "paraLlevar": {
+            "avoda": "Silencia ranas 10 min.",
+            "kavana": "Tzefarea - Silencio ranas.",
+            "hitbodedut": "¿Que ruido no me deja?"
+          }
+        },
+        {
+          "dia": 5,
+          "sefira": "Hod",
+          "ramak_color": {
+            "hex": "#D46A8C"
+          },
+          "titulo": "KINIM",
+          "pasuk": {
+            "hebreo": "וַתְּהִי הַכִּנָּם",
+            "trans": "Kinim",
+            "ref": "8:13"
+          },
+          "voces": {
+            "rambam": "Rambam: Polvo que se vuelve vida.",
+            "ramak": "Ramak rosa oscuro: Detalles que pican.",
+            "ramjal": "Ramjal: Limite de magia.",
+            "rabiNajman": "Rabi Najman: Pensamientos pequeños que pican."
+          },
+          "reflexion": "¿Que piojos te pican?",
+          "paraLlevar": {
+            "avoda": "Limpia piojos mentales hoy.",
+            "kavana": "Kinim - Limpio piojos.",
+            "hitbodedut": "¿Que detalle pica?"
+          }
+        },
+        {
+          "dia": 6,
+          "sefira": "Yesod",
+          "ramak_color": {
+            "hex": "#E9A426"
+          },
+          "titulo": "BARAD",
+          "pasuk": {
+            "hebreo": "וַיַּמְטֵר ה' בָּרָד",
+            "trans": "Barad",
+            "ref": "9:23"
+          },
+          "voces": {
+            "rambam": "Rambam: Fuego dentro de hielo, une opuestos.",
+            "ramak": "Ramak curcuma: Milagro une opuestos.",
+            "ramjal": "Ramjal: Juicio con misericordia.",
+            "rabiNajman": "Rabi Najman: Amor y temor juntos."
+          },
+          "reflexion": "¿Sostienes fuego y hielo?",
+          "paraLlevar": {
+            "avoda": "Sostiene dos opuestos hoy.",
+            "kavana": "Barad - Fuego y hielo juntos.",
+            "hitbodedut": "¿Que opuestos sostengo?"
+          }
+        },
+        {
+          "dia": 7,
+          "sefira": "Malchut",
+          "ramak_color": {
+            "hex": "#1E2A5A"
+          },
+          "titulo": "KAVED LEV",
+          "pasuk": {
+            "hebreo": "וַיַּכְבֵּד פַּרְעֹה אֶת לִבּוֹ",
+            "trans": "Kaved lev",
+            "ref": "8:28"
+          },
+          "voces": {
+            "rambam": "Rambam: Paro endurece, Malchut cerrada.",
+            "ramak": "Ramak azul real: Realeza que no libera.",
+            "ramjal": "Ramjal: Cerrar Malchut a luz.",
+            "rabiNajman": "Rabi Najman: Corazon pesado galut."
+          },
+          "reflexion": "¿Donde endureces para no liberar?",
+          "paraLlevar": {
+            "avoda": "Ablanda Malchut hoy.",
+            "kavana": "Lev kaved - Aligero.",
+            "hitbodedut": "¿Donde peso corazon?"
+          }
+        }
+      ]
+    },
+    {
+      "parasha": "Bo",
+      "ref": "Shemot 10:1-13:16",
+      "haftarah": "Yirmiyahu 46:13-28",
+      "principio": "Ven, no ve",
+      "caminos": [
+        {
+          "dia": 1,
+          "sefira": "Chesed",
+          "ramak_color": {
+            "hex": "#E8EAED"
+          },
+          "titulo": "BO EL PARO",
+          "pasuk": {
+            "hebreo": "בֹּא אֶל פַּרְעֹה",
+            "trans": "Bo el Paro",
+            "ref": "10:1"
+          },
+          "voces": {
+            "rambam": "Rambam: Bo no Lej, ven conmigo, Dios entra contigo.",
+            "ramak": "Ramak plateado: Chesed entra contigo a casa Paro.",
+            "ramjal": "Ramjal: Bo es invitar a Dios a lucha.",
+            "rabiNajman": "Rabi Najman: Entrar a Paro interno con Hashem."
+          },
+          "reflexion": "¿A que Paro temes entrar solo?",
+          "paraLlevar": {
+            "avoda": "Entra hoy a tu Paro con Bo.",
+            "kavana": "Bo - Entro contigo.",
+            "hitbodedut": "¿A donde entrar con El?"
+          }
+        },
+        {
+          "dia": 2,
+          "sefira": "Gevurah",
+          "ramak_color": {
+            "hex": "#B85C38"
+          },
+          "titulo": "JOSHEJ",
+          "pasuk": {
+            "hebreo": "וַיְהִי חֹשֶׁךְ אֲפֵלָה",
+            "trans": "Joshej afela",
+            "ref": "10:22"
+          },
+          "voces": {
+            "rambam": "Rambam: Oscuridad que se palpa.",
+            "ramak": "Ramak oro rojizo: Oro vuelto oscuridad para opresor.",
+            "ramjal": "Ramjal: Medida por medida.",
+            "rabiNajman": "Rabi Najman: Falta de daat."
+          },
+          "reflexion": "¿Que oscuridad palpable atraviesas?",
+          "paraLlevar": {
+            "avoda": "Atraviesa 5 min oscuridad sin luz.",
+            "kavana": "Joshej - Atravieso oscuridad.",
+            "hitbodedut": "¿Que oscuridad palpo?"
+          }
+        },
+        {
+          "dia": 3,
+          "sefira": "Tiferet",
+          "ramak_color": {
+            "hex": "#FFFBEB"
+          },
+          "titulo": "JATZI LAILA",
+          "pasuk": {
+            "hebreo": "וַיְהִי בַּחֲצִי הַלַּיְלָה",
+            "trans": "Jatzi laila",
+            "ref": "12:29"
+          },
+          "voces": {
+            "rambam": "Rambam: Jatzot juicio y misericordia.",
+            "ramak": "Ramak Tiferet: Medianoche verdad que corta.",
+            "ramjal": "Ramjal: Jatzot revela Malchut.",
+            "rabiNajman": "Rabi Najman: Jatzot tikun levantarse."
+          },
+          "reflexion": "¿Te levantas a medianoche?",
+          "paraLlevar": {
+            "avoda": "Levantate 1 min medianoche hoy.",
+            "kavana": "Jatzi laila - Despierta.",
+            "hitbodedut": "¿Donde duermo geula?"
+          }
+        },
+        {
+          "dia": 4,
+          "sefira": "Netzach",
+          "ramak_color": {
+            "hex": "#F9C6D0"
+          },
+          "titulo": "PESAJ",
+          "pasuk": {
+            "hebreo": "וּפָסַח ה' עַל הַפֶּתַח",
+            "trans": "Pesaj",
+            "ref": "12:23"
+          },
+          "voces": {
+            "rambam": "Rambam: Pesaj es salto, Dios salta para salvar.",
+            "ramak": "Ramak rosa claro: Salto de amor.",
+            "ramjal": "Ramjal: Dios salta por amor.",
+            "rabiNajman": "Rabi Najman: Saltar logica."
+          },
+          "reflexion": "¿Donde necesitas salto?",
+          "paraLlevar": {
+            "avoda": "Salta sobre logica hoy.",
+            "kavana": "Pasaj - Salta sobre mi.",
+            "hitbodedut": "¿Donde necesito salto?"
+          }
+        },
+        {
+          "dia": 5,
+          "sefira": "Hod",
+          "ramak_color": {
+            "hex": "#D46A8C"
+          },
+          "titulo": "MATZA",
+          "pasuk": {
+            "hebreo": "וַיֹּאפוּ אֶת הַבָּצֵק מַצּוֹת",
+            "trans": "Matzot",
+            "ref": "12:39"
+          },
+          "voces": {
+            "rambam": "Rambam: Matza pan humildad sin ego.",
+            "ramak": "Ramak rosa oscuro: Humildad sin inflar.",
+            "ramjal": "Ramjal: Fe pura sin levadura intelecto.",
+            "rabiNajman": "Rabi Najman: Matza emuna."
+          },
+          "reflexion": "¿Pan matza o jametz?",
+          "paraLlevar": {
+            "avoda": "Come matza espiritual simple hoy.",
+            "kavana": "Matza - Pan humilde.",
+            "hitbodedut": "¿Donde me inflo?"
+          }
+        },
+        {
+          "dia": 6,
+          "sefira": "Yesod",
+          "ramak_color": {
+            "hex": "#E9A426"
+          },
+          "titulo": "KADESH LI",
+          "pasuk": {
+            "hebreo": "קַדֶּשׁ לִי כָל בְּכוֹר",
+            "trans": "Kadesh li",
+            "ref": "13:2"
+          },
+          "voces": {
+            "rambam": "Rambam Bejorot: Santificar primogenito fundamento.",
+            "ramak": "Ramak curcuma: Primer fruto para Dios.",
+            "ramjal": "Ramjal: Bejor fuerza padre, santificar raiz.",
+            "rabiNajman": "Rabi Najman: Santificar inicio."
+          },
+          "reflexion": "¿Santificas tu inicio?",
+          "paraLlevar": {
+            "avoda": "Santifica primer momento dia hoy.",
+            "kavana": "Kadesh - Santifico inicio.",
+            "hitbodedut": "¿Que inicio santifico?"
+          }
+        },
+        {
+          "dia": 7,
+          "sefira": "Malchut",
+          "ramak_color": {
+            "hex": "#1E2A5A"
+          },
+          "titulo": "VEHAYA KI",
+          "pasuk": {
+            "hebreo": "וְהָיָה כִּי יְבִיאֲךָ",
+            "trans": "Vehaya ki",
+            "ref": "13:11"
+          },
+          "voces": {
+            "rambam": "Rambam: Futuro Malchut promete tierra.",
+            "ramak": "Ramak azul real: Realeza promete futuro saliendo.",
+            "ramjal": "Ramjal: Salida para entrar.",
+            "rabiNajman": "Rabi Najman: Salir de Mitzrayim entrar a ti."
+          },
+          "reflexion": "¿Sales para entrar o escapas?",
+          "paraLlevar": {
+            "avoda": "Sal de algo para entrar a mayor hoy.",
+            "kavana": "Yotze - Salgo para entrar.",
+            "hitbodedut": "¿A donde entro?"
+          }
+        }
+      ]
+    },
+    {
+      "parasha": "Beshalaj",
+      "ref": "Shemot 13:17-17:16",
+      "haftarah": "Shoftim 4:4-5:31",
+      "principio": "Del mar a la queja",
+      "caminos": [
+        {
+          "dia": 1,
+          "sefira": "Chesed",
+          "ramak_color": {
+            "hex": "#E8EAED"
+          },
+          "titulo": "BESHLAJ",
+          "pasuk": {
+            "hebreo": "וַיְהִי בְּשַׁלַּח פַּרְעֹה",
+            "trans": "Beshalaj Paro",
+            "ref": "13:17"
+          },
+          "voces": {
+            "rambam": "Rambam: Soltar es Chesed que suelta aunque tema.",
+            "ramak": "Ramak plateado: Amor que suelta sin saber que haran.",
+            "ramjal": "Ramjal: Soltar es confiar.",
+            "rabiNajman": "Rabi Najman: Soltar control."
+          },
+          "reflexion": "¿Que sueltas aunque temas?",
+          "paraLlevar": {
+            "avoda": "Suelta un control hoy.",
+            "kavana": "Meshalaj - Suelto.",
+            "hitbodedut": "¿Que suelto?"
+          }
+        },
+        {
+          "dia": 2,
+          "sefira": "Gevurah",
+          "ramak_color": {
+            "hex": "#B85C38"
+          },
+          "titulo": "VAHAFOJ LEV",
+          "pasuk": {
+            "hebreo": "וַיַּהֲפֹךְ לְבַב פַּרְעֹה",
+            "trans": "Vayahafok levav",
+            "ref": "14:5"
+          },
+          "voces": {
+            "rambam": "Rambam: Paro se arrepiente soltar.",
+            "ramak": "Ramak oro rojizo: Corazon gira, oro a hierro.",
+            "ramjal": "Ramjal: Yetzer se arrepiente dejarte libre.",
+            "rabiNajman": "Rabi Najman: Paro persigue despues salir."
+          },
+          "reflexion": "¿Que Paro persigue?",
+          "paraLlevar": {
+            "avoda": "Reconoce Paro perseguidor hoy.",
+            "kavana": "Rodef - Persigue para volver.",
+            "hitbodedut": "¿Quien persigue?"
+          }
+        },
+        {
+          "dia": 3,
+          "sefira": "Tiferet",
+          "ramak_color": {
+            "hex": "#FFFBEB"
+          },
+          "titulo": "MA TITZAK",
+          "pasuk": {
+            "hebreo": "מַה תִּצְעַק אֵלָי",
+            "trans": "Ma titzak",
+            "ref": "14:15"
+          },
+          "voces": {
+            "rambam": "Rambam: Momento actuar no solo rezar.",
+            "ramak": "Ramak Tiferet: Deja de gritar y avanza.",
+            "ramjal": "Ramjal: Momento tefila y momento avanzar.",
+            "rabiNajman": "Rabi Najman: Dios dice avanza."
+          },
+          "reflexion": "¿Sigues gritando cuando avanzar?",
+          "paraLlevar": {
+            "avoda": "Avanza 1 paso donde solo gritabas.",
+            "kavana": "Titzak - Avanzo.",
+            "hitbodedut": "¿Donde avanzar?"
+          }
+        },
+        {
+          "dia": 4,
+          "sefira": "Netzach",
+          "ramak_color": {
+            "hex": "#F9C6D0"
+          },
+          "titulo": "VAYIBAKEU",
+          "pasuk": {
+            "hebreo": "וַיִּבָּקְעוּ הַמַּיִם",
+            "trans": "Vayibakeu",
+            "ref": "14:21"
+          },
+          "voces": {
+            "rambam": "Rambam: Kriyat Yam Suf rompe naturaleza.",
+            "ramak": "Ramak rosa claro: Mar que se parte, victoria rosa.",
+            "ramjal": "Ramjal: Tiferet abre Malchut.",
+            "rabiNajman": "Rabi Najman: Mar se parte cuando confias."
+          },
+          "reflexion": "¿Que mar se parte hoy?",
+          "paraLlevar": {
+            "avoda": "Cree que mar se parte y avanza.",
+            "kavana": "Beka - Mar se parte.",
+            "hitbodedut": "¿Que mar bloquea?"
+          }
+        },
+        {
+          "dia": 5,
+          "sefira": "Hod",
+          "ramak_color": {
+            "hex": "#D46A8C"
+          },
+          "titulo": "AZ YASHIR",
+          "pasuk": {
+            "hebreo": "אָז יָשִׁיר מֹשֶׁה",
+            "trans": "Az yashir",
+            "ref": "15:1"
+          },
+          "voces": {
+            "rambam": "Rambam: Shira despues milagro, Hod agradecer.",
+            "ramak": "Ramak rosa oscuro: Canto gratitud.",
+            "ramjal": "Ramjal: Shira es Hod reconoce milagro.",
+            "rabiNajman": "Rabi Najman: Sacar agua con alegria."
+          },
+          "reflexion": "¿Cantas despues milagro?",
+          "paraLlevar": {
+            "avoda": "Canta Az yashir por milagro reciente.",
+            "kavana": "Shira - Canto milagro.",
+            "hitbodedut": "¿Que milagro canto?"
+          }
+        },
+        {
+          "dia": 6,
+          "sefira": "Yesod",
+          "ramak_color": {
+            "hex": "#E9A426"
+          },
+          "titulo": "VAYILONU",
+          "pasuk": {
+            "hebreo": "וַיִּלּוֹנוּ הָעָם",
+            "trans": "Vayilonu",
+            "ref": "15:24"
+          },
+          "voces": {
+            "rambam": "Rambam: Queja olvido rapido.",
+            "ramak": "Ramak curcuma: Queja rompe fundamento.",
+            "ramjal": "Ramjal: Despues milagro viene queja prueba fe.",
+            "rabiNajman": "Rabi Najman: Queja falta emuna."
+          },
+          "reflexion": "¿Te quejas rapido despues milagro?",
+          "paraLlevar": {
+            "avoda": "No te quejes 1 dia, agradece.",
+            "kavana": "Lona - No me quejo.",
+            "hitbodedut": "¿Donde me quejo?"
+          }
+        },
+        {
+          "dia": 7,
+          "sefira": "Malchut",
+          "ramak_color": {
+            "hex": "#1E2A5A"
+          },
+          "titulo": "MILJAMA AMALEK",
+          "pasuk": {
+            "hebreo": "מִלְחָמָה לַה' בַּעֲמָלֵק",
+            "trans": "Miljama",
+            "ref": "17:16"
+          },
+          "voces": {
+            "rambam": "Rambam Melajim: Amalek odio gratuito.",
+            "ramak": "Ramak azul real: Guerra eterna contra crueldad.",
+            "ramjal": "Ramjal: Amalek duda enfria entusiasmo.",
+            "rabiNajman": "Rabi Najman: Amalek enfria despues Shira."
+          },
+          "reflexion": "¿Donde Amalek enfria?",
+          "paraLlevar": {
+            "avoda": "Borra Amalek hoy, pensamiento frio.",
+            "kavana": "Amalek - Borro frio.",
+            "hitbodedut": "¿Donde me enfrio?"
+          }
+        }
+      ]
+    },
+    {
+      "parasha": "Yitro",
+      "ref": "Shemot 18:1-20:23",
+      "haftarah": "Yeshayahu 6:1-13",
+      "principio": "De consejo a Sinaí - Escuchar para recibir",
+      "caminos": [
+        {
+          "dia": 1,
+          "sefira": "Chesed",
+          "ramak_color": {
+            "hex": "#E8EAED"
+          },
+          "titulo": "VAYISHMA YITRO",
+          "pasuk": {
+            "hebreo": "וַיִּשְׁמַע יִתְרוֹ",
+            "trans": "Vayishma Yitro",
+            "ref": "18:1"
+          },
+          "voces": {
+            "rambam": "Rambam: Yitro escucha y viene, escucha activa.",
+            "ramak": "Ramak plateado: Chesed que escucha de lejos y se acerca.",
+            "ramjal": "Ramjal: Escuchar es primer paso a Torá.",
+            "rabiNajman": "Rabi Najman: Escuchar noticia de Kriyat Yam Suf y venir."
+          },
+          "reflexion": "¿Escuchas de verdad?",
+          "paraLlevar": {
+            "avoda": "Escucha hoy una historia completa sin interrumpir.",
+            "kavana": "Shomea - Escucho y vengo.",
+            "hitbodedut": "¿A quien escucho?"
+          }
+        },
+        {
+          "dia": 2,
+          "sefira": "Gevurah",
+          "ramak_color": {
+            "hex": "#B85C38"
+          },
+          "titulo": "LO TOV",
+          "pasuk": {
+            "hebreo": "לֹא טוֹב הַדָּבָר אֲשֶׁר אַתָּה עֹשֶׂה",
+            "trans": "Lo tov",
+            "ref": "18:17"
+          },
+          "voces": {
+            "rambam": "Rambam Deot: No bueno hacer todo solo, Gevurah es delegar.",
+            "ramak": "Ramak oro rojizo: Oro que dice no bueno solo, necesitas limite y ayuda.",
+            "ramjal": "Ramjal: El líder que no delega se quema.",
+            "rabiNajman": "Rabi Najman: No bueno cargar solo."
+          },
+          "reflexion": "¿Donde haces todo solo?",
+          "paraLlevar": {
+            "avoda": "Delega hoy algo que haces solo.",
+            "kavana": "Lo tov - No bueno solo.",
+            "hitbodedut": "¿Donde no delego?"
+          }
+        },
+        {
+          "dia": 3,
+          "sefira": "Tiferet",
+          "ramak_color": {
+            "hex": "#FFFBEB"
+          },
+          "titulo": "VAJANE - Acampo",
+          "pasuk": {
+            "hebreo": "וַיַּחַן שָׁם יִשְׂרָאֵל נֶגֶד הָהָר",
+            "trans": "Vayijan sham",
+            "ref": "19:2"
+          },
+          "voces": {
+            "rambam": "Rambam: Vayijan singular, como un hombre con un corazón, Tiferet unidad.",
+            "ramak": "Ramak Tiferet: Blanco con rojo, unidad que permite recibir Torá.",
+            "ramjal": "Ramjal: Sin unidad no hay Torá.",
+            "rabiNajman": "Rabi Najman: Vayijan como un hombre, unidad para recibir."
+          },
+          "reflexion": "¿Estás unido o disperso antes de recibir?",
+          "paraLlevar": {
+            "avoda": "Une hoy tu corazón con tu gente, como un hombre.",
+            "kavana": "Yachad - Como un hombre un corazón.",
+            "hitbodedut": "¿Donde me divido?"
+          }
+        },
+        {
+          "dia": 4,
+          "sefira": "Netzach",
+          "ramak_color": {
+            "hex": "#F9C6D0"
+          },
+          "titulo": "ANOJI",
+          "pasuk": {
+            "hebreo": "אָנֹכִי ה' אֱלֹהֶיךָ",
+            "trans": "Anoji Hashem",
+            "ref": "20:2"
+          },
+          "voces": {
+            "rambam": "Rambam Yesodei: Anoji es fundamento, Netzach eterno.",
+            "ramak": "Ramak rosa claro: Victoria es Anoji, Yo soy tu Dios, rosa de presencia.",
+            "ramjal": "Ramjal: Anoji es revelación directa.",
+            "rabiNajman": "Rabi Najman: Anoji es yo soy contigo siempre."
+          },
+          "reflexion": "¿Escuchas Anoji en tu vida?",
+          "paraLlevar": {
+            "avoda": "Di Anoji hoy, Yo soy tu Dios aquí.",
+            "kavana": "Anoji - Yo soy tu Dios.",
+            "hitbodedut": "¿Donde olvido Anoji?"
+          }
+        },
+        {
+          "dia": 5,
+          "sefira": "Hod",
+          "ramak_color": {
+            "hex": "#D46A8C"
+          },
+          "titulo": "LO TIRTZAJ - No mates",
+          "pasuk": {
+            "hebreo": "לֹא תִּרְצָח",
+            "trans": "Lo tirtzaj",
+            "ref": "20:13"
+          },
+          "voces": {
+            "rambam": "Rambam: Lo tirtzaj es Hod, no asesinar ni con palabra.",
+            "ramak": "Ramak rosa oscuro: Esplendor que no mata con palabra.",
+            "ramjal": "Ramjal: Hod es no destruir vida.",
+            "rabiNajman": "Rabi Najman: No mates con lashon."
+          },
+          "reflexion": "¿Matas con palabra?",
+          "paraLlevar": {
+            "avoda": "No mates hoy con palabra, da vida con palabra.",
+            "kavana": "Lo tirtzaj - Doy vida.",
+            "hitbodedut": "¿Donde mato con palabra?"
+          }
+        },
+        {
+          "dia": 6,
+          "sefira": "Yesod",
+          "ramak_color": {
+            "hex": "#E9A426"
+          },
+          "titulo": "ZAJOR - Recuerda",
+          "pasuk": {
+            "hebreo": "זָכוֹר אֶת יוֹם הַשַּׁבָּת",
+            "trans": "Zajor et yom haShabat",
+            "ref": "20:8"
+          },
+          "voces": {
+            "rambam": "Rambam Shabat: Zajor es Yesod, recordar para conectar.",
+            "ramak": "Ramak curcuma: Fundamento que recuerda Shabat.",
+            "ramjal": "Ramjal: Zajor es conectar tiempo sagrado.",
+            "rabiNajman": "Rabi Najman: Zajor es recordar tu alma."
+          },
+          "reflexion": "¿Recuerdas Shabat o solo descansas?",
+          "paraLlevar": {
+            "avoda": "Recuerda Shabat hoy, aunque sea martes.",
+            "kavana": "Zajor - Recuerdo Shabat.",
+            "hitbodedut": "¿Que recuerdo?"
+          }
+        },
+        {
+          "dia": 7,
+          "sefira": "Malchut",
+          "ramak_color": {
+            "hex": "#1E2A5A"
+          },
+          "titulo": "KOLOT - Voces",
+          "pasuk": {
+            "hebreo": "וְכָל הָעָם רֹאִים אֶת הַקּוֹלֹת",
+            "trans": "Vejol haam roim et hakolot",
+            "ref": "20:15"
+          },
+          "voces": {
+            "rambam": "Rambam Moreh: Ver voces es sinestesia profetica, Malchut ve lo que oye.",
+            "ramak": "Ramak azul real: Realeza que ve voces, azul que escucha.",
+            "ramjal": "Ramjal: En Sinaí vieron lo que se oye.",
+            "rabiNajman": "Rabi Najman: Ver voces es ver tu tefila."
+          },
+          "reflexion": "¿Ves voces o solo oyes ruido?",
+          "paraLlevar": {
+            "avoda": "Ve hoy una voz, no solo la oigas.",
+            "kavana": "Roim kolot - Veo voces.",
+            "hitbodedut": "¿Que voz veo?"
+          }
+        }
+      ]
+    },
+    {
+      "parasha": "Mishpatim",
+      "ref": "Shemot 21:1-24:18",
+      "haftarah": "Yirmiyahu 34:8-22",
+      "principio": "De ley a corazón - Torá que baja a tierra",
+      "caminos": [
+        {
+          "dia": 1,
+          "sefira": "Chesed",
+          "ramak_color": {
+            "hex": "#E8EAED"
+          },
+          "titulo": "VE'ELE HAMISHPATIM",
+          "pasuk": {
+            "hebreo": "וְאֵלֶּה הַמִּשְׁפָּטִים",
+            "trans": "Ve'ele hamishpatim",
+            "ref": "21:1"
+          },
+          "voces": {
+            "rambam": "Rambam Sanhedrin: Mishpatim es justicia que baja a tierra.",
+            "ramak": "Ramak plateado: Chesed que se hace ley justa.",
+            "ramjal": "Ramjal: Sin Mishpatim no hay Torá en tierra.",
+            "rabiNajman": "Rabi Najman: Mishpatim es Torá que se hace practica."
+          },
+          "reflexion": "¿Tu justicia es jesed o venganza?",
+          "paraLlevar": {
+            "avoda": "Haz justicia con jesed hoy.",
+            "kavana": "Mishpat - Justicia con jesed.",
+            "hitbodedut": "¿Donde juzgo sin jesed?"
+          }
+        },
+        {
+          "dia": 2,
+          "sefira": "Gevurah",
+          "ramak_color": {
+            "hex": "#B85C38"
+          },
+          "titulo": "EIN TAJAT EIN",
+          "pasuk": {
+            "hebreo": "עַיִן תַּחַת עַיִן",
+            "trans": "Ein tajat ein",
+            "ref": "21:24"
+          },
+          "voces": {
+            "rambam": "Rambam: Ein tajat ein es dinero, no venganza literal, Gevurah medida.",
+            "ramak": "Ramak oro rojizo: Oro que mide, no quema sin medida.",
+            "ramjal": "Ramjal: Justicia medida, no venganza.",
+            "rabiNajman": "Rabi Najman: Ein tajat ein es mirar tu ojo interior."
+          },
+          "reflexion": "¿Mides justicia o te vengas?",
+          "paraLlevar": {
+            "avoda": "Mide hoy tu justicia, no venganza.",
+            "kavana": "Mida - Mido justicia.",
+            "hitbodedut": "¿Donde me vengo?"
+          }
+        },
+        {
+          "dia": 3,
+          "sefira": "Tiferet",
+          "ramak_color": {
+            "hex": "#FFFBEB"
+          },
+          "titulo": "IM KESEF TALVE",
+          "pasuk": {
+            "hebreo": "אִם כֶּסֶף תַּלְוֶה אֶת עַמִּי",
+            "trans": "Im kesef talve et ami",
+            "ref": "22:24"
+          },
+          "voces": {
+            "rambam": "Rambam Malve: Prestar sin interes es Tiferet, belleza de ayuda.",
+            "ramak": "Ramak Tiferet: Blanco con rojo, prestar con verdad y compasion.",
+            "ramjal": "Ramjal: Kesef talve es probar tu confianza.",
+            "rabiNajman": "Rabi Najman: Prestar es confiar."
+          },
+          "reflexion": "¿Prestas con interes emocional?",
+          "paraLlevar": {
+            "avoda": "Presta hoy sin esperar retorno.",
+            "kavana": "Talve - Presto sin interes.",
+            "hitbodedut": "¿Donde presto con interes?"
+          }
+        },
+        {
+          "dia": 4,
+          "sefira": "Netzach",
+          "ramak_color": {
+            "hex": "#F9C6D0"
+          },
+          "titulo": "LO TEVASHEL GDI",
+          "pasuk": {
+            "hebreo": "לֹא תְבַשֵּׁל גְּדִי בַּחֲלֵב אִמּוֹ",
+            "trans": "Lo tevashel gdi",
+            "ref": "23:19"
+          },
+          "voces": {
+            "rambam": "Rambam: Lo tevashel es separar, Netzach que separa para no crueldad.",
+            "ramak": "Ramak rosa claro: No mezclar vida y muerte, rosa que separa.",
+            "ramjal": "Ramjal: Separar leche y carne es educar compasion.",
+            "rabiNajman": "Rabi Najman: No cocinar gdi en leche de madre es no mezclar crueldad."
+          },
+          "reflexion": "¿Que mezclas que no debes?",
+          "paraLlevar": {
+            "avoda": "Separa hoy algo que mezclas y te hace cruel.",
+            "kavana": "Hafrada - Separo con compasion.",
+            "hitbodedut": "¿Que mezclo cruel?"
+          }
+        },
+        {
+          "dia": 5,
+          "sefira": "Hod",
+          "ramak_color": {
+            "hex": "#D46A8C"
+          },
+          "titulo": "NASE VENISHMA",
+          "pasuk": {
+            "hebreo": "נַעֲשֶׂה וְנִשְׁמָע",
+            "trans": "Naase venishma",
+            "ref": "24:7"
+          },
+          "voces": {
+            "rambam": "Rambam Yesodei: Naase venishma es Hod, hacer antes de entender, humildad.",
+            "ramak": "Ramak rosa oscuro: Esplendor es hacer antes de entender.",
+            "ramjal": "Ramjal: Naase venishma es nivel de angeles.",
+            "rabiNajman": "Rabi Najman: Hacer antes de entender es emuna."
+          },
+          "reflexion": "¿Haces antes de entender o entiendes para no hacer?",
+          "paraLlevar": {
+            "avoda": "Haz hoy sin entender todo.",
+            "kavana": "Naase - Hago antes de entender.",
+            "hitbodedut": "¿Donde espero entender para no hacer?"
+          }
+        },
+        {
+          "dia": 6,
+          "sefira": "Yesod",
+          "ramak_color": {
+            "hex": "#E9A426"
+          },
+          "titulo": "VAJAZU ET HAELOKIM",
+          "pasuk": {
+            "hebreo": "וַיֶּחֱזוּ אֶת הָאֱלֹהִים",
+            "trans": "Vayejezu et HaElokim",
+            "ref": "24:11"
+          },
+          "voces": {
+            "rambam": "Rambam Moreh: Vayejezu es vision profetica, Yesod que ve.",
+            "ramak": "Ramak curcuma: Fundamento que ve a Dios y come.",
+            "ramjal": "Ramjal: Ver y vivir, no morir.",
+            "rabiNajman": "Rabi Najman: Ver a Dios y seguir vivo es Yesod."
+          },
+          "reflexion": "¿Ves a Dios y sigues comiendo normal?",
+          "paraLlevar": {
+            "avoda": "Ve hoy a Dios en tu comida.",
+            "kavana": "Joezu - Veo y vivo.",
+            "hitbodedut": "¿Donde veo y sigo?"
+          }
+        },
+        {
+          "dia": 7,
+          "sefira": "Malchut",
+          "ramak_color": {
+            "hex": "#1E2A5A"
+          },
+          "titulo": "VA'AL MOSHE AMAR",
+          "pasuk": {
+            "hebreo": "וְאֶל מֹשֶׁה אָמַר עֲלֵה",
+            "trans": "Ve'el Moshe amar ale",
+            "ref": "24:1"
+          },
+          "voces": {
+            "rambam": "Rambam: Moshe sube solo, Malchut que sube a recibir.",
+            "ramak": "Ramak azul real: Realeza que sube 40 dias.",
+            "ramjal": "Ramjal: Subir es dejar abajo para recibir arriba.",
+            "rabiNajman": "Rabi Najman: Moshe sube solo, hitbodedut de 40 dias."
+          },
+          "reflexion": "¿Subes o te quedas abajo?",
+          "paraLlevar": {
+            "avoda": "Sube hoy 10 min solo a tu Har Sinai.",
+            "kavana": "Ale - Subo.",
+            "hitbodedut": "¿A donde subo?"
+          }
+        }
+      ]
+    },
+    {
+      "parasha": "Teruma",
+      "ref": "Shemot 25:1-27:19",
+      "haftarah": "Melajim I 5:26-6:13",
+      "principio": "Tomen para Mi - Donar para habitar",
+      "caminos": [
+        {
+          "dia": 1,
+          "sefira": "Chesed",
+          "ramak_color": {
+            "hex": "#E8EAED"
+          },
+          "titulo": "VEIKJU LI TERUMA",
+          "pasuk": {
+            "hebreo": "וְיִקְחוּ לִי תְּרוּמָה",
+            "trans": "Veikju li teruma",
+            "ref": "25:2"
+          },
+          "voces": {
+            "rambam": "Rambam: Veikju no vetnu, tomar para Mi, tomar es dar.",
+            "ramak": "Ramak plateado: Chesed que toma para dar, plateado que refleja.",
+            "ramjal": "Ramjal: Teruma es elevar donando.",
+            "rabiNajman": "Rabi Najman: Tomar para Mi es tomar tu corazon."
+          },
+          "reflexion": "¿Tomas para dar o das para tomar?",
+          "paraLlevar": {
+            "avoda": "Toma hoy algo para dar mas alto.",
+            "kavana": "Teruma - Tomo para elevar.",
+            "hitbodedut": "¿Que tomo para dar?"
+          }
+        },
+        {
+          "dia": 2,
+          "sefira": "Gevurah",
+          "ramak_color": {
+            "hex": "#B85C38"
+          },
+          "titulo": "MIKOL ISH",
+          "pasuk": {
+            "hebreo": "מֵאֵת כָּל אִישׁ אֲשֶׁר יִדְּבֶנּוּ לִבּוֹ",
+            "trans": "Me'et kol ish asher yidvenu libo",
+            "ref": "25:2"
+          },
+          "voces": {
+            "rambam": "Rambam: Yidvenu libo, corazon generoso, Gevurah que rompe tacañeria.",
+            "ramak": "Ramak oro rojizo: Oro que se da con corazon, Gevurah que abre mano.",
+            "ramjal": "Ramjal: Donar con corazon generoso.",
+            "rabiNajman": "Rabi Najman: Corazon generoso es tikkun."
+          },
+          "reflexion": "¿Tu corazon se deja donar?",
+          "paraLlevar": {
+            "avoda": "Dona hoy con corazon, no con calculo.",
+            "kavana": "Nediv lev - Corazon generoso.",
+            "hitbodedut": "¿Donde mi corazon es tacaño?"
+          }
+        },
+        {
+          "dia": 3,
+          "sefira": "Tiferet",
+          "ramak_color": {
+            "hex": "#FFFBEB"
+          },
+          "titulo": "VEASU LI MIKDASH",
+          "pasuk": {
+            "hebreo": "וְעָשׂוּ לִי מִקְדָּשׁ וְשָׁכַנְתִּי בְּתוֹכָם",
+            "trans": "Veasu li mikdash",
+            "ref": "25:8"
+          },
+          "voces": {
+            "rambam": "Rambam Beit HaBejira: Mikdash es lugar para Shejina, Tiferet que une cielo y tierra.",
+            "ramak": "Ramak Tiferet: Blanco con rojo, Mikdash que une, belleza que habita.",
+            "ramjal": "Ramjal: Veasu li, para Mi, no para ellos, pero veshajanti betojam, dentro de ellos.",
+            "rabiNajman": "Rabi Najman: Mikdash es tu corazon, hazme santuario dentro de ti."
+          },
+          "reflexion": "¿Haces Mikdash para que habite en ti?",
+          "paraLlevar": {
+            "avoda": "Haz hoy un Mikdash pequeño en tu casa, espacio sagrado.",
+            "kavana": "Mikdash - Hago lugar para que habite.",
+            "hitbodedut": "¿Donde habita en mi?"
+          }
+        },
+        {
+          "dia": 4,
+          "sefira": "Netzach",
+          "ramak_color": {
+            "hex": "#F9C6D0"
+          },
+          "titulo": "ARON - Arca",
+          "pasuk": {
+            "hebreo": "וְעָשׂוּ אֲרוֹן עֲצֵי שִׁטִּים",
+            "trans": "Veasu aron",
+            "ref": "25:10"
+          },
+          "voces": {
+            "rambam": "Rambam: Aron guarda Lujot, Netzach que guarda Torá para siempre.",
+            "ramak": "Ramak rosa claro: Arca que guarda, victoria que conserva.",
+            "ramjal": "Ramjal: Aron es corazon que guarda Torá.",
+            "rabiNajman": "Rabi Najman: Guarda Torá en tu aron interior."
+          },
+          "reflexion": "¿Que guardas en tu aron?",
+          "paraLlevar": {
+            "avoda": "Guarda hoy una Torá en tu corazon, memoriza un pasuk.",
+            "kavana": "Aron - Guardo Torá.",
+            "hitbodedut": "¿Que guardo?"
+          }
+        },
+        {
+          "dia": 5,
+          "sefira": "Hod",
+          "ramak_color": {
+            "hex": "#D46A8C"
+          },
+          "titulo": "KERUVIM - Querubines",
+          "pasuk": {
+            "hebreo": "וְעָשִׂיתָ שְׁנַיִם כְּרֻבִים",
+            "trans": "Veasita shnayim keruvim",
+            "ref": "25:18"
+          },
+          "voces": {
+            "rambam": "Rambam Moreh 3:45: Keruvim son niños con alas, inocencia y vuelo.",
+            "ramak": "Ramak rosa oscuro: Keruvim cara de niño, esplendor inocente.",
+            "ramjal": "Ramjal: Keruvim se miran cuando Israel hace voluntad de Dios.",
+            "rabiNajman": "Rabi Najman: Keruvim son amor de pareja que se mira."
+          },
+          "reflexion": "¿Tus keruvim se miran o se dan espalda?",
+          "paraLlevar": {
+            "avoda": "Mira hoy a tu pareja con cara keruv, inocencia.",
+            "kavana": "Keruvim - Nos miramos.",
+            "hitbodedut": "¿Como miro?"
+          }
+        },
+        {
+          "dia": 6,
+          "sefira": "Yesod",
+          "ramak_color": {
+            "hex": "#E9A426"
+          },
+          "titulo": "MENORA - Lampara",
+          "pasuk": {
+            "hebreo": "וְעָשִׂיתָ מְנֹרַת זָהָב טָהוֹר",
+            "trans": "Veasita menorat zahav",
+            "ref": "25:31"
+          },
+          "voces": {
+            "rambam": "Rambam: Menora es jojma, luz que ilumina, Yesod que irradia.",
+            "ramak": "Ramak curcuma: Menora oro puro, fundamento que ilumina sin consumirse.",
+            "ramjal": "Ramjal: Menora es Torá que ilumina.",
+            "rabiNajman": "Rabi Najman: Menora es tu cara que ilumina."
+          },
+          "reflexion": "¿Tu Menora ilumina o se apaga?",
+          "paraLlevar": {
+            "avoda": "Ilumina hoy a alguien con tu Menora, con palabra luz.",
+            "kavana": "Menora - Ilumino.",
+            "hitbodedut": "¿A quien ilumino?"
+          }
+        },
+        {
+          "dia": 7,
+          "sefira": "Malchut",
+          "ramak_color": {
+            "hex": "#1E2A5A"
+          },
+          "titulo": "YERIOT - Cortinas",
+          "pasuk": {
+            "hebreo": "וְאֶת הַמִּשְׁכָּן תַּעֲשֶׂה עֶשֶׂר יְרִיעֹת",
+            "trans": "Yeriot",
+            "ref": "26:1"
+          },
+          "voces": {
+            "rambam": "Rambam: Yeriot cubren Mikdash, Malchut que cubre y protege.",
+            "ramak": "Ramak azul real: Cortinas que cubren santuario, azul que protege.",
+            "ramjal": "Ramjal: Yeriot son vestiduras de Shejina.",
+            "rabiNajman": "Rabi Najman: Cubrir es tzniut."
+          },
+          "reflexion": "¿Cubres tu santuario o lo expones?",
+          "paraLlevar": {
+            "avoda": "Cubre hoy tu santuario interior con tzniut.",
+            "kavana": "Yeriot - Cubro mi santuario.",
+            "hitbodedut": "¿Que debo cubrir?"
+          }
+        }
+      ]
+    },
+    {
+      "parasha": "Tetzave",
+      "ref": "Shemot 27:20-30:10",
+      "haftarah": "Yejezkel 43:10-27",
+      "principio": "Tu ordenaras - Luz continua y vestidura",
+      "caminos": [
+        {
+          "dia": 1,
+          "sefira": "Chesed",
+          "ramak_color": {
+            "hex": "#E8EAED"
+          },
+          "titulo": "VEATA TETZAVE",
+          "pasuk": {
+            "hebreo": "וְאַתָּה תְּצַוֶּה",
+            "trans": "Veata tetzave",
+            "ref": "27:20"
+          },
+          "voces": {
+            "rambam": "Rambam: Veata tetzave, tu ordenas, Moshe ordena luz continua.",
+            "ramak": "Ramak plateado: Chesed que ordena luz continua, plateado que no se apaga.",
+            "ramjal": "Ramjal: Luz continua es ner tamid de alma.",
+            "rabiNajman": "Rabi Najman: Veata tetzave, tu ordenas tu luz."
+          },
+          "reflexion": "¿Ordenas tu luz continua o la dejas apagar?",
+          "paraLlevar": {
+            "avoda": "Ordena hoy tu ner tamid, luz que no se apaga.",
+            "kavana": "Ner tamid - Luz continua.",
+            "hitbodedut": "¿Donde mi luz se apaga?"
+          }
+        },
+        {
+          "dia": 2,
+          "sefira": "Gevurah",
+          "ramak_color": {
+            "hex": "#B85C38"
+          },
+          "titulo": "BIGDE KODESH - Vestiduras sagradas",
+          "pasuk": {
+            "hebreo": "וְעָשִׂיתָ בִגְדֵי קֹדֶשׁ",
+            "trans": "Veasita bigde kodesh",
+            "ref": "28:2"
+          },
+          "voces": {
+            "rambam": "Rambam Klei Mikdash: Bigde kodesh dan honor, Gevurah que viste con dignidad.",
+            "ramak": "Ramak oro rojizo: Vestidura oro que contiene y honra.",
+            "ramjal": "Ramjal: Ropa hace al Kohen, vestidura es conciencia.",
+            "rabiNajman": "Rabi Najman: Bigde kodesh son levushim de alma."
+          },
+          "reflexion": "¿Como vistes tu alma?",
+          "paraLlevar": {
+            "avoda": "Viste hoy tu alma con bigde kodesh, ropa digna.",
+            "kavana": "Bigde kodesh - Visto mi alma.",
+            "hitbodedut": "¿Como visto mi alma?"
+          }
+        },
+        {
+          "dia": 3,
+          "sefira": "Tiferet",
+          "ramak_color": {
+            "hex": "#FFFBEB"
+          },
+          "titulo": "VEHAYU AL AHARON",
+          "pasuk": {
+            "hebreo": "וְהָיוּ עַל אַהֲרֹן",
+            "trans": "Vehayu al Aharon",
+            "ref": "28:35"
+          },
+          "voces": {
+            "rambam": "Rambam: Paamonim y rimonim en meil, Tiferet sonido y fruto.",
+            "ramak": "Ramak Tiferet: Blanco con rojo, campana y granada, voz y fruto.",
+            "ramjal": "Ramjal: Sonido que avisa que Kohen entra, no entrar callado.",
+            "rabiNajman": "Rabi Najman: Paamon es voz que avisa."
+          },
+          "reflexion": "¿Entras con sonido o callado sin avisar?",
+          "paraLlevar": {
+            "avoda": "Entra hoy con sonido, avisa tu llegada con amor.",
+            "kavana": "Paamon - Sueno al entrar.",
+            "hitbodedut": "¿Como entro?"
+          }
+        },
+        {
+          "dia": 4,
+          "sefira": "Netzach",
+          "ramak_color": {
+            "hex": "#F9C6D0"
+          },
+          "titulo": "URIM VETUMIM",
+          "pasuk": {
+            "hebreo": "וְנָתַתָּ אֶל חֹשֶׁן הַמִּשְׁפָּט אֶת הָאוּרִים",
+            "trans": "Urim veTumim",
+            "ref": "28:30"
+          },
+          "voces": {
+            "rambam": "Rambam: Urim veTumim es luz y perfeccion, Netzach que ilumina juicio.",
+            "ramak": "Ramak rosa claro: Luz que responde preguntas, rosa que ilumina.",
+            "ramjal": "Ramjal: Urim veTumim es Ruaj HaKodesh en Joshen.",
+            "rabiNajman": "Rabi Najman: Urim es luz que aclara duda."
+          },
+          "reflexion": "¿Donde necesitas Urim veTumim hoy?",
+          "paraLlevar": {
+            "avoda": "Pide hoy luz para tu duda, Urim.",
+            "kavana": "Urim - Luz que aclara.",
+            "hitbodedut": "¿Que duda aclaro?"
+          }
+        },
+        {
+          "dia": 5,
+          "sefira": "Hod",
+          "ramak_color": {
+            "hex": "#D46A8C"
+          },
+          "titulo": "KAPARA - Expiacion",
+          "pasuk": {
+            "hebreo": "וְכִפֶּר אַהֲרֹן עַל קַרְנֹתָיו",
+            "trans": "Vejiper Aharon",
+            "ref": "30:10"
+          },
+          "voces": {
+            "rambam": "Rambam Teshuva: Kapara es Hod, reconocer y limpiar.",
+            "ramak": "Ramak rosa oscuro: Expiacion rosa que limpia altar.",
+            "ramjal": "Ramjal: Kapara es volver a blanco.",
+            "rabiNajman": "Rabi Najman: Kapara es volver a empezar."
+          },
+          "reflexion": "¿Donde necesitas kapara hoy?",
+          "paraLlevar": {
+            "avoda": "Haz kapara hoy: reconoce, limpia, empieza.",
+            "kavana": "Kapara - Limpio mi altar.",
+            "hitbodedut": "¿Que limpio?"
+          }
+        },
+        {
+          "dia": 6,
+          "sefira": "Yesod",
+          "ramak_color": {
+            "hex": "#E9A426"
+          },
+          "titulo": "TAMID - Continuo",
+          "pasuk": {
+            "hebreo": "עֹלַת תָּמִיד",
+            "trans": "Olat tamid",
+            "ref": "29:42"
+          },
+          "voces": {
+            "rambam": "Rambam Temidin: Tamid es sacrificio continuo mañana y tarde, Yesod continuo.",
+            "ramak": "Ramak curcuma: Fundamento continuo, no intermitente.",
+            "ramjal": "Ramjal: Tamid es constancia, Yesod es constancia.",
+            "rabiNajman": "Rabi Najman: Tamid es hacer aunque pequeño, pero continuo."
+          },
+          "reflexion": "¿Eres tamid o intermitente?",
+          "paraLlevar": {
+            "avoda": "Haz hoy tamid: algo pequeño continuo mañana y tarde.",
+            "kavana": "Tamid - Continuo.",
+            "hitbodedut": "¿Donde soy intermitente?"
+          }
+        },
+        {
+          "dia": 7,
+          "sefira": "Malchut",
+          "ramak_color": {
+            "hex": "#1E2A5A"
+          },
+          "titulo": "MIZBEAJ HAKTORET - Altar incienso",
+          "pasuk": {
+            "hebreo": "וְעָשִׂיתָ מִזְבֵּחַ מִקְטַר קְטֹרֶת",
+            "trans": "Mizbeaj haktoret",
+            "ref": "30:1"
+          },
+          "voces": {
+            "rambam": "Rambam: Ketoret une, Malchut que une con aroma.",
+            "ramak": "Ramak azul real: Incienso azul que sube, realeza que perfuma.",
+            "ramjal": "Ramjal: Ketoret es union de opuestos, 11 especias.",
+            "rabiNajman": "Rabi Najman: Ketoret es tefila que sube con aroma."
+          },
+          "reflexion": "¿Tu tefila es ketoret o queja?",
+          "paraLlevar": {
+            "avoda": "Haz hoy ketoret: tefila con aroma, con gratitud.",
+            "kavana": "Ketoret - Mi tefila aroma.",
+            "hitbodedut": "¿Como huele mi tefila?"
+          }
+        }
+      ]
+    }
+  ],
+  "auditoria": {
+    "fecha": "2026-05-13",
+    "nota": "Normalizacion tecnica sin invencion editorial",
+    "issues_detectados": [
+      "Lej Lejá tiene solo 1 camino, faltan 6 para completar 7 - NO inventados, se deja incompleto",
+      "Noaj y Lej Lejá no traian campo parasha y estaban al final del JSON - corregido explicitamente por referencia",
+      "Bereshit usaba 'referencia' vs 'ref' - normalizado a 'ref'",
+      "ramak_color como objeto vs HEX vs color - normalizado a campo 'ramak_color' con objeto {hex} cuando era string",
+      "pasuk como texto simple vs objeto - normalizado a objeto {hebreo: texto original}"
+    ],
+    "lej_leja_estado": "INCOMPLETO - 1/7 caminos presentes. 6 caminos faltantes no inventados.",
+    "noaj_estado": "Completo 7/7 pero con normalizacion tecnica",
+    "bereshit_estado": "Normalizado referencia->ref, mantiene ramak_color objeto completo"
+  }
+}

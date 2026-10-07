@@ -1,115 +1,497 @@
+/* CAMINO v2.2 · Caminos Diarios · Edición Ramak */
 const screens=[...document.querySelectorAll('[data-screen]')];
-const DATA=window.DEREJ_ENCUENTROS_V21;
-const stepOrder=['encuentro','raiz','profundizar','practica','llevar'];
-let selectedEncounter=1;
-let selectedChoiceId='';
 const $=id=>document.getElementById(id);
+const RAMAK_URL='content/caminos-ramak-v21.json';
+const caminoScreen=document.querySelector('[data-screen="camino"]');
+
+let RAMAK_DATA=null;
+let selectedParasha='Bereshit';
+let selectedDay=1;
+let selectedRamakStep='encuentro';
+let ramakLoadError='';
 
 function route(name){
-  screens.forEach(s=>{const on=s.dataset.screen===name;s.hidden=!on;s.classList.toggle('active',on)});
-  if(name==='camino') { renderEncounter(selectedEncounter,false); activateStep('encuentro',false); }
+  screens.forEach(s=>{
+    const on=s.dataset.screen===name;
+    s.hidden=!on;
+    s.classList.toggle('active',on);
+  });
+  if(name==='camino'){
+    if(RAMAK_DATA) renderRamak(false);
+    else if(ramakLoadError) renderRamakError();
+  }
   window.scrollTo({top:0,behavior:'instant'});
 }
-function activateStep(step,scroll=true){
-  document.querySelectorAll('.threshold').forEach(b=>b.classList.toggle('on',b.dataset.step===step));
-  document.querySelectorAll('.stepPanel').forEach(p=>p.classList.toggle('on',p.dataset.panel===step));
-  document.querySelector('.threshold.on')?.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
-  if(scroll) document.querySelector('.thresholdRail')?.scrollIntoView({behavior:'smooth',block:'start'});
-  if(step==='llevar') syncCarry();
+
+function esc(v=''){
+  return String(v??'').replace(/[&<>"']/g,ch=>({
+    '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+  }[ch]));
 }
-function splitShoresh(value=''){
-  const parts=value.split('·').map(s=>s.trim());
-  return {he:parts[0]||value,tr:parts.slice(1).join(' · ')};
+
+function slug(v=''){
+  return String(v).normalize('NFD').replace(/[\u0300-\u036f]/g,'')
+    .toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 }
-function encounterByNum(num){ return DATA.encounters.find(e=>e.num===Number(num)) || DATA.encounters[0]; }
-function weekForEncounter(enc){ return DATA.weeks.find(w=>w.nombre===enc.parasha); }
-function memoryKey(num){ return `derej-v21-encuentro-${num}`; }
-function loadMemory(num){ try{return JSON.parse(localStorage.getItem(memoryKey(num))||'null')}catch{return null} }
-function saveDraft(){
-  const note=$('practiceNote')?.value.trim()||'';
-  const existing=loadMemory(selectedEncounter)||{};
-  const data={...existing,encounter:selectedEncounter,choiceId:selectedChoiceId,note,updatedAt:new Date().toISOString()};
-  try{localStorage.setItem(memoryKey(selectedEncounter),JSON.stringify(data));}catch{}
+
+function luminanceText(hex='#E8EAED'){
+  const h=String(hex).replace('#','');
+  if(!/^[0-9a-f]{6}$/i.test(h)) return '#1F2937';
+  const [r,g,b]=[0,2,4].map(i=>parseInt(h.slice(i,i+2),16));
+  const y=(r*299+g*587+b*114)/1000;
+  return y<145?'#FFFBEB':'#1F2937';
 }
-function renderTabs(enc){
-  const names=['Bereshit','Noaj','Lej Lejá'];
-  $('parashaTabs').innerHTML=names.map(name=>{
-    const week=DATA.weeks.find(w=>w.nombre===name);
-    const on=name===enc.parasha;
-    return `<button type="button" role="tab" class="parashaTab${on?' on':''}" data-parasha="${name}" aria-selected="${on}"><span>${week?.heb||''}</span><b>${name}</b></button>`;
+
+function memoryKey(parasha,day){
+  return `derej-v21-encuentro-ramak-${slug(parasha)}-${day}`;
+}
+
+function loadRamakMemory(parasha,day){
+  try{return JSON.parse(localStorage.getItem(memoryKey(parasha,day))||'null');}
+  catch{return null;}
+}
+
+function currentParasha(){
+  if(!RAMAK_DATA) return null;
+  return RAMAK_DATA.parashot.find(p=>p.parasha===selectedParasha)||RAMAK_DATA.parashot[0];
+}
+
+function currentCamino(){
+  const p=currentParasha();
+  if(!p) return null;
+  return p.caminos.find(c=>Number(c.dia)===Number(selectedDay))||p.caminos[0]||null;
+}
+
+function saveRamakDraft(){
+  const p=currentParasha(), c=currentCamino();
+  if(!p||!c) return;
+  const note=$('ramakNote')?.value.trim()||'';
+  const existing=loadRamakMemory(p.parasha,c.dia)||{};
+  const draft={
+    ...existing,
+    schema:'ramak-v21',
+    edition:'Edición Ramak',
+    parasha:p.parasha,
+    dia:c.dia,
+    titulo:c.titulo,
+    sefira:c.sefira,
+    note,
+    updatedAt:new Date().toISOString()
+  };
+  try{localStorage.setItem(memoryKey(p.parasha,c.dia),JSON.stringify(draft));}catch{}
+}
+
+function prepareCaminoShell(){
+  if(!caminoScreen) return;
+  caminoScreen.className='screen caminoScreen ramakCaminoScreen';
+  caminoScreen.setAttribute('aria-labelledby','caminoTitle');
+  caminoScreen.innerHTML=`
+    <button class="backBtn floatingBack" data-route="home">← Patio</button>
+
+    <section class="caminoPortalHero ramakHero">
+      <div class="heroScrim"></div>
+      <div class="heroCopy">
+        <span class="eyebrow">CAMINO · EDICIÓN RAMAK</span>
+        <span class="heroHebrew" aria-hidden="true">דרך</span>
+        <h1 id="caminoTitle">Caminos Diarios</h1>
+        <p class="weekTitle">Bereshit a Tetzavé</p>
+        <p class="heroEditorial">Una voz antigua. Una pregunta para hoy. Una práctica para llevar.</p>
+        <button class="heroEnter" type="button" data-ramak-scroll="ramakChooser">Elegir un Camino <span>↓</span></button>
+      </div>
+    </section>
+
+    <section class="ramakChooser" id="ramakChooser" aria-labelledby="ramakChooserTitle">
+      <header class="ramakChooserHead">
+        <span>20 PARASHOT · 134 CAMINOS</span>
+        <h2 id="ramakChooserTitle">Edición Ramak</h2>
+        <p>Recorre una Parashá, elige un día y entra por cinco umbrales: Encuentro, Raíz, Profundizar, Práctica y Llevar.</p>
+      </header>
+
+      <div class="ramakParashaRail" id="ramakParashaRail" role="tablist" aria-label="Elegir Parashá"></div>
+
+      <article class="ramakWeekCard">
+        <div>
+          <small id="ramakWeekIndex">PARASHÁ 01 DE 20</small>
+          <h3 id="ramakParashaTitle">Bereshit</h3>
+          <p id="ramakPrinciple"></p>
+        </div>
+        <div class="ramakRefs">
+          <span id="ramakTorahRef"></span>
+          <span id="ramakHaftarahRef"></span>
+        </div>
+      </article>
+
+      <div class="ramakDayStrip" id="ramakDayStrip" aria-label="Elegir día"></div>
+
+      <div class="ramakIncomplete" id="ramakIncomplete" hidden></div>
+
+      <div class="ramakSelectedBanner">
+        <span class="ramakColorOrb" id="ramakColorOrb" aria-hidden="true"></span>
+        <div>
+          <small id="ramakSelectedMeta">DÍA 1 · BERESHIT · CHESED</small>
+          <b id="ramakSelectedTitle">OR</b>
+        </div>
+        <button type="button" data-ramak-step="encuentro">Entrar →</button>
+      </div>
+    </section>
+
+    <nav class="ramakThresholdRail" aria-label="Recorrido del Camino">
+      <button class="ramakThreshold on" type="button" data-ramak-step="encuentro"><span>01</span><b>Encuentro</b></button>
+      <button class="ramakThreshold" type="button" data-ramak-step="raiz"><span>02</span><b>Raíz</b></button>
+      <button class="ramakThreshold" type="button" data-ramak-step="profundizar"><span>03</span><b>Profundizar</b></button>
+      <button class="ramakThreshold" type="button" data-ramak-step="practica"><span>04</span><b>Práctica</b></button>
+      <button class="ramakThreshold" type="button" data-ramak-step="llevar"><span>05</span><b>Llevar</b></button>
+    </nav>
+
+    <div class="ramakPanels">
+      <article class="ramakPanel on" data-ramak-panel="encuentro"></article>
+      <article class="ramakPanel" data-ramak-panel="raiz"></article>
+      <article class="ramakPanel" data-ramak-panel="profundizar"></article>
+      <article class="ramakPanel" data-ramak-panel="practica"></article>
+      <article class="ramakPanel" data-ramak-panel="llevar"></article>
+    </div>
+  `;
+
+  if(!document.getElementById('ramakCaminoStyles')){
+    const style=document.createElement('style');
+    style.id='ramakCaminoStyles';
+    style.textContent=`
+      .ramakCaminoScreen{--ramak-accent:#E8EAED;--ramak-ink:#1F2937}
+      .ramakHero:after{content:"";position:absolute;inset:auto 0 0;height:8px;background:var(--ramak-accent);opacity:.72}
+      .ramakChooser{padding:31px 12px 18px;background:linear-gradient(180deg,#efe2ca,#f7ecda 48%,#ece0c8);scroll-margin-top:66px}
+      .ramakChooserHead{text-align:center;max-width:42rem;margin:0 auto 21px}
+      .ramakChooserHead>span{font-size:.58rem;letter-spacing:.2em;font-weight:900;color:#786847}
+      .ramakChooserHead h2{font:clamp(2rem,8vw,3rem)/1 Georgia,serif;margin:.34em 0 .2em;color:#312b24}
+      .ramakChooserHead p{margin:0 auto;max-width:36rem;color:#6d6253;font:.9rem/1.48 Georgia,serif}
+      .ramakParashaRail{display:flex;gap:7px;overflow-x:auto;padding:3px 1px 11px;scrollbar-width:none;scroll-snap-type:x proximity}
+      .ramakParashaRail::-webkit-scrollbar,.ramakThresholdRail::-webkit-scrollbar{display:none}
+      .ramakParashaTab{scroll-snap-align:start;flex:0 0 auto;min-width:108px;border:1px solid #c8b99d;border-radius:17px;background:#fff5e3;color:#4d4337;padding:9px 10px;text-align:left}
+      .ramakParashaTab small{display:block;font-size:.51rem;letter-spacing:.12em;color:#887655;margin-bottom:3px}
+      .ramakParashaTab b{font:.92rem Georgia,serif}
+      .ramakParashaTab.on{background:#354532;color:#fff;border-color:#354532;box-shadow:0 7px 18px rgba(53,69,50,.17)}
+      .ramakParashaTab.on small{color:#ead39c}
+      .ramakWeekCard{display:grid;gap:12px;padding:17px;border:1px solid #cdbd9f;border-left:6px solid var(--ramak-accent);border-radius:22px;background:#fff7e9;box-shadow:0 10px 26px rgba(58,45,28,.06)}
+      .ramakWeekCard small{font-size:.56rem;letter-spacing:.16em;font-weight:900;color:#7c6b4b}
+      .ramakWeekCard h3{font:clamp(1.85rem,7vw,2.5rem)/1 Georgia,serif;margin:.25em 0 .14em;color:#352e26}
+      .ramakWeekCard p{margin:0;color:#6d6255;font:.9rem/1.4 Georgia,serif}
+      .ramakRefs{display:flex;flex-wrap:wrap;gap:7px}
+      .ramakRefs span{display:inline-flex;padding:7px 9px;border-radius:999px;background:#eee5d4;color:#6d604d;font-size:.61rem;font-weight:750}
+      .ramakDayStrip{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:5px;margin:11px 0}
+      .ramakDay{min-width:0;border:1px solid #c7b89d;border-radius:13px;background:#fff6e7;color:#4e4437;padding:9px 2px;font-size:.63rem;font-weight:900}
+      .ramakDay.on{background:var(--ramak-accent);color:var(--ramak-ink);border-color:color-mix(in srgb,var(--ramak-accent),#56462f 28%);box-shadow:0 5px 14px color-mix(in srgb,var(--ramak-accent),transparent 65%)}
+      .ramakDay.missing{opacity:.32;border-style:dashed}
+      .ramakIncomplete{margin:4px 0 11px;padding:11px 12px;border:1px dashed #bba27a;border-radius:15px;background:#f5ead7;color:#756346;font:.76rem/1.42 Georgia,serif}
+      .ramakSelectedBanner{display:grid;grid-template-columns:44px 1fr auto;gap:10px;align-items:center;padding:13px;border:1px solid #cdbd9f;border-radius:19px;background:#312f28;color:#f2e2c3}
+      .ramakColorOrb{width:42px;height:42px;border-radius:50%;background:var(--ramak-accent);box-shadow:0 0 0 3px rgba(255,255,255,.08),0 0 24px color-mix(in srgb,var(--ramak-accent),transparent 52%)}
+      .ramakSelectedBanner small{display:block;font-size:.52rem;letter-spacing:.11em;color:#d7c6a8;margin-bottom:4px}
+      .ramakSelectedBanner b{display:block;font:1.02rem/1.16 Georgia,serif;color:#fff0d5}
+      .ramakSelectedBanner button{border:1px solid #b9a27a;border-radius:999px;background:#f0e2c8;color:#352d24;padding:9px 11px;font-size:.66rem;font-weight:900}
+      .ramakThresholdRail{position:sticky;top:58px;z-index:20;display:flex;gap:7px;overflow-x:auto;padding:10px 12px;background:linear-gradient(180deg,rgba(239,226,202,.97),rgba(239,226,202,.91));backdrop-filter:blur(12px);border-bottom:1px solid rgba(131,111,78,.18);scrollbar-width:none}
+      .ramakThreshold{flex:0 0 auto;min-width:91px;border:1px solid #c6b99f;border-radius:18px;background:#f8edda;color:#4a4135;padding:8px 10px;display:grid;gap:2px;text-align:left}
+      .ramakThreshold span{font-size:.54rem;color:#8a7452}.ramakThreshold b{font-size:.74rem}
+      .ramakThreshold.on{background:#354532;color:#fff;border-color:#354532;box-shadow:0 5px 14px rgba(53,69,50,.18)}
+      .ramakThreshold.on span{color:var(--ramak-accent)}
+      .ramakPanels{padding:12px;background:linear-gradient(180deg,#eadcc3,#f1e5d0)}
+      .ramakPanel{display:none;overflow:hidden;border:1px solid #d1c1a5;border-top:5px solid var(--ramak-accent);border-radius:29px;background:#fff7e8;box-shadow:0 14px 34px rgba(61,46,26,.09)}
+      .ramakPanel.on{display:block}
+      .ramakScene{position:relative;height:190px;padding:15px;background-image:linear-gradient(180deg,rgba(7,10,8,.08),rgba(7,10,8,.75)),url('assets/home-courtyard-v21.webp');background-size:cover;background-position:50% 56%;color:#fff1d5}
+      .ramakScene:after{content:"";position:absolute;left:0;right:0;bottom:0;height:5px;background:var(--ramak-accent)}
+      .ramakSceneTop{display:flex;justify-content:space-between;gap:10px}
+      .ramakSceneBadge{display:inline-flex;align-items:center;min-height:38px;padding:7px 10px;border:1px solid rgba(255,234,198,.58);border-radius:999px;background:rgba(10,14,10,.46);font-size:.6rem;letter-spacing:.12em;font-weight:900;backdrop-filter:blur(4px)}
+      .ramakSceneTitle{position:absolute;left:17px;right:17px;bottom:19px}
+      .ramakSceneTitle small{font-size:.57rem;letter-spacing:.15em;color:#ead5aa;font-weight:900}
+      .ramakSceneTitle h2{font:clamp(2rem,8.5vw,3rem)/.96 Georgia,serif;margin:.25em 0 0;color:#fff2d8;text-shadow:0 2px 16px #000}
+      .ramakBody{padding:18px}
+      .ramakBodyEyebrow{font-size:.58rem;letter-spacing:.15em;font-weight:900;color:#796947}
+      .ramakReflection{margin:13px 0 0;padding:16px;border-left:5px solid var(--ramak-accent);border-radius:17px;background:color-mix(in srgb,var(--ramak-accent),#fff8e9 82%)}
+      .ramakReflection small,.ramakCard small,.ramakVoice small{display:block;font-size:.55rem;letter-spacing:.14em;font-weight:900;color:#6d654f;margin-bottom:6px}
+      .ramakReflection p{margin:0;font:1.14rem/1.48 Georgia,serif;color:#383129}
+      .ramakHebrew{direction:rtl;text-align:center;font:clamp(1.8rem,8vw,2.7rem)/1.35 Georgia,serif;color:#33402f;margin:7px 0 15px}
+      .ramakPasukMeta{display:grid;gap:7px;margin-bottom:14px}
+      .ramakPasukMeta span{padding:10px 12px;border:1px solid #d3c3aa;border-radius:14px;background:#f7eedf;color:#5f5548;font:.84rem/1.35 Georgia,serif}
+      .ramakVoices{display:grid;gap:9px}
+      .ramakVoice{padding:14px;border:1px solid #d0c0a5;border-radius:17px;background:#faf1e2}
+      .ramakVoice b{font:1.02rem Georgia,serif;color:#3b332a}
+      .ramakVoice p{margin:.45rem 0 0;color:#665c4f;font:.86rem/1.48 Georgia,serif}
+      .ramakCard{padding:16px;border:1px solid #d0c0a5;border-radius:18px;background:#f8efdf}
+      .ramakCard strong{font:1.16rem/1.42 Georgia,serif;color:#393128}
+      .ramakCard p{margin:.6rem 0 0;color:#655b4e;font:.88rem/1.5 Georgia,serif}
+      .ramakPractice{background:color-mix(in srgb,var(--ramak-accent),#f8efdf 88%)}
+      .ramakBody label{display:block;margin:15px 0 7px;font-size:.7rem;font-weight:850;color:#655b4c}
+      .ramakBody textarea{width:100%;box-sizing:border-box;resize:vertical;border:1px solid #c7b89c;border-radius:15px;background:#fffdf7;color:#342e26;padding:12px;font:1rem/1.45 Georgia,serif;outline:none}
+      .ramakBody textarea:focus{border-color:var(--ramak-accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--ramak-accent),transparent 78%)}
+      .ramakCarryGrid{display:grid;gap:9px}
+      .ramakKavana{background:#302f29;color:#f1dfbc;border-color:#302f29}
+      .ramakKavana small{color:#d6bd84}.ramakKavana strong,.ramakKavana p{color:#f2e1c0}
+      .ramakNav{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:15px}
+      .ramakNav button,.ramakSave{border:1px solid #9e8b6c;border-radius:14px;background:#fff5e6;color:#42392f;padding:11px 9px;font-size:.7rem;font-weight:900}
+      .ramakSave{width:100%;margin-top:12px;background:#40523d;color:#fff;border-color:#40523d}
+      .ramakSaveStatus{min-height:1rem;margin:8px 0 0;text-align:center;font-size:.64rem;color:#6b735d}
+      .ramakLoading{padding:42px 18px;text-align:center;color:#6f6250;font:1rem/1.5 Georgia,serif}
+      @media(min-width:760px){
+        .ramakChooser{padding:38px 24px 24px}.ramakWeekCard{grid-template-columns:1fr auto;align-items:end}
+        .ramakVoices{grid-template-columns:1fr 1fr}.ramakPanels{padding:18px}.ramakBody{padding:25px}
+      }
+      @media(max-width:390px){
+        .ramakDayStrip{gap:3px}.ramakDay{padding:8px 1px;font-size:.58rem}
+        .ramakSelectedBanner{grid-template-columns:38px 1fr}.ramakSelectedBanner button{grid-column:1/-1;width:100%}
+        .ramakColorOrb{width:36px;height:36px}
+      }
+    `;
+    document.head.appendChild(style);
+  }
+}
+
+function renderParashaRail(){
+  const host=$('ramakParashaRail');
+  if(!host||!RAMAK_DATA) return;
+  host.innerHTML=RAMAK_DATA.parashot.map((p,i)=>`
+    <button type="button" role="tab" class="ramakParashaTab${p.parasha===selectedParasha?' on':''}"
+      data-ramak-parasha="${esc(p.parasha)}" aria-selected="${p.parasha===selectedParasha}">
+      <small>${String(i+1).padStart(2,'0')}</small><b>${esc(p.parasha)}</b>
+    </button>
+  `).join('');
+}
+
+function renderDayStrip(p,c){
+  const host=$('ramakDayStrip');
+  host.innerHTML=Array.from({length:7},(_,i)=>{
+    const day=i+1, found=p.caminos.find(x=>Number(x.dia)===day);
+    return `<button type="button" class="ramakDay${found&&day===Number(c.dia)?' on':''}${found?'':' missing'}"
+      data-ramak-day="${day}" ${found?'':'disabled'} aria-label="${found?`Día ${day}: ${esc(found.titulo)}`:`Día ${day}: no disponible`}">D${day}</button>`;
   }).join('');
 }
-function renderStrip(enc){
-  const list=DATA.encounters.filter(e=>e.parasha===enc.parasha);
-  $('encounterStrip').innerHTML=list.map(e=>`<button type="button" class="encounterChip${e.num===enc.num?' on':''}" data-encounter="${e.num}"><small>${e.num}</small><b>${e.aliyah.split('·')[0].trim()}</b></button>`).join('');
+
+function activateRamakStep(step,scroll=true){
+  selectedRamakStep=step;
+  caminoScreen?.querySelectorAll('[data-ramak-step]').forEach(b=>{
+    if(b.classList.contains('ramakThreshold')) b.classList.toggle('on',b.dataset.ramakStep===step);
+  });
+  caminoScreen?.querySelectorAll('[data-ramak-panel]').forEach(p=>p.classList.toggle('on',p.dataset.ramakPanel===step));
+  if(scroll) caminoScreen?.querySelector('.ramakThresholdRail')?.scrollIntoView({behavior:'smooth',block:'start'});
 }
-function renderRoadmap(){
-  $('roadmapGrid').innerHTML=DATA.roadmap.map(r=>`<article class="roadmapCard"><small>DÍAS ${r.dias}</small><b>${r.parasha}</b><em>${r.tema}</em><p>${r.preguntaMadre}</p></article>`).join('');
+
+function navButtons(step){
+  const order=['encuentro','raiz','profundizar','practica','llevar'];
+  const i=order.indexOf(step);
+  const prev=i>0?`<button type="button" data-ramak-step="${order[i-1]}">← ${['Encuentro','Raíz','Profundizar','Práctica','Llevar'][i-1]}</button>`:'<span></span>';
+  const next=i<order.length-1?`<button type="button" data-ramak-step="${order[i+1]}">${['Encuentro','Raíz','Profundizar','Práctica','Llevar'][i+1]} →</button>`:'<button type="button" data-route="personal">Ir a Mi Camino →</button>';
+  return `<div class="ramakNav">${prev}${next}</div>`;
 }
-function renderEncounter(num,scrollToChooser=true){
-  saveDraft();
-  const enc=encounterByNum(num); selectedEncounter=enc.num;
-  const week=weekForEncounter(enc); const sh=splitShoresh(enc.shoresh);
-  const saved=loadMemory(enc.num); selectedChoiceId=saved?.choiceId||'';
-  $('practiceNote').value=saved?.note||'';
-  $('parashaHebHero').textContent=enc.parashaHeb||week?.heb||'';
-  $('selectedEncounterMeta').textContent=`ENCUENTRO ${enc.num} · ${enc.parasha.toUpperCase()} · ${enc.aliyah.toUpperCase()}`;
-  $('selectedEncounterQuestion').textContent=enc.pregunta;
-  $('encounterMeta').textContent=`ENCUENTRO ${enc.num} · ${enc.parasha.toUpperCase()} · ${enc.aliyah.toUpperCase()}`;
-  $('encounterShoresh').textContent=enc.shoresh;
-  $('encounterGlyph').textContent=sh.he||'א';
-  $('encounterQuestion').textContent=enc.pregunta;
-  $('choiceList').innerHTML=enc.alternativas.map(a=>`<button class="choice${a.id===selectedChoiceId?' on':''}" type="button" data-choice="${a.id}"><span class="choiceLetter">${a.id}</span><span class="choiceCopy"><b>${a.texto}</b><small><i class="midah midah${a.mida}">${a.mida}</i>${a.midahDesc}</small></span></button>`).join('');
-  $('rootHe').textContent=enc.raiz.pasukHeb;
-  $('rootRef').textContent=enc.raiz.pasukEsp;
-  $('rootText').textContent=`Shoresh: ${enc.shoresh}`;
-  $('rootSourceLabel').textContent=enc.raiz.fuente;
-  $('rootQuote').textContent=enc.raiz.cita;
-  $('adamTitle').textContent=enc.adamAdama.titulo;
-  $('adamText').textContent=enc.adamAdama.ficha;
-  $('practiceTitle').textContent=enc.practica.titulo;
-  $('practiceDuration').textContent=enc.practica.duracion;
-  $('practiceAction').textContent=enc.practica.accion;
-  $('kavanaText').textContent=`“${enc.kavana}”`;
-  renderTabs(enc); renderStrip(enc);
-  if(selectedChoiceId){ revealChoice(enc,selectedChoiceId); } else { $('deeperReveal').hidden=true; $('toRoot').disabled=true; }
-  $('saveStatus').textContent=''; syncCarry();
-  activateStep('encuentro',false);
-  if(scrollToChooser) $('encounterChooser').scrollIntoView({behavior:'smooth',block:'start'});
+
+function scene(c,label){
+  return `<div class="ramakScene">
+    <div class="ramakSceneTop">
+      <span class="ramakSceneBadge">DÍA ${esc(c.dia)}</span>
+      <span class="ramakSceneBadge">${esc(c.sefira)}</span>
+    </div>
+    <div class="ramakSceneTitle"><small>${label}</small><h2>${esc(c.titulo)}</h2></div>
+  </div>`;
 }
-function revealChoice(enc,id){
-  const a=enc.alternativas.find(x=>x.id===id); if(!a) return;
-  document.querySelectorAll('.choice').forEach(c=>c.classList.toggle('on',c.dataset.choice===id));
-  $('selectionEcho').textContent=a.texto;
-  $('selectionMidah').textContent=`${a.mida} · ${a.midahDesc}`;
-  $('deeperReveal').hidden=false; $('toRoot').disabled=false;
+
+function renderPanels(p,c){
+  const rc=c.ramak_color||{};
+  const saved=loadRamakMemory(p.parasha,c.dia)||{};
+  const pasuk=c.pasuk||{};
+  const voices=c.voces||{};
+  const carry=c.paraLlevar||{};
+  const colorName=rc.nombre?` · ${esc(rc.nombre)}`:'';
+
+  caminoScreen.querySelector('[data-ramak-panel="encuentro"]').innerHTML=`
+    ${scene(c,'01 · ENCUENTRO')}
+    <div class="ramakBody">
+      <span class="ramakBodyEyebrow">${esc(p.parasha)} · ${esc(c.sefira)}${colorName}</span>
+      <div class="ramakReflection"><small>PREGUNTA PARA HOY</small><p>${esc(c.reflexion)}</p></div>
+      ${navButtons('encuentro')}
+    </div>`;
+
+  caminoScreen.querySelector('[data-ramak-panel="raiz"]').innerHTML=`
+    ${scene(c,'02 · RAÍZ')}
+    <div class="ramakBody">
+      <span class="ramakBodyEyebrow">PASUK · ${esc(p.parasha)}</span>
+      <div class="ramakHebrew">${esc(pasuk.hebreo||'')}</div>
+      <div class="ramakPasukMeta">
+        ${pasuk.trans?`<span><b>Transliteración</b><br>${esc(pasuk.trans)}</span>`:''}
+        ${pasuk.ref?`<span><b>Referencia</b><br>${esc(pasuk.ref)}</span>`:''}
+      </div>
+      <div class="ramakCard"><small>COLOR RAMAK</small><strong>${esc(c.sefira)}${colorName}</strong><p>${esc(rc.hex||'')}</p></div>
+      ${navButtons('raiz')}
+    </div>`;
+
+  const voiceNames=[
+    ['rambam','Rambam'],
+    ['ramak','Ramak'],
+    ['ramjal','Ramjal'],
+    ['rabiNajman','Rabí Najman']
+  ];
+  caminoScreen.querySelector('[data-ramak-panel="profundizar"]').innerHTML=`
+    ${scene(c,'03 · PROFUNDIZAR')}
+    <div class="ramakBody">
+      <span class="ramakBodyEyebrow">CUATRO VOCES · UNA MISMA RAÍZ</span>
+      <div class="ramakVoices">
+        ${voiceNames.map(([key,label])=>`<article class="ramakVoice"><small>${label.toUpperCase()}</small><b>${label}</b><p>${esc(voices[key]||'')}</p></article>`).join('')}
+      </div>
+      ${navButtons('profundizar')}
+    </div>`;
+
+  caminoScreen.querySelector('[data-ramak-panel="practica"]').innerHTML=`
+    ${scene(c,'04 · PRÁCTICA')}
+    <div class="ramakBody">
+      <span class="ramakBodyEyebrow">AVODÁ · LLEVAR EL ESTUDIO A LA VIDA</span>
+      <div class="ramakCard ramakPractice"><small>AVODÁ DE HOY</small><strong>${esc(carry.avoda||'')}</strong></div>
+      <label for="ramakNote">Una nota privada para recordar</label>
+      <textarea id="ramakNote" rows="4" maxlength="700" placeholder="¿Qué quieres llevar de esta práctica?">${esc(saved.note||'')}</textarea>
+      ${navButtons('practica')}
+    </div>`;
+
+  caminoScreen.querySelector('[data-ramak-panel="llevar"]').innerHTML=`
+    ${scene(c,'05 · LLEVAR')}
+    <div class="ramakBody">
+      <span class="ramakBodyEyebrow">KAVANÁ · HITBODEDUT · MEMORIA</span>
+      <div class="ramakCarryGrid">
+        <div class="ramakCard ramakKavana"><small>KAVANÁ</small><strong>${esc(carry.kavana||'')}</strong></div>
+        <div class="ramakCard"><small>HITBODEDUT</small><strong>${esc(carry.hitbodedut||'')}</strong></div>
+        ${saved.note?`<div class="ramakCard"><small>TU NOTA</small><p>“${esc(saved.note)}”</p></div>`:''}
+      </div>
+      <button class="ramakSave" type="button" id="ramakSaveMemory">Guardar este Camino en Mi Camino</button>
+      <p class="ramakSaveStatus" id="ramakSaveStatus">${saved.savedAt?'Este Camino ya está guardado en este dispositivo.':''}</p>
+      ${navButtons('llevar')}
+    </div>`;
 }
-function syncCarry(){
-  const enc=encounterByNum(selectedEncounter);
-  const a=enc.alternativas.find(x=>x.id===selectedChoiceId);
-  $('carryChoice').textContent=a?`Tu espejo: ${a.texto} — ${a.mida} · ${a.midahDesc}.`:'';
-  const note=$('practiceNote').value.trim();
-  $('carryNote').textContent=note?`Tu nota: “${note}”`:'';
+
+function renderRamak(scrollToChooser=false){
+  if(!RAMAK_DATA||!caminoScreen) return;
+  let p=currentParasha();
+  if(!p){selectedParasha=RAMAK_DATA.parashot[0].parasha;p=currentParasha();}
+  let c=currentCamino();
+  if(!c){selectedDay=p.caminos[0]?.dia||1;c=currentCamino();}
+  if(!c) return;
+
+  const rc=c.ramak_color||{};
+  const hex=rc.hex||'#E8EAED';
+  caminoScreen.style.setProperty('--ramak-accent',hex);
+  caminoScreen.style.setProperty('--ramak-ink',rc.texto||luminanceText(hex));
+
+  const pi=RAMAK_DATA.parashot.findIndex(x=>x.parasha===p.parasha);
+  $('ramakWeekIndex').textContent=`PARASHÁ ${String(pi+1).padStart(2,'0')} DE ${RAMAK_DATA.parashot.length}`;
+  $('ramakParashaTitle').textContent=p.parasha;
+  $('ramakPrinciple').textContent=p.principio||'Encuentros Diarios · Edición Ramak';
+  $('ramakTorahRef').textContent=p.ref?`Torá · ${p.ref}`:'';
+  $('ramakHaftarahRef').textContent=p.haftarah?`Haftará · ${p.haftarah}`:'';
+  $('ramakSelectedMeta').textContent=`DÍA ${c.dia} · ${p.parasha.toUpperCase()} · ${String(c.sefira).toUpperCase()}`;
+  $('ramakSelectedTitle').textContent=c.titulo;
+  $('ramakColorOrb').style.background=hex;
+
+  renderParashaRail();
+  renderDayStrip(p,c);
+
+  const incomplete=$('ramakIncomplete');
+  if(p.caminos.length<7){
+    incomplete.hidden=false;
+    incomplete.textContent=`Esta edición contiene ${p.caminos.length} de 7 caminos para ${p.parasha}. Los caminos faltantes no fueron completados artificialmente.`;
+  }else{
+    incomplete.hidden=true;
+    incomplete.textContent='';
+  }
+
+  renderPanels(p,c);
+  activateRamakStep(selectedRamakStep,false);
+
+  if(scrollToChooser) $('ramakChooser')?.scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+function renderRamakError(){
+  if(!caminoScreen) return;
+  const chooser=$('ramakChooser');
+  if(chooser) chooser.innerHTML=`<div class="ramakLoading">No fue posible cargar Caminos Diarios. Verifica que <b>content/caminos-ramak-v21.json</b> esté en la rama.</div>`;
+}
+
+async function loadRamak(){
+  try{
+    const res=await fetch(RAMAK_URL,{cache:'no-store'});
+    if(!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data=await res.json();
+    if(!Array.isArray(data.parashot)||!data.parashot.length) throw new Error('Datos vacíos');
+    RAMAK_DATA=data;
+    window.DEREJ_RAMAK_V21=data;
+    selectedParasha=data.parashot.some(p=>p.parasha===selectedParasha)?selectedParasha:data.parashot[0].parasha;
+    selectedDay=data.parashot.find(p=>p.parasha===selectedParasha)?.caminos?.[0]?.dia||1;
+    renderRamak(false);
+  }catch(err){
+    ramakLoadError=String(err?.message||err);
+    renderRamakError();
+  }
 }
 
 document.addEventListener('click',e=>{
-  const r=e.target.closest('[data-route]'); if(r){route(r.dataset.route);return;}
-  const sc=e.target.closest('[data-scroll]'); if(sc){$(sc.dataset.scroll)?.scrollIntoView({behavior:'smooth',block:'start'});return;}
-  const n=e.target.closest('[data-next]'); if(n){saveDraft();activateStep(n.dataset.next);return;}
-  const t=e.target.closest('[data-step]'); if(t){activateStep(t.dataset.step);return;}
-  const p=e.target.closest('[data-parasha]'); if(p){const first=DATA.encounters.find(x=>x.parasha===p.dataset.parasha);if(first)renderEncounter(first.num);return;}
-  const chip=e.target.closest('[data-encounter]'); if(chip){renderEncounter(Number(chip.dataset.encounter));return;}
-  const choice=e.target.closest('[data-choice]'); if(choice){selectedChoiceId=choice.dataset.choice; const enc=encounterByNum(selectedEncounter);revealChoice(enc,selectedChoiceId);saveDraft();return;}
-  if(e.target.closest('#studyLink')){const box=$('studyPreview'),btn=$('studyLink'),open=box.hidden;box.hidden=!open;btn.setAttribute('aria-expanded',String(open));btn.querySelector('span').textContent=open?'↑':'↓';return;}
-  if(e.target.closest('#roadmapToggle')){const box=$('roadmapGrid'),btn=$('roadmapToggle'),open=box.hidden;box.hidden=!open;btn.setAttribute('aria-expanded',String(open));btn.querySelector('span').textContent=open?'↑':'↓';return;}
-  if(e.target.closest('#saveMemory')){
-    const enc=encounterByNum(selectedEncounter); const a=enc.alternativas.find(x=>x.id===selectedChoiceId);
-    const memory={encounter:enc.num,parasha:enc.parasha,choiceId:selectedChoiceId,choice:a?.texto||'',midah:a?`${a.mida} · ${a.midahDesc}`:'',note:$('practiceNote').value.trim(),kavana:enc.kavana,savedAt:new Date().toISOString()};
-    try{localStorage.setItem(memoryKey(enc.num),JSON.stringify(memory));$('saveStatus').textContent='Guardado sólo en este dispositivo.';}catch{$('saveStatus').textContent='No fue posible guardar en este navegador.';}
+  const r=e.target.closest('[data-route]');
+  if(r){route(r.dataset.route);return;}
+
+  const sc=e.target.closest('[data-ramak-scroll]');
+  if(sc){$(sc.dataset.ramakScroll)?.scrollIntoView({behavior:'smooth',block:'start'});return;}
+
+  const p=e.target.closest('[data-ramak-parasha]');
+  if(p&&RAMAK_DATA){
+    saveRamakDraft();
+    selectedParasha=p.dataset.ramakParasha;
+    selectedDay=currentParasha()?.caminos?.[0]?.dia||1;
+    selectedRamakStep='encuentro';
+    renderRamak(true);
+    return;
+  }
+
+  const d=e.target.closest('[data-ramak-day]');
+  if(d&&!d.disabled&&RAMAK_DATA){
+    saveRamakDraft();
+    selectedDay=Number(d.dataset.ramakDay);
+    selectedRamakStep='encuentro';
+    renderRamak(true);
+    return;
+  }
+
+  const step=e.target.closest('[data-ramak-step]');
+  if(step){
+    saveRamakDraft();
+    activateRamakStep(step.dataset.ramakStep,true);
+    return;
+  }
+
+  if(e.target.closest('#ramakSaveMemory')){
+    const p=currentParasha(),c=currentCamino();
+    if(!p||!c) return;
+    const carry=c.paraLlevar||{},rc=c.ramak_color||{};
+    const memory={
+      schema:'ramak-v21',
+      edition:'Edición Ramak',
+      encounter:`${p.parasha}-${c.dia}`,
+      parasha:p.parasha,
+      dia:c.dia,
+      titulo:c.titulo,
+      sefira:c.sefira,
+      ramakColor:rc.hex||'',
+      reflexion:c.reflexion||'',
+      avoda:carry.avoda||'',
+      kavana:carry.kavana||'',
+      hitbodedut:carry.hitbodedut||'',
+      note:$('ramakNote')?.value.trim()||'',
+      savedAt:new Date().toISOString()
+    };
+    try{
+      localStorage.setItem(memoryKey(p.parasha,c.dia),JSON.stringify(memory));
+      $('ramakSaveStatus').textContent='Guardado sólo en este dispositivo.';
+    }catch{
+      $('ramakSaveStatus').textContent='No fue posible guardar en este navegador.';
+    }
+    return;
   }
 });
-$('practiceNote')?.addEventListener('input',()=>{saveDraft();syncCarry()});
-renderRoadmap(); renderEncounter(1,false);
+
+caminoScreen?.addEventListener('input',e=>{
+  if(e.target?.id==='ramakNote') saveRamakDraft();
+});
+
+prepareCaminoShell();
+loadRamak();
 
 /* SHABAT v2.1 · Prelanzamiento · seis caminos RC2 */
 (()=>{
@@ -1108,13 +1490,17 @@ renderRoadmap(); renderEncounter(1,false);
 
     const footprintCards=[];
     encounters.forEach(x=>{
-      const enc=window.DEREJ_ENCUENTROS_V21?.encounters?.find?.(e=>e.num===Number(x.encounter));
-      const title=enc?`Encuentro ${enc.num} · ${enc.parasha}`:`Encuentro ${x.encounter||''}`;
+      const isRamak=x.schema==='ramak-v21';
+      const enc=!isRamak?window.DEREJ_ENCUENTROS_V21?.encounters?.find?.(e=>e.num===Number(x.encounter)):null;
+      const title=isRamak
+        ? `${x.parasha||'Camino'} · Día ${x.dia||''}${x.titulo?` · ${x.titulo}`:''}`
+        : (enc?`Encuentro ${enc.num} · ${enc.parasha}`:`Encuentro ${x.encounter||''}`);
       footprintCards.push(`
         <article class="personalMemoryCard">
-          <small>CAMINO · ENCUENTRO GUARDADO</small>
+          <small>${isRamak?'CAMINO DIARIO · EDICIÓN RAMAK':'CAMINO · ENCUENTRO GUARDADO'}</small>
           <h4>${title}</h4>
-          ${x.choice?`<p>${x.choice}${x.midah?` — ${x.midah}`:''}</p>`:''}
+          ${isRamak&&x.sefira?`<p>${x.sefira}${x.avoda?` · ${x.avoda}`:''}</p>`:''}
+          ${!isRamak&&x.choice?`<p>${x.choice}${x.midah?` — ${x.midah}`:''}</p>`:''}
           ${x.kavana?`<blockquote>“${x.kavana}”</blockquote>`:''}
           ${x.savedAt?`<time>${formatDate(x.savedAt)}</time>`:''}
         </article>`);
@@ -1130,17 +1516,19 @@ renderRoadmap(); renderEncounter(1,false);
     });
     footprintsNode.innerHTML=footprintCards.length
       ? footprintCards.join('')
-      : `<div class="personalEmpty">Todavía no hay huellas guardadas. Cuando cierres un Encuentro con “Guardar en Mi Camino”, aparecerá aquí.</div>`;
+      : `<div class="personalEmpty">Todavía no hay huellas guardadas. Cuando guardes un Camino en “Mi Camino”, aparecerá aquí.</div>`;
 
     const memoryCards=[];
     encounters.forEach(x=>{
-      if(!x.note&&!x.kavana) return;
+      if(!x.note&&!x.kavana&&!x.hitbodedut) return;
+      const isRamak=x.schema==='ramak-v21';
       memoryCards.push(`
         <article class="personalMemoryCard">
-          <small>MEMORIA DE CAMINO</small>
-          <h4>${x.parasha||'Encuentro'}${x.encounter?` · ${x.encounter}`:''}</h4>
+          <small>${isRamak?'MEMORIA · EDICIÓN RAMAK':'MEMORIA DE CAMINO'}</small>
+          <h4>${isRamak?`${x.parasha||'Camino'} · Día ${x.dia||''}`:`${x.parasha||'Encuentro'}${x.encounter?` · ${x.encounter}`:''}`}</h4>
           ${x.note?`<p>“${x.note}”</p>`:''}
           ${x.kavana?`<blockquote>“${x.kavana}”</blockquote>`:''}
+          ${isRamak&&x.hitbodedut?`<p><b>Hitbodedut:</b> ${x.hitbodedut}</p>`:''}
           ${x.savedAt?`<time>${formatDate(x.savedAt)}</time>`:''}
         </article>`);
     });
