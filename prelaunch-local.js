@@ -2,6 +2,17 @@
 const screens=[...document.querySelectorAll('[data-screen]')];
 const $=id=>document.getElementById(id);
 const RAMAK_URL='content/caminos-ramak-v21.json';
+const CAMINO_DAY_IMAGES={
+  'Bereshit':{
+    1:'assets/camino/bereshit/bereshit-d01-or.webp',
+    2:'assets/camino/bereshit/bereshit-d02-rakia.webp',
+    3:'assets/camino/bereshit/bereshit-d03-yabasha.webp',
+    4:'assets/camino/bereshit/bereshit-d04-meorot.webp',
+    5:'assets/camino/bereshit/bereshit-d05-nefesh-jaya.webp',
+    6:'assets/camino/bereshit/bereshit-d06-naase-adam.webp',
+    7:'assets/camino/bereshit/bereshit-d07-vayejal.webp'
+  }
+};
 const RAMAK_GLOSS={"OR":"Luz","RAKIA":"Firmamento · espacio que separa","YABASHA":"Tierra seca","MEOROT":"Luminarias","NEFESH JAYA":"Ser viviente · alma viviente","NAASE ADAM":"Hagamos al ser humano","TZADIK TAMIM":"Justo e íntegro","VE'ELE SHEMOT":"Estos son los nombres","MELEJ JADASH":"Rey nuevo","VAYIZAKU":"Clamaron","VAYAR":"Vio","SHLAJ ET AMI":"Deja ir a mi pueblo","EHIE ASHER EHIE":"Seré el que seré","VAYISHMA MOSHE":"Moisés escuchó","VAERA":"Me aparecí","AKSHE":"Endureceré","DAM":"Sangre","TZEFAREA":"Rana","KINIM":"Piojos","BARAD":"Granizo","KAVED LEV":"Corazón pesado · endurecido","BO EL PARO":"Ven a Faraón","JOSHEJ":"Oscuridad","JATZI LAILA":"Medianoche","PESAJ":"Paso · salto · pasar por encima","MATZA":"Pan ácimo","KADESH LI":"Santifica para mí","VEHAYA KI":"Y sucederá cuando","BESHLAJ":"Cuando dejó ir","VAHAFOJ LEV":"Se volvió el corazón","MA TITZAK":"¿Por qué clamas?","VAYIBAKEU":"Se partieron","AZ YASHIR":"Entonces cantó","VAYILONU":"Se quejaron · murmuraron","MILJAMA AMALEK":"Guerra con Amalek","VAYISHMA YITRO":"Yitró escuchó","LO TOV":"No es bueno","ANOJI":"Yo soy","VE'ELE HAMISHPATIM":"Estas son las leyes","EIN TAJAT EIN":"Ojo por ojo","IM KESEF TALVE":"Si prestas dinero","LO TEVASHEL GDI":"No cocerás el cabrito","NASE VENISHMA":"Haremos y escucharemos","VAJAZU ET HAELOKIM":"Vieron a Dios","VA'AL MOSHE AMAR":"Y a Moisés dijo: sube","VEIKJU LI TERUMA":"Tomarán para Mí una ofrenda","MIKOL ISH":"De toda persona","VEASU LI MIKDASH":"Harán para Mí un santuario","VEATA TETZAVE":"Y tú ordenarás","VEHAYU AL AHARON":"Estarán sobre Aharón","URIM VETUMIM":"Luces y perfecciones"};
 const caminoScreen=document.querySelector('[data-screen="camino"]');
 
@@ -39,6 +50,11 @@ function caminoMeaning(c){
   const title=String(c?.titulo||'').trim();
   const editorial=title.includes(' - ')?title.split(' - ').slice(1).join(' - ').trim():'';
   return editorial || RAMAK_GLOSS[title] || '';
+}
+
+function caminoDayImage(c){
+  const p=currentParasha();
+  return CAMINO_DAY_IMAGES[p?.parasha]?.[Number(c?.dia)] || '';
 }
 
 function luminanceText(hex='#E8EAED'){
@@ -225,7 +241,7 @@ function prepareCaminoShell(){
       .ramakPanels{padding:12px;background:linear-gradient(180deg,#eadcc3,#f1e5d0)}
       .ramakPanel{display:none;overflow:hidden;border:1px solid #d1c1a5;border-top:5px solid var(--ramak-accent);border-radius:29px;background:#fff7e8;box-shadow:0 14px 34px rgba(61,46,26,.09)}
       .ramakPanel.on{display:block}
-      .ramakScene{position:relative;height:190px;padding:15px;background-image:linear-gradient(180deg,rgba(7,10,8,.08),rgba(7,10,8,.75)),url('assets/home-courtyard-v21.webp');background-size:cover;background-position:50% 56%;color:#fff1d5}
+      .ramakScene{position:relative;height:190px;padding:15px;background-image:linear-gradient(180deg,rgba(7,10,8,.08),rgba(7,10,8,.75)),url('assets/home-courtyard-v21.webp');background-size:cover;background-position:50% 50%;background-repeat:no-repeat;color:#fff1d5}
       .ramakScene:after{content:"";position:absolute;left:0;right:0;bottom:0;height:5px;background:var(--ramak-accent)}
       .ramakSceneTop{display:flex;justify-content:space-between;gap:10px}
       .ramakSceneBadge{display:inline-flex;align-items:center;min-height:38px;padding:7px 10px;border:1px solid rgba(255,234,198,.58);border-radius:999px;background:rgba(10,14,10,.46);font-size:.6rem;letter-spacing:.12em;font-weight:900;backdrop-filter:blur(4px)}
@@ -312,7 +328,11 @@ function navButtons(step){
 
 function scene(c,label){
   const meaning=caminoMeaning(c);
-  return `<div class="ramakScene">
+  const image=caminoDayImage(c);
+  const sceneStyle=image
+    ? ` style="background-image:linear-gradient(180deg,rgba(7,10,8,.08),rgba(7,10,8,.74)),url('${image}')"`
+    : '';
+  return `<div class="ramakScene"${sceneStyle}>
     <div class="ramakSceneTop">
       <span class="ramakSceneBadge">DÍA ${esc(c.dia)}</span>
       <span class="ramakSceneBadge">${esc(c.sefira)}</span>
