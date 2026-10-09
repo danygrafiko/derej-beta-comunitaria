@@ -2,6 +2,24 @@
 const screens=[...document.querySelectorAll('[data-screen]')];
 const $=id=>document.getElementById(id);
 const RAMAK_URL='content/caminos-ramak-v21.json';
+const BIBLICAL_BOOK_ES={
+  'Bereshit':'Génesis',
+  'Shemot':'Éxodo',
+  'Vayikra':'Levítico',
+  'Bamidbar':'Números',
+  'Devarim':'Deuteronomio',
+  'Yeshayahu':'Isaías',
+  'Yirmiyahu':'Jeremías',
+  'Yejezkel':'Ezequiel',
+  'Hoshea':'Oseas',
+  'Amos':'Amós',
+  'Ovadyah':'Abdías',
+  'Malaji':'Malaquías',
+  'Shoftim':'Jueces',
+  'Melajim':'Reyes',
+  'Shmuel':'Samuel',
+  'Yehoshua':'Josué'
+};
 const CAMINO_DAY_IMAGES={
   'Bereshit':{
     1:'assets/camino/bereshit/bereshit-d01-or.webp',
@@ -50,6 +68,14 @@ function caminoMeaning(c){
   const title=String(c?.titulo||'').trim();
   const editorial=title.includes(' - ')?title.split(' - ').slice(1).join(' - ').trim():'';
   return editorial || RAMAK_GLOSS[title] || '';
+}
+
+function biblicalRefEs(value=''){
+  const raw=String(value||'').trim();
+  if(!raw) return '';
+  const first=raw.split(/\s+/)[0];
+  const es=BIBLICAL_BOOK_ES[first];
+  return es ? raw.replace(first,`${first} (${es})`) : raw;
 }
 
 function caminoDayImage(c){
@@ -372,7 +398,7 @@ function renderPanels(p,c){
         <div class="ramakHebrew">${esc(pasuk.hebreo||'')}</div>
         <div class="ramakPasukMeta">
           ${pasuk.trans?`<span><b>Transliteración</b><br>${esc(pasuk.trans)}</span>`:''}
-          ${pasuk.ref?`<span><b>Referencia</b><br>${esc(pasuk.ref)}</span>`:''}
+          ${pasuk.ref?`<span><b>Referencia</b><br>${esc(biblicalRefEs(pasuk.ref))}</span>`:''}
         </div>
       </div>
       ${navButtons('raiz')}
@@ -398,12 +424,12 @@ function renderPanels(p,c){
     ${scene(c,'04 · PRÁCTICA')}
     <div class="ramakBody">
       <span class="ramakBodyEyebrow">AVODÁ · LLEVAR EL ESTUDIO A LA VIDA</span>
-      <div class="ramakCard ramakPractice"><small>AVODÁ DE HOY</small><strong>${esc(carry.avoda||'')}</strong></div>
-      <label for="ramakNote">Una nota privada para recordar</label>
+      <div class="ramakCard ramakPractice"><small>AVODÁ · GESTO DE HOY</small><strong>${esc(carry.avoda||'')}</strong></div>
+      <label for="ramakNote">Una nota para guardar este momento</label>
       <div class="ramakGuides" aria-label="Sugerencias para comenzar">
-        <button type="button" class="ramakGuide" data-note-starter="Lo que más me cuesta de esta práctica es…">Lo que más me cuesta de esta práctica es…</button>
-        <button type="button" class="ramakGuide" data-note-starter="Hoy podría empezar por algo pequeño: …">Hoy podría empezar por algo pequeño: …</button>
-        <button type="button" class="ramakGuide" data-note-starter="Quiero prestar atención a lo que ocurre cuando…">Quiero prestar atención a lo que ocurre cuando…</button>
+        <button type="button" class="ramakGuide" data-note-starter="Hoy me resonó…">Hoy me resonó…</button>
+        <button type="button" class="ramakGuide" data-note-starter="Un paso pequeño que sí puedo dar es…">Un paso pequeño que sí puedo dar es…</button>
+        <button type="button" class="ramakGuide" data-note-starter="Esto me cuesta porque…">Esto me cuesta porque…</button>
       </div>
       <textarea id="ramakNote" rows="4" maxlength="700" placeholder="Puedes escribir libremente o tocar una de las frases de arriba.">${esc(saved.note||'')}</textarea>
       ${navButtons('practica')}
@@ -412,10 +438,10 @@ function renderPanels(p,c){
   caminoScreen.querySelector('[data-ramak-panel="llevar"]').innerHTML=`
     ${scene(c,'05 · LLEVAR')}
     <div class="ramakBody">
-      <span class="ramakBodyEyebrow">KAVANÁ · HITBODEDUT · MEMORIA</span>
+      <span class="ramakBodyEyebrow">INTENCIÓN · CONVERSACIÓN PERSONAL · MEMORIA</span>
       <div class="ramakCarryGrid">
-        <div class="ramakCard ramakKavana"><small>KAVANÁ</small><strong>${esc(carry.kavana||'')}</strong></div>
-        <div class="ramakCard"><small>HITBODEDUT</small><strong>${esc(carry.hitbodedut||'')}</strong></div>
+        <div class="ramakCard ramakKavana"><small>KAVANÁ · INTENCIÓN</small><strong>${esc(carry.kavana||'')}</strong></div>
+        <div class="ramakCard"><small>HITBODEDUT · CONVERSACIÓN PERSONAL</small><strong>${esc(carry.hitbodedut||'')}</strong></div>
         ${saved.note?`<div class="ramakCard"><small>TU NOTA</small><p>“${esc(saved.note)}”</p></div>`:''}
       </div>
       <button class="ramakSave" type="button" id="ramakSaveMemory">Guardar este Camino en Mi Camino</button>
@@ -442,9 +468,9 @@ function renderRamak(scrollToChooser=false){
   const pi=RAMAK_DATA.parashot.findIndex(x=>x.parasha===p.parasha);
   $('ramakWeekIndex').textContent=`PARASHÁ ${String(pi+1).padStart(2,'0')} DE ${RAMAK_DATA.parashot.length}`;
   $('ramakParashaTitle').textContent=p.parasha;
-  $('ramakPrinciple').textContent=p.principio||'Encuentros Diarios · Edición Ramak';
-  $('ramakTorahRef').textContent=p.ref?`Torá · ${p.ref}`:'';
-  $('ramakHaftarahRef').textContent=p.haftarah?`Haftará · ${p.haftarah}`:'';
+  $('ramakPrinciple').textContent=p.principio||'Encuentros Diarios';
+  $('ramakTorahRef').textContent=p.ref?`Torá · ${biblicalRefEs(p.ref)}`:'';
+  $('ramakHaftarahRef').textContent=p.haftarah?`Haftará · ${biblicalRefEs(p.haftarah)}`:'';
   $('ramakSelectedMeta').textContent=`DÍA ${c.dia} · ${p.parasha.toUpperCase()} · ${String(c.sefira).toUpperCase()}`;
   $('ramakSelectedTitle').textContent=c.titulo;
   $('ramakColorOrb').style.background=hex;
