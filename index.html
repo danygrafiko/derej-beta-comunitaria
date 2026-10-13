@@ -4,18 +4,23 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#182016">
-<title>DÉREJ · El Camino · v2.1 Prelanzamiento</title>
+<title>DÉREJ · El Camino</title>
 <link rel="stylesheet" href="prelaunch-local.css">
+<style>
+  .brandButton .derejWordmark{display:flex;flex-direction:column;align-items:flex-start;line-height:1}
+  .brandButton .derejWordmark b{letter-spacing:.16em}
+  .brandButton .derejWordmark small{letter-spacing:.18em}
+</style>
 </head>
 <body>
 <main class="appShell">
   <header class="brandBar">
-    <button class="brandButton" data-route="home" aria-label="Ir al patio de entrada">
-      <span class="daletMark" aria-hidden="true"><span>ד</span><i>⌁</i></span>
-      <span class="brandWords"><b>DÉREJ</b><small>EL CAMINO</small></span>
+    <button class="brandButton" data-route="home" aria-label="DÉREJ · El Camino · Ir al patio de entrada">
+      <span class="brandWords derejWordmark"><b>DÉREJ</b><small>EL CAMINO</small></span>
     </button>
-    <span class="preBadge">PRE · v2.1</span>
+    <span class="preBadge">EDICIÓN COMUNITARIA</span>
   </header>
+
 
   <section class="screen homeScreen active" data-screen="home" aria-labelledby="homeTitle">
     <div class="courtyard" role="group" aria-label="Cinco puertas de Dérej">
@@ -35,6 +40,7 @@
     </div>
   </section>
 
+
   <section class="screen caminoScreen" data-screen="camino" hidden aria-labelledby="caminoTitle">
     <button class="backBtn floatingBack" data-route="home">← Patio</button>
     <section class="caminoPortalHero">
@@ -48,6 +54,7 @@
         <button class="heroEnter" data-scroll="encounterChooser">Elegir un Encuentro <span>↓</span></button>
       </div>
     </section>
+
 
     <section class="encounterChooser" id="encounterChooser" aria-labelledby="chooserTitle">
       <div class="chooserHead">
@@ -65,6 +72,7 @@
       <div class="roadmapGrid" id="roadmapGrid" hidden></div>
     </section>
 
+
     <nav class="thresholdRail" aria-label="Recorrido del Encuentro">
       <button class="threshold on" data-step="encuentro"><span>01</span><b>Encuentro</b></button>
       <button class="threshold" data-step="raiz"><span>02</span><b>Raíz</b></button>
@@ -72,6 +80,7 @@
       <button class="threshold" data-step="practica"><span>04</span><b>Práctica</b></button>
       <button class="threshold" data-step="llevar"><span>05</span><b>Llevar</b></button>
     </nav>
+
 
     <div class="stepPanels">
       <article class="stepPanel stepEncounter on" data-panel="encuentro">
@@ -87,6 +96,7 @@
         </div>
       </article>
 
+
       <article class="stepPanel stepRoot" data-panel="raiz">
         <div class="stageScene"><span class="stageNumber">02</span><span class="stageKicker">RAÍZ</span><span class="rootTree">עץ</span></div>
         <div class="stageBody">
@@ -98,6 +108,7 @@
         </div>
       </article>
 
+
       <article class="stepPanel stepStudy" data-panel="profundizar">
         <div class="stageScene"><span class="stageNumber">03</span><span class="stageKicker">PROFUNDIZAR</span><span class="studyGlyph">אדמה</span></div>
         <div class="stageBody">
@@ -108,12 +119,13 @@
           <section class="studyPreview" id="studyPreview" hidden>
             <small>ESTUDIO · NO SEXTA PUERTA</small>
             <p>ADAM–ADAMÁ permanece como Estudio completo de profundidad contextual. Esta conexión diaria sólo abre una ventana hacia él.</p>
-            <div class="studyBoundary">En la integración RC2, el Estudio original se conservará íntegro y se abrirá desde aquí cuando corresponda.</div>
+            <div class="studyBoundary">El Estudio completo se conserva íntegro y puede abrirse desde aquí cuando quieras profundizar.</div>
           </section>
           <p class="microNote">Profundizar es una invitación, no un requisito.</p>
           <button class="primary nextStep" data-next="practica">Ir a la práctica</button>
         </div>
       </article>
+
 
       <article class="stepPanel stepPractice" data-panel="practica">
         <div class="stageScene"><span class="stageNumber">04</span><span class="stageKicker">PRÁCTICA</span><span class="waterGlyph">יד</span></div>
@@ -128,6 +140,7 @@
           <button class="primary nextStep" data-next="llevar">Llevar conmigo</button>
         </div>
       </article>
+
 
       <article class="stepPanel stepCarry" data-panel="llevar">
         <div class="stageScene"><span class="stageNumber">05</span><span class="stageKicker">LLEVAR</span><span class="sproutGlyph">⌁</span></div>
@@ -144,27 +157,26 @@
       </article>
     </div>
 
+
     <section class="logicLine" aria-label="Lógica editorial de Dérej"><span>Fuente</span><i>→</i><span>Estudio</span><i>→</i><span>Reflexión</span><i>→</i><span>Conversación</span><i>→</i><span>Práctica</span><i>→</i><span>Acción</span><i>→</i><span>Fruto</span><i>→</i><span>Memoria</span></section>
   </section>
 
-  <section class="screen placeholder" data-screen="shabat" hidden><button class="backBtn" data-route="home">← Volver al patio</button><div><small>SHABAT</small><h1>Luz cálida · refugio · mesa</h1><p>La lógica RC2 se conservará intacta. Esta pantalla se trabajará después de cerrar Home + Camino.</p></div></section>
-  <section class="screen placeholder" data-screen="moed" hidden><button class="backBtn" data-route="home">← Volver al patio</button><div><small>MOED</small><h1>Tiempo · estaciones · memoria</h1><p>La lógica RC2 se conservará intacta. Esta pantalla se trabajará después de cerrar Home + Camino.</p></div></section>
-  <section class="screen placeholder dark" data-screen="radio" hidden><button class="backBtn" data-route="home">← Volver al patio</button><div><small>RADIO</small><h1>Noche · escucha · contemplación</h1><p>Una sola puerta. Futuras colecciones: Meditación · Parashá · Hitbodedut.</p></div></section>
+
+  <section class="screen placeholder" data-screen="shabat" hidden><button class="backBtn" data-route="home">← Volver al patio</button><div><small>SHABAT</small><h1>Luz cálida · refugio · mesa</h1><p>Una pausa para recibir, encender, compartir, descansar y volver a mirar la semana.</p></div></section>
+  <section class="screen placeholder" data-screen="moed" hidden><button class="backBtn" data-route="home">← Volver al patio</button><div><small>MOED</small><h1>Tiempo · estaciones · memoria</h1><p>Tiempos señalados para detenerse, recordar y volver a mirar el Camino.</p></div></section>
+  <section class="screen placeholder dark" data-screen="radio" hidden><button class="backBtn" data-route="home">← Volver al patio</button><div><small>RADIO</small><h1>Noche · escucha · contemplación</h1><p>Meditación · Parashá · Hitbodedut. Escucha sin salir del Camino.</p></div></section>
   <section class="screen placeholder" data-screen="personal" hidden><button class="backBtn" data-route="home">← Volver al patio</button><div><small>MI CAMINO</small><h1>Huellas · brotes · memoria</h1><p>Memoria personal sin puntuación, niveles ni rachas.</p></div></section>
 </main>
 <script src="encuentros-v21.js"></script>
 <script src="prelaunch-local.js"></script>
-<script src="editorial-v233.js"></script>
+
+
 <script src="mobile-v234.js"></script>
 <script src="navigation-v235.js"></script>
 <script src="cleanup-v236.js"></script>
-<script src="deep-review-v237.js"></script>
-<script src="deep-review-v238.js"></script>
-<script src="deep-review-v239.js"></script> 
-<script src="deep-review-v240.js"></script>
-<script src="navigation-v241.js"></script>  
-<script src="deep-review-v243.js"></script> 
-<script src="deep-review-v244.js"></script>
-<script src="deep-review-v245.js"></script>  
+
+
+<script src="navigation-v241.js"></script>
+  
 </body>
 </html>

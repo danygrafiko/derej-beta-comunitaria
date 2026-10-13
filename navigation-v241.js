@@ -1,4 +1,4 @@
-/* DÉREJ v2.4.2 · corrección apertura Aliyá diaria
+/* DÉREJ v2.5 · navegación y Aliyá diaria consolidada
    Sustituye navigation-v241.js conservando el mismo nombre de archivo.
 */
 (()=>{
@@ -149,6 +149,9 @@
     const aliyah=ORDINAL[day]||`${day}ª Aliyá`;
     const heb=HEBREW_DAY[day]||`Día ${day}`;
     const url=parashotUrl(p.parasha,day);
+    const range=c.aliyaRange
+      ? `Lectura diaria · ${c.aliyaRange}.`
+      : `Lectura de Torá correspondiente al Día ${day} de este Camino.`;
 
     card.innerHTML=`
       <div class="v241AliyahHead">
@@ -157,7 +160,7 @@
       </div>
       <div class="v241AliyahBody">
         <h3>${p.parasha} · ${heb}</h3>
-        <p>Lectura de Torá correspondiente al Día ${day} de este Camino. Léela antes o junto a las cuatro voces para mantener Profundizar unido al texto semanal.</p>
+        <p>${range} Léela antes o junto a las cuatro voces para mantener Profundizar unido al texto semanal.</p>
         <a class="v241AliyahLink" href="${url}" rel="noopener noreferrer">
           <strong>Abrir ${aliyah} completa</strong>
           <span>→</span>

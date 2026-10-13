@@ -1,0 +1,41 @@
+DÉREJ v2.5.1 · CONSOLIDACIÓN + MOED IOM KIPUR
+
+RAMA
+prelaunch/encuentros-finales-v21
+
+SUBIR EL CONTENIDO COMPLETO DEL ZIP RESPETANDO RUTAS.
+
+Cambios respecto de v2.5:
+- Encabezado: logo/wordmark DÉREJ · EL CAMINO; se elimina la Dalet aislada del header.
+- Moed: se elimina la puerta Yamim Noraim.
+- Moed: se incorpora Iom Kipur como tiempo propio.
+- Iom Kipur abre dos recorridos DÉREJ:
+  1) Portal Iom Kipur · 8 puertas íntimas.
+  2) Auditoría Pre-Iom Kipur · 44 puertas de retorno.
+- Los dos HTML originales se preservan como experiencias completas y reciben un botón estable “← Moed · DÉREJ”.
+- Se elimina el año fijo 5785/2025 del Portal para evitar obsolescencia.
+- Se mantiene la consolidación editorial v2.5: 134 Caminos en caminos-ramak-v25.json.
+
+ARCHIVOS NUEVOS
+moed-iom-kipur.html
+moed-auditoria-iom-kipur.html
+
+ARCHIVOS ACTUALIZADOS
+index.html
+prelaunch-local.js
+
+SIN CAMBIOS
+content/caminos-ramak-v25.json
+navigation-v241.js
+
+COMMIT RECOMENDADO
+DÉREJ v2.5.1 · integrar Iom Kipur en Moed
+
+No publicar a producción antes de QA de:
+- logo DÉREJ en header;
+- Moed sin Yamim Noraim;
+- tarjeta Iom Kipur;
+- apertura Portal Iom Kipur;
+- apertura Auditoría;
+- retorno desde ambas experiencias a Moed;
+- Camino/Parashot/Aliyá sin regresiones.

@@ -1,7 +1,7 @@
 /* CAMINO v2.2 · Caminos Diarios · Edición Ramak */
 const screens=[...document.querySelectorAll('[data-screen]')];
 const $=id=>document.getElementById(id);
-const RAMAK_URL='content/caminos-ramak-v21.json';
+const RAMAK_URL='content/caminos-ramak-v25.json';
 const BIBLICAL_BOOK_ES={
   'Bereshit':'Génesis',
   'Shemot':'Éxodo',
@@ -20,6 +20,7 @@ const BIBLICAL_BOOK_ES={
   'Shmuel':'Samuel',
   'Yehoshua':'Josué'
 };
+const SEFIRA_MEANING={Chesed:'Amor expansivo',Gevurah:'Límite y disciplina',Tiferet:'Armonía y verdad',Netzach:'Perseverancia',Hod:'Humildad y gratitud',Yesod:'Fundamento y vínculo',Malchut:'Presencia y receptividad'};
 const CAMINO_DAY_IMAGES={
   'Bereshit':{
     1:'assets/camino/bereshit/bereshit-d01-or.webp',
@@ -65,11 +66,75 @@ const caminoScreen=document.querySelector('[data-screen="camino"]');
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 let RAMAK_DATA=null;
 let selectedParasha='Bereshit';
 let selectedDay=1;
 let selectedRamakStep='encuentro';
 let ramakLoadError='';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -146,6 +211,38 @@ function route(name){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function esc(v=''){
   return String(v??'').replace(/[&<>"']/g,ch=>({
     '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
@@ -183,10 +280,74 @@ function esc(v=''){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function slug(v=''){
   return String(v).normalize('NFD').replace(/[\u0300-\u036f]/g,'')
     .toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -256,6 +417,38 @@ function caminoMeaning(c){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function biblicalRefEs(value=''){
   const raw=String(value||'').trim();
   if(!raw) return '';
@@ -263,6 +456,38 @@ function biblicalRefEs(value=''){
   const es=BIBLICAL_BOOK_ES[first];
   return es ? raw.replace(first,`${first} (${es})`) : raw;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -336,10 +561,74 @@ function weeklyReadingMeta(parasha=''){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function caminoDayImage(c){
   const p=currentParasha();
   return CAMINO_DAY_IMAGES[p?.parasha]?.[Number(c?.dia)] || '';
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -411,9 +700,73 @@ function luminanceText(hex='#E8EAED'){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function memoryKey(parasha,day){
   return `derej-v21-encuentro-ramak-${slug(parasha)}-${day}`;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -482,10 +835,74 @@ function loadRamakMemory(parasha,day){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function currentParasha(){
   if(!RAMAK_DATA) return null;
   return RAMAK_DATA.parashot.find(p=>p.parasha===selectedParasha)||RAMAK_DATA.parashot[0];
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -523,6 +940,38 @@ function currentCamino(){
   if(!p) return null;
   return p.caminos.find(c=>Number(c.dia)===Number(selectedDay))||p.caminos[0]||null;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -605,12 +1054,76 @@ function saveRamakDraft(){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function prepareCaminoShell(){
   if(!caminoScreen) return;
   caminoScreen.className='screen caminoScreen ramakCaminoScreen';
   caminoScreen.setAttribute('aria-labelledby','caminoTitle');
   caminoScreen.innerHTML=`
     <button class="backBtn floatingBack" data-route="home">← Patio</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -687,6 +1200,38 @@ function prepareCaminoShell(){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <section class="ramakChooser" id="ramakChooser" aria-labelledby="ramakChooserTitle">
       <header class="ramakChooserHead">
         <span>20 PARASHOT · 134 CAMINOS <i class="ramakTinyMark">ED. RAMAK</i></span>
@@ -725,7 +1270,71 @@ function prepareCaminoShell(){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       <div class="ramakParashaRail" id="ramakParashaRail" role="tablist" aria-label="Elegir Parashá"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -801,6 +1410,38 @@ function prepareCaminoShell(){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       <a class="ramakReadingCard" id="ramakReadingCard" href="#" target="_blank" rel="noopener noreferrer">
         <span class="ramakReadingIcon" aria-hidden="true">📜</span>
         <span class="ramakReadingCopy">
@@ -811,6 +1452,38 @@ function prepareCaminoShell(){
         </span>
         <strong aria-hidden="true">→</strong>
       </a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -876,7 +1549,71 @@ function prepareCaminoShell(){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       <div class="ramakIncomplete" id="ramakIncomplete" hidden></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -950,6 +1687,38 @@ function prepareCaminoShell(){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <nav class="ramakThresholdRail" aria-label="Recorrido del Camino">
       <button class="ramakThreshold on" type="button" data-ramak-step="encuentro"><span>01</span><b>Encuentro</b></button>
       <button class="ramakThreshold" type="button" data-ramak-step="raiz"><span>02</span><b>Raíz</b></button>
@@ -989,6 +1758,38 @@ function prepareCaminoShell(){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <div class="ramakPanels">
       <article class="ramakPanel on" data-ramak-panel="encuentro"></article>
       <article class="ramakPanel" data-ramak-panel="raiz"></article>
@@ -996,6 +1797,38 @@ function prepareCaminoShell(){
       <article class="ramakPanel" data-ramak-panel="practica"></article>
       <article class="ramakPanel" data-ramak-panel="llevar"></article>
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1068,6 +1901,38 @@ function prepareCaminoShell(){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   if(!document.getElementById('ramakCaminoStyles')){
     const style=document.createElement('style');
     style.id='ramakCaminoStyles';
@@ -1088,6 +1953,38 @@ function prepareCaminoShell(){
       .ramakGuides{display:grid;gap:7px;margin:9px 0 12px}
       .ramakGuide{width:100%;border:1px dashed #bda98a;border-radius:14px;background:#f8efdf;color:#5d5141;padding:10px 12px;text-align:left;font:.8rem/1.35 Georgia,serif}
       .ramakGuide:before{content:"↳ ";color:#7a8466;font-weight:900}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1185,6 +2082,11 @@ function prepareCaminoShell(){
       .ramakVoice{padding:14px;border:1px solid #d0c0a5;border-radius:17px;background:#faf1e2}
       .ramakVoice b{font:1.02rem Georgia,serif;color:#3b332a}
       .ramakVoice p{margin:.45rem 0 0;color:#665c4f;font:.86rem/1.48 Georgia,serif}
+      .derejVerseTranslation{margin:10px auto 13px;max-width:34rem;text-align:center;color:#594f42;font:1rem/1.52 Georgia,serif}
+      .derejRootNote{margin:14px 0 0;padding:10px 12px;border-left:2px solid #a89470;background:rgba(247,238,221,.7);color:#6d604d;font:.76rem/1.48 Georgia,serif}
+      .derejVoiceSource{display:block!important;margin:0;color:#383129!important;font:1rem/1.28 Georgia,serif!important}
+      .derejVoiceType{display:inline-flex;margin:7px 0 1px;padding:4px 7px;border:1px solid #c7b493;border-radius:999px;background:#f2e7d4;color:#766349;font:800 .48rem/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:.12em}
+      .ramakSourceNote{margin:12px 0 0;padding:10px 12px;border-left:2px solid #6f7d61;background:#eef0e5;color:#5f6655;font:.72rem/1.48 Georgia,serif}
       .ramakCard{padding:16px;border:1px solid #d0c0a5;border-radius:18px;background:#f8efdf}
       .ramakCard strong{font:1.16rem/1.42 Georgia,serif;color:#393128}
       .ramakCard p{margin:.6rem 0 0;color:#655b4e;font:.88rem/1.5 Georgia,serif}
@@ -1213,6 +2115,38 @@ function prepareCaminoShell(){
     document.head.appendChild(style);
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1287,6 +2221,38 @@ function renderParashaRail(){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function renderDayStrip(p,c){
   const host=$('ramakDayStrip');
   host.innerHTML=Array.from({length:7},(_,i)=>{
@@ -1295,6 +2261,38 @@ function renderDayStrip(p,c){
       data-ramak-day="${day}" ${found?'':'disabled'} aria-label="${found?`Día ${day}: ${esc(found.titulo)}`:`Día ${day}: no disponible`}">D${day}</button>`;
   }).join('');
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1367,6 +2365,38 @@ function activateRamakStep(step,scroll=true){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function navButtons(step){
   const order=['encuentro','raiz','profundizar','practica','llevar'];
   const i=order.indexOf(step);
@@ -1374,6 +2404,38 @@ function navButtons(step){
   const next=i<order.length-1?`<button type="button" data-ramak-step="${order[i+1]}">${['Encuentro','Raíz','Profundizar','Práctica','Llevar'][i+1]} →</button>`:'<button type="button" data-route="personal">Ir a Mi Camino →</button>';
   return `<div class="ramakNav">${prev}${next}</div>`;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1415,7 +2477,7 @@ function scene(c,label){
   return `<div class="ramakScene"${sceneStyle}>
     <div class="ramakSceneTop">
       <span class="ramakSceneBadge">DÍA ${esc(c.dia)}</span>
-      <span class="ramakSceneBadge">${esc(c.sefira)}</span>
+      <span class="ramakSceneBadge">${esc(c.sefira)}${SEFIRA_MEANING[c.sefira]?` · ${esc(SEFIRA_MEANING[c.sefira])}`:''}</span>
     </div>
     <div class="ramakSceneTitle">
       <small>${label}</small>
@@ -1458,6 +2520,46 @@ function scene(c,label){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function renderVoiceCard(raw,label){
+  if(raw&&typeof raw==='object'){
+    return `<article class="ramakVoice"><small>${esc(label.toUpperCase())}</small><b class="derejVoiceSource">${esc(raw.fuente||label)}</b>${raw.tipo?`<span class="derejVoiceType">${esc(raw.tipo)}</span>`:''}<p>${esc(raw.texto||'')}</p></article>`;
+  }
+  return `<article class="ramakVoice"><small>${esc(label.toUpperCase())}</small><b>${esc(label)}</b><p>${esc(raw||'')}</p></article>`;
+}
+
+
 function renderPanels(p,c){
   const rc=c.ramak_color||{};
   const saved=loadRamakMemory(p.parasha,c.dia)||{};
@@ -1465,6 +2567,38 @@ function renderPanels(p,c){
   const voices=c.voces||{};
   const carry=c.paraLlevar||{};
   const colorName=rc.nombre?` · ${esc(rc.nombre)}`:'';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1536,6 +2670,38 @@ function renderPanels(p,c){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   caminoScreen.querySelector('[data-ramak-panel="raiz"]').innerHTML=`
     ${scene(c,'02 · RAÍZ')}
     <div class="ramakBody">
@@ -1543,13 +2709,47 @@ function renderPanels(p,c){
       <div class="ramakCard ramakVerseCard">
         <small>VERSÍCULO</small>
         <div class="ramakHebrew">${esc(pasuk.hebreo||'')}</div>
+        ${pasuk.es?`<p class="derejVerseTranslation">${esc(pasuk.es)}</p>`:''}
         <div class="ramakPasukMeta">
           ${pasuk.trans?`<span><b>Transliteración</b><br>${esc(pasuk.trans)}</span>`:''}
           ${pasuk.ref?`<span><b>Referencia</b><br>${esc(biblicalRefEs(pasuk.ref))}</span>`:''}
         </div>
+        ${c.rootNote?`<p class="derejRootNote">${esc(c.rootNote)}</p>`:''}
       </div>
       ${navButtons('raiz')}
     </div>`;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1593,10 +2793,43 @@ function renderPanels(p,c){
     <div class="ramakBody">
       <span class="ramakBodyEyebrow">CUATRO VOCES · UNA MISMA RAÍZ</span>
       <div class="ramakVoices">
-        ${voiceNames.map(([key,label])=>`<article class="ramakVoice"><small>${label.toUpperCase()}</small><b>${label}</b><p>${esc(voices[key]||'')}</p></article>`).join('')}
+        ${voiceNames.map(([key,label])=>renderVoiceCard(voices[key],label)).join('')}
       </div>
+      <p class="ramakSourceNote">${esc(RAMAK_DATA?.nota_fuentes||'Las cuatro voces son síntesis editoriales de DÉREJ inspiradas en las fuentes señaladas; no reproducen citas textuales salvo indicación.')}</p>
       ${navButtons('profundizar')}
     </div>`;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1675,6 +2908,38 @@ function renderPanels(p,c){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   caminoScreen.querySelector('[data-ramak-panel="llevar"]').innerHTML=`
     ${scene(c,'05 · LLEVAR')}
     <div class="ramakBody">
@@ -1689,6 +2954,38 @@ function renderPanels(p,c){
       ${navButtons('llevar')}
     </div>`;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1762,10 +3059,74 @@ function renderRamak(scrollToChooser=false){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   const rc=c.ramak_color||{};
   const hex=rc.hex||'#E8EAED';
   caminoScreen.style.setProperty('--ramak-accent',hex);
   caminoScreen.style.setProperty('--ramak-ink',rc.texto||luminanceText(hex));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1849,6 +3210,38 @@ function renderRamak(scrollToChooser=false){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   $('ramakSelectedMeta').textContent=`DÍA ${c.dia} · ${p.parasha.toUpperCase()} · ${String(c.sefira).toUpperCase()}`;
   $('ramakSelectedTitle').textContent=c.titulo;
   $('ramakColorOrb').style.background=hex;
@@ -1884,8 +3277,72 @@ function renderRamak(scrollToChooser=false){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   renderParashaRail();
   renderDayStrip(p,c);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1958,8 +3415,72 @@ function renderRamak(scrollToChooser=false){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   renderPanels(p,c);
   activateRamakStep(selectedRamakStep,false);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2026,11 +3547,75 @@ function renderRamak(scrollToChooser=false){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function renderRamakError(){
   if(!caminoScreen) return;
   const chooser=$('ramakChooser');
-  if(chooser) chooser.innerHTML=`<div class="ramakLoading">No fue posible cargar Caminos Diarios. Verifica que <b>content/caminos-ramak-v21.json</b> esté en la rama.</div>`;
+  if(chooser) chooser.innerHTML=`<div class="ramakLoading">No fue posible cargar Caminos Diarios. Verifica que <b>content/caminos-ramak-v25.json</b> esté en la rama.</div>`;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2070,7 +3655,7 @@ async function loadRamak(){
     const data=await res.json();
     if(!Array.isArray(data.parashot)||!data.parashot.length) throw new Error('Datos vacíos');
     RAMAK_DATA=data;
-    window.DEREJ_RAMAK_V21=data;
+    window.DEREJ_RAMAK_V25=data;
     selectedParasha=data.parashot.some(p=>p.parasha===selectedParasha)?selectedParasha:data.parashot[0].parasha;
     selectedDay=data.parashot.find(p=>p.parasha===selectedParasha)?.caminos?.[0]?.dia||1;
     renderRamak(false);
@@ -2079,6 +3664,38 @@ async function loadRamak(){
     renderRamakError();
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2146,8 +3763,72 @@ document.addEventListener('click',e=>{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   const sc=e.target.closest('[data-ramak-scroll]');
   if(sc){$(sc.dataset.ramakScroll)?.scrollIntoView({behavior:'smooth',block:'start'});return;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2221,6 +3902,38 @@ document.addEventListener('click',e=>{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   const d=e.target.closest('[data-ramak-day]');
   if(d&&!d.disabled&&RAMAK_DATA){
     saveRamakDraft();
@@ -2261,12 +3974,76 @@ document.addEventListener('click',e=>{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   const step=e.target.closest('[data-ramak-step]');
   if(step){
     saveRamakDraft();
     activateRamakStep(step.dataset.ramakStep,true);
     return;
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2339,11 +4116,75 @@ document.addEventListener('click',e=>{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   if(e.target.closest('[data-ramak-gloss-close]')||e.target.closest('#ramakGlossBackdrop')){
     $('ramakGlossSheet').hidden=true;
     $('ramakGlossBackdrop').hidden=true;
     return;
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2388,6 +4229,38 @@ document.addEventListener('click',e=>{
     }
     return;
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2481,9 +4354,73 @@ document.addEventListener('click',e=>{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 caminoScreen?.addEventListener('input',e=>{
   if(e.target?.id==='ramakNote') saveRamakDraft();
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2550,11 +4487,75 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* SHABAT v2.1 · Prelanzamiento · seis caminos RC2 */
 (()=>{
   const SHABAT_DATA=[{"id":1,"num":"01","hebreo":"לכה דודי","hebreoNikud":"לְכָה דוֹדִי","translit":"Kabalat Shabat","titulo":"Recibir","tituloHeb":"Kabalat Shabat","tagline":"Llegar es un arte. No entras a Shabat, lo recibes como a una novia.","abierta":"Llegar es un arte. No entras a Shabat, lo recibes como a una novia. Sales a buscarla, te vistes distinto, preparas la casa. Kabalat Shabat no es una oración más: es un cortejo. Se hace de pie, cantando, girándote hacia la puerta. Porque lo sagrado no se fuerza. Se recibe. Cuando entiendes eso, dejas de perseguir el descanso y aprendes a darle la bienvenida.","profunda":{"texto":"Lejá Dodi, de Shlomo Alkabetz (Safed, siglo XVI), toma el versículo de Shir HaShirim y lo convierte en liturgia erótica y mística. Cada estrofa termina en \"Boí beshalom ateret baalá\" — entra en paz, corona de tu marido. En el Zohar, Shabat es Malká, la Reina, y también Kalá, la Novia. Shamor y Zajor: los dos verbos del Decálogo. Zajor (recordar) es positivo, masculino, santificar. Shamor (guardar) es negativo, femenino, no hacer. Según Rambam en Hiljot Shabat 29, recibir a Shabat con alegría, ropa limpia y luz encendida es parte de la mitzvá misma. No es preparación, es Shabat ya empezando.","fuentes":["Shlomo Alkabetz – Lejá Dodi","Zohar II, 88b – Shabat Malká","Rambam, Hiljot Shabat 29:2 – Kabod y Oneg"],"hebreoFuente":"שָׁמוֹר וְזָכוֹר בְּדִבּוּר אֶחָד\nהִשְׁמִיעָנוּ אֵל הַמְּיֻחָד"},"practica":{"titulo":"Pausa de atardecer","dias":[{"dia":"Día 1","accion":"2 min de pie frente a la ventana. Sin celular. Solo mirar cómo cae la luz."},{"dia":"Día 2","accion":"Pregunta: ¿Qué del día que se va quiero recibir, no resolver?"},{"dia":"Día 3","accion":"Vístete 5 min distinto para cenar. Camisa limpia. Gesto de novia/novio."},{"dia":"Día 4","accion":"Canta Lejá Dodi en voz baja, aunque no sepas la melodía."},{"dia":"Día 5","accion":"Sal a caminar 10 min sin destino. Estás saliendo a recibir."},{"dia":"Día 6","accion":"Prepara tu espacio como si viniera alguien amado. Flores, luz."},{"dia":"Día 7","accion":"Kabalat completa: de pie, vuelta hacia el oeste, 4 minutos de silencio."}]}},{"id":2,"num":"02","hebreo":"נרות","hebreoNikud":"נֵרוֹת","translit":"Nerot","titulo":"Encender","tituloHeb":"Nerot","tagline":"Antes de que oscurezca, haces luz. No esperas luz, la enciendes.","abierta":"Antes de que oscurezca, haces luz. No esperas luz, la enciendes. Este es un acto femenino por excelencia: crear hogar con las manos. Dos velas, no una. No por simetría, sino porque la luz siempre necesita compañía para quedarse. Cuando las enciendes, cubres tus ojos. No ves la luz al nacer. La ves después, reflejada en tu casa. Así se aprende a encender: sin ver el resultado inmediato.","profunda":{"texto":"Berajá: Baruj Atá A-donai, Eloheinu Mélej Haolam, Asher Kideshanu Bemitzvotav Vetzivanu Lehadlik Ner Shel Shabat. Rashi sobre Bereshit 1:3 dice que la primera creación no fue el sol, sino la luz que permite ver. Por eso encender es la primera melajá separadora: Or y Joshej. ¿Por qué dos velas? Shamor y Zajor otra vez. También Isha y Ish. Cielo y tierra. Lo que recuerda y lo que guarda. La llama, dice el Sfat Emet, es el único elemento que no puedes partir sin multiplicarlo.","fuentes":["Berajá – Lehadlik ner shel Shabat","Rashi Bereshit 1:3 – Yehi Or","Sfat Emet, Parashat Bereshit"],"hebreoFuente":"בָּרוּךְ אַתָּה יְיָ\nאֲשֶׁר קִדְּשָׁנוּ לְהַדְלִיק נֵר שֶׁל שַׁבָּת"},"practica":{"titulo":"Luz con cavaná","dias":[{"dia":"Día 1","accion":"Compra velas de cera de abeja. Tócalas. Huele."},{"dia":"Día 2","accion":"18 minutos antes de la puesta de sol, apaga todas las luces eléctricas."},{"dia":"Día 3","accion":"Enciende 2 velas. Cubre tus ojos 20 segundos. Pide en silencio 3 deseos."},{"dia":"Día 4","accion":"Enciende aunque estés solo/sola. Di la berajá aunque tiembles."},{"dia":"Día 5","accion":"Deja que las velas se consuman sin apagarlas. Mira cómo cambia tu cara."},{"dia":"Día 6","accion":"Viernes: invita a alguien a encender contigo. Luz compartida."},{"dia":"Día 7","accion":"Escribe qué luz encendiste esta semana que no existía antes."}]}},{"id":3,"num":"03","hebreo":"קידוש","hebreoNikud":"קִדּוּשׁ","translit":"Kiddush","titulo":"Santificar","tituloHeb":"Kiddush","tagline":"Santificar es separar con palabra y vino. Decir: este tiempo es distinto.","abierta":"Santificar es separar con palabra y vino. Decir: este tiempo es distinto. No es mejor ni peor. Es otro. El Kiddush no bendice el vino: usa el vino para bendecir el tiempo. Lo tomas con la mano derecha, lleno hasta derramar. Porque la alegría, para guardar el tiempo, tiene que desbordar un poco. De noche es deoraitá, de día es derabanán. Pero los dos dicen lo mismo: hoy no es continuación de ayer.","profunda":{"texto":"Zajor et Yom HaShabat Lekadshó – Shemot 20:8. Recuerda. El verbo zajor es activo. No es memoria pasiva, es hacer memorable. El vino es alegría que guarda, no que olvida. Por eso Kiddush de noche incluye Vayejulu – testimonio de la creación. Y Kiddush de día incluye Veshamru – testimonio de la salida de Egipto. Un Shabat guarda el mundo, el otro te guarda a ti. Beber sin bendecir es tomar. Bendecir y luego beber es santificar. La diferencia es una palabra en medio.","fuentes":["Shemot 20:8 – Zajor et Yom HaShabat","Pesajim 106a – Kiddush Hayom","Rambam, Hiljot Shabat 29:1"],"hebreoFuente":"זָכוֹר אֶת יוֹם הַשַּׁבָּת לְקַדְּשׁוֹ\nוַיְכֻלּוּ הַשָּׁמַיִם וְהָאָרֶץ"},"practica":{"titulo":"Copa, pan, tiempo","dias":[{"dia":"Día 1","accion":"Consigue una copa que solo uses para Kiddush. Que tenga peso."},{"dia":"Día 2","accion":"Llena la copa hasta que casi derrame. Mira el borde."},{"dia":"Día 3","accion":"Di Vayejulu en voz alta, de pie. Aunque estés solo."},{"dia":"Día 4","accion":"Kiddush con pan delante cubierto. Dos panes. Lechem Mishné."},{"dia":"Día 5","accion":"Bebe sentado. De un trago pequeño. No a sorbos."},{"dia":"Día 6","accion":"Viernes noche: Kiddush completo con alguien, compartiendo la misma copa."},{"dia":"Día 7","accion":"Kiddush de día: más corto, más dulce. ¿Qué tiempo distinto estás marcando?"}]}},{"id":4,"num":"04","hebreo":"סעודה ועונג","hebreoNikud":"סְעוּדָּה וְעֹנֶג","translit":"Seudá veOneg","titulo":"Mesa","tituloHeb":"Seudá y Oneg","tagline":"Comer sin apuro. Shabat tiene 3 seudot. El placer es mitzvá, no culpa.","abierta":"Comer sin apuro. Shabat tiene tres seudot, no por hambre, sino por ritmo. Viernes noche, Shabat mañana, Seudá Shlishit al atardecer. Cada una con su luz distinta. El placer es mitzvá, no culpa. Oneg no es lujo, es atención. Partir el pan despacio, cantar zemirot aunque desafines, dejar que la comida sea oración sin palabras. Aquí el estómago también reza.","profunda":{"texto":"VeKarata LaShabat Oneg – Yeshaya 58:13. Y llamarás al Shabat deleite. El Talmud (Shabat 118a) dice: todo el que deleita el Shabat recibe herencia sin límites. Lechem Mishné: dos panes en recuerdo del doble maná que caía viernes. No es magia, es memoria encarnada. Zemirot no son canciones de sobremesa, son Tikún para la seudá, para que no sea solo ingesta. Comer en Shabat es avodá – servicio. El Arizal decía que las chispas más altas están en la comida de Shabat porque se comen sin ansiedad.","fuentes":["Yeshaya 58:13 – Oneg Shabat","Shabat 118a – Kol Hameoneg","Arizal – Shaar HaKavanot, Seudot Shabat"],"hebreoFuente":"וְקָרָאתָ לַשַּׁבָּת עֹנֶג\nלֶחֶם מִשְׁנֶה – זֵכֶר לַמָּן"},"practica":{"titulo":"Mesa sin prisa","dias":[{"dia":"Día 1","accion":"Compra jalá trenzada. Si no hay, trenza pan común."},{"dia":"Día 2","accion":"Una comida sin celular a la vista. Celular en otro cuarto."},{"dia":"Día 3","accion":"Canta un zemer. Shalom Alejem. Aunque solo tararees."},{"dia":"Día 4","accion":"Sirve 3 platos pequeños en lugar de 1 grande. Ritmo."},{"dia":"Día 5","accion":"Come con la mano no dominante 2 minutos. Atención."},{"dia":"Día 6","accion":"Viernes noche: mesa con mantel blanco, invita."},{"dia":"Día 7","accion":"Seudá Shlishit: al atardecer, solo pan, aceituna y silencio."}]}},{"id":5,"num":"05","hebreo":"מנוחה","hebreoNikud":"מְנוּחָה","translit":"Menujá","titulo":"Descanso radical","tituloHeb":"Menujá","tagline":"Descanso no es no hacer nada. Es dejar de producir.","abierta":"Descanso no es no hacer nada. Es dejar de producir. Las 39 melajot no son prohibiciones: son 39 formas de no intervenir el mundo. No sembrar, no cosechar, no escribir, no encender fuego. No porque el trabajo sea malo, sino porque necesitas un día donde el mundo siga sin ti. Aquí Shabat toca directamente el Bloque 6 de Adam Adamá – Trabajo. Si no paras, el trabajo te define. Si paras, te recuerdas.","profunda":{"texto":"Shemot 20:10 – Lemaán Yanúaj Avdejaj Vaamatejá... Kaamoja. Para que descanse tu siervo, tu buey y tu extranjero como tú. No es privilegio, es derecho. El descanso es la primera ley laboral de la Torá. Rambam dice: Menujá no es ausencia de trabajo, es presencia de sistema que se mantiene solo. Por eso Shabat no es vacaciones. Vacaciones cambian de lugar. Shabat cambia de modo. De hacer a ser. De crear a contemplar. En tiempos de burnout, Menujá es desobediencia sagrada.","fuentes":["Shemot 20:10 – Kaamoja","Rambam, More Nevujim II:31 – Taamei HaShabat","Abraham J. Heschel – The Sabbath, Menujá como arquitectura del tiempo"],"hebreoFuente":"לְמַעַן יָנוּחַ עַבְדְּךָ וַאֲמָתְךָ כָּמוֹךָ\nשֵׁשֶׁת יָמִים תַּעֲבֹד – וּבַיּוֹם הַשְּׁבִיעִי תִּשְׁבֹּת"},"practica":{"titulo":"25 horas sin crear","dias":[{"dia":"Día 1","accion":"Haz lista de lo que NO harás: comprar, crear, producir, optimizar."},{"dia":"Día 2","accion":"Haz lista de lo que SÍ harás: caminar, leer por placer, amar, dormir."},{"dia":"Día 3","accion":"Deja el celular cargando en otra habitación de puesta de sol a puesta de sol."},{"dia":"Día 4","accion":"Camina sin audífonos 30 min. Sin contar pasos."},{"dia":"Día 5","accion":"Lee un libro de papel que no te sirva para nada."},{"dia":"Día 6","accion":"25 horas reales: de viernes atardecer a sábado noche. Sin comprar."},{"dia":"Día 7","accion":"Escribe: ¿Qué parte de ti descansa cuando no produces?"}]}},{"id":6,"num":"06","hebreo":"הבדלה","hebreoNikud":"הַבְדָּלָה","translit":"Havdalá","titulo":"Separar","tituloHeb":"Havdalá","tagline":"Salir también es sagrado. Vino, especias y fuego para llevarte el aroma.","abierta":"Salir también es sagrado. Havdalá no es cierre, es costura. Vino, especias y fuego para llevarte el aroma de Shabat a la semana. Hueles las besamim porque se va el alma extra – neshamá yeterá – y necesitas consuelo. Miras la llama entre tus dedos para aprender de nuevo a crear fuego. Separar es también un arte. No todo lo sagrado dura para siempre. Algunas cosas hay que despedirlas con belleza para que vuelvan.","profunda":{"texto":"Berajá: Hamavdil Ben Kodesh Lejol, Ben Or Lejoshej, Ben Israel Laamim, Ben Yom Hashevií Lesheshet Yemei Hamaasé. El que separa. Cinco separaciones en una. Besamim para el alma extra que se va – según Talmud Betzá 16a, en Shabat recibes una neshamá adicional que te hace ver más claro. Cuando se va, quedas triste, por eso olemos perfume. Ner: vuelves a crear fuego, vuelves a ser socio de la creación. Después de 25 horas de no crear, encender la mecha es volver a decir: el mundo te necesita otra vez.","fuentes":["Talmud Betzá 16a – Neshamá Yeterá","Berajot 8a – Hamavdil","Rav Kook – Olat Reiyá, Havdalá como esperanza"],"hebreoFuente":"הַמַּבְדִּיל בֵּין קֹדֶשׁ לְחוֹל\nבֵּין אוֹר לְחֹשֶׁךְ – בְּשָׂמִים לִנְשָׁמָה יְתֵרָה"},"practica":{"titulo":"Aroma para la semana","dias":[{"dia":"Día 1","accion":"Consigue besamim: clavo, canela, romero. Guárdalos en cajita."},{"dia":"Día 2","accion":"Sábado noche: copa de vino, especias, vela trenzada con 2 mechas."},{"dia":"Día 3","accion":"Mira la sombra de tus dedos a la luz de Havdalá. Cuenta tus líneas."},{"dia":"Día 4","accion":"Huele las besamim 3 veces profundo. ¿A qué te recuerda?"},{"dia":"Día 5","accion":"Di: \"Que esta semana tenga algo del perfume de Shabat\"."},{"dia":"Día 6","accion":"Havdalá con alguien. Compartan deseos para la semana."},{"dia":"Día 7","accion":"Guarda un resto de cera de la vela Havdalá en tu bolsillo toda la semana."}]}}];
   const screen=document.querySelector('[data-screen="shabat"]');
   if(!screen) return;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2632,6 +4633,38 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <section class="shabatJourney" id="shabatJourney" aria-labelledby="shabatJourneyTitle">
       <header class="shabatJourneyHead">
         <span>SEIS GESTOS · UN MISMO SHABAT</span>
@@ -2672,8 +4705,72 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <section class="shabatDetail" id="shabatDetail" aria-live="polite"></section>
   `;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2889,6 +4986,102 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   if(!document.getElementById('shabatV21Polish')){
     const style2=document.createElement('style');
     style2.id='shabatV21Polish';
@@ -2924,6 +5117,38 @@ loadRamak();
     `;
     document.head.appendChild(style2);
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2992,7 +5217,71 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   function selected(){return SHABAT_DATA.find(x=>x.id===selectedId)||SHABAT_DATA[0];}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3071,6 +5360,38 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   function tabContent(x){
     if(selectedTab==='abierta'){
       return `<div class="shabatReading"><p>${x.abierta}</p></div>`;
@@ -3092,6 +5413,38 @@ loadRamak();
         <div class="shabatKavana"><small>CAVANÁ DE LA SEMANA</small><p>“${x.tagline}”</p></div>
       </div>`;
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3183,9 +5536,73 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   screen.addEventListener('click',e=>{
     const scroll=e.target.closest('[data-shabat-scroll]');
     if(scroll){document.getElementById(scroll.dataset.shabatScroll)?.scrollIntoView({behavior:'smooth',block:'start'});return;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3252,6 +5669,38 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     const tab=e.target.closest('[data-shabat-tab]');
     if(tab){selectedTab=tab.dataset.shabatTab;selectedDay=0;renderDetail(false);return;}
 
@@ -3286,8 +5735,72 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     const day=e.target.closest('[data-shabat-day]');
     if(day){selectedDay=Number(day.dataset.shabatDay);renderDetail(false);return;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3355,6 +5868,38 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   renderGates();
   renderDetail(false);
 })();
@@ -3390,11 +5935,75 @@ loadRamak();
 
 
 
-/* MOED v2.1 · Prelanzamiento · seis tiempos RC2 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MOED v2.5.1 · seis tiempos · Iom Kipur integrado */
 (()=>{
-  const MOED_DATA=[{"id":"rosh-jodesh","num":1,"titleEs":"Rosh Jodesh","titleHeLatin":"Luna nueva","hebrew":"חדש","hebrewFull":"ראש חודש","tag":"Renacer","abierta":"El tiempo judío no es solar, es lunar. Empieza en oscuridad y crece. Cada mes nace de nuevo. No mides el tiempo que pasa, habitas el tiempo que vuelve.","profunda":"Kiddush HaJodesh es la primera mitzvá dada al pueblo en Egipto, antes de salir. Shemot 12:2 - HaJodesh hazé lajem, rosh jodashim. Rambam en Hiljot Kiddush HaJodesh explica que santificar la luna es santificar el tiempo mismo. El Talmud (Rosh Hashaná 22a) dice que Israel es como la luna: desaparece, parece que no está, y vuelve a brillar. La luna no tiene luz propia; recibe y refleja. Así también, cada mes.","sources":["Shemot 12:1-2 — HaJodesh hazé lajem","Rambam, Hiljot Kiddush HaJodesh 1:1-3","Talmud Rosh Hashaná 22a — mekadeshin al hareiyah","Midrash — David melej Israel jai vekayam, como la luna"],"practicaIntro":"Cada Rosh Jodesh, 5 minutos para preguntar qué renace este mes en ti.","practica7":[{"day":1,"title":"Mirar","desc":"Sal a ver la luna esta noche. ¿En qué fase está? ¿Qué fase estás tú?"},{"day":2,"title":"Nombrar el mes","desc":"Di en voz alta el nombre del mes hebreo. Nisán, Iyar, Siván... cada nombre es un clima interior."},{"day":3,"title":"Oscuridad fértil","desc":"Escribe 3 cosas que terminaron. Agradéceles. La luna empieza en negro."},{"day":4,"title":"Hilel menor","desc":"Recita Hallel abreviado o un salmo 113. Canta lo pequeño que crece."},{"day":5,"title":"Mujeres y luna","desc":"Tradición: Rosh Jodesh es fiesta de las mujeres. Pregunta a una mujer de tu vida qué quiere renovar."},{"day":6,"title":"Kiddush Levana","desc":"Si puedes, di Kidush Levaná bajo la luna. Si no, escribe: 'Renuevo mi alianza con el tiempo'."},{"day":7,"title":"Semilla del mes","desc":"Una sola kavaná para este mes. Una frase. Ej: Este mes de Elul, escucho antes de responder."}]},{"id":"pesaj","num":2,"titleEs":"Pesaj","titleHeLatin":"Libertad","hebrew":"פסח","hebrewFull":"פסח","tag":"Salir","abierta":"Salir de lo estrecho. Mitzrayim es meitzar - angostura. No es historia, es ahora. Cada uno debe verse como si él mismo salió de Egipto hoy.","profunda":"Devarim 16: La Torá ordena recordar que fuiste esclavo. El Seder no es cena, es teatro de la memoria: 4 copas, Matzá - lejem oni, pan de la pobreza y de la fe, Maror - amargura que no se endulza. Rambam dice que Jirut es poder hacer lo que tu mente decide, no lo que tu miedo ordena. Seforno: la libertad judía es libertad con memoria, no olvido. Si olvidas de dónde saliste, vuelves a esclavizarte.","sources":["Devarim 16:1-8 — Shamor et jodesh haaviv","Hagadá — Bejol dor vador","Rambam, Hiljot Jametz uMatzá","Seforno sobre Shemot 12 — Jirut hanefesh"],"practicaIntro":"Limpieza de jametz interno, contar tu propio éxodo.","practica7":[{"day":1,"title":"Bedikat jametz","desc":"Busca tu jametz: ¿Qué relato inflado te cuentas? Escríbelo y dóblalo."},{"day":2,"title":"Biur","desc":"Quema simbólicamente una de esas historias. No la niegues, transfórmala."},{"day":3,"title":"4 preguntas","desc":"Formula tus 4 Ma Nishtaná personales: ¿Qué es diferente esta noche en mi vida?"},{"day":4,"title":"Matzá","desc":"Come algo simple y lento. Sin apuro. La libertad no tiene levadura."},{"day":5,"title":"Maguid","desc":"Cuenta tu éxodo a alguien: ¿De qué saliste este año?"},{"day":6,"title":"Dayenu","desc":"Lista 10 dayenus: hubiera sido suficiente con... Entrena gratitud desmedida."},{"day":7,"title":"Shir","desc":"Canta Shirat HaYam. La libertad termina en canto, no en discurso."}]},{"id":"shavuot","num":3,"titleEs":"Shavuot","titleHeLatin":"Entrega","hebrew":"שבוע","hebrewFull":"שבועות","tag":"Cosechar adentro","abierta":"49 días contando, del grano a la Torá. De cosechar afuera a cosechar adentro. En Pesaj cosechas cebada, en Shavuot traes tu primer fruto humano.","profunda":"Vayikra 23:15 — Usefartem lajem mimajarat haShabat. Sefirat HaOmer es contar la distancia entre salir y recibir. No basta con salir de Egipto, hay que llegar a Sinaí. Kabalat HaTorá no es pasado, es presente continuo. El libro de Rut se lee en Shavuot: una moabita elige pertenecer. Bikurim - traer primicias - es decir: esto primero no es mío, es ofrenda. La Torá es como agua, dicen Jajamim: va hacia lo bajo, hacia el humilde.","sources":["Vayikra 23:15-21 — Sefirat HaOmer","Talmud Shabat 88a — Kabalat HaTorá","Meguilat Rut — bikurim y jesed","Midrash — Ein mayim ela Torá"],"practicaIntro":"Estudio nocturno, traer primeros frutos.","practica7":[{"day":1,"title":"Omer diario","desc":"Cuenta hoy: hoy son X días del Omer. No cuentes automático. Detente."},{"day":2,"title":"Rut","desc":"Lee un capítulo de Rut. ¿A quién eliges acompañar: Adonde vayas iré?"},{"day":3,"title":"Agua","desc":"Estudia 15 minutos de Torá como quien bebe agua. Sin meta de terminar."},{"day":4,"title":"Bikurim","desc":"Trae un primer fruto: algo que hiciste por primera vez este año. Ofrécelo."},{"day":5,"title":"Naasé Venishmá","desc":"Haz antes de entender. Una mitzvá sin entenderla del todo hoy."},{"day":6,"title":"Tikkun Leil Shavuot","desc":"Noche en vela: estudia 3 textos cortos con alguien. Que la noche sostenga."},{"day":7,"title":"Matán","desc":"Escribe tu propio Aseret HaDibrot: 10 frases que quieres recibir como ley interior."}]},{"id":"sucot","num":4,"titleEs":"Sucot","titleHeLatin":"Fragilidad","hebrew":"סכה","hebrewFull":"סוכות","tag":"Abrazo frágil","abierta":"Vivir 7 días en una cabaña frágil para recordar que lo frágil te cuida. Conecta con Adam Adamá - tierra que te sostiene. La sucá no protege del viento, te enseña a confiar en el viento.","profunda":"Vayikra 23:42 — Basukot teshvu shivat yamim. Zohar dice que la Sucá es el abrazo de Dios, jibuka. 7 Ushpizin: Avraham, Yitzjak, Yaakov, Moshe, Aharon, Yosef, David - invitas ancestros a tu fragilidad. Arba Minim: etrog, lulav, hadas, aravá - cuatro tipos de judíos, cuatro partes del cuerpo, cuatro caracteres, todos atados juntos. Sin uno, no hay mitzvá. La sucá debe tener más sombra que sol, y ver estrellas por el sjaj.","sources":["Vayikra 23:42-43 — Lemaán yedu doroteijem","Zohar Emor — Sucá como abrazo","Talmud Sucá 11b — Ushpizin","Midrash sobre Arba Minim"],"practicaIntro":"Comer en Sucá, invitar, mirar estrellas por el techo.","practica7":[{"day":1,"title":"Construir","desc":"Levanta algo frágil hoy: una mesa simple, un techo de ramas. Que no sea perfecto."},{"day":2,"title":"Leshev","desc":"Come una comida completa en la sucá o cerca de una ventana mirando cielo. Sin celular."},{"day":3,"title":"Ushpizin","desc":"Invita hoy a un huésped real y a uno ancestral. ¿Qué le preguntarías a Avraham en tu sucá?"},{"day":4,"title":"Arba Minim","desc":"Toma 4 objetos distintos (fruta, rama, hoja, vara) y átalos. ¿Qué partes tuyas necesitan estar juntas?"},{"day":5,"title":"Noche estrellada","desc":"Mira estrellas por el sjaj o techo. Cuenta 3 que veas. Recuerda: Avraham contó estrellas."},{"day":6,"title":"Fragilidad que cuida","desc":"Escribe: ¿Qué estructura frágil de tu vida te cuida más que las sólidas?"},{"day":7,"title":"Simjá","desc":"Sucot es Zman Simjatenu. Baila 2 minutos sin motivo. La alegría como mitzvá."}]},{"id":"yamim-noraim","num":5,"titleEs":"Yamim Noraim","titleHeLatin":"Días temibles y dulces","hebrew":"ימים","hebrewFull":"ימים נוראים","tag":"Retorno","abierta":"Rosh Hashaná no es fin de año, es cabeza de año. Yom Kippur no es culpa, es limpieza. Teshuvá no es arrepentimiento, es volver. Volver a tu lugar.","profunda":"Shofar: 100 sonidos. Tekiá - entero, Shevarim - quebrado, Teruá - sollozo. Rambam en Hiljot Teshuvá dice que el Shofar dice: despierten dormidos. Kol Nidrei no anula promesas a personas, anula votos precipitados con lo divino. Vidui es confesión en plural: ashamnu, bagadnu - porque mi error es parte de un cuerpo. El Libro de la Vida no es amenaza, es recordatorio: tu vida escribe. El juicio es dulce si te atreves a nombrarte.","sources":["Rambam, Hiljot Teshuvá 1-2 — Teshuvá como retorno","Talmud Rosh Hashaná 16b — 100 kolot shofar","Majzor — Kol Nidrei y Vidui","Bereshit Rabá — Sefer HaJaim"],"practicaIntro":"10 días de retorno, pedir perdón concreto.","practica7":[{"day":1,"title":"Shofar","desc":"Escucha un shofar grabado. 30 segundos de silencio después. ¿Qué despertó?"},{"day":2,"title":"Jeshbón","desc":"Balance no financiero: ¿A quién le debes una palabra? ¿A quién le debes un límite?"},{"day":3,"title":"Slijá concreta","desc":"Pide perdón a una persona específica, sin justificarte. Frase corta: te lastimé cuando..."},{"day":4,"title":"Vidui personal","desc":"Escribe tu propio vidui en plural: nos equivocamos cuando..."},{"day":5,"title":"Tashlij","desc":"Ve a agua corriente. Tira migas o piedritas. Nombra lo que arrojas."},{"day":6,"title":"Erev Kippur","desc":"Come con dulzura antes del ayuno. La mesa previa es mitzvá. Pide bendición a alguien."},{"day":7,"title":"Neila","desc":"Al cerrar, escribe una puerta que quieres que permanezca abierta este año."}]},{"id":"januca-purim","num":6,"titleEs":"Janucá y Purim","titleHeLatin":"Luz oculta y alegría","hebrew":"אור","hebrewFull":"חנוכה ופורים","tag":"Milagro pequeño","abierta":"Dos fiestas rabínicas: una de luz que resiste, otra de máscara que revela. Milagros pequeños. No mar abierto, aceite que dura. No profeta, risa que rompe decreto.","profunda":"Ner Ish UBeito - cada persona y su casa debe encender. No el templo, tu casa. Janucá es jinuja - inauguración: volver a inaugurar lo profanado. Meguilat Ester no nombra a Dios ni una vez: Dios oculto en intriga palaciega. Al HaNisim dice: bimeihem bazmán hazé - en sus días, en este tiempo. La luz de Janucá no se apaga porque es luz de lo poco que alcanza. Purim: ad delo yada - hasta no saber diferencia entre bendito Mordejai y maldito Haman, porque la alegría rompe categorías.","sources":["Shabat 21b — Ner Janucá","Meguilat Ester — hester panim","Al HaNisim — janucá y purim","Rambam Hiljot Meguilá 2:15 — Mishloaj Manot y Matanot"],"practicaIntro":"Encender janukiá 8 días, dar Mishloaj Manot.","practica7":[{"day":1,"title":"Ner 1","desc":"Enciende 1 vela hoy, aunque no sea Janucá. Di: pongo luz donde había costumbre."},{"day":2,"title":"Shemen","desc":"Busca tu aceite pequeño que aún dura: ¿Qué te queda cuando todo falta?"},{"day":3,"title":"Jalon","desc":"Pon tu janukiá en la ventana. Que tu luz sea vista. No escondas tu milagro."},{"day":4,"title":"Máscara","desc":"En Purim nos disfrazamos para revelar. ¿Qué máscara te permite decir la verdad?"},{"day":5,"title":"Mishloaj","desc":"Envía comida a alguien hoy. Dos porciones, a una persona. Sin motivo."},{"day":6,"title":"Matanot","desc":"Da a quien no puede devolverte. Ese es el corazón de Purim."},{"day":7,"title":"Hallel y risa","desc":"Lee Al HaNisim. Luego ríe 60 segundos a propósito. La risa rompe decretos."}]}];
+  const MOED_DATA=[{"id":"rosh-jodesh","num":1,"titleEs":"Rosh Jodesh","titleHeLatin":"Luna nueva","hebrew":"חדש","hebrewFull":"ראש חודש","tag":"Renacer","abierta":"El tiempo judío no es solar, es lunar. Empieza en oscuridad y crece. Cada mes nace de nuevo. No mides el tiempo que pasa, habitas el tiempo que vuelve.","profunda":"Kiddush HaJodesh es la primera mitzvá dada al pueblo en Egipto, antes de salir. Shemot 12:2 - HaJodesh hazé lajem, rosh jodashim. Rambam en Hiljot Kiddush HaJodesh explica que santificar la luna es santificar el tiempo mismo. El Talmud (Rosh Hashaná 22a) dice que Israel es como la luna: desaparece, parece que no está, y vuelve a brillar. La luna no tiene luz propia; recibe y refleja. Así también, cada mes.","sources":["Shemot 12:1-2 — HaJodesh hazé lajem","Rambam, Hiljot Kiddush HaJodesh 1:1-3","Talmud Rosh Hashaná 22a — mekadeshin al hareiyah","Midrash — David melej Israel jai vekayam, como la luna"],"practicaIntro":"Cada Rosh Jodesh, 5 minutos para preguntar qué renace este mes en ti.","practica7":[{"day":1,"title":"Mirar","desc":"Sal a ver la luna esta noche. ¿En qué fase está? ¿Qué fase estás tú?"},{"day":2,"title":"Nombrar el mes","desc":"Di en voz alta el nombre del mes hebreo. Nisán, Iyar, Siván... cada nombre es un clima interior."},{"day":3,"title":"Oscuridad fértil","desc":"Escribe 3 cosas que terminaron. Agradéceles. La luna empieza en negro."},{"day":4,"title":"Hilel menor","desc":"Recita Hallel abreviado o un salmo 113. Canta lo pequeño que crece."},{"day":5,"title":"Mujeres y luna","desc":"Tradición: Rosh Jodesh es fiesta de las mujeres. Pregunta a una mujer de tu vida qué quiere renovar."},{"day":6,"title":"Kiddush Levana","desc":"Si puedes, di Kidush Levaná bajo la luna. Si no, escribe: 'Renuevo mi alianza con el tiempo'."},{"day":7,"title":"Semilla del mes","desc":"Una sola kavaná para este mes. Una frase. Ej: Este mes de Elul, escucho antes de responder."}]},{"id":"pesaj","num":2,"titleEs":"Pesaj","titleHeLatin":"Libertad","hebrew":"פסח","hebrewFull":"פסח","tag":"Salir","abierta":"Salir de lo estrecho. Mitzrayim es meitzar - angostura. No es historia, es ahora. Cada uno debe verse como si él mismo salió de Egipto hoy.","profunda":"Devarim 16: La Torá ordena recordar que fuiste esclavo. El Seder no es cena, es teatro de la memoria: 4 copas, Matzá - lejem oni, pan de la pobreza y de la fe, Maror - amargura que no se endulza. Rambam dice que Jirut es poder hacer lo que tu mente decide, no lo que tu miedo ordena. Seforno: la libertad judía es libertad con memoria, no olvido. Si olvidas de dónde saliste, vuelves a esclavizarte.","sources":["Devarim 16:1-8 — Shamor et jodesh haaviv","Hagadá — Bejol dor vador","Rambam, Hiljot Jametz uMatzá","Seforno sobre Shemot 12 — Jirut hanefesh"],"practicaIntro":"Limpieza de jametz interno, contar tu propio éxodo.","practica7":[{"day":1,"title":"Bedikat jametz","desc":"Busca tu jametz: ¿Qué relato inflado te cuentas? Escríbelo y dóblalo."},{"day":2,"title":"Biur","desc":"Quema simbólicamente una de esas historias. No la niegues, transfórmala."},{"day":3,"title":"4 preguntas","desc":"Formula tus 4 Ma Nishtaná personales: ¿Qué es diferente esta noche en mi vida?"},{"day":4,"title":"Matzá","desc":"Come algo simple y lento. Sin apuro. La libertad no tiene levadura."},{"day":5,"title":"Maguid","desc":"Cuenta tu éxodo a alguien: ¿De qué saliste este año?"},{"day":6,"title":"Dayenu","desc":"Lista 10 dayenus: hubiera sido suficiente con... Entrena gratitud desmedida."},{"day":7,"title":"Shir","desc":"Canta Shirat HaYam. La libertad termina en canto, no en discurso."}]},{"id":"shavuot","num":3,"titleEs":"Shavuot","titleHeLatin":"Entrega","hebrew":"שבוע","hebrewFull":"שבועות","tag":"Cosechar adentro","abierta":"49 días contando, del grano a la Torá. De cosechar afuera a cosechar adentro. En Pesaj cosechas cebada, en Shavuot traes tu primer fruto humano.","profunda":"Vayikra 23:15 — Usefartem lajem mimajarat haShabat. Sefirat HaOmer es contar la distancia entre salir y recibir. No basta con salir de Egipto, hay que llegar a Sinaí. Kabalat HaTorá no es pasado, es presente continuo. El libro de Rut se lee en Shavuot: una moabita elige pertenecer. Bikurim - traer primicias - es decir: esto primero no es mío, es ofrenda. La Torá es como agua, dicen Jajamim: va hacia lo bajo, hacia el humilde.","sources":["Vayikra 23:15-21 — Sefirat HaOmer","Talmud Shabat 88a — Kabalat HaTorá","Meguilat Rut — bikurim y jesed","Midrash — Ein mayim ela Torá"],"practicaIntro":"Estudio nocturno, traer primeros frutos.","practica7":[{"day":1,"title":"Omer diario","desc":"Cuenta hoy: hoy son X días del Omer. No cuentes automático. Detente."},{"day":2,"title":"Rut","desc":"Lee un capítulo de Rut. ¿A quién eliges acompañar: Adonde vayas iré?"},{"day":3,"title":"Agua","desc":"Estudia 15 minutos de Torá como quien bebe agua. Sin meta de terminar."},{"day":4,"title":"Bikurim","desc":"Trae un primer fruto: algo que hiciste por primera vez este año. Ofrécelo."},{"day":5,"title":"Naasé Venishmá","desc":"Haz antes de entender. Una mitzvá sin entenderla del todo hoy."},{"day":6,"title":"Tikkun Leil Shavuot","desc":"Noche en vela: estudia 3 textos cortos con alguien. Que la noche sostenga."},{"day":7,"title":"Matán","desc":"Escribe tu propio Aseret HaDibrot: 10 frases que quieres recibir como ley interior."}]},{"id":"sucot","num":4,"titleEs":"Sucot","titleHeLatin":"Fragilidad","hebrew":"סכה","hebrewFull":"סוכות","tag":"Abrazo frágil","abierta":"Vivir 7 días en una cabaña frágil para recordar que lo frágil te cuida. Conecta con Adam Adamá - tierra que te sostiene. La sucá no protege del viento, te enseña a confiar en el viento.","profunda":"Vayikra 23:42 — Basukot teshvu shivat yamim. Zohar dice que la Sucá es el abrazo de Dios, jibuka. 7 Ushpizin: Avraham, Yitzjak, Yaakov, Moshe, Aharon, Yosef, David - invitas ancestros a tu fragilidad. Arba Minim: etrog, lulav, hadas, aravá - cuatro tipos de judíos, cuatro partes del cuerpo, cuatro caracteres, todos atados juntos. Sin uno, no hay mitzvá. La sucá debe tener más sombra que sol, y ver estrellas por el sjaj.","sources":["Vayikra 23:42-43 — Lemaán yedu doroteijem","Zohar Emor — Sucá como abrazo","Talmud Sucá 11b — Ushpizin","Midrash sobre Arba Minim"],"practicaIntro":"Comer en Sucá, invitar, mirar estrellas por el techo.","practica7":[{"day":1,"title":"Construir","desc":"Levanta algo frágil hoy: una mesa simple, un techo de ramas. Que no sea perfecto."},{"day":2,"title":"Leshev","desc":"Come una comida completa en la sucá o cerca de una ventana mirando cielo. Sin celular."},{"day":3,"title":"Ushpizin","desc":"Invita hoy a un huésped real y a uno ancestral. ¿Qué le preguntarías a Avraham en tu sucá?"},{"day":4,"title":"Arba Minim","desc":"Toma 4 objetos distintos (fruta, rama, hoja, vara) y átalos. ¿Qué partes tuyas necesitan estar juntas?"},{"day":5,"title":"Noche estrellada","desc":"Mira estrellas por el sjaj o techo. Cuenta 3 que veas. Recuerda: Avraham contó estrellas."},{"day":6,"title":"Fragilidad que cuida","desc":"Escribe: ¿Qué estructura frágil de tu vida te cuida más que las sólidas?"},{"day":7,"title":"Simjá","desc":"Sucot es Zman Simjatenu. Baila 2 minutos sin motivo. La alegría como mitzvá."}]},{"id":"iom-kipur","num":5,"titleEs":"Iom Kipur","titleHeLatin":"El día del retorno","hebrew":"כיפור","hebrewFull":"יום כיפור","tag":"Volver · reparar · soltar","abierta":"Iom Kipur no se presenta aquí como un día para acumular culpa, sino como una posibilidad de volver. El Portal propone ocho puertas íntimas para reconocer, reparar, soltar y agradecer; puedes entrar por una sola y caminarla con honestidad.","profunda":"La teshuvá exige verdad y también reparación. El Portal se ancla en Yejezkel 18:30 y Yirmiyahu 17:14, y recuerda con Rambam que las faltas entre una persona y su prójimo no se resuelven sólo en el plano espiritual: cuando es posible, hay que reconocer el daño y buscar reparación. La Auditoría previa amplía ese examen mediante 44 puertas inspiradas en Al Jet, organizadas como un espejo de responsabilidad, no de auto-castigo.","sources":["Yejezkel 18:30 — volver y apartarse de la transgresión","Yirmiyahu 17:14 — sanar y ser sanado","Rambam, Hiljot Teshuvá 2:9 — reparación entre persona y prójimo","Al Jet — marco de la Auditoría Pre-Iom Kipur"],"practicaIntro":"Dos recorridos complementarios: Portal Iom Kipur y Auditoría Pre-Iom Kipur.","practica7":[],"experiences":[{"label":"Portal Iom Kipur","meta":"8 puertas íntimas","desc":"Reconocer · reparar · soltar · agradecer. Un acompañamiento para volver sin convertir el día en culpa.","href":"moed-iom-kipur.html"},{"label":"Auditoría Pre-Iom Kipur","meta":"44 puertas de retorno","desc":"Jeshbón hanéfesh guiado: con Dios, con el otro y contigo; reflexión y acto concreto de reparación.","href":"moed-auditoria-iom-kipur.html"}]},{"id":"januca-purim","num":6,"titleEs":"Janucá y Purim","titleHeLatin":"Luz oculta y alegría","hebrew":"אור","hebrewFull":"חנוכה ופורים","tag":"Milagro pequeño","abierta":"Dos fiestas rabínicas: una de luz que resiste, otra de máscara que revela. Milagros pequeños. No mar abierto, aceite que dura. No profeta, risa que rompe decreto.","profunda":"Ner Ish UBeito - cada persona y su casa debe encender. No el templo, tu casa. Janucá es jinuja - inauguración: volver a inaugurar lo profanado. Meguilat Ester no nombra a Dios ni una vez: Dios oculto en intriga palaciega. Al HaNisim dice: bimeihem bazmán hazé - en sus días, en este tiempo. La luz de Janucá no se apaga porque es luz de lo poco que alcanza. Purim: ad delo yada - hasta no saber diferencia entre bendito Mordejai y maldito Haman, porque la alegría rompe categorías.","sources":["Shabat 21b — Ner Janucá","Meguilat Ester — hester panim","Al HaNisim — janucá y purim","Rambam Hiljot Meguilá 2:15 — Mishloaj Manot y Matanot"],"practicaIntro":"Encender janukiá 8 días, dar Mishloaj Manot.","practica7":[{"day":1,"title":"Ner 1","desc":"Enciende 1 vela hoy, aunque no sea Janucá. Di: pongo luz donde había costumbre."},{"day":2,"title":"Shemen","desc":"Busca tu aceite pequeño que aún dura: ¿Qué te queda cuando todo falta?"},{"day":3,"title":"Jalon","desc":"Pon tu janukiá en la ventana. Que tu luz sea vista. No escondas tu milagro."},{"day":4,"title":"Máscara","desc":"En Purim nos disfrazamos para revelar. ¿Qué máscara te permite decir la verdad?"},{"day":5,"title":"Mishloaj","desc":"Envía comida a alguien hoy. Dos porciones, a una persona. Sin motivo."},{"day":6,"title":"Matanot","desc":"Da a quien no puede devolverte. Ese es el corazón de Purim."},{"day":7,"title":"Hallel y risa","desc":"Lee Al HaNisim. Luego ríe 60 segundos a propósito. La risa rompe decretos."}]}];
   const screen=document.querySelector('[data-screen="moed"]');
   if(!screen) return;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3432,9 +6041,41 @@ loadRamak();
     "pesaj":"⌁",
     "shavuot":"♾",
     "sucot":"⌂",
-    "yamim-noraim":"◉",
+    "iom-kipur":"◉",
     "januca-purim":"✦"
   };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3512,6 +6153,38 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <section class="moedJourney" id="moedJourney" aria-labelledby="moedJourneyTitle">
       <header class="moedJourneyHead">
         <span>CICLOS · ENCUENTROS · SEÑALES</span>
@@ -3551,8 +6224,72 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <section class="moedDetail" id="moedDetail" aria-live="polite"></section>
   `;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3622,6 +6359,13 @@ loadRamak();
       .moedDetailBody h2{font:clamp(2.05rem,8.6vw,3rem)/.98 Georgia,serif;margin:.28em 0 .08em;color:#332c25;letter-spacing:-.02em;text-wrap:balance}
       .moedSub{font:.95rem/1.35 Georgia,serif;color:#647058;margin:0 0 7px}
       .moedTagline{font:1.08rem/1.42 Georgia,serif;color:#62594e;margin:0 0 15px}
+      .moedExperienceDoors{display:grid;gap:9px;margin:12px 0 15px}
+      .moedExperienceDoor{display:grid;gap:4px;padding:14px 15px;border:1px solid #bca985;border-radius:18px;background:linear-gradient(135deg,#fff9ed,#efe4ce);color:#3b332a;text-decoration:none;box-shadow:0 7px 20px rgba(63,48,28,.07)}
+      .moedExperienceDoor:hover,.moedExperienceDoor:focus-visible{border-color:#7f6945;outline:none;transform:translateY(-1px)}
+      .moedExperienceDoor small{font-size:.52rem;letter-spacing:.16em;font-weight:900;color:#7c6948;text-transform:uppercase}
+      .moedExperienceDoor b{font:1.08rem/1.2 Georgia,serif;color:#302920}
+      .moedExperienceDoor p{margin:0!important;font:.78rem/1.45 Georgia,serif!important;color:#665b4d!important}
+      .moedExperienceDoor strong{margin-top:3px;font-size:.68rem;color:#59684c}
       .moedTabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin:10px 0 15px}
       .moedTab{border:1px solid #c8b99e;border-radius:16px;background:#f7ecd9;color:#463d31;padding:10px 5px;font-size:.68rem;font-weight:850}
       .moedTab.on{background:#3f5437;color:#fff;border-color:#3f5437}
@@ -3702,9 +6446,73 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   let selectedId='rosh-jodesh';
   let selectedTab='abierta';
   let selectedDay=0;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3742,7 +6550,7 @@ loadRamak();
     "pesaj":"52% 62%",
     "shavuot":"34% 48%",
     "sucot":"70% 66%",
-    "yamim-noraim":"64% 46%",
+    "iom-kipur":"64% 46%",
     "januca-purim":"78% 62%"
   };
   const detailPositions={
@@ -3750,7 +6558,7 @@ loadRamak();
     "pesaj":"32% 50%",
     "shavuot":"58% 50%",
     "sucot":"76% 64%",
-    "yamim-noraim":"40% 46%",
+    "iom-kipur":"40% 46%",
     "januca-purim":"82% 56%"
   };
 
@@ -3785,8 +6593,72 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   function selected(){return MOED_DATA.find(x=>x.id===selectedId)||MOED_DATA[0];}
   function detailImage(x){return x.id==='rosh-jodesh' ? "url('assets/moed-rosh-jodesh-v21.webp')" : "url('assets/moed-seasons-v21.webp')";}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3865,6 +6737,49 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  function experienceDoors(x){
+    if(!x.experiences?.length) return '';
+    return `<div class="moedExperienceDoors" aria-label="Experiencias de ${x.titleEs}">${x.experiences.map(item=>`
+      <a class="moedExperienceDoor" href="${item.href}">
+        <small>${item.meta}</small>
+        <b>${item.label}</b>
+        <p>${item.desc}</p>
+        <strong>Entrar →</strong>
+      </a>`).join('')}</div>`;
+  }
+
   function tabContent(x){
     if(selectedTab==='abierta'){
       return `<div class="moedReading"><p>${x.abierta}</p></div>`;
@@ -3875,6 +6790,9 @@ loadRamak();
           <p>${x.profunda}</p>
           <div class="moedSources">${x.sources.map(f=>`<div class="moedSource">${f}</div>`).join('')}</div>
         </div>`;
+    }
+    if(x.experiences?.length){
+      return `<div class="moedReading"><div class="moedPracticeHead"><small>RECORRIDOS DÉREJ</small><b>${x.practicaIntro}</b></div>${experienceDoors(x)}</div>`;
     }
     const item=x.practica7[selectedDay]||x.practica7[0];
     return `
@@ -3920,6 +6838,38 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   function renderDetail(scroll=false){
     const x=selected();
     const host=document.getElementById('moedDetail');
@@ -3933,10 +6883,11 @@ loadRamak();
         <h2>${x.titleEs}</h2>
         <p class="moedSub">${x.titleHeLatin} · ${x.hebrewFull}</p>
         <p class="moedTagline">${x.tag}</p>
+        ${x.experiences?.length?experienceDoors(x):''}
         <div class="moedTabs" role="tablist" aria-label="Profundidad de lectura">
           <button type="button" class="moedTab${selectedTab==='abierta'?' on':''}" data-moed-tab="abierta">Abierta</button>
           <button type="button" class="moedTab${selectedTab==='profunda'?' on':''}" data-moed-tab="profunda">Profunda</button>
-          <button type="button" class="moedTab${selectedTab==='practica'?' on':''}" data-moed-tab="practica">Práctica</button>
+          <button type="button" class="moedTab${selectedTab==='practica'?' on':''}" data-moed-tab="practica">${x.experiences?.length?'Experiencias':'Práctica'}</button>
         </div>
         <div id="moedTabContent">${tabContent(x)}</div>
         <div class="moedNav">
@@ -3947,6 +6898,38 @@ loadRamak();
     renderGates();
     if(scroll) host.scrollIntoView({behavior:'smooth',block:'start'});
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4014,8 +6997,72 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     const gate=e.target.closest('[data-moed-id]');
     if(gate){selectedId=gate.dataset.moedId;selectedTab='abierta';selectedDay=0;renderDetail(true);return;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4082,8 +7129,72 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     const day=e.target.closest('[data-moed-day]');
     if(day){selectedDay=Number(day.dataset.moedDay);renderDetail(false);return;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4155,9 +7266,73 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   renderGates();
   renderDetail(false);
 })();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4226,11 +7401,75 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   const AUDIO_BASE='https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej';
   let tracks=[];
   let index=0;
   let ready=false;
   let loading=null;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4308,11 +7547,75 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <section class="radioIntro">
       <span>MÚSICA · SILENCIO · PRESENCIA</span>
       <h2>Hay caminos<br>que se escuchan.</h2>
       <p>Radio Dérej no interrumpe el Camino. Lo acompaña.</p>
     </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4383,6 +7686,38 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       <article class="radioNow">
         <div class="radioNowArtwork" aria-hidden="true"></div>
         <div class="radioNowBody">
@@ -4421,11 +7756,75 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
           <div class="radioProgressRow">
             <span id="radioV21Current">0:00</span>
             <input id="radioV21Seek" type="range" min="0" max="1000" value="0" aria-label="Posición de reproducción">
             <span id="radioV21Duration">0:00</span>
           </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4499,10 +7898,74 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       <div class="radioQuote">
         <small>ESCUCHA</small>
         <p>“La música abre un espacio. El silencio decide qué hacer con él.”</p>
       </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4545,6 +8008,38 @@ loadRamak();
       </section>
     </section>
   `;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4681,6 +8176,38 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   const audio=document.getElementById('radioV21Audio');
   const title=document.getElementById('radioV21TrackTitle');
   const meta=document.getElementById('radioV21TrackMeta');
@@ -4690,6 +8217,38 @@ loadRamak();
   const play=document.getElementById('radioV21Play');
   const status=document.getElementById('radioV21Status');
   const list=document.getElementById('radioV21TrackList');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4819,6 +8378,38 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   play.addEventListener('click',async()=>{
     await ensure();
     if(!audio.src) return;
@@ -4837,6 +8428,38 @@ loadRamak();
   });
   audio.addEventListener('ended',()=>load(index+1,true));
   audio.addEventListener('error',()=>{status.textContent='No se pudo reproducir esta pista. Prueba la siguiente.';});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4917,6 +8540,38 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   if('mediaSession' in navigator){
     try{
       navigator.mediaSession.setActionHandler('play',()=>audio.play());
@@ -4926,6 +8581,38 @@ loadRamak();
     }catch{}
   }
 })();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4994,8 +8681,72 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   const BROTE_KEY='derej-v21-mi-camino-brote';
   let activeTab='huellas';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5073,11 +8824,75 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <section class="personalIntro">
       <span>MEMORIA · NO PUNTUACIÓN</span>
       <h2>Lo vivido<br>también deja raíz.</h2>
       <p>No hay niveles, rachas ni comparación. Sólo memoria local para volver a mirar.</p>
     </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5147,11 +8962,75 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       <div class="personalTabs" role="tablist" aria-label="Mi Camino">
         <button type="button" class="personalTab on" data-personal-tab="huellas">Huellas</button>
         <button type="button" class="personalTab" data-personal-tab="brotes">Brotes</button>
         <button type="button" class="personalTab" data-personal-tab="memoria">Memoria</button>
       </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5192,6 +9071,38 @@ loadRamak();
         </header>
         <div id="personalFootprints" class="personalMemoryList"></div>
       </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5269,6 +9180,38 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       <section class="personalPanel" data-personal-panel="memoria">
         <header class="personalPanelHead">
           <small>MEMORIA</small>
@@ -5277,6 +9220,38 @@ loadRamak();
         </header>
         <div id="personalMemories" class="personalMemoryList"></div>
       </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5345,12 +9320,76 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       <div class="personalNav">
         <button type="button" data-route="camino">Volver a Camino</button>
         <button type="button" data-route="home">Volver al patio</button>
       </div>
     </section>
   `;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5481,6 +9520,38 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   const countNode=document.getElementById('personalMemoryCount');
   const footprintsNode=document.getElementById('personalFootprints');
   const memoriesNode=document.getElementById('personalMemories');
@@ -5518,11 +9589,75 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   function formatDate(value){
     if(!value) return '';
     try{return new Intl.DateTimeFormat('es-CL',{dateStyle:'medium'}).format(new Date(value));}
     catch{return '';}
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5599,6 +9734,38 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   function legacyActions(){
     const out=[];
     for(let i=0;i<localStorage.length;i++){
@@ -5611,6 +9778,38 @@ loadRamak();
     }
     return out.sort((a,b)=>String(b.at||'').localeCompare(String(a.at||'')));
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5685,12 +9884,76 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   function legacyFootprints(){
     try{
       const done=JSON.parse(localStorage.getItem('derej:camino:done')||'{}');
       return Object.entries(done||{}).map(([date,at])=>({date,at})).sort((a,b)=>String(b.at).localeCompare(String(a.at)));
     }catch{return [];}
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5765,6 +10028,38 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   function render(){
     const encounters=encounterMemories();
     const actions=legacyActions();
@@ -5772,6 +10067,38 @@ loadRamak();
     const oldFootprints=legacyFootprints();
     const brote=loadSprout();
     const total=encounters.length+actions.length+reflections.length+oldFootprints.length+(brote?.body?1:0);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5839,6 +10166,38 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     const footprintCards=[];
     encounters.forEach(x=>{
       const isRamak=x.schema==='ramak-v21';
@@ -5868,6 +10227,38 @@ loadRamak();
     footprintsNode.innerHTML=footprintCards.length
       ? footprintCards.join('')
       : `<div class="personalEmpty">Todavía no hay huellas guardadas. Cuando guardes un Camino en “Mi Camino”, aparecerá aquí.</div>`;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5976,11 +10367,75 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   function activate(tab){
     activeTab=tab;
     screen.querySelectorAll('[data-personal-tab]').forEach(b=>b.classList.toggle('on',b.dataset.personalTab===tab));
     screen.querySelectorAll('[data-personal-panel]').forEach(p=>p.classList.toggle('on',p.dataset.personalPanel===tab));
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6048,8 +10503,72 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     const tab=e.target.closest('[data-personal-tab]');
     if(tab){activate(tab.dataset.personalTab);return;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6130,9 +10649,73 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   document.addEventListener('click',e=>{
     if(e.target.closest('[data-route="personal"]')) setTimeout(render,0);
   });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6200,9 +10783,57 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* FEEDBACK v2.2.5 · comunidad · integrado en DÉREJ */
 (()=>{
   const FORM_URL='https://form.jotform.com/262817020600041';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6242,6 +10873,22 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   const personalGarden=document.querySelector('[data-screen="personal"] .personalGarden');
   if(personalGarden&&!document.getElementById('derejFeedbackPersonal')){
     const card=document.createElement('section');
@@ -6259,6 +10906,22 @@ loadRamak();
     if(nav) nav.insertAdjacentElement('beforebegin',card);
     else personalGarden.appendChild(card);
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6315,6 +10978,22 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   if(!document.getElementById('derejFeedbackStyles')){
     const style=document.createElement('style');
     style.id='derejFeedbackStyles';
@@ -6335,6 +11014,22 @@ loadRamak();
     `;
     document.head.appendChild(style);
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6383,6 +11078,22 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   document.addEventListener('click',e=>{
     if(e.target.closest('[data-derej-feedback-open]')){openFeedback();return;}
     if(e.target.closest('[data-derej-feedback-close]')){closeFeedback();return;}
@@ -6394,6 +11105,10 @@ loadRamak();
   const CYCLE_START_LOCAL={year:2026,month:9,day:4};
   const PROGRESS_KEY='derej-v23-camino-progress';
   const DAY_MS=86400000;
+
+
+
+
 
 
 
@@ -6478,6 +11193,10 @@ loadRamak();
 
 
 
+
+
+
+
   function selectLocalToday(){
     const t=todayMeta();
     if(!t) return {selected:false};
@@ -6491,6 +11210,10 @@ loadRamak();
     selectedRamakStep='encuentro';
     return {selected:true,exact:false,meta:t};
   }
+
+
+
+
 
 
 
@@ -6555,6 +11278,10 @@ loadRamak();
 
 
 
+
+
+
+
   function decorateDayStrip(p){
     const host=$('ramakDayStrip');
     if(!host||!RAMAK_DATA) return;
@@ -6572,6 +11299,10 @@ loadRamak();
       btn.title=done?'Realizado':(off<=now?'Pendiente':'Próximo');
     });
   }
+
+
+
+
 
 
 
@@ -6599,6 +11330,10 @@ loadRamak();
 
 
 
+
+
+
+
   function renderProgressSheet(){
     ensureProgressUI();
     const entries=eligibleEntries();
@@ -6611,6 +11346,10 @@ loadRamak();
           <button type="button" data-progress-resume data-parasha="${esc(x.parasha)}" data-day="${x.day}">Retomar</button>
         </article>`).join(''):'<div class="ramakPendingEmpty">No hay encuentros pendientes disponibles hasta hoy.</div>';
     }
+
+
+
+
 
 
 
@@ -6636,6 +11375,10 @@ loadRamak();
 
 
 
+
+
+
+
   Object.assign(RAMAK_GLOSS,{
     'TZADIK TAMIM':'Justo e íntegro',
     'TEVA':'Arca · caja que protege',
@@ -6645,6 +11388,10 @@ loadRamak();
     'BRIT':'Pacto',
     'LEJ LEJA':'Vete hacia ti · sal de tu tierra'
   });
+
+
+
+
 
 
 
@@ -6666,6 +11413,10 @@ loadRamak();
     'Vayishbot mi maasehu':'Cesó y descansó de su obra.',
     'Lej leja meartzeja':'Vete de tu tierra; emprende tu camino.'
   };
+
+
+
+
 
 
 
@@ -6700,6 +11451,10 @@ loadRamak();
 
 
 
+
+
+
+
   function openGloss(term,meaning,kind='TRADUCCIÓN · SIGNIFICADO',extra=''){
     ensureGlossUI();
     const sheet=$('derejGlossSheet');
@@ -6709,6 +11464,10 @@ loadRamak();
     $('derejGlossExtra').textContent=extra;
     sheet.hidden=false;
   }
+
+
+
+
 
 
 
@@ -6737,11 +11496,19 @@ loadRamak();
 
 
 
+
+
+
+
   const originalDayStrip=renderDayStrip;
   renderDayStrip=function(p,c){
     originalDayStrip(p,c);
     decorateDayStrip(p);
   };
+
+
+
+
 
 
 
@@ -6768,6 +11535,10 @@ loadRamak();
 
 
 
+
+
+
+
   const originalRenderRamak=renderRamak;
   renderRamak=function(scrollToChooser=false){
     originalRenderRamak(scrollToChooser);
@@ -6775,6 +11546,10 @@ loadRamak();
     if(p) decorateDayStrip(p);
     renderProgressCard();
   };
+
+
+
+
 
 
 
@@ -6793,8 +11568,16 @@ loadRamak();
 
 
 
+
+
+
+
   ensureProgressUI();
   renderProgressCard();
+
+
+
+
 
 
 
@@ -6854,6 +11637,10 @@ loadRamak();
 
 
 
+
+
+
+
   /* Radio DÉREJ · minirreproductor flotante */
   function ensureFloatingRadio(){
     if(document.getElementById('derejRadioFloat')) return;
@@ -6891,6 +11678,10 @@ loadRamak();
 
 
 
+
+
+
+
     const audio=$('radioV21Audio');
     const hiddenPlay=$('radioV21Play');
     const sourceTitle=$('radioV21TrackTitle');
@@ -6909,6 +11700,10 @@ loadRamak();
 
 
 
+
+
+
+
     dock.addEventListener('click',e=>{
       if(e.target.closest('[data-radio-float-expand]')){dock.classList.remove('compact');sync();return;}
       if(e.target.closest('[data-radio-float-collapse]')){dock.classList.add('compact');return;}
@@ -6917,6 +11712,10 @@ loadRamak();
       if(e.target.closest('[data-radio-float-next]')){$('radioV21Next')?.click();setTimeout(sync,120);return;}
     });
   }
+
+
+
+
 
 
 
@@ -6930,12 +11729,20 @@ loadRamak();
 
 
 
+
+
+
+
   ensureGlossUI();
   ensureFloatingRadio();
   syncFloatingRadioVisibility();
   const activeObserver=new MutationObserver(syncFloatingRadioVisibility);
   screens.forEach(s=>activeObserver.observe(s,{attributes:true,attributeFilter:['class','hidden']}));
 })();
+
+
+
+
 
 
 
@@ -7021,7 +11828,6 @@ loadRamak();
     'Lulav':'Rama de palmera.',
     'Hadas':'Mirto.',
     'Aravá':'Sauce.',
-    'Yamim Noraim':'Días solemnes entre Rosh Hashaná y Yom Kippur.',
     'Rosh Hashaná':'Cabeza del año; año nuevo judío.',
     'Yom Kippur':'Día de la Expiación.',
     'Teshuvá':'Retorno, arrepentimiento y reparación.',
@@ -7053,6 +11859,10 @@ loadRamak();
 
 
 
+
+
+
+
   if(!document.getElementById('derejTermGlossStyles')){
     const style=document.createElement('style');
     style.id='derejTermGlossStyles';
@@ -7065,10 +11875,18 @@ loadRamak();
 
 
 
+
+
+
+
   const keys=Object.keys(TERMS).sort((a,b)=>b.length-a.length);
   const canonical=new Map(keys.map(k=>[k.toLocaleLowerCase('es'),k]));
   const escRx=s=>s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
   const rx=new RegExp(`(?<![\\p{L}\\p{N}])(${keys.map(escRx).join('|')})(?![\\p{L}\\p{N}])`,'giu');
+
+
+
+
 
 
 
@@ -7122,6 +11940,14 @@ loadRamak();
   queue();
   new MutationObserver(queue).observe(document.body,{subtree:true,childList:true});
 })();
+
+
+
+
+
+
+
+
 
 
 
@@ -7210,7 +12036,6 @@ loadRamak();
     'Lulav':'Rama de palmera.',
     'Hadas':'Mirto.',
     'Aravá':'Sauce.',
-    'Yamim Noraim':'Días solemnes entre Rosh Hashaná y Yom Kippur.',
     'Rosh Hashaná':'Cabeza del año; año nuevo judío.',
     'Yom Kippur':'Día de la Expiación.',
     'Teshuvá':'Retorno, arrepentimiento y reparación.',
@@ -7238,6 +12063,10 @@ loadRamak();
 
 
 
+
+
+
+
   const VERSE_FLOAT={
     'וַיֹּאמֶר אֱלֹהִים יְהִי אוֹר וַיְהִי אוֹר':'Y dijo Dios: «Que haya luz», y hubo luz.',
     'יְהִי רָקִיעַ בְּתוֹךְ הַמָּיִם':'Que haya un firmamento en medio de las aguas.',
@@ -7259,6 +12088,10 @@ loadRamak();
 
 
 
+
+
+
+
   function visibleContext(){
     const screen=document.querySelector('.screen.active:not([hidden])')||document.querySelector('.screen.active')||document.body;
     if(screen.matches?.('[data-screen="camino"]')){
@@ -7274,12 +12107,20 @@ loadRamak();
 
 
 
+
+
+
+
   function textForGloss(){
     const root=visibleContext();
     const clone=root.cloneNode(true);
     clone.querySelectorAll('script,style,.derejTermIcon,.derejPassageHelp,.derejGlossFloat,.derejGlossFloatSheet,.derejRadioFloat,.derejFeedbackModal').forEach(x=>x.remove());
     return (clone.innerText||clone.textContent||'').replace(/\s+/g,' ').trim();
   }
+
+
+
+
 
 
 
@@ -7295,9 +12136,17 @@ loadRamak();
 
 
 
+
+
+
+
     Object.entries(VERSE_FLOAT).forEach(([verse,meaning])=>{
       if(lower.includes(verse.toLocaleLowerCase('es'))) found.unshift({term:'Versículo',meaning,verse,type:'verse'});
     });
+
+
+
+
 
 
 
@@ -7314,8 +12163,16 @@ loadRamak();
 
 
 
+
+
+
+
   function ensureFloatingGloss(){
     if(document.getElementById('derejGlossFloat')) return;
+
+
+
+
 
 
 
@@ -7327,6 +12184,10 @@ loadRamak();
     btn.setAttribute('aria-label','Abrir glosario de esta sección');
     btn.innerHTML='<span>א</span><b>Glosario</b><small id="derejGlossCount"></small>';
     document.body.appendChild(btn);
+
+
+
+
 
 
 
@@ -7346,6 +12207,10 @@ loadRamak();
         <div id="derejGlossFloatList" class="derejGlossFloatList"></div>
       </section>`;
     document.body.appendChild(sheet);
+
+
+
+
 
 
 
@@ -7374,6 +12239,10 @@ loadRamak();
 
 
 
+
+
+
+
   function updateFloatingGloss(){
     ensureFloatingGloss();
     const btn=document.getElementById('derejGlossFloat');
@@ -7387,6 +12256,10 @@ loadRamak();
     count.textContent=items.length?String(items.length):'0';
     btn.dataset.count=String(items.length);
   }
+
+
+
+
 
 
 
@@ -7407,8 +12280,16 @@ loadRamak();
 
 
 
+
+
+
+
   ensureFloatingGloss();
   updateFloatingGloss();
+
+
+
+
 
 
 
@@ -7418,6 +12299,10 @@ loadRamak();
     clearTimeout(glossTimer);
     glossTimer=setTimeout(updateFloatingGloss,80);
   }
+
+
+
+
 
 
 
@@ -7447,6 +12332,10 @@ loadRamak();
 
 
 
+
+
+
+
 /* DÉREJ v2.3.2 · controles flotantes movibles */
 (()=>{
   function makeDraggable({
@@ -7458,9 +12347,13 @@ loadRamak();
     if(!element) return;
 
 
+
+
     const margin=8;
     let drag=null;
     let suppressNextClick=false;
+
+
 
 
     function vp(){
@@ -7469,6 +12362,8 @@ loadRamak();
         h:Math.max(document.documentElement.clientHeight,window.innerHeight||0)
       };
     }
+
+
 
 
     function clamp(left,top){
@@ -7483,12 +12378,16 @@ loadRamak();
     }
 
 
+
+
     function place(left,top,save=true){
       const p=clamp(left,top);
       element.style.left=p.left+'px';
       element.style.top=p.top+'px';
       element.style.right='auto';
       element.style.bottom='auto';
+
+
 
 
       if(save){
@@ -7506,6 +12405,8 @@ loadRamak();
     }
 
 
+
+
     function restore(){
       try{
         const saved=JSON.parse(localStorage.getItem(storageKey)||'null');
@@ -7520,6 +12421,8 @@ loadRamak();
     }
 
 
+
+
     function keepVisible(){
       if(element.hidden||getComputedStyle(element).display==='none') return;
       const rect=element.getBoundingClientRect();
@@ -7528,10 +12431,14 @@ loadRamak();
     }
 
 
+
+
     function onPointerDown(e){
       const handle=e.currentTarget;
       if(e.button!==undefined&&e.button!==0) return;
       if(e.target.closest('button') && e.target!==handle && !e.target.matches('.derejRadioOrb,#derejGlossFloat')) return;
+
+
 
 
       const rect=element.getBoundingClientRect();
@@ -7550,6 +12457,8 @@ loadRamak();
     }
 
 
+
+
     function onPointerMove(e){
       if(!drag||e.pointerId!==drag.pointerId) return;
       const dx=e.clientX-drag.startX;
@@ -7559,6 +12468,8 @@ loadRamak();
       e.preventDefault();
       place(drag.left+dx,drag.top+dy,false);
     }
+
+
 
 
     function finishDrag(e){
@@ -7575,6 +12486,8 @@ loadRamak();
     }
 
 
+
+
     handles.filter(Boolean).forEach(handle=>{
       handle.style.touchAction='none';
       handle.addEventListener('pointerdown',onPointerDown);
@@ -7582,6 +12495,8 @@ loadRamak();
       handle.addEventListener('pointerup',finishDrag);
       handle.addEventListener('pointercancel',finishDrag);
     });
+
+
 
 
     if(clickTarget){
@@ -7595,16 +12510,24 @@ loadRamak();
     }
 
 
+
+
     window.addEventListener('resize',()=>setTimeout(keepVisible,80));
     window.addEventListener('orientationchange',()=>setTimeout(keepVisible,180));
+
+
 
 
     new MutationObserver(()=>setTimeout(keepVisible,40))
       .observe(element,{attributes:true,attributeFilter:['class','hidden','style']});
 
 
+
+
     restore();
   }
+
+
 
 
   if(!document.getElementById('derejMovableFloatingStyles')){
@@ -7642,6 +12565,8 @@ loadRamak();
   }
 
 
+
+
   const radio=document.getElementById('derejRadioFloat');
   makeDraggable({
     element:radio,
@@ -7652,6 +12577,8 @@ loadRamak();
     storageKey:'derej-v232-radio-position',
     clickTarget:radio?.querySelector('.derejRadioOrb')
   });
+
+
 
 
   const gloss=document.getElementById('derejGlossFloat');
