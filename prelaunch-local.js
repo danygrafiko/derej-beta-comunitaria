@@ -1,4 +1,4 @@
-/* CAMINO v2.2 · Caminos Diarios · Edición Ramak */
+/* DÉREJ v2.5.2 · UX móvil · Caminos Diarios */
 const screens=[...document.querySelectorAll('[data-screen]')];
 const $=id=>document.getElementById(id);
 const RAMAK_URL='content/caminos-ramak-v25.json';
@@ -98,11 +98,139 @@ const caminoScreen=document.querySelector('[data-screen="camino"]');
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 let RAMAK_DATA=null;
 let selectedParasha='Bereshit';
 let selectedDay=1;
 let selectedRamakStep='encuentro';
 let ramakLoadError='';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -243,6 +371,70 @@ function route(name){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function esc(v=''){
   return String(v??'').replace(/[&<>"']/g,ch=>({
     '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
@@ -312,10 +504,138 @@ function esc(v=''){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function slug(v=''){
   return String(v).normalize('NFD').replace(/[\u0300-\u036f]/g,'')
     .toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -449,6 +769,70 @@ function caminoMeaning(c){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function biblicalRefEs(value=''){
   const raw=String(value||'').trim();
   if(!raw) return '';
@@ -456,6 +840,70 @@ function biblicalRefEs(value=''){
   const es=BIBLICAL_BOOK_ES[first];
   return es ? raw.replace(first,`${first} (${es})`) : raw;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -593,10 +1041,138 @@ function weeklyReadingMeta(parasha=''){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function caminoDayImage(c){
   const p=currentParasha();
   return CAMINO_DAY_IMAGES[p?.parasha]?.[Number(c?.dia)] || '';
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -732,9 +1308,137 @@ function luminanceText(hex='#E8EAED'){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function memoryKey(parasha,day){
   return `derej-v21-encuentro-ramak-${slug(parasha)}-${day}`;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -867,10 +1571,138 @@ function loadRamakMemory(parasha,day){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function currentParasha(){
   if(!RAMAK_DATA) return null;
   return RAMAK_DATA.parashot.find(p=>p.parasha===selectedParasha)||RAMAK_DATA.parashot[0];
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -940,6 +1772,70 @@ function currentCamino(){
   if(!p) return null;
   return p.caminos.find(c=>Number(c.dia)===Number(selectedDay))||p.caminos[0]||null;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1086,12 +1982,140 @@ function saveRamakDraft(){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function prepareCaminoShell(){
   if(!caminoScreen) return;
   caminoScreen.className='screen caminoScreen ramakCaminoScreen';
   caminoScreen.setAttribute('aria-labelledby','caminoTitle');
   caminoScreen.innerHTML=`
     <button class="backBtn floatingBack" data-route="home">← Patio</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1232,9 +2256,73 @@ function prepareCaminoShell(){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <section class="ramakChooser" id="ramakChooser" aria-labelledby="ramakChooserTitle">
       <header class="ramakChooserHead">
-        <span>20 PARASHOT · 134 CAMINOS <i class="ramakTinyMark">ED. RAMAK</i></span>
+        <span>20 PARASHOT · 134 CAMINOS</span>
         <h2 id="ramakChooserTitle">Caminos Diarios</h2>
         <p>Recorre una Parashá, elige un día y entra por cinco umbrales: Encuentro, Raíz, Profundizar, Práctica y Llevar.</p>
       </header>
@@ -1302,7 +2390,135 @@ function prepareCaminoShell(){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       <div class="ramakParashaRail" id="ramakParashaRail" role="tablist" aria-label="Elegir Parashá"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1442,6 +2658,70 @@ function prepareCaminoShell(){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       <a class="ramakReadingCard" id="ramakReadingCard" href="#" target="_blank" rel="noopener noreferrer">
         <span class="ramakReadingIcon" aria-hidden="true">📜</span>
         <span class="ramakReadingCopy">
@@ -1452,6 +2732,70 @@ function prepareCaminoShell(){
         </span>
         <strong aria-hidden="true">→</strong>
       </a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1581,7 +2925,135 @@ function prepareCaminoShell(){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       <div class="ramakIncomplete" id="ramakIncomplete" hidden></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1719,6 +3191,70 @@ function prepareCaminoShell(){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <nav class="ramakThresholdRail" aria-label="Recorrido del Camino">
       <button class="ramakThreshold on" type="button" data-ramak-step="encuentro"><span>01</span><b>Encuentro</b></button>
       <button class="ramakThreshold" type="button" data-ramak-step="raiz"><span>02</span><b>Raíz</b></button>
@@ -1790,6 +3326,70 @@ function prepareCaminoShell(){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <div class="ramakPanels">
       <article class="ramakPanel on" data-ramak-panel="encuentro"></article>
       <article class="ramakPanel" data-ramak-panel="raiz"></article>
@@ -1797,6 +3397,70 @@ function prepareCaminoShell(){
       <article class="ramakPanel" data-ramak-panel="practica"></article>
       <article class="ramakPanel" data-ramak-panel="llevar"></article>
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1933,6 +3597,70 @@ function prepareCaminoShell(){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   if(!document.getElementById('ramakCaminoStyles')){
     const style=document.createElement('style');
     style.id='ramakCaminoStyles';
@@ -1953,6 +3681,70 @@ function prepareCaminoShell(){
       .ramakGuides{display:grid;gap:7px;margin:9px 0 12px}
       .ramakGuide{width:100%;border:1px dashed #bda98a;border-radius:14px;background:#f8efdf;color:#5d5141;padding:10px 12px;text-align:left;font:.8rem/1.35 Georgia,serif}
       .ramakGuide:before{content:"↳ ";color:#7a8466;font-weight:900}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2179,6 +3971,70 @@ function prepareCaminoShell(){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function renderParashaRail(){
   const host=$('ramakParashaRail');
   if(!host||!RAMAK_DATA) return;
@@ -2189,6 +4045,70 @@ function renderParashaRail(){
     </button>
   `).join('');
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2325,6 +4245,70 @@ function renderDayStrip(p,c){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function activateRamakStep(step,scroll=true){
   selectedRamakStep=step;
   caminoScreen?.querySelectorAll('[data-ramak-step]').forEach(b=>{
@@ -2333,6 +4317,70 @@ function activateRamakStep(step,scroll=true){
   caminoScreen?.querySelectorAll('[data-ramak-panel]').forEach(p=>p.classList.toggle('on',p.dataset.ramakPanel===step));
   if(scroll) caminoScreen?.querySelector('.ramakThresholdRail')?.scrollIntoView({behavior:'smooth',block:'start'});
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2468,12 +4516,85 @@ function navButtons(step){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function scene(c,label){
   const meaning=caminoMeaning(c);
   const image=caminoDayImage(c);
   const sceneStyle=image
     ? ` style="background-image:linear-gradient(180deg,rgba(7,10,8,.08),rgba(7,10,8,.74)),url('${image}')"`
     : '';
+  const compact=!String(label||'').startsWith('01');
+  if(compact){
+    return `<div class="ramakScene ramakSceneCompact"${sceneStyle}>
+      <div class="ramakSceneCompactInner">
+        <span>${label}</span>
+        <b>DÍA ${esc(c.dia)} · ${esc(c.sefira)}${SEFIRA_MEANING[c.sefira]?` · ${esc(SEFIRA_MEANING[c.sefira])}`:''}</b>
+      </div>
+    </div>`;
+  }
   return `<div class="ramakScene"${sceneStyle}>
     <div class="ramakSceneTop">
       <span class="ramakSceneBadge">DÍA ${esc(c.dia)}</span>
@@ -2552,12 +4673,78 @@ function scene(c,label){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function renderVoiceCard(raw,label){
   if(raw&&typeof raw==='object'){
     return `<article class="ramakVoice"><small>${esc(label.toUpperCase())}</small><b class="derejVoiceSource">${esc(raw.fuente||label)}</b>${raw.tipo?`<span class="derejVoiceType">${esc(raw.tipo)}</span>`:''}<p>${esc(raw.texto||'')}</p></article>`;
   }
   return `<article class="ramakVoice"><small>${esc(label.toUpperCase())}</small><b>${esc(label)}</b><p>${esc(raw||'')}</p></article>`;
 }
+
+
 
 
 function renderPanels(p,c){
@@ -2567,6 +4754,70 @@ function renderPanels(p,c){
   const voices=c.voces||{};
   const carry=c.paraLlevar||{};
   const colorName=rc.nombre?` · ${esc(rc.nombre)}`:'';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2702,12 +4953,75 @@ function renderPanels(p,c){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   caminoScreen.querySelector('[data-ramak-panel="raiz"]').innerHTML=`
     ${scene(c,'02 · RAÍZ')}
     <div class="ramakBody">
-      <span class="ramakBodyEyebrow">VERSÍCULO · ${esc(p.parasha)}</span>
+      <span class="ramakBodyEyebrow">RAÍZ · ${esc(p.parasha)}</span>
       <div class="ramakCard ramakVerseCard">
-        <small>VERSÍCULO</small>
         <div class="ramakHebrew">${esc(pasuk.hebreo||'')}</div>
         ${pasuk.es?`<p class="derejVerseTranslation">${esc(pasuk.es)}</p>`:''}
         <div class="ramakPasukMeta">
@@ -2718,6 +5032,70 @@ function renderPanels(p,c){
       </div>
       ${navButtons('raiz')}
     </div>`;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2862,20 +5240,143 @@ function renderPanels(p,c){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   caminoScreen.querySelector('[data-ramak-panel="practica"]').innerHTML=`
     ${scene(c,'04 · PRÁCTICA')}
     <div class="ramakBody">
       <span class="ramakBodyEyebrow">AVODÁ · LLEVAR EL ESTUDIO A LA VIDA</span>
       <div class="ramakCard ramakPractice"><small>AVODÁ · GESTO DE HOY</small><strong>${esc(carry.avoda||'')}</strong></div>
       <label for="ramakNote">Una nota para guardar este momento</label>
-      <div class="ramakGuides" aria-label="Sugerencias para comenzar">
-        <button type="button" class="ramakGuide" data-note-starter="Hoy me resonó…">Hoy me resonó…</button>
-        <button type="button" class="ramakGuide" data-note-starter="Un paso pequeño que sí puedo dar es…">Un paso pequeño que sí puedo dar es…</button>
-        <button type="button" class="ramakGuide" data-note-starter="Esto me cuesta porque…">Esto me cuesta porque…</button>
-      </div>
-      <textarea id="ramakNote" rows="4" maxlength="700" placeholder="Puedes escribir libremente o tocar una de las frases de arriba.">${esc(saved.note||'')}</textarea>
+      <textarea id="ramakNote" rows="4" maxlength="700" placeholder="Escribe libremente lo que quieras guardar de este momento.">${esc(saved.note||'')}</textarea>
       ${navButtons('practica')}
     </div>`;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3018,6 +5519,70 @@ function renderPanels(p,c){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function renderRamak(scrollToChooser=false){
   if(!RAMAK_DATA||!caminoScreen) return;
   if($('ramakGlossSheet')) $('ramakGlossSheet').hidden=true;
@@ -3091,10 +5656,138 @@ function renderRamak(scrollToChooser=false){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   const rc=c.ramak_color||{};
   const hex=rc.hex||'#E8EAED';
   caminoScreen.style.setProperty('--ramak-accent',hex);
   caminoScreen.style.setProperty('--ramak-ink',rc.texto||luminanceText(hex));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3242,6 +5935,70 @@ function renderRamak(scrollToChooser=false){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   $('ramakSelectedMeta').textContent=`DÍA ${c.dia} · ${p.parasha.toUpperCase()} · ${String(c.sefira).toUpperCase()}`;
   $('ramakSelectedTitle').textContent=c.titulo;
   $('ramakColorOrb').style.background=hex;
@@ -3309,8 +6066,136 @@ function renderRamak(scrollToChooser=false){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   renderParashaRail();
   renderDayStrip(p,c);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3447,8 +6332,136 @@ function renderRamak(scrollToChooser=false){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   renderPanels(p,c);
   activateRamakStep(selectedRamakStep,false);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3579,11 +6592,139 @@ function renderRamak(scrollToChooser=false){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function renderRamakError(){
   if(!caminoScreen) return;
   const chooser=$('ramakChooser');
   if(chooser) chooser.innerHTML=`<div class="ramakLoading">No fue posible cargar Caminos Diarios. Verifica que <b>content/caminos-ramak-v25.json</b> esté en la rama.</div>`;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3728,6 +6869,70 @@ async function loadRamak(){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 document.addEventListener('click',e=>{
   const r=e.target.closest('[data-route]');
   if(r){route(r.dataset.route);return;}
@@ -3795,8 +7000,136 @@ document.addEventListener('click',e=>{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   const sc=e.target.closest('[data-ramak-scroll]');
   if(sc){$(sc.dataset.ramakScroll)?.scrollIntoView({behavior:'smooth',block:'start'});return;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3934,6 +7267,70 @@ document.addEventListener('click',e=>{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   const d=e.target.closest('[data-ramak-day]');
   if(d&&!d.disabled&&RAMAK_DATA){
     saveRamakDraft();
@@ -4006,12 +7403,140 @@ document.addEventListener('click',e=>{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   const step=e.target.closest('[data-ramak-step]');
   if(step){
     saveRamakDraft();
     activateRamakStep(step.dataset.ramakStep,true);
     return;
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4148,11 +7673,139 @@ document.addEventListener('click',e=>{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   if(e.target.closest('[data-ramak-gloss-close]')||e.target.closest('#ramakGlossBackdrop')){
     $('ramakGlossSheet').hidden=true;
     $('ramakGlossBackdrop').hidden=true;
     return;
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4229,6 +7882,70 @@ document.addEventListener('click',e=>{
     }
     return;
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4386,9 +8103,137 @@ document.addEventListener('click',e=>{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 caminoScreen?.addEventListener('input',e=>{
   if(e.target?.id==='ramakNote') saveRamakDraft();
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4519,11 +8364,139 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* SHABAT v2.1 · Prelanzamiento · seis caminos RC2 */
 (()=>{
   const SHABAT_DATA=[{"id":1,"num":"01","hebreo":"לכה דודי","hebreoNikud":"לְכָה דוֹדִי","translit":"Kabalat Shabat","titulo":"Recibir","tituloHeb":"Kabalat Shabat","tagline":"Llegar es un arte. No entras a Shabat, lo recibes como a una novia.","abierta":"Llegar es un arte. No entras a Shabat, lo recibes como a una novia. Sales a buscarla, te vistes distinto, preparas la casa. Kabalat Shabat no es una oración más: es un cortejo. Se hace de pie, cantando, girándote hacia la puerta. Porque lo sagrado no se fuerza. Se recibe. Cuando entiendes eso, dejas de perseguir el descanso y aprendes a darle la bienvenida.","profunda":{"texto":"Lejá Dodi, de Shlomo Alkabetz (Safed, siglo XVI), toma el versículo de Shir HaShirim y lo convierte en liturgia erótica y mística. Cada estrofa termina en \"Boí beshalom ateret baalá\" — entra en paz, corona de tu marido. En el Zohar, Shabat es Malká, la Reina, y también Kalá, la Novia. Shamor y Zajor: los dos verbos del Decálogo. Zajor (recordar) es positivo, masculino, santificar. Shamor (guardar) es negativo, femenino, no hacer. Según Rambam en Hiljot Shabat 29, recibir a Shabat con alegría, ropa limpia y luz encendida es parte de la mitzvá misma. No es preparación, es Shabat ya empezando.","fuentes":["Shlomo Alkabetz – Lejá Dodi","Zohar II, 88b – Shabat Malká","Rambam, Hiljot Shabat 29:2 – Kabod y Oneg"],"hebreoFuente":"שָׁמוֹר וְזָכוֹר בְּדִבּוּר אֶחָד\nהִשְׁמִיעָנוּ אֵל הַמְּיֻחָד"},"practica":{"titulo":"Pausa de atardecer","dias":[{"dia":"Día 1","accion":"2 min de pie frente a la ventana. Sin celular. Solo mirar cómo cae la luz."},{"dia":"Día 2","accion":"Pregunta: ¿Qué del día que se va quiero recibir, no resolver?"},{"dia":"Día 3","accion":"Vístete 5 min distinto para cenar. Camisa limpia. Gesto de novia/novio."},{"dia":"Día 4","accion":"Canta Lejá Dodi en voz baja, aunque no sepas la melodía."},{"dia":"Día 5","accion":"Sal a caminar 10 min sin destino. Estás saliendo a recibir."},{"dia":"Día 6","accion":"Prepara tu espacio como si viniera alguien amado. Flores, luz."},{"dia":"Día 7","accion":"Kabalat completa: de pie, vuelta hacia el oeste, 4 minutos de silencio."}]}},{"id":2,"num":"02","hebreo":"נרות","hebreoNikud":"נֵרוֹת","translit":"Nerot","titulo":"Encender","tituloHeb":"Nerot","tagline":"Antes de que oscurezca, haces luz. No esperas luz, la enciendes.","abierta":"Antes de que oscurezca, haces luz. No esperas luz, la enciendes. Este es un acto femenino por excelencia: crear hogar con las manos. Dos velas, no una. No por simetría, sino porque la luz siempre necesita compañía para quedarse. Cuando las enciendes, cubres tus ojos. No ves la luz al nacer. La ves después, reflejada en tu casa. Así se aprende a encender: sin ver el resultado inmediato.","profunda":{"texto":"Berajá: Baruj Atá A-donai, Eloheinu Mélej Haolam, Asher Kideshanu Bemitzvotav Vetzivanu Lehadlik Ner Shel Shabat. Rashi sobre Bereshit 1:3 dice que la primera creación no fue el sol, sino la luz que permite ver. Por eso encender es la primera melajá separadora: Or y Joshej. ¿Por qué dos velas? Shamor y Zajor otra vez. También Isha y Ish. Cielo y tierra. Lo que recuerda y lo que guarda. La llama, dice el Sfat Emet, es el único elemento que no puedes partir sin multiplicarlo.","fuentes":["Berajá – Lehadlik ner shel Shabat","Rashi Bereshit 1:3 – Yehi Or","Sfat Emet, Parashat Bereshit"],"hebreoFuente":"בָּרוּךְ אַתָּה יְיָ\nאֲשֶׁר קִדְּשָׁנוּ לְהַדְלִיק נֵר שֶׁל שַׁבָּת"},"practica":{"titulo":"Luz con cavaná","dias":[{"dia":"Día 1","accion":"Compra velas de cera de abeja. Tócalas. Huele."},{"dia":"Día 2","accion":"18 minutos antes de la puesta de sol, apaga todas las luces eléctricas."},{"dia":"Día 3","accion":"Enciende 2 velas. Cubre tus ojos 20 segundos. Pide en silencio 3 deseos."},{"dia":"Día 4","accion":"Enciende aunque estés solo/sola. Di la berajá aunque tiembles."},{"dia":"Día 5","accion":"Deja que las velas se consuman sin apagarlas. Mira cómo cambia tu cara."},{"dia":"Día 6","accion":"Viernes: invita a alguien a encender contigo. Luz compartida."},{"dia":"Día 7","accion":"Escribe qué luz encendiste esta semana que no existía antes."}]}},{"id":3,"num":"03","hebreo":"קידוש","hebreoNikud":"קִדּוּשׁ","translit":"Kiddush","titulo":"Santificar","tituloHeb":"Kiddush","tagline":"Santificar es separar con palabra y vino. Decir: este tiempo es distinto.","abierta":"Santificar es separar con palabra y vino. Decir: este tiempo es distinto. No es mejor ni peor. Es otro. El Kiddush no bendice el vino: usa el vino para bendecir el tiempo. Lo tomas con la mano derecha, lleno hasta derramar. Porque la alegría, para guardar el tiempo, tiene que desbordar un poco. De noche es deoraitá, de día es derabanán. Pero los dos dicen lo mismo: hoy no es continuación de ayer.","profunda":{"texto":"Zajor et Yom HaShabat Lekadshó – Shemot 20:8. Recuerda. El verbo zajor es activo. No es memoria pasiva, es hacer memorable. El vino es alegría que guarda, no que olvida. Por eso Kiddush de noche incluye Vayejulu – testimonio de la creación. Y Kiddush de día incluye Veshamru – testimonio de la salida de Egipto. Un Shabat guarda el mundo, el otro te guarda a ti. Beber sin bendecir es tomar. Bendecir y luego beber es santificar. La diferencia es una palabra en medio.","fuentes":["Shemot 20:8 – Zajor et Yom HaShabat","Pesajim 106a – Kiddush Hayom","Rambam, Hiljot Shabat 29:1"],"hebreoFuente":"זָכוֹר אֶת יוֹם הַשַּׁבָּת לְקַדְּשׁוֹ\nוַיְכֻלּוּ הַשָּׁמַיִם וְהָאָרֶץ"},"practica":{"titulo":"Copa, pan, tiempo","dias":[{"dia":"Día 1","accion":"Consigue una copa que solo uses para Kiddush. Que tenga peso."},{"dia":"Día 2","accion":"Llena la copa hasta que casi derrame. Mira el borde."},{"dia":"Día 3","accion":"Di Vayejulu en voz alta, de pie. Aunque estés solo."},{"dia":"Día 4","accion":"Kiddush con pan delante cubierto. Dos panes. Lechem Mishné."},{"dia":"Día 5","accion":"Bebe sentado. De un trago pequeño. No a sorbos."},{"dia":"Día 6","accion":"Viernes noche: Kiddush completo con alguien, compartiendo la misma copa."},{"dia":"Día 7","accion":"Kiddush de día: más corto, más dulce. ¿Qué tiempo distinto estás marcando?"}]}},{"id":4,"num":"04","hebreo":"סעודה ועונג","hebreoNikud":"סְעוּדָּה וְעֹנֶג","translit":"Seudá veOneg","titulo":"Mesa","tituloHeb":"Seudá y Oneg","tagline":"Comer sin apuro. Shabat tiene 3 seudot. El placer es mitzvá, no culpa.","abierta":"Comer sin apuro. Shabat tiene tres seudot, no por hambre, sino por ritmo. Viernes noche, Shabat mañana, Seudá Shlishit al atardecer. Cada una con su luz distinta. El placer es mitzvá, no culpa. Oneg no es lujo, es atención. Partir el pan despacio, cantar zemirot aunque desafines, dejar que la comida sea oración sin palabras. Aquí el estómago también reza.","profunda":{"texto":"VeKarata LaShabat Oneg – Yeshaya 58:13. Y llamarás al Shabat deleite. El Talmud (Shabat 118a) dice: todo el que deleita el Shabat recibe herencia sin límites. Lechem Mishné: dos panes en recuerdo del doble maná que caía viernes. No es magia, es memoria encarnada. Zemirot no son canciones de sobremesa, son Tikún para la seudá, para que no sea solo ingesta. Comer en Shabat es avodá – servicio. El Arizal decía que las chispas más altas están en la comida de Shabat porque se comen sin ansiedad.","fuentes":["Yeshaya 58:13 – Oneg Shabat","Shabat 118a – Kol Hameoneg","Arizal – Shaar HaKavanot, Seudot Shabat"],"hebreoFuente":"וְקָרָאתָ לַשַּׁבָּת עֹנֶג\nלֶחֶם מִשְׁנֶה – זֵכֶר לַמָּן"},"practica":{"titulo":"Mesa sin prisa","dias":[{"dia":"Día 1","accion":"Compra jalá trenzada. Si no hay, trenza pan común."},{"dia":"Día 2","accion":"Una comida sin celular a la vista. Celular en otro cuarto."},{"dia":"Día 3","accion":"Canta un zemer. Shalom Alejem. Aunque solo tararees."},{"dia":"Día 4","accion":"Sirve 3 platos pequeños en lugar de 1 grande. Ritmo."},{"dia":"Día 5","accion":"Come con la mano no dominante 2 minutos. Atención."},{"dia":"Día 6","accion":"Viernes noche: mesa con mantel blanco, invita."},{"dia":"Día 7","accion":"Seudá Shlishit: al atardecer, solo pan, aceituna y silencio."}]}},{"id":5,"num":"05","hebreo":"מנוחה","hebreoNikud":"מְנוּחָה","translit":"Menujá","titulo":"Descanso radical","tituloHeb":"Menujá","tagline":"Descanso no es no hacer nada. Es dejar de producir.","abierta":"Descanso no es no hacer nada. Es dejar de producir. Las 39 melajot no son prohibiciones: son 39 formas de no intervenir el mundo. No sembrar, no cosechar, no escribir, no encender fuego. No porque el trabajo sea malo, sino porque necesitas un día donde el mundo siga sin ti. Aquí Shabat toca directamente el Bloque 6 de Adam Adamá – Trabajo. Si no paras, el trabajo te define. Si paras, te recuerdas.","profunda":{"texto":"Shemot 20:10 – Lemaán Yanúaj Avdejaj Vaamatejá... Kaamoja. Para que descanse tu siervo, tu buey y tu extranjero como tú. No es privilegio, es derecho. El descanso es la primera ley laboral de la Torá. Rambam dice: Menujá no es ausencia de trabajo, es presencia de sistema que se mantiene solo. Por eso Shabat no es vacaciones. Vacaciones cambian de lugar. Shabat cambia de modo. De hacer a ser. De crear a contemplar. En tiempos de burnout, Menujá es desobediencia sagrada.","fuentes":["Shemot 20:10 – Kaamoja","Rambam, More Nevujim II:31 – Taamei HaShabat","Abraham J. Heschel – The Sabbath, Menujá como arquitectura del tiempo"],"hebreoFuente":"לְמַעַן יָנוּחַ עַבְדְּךָ וַאֲמָתְךָ כָּמוֹךָ\nשֵׁשֶׁת יָמִים תַּעֲבֹד – וּבַיּוֹם הַשְּׁבִיעִי תִּשְׁבֹּת"},"practica":{"titulo":"25 horas sin crear","dias":[{"dia":"Día 1","accion":"Haz lista de lo que NO harás: comprar, crear, producir, optimizar."},{"dia":"Día 2","accion":"Haz lista de lo que SÍ harás: caminar, leer por placer, amar, dormir."},{"dia":"Día 3","accion":"Deja el celular cargando en otra habitación de puesta de sol a puesta de sol."},{"dia":"Día 4","accion":"Camina sin audífonos 30 min. Sin contar pasos."},{"dia":"Día 5","accion":"Lee un libro de papel que no te sirva para nada."},{"dia":"Día 6","accion":"25 horas reales: de viernes atardecer a sábado noche. Sin comprar."},{"dia":"Día 7","accion":"Escribe: ¿Qué parte de ti descansa cuando no produces?"}]}},{"id":6,"num":"06","hebreo":"הבדלה","hebreoNikud":"הַבְדָּלָה","translit":"Havdalá","titulo":"Separar","tituloHeb":"Havdalá","tagline":"Salir también es sagrado. Vino, especias y fuego para llevarte el aroma.","abierta":"Salir también es sagrado. Havdalá no es cierre, es costura. Vino, especias y fuego para llevarte el aroma de Shabat a la semana. Hueles las besamim porque se va el alma extra – neshamá yeterá – y necesitas consuelo. Miras la llama entre tus dedos para aprender de nuevo a crear fuego. Separar es también un arte. No todo lo sagrado dura para siempre. Algunas cosas hay que despedirlas con belleza para que vuelvan.","profunda":{"texto":"Berajá: Hamavdil Ben Kodesh Lejol, Ben Or Lejoshej, Ben Israel Laamim, Ben Yom Hashevií Lesheshet Yemei Hamaasé. El que separa. Cinco separaciones en una. Besamim para el alma extra que se va – según Talmud Betzá 16a, en Shabat recibes una neshamá adicional que te hace ver más claro. Cuando se va, quedas triste, por eso olemos perfume. Ner: vuelves a crear fuego, vuelves a ser socio de la creación. Después de 25 horas de no crear, encender la mecha es volver a decir: el mundo te necesita otra vez.","fuentes":["Talmud Betzá 16a – Neshamá Yeterá","Berajot 8a – Hamavdil","Rav Kook – Olat Reiyá, Havdalá como esperanza"],"hebreoFuente":"הַמַּבְדִּיל בֵּין קֹדֶשׁ לְחוֹל\nבֵּין אוֹר לְחֹשֶׁךְ – בְּשָׂמִים לִנְשָׁמָה יְתֵרָה"},"practica":{"titulo":"Aroma para la semana","dias":[{"dia":"Día 1","accion":"Consigue besamim: clavo, canela, romero. Guárdalos en cajita."},{"dia":"Día 2","accion":"Sábado noche: copa de vino, especias, vela trenzada con 2 mechas."},{"dia":"Día 3","accion":"Mira la sombra de tus dedos a la luz de Havdalá. Cuenta tus líneas."},{"dia":"Día 4","accion":"Huele las besamim 3 veces profundo. ¿A qué te recuerda?"},{"dia":"Día 5","accion":"Di: \"Que esta semana tenga algo del perfume de Shabat\"."},{"dia":"Día 6","accion":"Havdalá con alguien. Compartan deseos para la semana."},{"dia":"Día 7","accion":"Guarda un resto de cera de la vela Havdalá en tu bolsillo toda la semana."}]}}];
   const screen=document.querySelector('[data-screen="shabat"]');
   if(!screen) return;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4665,6 +8638,70 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <section class="shabatJourney" id="shabatJourney" aria-labelledby="shabatJourneyTitle">
       <header class="shabatJourneyHead">
         <span>SEIS GESTOS · UN MISMO SHABAT</span>
@@ -4737,8 +8774,136 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <section class="shabatDetail" id="shabatDetail" aria-live="polite"></section>
   `;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5082,6 +9247,198 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   if(!document.getElementById('shabatV21Polish')){
     const style2=document.createElement('style');
     style2.id='shabatV21Polish';
@@ -5117,6 +9474,70 @@ loadRamak();
     `;
     document.head.appendChild(style2);
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5249,7 +9670,135 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   function selected(){return SHABAT_DATA.find(x=>x.id===selectedId)||SHABAT_DATA[0];}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5392,6 +9941,70 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   function tabContent(x){
     if(selectedTab==='abierta'){
       return `<div class="shabatReading"><p>${x.abierta}</p></div>`;
@@ -5413,6 +10026,70 @@ loadRamak();
         <div class="shabatKavana"><small>CAVANÁ DE LA SEMANA</small><p>“${x.tagline}”</p></div>
       </div>`;
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5568,9 +10245,137 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   screen.addEventListener('click',e=>{
     const scroll=e.target.closest('[data-shabat-scroll]');
     if(scroll){document.getElementById(scroll.dataset.shabatScroll)?.scrollIntoView({behavior:'smooth',block:'start'});return;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5701,6 +10506,70 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     const tab=e.target.closest('[data-shabat-tab]');
     if(tab){selectedTab=tab.dataset.shabatTab;selectedDay=0;renderDetail(false);return;}
 
@@ -5767,8 +10636,136 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     const day=e.target.closest('[data-shabat-day]');
     if(day){selectedDay=Number(day.dataset.shabatDay);renderDetail(false);return;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5900,9 +10897,137 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   renderGates();
   renderDetail(false);
 })();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6036,6 +11161,70 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   const icons={
     "rosh-jodesh":"◔",
     "pesaj":"⌁",
@@ -6044,6 +11233,70 @@ loadRamak();
     "iom-kipur":"◉",
     "januca-purim":"✦"
   };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6185,6 +11438,70 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <section class="moedJourney" id="moedJourney" aria-labelledby="moedJourneyTitle">
       <header class="moedJourneyHead">
         <span>CICLOS · ENCUENTROS · SEÑALES</span>
@@ -6256,8 +11573,136 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <section class="moedDetail" id="moedDetail" aria-live="polite"></section>
   `;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6478,9 +11923,137 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   let selectedId='rosh-jodesh';
   let selectedTab='abierta';
   let selectedDay=0;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6625,8 +12198,136 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   function selected(){return MOED_DATA.find(x=>x.id===selectedId)||MOED_DATA[0];}
   function detailImage(x){return x.id==='rosh-jodesh' ? "url('assets/moed-rosh-jodesh-v21.webp')" : "url('assets/moed-seasons-v21.webp')";}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6769,6 +12470,70 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   function experienceDoors(x){
     if(!x.experiences?.length) return '';
     return `<div class="moedExperienceDoors" aria-label="Experiencias de ${x.titleEs}">${x.experiences.map(item=>`
@@ -6779,6 +12544,7 @@ loadRamak();
         <strong>Entrar →</strong>
       </a>`).join('')}</div>`;
   }
+
 
   function tabContent(x){
     if(selectedTab==='abierta'){
@@ -6806,6 +12572,70 @@ loadRamak();
         <div class="moedPracticeIntro"><small>ORIENTACIÓN DEL CICLO</small><p>${x.practicaIntro}</p></div>
       </div>`;
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6962,9 +12792,137 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   screen.addEventListener('click',e=>{
     const scroll=e.target.closest('[data-moed-scroll]');
     if(scroll){document.getElementById(scroll.dataset.moedScroll)?.scrollIntoView({behavior:'smooth',block:'start'});return;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7095,6 +13053,70 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     const tab=e.target.closest('[data-moed-tab]');
     if(tab){selectedTab=tab.dataset.moedTab;selectedDay=0;renderDetail(false);return;}
 
@@ -7161,8 +13183,136 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     const day=e.target.closest('[data-moed-day]');
     if(day){selectedDay=Number(day.dataset.moedDay);renderDetail(false);return;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7298,9 +13448,137 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   renderGates();
   renderDetail(false);
 })();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7433,11 +13711,139 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   const AUDIO_BASE='https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej';
   let tracks=[];
   let index=0;
   let ready=false;
   let loading=null;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7579,11 +13985,139 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <section class="radioIntro">
       <span>MÚSICA · SILENCIO · PRESENCIA</span>
       <h2>Hay caminos<br>que se escuchan.</h2>
       <p>Radio Dérej no interrumpe el Camino. Lo acompaña.</p>
     </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7718,6 +14252,70 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       <article class="radioNow">
         <div class="radioNowArtwork" aria-hidden="true"></div>
         <div class="radioNowBody">
@@ -7788,11 +14386,139 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
           <div class="radioProgressRow">
             <span id="radioV21Current">0:00</span>
             <input id="radioV21Seek" type="range" min="0" max="1000" value="0" aria-label="Posición de reproducción">
             <span id="radioV21Duration">0:00</span>
           </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7930,10 +14656,138 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       <div class="radioQuote">
         <small>ESCUCHA</small>
         <p>“La música abre un espacio. El silencio decide qué hacer con él.”</p>
       </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8008,6 +14862,70 @@ loadRamak();
       </section>
     </section>
   `;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8208,6 +15126,70 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   const audio=document.getElementById('radioV21Audio');
   const title=document.getElementById('radioV21TrackTitle');
   const meta=document.getElementById('radioV21TrackMeta');
@@ -8217,6 +15199,70 @@ loadRamak();
   const play=document.getElementById('radioV21Play');
   const status=document.getElementById('radioV21Status');
   const list=document.getElementById('radioV21TrackList');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8410,6 +15456,70 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   play.addEventListener('click',async()=>{
     await ensure();
     if(!audio.src) return;
@@ -8428,6 +15538,70 @@ loadRamak();
   });
   audio.addEventListener('ended',()=>load(index+1,true));
   audio.addEventListener('error',()=>{status.textContent='No se pudo reproducir esta pista. Prueba la siguiente.';});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8572,6 +15746,70 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   if('mediaSession' in navigator){
     try{
       navigator.mediaSession.setActionHandler('play',()=>audio.play());
@@ -8581,6 +15819,70 @@ loadRamak();
     }catch{}
   }
 })();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8713,8 +16015,136 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   const BROTE_KEY='derej-v21-mi-camino-brote';
   let activeTab='huellas';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8856,11 +16286,139 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <section class="personalIntro">
       <span>MEMORIA · NO PUNTUACIÓN</span>
       <h2>Lo vivido<br>también deja raíz.</h2>
       <p>No hay niveles, rachas ni comparación. Sólo memoria local para volver a mirar.</p>
     </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -8994,11 +16552,139 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       <div class="personalTabs" role="tablist" aria-label="Mi Camino">
         <button type="button" class="personalTab on" data-personal-tab="huellas">Huellas</button>
         <button type="button" class="personalTab" data-personal-tab="brotes">Brotes</button>
         <button type="button" class="personalTab" data-personal-tab="memoria">Memoria</button>
       </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -9071,6 +16757,70 @@ loadRamak();
         </header>
         <div id="personalFootprints" class="personalMemoryList"></div>
       </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -9212,14 +16962,142 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       <section class="personalPanel" data-personal-panel="memoria">
         <header class="personalPanelHead">
           <small>MEMORIA</small>
           <h3>Frases para volver.</h3>
-          <p>Kavanot, notas privadas y memoria local de tus recorridos.</p>
+          <p>Sólo aparecen aquí las palabras que tú decidiste escribir y guardar.</p>
         </header>
         <div id="personalMemories" class="personalMemoryList"></div>
       </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -9352,12 +17230,140 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       <div class="personalNav">
         <button type="button" data-route="camino">Volver a Camino</button>
         <button type="button" data-route="home">Volver al patio</button>
       </div>
     </section>
   `;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -9552,6 +17558,70 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   const countNode=document.getElementById('personalMemoryCount');
   const footprintsNode=document.getElementById('personalFootprints');
   const memoriesNode=document.getElementById('personalMemories');
@@ -9621,11 +17691,139 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   function formatDate(value){
     if(!value) return '';
     try{return new Intl.DateTimeFormat('es-CL',{dateStyle:'medium'}).format(new Date(value));}
     catch{return '';}
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -9766,6 +17964,70 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   function legacyActions(){
     const out=[];
     for(let i=0;i<localStorage.length;i++){
@@ -9778,6 +18040,70 @@ loadRamak();
     }
     return out.sort((a,b)=>String(b.at||'').localeCompare(String(a.at||'')));
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -9916,12 +18242,140 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   function legacyFootprints(){
     try{
       const done=JSON.parse(localStorage.getItem('derej:camino:done')||'{}');
       return Object.entries(done||{}).map(([date,at])=>({date,at})).sort((a,b)=>String(b.at).localeCompare(String(a.at)));
     }catch{return [];}
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -10060,13 +18514,144 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   function render(){
     const encounters=encounterMemories();
-    const actions=legacyActions();
-    const reflections=legacyReflections();
-    const oldFootprints=legacyFootprints();
+    /* v2.5.2: Mi Camino muestra sólo lo que la persona guardó explícitamente
+       en la edición actual. Los datos heredados no se borran; simplemente
+       dejan de mezclarse con las preguntas y memorias actuales. */
+    const actions=[];
+    const reflections=[];
+    const oldFootprints=[];
     const brote=loadSprout();
-    const total=encounters.length+actions.length+reflections.length+oldFootprints.length+(brote?.body?1:0);
+    const total=encounters.length+(brote?.body?1:0);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -10198,6 +18783,70 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     const footprintCards=[];
     encounters.forEach(x=>{
       const isRamak=x.schema==='ramak-v21';
@@ -10209,9 +18858,9 @@ loadRamak();
         <article class="personalMemoryCard">
           <small>${isRamak?'CAMINO DIARIO · EDICIÓN RAMAK':'CAMINO · ENCUENTRO GUARDADO'}</small>
           <h4>${title}</h4>
-          ${isRamak&&x.sefira?`<p>${x.sefira}${x.avoda?` · ${x.avoda}`:''}</p>`:''}
+          ${isRamak&&x.sefira?`<p>${x.sefira}</p>`:''}
           ${!isRamak&&x.choice?`<p>${x.choice}${x.midah?` — ${x.midah}`:''}</p>`:''}
-          ${x.kavana?`<blockquote>“${x.kavana}”</blockquote>`:''}
+          ${x.note?`<blockquote>“${x.note}”</blockquote>`:''}
           ${x.savedAt?`<time>${formatDate(x.savedAt)}</time>`:''}
         </article>`);
     });
@@ -10291,17 +18940,79 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     const memoryCards=[];
     encounters.forEach(x=>{
-      if(!x.note&&!x.kavana&&!x.hitbodedut) return;
+      if(!x.note) return;
       const isRamak=x.schema==='ramak-v21';
       memoryCards.push(`
         <article class="personalMemoryCard">
-          <small>${isRamak?'MEMORIA · EDICIÓN RAMAK':'MEMORIA DE CAMINO'}</small>
+          <small>${isRamak?'TU NOTA · CAMINO DIARIO':'TU NOTA · CAMINO'}</small>
           <h4>${isRamak?`${x.parasha||'Camino'} · Día ${x.dia||''}`:`${x.parasha||'Encuentro'}${x.encounter?` · ${x.encounter}`:''}`}</h4>
-          ${x.note?`<p>“${x.note}”</p>`:''}
-          ${x.kavana?`<blockquote>“${x.kavana}”</blockquote>`:''}
-          ${isRamak&&x.hitbodedut?`<p><b>Hitbodedut:</b> ${x.hitbodedut}</p>`:''}
+          <p>“${x.note}”</p>
           ${x.savedAt?`<time>${formatDate(x.savedAt)}</time>`:''}
         </article>`);
     });
@@ -10333,8 +19044,72 @@ loadRamak();
     }
     memoriesNode.innerHTML=memoryCards.length
       ? memoryCards.join('')
-      : `<div class="personalEmpty">Aquí aparecerán las kavanot, notas y prácticas que decidas conservar.</div>`;
+      : `<div class="personalEmpty">Aquí aparecerán únicamente las notas que tú escribas y decidas guardar.</div>`;
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -10468,6 +19243,70 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   screen.addEventListener('click',e=>{
     const scroll=e.target.closest('[data-personal-scroll]');
     if(scroll){document.getElementById(scroll.dataset.personalScroll)?.scrollIntoView({behavior:'smooth',block:'start'});return;}
@@ -10535,8 +19374,136 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     const tab=e.target.closest('[data-personal-tab]');
     if(tab){activate(tab.dataset.personalTab);return;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -10681,9 +19648,137 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   document.addEventListener('click',e=>{
     if(e.target.closest('[data-route="personal"]')) setTimeout(render,0);
   });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -10815,9 +19910,105 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* FEEDBACK v2.2.5 · comunidad · integrado en DÉREJ */
 (()=>{
   const FORM_URL='https://form.jotform.com/262817020600041';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -10889,13 +20080,45 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   const personalGarden=document.querySelector('[data-screen="personal"] .personalGarden');
   if(personalGarden&&!document.getElementById('derejFeedbackPersonal')){
     const card=document.createElement('section');
     card.className='derejFeedbackCard';
     card.id='derejFeedbackPersonal';
     card.innerHTML=`
-      <div class="derejFeedbackMiniMark" aria-hidden="true">ד<span>⌁</span></div>
+      <div class="derejFeedbackMiniMark derejFeedbackWordMark" aria-hidden="true">D</div>
       <div class="derejFeedbackCardCopy">
         <small>COMUNIDAD · BETA</small>
         <h3>Ayúdanos a mejorar DÉREJ</h3>
@@ -10938,6 +20161,38 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   if(!document.getElementById('derejFeedbackModal')){
     const modal=document.createElement('div');
     modal.className='derejFeedbackModal';
@@ -10948,7 +20203,6 @@ loadRamak();
       <section class="derejFeedbackSheet" role="dialog" aria-modal="true" aria-labelledby="derejFeedbackTitle">
         <header class="derejFeedbackHeader">
           <div class="derejFeedbackBrand">
-            <span class="daletMark" aria-hidden="true"><span>ד</span><i>⌁</i></span>
             <span class="derejFeedbackBrandWords"><b>DÉREJ</b><small>EL CAMINO</small></span>
           </div>
           <button type="button" class="derejFeedbackClose" data-derej-feedback-close aria-label="Cerrar">×</button>
@@ -10962,6 +20216,38 @@ loadRamak();
       </section>`;
     document.body.appendChild(modal);
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -11046,6 +20332,38 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   const modal=document.getElementById('derejFeedbackModal');
   const frame=document.getElementById('derejFeedbackFrame');
   let previousOverflow='';
@@ -11094,6 +20412,38 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   document.addEventListener('click',e=>{
     if(e.target.closest('[data-derej-feedback-open]')){openFeedback();return;}
     if(e.target.closest('[data-derej-feedback-close]')){closeFeedback();return;}
@@ -11105,6 +20455,14 @@ loadRamak();
   const CYCLE_START_LOCAL={year:2026,month:9,day:4};
   const PROGRESS_KEY='derej-v23-camino-progress';
   const DAY_MS=86400000;
+
+
+
+
+
+
+
+
 
 
 
@@ -11197,6 +20555,14 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
   function selectLocalToday(){
     const t=todayMeta();
     if(!t) return {selected:false};
@@ -11218,19 +20584,17 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
   function ensureProgressUI(){
     const strip=$('ramakDayStrip');
-    if(strip&&!document.getElementById('ramakProgressPrivate')){
-      strip.insertAdjacentHTML('afterend',`
-        <section class="ramakProgressPrivate" id="ramakProgressPrivate">
-          <div class="ramakProgressCopy">
-            <small>MI RECORRIDO · PRIVADO</small>
-            <b id="ramakTodayLabel">El Camino de hoy</b>
-            <p id="ramakTodayNote">Se guarda sólo en este dispositivo. Sin rachas, rankings ni comparación.</p>
-          </div>
-          <button type="button" id="ramakResumePending">Retomar pendientes</button>
-        </section>`);
-    }
+    document.getElementById('ramakProgressPrivate')?.remove();
     if(!document.getElementById('ramakProgressModal')){
       const modal=document.createElement('div');
       modal.id='ramakProgressModal';
@@ -11257,7 +20621,7 @@ loadRamak();
       const style=document.createElement('style');
       style.id='ramakProgressStyles';
       style.textContent=`
-        .ramakProgressPrivate{display:grid;grid-template-columns:1fr auto;gap:11px;align-items:center;margin:0 0 11px;padding:14px;border:1px solid #c6b598;border-radius:18px;background:#eef0e5;color:#3e4437}
+        .ramakProgressPrivate{display:none!important;grid-template-columns:1fr auto;gap:11px;align-items:center;margin:0 0 11px;padding:14px;border:1px solid #c6b598;border-radius:18px;background:#eef0e5;color:#3e4437}
         .ramakProgressCopy{display:grid;gap:3px;min-width:0}.ramakProgressCopy small{font-size:.52rem;letter-spacing:.15em;font-weight:900;color:#6d765f}.ramakProgressCopy b{font:1rem/1.2 Georgia,serif;color:#34402f}.ramakProgressCopy p{margin:0;font-size:.64rem;line-height:1.35;color:#737869}
         .ramakProgressPrivate>button{border:0;border-radius:999px;background:#40523d;color:#fff;padding:10px 12px;font-size:.66rem;font-weight:900;white-space:nowrap}
         .ramakDay.done{background:#40523d!important;color:#fff!important;border-color:#40523d!important}.ramakDay.pending:not(.on){box-shadow:inset 0 0 0 2px rgba(156,116,49,.18)}.ramakDay.future{opacity:.62}.ramakDay small{display:block;margin-top:2px;font-size:.48rem;line-height:1}
@@ -11274,6 +20638,14 @@ loadRamak();
       document.head.appendChild(style);
     }
   }
+
+
+
+
+
+
+
+
 
 
 
@@ -11299,6 +20671,14 @@ loadRamak();
       btn.title=done?'Realizado':(off<=now?'Pendiente':'Próximo');
     });
   }
+
+
+
+
+
+
+
+
 
 
 
@@ -11334,6 +20714,14 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
   function renderProgressSheet(){
     ensureProgressUI();
     const entries=eligibleEntries();
@@ -11346,6 +20734,14 @@ loadRamak();
           <button type="button" data-progress-resume data-parasha="${esc(x.parasha)}" data-day="${x.day}">Retomar</button>
         </article>`).join(''):'<div class="ramakPendingEmpty">No hay encuentros pendientes disponibles hasta hoy.</div>';
     }
+
+
+
+
+
+
+
+
 
 
 
@@ -11379,6 +20775,14 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
   Object.assign(RAMAK_GLOSS,{
     'TZADIK TAMIM':'Justo e íntegro',
     'TEVA':'Arca · caja que protege',
@@ -11388,6 +20792,14 @@ loadRamak();
     'BRIT':'Pacto',
     'LEJ LEJA':'Vete hacia ti · sal de tu tierra'
   });
+
+
+
+
+
+
+
+
 
 
 
@@ -11413,6 +20825,14 @@ loadRamak();
     'Vayishbot mi maasehu':'Cesó y descansó de su obra.',
     'Lej leja meartzeja':'Vete de tu tierra; emprende tu camino.'
   };
+
+
+
+
+
+
+
+
 
 
 
@@ -11455,6 +20875,14 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
   function openGloss(term,meaning,kind='TRADUCCIÓN · SIGNIFICADO',extra=''){
     ensureGlossUI();
     const sheet=$('derejGlossSheet');
@@ -11464,6 +20892,14 @@ loadRamak();
     $('derejGlossExtra').textContent=extra;
     sheet.hidden=false;
   }
+
+
+
+
+
+
+
+
 
 
 
@@ -11500,11 +20936,27 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
   const originalDayStrip=renderDayStrip;
   renderDayStrip=function(p,c){
     originalDayStrip(p,c);
     decorateDayStrip(p);
   };
+
+
+
+
+
+
+
+
 
 
 
@@ -11539,6 +20991,14 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
   const originalRenderRamak=renderRamak;
   renderRamak=function(scrollToChooser=false){
     originalRenderRamak(scrollToChooser);
@@ -11546,6 +21006,14 @@ loadRamak();
     if(p) decorateDayStrip(p);
     renderProgressCard();
   };
+
+
+
+
+
+
+
+
 
 
 
@@ -11572,8 +21040,24 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
   ensureProgressUI();
   renderProgressCard();
+
+
+
+
+
+
+
+
 
 
 
@@ -11641,6 +21125,14 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
   /* Radio DÉREJ · minirreproductor flotante */
   function ensureFloatingRadio(){
     if(document.getElementById('derejRadioFloat')) return;
@@ -11682,6 +21174,14 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
     const audio=$('radioV21Audio');
     const hiddenPlay=$('radioV21Play');
     const sourceTitle=$('radioV21TrackTitle');
@@ -11696,6 +21196,14 @@ loadRamak();
     audio?.addEventListener('pause',sync);
     audio?.addEventListener('loadedmetadata',sync);
     sync();
+
+
+
+
+
+
+
+
 
 
 
@@ -11720,6 +21228,14 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
   function syncFloatingRadioVisibility(){
     const dock=$('derejRadioFloat');
     const radio=document.querySelector('[data-screen="radio"]');
@@ -11733,12 +21249,28 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
   ensureGlossUI();
-  ensureFloatingRadio();
+  /* v2.5.2: Radio y Glosario se concentran en un único menú lateral. */
   syncFloatingRadioVisibility();
   const activeObserver=new MutationObserver(syncFloatingRadioVisibility);
   screens.forEach(s=>activeObserver.observe(s,{attributes:true,attributeFilter:['class','hidden']}));
 })();
+
+
+
+
+
+
+
+
 
 
 
@@ -11863,6 +21395,14 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
   if(!document.getElementById('derejTermGlossStyles')){
     const style=document.createElement('style');
     style.id='derejTermGlossStyles';
@@ -11879,10 +21419,26 @@ loadRamak();
 
 
 
+
+
+
+
+
+
+
+
   const keys=Object.keys(TERMS).sort((a,b)=>b.length-a.length);
   const canonical=new Map(keys.map(k=>[k.toLocaleLowerCase('es'),k]));
   const escRx=s=>s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
   const rx=new RegExp(`(?<![\\p{L}\\p{N}])(${keys.map(escRx).join('|')})(?![\\p{L}\\p{N}])`,'giu');
+
+
+
+
+
+
+
+
 
 
 
@@ -11956,7 +21512,23 @@ loadRamak();
 
 
 
-/* DÉREJ v2.3.1 · glosario flotante contextual */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* DÉREJ v2.5.2 · herramientas laterales unificadas · Radio + Glosario */
 (()=>{
   const GLOSS_FLOAT={
     'Parashá':'Porción semanal de la Torá.',
@@ -12059,14 +21631,6 @@ loadRamak();
     'Vayejal':'Terminó, completó.',
     'Yehi Or':'Que haya luz.'
   };
-
-
-
-
-
-
-
-
   const VERSE_FLOAT={
     'וַיֹּאמֶר אֱלֹהִים יְהִי אוֹר וַיְהִי אוֹר':'Y dijo Dios: «Que haya luz», y hubo luz.',
     'יְהִי רָקִיעַ בְּתוֹךְ הַמָּיִם':'Que haya un firmamento en medio de las aguas.',
@@ -12085,13 +21649,6 @@ loadRamak();
     'Lej leja meartzeja':'Vete de tu tierra; emprende tu camino.'
   };
 
-
-
-
-
-
-
-
   function visibleContext(){
     const screen=document.querySelector('.screen.active:not([hidden])')||document.querySelector('.screen.active')||document.body;
     if(screen.matches?.('[data-screen="camino"]')){
@@ -12104,488 +21661,188 @@ loadRamak();
     return screen;
   }
 
-
-
-
-
-
-
-
-  function textForGloss(){
+  function glossaryItems(){
     const root=visibleContext();
     const clone=root.cloneNode(true);
-    clone.querySelectorAll('script,style,.derejTermIcon,.derejPassageHelp,.derejGlossFloat,.derejGlossFloatSheet,.derejRadioFloat,.derejFeedbackModal').forEach(x=>x.remove());
-    return (clone.innerText||clone.textContent||'').replace(/\s+/g,' ').trim();
-  }
-
-
-
-
-
-
-
-
-  function glossaryItems(){
-    const txt=textForGloss();
-    const found=[];
+    clone.querySelectorAll('script,style,.derejTermIcon,.derejPassageHelp,.ramakGlossBtn,#derejSideTools,.derejToolsSheet,.derejFeedbackModal').forEach(x=>x.remove());
+    const txt=(clone.innerText||clone.textContent||'').replace(/\s+/g,' ').trim();
     const lower=txt.toLocaleLowerCase('es');
+    const found=[];
     Object.entries(GLOSS_FLOAT).forEach(([term,meaning])=>{
       if(lower.includes(term.toLocaleLowerCase('es'))) found.push({term,meaning,type:'term'});
     });
-
-
-
-
-
-
-
-
     Object.entries(VERSE_FLOAT).forEach(([verse,meaning])=>{
       if(lower.includes(verse.toLocaleLowerCase('es'))) found.unshift({term:'Versículo',meaning,verse,type:'verse'});
     });
-
-
-
-
-
-
-
-
     const seen=new Set();
     return found.filter(x=>{
-      const k=(x.type==='verse'?'verse:': 'term:')+x.term.toLocaleLowerCase('es');
+      const k=(x.type==='verse'?'verse:':'term:')+x.term.toLocaleLowerCase('es');
       if(seen.has(k)) return false;
       seen.add(k);
       return true;
     });
   }
 
+  function ensureTools(){
+    if(document.getElementById('derejSideTools')) return;
+    try{
+      localStorage.removeItem('derej-v232-radio-position');
+      localStorage.removeItem('derej-v232-gloss-position');
+    }catch{}
 
+    document.getElementById('derejRadioFloat')?.remove();
+    document.getElementById('derejGlossFloat')?.remove();
+    document.getElementById('derejGlossFloatSheet')?.remove();
 
+    const tools=document.createElement('aside');
+    tools.id='derejSideTools';
+    tools.className='derejSideTools';
+    tools.setAttribute('aria-label','Herramientas DÉREJ');
+    tools.innerHTML=`
+      <button type="button" class="derejToolsHandle" data-derej-tools-toggle aria-expanded="false" aria-label="Abrir herramientas">
+        <span>⋮</span><small>AYUDA</small>
+      </button>
+      <div class="derejToolsMenu" id="derejToolsMenu" hidden>
+        <button type="button" data-derej-tools-radio><i>♫</i><span><b>Radio DÉREJ</b><small>Escuchar sin salir del Camino</small></span></button>
+        <button type="button" data-derej-tools-gloss><i>א</i><span><b>Glosario</b><small>Palabras de esta pantalla</small></span></button>
+      </div>`;
+    document.body.appendChild(tools);
 
-
-
-
-
-  function ensureFloatingGloss(){
-    if(document.getElementById('derejGlossFloat')) return;
-
-
-
-
-
-
-
-
-    const btn=document.createElement('button');
-    btn.id='derejGlossFloat';
-    btn.className='derejGlossFloat';
-    btn.type='button';
-    btn.setAttribute('aria-label','Abrir glosario de esta sección');
-    btn.innerHTML='<span>א</span><b>Glosario</b><small id="derejGlossCount"></small>';
-    document.body.appendChild(btn);
-
-
-
-
-
-
-
-
-    const sheet=document.createElement('div');
-    sheet.id='derejGlossFloatSheet';
-    sheet.className='derejGlossFloatSheet';
-    sheet.hidden=true;
-    sheet.innerHTML=`
-      <div class="derejGlossFloatBackdrop" data-gloss-float-close></div>
-      <section class="derejGlossFloatCard" role="dialog" aria-modal="true" aria-labelledby="derejGlossFloatTitle">
-        <header>
-          <div><small>AYUDA DE LECTURA</small><h2 id="derejGlossFloatTitle">Glosario de esta sección</h2></div>
-          <button type="button" data-gloss-float-close aria-label="Cerrar">×</button>
-        </header>
-        <p class="derejGlossFloatIntro">Sólo aparecen aquí las palabras presentes en lo que estás leyendo ahora.</p>
-        <div id="derejGlossFloatList" class="derejGlossFloatList"></div>
+    const radioSheet=document.createElement('div');
+    radioSheet.id='derejToolsRadioSheet';
+    radioSheet.className='derejToolsSheet';
+    radioSheet.hidden=true;
+    radioSheet.innerHTML=`
+      <div class="derejToolsBackdrop" data-derej-tools-close></div>
+      <section class="derejToolsCard" role="dialog" aria-modal="true" aria-labelledby="derejToolsRadioTitle">
+        <header><div><small>RADIO DÉREJ</small><h2 id="derejToolsRadioTitle">Escuchar mientras caminas</h2></div><button type="button" data-derej-tools-close aria-label="Cerrar">×</button></header>
+        <div class="derejToolsTrack"><small>AHORA</small><b id="derejToolsTrackTitle">Meditación</b></div>
+        <div class="derejToolsRadioControls">
+          <button type="button" data-derej-tools-prev aria-label="Anterior">←</button>
+          <button type="button" class="primary" data-derej-tools-play aria-label="Reproducir">▶</button>
+          <button type="button" data-derej-tools-next aria-label="Siguiente">→</button>
+        </div>
+        <button type="button" class="derejToolsOpenRadio" data-route="radio" data-derej-tools-close>Abrir Radio DÉREJ completa →</button>
       </section>`;
-    document.body.appendChild(sheet);
+    document.body.appendChild(radioSheet);
 
-
-
-
-
-
-
+    const glossSheet=document.createElement('div');
+    glossSheet.id='derejToolsGlossSheet';
+    glossSheet.className='derejToolsSheet';
+    glossSheet.hidden=true;
+    glossSheet.innerHTML=`
+      <div class="derejToolsBackdrop" data-derej-tools-close></div>
+      <section class="derejToolsCard derejToolsGlossCard" role="dialog" aria-modal="true" aria-labelledby="derejToolsGlossTitle">
+        <header><div><small>AYUDA DE LECTURA</small><h2 id="derejToolsGlossTitle">Glosario</h2></div><button type="button" data-derej-tools-close aria-label="Cerrar">×</button></header>
+        <p class="derejToolsIntro">Aquí aparecen sólo las palabras presentes en la sección que estás leyendo.</p>
+        <div id="derejToolsGlossList" class="derejToolsGlossList"></div>
+      </section>`;
+    document.body.appendChild(glossSheet);
 
     const style=document.createElement('style');
-    style.id='derejGlossFloatStyles';
+    style.id='derejSideToolsStyles';
     style.textContent=`
-      .derejTermIcon,.derejPassageHelp{display:none!important}
-      .derejGlossFloat{position:fixed;z-index:87;left:12px;bottom:max(14px,env(safe-area-inset-bottom));display:flex;align-items:center;gap:7px;min-height:46px;padding:7px 11px 7px 8px;border:1px solid rgba(215,188,130,.72);border-radius:999px;background:rgba(34,43,34,.96);color:#f4e5c7;box-shadow:0 10px 24px rgba(0,0,0,.24);backdrop-filter:blur(12px)}
-      .derejGlossFloat>span{display:grid;place-items:center;width:31px;height:31px;border-radius:50%;background:#efe2ca;color:#354331;font:1.05rem Georgia,serif}
-      .derejGlossFloat>b{font:.72rem Georgia,serif;letter-spacing:.02em}.derejGlossFloat>small{display:grid;place-items:center;min-width:19px;height:19px;border-radius:999px;background:#a8874e;color:#fff;font-size:.55rem;font-weight:900}
-      .derejGlossFloat.empty{opacity:.58}.derejGlossFloat[hidden]{display:none!important}
-      .derejGlossFloatSheet[hidden]{display:none}.derejGlossFloatSheet{position:fixed;z-index:132;inset:0;display:grid;place-items:end center}
-      .derejGlossFloatBackdrop{position:absolute;inset:0;background:rgba(7,10,8,.58);backdrop-filter:blur(5px)}
-      .derejGlossFloatCard{position:relative;z-index:1;width:min(100%,620px);max-height:76dvh;overflow:auto;padding:18px 15px calc(20px + env(safe-area-inset-bottom));border:1px solid #c8b595;border-radius:28px 28px 0 0;background:#f8efdf;color:#342e26;box-shadow:0 -22px 60px rgba(0,0,0,.28)}
-      .derejGlossFloatCard header{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}.derejGlossFloatCard header small{font-size:.52rem;letter-spacing:.17em;font-weight:900;color:#7c6947}.derejGlossFloatCard h2{font:1.7rem/1.05 Georgia,serif;margin:.28em 0 .2em}
-      .derejGlossFloatCard header>button{width:36px;height:36px;border:1px solid #bca98b;border-radius:50%;background:#fff7e8;color:#483e32;font-size:1.2rem}
-      .derejGlossFloatIntro{margin:8px 0 14px;color:#756957;font:.76rem/1.42 Georgia,serif}
-      .derejGlossFloatList{display:grid;gap:8px}.derejGlossFloatItem{padding:12px 13px;border:1px solid #d0bea0;border-radius:17px;background:#fff8ea}.derejGlossFloatItem small{display:block;margin-bottom:4px;font-size:.48rem;letter-spacing:.14em;font-weight:900;color:#8a744e}.derejGlossFloatItem h3{font:1.05rem/1.2 Georgia,serif;margin:0 0 4px;color:#34412f}.derejGlossFloatItem p{margin:0;color:#645a4c;font:.78rem/1.45 Georgia,serif}.derejGlossFloatItem em{display:block;margin-top:6px;color:#817360;font:.68rem/1.35 Georgia,serif}
-      .derejGlossFloatEmpty{padding:18px;border:1px dashed #c9b99d;border-radius:17px;color:#726755;font:italic .86rem/1.45 Georgia,serif;text-align:center}
-      @media(max-width:390px){.derejGlossFloat{left:8px;bottom:max(9px,env(safe-area-inset-bottom));min-height:43px;padding:6px 9px 6px 7px}.derejGlossFloat>span{width:29px;height:29px}.derejGlossFloat>b{font-size:.67rem}.derejGlossFloatCard{max-height:80dvh}}
+      .derejTermIcon,.derejPassageHelp,.ramakGlossBtn{display:none!important}
+      .derejSideTools{position:fixed;z-index:96;right:0;top:46dvh;display:flex;align-items:center;pointer-events:none}
+      .derejToolsHandle,.derejToolsMenu{pointer-events:auto}
+      .derejToolsHandle{display:grid;place-items:center;gap:2px;width:38px;min-height:70px;padding:7px 3px;border:1px solid rgba(213,188,135,.65);border-right:0;border-radius:18px 0 0 18px;background:rgba(34,43,34,.96);color:#f2dfb8;box-shadow:0 8px 22px rgba(0,0,0,.22);backdrop-filter:blur(12px)}
+      .derejToolsHandle>span{font:1.45rem/1 Georgia,serif;letter-spacing:2px}.derejToolsHandle>small{writing-mode:vertical-rl;transform:rotate(180deg);font-size:.42rem;letter-spacing:.15em;font-weight:900;color:#d5bb80}
+      .derejToolsMenu{position:absolute;right:44px;top:50%;transform:translateY(-50%);width:min(210px,calc(100vw - 64px));padding:7px;border:1px solid rgba(206,182,131,.58);border-radius:20px;background:rgba(31,40,32,.97);box-shadow:0 14px 34px rgba(0,0,0,.27);backdrop-filter:blur(15px)}
+      .derejToolsMenu[hidden]{display:none}
+      .derejToolsMenu>button{display:grid;grid-template-columns:36px 1fr;gap:9px;align-items:center;width:100%;padding:9px;border:0;border-radius:14px;background:transparent;color:#f4e7cc;text-align:left}
+      .derejToolsMenu>button+button{margin-top:3px}.derejToolsMenu>button:active{background:rgba(255,255,255,.08)}
+      .derejToolsMenu i{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:#efe2ca;color:#33412f;font:normal 1rem Georgia,serif}
+      .derejToolsMenu span{display:grid;gap:2px}.derejToolsMenu b{font:.82rem/1.1 Georgia,serif}.derejToolsMenu small{font-size:.56rem;line-height:1.25;color:#c5b99f}
+      .derejToolsSheet[hidden]{display:none}.derejToolsSheet{position:fixed;z-index:140;inset:0;display:grid;place-items:end center}
+      .derejToolsBackdrop{position:absolute;inset:0;background:rgba(7,10,8,.54);backdrop-filter:blur(4px)}
+      .derejToolsCard{position:relative;z-index:1;width:min(100%,620px);max-height:80dvh;overflow:auto;padding:18px 16px calc(20px + env(safe-area-inset-bottom));border:1px solid #c8b595;border-radius:28px 28px 0 0;background:#f8efdf;color:#342e26;box-shadow:0 -20px 58px rgba(0,0,0,.27)}
+      .derejToolsCard header{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}.derejToolsCard header small{font-size:.5rem;letter-spacing:.17em;font-weight:900;color:#796846}
+      .derejToolsCard h2{font:1.65rem/1.08 Georgia,serif;margin:.28em 0 .15em}.derejToolsCard header>button{width:36px;height:36px;border:1px solid #bba889;border-radius:50%;background:#fff7e9;color:#443a2f;font-size:1.2rem}
+      .derejToolsTrack{display:grid;gap:5px;margin:15px 0 10px;padding:14px;border:1px solid #d0bea0;border-radius:18px;background:#fff7e8}.derejToolsTrack small{font-size:.48rem;letter-spacing:.15em;font-weight:900;color:#816d49}.derejToolsTrack b{font:1.08rem/1.3 Georgia,serif}
+      .derejToolsRadioControls{display:grid;grid-template-columns:1fr 1.25fr 1fr;gap:8px}.derejToolsRadioControls button{height:44px;border:1px solid #ad9975;border-radius:14px;background:#fff7e8;color:#40362b;font-weight:900}.derejToolsRadioControls .primary{background:#344431;color:#fff;border-color:#344431}
+      .derejToolsOpenRadio{width:100%;margin-top:10px;padding:12px;border:0;border-radius:14px;background:#efe3cc;color:#40372c;font-size:.7rem;font-weight:900}
+      .derejToolsIntro{margin:8px 0 14px;color:#756957;font:.78rem/1.45 Georgia,serif}.derejToolsGlossList{display:grid;gap:8px}
+      .derejToolsGlossItem{padding:12px 13px;border:1px solid #d0bea0;border-radius:17px;background:#fff8ea}.derejToolsGlossItem small{display:block;margin-bottom:4px;font-size:.47rem;letter-spacing:.14em;font-weight:900;color:#8a744e}.derejToolsGlossItem h3{font:1.05rem/1.2 Georgia,serif;margin:0 0 4px;color:#34412f}.derejToolsGlossItem p{margin:0;color:#645a4c;font:.8rem/1.46 Georgia,serif}.derejToolsGlossItem em{display:block;margin-top:6px;color:#817360;font:.67rem/1.35 Georgia,serif;overflow-wrap:anywhere}
+      .derejToolsEmpty{padding:18px;border:1px dashed #c9b99d;border-radius:17px;color:#726755;font:italic .86rem/1.45 Georgia,serif;text-align:center}
+      .ramakSceneCompact{height:78px!important;background-position:50% 48%!important}.ramakSceneCompact:after{height:4px}.ramakSceneCompactInner{position:absolute;inset:0;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 16px;background:linear-gradient(90deg,rgba(17,23,17,.76),rgba(17,23,17,.42));color:#f7e8cb}
+      .ramakSceneCompactInner span{font-size:.55rem;letter-spacing:.16em;font-weight:900;color:#e2c98e;white-space:nowrap}.ramakSceneCompactInner b{font:.72rem/1.25 Georgia,serif;text-align:right;max-width:67%}
+      .ramakRefs{display:grid!important;gap:7px!important}.ramakRefs span{display:block!important;width:100%;box-sizing:border-box;line-height:1.35!important;text-align:left;white-space:normal;overflow-wrap:anywhere}
+      .ramakBodyEyebrow,.ramakCard small,.ramakVoice small{line-height:1.35!important;letter-spacing:.11em!important;overflow-wrap:anywhere}
+      .ramakVoice>small{font-size:.74rem!important;line-height:1.2!important;letter-spacing:.13em!important;font-weight:900!important;color:#5f553f!important;margin-bottom:8px!important}
+      .ramakVoice .derejVoiceSource{font-size:1.08rem!important;line-height:1.3!important}
+      @media(max-width:430px){
+        .derejSideTools{top:48dvh}.derejToolsHandle{width:34px;min-height:64px;border-radius:16px 0 0 16px}.derejToolsHandle>small{font-size:.39rem}
+        .derejToolsMenu{right:40px;width:min(198px,calc(100vw - 54px))}
+        .ramakSceneCompact{height:70px!important}.ramakSceneCompactInner{padding:11px 12px}.ramakSceneCompactInner span{font-size:.5rem}.ramakSceneCompactInner b{font-size:.67rem}
+        .ramakVoice>small{font-size:.76rem!important}
+      }
     `;
     document.head.appendChild(style);
-  }
 
-
-
-
-
-
-
-
-  function updateFloatingGloss(){
-    ensureFloatingGloss();
-    const btn=document.getElementById('derejGlossFloat');
-    const count=document.getElementById('derejGlossCount');
-    const screen=document.querySelector('.screen.active:not([hidden])')||document.querySelector('.screen.active');
-    const hide=screen?.matches?.('[data-screen="home"],[data-screen="radio"]');
-    btn.hidden=!!hide;
-    if(hide) return;
-    const items=glossaryItems();
-    btn.classList.toggle('empty',!items.length);
-    count.textContent=items.length?String(items.length):'0';
-    btn.dataset.count=String(items.length);
-  }
-
-
-
-
-
-
-
-
-  function renderFloatingGloss(){
-    ensureFloatingGloss();
-    const list=document.getElementById('derejGlossFloatList');
-    const items=glossaryItems();
-    list.innerHTML=items.length?items.map(x=>`
-      <article class="derejGlossFloatItem">
-        <small>${x.type==='verse'?'TRADUCCIÓN DEL VERSÍCULO':'TÉRMINO'}</small>
-        <h3>${x.term}</h3>
-        <p>${x.meaning}</p>
-        ${x.verse?`<em>${x.verse}</em>`:''}
-      </article>`).join(''):'<div class="derejGlossFloatEmpty">En esta sección no hay términos del glosario que necesiten explicación.</div>';
-  }
-
-
-
-
-
-
-
-
-  ensureFloatingGloss();
-  updateFloatingGloss();
-
-
-
-
-
-
-
-
-  let glossTimer=0;
-  function scheduleGlossUpdate(){
-    clearTimeout(glossTimer);
-    glossTimer=setTimeout(updateFloatingGloss,80);
-  }
-
-
-
-
-
-
-
-
-  const observer=new MutationObserver(scheduleGlossUpdate);
-  observer.observe(document.body,{subtree:true,childList:true,attributes:true,attributeFilter:['class','hidden']});
-  document.addEventListener('click',e=>{
-    if(e.target.closest('#derejGlossFloat')){
-      renderFloatingGloss();
-      document.getElementById('derejGlossFloatSheet').hidden=false;
-      return;
-    }
-    if(e.target.closest('[data-gloss-float-close]')){
-      document.getElementById('derejGlossFloatSheet').hidden=true;
-      return;
-    }
-    scheduleGlossUpdate();
-  });
-  document.addEventListener('keydown',e=>{
-    if(e.key==='Escape'){
-      const sheet=document.getElementById('derejGlossFloatSheet');
-      if(sheet&&!sheet.hidden) sheet.hidden=true;
-    }
-  });
-})();
-
-
-
-
-
-
-
-
-/* DÉREJ v2.3.2 · controles flotantes movibles */
-(()=>{
-  function makeDraggable({
-    element,
-    handles,
-    storageKey,
-    clickTarget=null
-  }){
-    if(!element) return;
-
-
-
-
-    const margin=8;
-    let drag=null;
-    let suppressNextClick=false;
-
-
-
-
-    function vp(){
-      return {
-        w:Math.max(document.documentElement.clientWidth,window.innerWidth||0),
-        h:Math.max(document.documentElement.clientHeight,window.innerHeight||0)
-      };
-    }
-
-
-
-
-    function clamp(left,top){
-      const {w,h}=vp();
-      const rect=element.getBoundingClientRect();
-      const maxLeft=Math.max(margin,w-rect.width-margin);
-      const maxTop=Math.max(margin,h-rect.height-margin);
-      return {
-        left:Math.min(Math.max(left,margin),maxLeft),
-        top:Math.min(Math.max(top,margin),maxTop)
-      };
-    }
-
-
-
-
-    function place(left,top,save=true){
-      const p=clamp(left,top);
-      element.style.left=p.left+'px';
-      element.style.top=p.top+'px';
-      element.style.right='auto';
-      element.style.bottom='auto';
-
-
-
-
-      if(save){
-        try{
-          const v=vp();
-          localStorage.setItem(storageKey,JSON.stringify({
-            left:p.left,
-            top:p.top,
-            vw:v.w,
-            vh:v.h,
-            updatedAt:new Date().toISOString()
-          }));
-        }catch{}
+    const audio=document.getElementById('radioV21Audio');
+    const sourceTitle=document.getElementById('radioV21TrackTitle');
+    const play=document.querySelector('[data-derej-tools-play]');
+    const track=document.getElementById('derejToolsTrackTitle');
+    const syncRadio=()=>{
+      if(track&&sourceTitle) track.textContent=(sourceTitle.textContent&&sourceTitle.textContent!=='Preparando la escucha…')?sourceTitle.textContent:'Meditación';
+      if(play&&audio) play.textContent=audio.paused?'▶':'⏸';
+    };
+    sourceTitle&&new MutationObserver(syncRadio).observe(sourceTitle,{childList:true,subtree:true});
+    audio?.addEventListener('play',syncRadio);
+    audio?.addEventListener('pause',syncRadio);
+    audio?.addEventListener('loadedmetadata',syncRadio);
+    syncRadio();
+
+    document.addEventListener('click',e=>{
+      const handle=e.target.closest('[data-derej-tools-toggle]');
+      if(handle){
+        const menu=document.getElementById('derejToolsMenu');
+        const open=menu.hidden;
+        menu.hidden=!open;
+        handle.setAttribute('aria-expanded',String(open));
+        return;
       }
-    }
-
-
-
-
-    function restore(){
-      try{
-        const saved=JSON.parse(localStorage.getItem(storageKey)||'null');
-        if(!saved||!Number.isFinite(saved.left)||!Number.isFinite(saved.top)) return;
-        const v=vp();
-        const oldW=Number(saved.vw)||v.w;
-        const oldH=Number(saved.vh)||v.h;
-        const scaledLeft=saved.left*(v.w/oldW);
-        const scaledTop=saved.top*(v.h/oldH);
-        requestAnimationFrame(()=>place(scaledLeft,scaledTop,false));
-      }catch{}
-    }
-
-
-
-
-    function keepVisible(){
-      if(element.hidden||getComputedStyle(element).display==='none') return;
-      const rect=element.getBoundingClientRect();
-      if(!rect.width||!rect.height) return;
-      place(rect.left,rect.top,false);
-    }
-
-
-
-
-    function onPointerDown(e){
-      const handle=e.currentTarget;
-      if(e.button!==undefined&&e.button!==0) return;
-      if(e.target.closest('button') && e.target!==handle && !e.target.matches('.derejRadioOrb,#derejGlossFloat')) return;
-
-
-
-
-      const rect=element.getBoundingClientRect();
-      drag={
-        pointerId:e.pointerId,
-        startX:e.clientX,
-        startY:e.clientY,
-        left:rect.left,
-        top:rect.top,
-        moved:false,
-        handle
-      };
-      suppressNextClick=false;
-      handle.setPointerCapture?.(e.pointerId);
-      element.classList.add('derejDragging');
-    }
-
-
-
-
-    function onPointerMove(e){
-      if(!drag||e.pointerId!==drag.pointerId) return;
-      const dx=e.clientX-drag.startX;
-      const dy=e.clientY-drag.startY;
-      if(!drag.moved && Math.hypot(dx,dy)>6) drag.moved=true;
-      if(!drag.moved) return;
-      e.preventDefault();
-      place(drag.left+dx,drag.top+dy,false);
-    }
-
-
-
-
-    function finishDrag(e){
-      if(!drag||e.pointerId!==drag.pointerId) return;
-      if(drag.moved){
-        const rect=element.getBoundingClientRect();
-        place(rect.left,rect.top,true);
-        suppressNextClick=true;
-        setTimeout(()=>{suppressNextClick=false;},180);
+      if(e.target.closest('[data-derej-tools-radio]')){
+        document.getElementById('derejToolsMenu').hidden=true;
+        document.querySelector('[data-derej-tools-toggle]')?.setAttribute('aria-expanded','false');
+        syncRadio();
+        document.getElementById('derejToolsRadioSheet').hidden=false;
+        return;
       }
-      drag.handle.releasePointerCapture?.(drag.pointerId);
-      drag=null;
-      element.classList.remove('derejDragging');
-    }
-
-
-
-
-    handles.filter(Boolean).forEach(handle=>{
-      handle.style.touchAction='none';
-      handle.addEventListener('pointerdown',onPointerDown);
-      handle.addEventListener('pointermove',onPointerMove);
-      handle.addEventListener('pointerup',finishDrag);
-      handle.addEventListener('pointercancel',finishDrag);
+      if(e.target.closest('[data-derej-tools-gloss]')){
+        document.getElementById('derejToolsMenu').hidden=true;
+        document.querySelector('[data-derej-tools-toggle]')?.setAttribute('aria-expanded','false');
+        const list=document.getElementById('derejToolsGlossList');
+        const items=glossaryItems();
+        list.innerHTML=items.length?items.map(x=>`
+          <article class="derejToolsGlossItem">
+            <small>${x.type==='verse'?'TRADUCCIÓN DEL VERSÍCULO':'TÉRMINO'}</small>
+            <h3>${x.term}</h3><p>${x.meaning}</p>${x.verse?`<em>${x.verse}</em>`:''}
+          </article>`).join(''):'<div class="derejToolsEmpty">En esta sección no hay términos del glosario que necesiten explicación.</div>';
+        document.getElementById('derejToolsGlossSheet').hidden=false;
+        return;
+      }
+      if(e.target.closest('[data-derej-tools-close]')){
+        document.querySelectorAll('.derejToolsSheet').forEach(x=>x.hidden=true);
+        return;
+      }
+      if(e.target.closest('[data-derej-tools-play]')){document.getElementById('radioV21Play')?.click();setTimeout(syncRadio,100);return;}
+      if(e.target.closest('[data-derej-tools-prev]')){document.getElementById('radioV21Prev')?.click();setTimeout(syncRadio,100);return;}
+      if(e.target.closest('[data-derej-tools-next]')){document.getElementById('radioV21Next')?.click();setTimeout(syncRadio,100);return;}
+      if(!e.target.closest('#derejSideTools')){
+        const menu=document.getElementById('derejToolsMenu');
+        if(menu&&!menu.hidden){menu.hidden=true;document.querySelector('[data-derej-tools-toggle]')?.setAttribute('aria-expanded','false');}
+      }
     });
-
-
-
-
-    if(clickTarget){
-      clickTarget.addEventListener('click',e=>{
-        if(suppressNextClick){
-          e.preventDefault();
-          e.stopImmediatePropagation();
-          suppressNextClick=false;
-        }
-      },true);
-    }
-
-
-
-
-    window.addEventListener('resize',()=>setTimeout(keepVisible,80));
-    window.addEventListener('orientationchange',()=>setTimeout(keepVisible,180));
-
-
-
-
-    new MutationObserver(()=>setTimeout(keepVisible,40))
-      .observe(element,{attributes:true,attributeFilter:['class','hidden','style']});
-
-
-
-
-    restore();
+    document.addEventListener('keydown',e=>{
+      if(e.key==='Escape'){
+        document.querySelectorAll('.derejToolsSheet').forEach(x=>x.hidden=true);
+        const menu=document.getElementById('derejToolsMenu');if(menu)menu.hidden=true;
+        document.querySelector('[data-derej-tools-toggle]')?.setAttribute('aria-expanded','false');
+      }
+    });
   }
 
-
-
-
-  if(!document.getElementById('derejMovableFloatingStyles')){
-    const style=document.createElement('style');
-    style.id='derejMovableFloatingStyles';
-    style.textContent=`
-      #derejRadioFloat .derejRadioOrb,
-      #derejRadioFloat .derejRadioMiniTop,
-      #derejGlossFloat{
-        cursor:grab;
-        -webkit-user-select:none;
-        user-select:none;
-      }
-      #derejRadioFloat.derejDragging,
-      #derejGlossFloat.derejDragging{
-        opacity:.88;
-        filter:drop-shadow(0 14px 28px rgba(0,0,0,.34));
-      }
-      #derejRadioFloat.derejDragging .derejRadioOrb,
-      #derejRadioFloat.derejDragging .derejRadioMiniTop,
-      #derejGlossFloat.derejDragging{
-        cursor:grabbing;
-      }
-      #derejRadioFloat .derejRadioMiniTop:before{
-        content:"⋮⋮";
-        display:inline-block;
-        margin-right:7px;
-        color:#bfa56e;
-        font-size:.72rem;
-        letter-spacing:-.08em;
-        opacity:.75;
-      }
-    `;
-    document.head.appendChild(style);
-  }
-
-
-
-
-  const radio=document.getElementById('derejRadioFloat');
-  makeDraggable({
-    element:radio,
-    handles:[
-      radio?.querySelector('.derejRadioOrb'),
-      radio?.querySelector('.derejRadioMiniTop')
-    ],
-    storageKey:'derej-v232-radio-position',
-    clickTarget:radio?.querySelector('.derejRadioOrb')
-  });
-
-
-
-
-  const gloss=document.getElementById('derejGlossFloat');
-  makeDraggable({
-    element:gloss,
-    handles:[gloss],
-    storageKey:'derej-v232-gloss-position',
-    clickTarget:gloss
-  });
+  ensureTools();
 })();
+
