@@ -14593,9 +14593,9 @@ loadRamak();
 
 
           <div class="radioControls">
-            <button type="button" id="radioV21Prev" aria-label="Canción anterior" title="Canción anterior">⏮</button>
-            <button type="button" id="radioV21Play" class="radioMainControl" aria-label="Reproducir">▶</button>
-            <button type="button" id="radioV21Next" aria-label="Canción siguiente" title="Canción siguiente">⏭</button>
+            <button type="button" id="radioV21Prev" aria-label="Canción anterior" title="Canción anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 20 9 12l10-8v16Z"/><path d="M5 4v16"/></svg></button>
+            <button type="button" id="radioV21Play" class="radioMainControl" aria-label="Reproducir"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><path d="M8 4.75a1 1 0 0 1 1.53-.848L20 11.15a1 1 0 0 1 0 1.7L9.53 20.1A1 1 0 0 1 8 19.25V4.75Z"/></svg></button>
+            <button type="button" id="radioV21Next" aria-label="Canción siguiente" title="Canción siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 4 10 8-10 8V4Z"/><path d="M19 4v16"/></svg></button>
           </div>
           <p class="radioStatus" id="radioV21Status" role="status">Cargando catálogo…</p>
           <audio id="radioV21Audio" preload="metadata"></audio>
@@ -15084,6 +15084,8 @@ loadRamak();
       .radioTrackArtwork{display:block;width:100%;height:100%;max-height:440px;aspect-ratio:1/1;object-fit:contain;border-radius:14px;background:#111b15;box-shadow:0 16px 32px rgba(0,0,0,.3)}
       .radioControls{display:flex;align-items:center;justify-content:center;gap:clamp(16px,5vw,27px);margin-top:5px}
       .radioControls button{width:58px;height:58px;min-width:48px;border-radius:50%;display:grid;place-items:center;padding:0;flex:none;font:1.4rem/1 system-ui,sans-serif;touch-action:manipulation;transition:transform .15s ease,background .15s ease,border-color .15s ease}
+      .radioControls button svg{display:block;width:28px;height:28px}
+      .radioControls .radioMainControl svg{width:32px;height:32px}
       .radioControls button:active{transform:scale(.94)}
       .radioControls button:focus-visible{outline:3px solid #d9bb75;outline-offset:3px}
       .radioControls button:hover:not(:disabled){background:#354b39;border-color:#d9bb75}
@@ -15593,7 +15595,9 @@ loadRamak();
     return loading;
   }
 
-  play.addEventListener('click',async()=>{
+  const radioPlayIcon="<svg viewBox=\"0 0 24 24\" fill=\"currentColor\" stroke=\"none\" aria-hidden=\"true\"><path d=\"M8 4.75a1 1 0 0 1 1.53-.848L20 11.15a1 1 0 0 1 0 1.7L9.53 20.1A1 1 0 0 1 8 19.25V4.75Z\"/></svg>";
+  const radioPauseIcon="<svg viewBox=\"0 0 24 24\" fill=\"currentColor\" stroke=\"none\" aria-hidden=\"true\"><rect x=\"5.8\" y=\"4\" width=\"4.6\" height=\"16\" rx=\"1.4\"/><rect x=\"13.6\" y=\"4\" width=\"4.6\" height=\"16\" rx=\"1.4\"/></svg>";
+    play.addEventListener('click',async()=>{
     await ensure();
     if(!audio.src) return;
     if(audio.paused) audio.play().catch(()=>{status.textContent='Toca nuevamente Reproducir para iniciar.';});
@@ -15602,8 +15606,8 @@ loadRamak();
   document.getElementById('radioV21Prev').addEventListener('click',async()=>{await ensure();load(index-1,true);});
   document.getElementById('radioV21Next').addEventListener('click',async()=>{await ensure();load(index+1,true);});
   seek.addEventListener('input',()=>{if(Number.isFinite(audio.duration)&&audio.duration>0)audio.currentTime=(Number(seek.value)/1000)*audio.duration;});
-  audio.addEventListener('play',()=>{play.textContent='⏸';play.setAttribute('aria-label','Pausar');status.textContent='Reproduciendo dentro de Dérej.';});
-  audio.addEventListener('pause',()=>{play.textContent='▶';play.setAttribute('aria-label','Reproducir');if(audio.currentTime>0)status.textContent='En pausa.';});
+  audio.addEventListener('play',()=>{play.innerHTML=radioPauseIcon;play.setAttribute('aria-label','Pausar');status.textContent='Reproduciendo dentro de Dérej.';});
+  audio.addEventListener('pause',()=>{play.innerHTML=radioPlayIcon;play.setAttribute('aria-label','Reproducir');if(audio.currentTime>0)status.textContent='En pausa.';});
   audio.addEventListener('loadedmetadata',()=>{duration.textContent=fmt(audio.duration);});
   audio.addEventListener('timeupdate',()=>{
     current.textContent=fmt(audio.currentTime);
