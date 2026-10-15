@@ -13643,7 +13643,7 @@ loadRamak();
 
 
 
-/* RADIO DÉREJ v2.1 · Meditación RC2 · 13 pistas */
+/* RADIO DÉREJ v2.5.2 · Tres colecciones musicales sobre el reproductor moderno */
 (()=>{
   const screen=document.querySelector('[data-screen="radio"]');
   if(!screen) return;
@@ -13777,6 +13777,9 @@ loadRamak();
 
   const AUDIO_BASE='https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej';
   let tracks=[];
+  let allTracks=[];
+  let collections=[];
+  let collectionId='meditacion-i';
   let index=0;
   let ready=false;
   let loading=null;
@@ -13918,7 +13921,7 @@ loadRamak();
         <span class="radioEyebrow">RADIO DÉREJ · רדיו</span>
         <h1 id="radioV21Title">Escuchar<br>también es<br>caminar.</h1>
         <p>Música contemplativa para acompañar silencio, reflexión y camino interior.</p>
-        <button class="radioEnter" type="button" data-radio-scroll="radioPlayer">Entrar a Meditación <span>↓</span></button>
+        <button class="radioEnter" type="button" data-radio-scroll="radioPlayer">Explorar colecciones <span>↓</span></button>
       </div>
     </section>
 
@@ -14183,11 +14186,7 @@ loadRamak();
 
 
     <section class="radioPlayerShell" id="radioPlayer">
-      <div class="radioCollectionTabs" aria-label="Colecciones de Radio Dérej">
-        <button class="radioCollection on" type="button">Meditación</button>
-        <button class="radioCollection future" type="button" disabled>Parashá <small>Próximamente</small></button>
-        <button class="radioCollection future" type="button" disabled>Hitbodedut <small>Próximamente</small></button>
-      </div>
+      <div class="radioCollectionTabs" id="radioV21Collections" role="group" aria-label="Colecciones de Radio Dérej"></div>
 
 
 
@@ -14317,9 +14316,9 @@ loadRamak();
 
 
       <article class="radioNow">
-        <div class="radioNowArtwork" aria-hidden="true"></div>
+        <div class="radioNowArtwork" id="radioV21Artwork" aria-hidden="true"></div>
         <div class="radioNowBody">
-          <div class="radioNowMeta">RADIO DÉREJ · MEDITACIÓN</div>
+          <div class="radioNowMeta" id="radioV21AlbumMeta">RADIO DÉREJ · MEDITACIÓN</div>
           <h2 id="radioV21TrackTitle">Preparando la escucha…</h2>
           <p id="radioV21TrackMeta">13 piezas contemplativas</p>
 
@@ -14855,8 +14854,8 @@ loadRamak();
       <section class="radioTracksSection">
         <header>
           <span>COLECCIÓN ACTUAL</span>
-          <h3>Meditación</h3>
-          <p>13 piezas para acompañar pausa, estudio y presencia.</p>
+          <h3 id="radioV21AlbumTitle">Meditación I</h3>
+          <p id="radioV21AlbumDescription">13 piezas para acompañar pausa, estudio y presencia.</p>
         </header>
         <div class="radioTrackList" id="radioV21TrackList"></div>
       </section>
@@ -15013,6 +15012,10 @@ loadRamak();
       .radioCollection.on{background:#efe2ca;color:#332d25;border-color:#efe2ca}
       .radioCollection small{display:block;margin-top:2px;font-size:.45rem;letter-spacing:.05em;font-weight:700;opacity:.68}
       .radioCollection.future{opacity:.65}
+      .radioCollection{cursor:pointer;line-height:1.3}
+      .radioCollection:focus-visible{outline:3px solid #d9bb75;outline-offset:2px}
+      .radioCollection:not(.on):hover{border-color:#d9bb75}
+      @media(max-width:390px){.radioCollection{font-size:.6rem}}
       .radioNow{overflow:hidden;border:1px solid rgba(218,191,132,.32);border-radius:28px;background:#151c18;box-shadow:0 18px 42px rgba(0,0,0,.28)}
       .radioNowArtwork{height:210px;background-image:linear-gradient(180deg,rgba(4,7,6,.04),rgba(4,7,6,.68)),url('assets/radio-night-v21.webp');background-size:cover;background-position:48% 68%}
       .radioNowBody{padding:18px}
@@ -15328,197 +15331,130 @@ loadRamak();
 
 
   function fmt(sec){
-    if(!Number.isFinite(sec)) return '0:00';
+    if(!Number.isFinite(sec))return '0:00';
     sec=Math.max(0,Math.round(sec));
     return Math.floor(sec/60)+':'+String(sec%60).padStart(2,'0');
   }
-  function urlFor(t){return `${AUDIO_BASE}/${String(t.path||'').replace(/^\//,'')}`;}
+  function assetUrl(path){
+    if(!path)return '';
+    if(/^https?:\/\//i.test(path))return path;
+    const encoded=String(path).replace(/^\/+/,'').split('/').map(encodeURIComponent).join('/');
+    return AUDIO_BASE+'/'+encoded;
+  }
+  function urlFor(t){return t?.url||assetUrl(t?.path);}
+  function coverFor(t){
+    const album=collections.find(c=>c.id===collectionId);
+    return assetUrl(t?.artwork||album?.artwork)||'assets/radio-night-v21.webp';
+  }
   function syncList(){
-    list.innerHTML=tracks.map((t,i)=>`
-      <button type="button" class="radioTrackV21${i===index?' on':''}" data-radio-track="${i}">
-        <span class="num">${String(i+1).padStart(2,'0')}</span>
-        <span class="copy"><b>${t.title}</b><small>${t.artist||'Danygrafiko'}</small></span>
-        <span class="dur">${t.duration||''}</span>
-      </button>
-    `).join('');
+    list.replaceChildren();
+    tracks.forEach((t,i)=>{
+      const button=document.createElement('button');
+      button.type='button';
+      button.className='radioTrackV21'+(i===index?' on':'');
+      button.dataset.radioTrack=String(i);
+      const num=document.createElement('span');
+      num.className='num';num.textContent=String(i+1).padStart(2,'0');
+      const copy=document.createElement('span');copy.className='copy';
+      const titleNode=document.createElement('b');titleNode.textContent=t.title;
+      const artistNode=document.createElement('small');artistNode.textContent=t.artist||'Danygrafiko';
+      copy.append(titleNode,artistNode);
+      const dur=document.createElement('span');dur.className='dur';dur.textContent=t.duration||'';
+      button.append(num,copy,dur);
+      list.append(button);
+    });
   }
   function mediaSession(t){
-    if(!('mediaSession' in navigator)||!t) return;
+    if(!('mediaSession' in navigator)||!t)return;
     try{
       navigator.mediaSession.metadata=new MediaMetadata({
         title:t.title,
         artist:t.artist||'Danygrafiko',
-        album:t.collection||'Radio Dérej · Meditación',
-        artwork:[{src:'assets/radio-night-v21.webp',sizes:'800x1200',type:'image/webp'}]
+        album:t.collection||'Radio Dérej',
+        artwork:[{src:coverFor(t),sizes:'any',type:'image/png'}]
       });
     }catch{}
   }
   function load(i,autoplay=false){
-    if(!tracks.length) return;
+    if(!tracks.length)return;
     index=(i+tracks.length)%tracks.length;
-    try{localStorage.setItem('derej-v21-radio-index',String(index));}catch{}
+    try{localStorage.setItem('derej-v21-radio-index:'+collectionId,String(index));}catch{}
     const t=tracks[index];
+    audio.pause();
     title.textContent=t.title;
-    meta.textContent=`${t.artist||'Danygrafiko'} · ${t.collection||'Radio Dérej · Meditación'}`;
+    meta.textContent=`${t.artist||'Danygrafiko'} · ${t.collection||'Radio Dérej'}`;
     duration.textContent=t.duration||'0:00';
     current.textContent='0:00';
     seek.value='0';
-    audio.src=urlFor(t);
-    status.textContent='Lista para escuchar.';
+    const src=urlFor(t);
+    if(src){audio.src=src;play.disabled=false;status.textContent='Lista para escuchar.';}
+    else {audio.removeAttribute('src');audio.load();play.disabled=true;status.textContent='Audio pendiente de conexión.';}
+    const artwork=document.getElementById('radioV21Artwork');
+    if(artwork)artwork.style.backgroundImage='linear-gradient(180deg,rgba(4,7,6,.04),rgba(4,7,6,.50)),url("'+coverFor(t)+'")';
     syncList();
     mediaSession(t);
-    if(autoplay) audio.play().catch(()=>{status.textContent='Toca Reproducir para iniciar el audio.';});
+    if(autoplay&&src)audio.play().catch(()=>{status.textContent='Toca Reproducir para iniciar el audio.';});
+  }
+  function selectCollection(id,restore=false){
+    const album=collections.find(c=>c.id===id)||collections[0];
+    if(!album)return;
+    const selected=allTracks.filter(t=>t.collection_id===album.id);
+    if(!selected.length)return;
+    audio.pause();
+    collectionId=album.id;
+    tracks=selected;
+    try{localStorage.setItem('derej-v21-radio-collection',collectionId);}catch{}
+    index=0;
+    if(restore){
+      let saved=null;
+      try{
+        saved=localStorage.getItem('derej-v21-radio-index:'+collectionId);
+        if(saved===null&&collectionId==='meditacion-i')saved=localStorage.getItem('derej-v21-radio-index');
+      }catch{}
+      const value=Number(saved??0);
+      if(Number.isInteger(value)&&value>=0&&value<tracks.length)index=value;
+    }
+    const tabs=document.getElementById('radioV21Collections');
+    tabs.replaceChildren();
+    collections.forEach(c=>{
+      const button=document.createElement('button');
+      button.type='button';
+      button.className='radioCollection'+(c.id===collectionId?' on':'');
+      button.dataset.radioCollection=c.id;
+      button.setAttribute('aria-pressed',String(c.id===collectionId));
+      button.textContent=c.title;
+      tabs.append(button);
+    });
+    document.getElementById('radioV21AlbumTitle').textContent=album.title;
+    document.getElementById('radioV21AlbumDescription').textContent=album.description||'Música para acompañar el Camino.';
+    document.getElementById('radioV21AlbumMeta').textContent='RADIO DÉREJ · '+album.title.toUpperCase();
+    load(index,false);
   }
   async function ensure(){
-    if(ready) return;
-    if(loading) return loading;
+    if(ready)return;
+    if(loading)return loading;
     loading=(async()=>{
       try{
         const res=await fetch('radio.json',{cache:'no-store'});
-        if(!res.ok) throw new Error(`Catálogo ${res.status}`);
+        if(!res.ok)throw new Error(`Catálogo ${res.status}`);
         const data=await res.json();
-        tracks=Array.isArray(data.tracks)?data.tracks:[];
-        if(!tracks.length) throw new Error('Catálogo vacío');
-        const saved=Number(localStorage.getItem('derej-v21-radio-index'));
-        index=Number.isInteger(saved)&&saved>=0&&saved<tracks.length?saved:0;
+        allTracks=Array.isArray(data.tracks)?data.tracks:[];
+        collections=Array.isArray(data.collections)?data.collections:[];
+        if(!allTracks.length||!collections.length)throw new Error('Catálogo vacío');
+        let saved=null;
+        try{saved=localStorage.getItem('derej-v21-radio-collection');}catch{}
+        selectCollection(saved||collections[0].id,true);
         ready=true;
-        load(index,false);
       }catch{
         status.textContent='El catálogo musical no pudo cargarse. El resto de Dérej continúa disponible.';
         title.textContent='Radio Dérej';
-        meta.textContent='Meditación temporalmente no disponible';
+        meta.textContent='Colecciones temporalmente no disponibles';
         play.disabled=true;
+        loading=null;
       }
     })();
     return loading;
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   play.addEventListener('click',async()=>{
     await ensure();
@@ -15672,7 +15608,9 @@ loadRamak();
     await ensure();
     load(Number(b.dataset.radioTrack),true);
   });
-  screen.addEventListener('click',e=>{
+  screen.addEventListener('click',async e=>{
+    const collectionButton=e.target.closest('[data-radio-collection]');
+    if(collectionButton){await ensure();selectCollection(collectionButton.dataset.radioCollection);return;}
     const scroll=e.target.closest('[data-radio-scroll]');
     if(scroll){
       document.getElementById(scroll.dataset.radioScroll)?.scrollIntoView({behavior:'smooth',block:'start'});
