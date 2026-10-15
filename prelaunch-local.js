@@ -13643,7 +13643,7 @@ loadRamak();
 
 
 
-/* RADIO DÉREJ v2.1 · Meditación RC2 · 13 pistas */
+/* RADIO DÉREJ v2.5.2 · Tres colecciones musicales sobre el reproductor moderno */
 (()=>{
   const screen=document.querySelector('[data-screen="radio"]');
   if(!screen) return;
@@ -13777,6 +13777,9 @@ loadRamak();
 
   const AUDIO_BASE='https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej';
   let tracks=[];
+  let allTracks=[];
+  let collections=[];
+  let collectionId='meditacion-i';
   let index=0;
   let ready=false;
   let loading=null;
@@ -13918,7 +13921,7 @@ loadRamak();
         <span class="radioEyebrow">RADIO DÉREJ · רדיו</span>
         <h1 id="radioV21Title">Escuchar<br>también es<br>caminar.</h1>
         <p>Música contemplativa para acompañar silencio, reflexión y camino interior.</p>
-        <button class="radioEnter" type="button" data-radio-scroll="radioPlayer">Entrar a Meditación <span>↓</span></button>
+        <button class="radioEnter" type="button" data-radio-scroll="radioPlayer">Explorar colecciones <span>↓</span></button>
       </div>
     </section>
 
@@ -14183,11 +14186,15 @@ loadRamak();
 
 
     <section class="radioPlayerShell" id="radioPlayer">
-      <div class="radioCollectionTabs" aria-label="Colecciones de Radio Dérej">
-        <button class="radioCollection on" type="button">Meditación</button>
-        <button class="radioCollection future" type="button" disabled>Parashá <small>Próximamente</small></button>
-        <button class="radioCollection future" type="button" disabled>Hitbodedut <small>Próximamente</small></button>
-      </div>
+      <div class="radioCollectionTabs" id="radioV21Collections" role="group" aria-label="Colecciones de Radio Dérej"></div>
+      <section class="radioAlbumIdentity" aria-label="Álbum seleccionado">
+        <img id="radioV21AlbumCover" class="radioAlbumCover" alt="Carátula del álbum" decoding="async">
+        <div class="radioAlbumIdentityCopy">
+          <span>ÁLBUM · RADIO DÉREJ</span>
+          <h3 id="radioV21AlbumIdentityTitle">Meditación I</h3>
+          <p id="radioV21AlbumIdentityCount">13 canciones</p>
+        </div>
+      </section>
 
 
 
@@ -14317,9 +14324,11 @@ loadRamak();
 
 
       <article class="radioNow">
-        <div class="radioNowArtwork" aria-hidden="true"></div>
+        <figure class="radioNowArtwork" id="radioV21Artwork">
+          <img id="radioV21TrackArtwork" class="radioTrackArtwork" alt="Carátula de la canción actual" decoding="async">
+        </figure>
         <div class="radioNowBody">
-          <div class="radioNowMeta">RADIO DÉREJ · MEDITACIÓN</div>
+          <div class="radioNowMeta" id="radioV21AlbumMeta">RADIO DÉREJ · MEDITACIÓN</div>
           <h2 id="radioV21TrackTitle">Preparando la escucha…</h2>
           <p id="radioV21TrackMeta">13 piezas contemplativas</p>
 
@@ -14584,9 +14593,9 @@ loadRamak();
 
 
           <div class="radioControls">
-            <button type="button" id="radioV21Prev" aria-label="Pista anterior">←</button>
-            <button type="button" id="radioV21Play" class="radioMainControl" aria-label="Reproducir">▶</button>
-            <button type="button" id="radioV21Next" aria-label="Pista siguiente">→</button>
+            <button type="button" id="radioV21Prev" aria-label="Canción anterior" title="Canción anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 20 9 12l10-8v16Z"/><path d="M5 4v16"/></svg></button>
+            <button type="button" id="radioV21Play" class="radioMainControl" aria-label="Reproducir"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true"><path d="M8 4.75a1 1 0 0 1 1.53-.848L20 11.15a1 1 0 0 1 0 1.7L9.53 20.1A1 1 0 0 1 8 19.25V4.75Z"/></svg></button>
+            <button type="button" id="radioV21Next" aria-label="Canción siguiente" title="Canción siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 4 10 8-10 8V4Z"/><path d="M19 4v16"/></svg></button>
           </div>
           <p class="radioStatus" id="radioV21Status" role="status">Cargando catálogo…</p>
           <audio id="radioV21Audio" preload="metadata"></audio>
@@ -14855,8 +14864,8 @@ loadRamak();
       <section class="radioTracksSection">
         <header>
           <span>COLECCIÓN ACTUAL</span>
-          <h3>Meditación</h3>
-          <p>13 piezas para acompañar pausa, estudio y presencia.</p>
+          <h3 id="radioV21AlbumTitle">Meditación I</h3>
+          <p id="radioV21AlbumDescription">13 piezas para acompañar pausa, estudio y presencia.</p>
         </header>
         <div class="radioTrackList" id="radioV21TrackList"></div>
       </section>
@@ -15013,6 +15022,10 @@ loadRamak();
       .radioCollection.on{background:#efe2ca;color:#332d25;border-color:#efe2ca}
       .radioCollection small{display:block;margin-top:2px;font-size:.45rem;letter-spacing:.05em;font-weight:700;opacity:.68}
       .radioCollection.future{opacity:.65}
+      .radioCollection{cursor:pointer;line-height:1.3}
+      .radioCollection:focus-visible{outline:3px solid #d9bb75;outline-offset:2px}
+      .radioCollection:not(.on):hover{border-color:#d9bb75}
+      @media(max-width:390px){.radioCollection{font-size:.6rem}}
       .radioNow{overflow:hidden;border:1px solid rgba(218,191,132,.32);border-radius:28px;background:#151c18;box-shadow:0 18px 42px rgba(0,0,0,.28)}
       .radioNowArtwork{height:210px;background-image:linear-gradient(180deg,rgba(4,7,6,.04),rgba(4,7,6,.68)),url('assets/radio-night-v21.webp');background-size:cover;background-position:48% 68%}
       .radioNowBody{padding:18px}
@@ -15059,6 +15072,31 @@ loadRamak();
         .radioNowBody{padding:16px}
         .radioTracksSection{padding:14px}
       }
+
+      /* Radio DÉREJ · álbum separado + carátulas íntegras */
+      .radioAlbumIdentity{display:flex;align-items:center;gap:14px;padding:12px;margin:0 0 14px;border:1px solid rgba(218,191,132,.24);border-radius:19px;background:rgba(242,221,173,.09)}
+      .radioAlbumCover{display:block;width:88px;height:88px;aspect-ratio:1/1;flex:none;object-fit:contain;border-radius:12px;background:#0e1712;border:1px solid rgba(255,237,208,.2);box-shadow:0 6px 20px rgba(0,0,0,.22)}
+      .radioAlbumIdentityCopy{min-width:0}
+      .radioAlbumIdentityCopy>span{font:.55rem/1.2 system-ui,sans-serif;letter-spacing:.16em;color:#d9bb75;font-weight:850}
+      .radioAlbumIdentityCopy h3{font:1.25rem/1.15 Georgia,serif;margin:5px 0 4px;color:#fff1d4;overflow-wrap:anywhere}
+      .radioAlbumIdentityCopy p{font:.75rem system-ui,sans-serif;color:#cdbf9f;margin:0}
+      .radioNowArtwork{height:auto;min-height:0;aspect-ratio:1/1;width:100%;margin:0;padding:16px;display:grid;place-items:center;background:radial-gradient(circle at 50% 50%,#364136,#0c130f 75%);overflow:hidden}
+      .radioTrackArtwork{display:block;width:100%;height:100%;max-height:440px;aspect-ratio:1/1;object-fit:contain;border-radius:14px;background:#111b15;box-shadow:0 16px 32px rgba(0,0,0,.3)}
+      .radioControls{display:flex;align-items:center;justify-content:center;gap:clamp(16px,5vw,27px);margin-top:5px}
+      .radioControls button{width:58px;height:58px;min-width:48px;border-radius:50%;display:grid;place-items:center;padding:0;flex:none;font:1.4rem/1 system-ui,sans-serif;touch-action:manipulation;transition:transform .15s ease,background .15s ease,border-color .15s ease}
+      .radioControls button svg{display:block;width:28px;height:28px}
+      .radioControls .radioMainControl svg{width:32px;height:32px}
+      .radioControls button:active{transform:scale(.94)}
+      .radioControls button:focus-visible{outline:3px solid #d9bb75;outline-offset:3px}
+      .radioControls button:hover:not(:disabled){background:#354b39;border-color:#d9bb75}
+      .radioControls .radioMainControl{width:80px;height:80px;border-radius:50%;font-size:1.75rem;background:#efe2ca;color:#30291f;border:2px solid #d9bb75;box-shadow:0 0 0 6px rgba(217,184,111,.10)}
+      .radioControls .radioMainControl:hover:not(:disabled){background:#fff4dc}
+      .radioControls button:disabled{opacity:.45;cursor:not-allowed}
+      .radioProgressRow input{cursor:pointer;min-height:28px;touch-action:pan-y}
+      .radioTrackV21{grid-template-columns:40px 50px minmax(0,1fr) auto;gap:9px;min-height:67px}
+      .radioTrackThumb{width:50px;height:50px;object-fit:contain;border-radius:8px;background:#17231a;border:1px solid rgba(84,74,55,.2)}
+      @media(min-width:700px){.radioNowArtwork{height:auto;min-height:0;padding:24px}.radioTrackArtwork{max-height:420px}.radioAlbumCover{width:100px;height:100px}}
+      @media(max-width:390px){.radioNowArtwork{height:auto;min-height:0;padding:12px}.radioControls .radioMainControl{width:72px;height:72px}.radioControls button{width:52px;height:52px}.radioTrackV21{grid-template-columns:34px 42px minmax(0,1fr) auto;gap:6px}.radioTrackThumb{width:42px;height:42px}.radioAlbumCover{width:72px;height:72px}}
     `;
     document.head.appendChild(style);
   }
@@ -15327,200 +15365,239 @@ loadRamak();
 
 
 
+
+  // Album art included in an MP3's ID3v2 tag. Only read the beginning of
+  // each file; the playback stream itself is never decoded or interrupted.
+  const trackCoverCache=new Map();
+  let thumbnailObserver=null;
+  function id3Synchsafe(a,o){return ((a[o]&127)<<21)|((a[o+1]&127)<<14)|((a[o+2]&127)<<7)|(a[o+3]&127);}
+  function id3TagLength(bytes){
+    if(bytes.length<10||bytes[0]!==73||bytes[1]!==68||bytes[2]!==51)return 0;
+    return id3Synchsafe(bytes,6)+10;
+  }
+  function extractId3Cover(buffer){
+    const b=new Uint8Array(buffer);
+    if(b.length<10||b[0]!==73||b[1]!==68||b[2]!==51)return null;
+    const major=b[3],limit=Math.min(b.length,id3TagLength(b));
+    if(major!==3&&major!==4)return null;
+    let pos=10;
+    if(b[5]&64){
+      if(pos+4>limit)return null;
+      const extended=major===4?id3Synchsafe(b,pos):((b[pos]*16777216)+(b[pos+1]<<16)+(b[pos+2]<<8)+b[pos+3]);
+      pos+=major===4?extended:extended+4;
+    }
+    while(pos+10<=limit){
+      const name=String.fromCharCode(b[pos],b[pos+1],b[pos+2],b[pos+3]);
+      if(!/^[A-Z0-9]{4}$/.test(name))break;
+      const size=major===4?id3Synchsafe(b,pos+4):((b[pos+4]*16777216)+(b[pos+5]<<16)+(b[pos+6]<<8)+b[pos+7]);
+      const flags=b[pos+9];
+      const start=pos+10,end=start+size;
+      if(!size||end>limit)break;
+      if(name==='APIC'&&!(flags&0x08)){
+        let q=start+1;
+        while(q<end&&b[q]!==0)q++;
+        const mime=new TextDecoder('latin1').decode(b.slice(start+1,q));
+        q+=2; // MIME NUL + picture type
+        const enc=b[start];
+        if(enc===1||enc===2){while(q+1<end&&(b[q]!==0||b[q+1]!==0))q+=2;q+=2;}
+        else {while(q<end&&b[q]!==0)q++;q++;}
+        if(q<end){
+          let type=/image\/(?:png|jpe?g|webp)/i.test(mime)?mime.toLowerCase():'';
+          if(!type&&b[q]===0xff&&b[q+1]===0xd8)type='image/jpeg';
+          if(!type&&b[q]===0x89&&b[q+1]===0x50)type='image/png';
+          if(type)return URL.createObjectURL(new Blob([b.slice(q,end)],{type}));
+        }
+      }
+      pos=end;
+    }
+    return null;
+  }
+  async function embeddedCover(track){
+    if(!track?.path)return null;
+    if(trackCoverCache.has(track.id))return trackCoverCache.get(track.id);
+    const promise=(async()=>{
+      const src=urlFor(track);
+      const headers={Range:'bytes=0-262143'};
+      const response=await fetch(src,{headers,mode:'cors'});
+      if(!response.ok)return null;
+      let bytes=await response.arrayBuffer();
+      let tag=id3TagLength(new Uint8Array(bytes));
+      if(!tag||tag>5*1024*1024)return null;
+      if(bytes.byteLength<tag){
+        const more=await fetch(src,{headers:{Range:'bytes=0-'+(tag-1)},mode:'cors'});
+        if(!more.ok)return null;
+        bytes=await more.arrayBuffer();
+      }
+      return extractId3Cover(bytes);
+    })().catch(()=>null);
+    trackCoverCache.set(track.id,promise);
+    return promise;
+  }
+  async function showTrackCover(img,track){
+    if(!img||!track)return;
+    img.dataset.coverTrack=track.id;
+    img.src=coverFor(track); // fallback to album art if the MP3 has no APIC frame
+    const url=await embeddedCover(track);
+    if(url&&img.dataset.coverTrack===track.id)img.src=url;
+  }
+  function thumbObserver(){
+    if(thumbnailObserver)return thumbnailObserver;
+    if(!('IntersectionObserver' in window))return null;
+    thumbnailObserver=new IntersectionObserver(entries=>{
+      entries.forEach(entry=>{
+        if(!entry.isIntersecting)return;
+        const img=entry.target;
+        thumbnailObserver.unobserve(img);
+        const track=allTracks.find(t=>t.id===img.dataset.coverTrack);
+        if(track)showTrackCover(img,track);
+      });
+    },{rootMargin:'120px 0px'});
+    return thumbnailObserver;
+  }
   function fmt(sec){
-    if(!Number.isFinite(sec)) return '0:00';
+    if(!Number.isFinite(sec))return '0:00';
     sec=Math.max(0,Math.round(sec));
     return Math.floor(sec/60)+':'+String(sec%60).padStart(2,'0');
   }
-  function urlFor(t){return `${AUDIO_BASE}/${String(t.path||'').replace(/^\//,'')}`;}
+  function assetUrl(path){
+    if(!path)return '';
+    if(/^https?:\/\//i.test(path))return path;
+    const encoded=String(path).replace(/^\/+/,'').split('/').map(encodeURIComponent).join('/');
+    return AUDIO_BASE+'/'+encoded;
+  }
+  function urlFor(t){return t?.url||assetUrl(t?.path);}
+  function coverFor(t){
+    const album=collections.find(c=>c.id===collectionId);
+    return assetUrl(album?.artwork||t?.artwork)||'assets/radio-night-v21.webp';
+  }
   function syncList(){
-    list.innerHTML=tracks.map((t,i)=>`
-      <button type="button" class="radioTrackV21${i===index?' on':''}" data-radio-track="${i}">
-        <span class="num">${String(i+1).padStart(2,'0')}</span>
-        <span class="copy"><b>${t.title}</b><small>${t.artist||'Danygrafiko'}</small></span>
-        <span class="dur">${t.duration||''}</span>
-      </button>
-    `).join('');
+    if(thumbnailObserver)thumbnailObserver.disconnect();
+    list.replaceChildren();
+    tracks.forEach((t,i)=>{
+      const button=document.createElement('button');
+      button.type='button';
+      button.className='radioTrackV21'+(i===index?' on':'');
+      button.dataset.radioTrack=String(i);
+      const num=document.createElement('span');
+      num.className='num';num.textContent=String(i+1).padStart(2,'0');
+      const thumb=document.createElement('img');
+      thumb.className='radioTrackThumb';
+      thumb.alt='Carátula de '+t.title;
+      thumb.loading='lazy';
+      thumb.decoding='async';
+      thumb.dataset.coverTrack=t.id;
+      thumb.src=coverFor(t);
+      const copy=document.createElement('span');copy.className='copy';
+      const titleNode=document.createElement('b');titleNode.textContent=t.title;
+      const artistNode=document.createElement('small');artistNode.textContent=t.artist||'Danygrafiko';
+      copy.append(titleNode,artistNode);
+      const dur=document.createElement('span');dur.className='dur';dur.textContent=t.duration||'';
+      button.append(num,thumb,copy,dur);
+      list.append(button);
+      const observer=thumbObserver();
+      if(observer)observer.observe(thumb);
+      else if(i===index)showTrackCover(thumb,t);
+    });
   }
   function mediaSession(t){
-    if(!('mediaSession' in navigator)||!t) return;
+    if(!('mediaSession' in navigator)||!t)return;
     try{
       navigator.mediaSession.metadata=new MediaMetadata({
         title:t.title,
         artist:t.artist||'Danygrafiko',
-        album:t.collection||'Radio Dérej · Meditación',
-        artwork:[{src:'assets/radio-night-v21.webp',sizes:'800x1200',type:'image/webp'}]
+        album:t.collection||'Radio Dérej',
+        artwork:[{src:coverFor(t),sizes:'any',type:'image/png'}]
       });
     }catch{}
   }
   function load(i,autoplay=false){
-    if(!tracks.length) return;
+    if(!tracks.length)return;
     index=(i+tracks.length)%tracks.length;
-    try{localStorage.setItem('derej-v21-radio-index',String(index));}catch{}
+    try{localStorage.setItem('derej-v21-radio-index:'+collectionId,String(index));}catch{}
     const t=tracks[index];
+    audio.pause();
     title.textContent=t.title;
-    meta.textContent=`${t.artist||'Danygrafiko'} · ${t.collection||'Radio Dérej · Meditación'}`;
+    meta.textContent=`${t.artist||'Danygrafiko'} · ${t.collection||'Radio Dérej'}`;
     duration.textContent=t.duration||'0:00';
     current.textContent='0:00';
     seek.value='0';
-    audio.src=urlFor(t);
-    status.textContent='Lista para escuchar.';
+    const src=urlFor(t);
+    if(src){audio.src=src;play.disabled=false;status.textContent='Lista para escuchar.';}
+    else {audio.removeAttribute('src');audio.load();play.disabled=true;status.textContent='Audio pendiente de conexión.';}
+    showTrackCover(document.getElementById('radioV21TrackArtwork'),t);
     syncList();
     mediaSession(t);
-    if(autoplay) audio.play().catch(()=>{status.textContent='Toca Reproducir para iniciar el audio.';});
+    if(autoplay&&src)audio.play().catch(()=>{status.textContent='Toca Reproducir para iniciar el audio.';});
+  }
+  function selectCollection(id,restore=false){
+    const album=collections.find(c=>c.id===id)||collections[0];
+    if(!album)return;
+    const selected=allTracks.filter(t=>t.collection_id===album.id);
+    if(!selected.length)return;
+    audio.pause();
+    collectionId=album.id;
+    tracks=selected;
+    try{localStorage.setItem('derej-v21-radio-collection',collectionId);}catch{}
+    index=0;
+    if(restore){
+      let saved=null;
+      try{
+        saved=localStorage.getItem('derej-v21-radio-index:'+collectionId);
+        if(saved===null&&collectionId==='meditacion-i')saved=localStorage.getItem('derej-v21-radio-index');
+      }catch{}
+      const value=Number(saved??0);
+      if(Number.isInteger(value)&&value>=0&&value<tracks.length)index=value;
+    }
+    const tabs=document.getElementById('radioV21Collections');
+    tabs.replaceChildren();
+    collections.forEach(c=>{
+      const button=document.createElement('button');
+      button.type='button';
+      button.className='radioCollection'+(c.id===collectionId?' on':'');
+      button.dataset.radioCollection=c.id;
+      button.setAttribute('aria-pressed',String(c.id===collectionId));
+      button.textContent=c.title;
+      tabs.append(button);
+    });
+    const albumCover=document.getElementById('radioV21AlbumCover');
+    albumCover.src=assetUrl(album.artwork);
+    albumCover.alt='Carátula del álbum '+album.title;
+    document.getElementById('radioV21AlbumIdentityTitle').textContent=album.title;
+    document.getElementById('radioV21AlbumIdentityCount').textContent=selected.length+' canciones';
+    document.getElementById('radioV21AlbumTitle').textContent=album.title;
+    document.getElementById('radioV21AlbumDescription').textContent=album.description||'Música para acompañar el Camino.';
+    document.getElementById('radioV21AlbumMeta').textContent='RADIO DÉREJ · '+album.title.toUpperCase();
+    load(index,false);
   }
   async function ensure(){
-    if(ready) return;
-    if(loading) return loading;
+    if(ready)return;
+    if(loading)return loading;
     loading=(async()=>{
       try{
         const res=await fetch('radio.json',{cache:'no-store'});
-        if(!res.ok) throw new Error(`Catálogo ${res.status}`);
+        if(!res.ok)throw new Error(`Catálogo ${res.status}`);
         const data=await res.json();
-        tracks=Array.isArray(data.tracks)?data.tracks:[];
-        if(!tracks.length) throw new Error('Catálogo vacío');
-        const saved=Number(localStorage.getItem('derej-v21-radio-index'));
-        index=Number.isInteger(saved)&&saved>=0&&saved<tracks.length?saved:0;
+        allTracks=Array.isArray(data.tracks)?data.tracks:[];
+        collections=Array.isArray(data.collections)?data.collections:[];
+        if(!allTracks.length||!collections.length)throw new Error('Catálogo vacío');
+        let saved=null;
+        try{saved=localStorage.getItem('derej-v21-radio-collection');}catch{}
+        selectCollection(saved||collections[0].id,true);
         ready=true;
-        load(index,false);
       }catch{
         status.textContent='El catálogo musical no pudo cargarse. El resto de Dérej continúa disponible.';
         title.textContent='Radio Dérej';
-        meta.textContent='Meditación temporalmente no disponible';
+        meta.textContent='Colecciones temporalmente no disponibles';
         play.disabled=true;
+        loading=null;
       }
     })();
     return loading;
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  play.addEventListener('click',async()=>{
+  const radioPlayIcon="<svg viewBox=\"0 0 24 24\" fill=\"currentColor\" stroke=\"none\" aria-hidden=\"true\"><path d=\"M8 4.75a1 1 0 0 1 1.53-.848L20 11.15a1 1 0 0 1 0 1.7L9.53 20.1A1 1 0 0 1 8 19.25V4.75Z\"/></svg>";
+  const radioPauseIcon="<svg viewBox=\"0 0 24 24\" fill=\"currentColor\" stroke=\"none\" aria-hidden=\"true\"><rect x=\"5.8\" y=\"4\" width=\"4.6\" height=\"16\" rx=\"1.4\"/><rect x=\"13.6\" y=\"4\" width=\"4.6\" height=\"16\" rx=\"1.4\"/></svg>";
+    play.addEventListener('click',async()=>{
     await ensure();
     if(!audio.src) return;
     if(audio.paused) audio.play().catch(()=>{status.textContent='Toca nuevamente Reproducir para iniciar.';});
@@ -15529,8 +15606,8 @@ loadRamak();
   document.getElementById('radioV21Prev').addEventListener('click',async()=>{await ensure();load(index-1,true);});
   document.getElementById('radioV21Next').addEventListener('click',async()=>{await ensure();load(index+1,true);});
   seek.addEventListener('input',()=>{if(Number.isFinite(audio.duration)&&audio.duration>0)audio.currentTime=(Number(seek.value)/1000)*audio.duration;});
-  audio.addEventListener('play',()=>{play.textContent='⏸';play.setAttribute('aria-label','Pausar');status.textContent='Reproduciendo dentro de Dérej.';});
-  audio.addEventListener('pause',()=>{play.textContent='▶';play.setAttribute('aria-label','Reproducir');if(audio.currentTime>0)status.textContent='En pausa.';});
+  audio.addEventListener('play',()=>{play.innerHTML=radioPauseIcon;play.setAttribute('aria-label','Pausar');status.textContent='Reproduciendo dentro de Dérej.';});
+  audio.addEventListener('pause',()=>{play.innerHTML=radioPlayIcon;play.setAttribute('aria-label','Reproducir');if(audio.currentTime>0)status.textContent='En pausa.';});
   audio.addEventListener('loadedmetadata',()=>{duration.textContent=fmt(audio.duration);});
   audio.addEventListener('timeupdate',()=>{
     current.textContent=fmt(audio.currentTime);
@@ -15672,7 +15749,9 @@ loadRamak();
     await ensure();
     load(Number(b.dataset.radioTrack),true);
   });
-  screen.addEventListener('click',e=>{
+  screen.addEventListener('click',async e=>{
+    const collectionButton=e.target.closest('[data-radio-collection]');
+    if(collectionButton){await ensure();selectCollection(collectionButton.dataset.radioCollection);return;}
     const scroll=e.target.closest('[data-radio-scroll]');
     if(scroll){
       document.getElementById(scroll.dataset.radioScroll)?.scrollIntoView({behavior:'smooth',block:'start'});
