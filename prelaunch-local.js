@@ -13643,7 +13643,7 @@ loadRamak();
 
 
 
-/* RADIO DÉREJ v2.5.2 · Tres colecciones musicales sobre el reproductor moderno */
+/* RADIO DÉREJ v2.5.3 · Biblioteca semanal de playlists */
 (()=>{
   const screen=document.querySelector('[data-screen="radio"]');
   if(!screen) return;
@@ -13783,6 +13783,9 @@ loadRamak();
   let index=0;
   let ready=false;
   let loading=null;
+  let weeklyReading=null;
+  let weeklyShabbat=null;
+  let weeklyCheck=null;
 
 
 
@@ -13921,7 +13924,7 @@ loadRamak();
         <span class="radioEyebrow">RADIO DÉREJ · רדיו</span>
         <h1 id="radioV21Title">Escuchar<br>también es<br>caminar.</h1>
         <p>Música contemplativa para acompañar silencio, reflexión y camino interior.</p>
-        <button class="radioEnter" type="button" data-radio-scroll="radioPlayer">Explorar colecciones <span>↓</span></button>
+        <button class="radioEnter" type="button" data-radio-scroll="radioLibrary">Explorar colecciones <span>↓</span></button>
       </div>
     </section>
 
@@ -14185,8 +14188,32 @@ loadRamak();
 
 
 
-    <section class="radioPlayerShell" id="radioPlayer">
-      <div class="radioCollectionTabs" id="radioV21Collections" role="group" aria-label="Colecciones de Radio Dérej"></div>
+    <section class="radioLibrary" id="radioLibrary" aria-labelledby="radioLibraryTitle">
+      <div class="radioLibraryIntro">
+        <span class="radioEyebrow">BIBLIOTECA SONORA</span>
+        <h2 id="radioLibraryTitle">Elige qué escuchar.</h2>
+        <p>Escoge un álbum para entrar en su propio espacio de escucha.</p>
+      </div>
+      <section class="radioWeeklyFeature" aria-labelledby="radioWeeklyTitle">
+        <header>
+          <span>✦ PARASHÁ DE LA SEMANA</span>
+          <h3 id="radioWeeklyTitle">Buscando la lectura semanal…</h3>
+          <p id="radioWeeklyMeta" aria-live="polite">Calendario de la diáspora.</p>
+        </header>
+        <div id="radioWeeklyAlbums" class="radioAlbumGrid"></div>
+      </section>
+      <section id="radioOtherParashot" class="radioOtherParashot" hidden aria-labelledby="radioOtherParashotTitle">
+        <header><span>OTRAS PARASHOT</span><h3 id="radioOtherParashotTitle">Biblioteca de parashot</h3><p>Para volver a escuchar cuando quieras.</p></header>
+        <div id="radioOtherParashotAlbums" class="radioAlbumGrid"></div>
+      </section>
+      <section id="radioTimeless" class="radioTimeless" aria-labelledby="radioTimelessTitle">
+        <header><span>PARA TODO TIEMPO</span><h3 id="radioTimelessTitle">Música para acompañarte</h3><p>Meditaciones y obras para cualquier día.</p></header>
+        <div id="radioTimelessAlbums" class="radioAlbumGrid"></div>
+      </section>
+    </section>
+    <section class="radioPlayerShell" id="radioPlayer" hidden>
+      <button type="button" class="radioLibraryBack" data-radio-library-back>← Volver a las playlists</button>
+      <div class="radioCollectionTabs" id="radioV21Collections" role="group" aria-label="Colecciones de Radio Dérej" hidden></div>
       <section class="radioAlbumIdentity" aria-label="Álbum seleccionado">
         <img id="radioV21AlbumCover" class="radioAlbumCover" alt="Carátula del álbum" decoding="async">
         <div class="radioAlbumIdentityCopy">
@@ -15097,6 +15124,37 @@ loadRamak();
       .radioTrackThumb{width:50px;height:50px;object-fit:contain;border-radius:8px;background:#17231a;border:1px solid rgba(84,74,55,.2)}
       @media(min-width:700px){.radioNowArtwork{height:auto;min-height:0;padding:24px}.radioTrackArtwork{max-height:420px}.radioAlbumCover{width:100px;height:100px}}
       @media(max-width:390px){.radioNowArtwork{height:auto;min-height:0;padding:12px}.radioControls .radioMainControl{width:72px;height:72px}.radioControls button{width:52px;height:52px}.radioTrackV21{grid-template-columns:34px 42px minmax(0,1fr) auto;gap:6px}.radioTrackThumb{width:42px;height:42px}.radioAlbumCover{width:72px;height:72px}}
+
+      /* Biblioteca semanal y navegación de Radio DÉREJ */
+      .radioCollectionTabs[hidden],.radioLibrary[hidden],.radioPlayerShell[hidden],.radioOtherParashot[hidden],.radioTimeless[hidden]{display:none!important}
+      .radioLibrary{background:#0d1611;padding:23px 13px 48px;scroll-margin-top:70px}
+      .radioLibraryIntro{padding:5px 8px 24px}
+      .radioLibraryIntro h2{font:clamp(2.1rem,8vw,3.2rem)/1.08 Georgia,serif;letter-spacing:-.03em;color:#f6e7c8;margin:10px 0}
+      .radioLibraryIntro p{font:.9rem/1.5 Georgia,serif;color:#c2b6a0;max-width:48ch;margin:0}
+      .radioWeeklyFeature{border-radius:25px;border:1px solid rgba(223,187,125,.44);padding:19px 13px;background:radial-gradient(ellipse at 90% 0,rgba(197,155,77,.17),transparent 60%),#19261e}
+      .radioWeeklyFeature header{padding:0 3px 17px}
+      .radioWeeklyFeature header>span,.radioOtherParashot header>span,.radioTimeless header>span{font:.59rem system-ui,sans-serif;letter-spacing:.18em;font-weight:900;color:#ddbd7a}
+      .radioWeeklyFeature h3{font:clamp(1.95rem,8vw,2.8rem)/1.1 Georgia,serif;color:#fff0d4;margin:8px 0}
+      .radioWeeklyFeature header p,.radioOtherParashot header p,.radioTimeless header p{font:.78rem/1.45 system-ui,sans-serif;color:#c2b6a5;margin:3px 0}
+      .radioAlbumGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+      .radioAlbumCard{width:100%;display:flex;flex-direction:column;gap:4px;align-items:stretch;min-width:0;padding:10px;border-radius:18px;border:1px solid rgba(238,210,165,.3);background:#25332a;color:#f5e4c4;text-align:left;cursor:pointer}
+      .radioAlbumCard img{width:100%;aspect-ratio:1/1;object-fit:contain;border-radius:12px;background:#0e1912;margin-bottom:7px}
+      .radioAlbumCard small{font:.56rem/1.3 system-ui,sans-serif;color:#e8cb97;letter-spacing:.075em}
+      .radioAlbumCard b{font:1.09rem/1.2 Georgia,serif;overflow-wrap:anywhere}
+      .radioAlbumCard span{font:.72rem/1.45 system-ui,sans-serif;color:#c6baa5}
+      .radioAlbumCard em{font:.75rem/1.25 system-ui,sans-serif;color:#f1d29a;font-style:normal;font-weight:850;margin-top:auto;padding-top:9px}
+      .radioAlbumCard:hover{border-color:#e1bd73;background:#304237}
+      .radioAlbumCard:focus-visible,.radioLibraryBack:focus-visible{outline:3px solid #e2c282;outline-offset:2px}
+      .radioOtherParashot,.radioTimeless{padding:26px 3px 0}
+      .radioOtherParashot header,.radioTimeless header{padding:0 8px 15px}
+      .radioOtherParashot h3,.radioTimeless h3{font:1.85rem/1.18 Georgia,serif;color:#f3e0bb;margin:7px 0}
+      .radioEmptyWeek{padding:18px;border:1px dashed rgba(231,198,144,.5);border-radius:15px;background:rgba(0,0,0,.16)}
+      .radioEmptyWeek b{display:block;font:1.06rem/1.3 Georgia,serif}
+      .radioEmptyWeek p{font:.76rem/1.45 system-ui,sans-serif;color:#c3b8a8;margin:7px 0 0}
+      .radioLibraryBack{border:1px solid rgba(231,201,145,.54);color:#f3e0b8;background:#27372b;border-radius:999px;padding:12px 16px;font-weight:850;margin:0 0 15px;cursor:pointer}
+      .radioScreen.radioAlbumOpen .radioHero,.radioScreen.radioAlbumOpen .radioIntro,.radioScreen.radioAlbumOpen .radioLibrary{display:none!important}
+      @media(min-width:700px){.radioLibrary{padding:30px 25px 60px}.radioWeeklyFeature{padding:26px}.radioAlbumGrid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+      @media(max-width:390px){.radioLibrary{padding:16px 8px 35px}.radioWeeklyFeature{padding:15px 9px}.radioAlbumGrid{gap:8px}.radioAlbumCard{padding:8px}.radioAlbumCard b{font-size:.99rem}}
     `;
     document.head.appendChild(style);
   }
