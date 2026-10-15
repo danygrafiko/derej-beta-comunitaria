@@ -468,8 +468,11 @@ document.querySelectorAll('[data-route="frutos"]').forEach(b=>b.addEventListener
 $('submitFruit')?.addEventListener('click',fruitSubmit);
 $('rootShareFruit')?.addEventListener('click',fruitOpenFromCurrent);
 
-/* Radio Dérej · migrado desde RC2 */
+/* Radio Dérej · v2.1 · Colecciones */
 let RADIO_TRACKS=[];
+let RADIO_ALL_TRACKS=[];
+let RADIO_COLLECTIONS=[];
+let radioCollectionId='meditacion-i';
 let radioIndex=0;
 let radioInitialized=false;
 let radioInitPromise=null;
@@ -480,11 +483,30 @@ function radioFmt(sec){
   sec=Math.max(0,Math.round(sec));
   return Math.floor(sec/60)+':'+String(sec%60).padStart(2,'0');
 }
-function radioResolveUrl(t){
-  if(t?.url) return t.url;
-  const cfg=window.DEREJ_CONFIG||{};
-  const base=(cfg.audioBase||'').replace(/\/$/,'');
-  return base&&t?.path?`${base}/${String(t.path).replace(/^\//,'')}`:'';
+function radioMediaUrl(path){
+  if(!path) return '';
+  if(/^https?:\/\//i.test(path)) return path;
+  const base=(window.DEREJ_CONFIG?.audioBase||'').replace(/\/$/,'');
+  return base?base+'/'+String(path).replace(/^\/+/,'').split('/').map(encodeURIComponent).join('/'):'';
+}
+function radioResolveUrl(track){
+  return track?.url||radioMediaUrl(track?.path);
+}
+function radioArtwork(track){
+  const collection=RADIO_COLLECTIONS.find(c=>c.id===radioCollectionId);
+  const path=track?.artwork||collection?.artwork;
+  return radioMediaUrl(path)||(window.DEREJ_CONFIG?.artworkUrl||'radio-meditacion.png');
+}
+function radioRenderCollections(){
+  const box=$('radioCollections');
+  box.replaceChildren();
+  RADIO_COLLECTIONS.forEach(c=>{
+    const button=el('button',c.id===radioCollectionId?'on':'',c.title);
+    button.type='button';
+    button.setAttribute('aria-pressed',String(c.id===radioCollectionId));
+    button.addEventListener('click',()=>radioSelectCollection(c.id));
+    box.appendChild(button);
+  });
 }
 function radioRenderList(){
   const box=$('radioTrackList');
@@ -496,16 +518,12 @@ function radioRenderList(){
     const num=el('span','radioTrackNum',String(i+1));
     const copy=el('span','radioTrackCopy');
     addText(copy,'b','',t.title);
-    addText(copy,'span','small',t.collection||'Radio Dérej · Meditación');
+    addText(copy,'span','small',t.collection||'Radio Dérej');
     const dur=el('span','radioTrackDur',t.duration||'');
     b.append(num,copy,dur);
     b.addEventListener('click',()=>radioLoad(i,true));
     box.appendChild(b);
   });
-}
-function radioArtwork(track){
-  const cfg=window.DEREJ_CONFIG||{};
-  return cfg.artworkUrl||track?.artwork||'radio-meditacion.png';
 }
 function radioSyncMediaSession(track){
   if(!('mediaSession' in navigator)||!track) return;
@@ -513,64 +531,91 @@ function radioSyncMediaSession(track){
     navigator.mediaSession.metadata=new MediaMetadata({
       title:track.title,
       artist:track.artist||'Danygrafiko',
-      album:track.collection||'Radio Dérej · Meditación',
-      artwork:[{src:radioArtwork(track),sizes:'1254x1254',type:'image/png'}]
+      album:track.collection||'Radio Dérej',
+      artwork:[{src:radioArtwork(track),sizes:'any',type:'image/png'}]
     });
   }catch(e){}
 }
 function radioLoad(i,autoplay=false){
-  if(!RADIO_TRACKS.length) return;
+  if(!RADIO_TRACKS.length)return;
   radioIndex=(i+RADIO_TRACKS.length)%RADIO_TRACKS.length;
-  localStorage.setItem('derej:radio:index',String(radioIndex));
-  const t=RADIO_TRACKS[radioIndex];
-  const url=radioResolveUrl(t);
-  $('radioTitle').textContent=t.title;
+  localStorage.setItem('derej:radio:index:'+radioCollectionId,String(radioIndex));
+  const track=RADIO_TRACKS[radioIndex];
+  const url=radioResolveUrl(track);
+  radioAudio.pause();
+  $('radioTitle').textContent=track.title;
+  $('radioNativeCover').src=radioArtwork(track);
+  $('radioNativeCover').alt='Portada de '+(RADIO_COLLECTIONS.find(c=>c.id===radioCollectionId)?.title||'Radio Dérej');
   $('radioSeek').value=0;
   $('radioCurrent').textContent='0:00';
-  $('radioDuration').textContent=t.duration||'0:00';
+  $('radioDuration').textContent=track.duration||'0:00';
   document.querySelectorAll('.radioTrack').forEach((b,j)=>b.classList.toggle('on',j===radioIndex));
   if(!url){
     radioAudio.removeAttribute('src');
     radioAudio.load();
-    $('radioStatus').textContent='Audio pendiente de conexión al almacenamiento de producción.';
+    $('radioStatus').textContent='Audio pendiente de conexión.';
     $('radioPlay').disabled=true;
     return;
   }
   $('radioPlay').disabled=false;
   radioAudio.src=url;
   $('radioStatus').textContent='Lista para escuchar.';
-  radioSyncMediaSession(t);
-  if(autoplay) radioAudio.play().catch(()=>{$('radioStatus').textContent='Toca Reproducir para iniciar el audio.'});
+  $('radioPlay').textContent='▶ Reproducir';
+  radioSyncMediaSession(track);
+  if(autoplay)radioAudio.play().catch(()=>{$('radioStatus').textContent='Toca Reproducir para iniciar el audio.';});
+}
+function radioSelectCollection(id,restore=false){
+  const chosen=RADIO_COLLECTIONS.find(c=>c.id===id)||RADIO_COLLECTIONS[0];
+  if(!chosen)return;
+  const filtered=RADIO_ALL_TRACKS.filter(t=>t.collection_id===chosen.id);
+  if(!filtered.length)return;
+  radioAudio.pause();
+  radioCollectionId=chosen.id;
+  RADIO_TRACKS=filtered;
+  localStorage.setItem('derej:radio:collection',radioCollectionId);
+  radioIndex=0;
+  if(restore){
+    const key='derej:radio:index:'+radioCollectionId;
+    const legacy=radioCollectionId==='meditacion-i'?localStorage.getItem('derej:radio:index'):null;
+    const saved=Number(localStorage.getItem(key)??legacy??0);
+    if(Number.isInteger(saved)&&saved>=0&&saved<RADIO_TRACKS.length)radioIndex=saved;
+  }
+  $('radioCollectionHeading').textContent='♫ '+chosen.title;
+  $('radioCollectionDescription').textContent=chosen.description||'Música para acompañar el camino.';
+  $('radioCollectionMeta').textContent='Radio Dérej · '+chosen.title;
+  $('radioCollectionCount').textContent=RADIO_TRACKS.length+' canciones · Danygrafiko';
+  radioRenderCollections();
+  radioRenderList();
+  radioLoad(radioIndex,false);
 }
 function radioUpdateButton(){
   $('radioPlay').textContent=radioAudio.paused?'▶ Reproducir':'⏸ Pausar';
   $('radioStatus').textContent=radioAudio.paused?'En pausa.':'Reproduciendo dentro de Dérej.';
-  if('mediaSession' in navigator){try{navigator.mediaSession.playbackState=radioAudio.paused?'paused':'playing'}catch(e){}}
+  if('mediaSession' in navigator){try{navigator.mediaSession.playbackState=radioAudio.paused?'paused':'playing';}catch(e){}}
 }
 function radioSetPositionState(){
-  if(!('mediaSession' in navigator)||!Number.isFinite(radioAudio.duration)||radioAudio.duration<=0) return;
-  try{navigator.mediaSession.setPositionState({duration:radioAudio.duration,playbackRate:radioAudio.playbackRate||1,position:Math.min(radioAudio.currentTime,radioAudio.duration)})}catch(e){}
+  if(!('mediaSession' in navigator)||!Number.isFinite(radioAudio.duration)||radioAudio.duration<=0)return;
+  try{navigator.mediaSession.setPositionState({duration:radioAudio.duration,playbackRate:radioAudio.playbackRate||1,position:Math.min(radioAudio.currentTime,radioAudio.duration)});}catch(e){}
 }
 async function radioInit(){
-  if(radioInitialized) return;
-  if(radioInitPromise) return radioInitPromise;
+  if(radioInitialized)return;
+  if(radioInitPromise)return radioInitPromise;
   radioInitPromise=(async()=>{
     try{
       const cfg=window.DEREJ_CONFIG||{};
-      const catalogUrl=cfg.catalogUrl||'radio.json';
-      const res=await fetch(catalogUrl,{cache:'no-store'});
-      if(!res.ok) throw new Error(`Catálogo ${res.status}`);
+      const res=await fetch(cfg.catalogUrl||'radio.json',{cache:'no-store'});
+      if(!res.ok)throw new Error(`Catálogo ${res.status}`);
       const data=await res.json();
-      RADIO_TRACKS=Array.isArray(data.tracks)?data.tracks:[];const cover=$('radioNativeCover');if(cover){cover.src=radioArtwork(RADIO_TRACKS[0]);cover.onerror=()=>{cover.onerror=null;cover.src='icon-512.png'}};
-      if(!RADIO_TRACKS.length) throw new Error('Catálogo vacío');
-      const saved=Number(localStorage.getItem('derej:radio:index'));
-      radioIndex=Number.isInteger(saved)&&saved>=0&&saved<RADIO_TRACKS.length?saved:0;
-      radioRenderList();
-      radioLoad(radioIndex,false);
+      RADIO_ALL_TRACKS=Array.isArray(data.tracks)?data.tracks:[];
+      RADIO_COLLECTIONS=Array.isArray(data.collections)?data.collections:[];
+      if(!RADIO_ALL_TRACKS.length||!RADIO_COLLECTIONS.length)throw new Error('Catálogo vacío');
+      const cover=$('radioNativeCover');
+      if(cover)cover.onerror=()=>{cover.onerror=null;cover.src='icon-512.png';};
+      radioSelectCollection(localStorage.getItem('derej:radio:collection')||RADIO_COLLECTIONS[0].id,true);
       radioInitialized=true;
     }catch(e){
       $('radioTrackList').replaceChildren(el('div','memoryCard',''));
-      $('radioTrackList').firstChild.append(el('b','', 'Radio Dérej está en preparación.'),el('p','small','El catálogo musical no pudo cargarse. El resto de Dérej continúa disponible.'));
+      $('radioTrackList').firstChild.append(el('b','','Radio Dérej está en preparación.'),el('p','small','El catálogo musical no pudo cargarse. El resto de Dérej continúa disponible.'));
       $('radioStatus').textContent='Catálogo temporalmente no disponible.';
       $('radioPlay').disabled=true;
       radioInitPromise=null;
@@ -578,34 +623,36 @@ async function radioInit(){
   })();
   return radioInitPromise;
 }
-
 $('radioPlay').addEventListener('click',()=>{
-  if(!radioAudio.src) return;
-  if(radioAudio.paused) radioAudio.play().catch(()=>{$('radioStatus').textContent='Toca nuevamente Reproducir para iniciar el audio.'});
+  if(!radioAudio.src)return;
+  if(radioAudio.paused)radioAudio.play().catch(()=>{$('radioStatus').textContent='Toca nuevamente Reproducir para iniciar el audio.';});
   else radioAudio.pause();
 });
 $('radioPrev').addEventListener('click',()=>radioLoad(radioIndex-1,true));
 $('radioNext').addEventListener('click',()=>radioLoad(radioIndex+1,true));
 radioAudio.addEventListener('play',radioUpdateButton);
 radioAudio.addEventListener('pause',radioUpdateButton);
-radioAudio.addEventListener('loadedmetadata',()=>{$('radioDuration').textContent=radioFmt(radioAudio.duration);radioSetPositionState()});
+radioAudio.addEventListener('loadedmetadata',()=>{
+  $('radioDuration').textContent=radioFmt(radioAudio.duration);
+  radioSetPositionState();
+});
 radioAudio.addEventListener('timeupdate',()=>{
   $('radioCurrent').textContent=radioFmt(radioAudio.currentTime);
   if(Number.isFinite(radioAudio.duration)&&radioAudio.duration>0)$('radioSeek').value=String(Math.round((radioAudio.currentTime/radioAudio.duration)*1000));
-  if(Math.round(radioAudio.currentTime)%5===0) radioSetPositionState();
+  if(Math.round(radioAudio.currentTime)%5===0)radioSetPositionState();
 });
-$('radioSeek').addEventListener('input',()=>{if(Number.isFinite(radioAudio.duration))radioAudio.currentTime=(Number($('radioSeek').value)/1000)*radioAudio.duration});
+$('radioSeek').addEventListener('input',()=>{if(Number.isFinite(radioAudio.duration))radioAudio.currentTime=(Number($('radioSeek').value)/1000)*radioAudio.duration;});
 radioAudio.addEventListener('ended',()=>radioLoad(radioIndex+1,true));
-radioAudio.addEventListener('error',()=>{$('radioStatus').textContent='No se pudo reproducir esta pista. Puedes intentar la siguiente.'});
+radioAudio.addEventListener('error',()=>{$('radioStatus').textContent='No se pudo reproducir esta pista. Puedes intentar la siguiente.';});
 if('mediaSession' in navigator){
   try{
     navigator.mediaSession.setActionHandler('play',()=>radioAudio.play());
     navigator.mediaSession.setActionHandler('pause',()=>radioAudio.pause());
     navigator.mediaSession.setActionHandler('previoustrack',()=>radioLoad(radioIndex-1,true));
     navigator.mediaSession.setActionHandler('nexttrack',()=>radioLoad(radioIndex+1,true));
-    navigator.mediaSession.setActionHandler('seekbackward',d=>{radioAudio.currentTime=Math.max(0,radioAudio.currentTime-(d.seekOffset||10))});
-    navigator.mediaSession.setActionHandler('seekforward',d=>{radioAudio.currentTime=Math.min(radioAudio.duration||Infinity,radioAudio.currentTime+(d.seekOffset||10))});
-    navigator.mediaSession.setActionHandler('seekto',d=>{if(Number.isFinite(d.seekTime))radioAudio.currentTime=d.seekTime});
+    navigator.mediaSession.setActionHandler('seekbackward',d=>{radioAudio.currentTime=Math.max(0,radioAudio.currentTime-(d.seekOffset||10));});
+    navigator.mediaSession.setActionHandler('seekforward',d=>{radioAudio.currentTime=Math.min(radioAudio.duration||Infinity,radioAudio.currentTime+(d.seekOffset||10));});
+    navigator.mediaSession.setActionHandler('seekto',d=>{if(Number.isFinite(d.seekTime))radioAudio.currentTime=d.seekTime;});
   }catch(e){}
 }
 
