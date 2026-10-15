@@ -292,22 +292,31 @@
   ],
   "collections": [
     {
-      "id": "meditacion-i",
-      "title": "Meditación I",
-      "description": "Trece piezas para acompañar el silencio, la contemplación y la reflexión.",
-      "artwork": "Meditacion I/Caratula/Radio Derej Meditacion I.png"
+      "id": "parashat-noaj-i",
+      "title": "Parashat Noaj I",
+      "description": "Siete canciones que acompañan las siete aliyot de Noaj.",
+      "artwork": "Parashat Noaj I/noaj/Caratula/Radio Derej_ Parashat Noaj.png",
+      "kind": "parasha",
+      "series": "parashat",
+      "parasha_id": "noach"
     },
     {
       "id": "meditacion-noaj-i",
       "title": "Meditación Noaj I",
       "description": "Siete meditaciones inspiradas en los encuentros de Noaj.",
-      "artwork": "Meditacion Noaj I/noaj/Caratula/Radio Derej Noaj Meditacion.png"
+      "artwork": "Meditacion Noaj I/noaj/Caratula/Radio Derej Noaj Meditacion.png",
+      "kind": "parasha",
+      "series": "meditacion",
+      "parasha_id": "noach"
     },
     {
-      "id": "parashat-noaj-i",
-      "title": "Parashat Noaj I",
-      "description": "Siete canciones que acompañan las siete aliyot de Noaj.",
-      "artwork": "Parashat Noaj I/noaj/Caratula/Radio Derej_ Parashat Noaj.png"
+      "id": "meditacion-i",
+      "title": "Meditación I",
+      "description": "Trece piezas para acompañar el silencio, la contemplación y la reflexión.",
+      "artwork": "Meditacion I/Caratula/Radio Derej Meditacion I.png",
+      "kind": "atemporal",
+      "series": "meditacion",
+      "parasha_id": null
     }
   ]
 }
