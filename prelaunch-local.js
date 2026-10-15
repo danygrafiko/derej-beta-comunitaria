@@ -15587,6 +15587,119 @@ loadRamak();
     mediaSession(t);
     if(autoplay&&src)audio.play().catch(()=>{status.textContent='Toca Reproducir para iniciar el audio.';});
   }
+
+  // Selección por el próximo Shabat civil de Chile; lectura de la diáspora.
+  function radioUpcomingShabbat(){
+    const parts=new Intl.DateTimeFormat('en-US',{timeZone:'America/Santiago',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());
+    const val=key=>Number(parts.find(p=>p.type===key)?.value);
+    const d=new Date(Date.UTC(val('year'),val('month')-1,val('day')));
+    d.setUTCDate(d.getUTCDate()+(6-d.getUTCDay()+7)%7);
+    return d.toISOString().slice(0,10);
+  }
+  function parashaSlug(s){
+    const raw=String(s||'').replace(/^Parashat\s+/i,'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+    const key=raw.replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+    return ({noaj:'noach',noach:'noach','lekh-lekha':'lech-lecha'}[key]||key);
+  }
+  function parashaLabel(t){
+    return ({Noach:'Noaj','Lech-Lecha':'Lej Lejá',Vayera:'Vaierá'}[t]||t);
+  }
+  function makeLibraryCard(album){
+    const count=allTracks.filter(track=>track.collection_id===album.id).length;
+    const btn=document.createElement('button');
+    btn.type='button';btn.className='radioAlbumCard';
+    btn.dataset.radioCollection=album.id;
+    btn.setAttribute('aria-label','Escuchar '+album.title+', '+count+' canciones');
+    const image=document.createElement('img');
+    image.src=assetUrl(album.artwork);image.alt='Carátula del álbum '+album.title;image.loading='lazy';
+    const type=document.createElement('small');
+    type.textContent=album.kind==='atemporal'?'PARA TODO TIEMPO':album.series==='parashat'?'PARASHAT':'MEDITACIÓN · PARASHÁ';
+    const title=document.createElement('b');title.textContent=album.title;
+    const num=document.createElement('span');num.textContent=count+' canciones';
+    const enter=document.createElement('em');enter.textContent='Entrar a escuchar →';
+    btn.append(image,type,title,num,enter);
+    return btn;
+  }
+  function fillLibrary(target,albums){
+    const box=document.getElementById(target);
+    box.replaceChildren(...albums.map(makeLibraryCard));
+  }
+  function renderRadioLibrary(){
+    if(!collections.length)return;
+    const reading=weeklyReading;
+    const current=reading?.slug?collections.filter(c=>c.kind==='parasha'&&c.parasha_id===reading.slug):[];
+    const others=collections.filter(c=>c.kind==='parasha'&&(!reading?.slug||c.parasha_id!==reading.slug));
+    const timeless=collections.filter(c=>c.kind==='atemporal'||!c.kind);
+    const title=document.getElementById('radioWeeklyTitle');
+    const description=document.getElementById('radioWeeklyMeta');
+    title.textContent=reading?.slug?reading.title:reading?'Lectura semanal sin confirmar':'Buscando la lectura semanal…';
+    description.textContent=reading?.slug?
+      'Shabat '+new Date(reading.sat+'T12:00:00Z').toLocaleDateString('es-CL',{timeZone:'UTC',day:'numeric',month:'long',year:'numeric'})+' · Calendario de la diáspora':
+      reading?'No pudimos confirmar la parashá. La biblioteca sigue disponible.':'Consultando el calendario de la diáspora.';
+    const featured=document.getElementById('radioWeeklyAlbums');
+    if(current.length){
+      const sortSeries=c=>c.series==='parashat'?0:1;
+      fillLibrary('radioWeeklyAlbums',current.sort((x,y)=>sortSeries(x)-sortSeries(y)));
+    }else{
+      featured.replaceChildren();
+      const empty=document.createElement('div');empty.className='radioEmptyWeek';
+      const emphasis=document.createElement('b');
+      emphasis.textContent=reading?.slug?'Esta parashá aún no tiene playlist.':'Preparando la selección semanal…';
+      const note=document.createElement('p');
+      note.textContent=reading?.slug?'Puedes explorar otras parashot o música para todo tiempo.':'Las otras colecciones siguen disponibles.';
+      empty.append(emphasis,note);featured.append(empty);
+    }
+    document.getElementById('radioOtherParashot').hidden=!others.length;
+    if(others.length)fillLibrary('radioOtherParashotAlbums',others);
+    document.getElementById('radioTimeless').hidden=!timeless.length;
+    if(timeless.length)fillLibrary('radioTimelessAlbums',timeless);
+  }
+  async function refreshWeeklyReading(){
+    const sat=radioUpcomingShabbat();
+    if(weeklyShabbat===sat)return;
+    if(weeklyCheck)return weeklyCheck;
+    weeklyCheck=(async()=>{
+      const known={'2026-10-10':'Bereshit','2026-10-17':'Noach','2026-10-24':'Lech-Lecha','2026-10-31':'Vayera'};
+      let text=null,festival=false;
+      try{
+        const cached=JSON.parse(localStorage.getItem('derej:radio:reading:'+sat)||'null');
+        if(cached?.name)text=cached.name;
+        if(cached?.festival)festival=true;
+      }catch{}
+      if(!text&&!festival){
+        const controller=new AbortController();
+        const deadline=setTimeout(()=>controller.abort(),6000);
+        try{
+          const url='https://www.hebcal.com/shabbat?cfg=json&geo=geoname&geonameid=3871336&i=off&dt='+encodeURIComponent(sat);
+          const response=await fetch(url,{signal:controller.signal,mode:'cors',cache:'no-store'});
+          if(!response.ok)throw Error('Hebcal '+response.status);
+          const payload=await response.json();
+          const parasha=(payload.items||[]).find(it=>it.category==='parashat'&&it.date===sat);
+          text=parasha?.title?.replace(/^Parashat\s+/i,'')||null;
+          festival=!text;
+          try{localStorage.setItem('derej:radio:reading:'+sat,JSON.stringify({name:text,festival}));}catch{}
+        }catch{ text=known[sat]||null; }
+        finally{clearTimeout(deadline);}
+      }
+      weeklyShabbat=sat;
+      weeklyReading={sat,slug:text?parashaSlug(text):null,title:text?parashaLabel(text):festival?'Shabat de festividad':null};
+      renderRadioLibrary();
+    })();
+    try{await weeklyCheck}finally{weeklyCheck=null}
+  }
+  function openRadioPlaylist(){
+    document.getElementById('radioPlayer').hidden=false;
+    screen.classList.add('radioAlbumOpen');
+    screen.scrollIntoView({behavior:'smooth',block:'start'});
+  }
+  function returnToRadioLibrary(){
+    document.getElementById('radioPlayer').hidden=true;
+    screen.classList.remove('radioAlbumOpen');
+    document.getElementById('radioLibrary').scrollIntoView({behavior:'smooth',block:'start'});
+    refreshWeeklyReading();
+    // El audio no se detiene al volver a la biblioteca.
+  }
+
   function selectCollection(id,restore=false){
     const album=collections.find(c=>c.id===id)||collections[0];
     if(!album)return;
@@ -15642,6 +15755,8 @@ loadRamak();
         try{saved=localStorage.getItem('derej-v21-radio-collection');}catch{}
         selectCollection(saved||collections[0].id,true);
         ready=true;
+        renderRadioLibrary();
+        refreshWeeklyReading();
       }catch{
         status.textContent='El catálogo musical no pudo cargarse. El resto de Dérej continúa disponible.';
         title.textContent='Radio Dérej';
@@ -15809,7 +15924,8 @@ loadRamak();
   });
   screen.addEventListener('click',async e=>{
     const collectionButton=e.target.closest('[data-radio-collection]');
-    if(collectionButton){await ensure();selectCollection(collectionButton.dataset.radioCollection);return;}
+    if(collectionButton){await ensure();selectCollection(collectionButton.dataset.radioCollection);openRadioPlaylist();return;}
+    if(e.target.closest('[data-radio-library-back]')){returnToRadioLibrary();return;}
     const scroll=e.target.closest('[data-radio-scroll]');
     if(scroll){
       document.getElementById(scroll.dataset.radioScroll)?.scrollIntoView({behavior:'smooth',block:'start'});
@@ -15817,7 +15933,7 @@ loadRamak();
     }
   });
   document.addEventListener('click',e=>{
-    if(e.target.closest('[data-route="radio"]')) ensure();
+    if(e.target.closest('[data-route="radio"]')){ensure();refreshWeeklyReading();}
   });
 
 
