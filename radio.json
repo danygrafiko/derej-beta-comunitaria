@@ -1,140 +1,313 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "station": "Radio Dérej",
-  "collection": "Meditación",
+  "collection": "Radio Dérej",
   "creator": "Danygrafiko",
   "description": "Música contemplativa para acompañar silencio, reflexión y camino interior.",
-  "updated_at": "2026-09-27",
+  "updated_at": "2026-10-15",
   "tracks": [
     {
       "id": "med-01",
       "title": "Shofar of Contemplation",
       "artist": "Danygrafiko",
-      "collection": "Radio Dérej · Meditación",
+      "collection": "Radio Dérej · Meditación I",
       "duration": "3:24",
-      "path": "meditacion/01-shofar-of-contemplation.mp3",
-      "artwork": "https://raw.githubusercontent.com/danygrafiko/derej-beta-comunitaria/aeb90db649997d28fc966ea8891f24e035a61f3b/radio-meditacion.png",
-      "ai_assisted": true
+      "path": "Meditacion I/MP3/01-shofar-of-contemplation.mp3",
+      "artwork": "Meditacion I/Caratula/Radio Derej Meditacion I.png",
+      "ai_assisted": true,
+      "collection_id": "meditacion-i"
     },
     {
       "id": "med-02",
       "title": "Dawn over the Stone Room",
       "artist": "Danygrafiko",
-      "collection": "Radio Dérej · Meditación",
+      "collection": "Radio Dérej · Meditación I",
       "duration": "3:14",
-      "path": "meditacion/02-dawn-over-the-stone-room.mp3",
-      "artwork": "https://raw.githubusercontent.com/danygrafiko/derej-beta-comunitaria/aeb90db649997d28fc966ea8891f24e035a61f3b/radio-meditacion.png",
-      "ai_assisted": true
+      "path": "Meditacion I/MP3/02-dawn-over-the-stone-room.mp3",
+      "artwork": "Meditacion I/Caratula/Radio Derej Meditacion I.png",
+      "ai_assisted": true,
+      "collection_id": "meditacion-i"
     },
     {
       "id": "med-03",
       "title": "Breathing Through the Woods",
       "artist": "Danygrafiko",
-      "collection": "Radio Dérej · Meditación",
+      "collection": "Radio Dérej · Meditación I",
       "duration": "3:58",
-      "path": "meditacion/03-breathing-through-the-woods.mp3",
-      "artwork": "https://raw.githubusercontent.com/danygrafiko/derej-beta-comunitaria/aeb90db649997d28fc966ea8891f24e035a61f3b/radio-meditacion.png",
-      "ai_assisted": true
+      "path": "Meditacion I/MP3/03-breathing-through-the-woods.mp3",
+      "artwork": "Meditacion I/Caratula/Radio Derej Meditacion I.png",
+      "ai_assisted": true,
+      "collection_id": "meditacion-i"
     },
     {
       "id": "med-04",
       "title": "Cosmic Serenity",
       "artist": "Danygrafiko",
-      "collection": "Radio Dérej · Meditación",
+      "collection": "Radio Dérej · Meditación I",
       "duration": "4:04",
-      "path": "meditacion/04-cosmic-serenity.mp3",
-      "artwork": "https://raw.githubusercontent.com/danygrafiko/derej-beta-comunitaria/aeb90db649997d28fc966ea8891f24e035a61f3b/radio-meditacion.png",
-      "ai_assisted": true
+      "path": "Meditacion I/MP3/04-cosmic-serenity.mp3",
+      "artwork": "Meditacion I/Caratula/Radio Derej Meditacion I.png",
+      "ai_assisted": true,
+      "collection_id": "meditacion-i"
     },
     {
       "id": "med-05",
       "title": "Resonancia Oceánica",
       "artist": "Danygrafiko",
-      "collection": "Radio Dérej · Meditación",
+      "collection": "Radio Dérej · Meditación I",
       "duration": "4:00",
-      "path": "meditacion/05-resonancia-oceanica.mp3",
-      "artwork": "https://raw.githubusercontent.com/danygrafiko/derej-beta-comunitaria/aeb90db649997d28fc966ea8891f24e035a61f3b/radio-meditacion.png",
-      "ai_assisted": true
+      "path": "Meditacion I/MP3/05-resonancia-oceanica.mp3",
+      "artwork": "Meditacion I/Caratula/Radio Derej Meditacion I.png",
+      "ai_assisted": true,
+      "collection_id": "meditacion-i"
     },
     {
       "id": "med-06",
       "title": "Oy, Neshama",
       "artist": "Danygrafiko",
-      "collection": "Radio Dérej · Meditación",
+      "collection": "Radio Dérej · Meditación I",
       "duration": "2:00",
-      "path": "meditacion/06-oy-coma-neshama.mp3",
-      "artwork": "https://raw.githubusercontent.com/danygrafiko/derej-beta-comunitaria/aeb90db649997d28fc966ea8891f24e035a61f3b/radio-meditacion.png",
-      "ai_assisted": true
+      "path": "Meditacion I/MP3/06-oy-coma-neshama.mp3",
+      "artwork": "Meditacion I/Caratula/Radio Derej Meditacion I.png",
+      "ai_assisted": true,
+      "collection_id": "meditacion-i"
     },
     {
       "id": "med-07",
       "title": "Nafshi Adonai",
       "artist": "Danygrafiko",
-      "collection": "Radio Dérej · Meditación",
+      "collection": "Radio Dérej · Meditación I",
       "duration": "3:00",
-      "path": "meditacion/07-nafshi-adonai.mp3",
-      "artwork": "https://raw.githubusercontent.com/danygrafiko/derej-beta-comunitaria/aeb90db649997d28fc966ea8891f24e035a61f3b/radio-meditacion.png",
-      "ai_assisted": true
+      "path": "Meditacion I/MP3/07-nafshi-adonai.mp3",
+      "artwork": "Meditacion I/Caratula/Radio Derej Meditacion I.png",
+      "ai_assisted": true,
+      "collection_id": "meditacion-i"
     },
     {
       "id": "med-08",
       "title": "Dum Na, Dum Na Re",
       "artist": "Danygrafiko",
-      "collection": "Radio Dérej · Meditación",
+      "collection": "Radio Dérej · Meditación I",
       "duration": "2:09",
-      "path": "meditacion/08-dum-na-dum-na-re.mp3",
-      "artwork": "https://raw.githubusercontent.com/danygrafiko/derej-beta-comunitaria/aeb90db649997d28fc966ea8891f24e035a61f3b/radio-meditacion.png",
-      "ai_assisted": true
+      "path": "Meditacion I/MP3/08-dum-na-dum-na-re.mp3",
+      "artwork": "Meditacion I/Caratula/Radio Derej Meditacion I.png",
+      "ai_assisted": true,
+      "collection_id": "meditacion-i"
     },
     {
       "id": "med-09",
       "title": "Oy",
       "artist": "Danygrafiko",
-      "collection": "Radio Dérej · Meditación",
+      "collection": "Radio Dérej · Meditación I",
       "duration": "3:03",
-      "path": "meditacion/09-oy.mp3",
-      "artwork": "https://raw.githubusercontent.com/danygrafiko/derej-beta-comunitaria/aeb90db649997d28fc966ea8891f24e035a61f3b/radio-meditacion.png",
-      "ai_assisted": true
+      "path": "Meditacion I/MP3/09-oy.mp3",
+      "artwork": "Meditacion I/Caratula/Radio Derej Meditacion I.png",
+      "ai_assisted": true,
+      "collection_id": "meditacion-i"
     },
     {
       "id": "med-10",
       "title": "Oy Neshama",
       "artist": "Danygrafiko",
-      "collection": "Radio Dérej · Meditación",
+      "collection": "Radio Dérej · Meditación I",
       "duration": "3:00",
-      "path": "meditacion/10-oy-neshama.mp3",
-      "artwork": "https://raw.githubusercontent.com/danygrafiko/derej-beta-comunitaria/aeb90db649997d28fc966ea8891f24e035a61f3b/radio-meditacion.png",
-      "ai_assisted": true
+      "path": "Meditacion I/MP3/10-oy-neshama.mp3",
+      "artwork": "Meditacion I/Caratula/Radio Derej Meditacion I.png",
+      "ai_assisted": true,
+      "collection_id": "meditacion-i"
     },
     {
       "id": "med-11",
       "title": "Nafshi et Adonai",
       "artist": "Danygrafiko",
-      "collection": "Radio Dérej · Meditación",
+      "collection": "Radio Dérej · Meditación I",
       "duration": "3:57",
-      "path": "meditacion/11-nafshi-et-adonai.mp3",
-      "artwork": "https://raw.githubusercontent.com/danygrafiko/derej-beta-comunitaria/aeb90db649997d28fc966ea8891f24e035a61f3b/radio-meditacion.png",
-      "ai_assisted": true
+      "path": "Meditacion I/MP3/11-nafshi-et-adonai.mp3",
+      "artwork": "Meditacion I/Caratula/Radio Derej Meditacion I.png",
+      "ai_assisted": true,
+      "collection_id": "meditacion-i"
     },
     {
       "id": "med-12",
       "title": "Sod",
       "artist": "Danygrafiko",
-      "collection": "Radio Dérej · Meditación",
+      "collection": "Radio Dérej · Meditación I",
       "duration": "3:03",
-      "path": "meditacion/12-sod.mp3",
-      "artwork": "https://raw.githubusercontent.com/danygrafiko/derej-beta-comunitaria/aeb90db649997d28fc966ea8891f24e035a61f3b/radio-meditacion.png",
-      "ai_assisted": true
+      "path": "Meditacion I/MP3/12-sod.mp3",
+      "artwork": "Meditacion I/Caratula/Radio Derej Meditacion I.png",
+      "ai_assisted": true,
+      "collection_id": "meditacion-i"
     },
     {
       "id": "med-13",
       "title": "Shofar Invocation",
       "artist": "Danygrafiko",
-      "collection": "Radio Dérej · Meditación",
+      "collection": "Radio Dérej · Meditación I",
       "duration": "3:48",
-      "path": "meditacion/13-shofar-invocation.mp3",
-      "artwork": "https://raw.githubusercontent.com/danygrafiko/derej-beta-comunitaria/aeb90db649997d28fc966ea8891f24e035a61f3b/radio-meditacion.png",
+      "path": "Meditacion I/MP3/13-shofar-invocation.mp3",
+      "artwork": "Meditacion I/Caratula/Radio Derej Meditacion I.png",
+      "ai_assisted": true,
+      "collection_id": "meditacion-i"
+    },
+    {
+      "id": "meditacion-noaj-i-01",
+      "title": "Una tabla para otro",
+      "artist": "Danygrafiko",
+      "collection": "Radio Dérej · Meditación Noaj I",
+      "collection_id": "meditacion-noaj-i",
+      "path": "Meditacion Noaj I/noaj/MP3/1.Una tabla para otro.mp3",
+      "artwork": "Meditacion Noaj I/noaj/Caratula/Radio Derej Noaj Meditacion.png",
       "ai_assisted": true
+    },
+    {
+      "id": "meditacion-noaj-i-02",
+      "title": "El límite que protege",
+      "artist": "Danygrafiko",
+      "collection": "Radio Dérej · Meditación Noaj I",
+      "collection_id": "meditacion-noaj-i",
+      "path": "Meditacion Noaj I/noaj/MP3/2.El limite que protege.mp3",
+      "artwork": "Meditacion Noaj I/noaj/Caratula/Radio Derej Noaj Meditacion.png",
+      "ai_assisted": true
+    },
+    {
+      "id": "meditacion-noaj-i-03",
+      "title": "La paciencia de la paloma",
+      "artist": "Danygrafiko",
+      "collection": "Radio Dérej · Meditación Noaj I",
+      "collection_id": "meditacion-noaj-i",
+      "path": "Meditacion Noaj I/noaj/MP3/3.La paciencia de la paloma.mp3",
+      "artwork": "Meditacion Noaj I/noaj/Caratula/Radio Derej Noaj Meditacion.png",
+      "ai_assisted": true
+    },
+    {
+      "id": "meditacion-noaj-i-04",
+      "title": "Volver a pisar tierra",
+      "artist": "Danygrafiko",
+      "collection": "Radio Dérej · Meditación Noaj I",
+      "collection_id": "meditacion-noaj-i",
+      "path": "Meditacion Noaj I/noaj/MP3/4.Volver a pisar tierra.mp3",
+      "artwork": "Meditacion Noaj I/noaj/Caratula/Radio Derej Noaj Meditacion.png",
+      "ai_assisted": true
+    },
+    {
+      "id": "meditacion-noaj-i-05",
+      "title": "Bajo el mismo arco",
+      "artist": "Danygrafiko",
+      "collection": "Radio Dérej · Meditación Noaj I",
+      "collection_id": "meditacion-noaj-i",
+      "path": "Meditacion Noaj I/noaj/MP3/5.Bajo el mismo arco.mp3",
+      "artwork": "Meditacion Noaj I/noaj/Caratula/Radio Derej Noaj Meditacion.png",
+      "ai_assisted": true
+    },
+    {
+      "id": "meditacion-noaj-i-06",
+      "title": "El manto de dignidad",
+      "artist": "Danygrafiko",
+      "collection": "Radio Dérej · Meditación Noaj I",
+      "collection_id": "meditacion-noaj-i",
+      "path": "Meditacion Noaj I/noaj/MP3/6.El Manto de dignidad.mp3",
+      "artwork": "Meditacion Noaj I/noaj/Caratula/Radio Derej Noaj Meditacion.png",
+      "ai_assisted": true
+    },
+    {
+      "id": "meditacion-noaj-i-07",
+      "title": "Hacer lugar a otra voz",
+      "artist": "Danygrafiko",
+      "collection": "Radio Dérej · Meditación Noaj I",
+      "collection_id": "meditacion-noaj-i",
+      "path": "Meditacion Noaj I/noaj/MP3/7.Hacer lugar a otra voz.mp3",
+      "artwork": "Meditacion Noaj I/noaj/Caratula/Radio Derej Noaj Meditacion.png",
+      "ai_assisted": true
+    },
+    {
+      "id": "parashat-noaj-i-01",
+      "title": "Íntegro en mi tiempo",
+      "artist": "Danygrafiko",
+      "collection": "Radio Dérej · Parashat Noaj I",
+      "collection_id": "parashat-noaj-i",
+      "path": "Parashat Noaj I/noaj/MP3/1.Integro en mi tiempo.mp3",
+      "artwork": "Parashat Noaj I/noaj/Caratula/Radio Derej_ Parashat Noaj.png",
+      "ai_assisted": true
+    },
+    {
+      "id": "parashat-noaj-i-02",
+      "title": "La puerta y la lluvia",
+      "artist": "Danygrafiko",
+      "collection": "Radio Dérej · Parashat Noaj I",
+      "collection_id": "parashat-noaj-i",
+      "path": "Parashat Noaj I/noaj/MP3/2.La puerta y la lluvia.mp3",
+      "artwork": "Parashat Noaj I/noaj/Caratula/Radio Derej_ Parashat Noaj.png",
+      "ai_assisted": true
+    },
+    {
+      "id": "parashat-noaj-i-03",
+      "title": "Una hoja al atardecer",
+      "artist": "Danygrafiko",
+      "collection": "Radio Dérej · Parashat Noaj I",
+      "collection_id": "parashat-noaj-i",
+      "path": "Parashat Noaj I/noaj/MP3/3.Una hoja al atardecer.mp3",
+      "artwork": "Parashat Noaj I/noaj/Caratula/Radio Derej_ Parashat Noaj.png",
+      "ai_assisted": true
+    },
+    {
+      "id": "parashat-noaj-i-04",
+      "title": "Salir para cuidar",
+      "artist": "Danygrafiko",
+      "collection": "Radio Dérej · Parashat Noaj I",
+      "collection_id": "parashat-noaj-i",
+      "path": "Parashat Noaj I/noaj/MP3/4.Salir para cuidar.mp3",
+      "artwork": "Parashat Noaj I/noaj/Caratula/Radio Derej_ Parashat Noaj.png",
+      "ai_assisted": true
+    },
+    {
+      "id": "parashat-noaj-i-05",
+      "title": "El arco en la nube",
+      "artist": "Danygrafiko",
+      "collection": "Radio Dérej · Parashat Noaj I",
+      "collection_id": "parashat-noaj-i",
+      "path": "Parashat Noaj I/noaj/MP3/5.El arco en la nube.mp3",
+      "artwork": "Parashat Noaj I/noaj/Caratula/Radio Derej_ Parashat Noaj.png",
+      "ai_assisted": true
+    },
+    {
+      "id": "parashat-noaj-i-06",
+      "title": "Cubrir la herida",
+      "artist": "Danygrafiko",
+      "collection": "Radio Dérej · Parashat Noaj I",
+      "collection_id": "parashat-noaj-i",
+      "path": "Parashat Noaj I/noaj/MP3/6.Cubrir la herida.mp3",
+      "artwork": "Parashat Noaj I/noaj/Caratula/Radio Derej_ Parashat Noaj.png",
+      "ai_assisted": true
+    },
+    {
+      "id": "parashat-noaj-i-07",
+      "title": "La torre y el camino",
+      "artist": "Danygrafiko",
+      "collection": "Radio Dérej · Parashat Noaj I",
+      "collection_id": "parashat-noaj-i",
+      "path": "Parashat Noaj I/noaj/MP3/7.La torre y el camino.mp3",
+      "artwork": "Parashat Noaj I/noaj/Caratula/Radio Derej_ Parashat Noaj.png",
+      "ai_assisted": true
+    }
+  ],
+  "collections": [
+    {
+      "id": "meditacion-i",
+      "title": "Meditación I",
+      "description": "Trece piezas para acompañar el silencio, la contemplación y la reflexión.",
+      "artwork": "Meditacion I/Caratula/Radio Derej Meditacion I.png"
+    },
+    {
+      "id": "meditacion-noaj-i",
+      "title": "Meditación Noaj I",
+      "description": "Siete meditaciones inspiradas en los encuentros de Noaj.",
+      "artwork": "Meditacion Noaj I/noaj/Caratula/Radio Derej Noaj Meditacion.png"
+    },
+    {
+      "id": "parashat-noaj-i",
+      "title": "Parashat Noaj I",
+      "description": "Siete canciones que acompañan las siete aliyot de Noaj.",
+      "artwork": "Parashat Noaj I/noaj/Caratula/Radio Derej_ Parashat Noaj.png"
     }
   ]
 }
