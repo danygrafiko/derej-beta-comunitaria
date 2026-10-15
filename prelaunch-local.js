@@ -15632,7 +15632,7 @@ loadRamak();
     const timeless=collections.filter(c=>c.kind==='atemporal'||!c.kind);
     const title=document.getElementById('radioWeeklyTitle');
     const description=document.getElementById('radioWeeklyMeta');
-    title.textContent=reading?.slug?reading.title:reading?'Lectura semanal sin confirmar':'Buscando la lectura semanal…';
+    title.textContent=reading?.slug?reading.title:reading?.title==='Shabat de festividad'?'Shabat de festividad':reading?'Lectura semanal sin confirmar':'Buscando la lectura semanal…';
     description.textContent=reading?.slug?
       'Shabat '+new Date(reading.sat+'T12:00:00Z').toLocaleDateString('es-CL',{timeZone:'UTC',day:'numeric',month:'long',year:'numeric'})+' · Calendario de la diáspora':
       reading?'No pudimos confirmar la parashá. La biblioteca sigue disponible.':'Consultando el calendario de la diáspora.';
@@ -15644,7 +15644,7 @@ loadRamak();
       featured.replaceChildren();
       const empty=document.createElement('div');empty.className='radioEmptyWeek';
       const emphasis=document.createElement('b');
-      emphasis.textContent=reading?.slug?'Esta parashá aún no tiene playlist.':'Preparando la selección semanal…';
+      emphasis.textContent=reading?.slug?'Esta parashá aún no tiene playlist.':reading?.title==='Shabat de festividad'?'Lecturas especiales de festividad.':'Preparando la selección semanal…';
       const note=document.createElement('p');
       note.textContent=reading?.slug?'Puedes explorar otras parashot o música para todo tiempo.':'Las otras colecciones siguen disponibles.';
       empty.append(emphasis,note);featured.append(empty);
