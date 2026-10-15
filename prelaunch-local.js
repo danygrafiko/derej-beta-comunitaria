@@ -21969,11 +21969,15 @@ loadRamak();
       <div class="derejToolsBackdrop" data-derej-tools-close></div>
       <section class="derejToolsCard" role="dialog" aria-modal="true" aria-labelledby="derejToolsRadioTitle">
         <header><div><small>RADIO DÉREJ</small><h2 id="derejToolsRadioTitle">Escuchar mientras caminas</h2></div><button type="button" data-derej-tools-close aria-label="Cerrar">×</button></header>
-        <div class="derejToolsTrack"><small>AHORA</small><b id="derejToolsTrackTitle">Meditación</b></div>
-        <div class="derejToolsRadioControls">
-          <button type="button" data-derej-tools-prev aria-label="Anterior">←</button>
-          <button type="button" class="primary" data-derej-tools-play aria-label="Reproducir">▶</button>
-          <button type="button" data-derej-tools-next aria-label="Siguiente">→</button>
+        <div class="derejToolsTrack" aria-live="polite" aria-atomic="true">
+          <small>AHORA ESCUCHANDO</small>
+          <b id="derejToolsTrackTitle">Preparando la escucha…</b>
+          <span id="derejToolsAlbumName" class="derejToolsAlbumName">Radio DÉREJ</span>
+        </div>
+        <div class="derejToolsRadioControls" role="group" aria-label="Controles de Radio DÉREJ">
+          <button type="button" class="derejMiniStep" data-derej-tools-prev aria-label="Canción anterior" title="Canción anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 20 9 12l10-8v16Z"/><path d="M5 5v14"/></svg></button>
+          <button type="button" class="derejMiniPrimary" data-derej-tools-play aria-label="Reproducir" title="Reproducir"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 4.8c0-.83.9-1.33 1.6-.86l9.72 6.57c.96.65.96 1.42 0 2.08L9.6 19.16c-.7.48-1.6-.02-1.6-.85V4.8Z"/></svg></button>
+          <button type="button" class="derejMiniStep" data-derej-tools-next aria-label="Canción siguiente" title="Canción siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 4 10 8-10 8V4Z"/><path d="M19 5v14"/></svg></button>
         </div>
         <button type="button" class="derejToolsOpenRadio" data-route="radio" data-derej-tools-close>Abrir Radio DÉREJ completa →</button>
       </section>`;
@@ -22029,20 +22033,56 @@ loadRamak();
         .ramakSceneCompact{height:70px!important}.ramakSceneCompactInner{padding:11px 12px}.ramakSceneCompactInner span{font-size:.5rem}.ramakSceneCompactInner b{font-size:.67rem}
         .ramakVoice>small{font-size:.76rem!important}
       }
+
+      /* Radio DÉREJ: popup compacto, coherente con el reproductor principal */
+      #derejToolsRadioSheet .derejToolsCard{height:auto;min-height:0;max-height:min(78dvh,600px);padding:20px 18px max(22px,env(safe-area-inset-bottom));border-radius:29px 29px 0 0;overflow-y:auto}
+      #derejToolsRadioSheet .derejToolsCard header{align-items:flex-start}
+      #derejToolsRadioSheet .derejToolsCard h2{font:clamp(1.5rem,5vw,1.85rem)/1.08 Georgia,serif;max-width:15ch;margin:8px 0 10px}
+      #derejToolsRadioSheet .derejToolsCard header>button{display:grid;place-items:center;flex:0 0 44px;width:44px;height:44px;border-radius:50%;font:1.65rem/1 system-ui,sans-serif;cursor:pointer}
+      #derejToolsRadioSheet .derejToolsTrack{gap:6px;padding:16px 17px;margin:17px 0 19px;border-radius:20px;background:#fff8ec}
+      #derejToolsRadioSheet .derejToolsTrack small{font-size:.63rem;letter-spacing:.16em}
+      #derejToolsRadioSheet .derejToolsTrack b{font:clamp(1.3rem,4.6vw,1.66rem)/1.16 Georgia,serif;color:#302b25;overflow-wrap:anywhere}
+      #derejToolsRadioSheet .derejToolsAlbumName{font:.79rem/1.35 system-ui,sans-serif;color:#766342;font-weight:650}
+      #derejToolsRadioSheet .derejToolsRadioControls{display:flex;align-items:center;justify-content:center;gap:clamp(18px,5.5vw,29px);padding:0 0 4px}
+      #derejToolsRadioSheet .derejToolsRadioControls button{display:grid;place-items:center;flex:0 0 auto;padding:0;width:58px;height:58px;border:1.5px solid #bda782;border-radius:50%;background:#fff9ed;color:#3b4031;cursor:pointer;touch-action:manipulation;transition:background .15s ease,transform .15s ease,border-color .15s ease}
+      #derejToolsRadioSheet .derejToolsRadioControls button svg{display:block;width:25px;height:25px}
+      #derejToolsRadioSheet .derejToolsRadioControls .derejMiniPrimary{width:78px;height:78px;background:#344b38;border:2px solid #c2ac76;color:#fff6e7;box-shadow:0 0 0 5px rgba(191,166,112,.13)}
+      #derejToolsRadioSheet .derejToolsRadioControls .derejMiniPrimary svg{width:33px;height:33px}
+      #derejToolsRadioSheet .derejToolsRadioControls button:hover:not(:disabled){background:#ebe0c8;border-color:#8d7446}
+      #derejToolsRadioSheet .derejToolsRadioControls .derejMiniPrimary:hover:not(:disabled){background:#425c45}
+      #derejToolsRadioSheet .derejToolsRadioControls button:active{transform:scale(.95)}
+      #derejToolsRadioSheet .derejToolsRadioControls button:focus-visible,#derejToolsRadioSheet .derejToolsCard header>button:focus-visible{outline:3px solid #b18f4b;outline-offset:3px}
+      #derejToolsRadioSheet .derejToolsOpenRadio{margin-top:20px;padding:14px;border-radius:18px;font:.79rem/1.3 system-ui,sans-serif;font-weight:850}
+      @media(max-width:390px){#derejToolsRadioSheet .derejToolsCard{padding:17px 14px max(20px,env(safe-area-inset-bottom))}#derejToolsRadioSheet .derejToolsRadioControls button{width:54px;height:54px}#derejToolsRadioSheet .derejToolsRadioControls .derejMiniPrimary{width:72px;height:72px}#derejToolsRadioSheet .derejToolsCard h2{font-size:1.5rem}}
     `;
     document.head.appendChild(style);
 
     const audio=document.getElementById('radioV21Audio');
     const sourceTitle=document.getElementById('radioV21TrackTitle');
+    const sourceAlbum=document.getElementById('radioV21AlbumTitle');
     const play=document.querySelector('[data-derej-tools-play]');
     const track=document.getElementById('derejToolsTrackTitle');
+    const albumName=document.getElementById('derejToolsAlbumName');
+    const playSvg="<svg viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M8 4.8c0-.83.9-1.33 1.6-.86l9.72 6.57c.96.65.96 1.42 0 2.08L9.6 19.16c-.7.48-1.6-.02-1.6-.85V4.8Z\"/></svg>";
+    const pauseSvg="<svg viewBox=\"0 0 24 24\" fill=\"currentColor\" aria-hidden=\"true\"><rect x=\"6\" y=\"4.5\" width=\"4.5\" height=\"15\" rx=\"1.25\"/><rect x=\"13.5\" y=\"4.5\" width=\"4.5\" height=\"15\" rx=\"1.25\"/></svg>";
     const syncRadio=()=>{
-      if(track&&sourceTitle) track.textContent=(sourceTitle.textContent&&sourceTitle.textContent!=='Preparando la escucha…')?sourceTitle.textContent:'Meditación';
-      if(play&&audio) play.textContent=audio.paused?'▶':'⏸';
+      if(track&&sourceTitle)track.textContent=(sourceTitle.textContent&&sourceTitle.textContent!=='Preparando la escucha…')?sourceTitle.textContent:'Sin canción seleccionada';
+      if(albumName&&sourceAlbum)albumName.textContent=sourceAlbum.textContent||'Radio DÉREJ';
+      if(play&&audio){
+        const playing=!audio.paused&&!audio.ended;
+        if(play.dataset.playing!==String(playing)){
+          play.innerHTML=playing?pauseSvg:playSvg;
+          play.dataset.playing=String(playing);
+        }
+        play.setAttribute('aria-label',playing?'Pausar':'Reproducir');
+        play.title=playing?'Pausar':'Reproducir';
+      }
     };
     sourceTitle&&new MutationObserver(syncRadio).observe(sourceTitle,{childList:true,subtree:true});
+    sourceAlbum&&new MutationObserver(syncRadio).observe(sourceAlbum,{childList:true,subtree:true});
     audio?.addEventListener('play',syncRadio);
     audio?.addEventListener('pause',syncRadio);
+    audio?.addEventListener('ended',syncRadio);
     audio?.addEventListener('loadedmetadata',syncRadio);
     syncRadio();
 
