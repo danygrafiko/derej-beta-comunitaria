@@ -17,3 +17,7 @@ El avance se conserva en `derej.pozo.learning.v1`, separado de los borradores y 
 ## Validación
 
 `tests/pozo.test.cjs` usa jsdom 26.1.0 como herramienta externa de QA. Se puede ejecutar con `NODE_PATH` apuntando al directorio de dependencias que lo contenga. Verifica la interfaz completa, descubrimiento persistente, navegación, letras, construcción de palabras, pausa/restauración, lectura, trazado, parejas y conservación de la instancia de audio al regresar a Radio. La inspección visual se realiza por separado.
+
+## Material propio dentro de Dérej
+
+Desde esta revisión, todos los botones de consulta del Pozo abren fichas internas. El módulo no incluye enlaces de salida ni descarga contenido de sitios de terceros. Se conservan las referencias bíblicas, los nombres y las obras de los sabios para situar el estudio. Las explicaciones y resúmenes didácticos son propios; se distinguen de citas textuales y de reflexiones personales. Hay doce fichas de apoyo, con retorno al ejercicio sin modificar la respuesta ni sumar otro intento.

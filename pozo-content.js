@@ -14,30 +14,38 @@ window.DEREJ_POZO_CONTENT={
   {id:'mayim',vocalized:'מַיִם',bare:'מים',latin:'Máyim',meaning:'Agua · aguas',letters:['מ','י','ם'],audio:'מַיִם',
    vowelNote:'El pequeño trazo bajo מ se llama pataj. En esta palabra aporta a; el punto bajo י se llama jirik y aporta i. La transliteración es una ayuda aproximada.',
    grammar:'מ y ם son la misma letra, mem; ם es la forma final. El vocablo מַיִם tiene forma plural y se usa para agua o aguas según el contexto.',
-   passage:['יְהִי','רָקִיעַ','בְּתוֹךְ','הַמָּיִם'],target:3,ref:'Génesis 1:6',source:'https://www.sefaria.org/Genesis.1.6',
+   passage:['יְהִי','רָקִיעַ','בְּתוֹךְ','הַמָּיִם'],target:3,ref:'Génesis 1:6',source:'genesis-1-6',
    translation:'Que haya un firmamento en medio de las aguas.',context:'En הַמָּיִם se añade הַ, el artículo definido: aquí, las aguas. La palabra aprendida permanece dentro de una forma más larga.',symbol:'En este recorrido de Dérej, el agua nos invita a observar lo que contiene, sostiene y permite vivir. Es una reflexión editorial, no la traducción de las letras.'},
   {id:'or',vocalized:'אוֹר',bare:'אור',latin:'Or',meaning:'Luz',letters:['א','ו','ר'],audio:'אוֹר',
    vowelNote:'El punto de וֹ se llama jolam y aquí representa o. Los signos de vocalización ayudan a leer; no forman parte de las 22 letras del alfabeto.',
    grammar:'Álef, vav y resh forman la escritura אור. En esta palabra la vav acompaña la vocal o.',
-   passage:['וַיֹּאמֶר','אֱלֹהִים','יְהִי','אוֹר','וַיְהִי','אוֹר'],target:3,alsoTarget:5,ref:'Génesis 1:3',source:'https://www.sefaria.org/Genesis.1.3',
+   passage:['וַיֹּאמֶר','אֱלֹהִים','יְהִי','אוֹר','וַיְהִי','אוֹר'],target:3,alsoTarget:5,ref:'Génesis 1:3',source:'genesis-1-3',
    translation:'Dijo Dios: «Que haya luz», y hubo luz.',context:'אוֹר aparece dos veces en este pasaje: en la invitación y en lo que sucede después. Cualquiera de las dos apariciones responde al ejercicio.',symbol:'El encuentro OR de Dérej propone mirar qué necesita recibir luz en nuestra vida. Esta aplicación personal se distingue del significado lingüístico: luz.'}
  ],
  sages:[
-  {id:'rambam',name:'Rambam',full:'Rabí Moshé ben Maimón',work:'Mishné Torá',context:'También conocido como Maimónides. Sus enseñanzas acompañan las cuatro voces de los Caminos de Dérej.',source:'https://www.chabad.org/search/glossary_cdo/char/R/scope/'},
-  {id:'ramak',name:'Ramak',full:'Rabí Moshé Cordovero',work:'Tomer Devorah',context:'Maestro de Tzfat. Dérej toma sus enseñanzas como una de las voces para estudiar y reflexionar.',source:'https://www.chabad.org/kabbalah/article_cdo/aid/854738/jewish/The-Holy-Ari.htm'},
-  {id:'ramjal',name:'Ramjal',full:'Rabí Moshé Jaim Luzzatto',work:'Mesilat Yesharim',context:'Su nombre también se translitera Ramchal. Es otra de las cuatro voces presentes en nuestros Caminos.',source:'https://www.sefaria.org/Mesilat_Yesharim'},
-  {id:'najman',name:'Rabí Najmán',full:'Rabí Najmán de Breslov',work:'Likutei Moharán',context:'En Dérej, sus enseñanzas abren preguntas y momentos de conversación personal con Dios.',source:'https://www.sefaria.org/Likutei_Moharan'}
+  {id:'rambam',name:'Rambam',full:'Rabí Moshé ben Maimón',work:'Mishné Torá',context:'También conocido como Maimónides. Sus enseñanzas acompañan las cuatro voces de los Caminos de Dérej.',source:'rambam'},
+  {id:'ramak',name:'Ramak',full:'Rabí Moshé Cordovero',work:'Tomer Devorah',context:'Maestro de Tzfat. Dérej toma sus enseñanzas como una de las voces para estudiar y reflexionar.',source:'ramak'},
+  {id:'ramjal',name:'Ramjal',full:'Rabí Moshé Jaim Luzzatto',work:'Mesilat Yesharim',context:'Su nombre también se translitera Ramchal. Es otra de las cuatro voces presentes en nuestros Caminos.',source:'ramjal'},
+  {id:'najman',name:'Rabí Najmán',full:'Rabí Najmán de Breslov',work:'Likutei Moharán',context:'En Dérej, sus enseñanzas abren preguntas y momentos de conversación personal con Dios.',source:'najman'}
  ],
  noaj:[
-  {q:'¿Qué debía construir Nóaj?',a:['Un arca','Una torre','Un palacio','Una ciudad'],why:'La instrucción de construir el arca aparece en el encuentro TEVA de Dérej.',ref:'Génesis 6:14',source:'https://www.sefaria.org/Genesis.6.14'},
-  {q:'¿Qué ave llevaba una hoja de olivo al regresar?',a:['La paloma','El cuervo','El águila','El gorrión'],why:'La hoja de olivo permite reconocer que las aguas han descendido.',ref:'Génesis 8:11',source:'https://www.sefaria.org/Genesis.8.11'},
-  {q:'¿Qué señal se menciona para el pacto después del diluvio?',a:['El arco en las nubes','Una lámpara','Una columna de piedra','Una estrella'],why:'El arco en las nubes se presenta como señal del pacto con los seres vivientes.',ref:'Génesis 9:12–17',source:'https://www.sefaria.org/Genesis.9.12-17'},
-  {q:'¿Qué hace pasar Dios sobre la tierra cuando las aguas comienzan a disminuir?',a:['Un viento','Una nevada','Una columna de fuego','Una nube de polvo'],why:'El relato menciona un viento sobre la tierra. El texto y su lectura sostienen la reflexión de Dérej.',ref:'Génesis 8:1',source:'https://www.sefaria.org/Genesis.8.1'}
+  {q:'¿Qué debía construir Nóaj?',a:['Un arca','Una torre','Un palacio','Una ciudad'],why:'La instrucción de construir el arca aparece en el encuentro TEVA de Dérej.',ref:'Génesis 6:14',source:'genesis-6-14'},
+  {q:'¿Qué ave llevaba una hoja de olivo al regresar?',a:['La paloma','El cuervo','El águila','El gorrión'],why:'La hoja de olivo permite reconocer que las aguas han descendido.',ref:'Génesis 8:11',source:'genesis-8-11'},
+  {q:'¿Qué señal se menciona para el pacto después del diluvio?',a:['El arco en las nubes','Una lámpara','Una columna de piedra','Una estrella'],why:'El arco en las nubes se presenta como señal del pacto con los seres vivientes.',ref:'Génesis 9:12–17',source:'genesis-9-12'},
+  {q:'¿Qué hace pasar Dios sobre la tierra cuando las aguas comienzan a disminuir?',a:['Un viento','Una nevada','Una columna de fuego','Una nube de polvo'],why:'El relato menciona un viento sobre la tierra. El texto y su lectura sostienen la reflexión de Dérej.',ref:'Génesis 8:1',source:'genesis-8-1'}
  ],
  sources:[
-  {label:'Alfabeto hebreo · nombres, sonidos, formas y valores',url:'https://www.chabad.org/library/article_cdo/aid/4069287/jewish/The-Hebrew-Alphabet.htm'},
-  {label:'Génesis 1:3 · encuentro OR de Dérej',url:'https://www.sefaria.org/Genesis.1.3'},
-  {label:'Génesis 1:6 · encuentro RAKIA de Dérej',url:'https://www.sefaria.org/Genesis.1.6'},
-  {label:'Texto consonántico y vocalización · Jabad en español',url:'https://es.chabad.org/library/article_cdo/aid/3177513/jewish/Por-qu-no-hay-vocales-en-la-Tor.htm'}
+  {id:'alfabeto',label:'Las letras de nuestra unidad · formas, nombres y sonidos'},
+  {id:'genesis-1-3',label:'Génesis 1:3 · OR · la luz'},
+  {id:'genesis-1-6',label:'Génesis 1:6 · RAKIA · las aguas'},
+  {id:'lectura',label:'Cómo leer · vocalización y escritura'},
+  {id:'rambam',label:'Rambam · nombre y obra'},
+  {id:'ramak',label:'Ramak · nombre y obra'},
+  {id:'ramjal',label:'Ramjal · nombre y obra'},
+  {id:'najman',label:'Rabí Najmán · nombre y obra'},
+  {id:'genesis-6-14',label:'Nóaj · el arca que protege'},
+  {id:'genesis-8-11',label:'Nóaj · la hoja de olivo'},
+  {id:'genesis-9-12',label:'Nóaj · el pacto del arco'},
+  {id:'genesis-8-1',label:'Nóaj · el viento y las aguas'}
  ]
 };
