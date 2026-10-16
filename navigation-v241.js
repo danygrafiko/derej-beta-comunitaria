@@ -1,8 +1,9 @@
-/* DÉREJ v2.5 · navegación y Aliyá diaria consolidada
+/* DÉREJ v2.5.3 · lectura externa sin interrumpir Radio
    Sustituye navigation-v241.js conservando el mismo nombre de archivo.
 */
 (()=>{
   const STYLE_ID='derej-v241-parashot-aliyah';
+
 
   const SLUGS={
     'Bereshit':'bereshit',
@@ -27,21 +28,26 @@
     'Tetzave':'tetzaveh'
   };
 
+
   const ORDINAL={1:'1ª Aliyá',2:'2ª Aliyá',3:'3ª Aliyá',4:'4ª Aliyá',5:'5ª Aliyá',6:'6ª Aliyá',7:'7ª Aliyá'};
   const HEBREW_DAY={1:'Rishón',2:'Shení',3:'Shelishí',4:"Revi'í",5:'Jamishí',6:'Shishí',7:"Shevi'í"};
+
 
   function slugFor(parasha){
     return SLUGS[parasha]||String(parasha||'').toLowerCase();
   }
+
 
   function parashotUrl(parasha,aliya='all'){
     const slug=slugFor(parasha);
     return `https://parashot.com.ar/?section=parashot&parasha=${encodeURIComponent(slug)}&aliya=${encodeURIComponent(aliya)}`;
   }
 
+
   function parashaLandingUrl(parasha){
     return `https://parashot.com.ar/parashot/${encodeURIComponent(slugFor(parasha))}/`;
   }
+
 
   function addStyles(){
     let st=document.getElementById(STYLE_ID);
@@ -81,6 +87,7 @@
     `;
   }
 
+
   function ensureParashotAccess(){
     const rail=caminoScreen?.querySelector('.ramakThresholdRail');
     if(!rail) return;
@@ -102,21 +109,25 @@
     if(strong) strong.textContent=p?.parasha||'Elegir';
   }
 
+
   function restoreWeeklyReading(p){
     const card=document.getElementById('ramakReadingCard');
     if(!card||!p) return;
     const signature=`${p.parasha}|${p.ref||''}`;
     if(card.dataset.v242Signature===signature) return;
 
+
     card.dataset.v242Signature=signature;
     card.hidden=false;
     card.href=parashaLandingUrl(p.parasha);
-    card.removeAttribute('target');
+    card.target='_blank';
     card.rel='noopener noreferrer';
+
 
     const title=document.getElementById('ramakReadingTitle');
     const ref=document.getElementById('ramakReadingRef');
     const detail=card.querySelector('.ramakReadingCopy>span');
+
 
     if(title) title.textContent=`Leer ${p.parasha}`;
     if(ref){
@@ -126,14 +137,17 @@
     if(detail) detail.textContent='Parashá completa · siete Aliyot · Haftará';
   }
 
+
   function ensureDailyAliyah(p,c){
     const panel=caminoScreen?.querySelector('[data-ramak-panel="profundizar"]');
     const body=panel?.querySelector('.ramakBody');
     const voices=body?.querySelector('.ramakVoices');
     if(!body||!voices||!p||!c) return;
 
+
     const day=Math.max(1,Math.min(7,Number(c.dia)||1));
     const signature=`${p.parasha}|${day}`;
+
 
     let card=body.querySelector('.v241AliyahCard');
     if(!card){
@@ -142,9 +156,11 @@
       voices.before(card);
     }
 
+
     // FIX: no reconstruir la tarjeta si sigue siendo la misma Aliyá.
     if(card.dataset.v242Signature===signature) return;
     card.dataset.v242Signature=signature;
+
 
     const aliyah=ORDINAL[day]||`${day}ª Aliyá`;
     const heb=HEBREW_DAY[day]||`Día ${day}`;
@@ -152,6 +168,7 @@
     const range=c.aliyaRange
       ? `Lectura diaria · ${c.aliyaRange}.`
       : `Lectura de Torá correspondiente al Día ${day} de este Camino.`;
+
 
     card.innerHTML=`
       <div class="v241AliyahHead">
@@ -161,14 +178,15 @@
       <div class="v241AliyahBody">
         <h3>${p.parasha} · ${heb}</h3>
         <p>${range} Léela antes o junto a las cuatro voces para mantener Profundizar unido al texto semanal.</p>
-        <a class="v241AliyahLink" href="${url}" rel="noopener noreferrer">
+        <a class="v241AliyahLink" href="${url}" target="_blank" rel="noopener noreferrer">
           <strong>Abrir ${aliyah} completa</strong>
           <span>→</span>
         </a>
-        <small class="v242AliyahFallback">Se abre en la misma ventana. Para volver a DÉREJ usa “Atrás” del navegador.</small>
+        <small class="v242AliyahFallback">La lectura se abre aparte para mantener DÉREJ, tu Camino y Radio activos.</small>
       </div>
     `;
   }
+
 
   function apply(){
     addStyles();
@@ -179,8 +197,10 @@
     ensureDailyAliyah(p,c);
   }
 
+
   addStyles();
   apply();
+
 
   if(typeof renderPanels==='function'){
     const prev=renderPanels;
@@ -193,6 +213,7 @@
     };
   }
 
+
   if(typeof renderRamak==='function'){
     const prev=renderRamak;
     renderRamak=function(scroll=false){
@@ -200,6 +221,7 @@
       requestAnimationFrame(apply);
     };
   }
+
 
   let scheduled=false;
   new MutationObserver(()=>{
