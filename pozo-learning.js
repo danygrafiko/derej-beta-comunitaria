@@ -116,7 +116,7 @@
   if(name==='material-back'){open(materialBack);return}
   if(name==='material-list'){open('sources');return}
   if(['home','letters','words','progress','voices'].includes(name)){open(name);return}
-  if(name==='discover'){data.discovered=true;save();document.querySelector('.pozoHotspot')?.classList.add('discovered');document.querySelector('.pozoHotspotLabel').innerHTML='El Pozo · aprender <span aria-hidden="true">↓</span>';open('home');return}
+  if(name==='discover'){data.discovered=true;save();document.querySelector('.pozoHotspot')?.classList.add('discovered');open('home');return}
   if(name==='large'||name==='contrast'){data.settings[name]=!data.settings[name];save();open(view,false);return}
   if(name==='letter'){selectedLetter=Math.max(0,Math.min(C.letters.length-1,Number(arg)||0));open('letters');return}
   if(name==='word'){selectedWord=Math.max(0,Math.min(1,Number(arg)||0));open('word');return}
@@ -164,7 +164,7 @@
  if('speechSynthesis'in window)window.speechSynthesis.addEventListener?.('voiceschanged',refreshVoices);
  const previousRoute=route;
  route=function(name){previousRoute(name);if(name==='pozo')open('home');else if(drawing)drawing=null};
- if(data.discovered){document.querySelector('.pozoHotspot')?.classList.add('discovered');const label=document.querySelector('.pozoHotspotLabel');if(label)label.innerHTML='El Pozo · aprender <span aria-hidden="true">↓</span>'}
+ if(data.discovered)document.querySelector('.pozoHotspot')?.classList.add('discovered');
  window.DEREJ_POZO={version:'1.0',open:()=>route('pozo')};
  if(location.hash==='#pozo')route('pozo');
 })();

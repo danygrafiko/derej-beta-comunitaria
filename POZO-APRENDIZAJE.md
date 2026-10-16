@@ -4,7 +4,7 @@ Integración sobre la edición comunitaria v2.5.3, sin sustituir el patio ni mod
 
 ## Entrada
 
-El agua de la imagen original del patio recibe un botón accesible «El Pozo». La primera visita ofrece descubrir el taller; después el acceso permanece identificado como espacio de aprendizaje. `#pozo` abre directamente ese espacio.
+El agua de la imagen original del patio recibe una señal discreta de 12 × 6 px, sin rótulo ni óvalo grande. El área de toque invisible mide 56 × 56 px y conserva un nombre accesible. La primera visita ofrece descubrir el taller; después el acceso mantiene la misma discreción. `#pozo` abre directamente ese espacio.
 
 ## Unidad «Agua y luz»
 
