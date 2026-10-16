@@ -21,3 +21,16 @@ El avance se conserva en `derej.pozo.learning.v1`, separado de los borradores y 
 ## Material propio dentro de Dérej
 
 Desde esta revisión, todos los botones de consulta del Pozo abren fichas internas. El módulo no incluye enlaces de salida ni descarga contenido de sitios de terceros. Se conservan las referencias bíblicas, los nombres y las obras de los sabios para situar el estudio. Las explicaciones y resúmenes didácticos son propios; se distinguen de citas textuales y de reflexiones personales. Hay doce fichas de apoyo, con retorno al ejercicio sin modificar la respuesta ni sumar otro intento.
+
+## Curaduría del primer encuentro · 16 de octubre de 2026
+
+La portada del taller ofrece un recorrido de unos diez minutos, sin reemplazar las actividades existentes. La guía permanece disponible en la navegación para volver desde cualquier ficha o ejercicio.
+
+1. Observar mem y distinguir su forma final (2 minutos).
+2. Trazar mem u observar la guía sin dibujar (2 minutos).
+3. Reconocer máyim y encontrarla con artículo en Génesis 1:6 (3 minutos).
+4. Compartir un detalle aprendido y la experiencia de descubrir la entrada (3 minutos).
+
+No se exige completar la segunda palabra, todos los juegos ni los valores numéricos. El registro no marca una sesión completada por abrir la guía. La aplicación no recoge respuestas de la conversación. La entrada permanece sutil también tras descubrirla.
+
+El material distingue texto bíblico, explicación didáctica y reflexión personal; no promete medir neuroplasticidad. La voz sigue siendo opcional y depende del dispositivo. Se conserva el contenido interno, sin añadir fuentes externas.

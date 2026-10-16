@@ -34,6 +34,15 @@ click(d,'[data-pz-view=progress]');assert(d.querySelector('#pzMain').textContent
 click(d,'.pzTop [data-route=home]');assert(!d.querySelector('[data-screen=home]').hidden);click(d,'.portalRadio');await pause(40);assert(!d.querySelector('[data-screen=radio]').hidden);assert.equal(d.querySelector('audio'),audio);assert(d.querySelector('[data-screen=radio]').textContent.includes('Radio'));
 assert.deepEqual(errors,[]);dom.window.close();
 ({dom,w,d,errors}=await boot(saved));click(d,'.pozoHotspot');assert(!d.querySelector('[data-pz=discover]'));assert(state(w).completed.look);assert(d.querySelector('.pozoScreen.pzLarge'));assert.deepEqual(errors,[]);dom.window.close();
+({dom,w,d,errors}=await boot(saved));click(d,'.pozoHotspot');
+const completedBefore=JSON.stringify(state(w).completed),sessionsBefore=state(w).sessions.length;
+click(d,'[data-pz=welcome]');assert.equal(d.querySelectorAll('.pzFirstSteps>li').length,4);assert(d.querySelector('#pzMain').textContent.includes('No necesitas saber hebreo'));assert(d.querySelector('[data-pz-view=welcome]').getAttribute('aria-current')==='page');
+click(d,'[data-pz=welcome-letter]');assert(d.querySelector('#pzLetterPanel').textContent.includes('Mem'));assert.equal(d.querySelector('#pozoRoot [role=tab][aria-selected=true]').dataset.pz,'letter:3');
+click(d,'[data-pz-view=welcome]');click(d,'[data-pz="trace:3"]');assert(d.querySelector('#pzTrace').getAttribute('aria-label').includes('Mem'));
+click(d,'[data-pz-view=welcome]');click(d,'[data-pz="word:0"]');assert(d.querySelector('#pzMain').textContent.includes('Máyim'));
+click(d,'[data-pz-view=welcome]');click(d,'[data-pz="read-word:0"]');click(d,'[data-pz="read-answer:3"]');assert(d.querySelector('#pzFeedback').textContent.includes('artículo definido'));click(d,'[data-pz=welcome]');
+assert.equal(JSON.stringify(state(w).completed),completedBefore);assert.equal(state(w).sessions.length,sessionsBefore);assert.equal(d.querySelectorAll('#pozoRoot a[href]').length,0);assert.deepEqual(errors,[]);dom.window.close();
+console.log('PASS · Primer encuentro: cuatro pasos, mem seleccionada, trazo, máyim, reconocimiento en el pasaje, retorno a la guía y ningún avance completado ficticio.');
 console.log('PASS · Patio original, descubrimiento persistente, 7 formas, vocalización, construcción RTL, seis preguntas, pausa, recarga, lectura con dos respuestas válidas, trazado, parejas, texto ampliado y regreso a Radio sin recrear audio.');
 assert(!/https?:\/\//.test(fs.readFileSync(path.join(base,'pozo-content.js'),'utf8')));console.log('PASS · 12 fichas internas, retorno al ejercicio sin duplicar intentos, sin URLs externas en contenido ni enlaces de salida en el Pozo.');
 })().catch(e=>{console.error(e);process.exit(1)});
