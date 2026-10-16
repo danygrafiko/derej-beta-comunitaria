@@ -150,9 +150,17 @@
  screen.addEventListener('change',e=>{if(e.target.id==='pzNikud')root.querySelectorAll('[data-word-he]').forEach(el=>el.textContent=e.target.checked?C.words[el.dataset.wordHe].vocalized:C.words[el.dataset.wordHe].bare)});
  screen.addEventListener('keydown',e=>{if(!e.target.matches('[role=tab]')||!['ArrowLeft','ArrowRight','Home','End'].includes(e.key))return;e.preventDefault();selectedLetter=e.key==='Home'?0:e.key==='End'?C.letters.length-1:(selectedLetter+(e.key==='ArrowRight'?1:-1)+C.letters.length)%C.letters.length;open('letters',false);document.getElementById('pzLetterTab'+selectedLetter)?.focus()});
  function tracePoint(e,svg){const r=svg.getBoundingClientRect();return [Math.round((e.clientX-r.left)/r.width*360),Math.round((e.clientY-r.top)/r.height*270)]}
- screen.addEventListener('pointerdown',e=>{const svg=e.target.closest('#pzTrace');if(!svg||e.button!==0)return;e.preventDefault();svg.setPointerCapture?.(e.pointerId);drawing={pointerId:e.pointerId,points:[tracePoint(e,svg)]};traceStrokes.push(drawing.points);drawStrokes()});
- screen.addEventListener('pointermove',e=>{if(!drawing||drawing.pointerId!==e.pointerId)return;const svg=document.getElementById('pzTrace');if(!svg)return;e.preventDefault();drawing.points.push(tracePoint(e,svg));drawStrokes()});
+ function beginTrace(svg,e,pointerId){drawing={pointerId,points:[tracePoint(e,svg)]};traceStrokes.push(drawing.points);drawStrokes()}
+ screen.addEventListener('pointerdown',e=>{const svg=e.target.closest('#pzTrace');if(!svg||drawing||e.isPrimary===false||e.button!==0)return;if(e.cancelable)e.preventDefault();try{svg.setPointerCapture?.(e.pointerId)}catch{}beginTrace(svg,e,e.pointerId)},{passive:false});
+ screen.addEventListener('pointermove',e=>{if(!drawing||drawing.pointerId!==e.pointerId)return;const svg=document.getElementById('pzTrace');if(!svg)return;if(e.cancelable)e.preventDefault();drawing.points.push(tracePoint(e,svg));drawStrokes()},{passive:false});
  ['pointerup','pointercancel','lostpointercapture'].forEach(type=>screen.addEventListener(type,e=>{if(drawing?.pointerId===e.pointerId)drawing=null}));
+ // El bloqueo pertenece a la superficie HTML, además del SVG. Los listeners
+ // no pasivos cubren navegadores que siguen interpretando el gesto como scroll.
+ screen.addEventListener('touchstart',e=>{const box=e.target.closest('.pzTraceBox'),svg=box?.querySelector('#pzTrace');if(!svg)return;if(e.cancelable)e.preventDefault();if(!window.PointerEvent&&!drawing&&e.touches.length===1)beginTrace(svg,e.touches[0],'touch')},{passive:false});
+ screen.addEventListener('touchmove',e=>{const box=e.target.closest('.pzTraceBox');if(!box)return;if(e.cancelable)e.preventDefault();if(!window.PointerEvent&&drawing?.pointerId==='touch'){const touch=e.touches[0],svg=box.querySelector('#pzTrace');if(touch&&svg){drawing.points.push(tracePoint(touch,svg));drawStrokes()}}},{passive:false});
+ ['touchend','touchcancel'].forEach(type=>screen.addEventListener(type,()=>{if(drawing?.pointerId==='touch')drawing=null}));
+ screen.addEventListener('wheel',e=>{if(drawing&&e.target.closest('.pzTraceBox')&&e.cancelable)e.preventDefault()},{passive:false});
+ screen.addEventListener('dragstart',e=>{if(e.target.closest('.pzTraceBox'))e.preventDefault()});
  if('speechSynthesis'in window)window.speechSynthesis.addEventListener?.('voiceschanged',refreshVoices);
  const previousRoute=route;
  route=function(name){previousRoute(name);if(name==='pozo')open('home');else if(drawing)drawing=null};
