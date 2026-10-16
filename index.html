@@ -6,6 +6,7 @@
 <meta name="theme-color" content="#182016">
 <title>DÉREJ · El Camino</title>
 <link rel="stylesheet" href="prelaunch-local.css">
+<link rel="stylesheet" href="pozo-learning.css?v=1">
 <style>
   .brandButton .derejWordmark{display:flex;flex-direction:column;align-items:flex-start;line-height:1}
   .brandButton .derejWordmark b{letter-spacing:.16em}
@@ -36,6 +37,7 @@
       <button class="portal portalCamino" data-route="camino" aria-label="Entrar a Camino"><span class="portalSigil">דרך</span><span class="portalLabel"><small>SENDERO · AMANECER</small><b>Camino</b><em>Entrar</em></span></button>
       <button class="portal portalRadio" data-route="radio" aria-label="Entrar a Radio"><span class="portalSigil">◔</span><span class="portalLabel"><small>NOCHE · ESCUCHA</small><b>Radio</b></span></button>
       <button class="portal portalPersonal" data-route="personal" aria-label="Entrar a Mi Camino"><span class="portalSigil">⌁</span><span class="portalLabel"><small>HUELLAS · BROTES</small><b>Mi Camino</b></span></button>
+      <button class="pozoHotspot" data-route="pozo" aria-label="Acercarse al Pozo y descubrir su interior"><span class="pozoRipple" aria-hidden="true"></span><span class="pozoHotspotLabel">El Pozo <span aria-hidden="true">↓</span></span></button>
       <div class="homeFooter">La pantalla abre una puerta. El Camino continúa fuera de ella.</div>
     </div>
   </section>
@@ -166,6 +168,9 @@
   <section class="screen placeholder" data-screen="moed" hidden><button class="backBtn" data-route="home">← Volver al patio</button><div><small>MOED</small><h1>Tiempo · estaciones · memoria</h1><p>Tiempos señalados para detenerse, recordar y volver a mirar el Camino.</p></div></section>
   <section class="screen placeholder dark" data-screen="radio" hidden><button class="backBtn" data-route="home">← Volver al patio</button><div><small>RADIO</small><h1>Noche · escucha · contemplación</h1><p>Meditación · Parashá · Hitbodedut. Escucha sin salir del Camino.</p></div></section>
   <section class="screen placeholder" data-screen="personal" hidden><button class="backBtn" data-route="home">← Volver al patio</button><div><small>MI CAMINO</small><h1>Huellas · brotes · memoria</h1><p>Memoria personal sin puntuación, niveles ni rachas.</p></div></section>
+  <section class="screen pozoScreen" data-screen="pozo" hidden aria-labelledby="pozoTitle">
+    <div id="pozoRoot"><button class="backBtn" data-route="home">← Patio</button><h1 id="pozoTitle">El Pozo</h1><p>Preparando el encuentro…</p></div>
+  </section>
 </main>
 <script src="encuentros-v21.js"></script>
 <script src="prelaunch-local.js"></script>
@@ -177,6 +182,8 @@
 
 
 <script src="navigation-v241.js"></script>
+<script src="pozo-content.js?v=1"></script>
+<script src="pozo-learning.js?v=1"></script>
   
 </body>
 </html>
