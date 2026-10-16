@@ -10,6 +10,34 @@ window.DEREJ_POZO_CONTENT={
   {id:'dalet',glyph:'ד',name:'Dálet',hebrewName:'דָּלֶת',value:4,sound:'D, como en día, en la pronunciación introductoria utilizada aquí.',look:'Un techo con un pequeño saliente en la esquina superior derecha.',note:'Compárala con ר, resh. Mirar esa esquina ayuda a distinguirlas.'},
   {id:'mem-final',glyph:'ם',name:'Mem final',hebrewName:'מֵם סוֹפִית',value:40,sound:'Conserva el sonido m de mem.',look:'Su forma final se cierra.',word:'mayim',note:'No es una letra nueva del alfabeto: es la forma de mem al final de palabra.'}
  ],
+ memoryAlphabet:[
+  {id:'alef',glyph:'א',name:'Álef'},{id:'bet',glyph:'ב',name:'Bet'},
+  {id:'gimel',glyph:'ג',name:'Guímel'},{id:'dalet',glyph:'ד',name:'Dálet'},
+  {id:'he',glyph:'ה',name:'He'},{id:'vav',glyph:'ו',name:'Vav'},
+  {id:'zayin',glyph:'ז',name:'Zayin'},{id:'jet',glyph:'ח',name:'Jet'},
+  {id:'tet',glyph:'ט',name:'Tet'},{id:'yod',glyph:'י',name:'Yod'},
+  {id:'kaf',glyph:'כ',name:'Kaf'},{id:'lamed',glyph:'ל',name:'Lámed'},
+  {id:'mem',glyph:'מ',name:'Mem'},{id:'nun',glyph:'נ',name:'Nun'},
+  {id:'samej',glyph:'ס',name:'Sámej'},{id:'ayin',glyph:'ע',name:'Áyin'},
+  {id:'pe',glyph:'פ',name:'Pe'},{id:'tsadi',glyph:'צ',name:'Tsadi'},
+  {id:'qof',glyph:'ק',name:'Qof'},{id:'resh',glyph:'ר',name:'Resh'},
+  {id:'shin',glyph:'ש',name:'Shin'},{id:'tav',glyph:'ת',name:'Tav'},
+  {id:'kaf-final',glyph:'ך',name:'Kaf final',base:'kaf'},
+  {id:'mem-final',glyph:'ם',name:'Mem final',base:'mem'},
+  {id:'nun-final',glyph:'ן',name:'Nun final',base:'nun'},
+  {id:'pe-final',glyph:'ף',name:'Pe final',base:'pe'},
+  {id:'tsadi-final',glyph:'ץ',name:'Tsadi final',base:'tsadi'}
+ ],
+ memoryLevels:[
+  {title:'Las primeras formas',ids:['alef','bet','gimel','dalet'],tip:'Mira cada forma junto a su nombre antes de ocultar las cartas.'},
+  {title:'Trazos y aberturas',ids:['he','vav','zayin','jet'],tip:'Observa las aberturas de he y jet, y la cabeza de vav y zayin.'},
+  {title:'Alturas y curvas',ids:['tet','yod','kaf','lamed'],tip:'Yod es pequeña; lámed sobresale hacia arriba. Busca primero esos detalles.'},
+  {title:'Cuatro nuevos encuentros',ids:['mem','nun','samej','ayin'],tip:'Observa qué formas se cierran y cuáles tienen una abertura.'},
+  {title:'El detalle que distingue',ids:['pe','tsadi','qof','resh'],tip:'Antes de recordar su lugar, mira los trazos que distinguen cada letra.'},
+  {title:'Cerrar el alfabeto',ids:['shin','tav','dalet','resh'],tip:'Con shin y tav llegas a las 22 letras. Reencontramos dálet y resh para distinguir sus esquinas.'},
+  {title:'Las cinco formas finales',ids:['kaf-final','mem-final','nun-final','pe-final','tsadi-final'],tip:'Son formas que adoptan cinco letras al final de palabra. No son cinco letras nuevas.'},
+  {title:'El alfabeto completo',review:true,tip:'Un repaso en siete rondas breves: aparecen las 22 letras y las cinco formas finales, sin omitir ninguna.'}
+ ],
  words:[
   {id:'mayim',vocalized:'מַיִם',bare:'מים',latin:'Máyim',meaning:'Agua · aguas',letters:['מ','י','ם'],audio:'מַיִם',
    vowelNote:'El pequeño trazo bajo מ se llama pataj. En esta palabra aporta a; el punto bajo י se llama jirik y aporta i. La transliteración es una ayuda aproximada.',

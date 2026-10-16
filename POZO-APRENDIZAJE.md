@@ -34,3 +34,13 @@ La portada del taller ofrece un recorrido de unos diez minutos, sin reemplazar l
 No se exige completar la segunda palabra, todos los juegos ni los valores numéricos. El registro no marca una sesión completada por abrir la guía. La aplicación no recoge respuestas de la conversación. La entrada permanece sutil también tras descubrirla.
 
 El material distingue texto bíblico, explicación didáctica y reflexión personal; no promete medir neuroplasticidad. La voz sigue siendo opcional y depende del dispositivo. Se conserva el contenido interno, sin añadir fuentes externas.
+
+## Espejo del recuerdo · alfabeto completo
+
+Ocho niveles de reconocimiento entre letra y nombre: seis grupos cubren las 22 letras (el sexto introduce shin y tav y repasa dálet y resh), el séptimo presenta las cinco formas finales y el octavo recorre las 27 formas en siete rondas de hasta cuatro parejas. Las formas finales no se cuentan como letras adicionales.
+
+Cada grupo tiene una vista de estudio antes de ocultar las cartas y puede consultarse durante el juego. Los niveles son de libre acceso y se guardan sólo al encontrar todas sus parejas; el repaso completo exige terminar sus siete rondas. Los tableros pendientes se reinician al recargar. El avance anterior se conserva y no se atribuyen niveles nuevos a prácticas antiguas.
+
+## Trazado y zoom del navegador
+
+El modo de dibujo bloquea el desplazamiento de un dedo dentro de la guía y permite el gesto de ampliación con varios dedos. «Mover pantalla» libera los gestos de desplazamiento y conserva la tinta; «Dibujar» retoma el trazo. Una barra con estos controles y «Salir del trazo» sigue el área visible mediante VisualViewport y compensa la escala del zoom. No se desactiva la ampliación del navegador. La prueba de gestos físicos en Safari de iPhone se realiza por separado.
