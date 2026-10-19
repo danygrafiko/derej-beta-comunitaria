@@ -127,8 +127,9 @@
   const previousRoute=route;
   route=function(name){
     previousRoute(name);
-    if(name==='camino' && typeof RAMAK_DATA!=='undefined' && RAMAK_DATA){
+    if(!window.DEREJ_INTRO_RESUMING && name==='camino' && typeof RAMAK_DATA!=='undefined' && RAMAK_DATA){
       setTimeout(focusEncounter,110);
     }
   };
 })();
+
