@@ -7,6 +7,7 @@
 <title>DÉREJ · El Camino</title>
 <link rel="stylesheet" href="prelaunch-local.css">
 <link rel="stylesheet" href="pozo-learning.css?v=6">
+<link rel="stylesheet" href="analytics.css?v=1">
 <style>
   .brandButton .derejWordmark{display:flex;flex-direction:column;align-items:flex-start;line-height:1}
   .brandButton .derejWordmark b{letter-spacing:.16em}
@@ -38,7 +39,7 @@
       <button class="portal portalRadio" data-route="radio" aria-label="Entrar a Radio"><span class="portalSigil">◔</span><span class="portalLabel"><small>NOCHE · ESCUCHA</small><b>Radio</b></span></button>
       <button class="portal portalPersonal" data-route="personal" aria-label="Entrar a Mi Camino"><span class="portalSigil">⌁</span><span class="portalLabel"><small>HUELLAS · BROTES</small><b>Mi Camino</b></span></button>
       <button class="pozoHotspot" data-route="pozo" aria-label="Acercarse al Pozo y descubrir su interior"><span class="pozoRipple" aria-hidden="true"></span></button>
-      <div class="homeFooter">La pantalla abre una puerta. El Camino continúa fuera de ella.</div>
+      <div class="homeFooter">La pantalla abre una puerta. El Camino continúa fuera de ella.<button type="button" id="metricsPrivacyOpen" class="metricsPrivacyOpen">Privacidad y métricas</button></div>
     </div>
   </section>
 
@@ -172,6 +173,15 @@
     <div id="pozoRoot"><button class="backBtn" data-route="home">← Patio</button><h1 id="pozoTitle">El Pozo</h1><p>Preparando el encuentro…</p></div>
   </section>
 </main>
+<dialog id="metricsPrivacy" class="metricsPrivacy" aria-labelledby="metricsPrivacyTitle">
+  <h2 id="metricsPrivacyTitle">Privacidad en Dérej</h2>
+  <p>Tus reflexiones, textos y progreso permanecen en este dispositivo.</p>
+  <p>Para mejorar el Camino contamos visitas, puertas abiertas y actividad de la radio. Usamos códigos aleatorios que cambian cada día, sin nombres ni correos. El registro de métricas no guarda tu dirección IP ni lo que escribes.</p>
+  <label><input type="checkbox" id="metricsConsent">Permitir métricas anónimas</label>
+  <small>Puedes desactivarlas aquí cuando quieras. Esto no afecta al estudio ni a la radio. Los proveedores de alojamiento pueden conservar sus registros técnicos habituales.</small>
+  <small id="metricsBrowserChoice" hidden>Tu navegador solicita no participar en el seguimiento. Respetamos esa preferencia y las métricas están desactivadas.</small>
+  <button type="button" id="metricsPrivacyClose" class="metricsPrivacyClose">Volver al Camino</button>
+</dialog>
 <script src="encuentros-v21.js"></script>
 <script src="prelaunch-local.js"></script>
 
@@ -184,6 +194,7 @@
 <script src="navigation-v241.js"></script>
 <script src="pozo-content.js?v=4"></script>
 <script src="pozo-learning.js?v=6"></script>
+<script src="analytics.js?v=1"></script>
   
 </body>
 </html>

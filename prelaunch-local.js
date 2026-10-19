@@ -29604,6 +29604,8 @@ loadRamak();
     try{localStorage.setItem('derej-v21-radio-index:'+collectionId,String(index));}catch{}
     const t=tracks[index];
     audio.pause();
+    audio.dataset.metricsTrack=t.id;
+    audio.dataset.metricsCollection=collectionId;
     title.textContent=t.title;
     meta.textContent=`${t.artist||'Danygrafiko'} · ${t.collection||'Radio Dérej'}`;
     duration.textContent=t.duration||'0:00';
