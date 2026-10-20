@@ -20,6 +20,15 @@ w.fetch=async url=>({ok:true,json:async()=>String(url).includes('caminos-ramak')
  for(const f of ['encuentros-v21.js','prelaunch-local.js','mobile-v234.js','navigation-v235.js','cleanup-v236.js','navigation-v241.js'])evaluate(fs.readFileSync(path.join(root,f),'utf8'));
  await pause();
  evaluate('route("camino")');
+ // Recorrido de ida y vuelta: solo una etapa y un panel activos por selección.
+ for(const step of ['profundizar','raiz','practica','llevar','encuentro','profundizar','encuentro']){
+  w.document.querySelector(`.ramakThreshold[data-ramak-step="${step}"]`).click();
+  assert.equal(w.document.querySelectorAll('.ramakThreshold.on').length,1);
+  assert.equal(w.document.querySelector('.ramakThreshold.on').dataset.ramakStep,step);
+  assert.equal(w.document.querySelectorAll('.ramakThreshold[aria-current="step"]').length,1);
+  assert.equal(w.document.querySelectorAll('.ramakPanel.on').length,1);
+  assert.equal(w.document.querySelector('.ramakPanel.on').dataset.ramakPanel,step);
+ }
  // Cada selección usa el mismo evento que recibe el selector de la página.
  for(const p of data.parashot){
   const tab=w.document.querySelector(`[data-ramak-parasha="${p.parasha}"]`);assert(tab,p.parasha);tab.click();

@@ -8280,7 +8280,11 @@ function renderDayStrip(p,c){
 function activateRamakStep(step,scroll=true){
   selectedRamakStep=step;
   caminoScreen?.querySelectorAll('[data-ramak-step]').forEach(b=>{
-    if(b.classList.contains('ramakThreshold')) b.classList.toggle('on',b.dataset.ramakStep===step);
+    if(b.classList.contains('ramakThreshold')){
+      const active=b.dataset.ramakStep===step;
+      b.classList.toggle('on',active);
+      if(active)b.setAttribute('aria-current','step');else b.removeAttribute('aria-current');
+    }
   });
   caminoScreen?.querySelectorAll('[data-ramak-panel]').forEach(p=>p.classList.toggle('on',p.dataset.ramakPanel===step));
   if(scroll) caminoScreen?.querySelector('.ramakThresholdRail')?.scrollIntoView({behavior:'smooth',block:'start'});

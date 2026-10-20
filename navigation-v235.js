@@ -24,6 +24,16 @@
 
       .ramakThresholdRail{
         scroll-margin-top:calc(58px + env(safe-area-inset-top));
+        /* Fondo opaco: evita restos de pintura al cambiar etapas en iOS. */
+        background:#efe2ca!important;
+        -webkit-backdrop-filter:none!important;
+        backdrop-filter:none!important;
+        isolation:isolate;
+      }
+
+      .ramakThreshold{
+        -webkit-tap-highlight-color:transparent;
+        background-clip:padding-box;
       }
 
       @media(max-width:600px){
