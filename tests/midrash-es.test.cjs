@@ -1,0 +1,54 @@
+const {JSDOM}=require('jsdom');
+const fs=require('node:fs');
+const path=require('node:path');
+const vm=require('node:vm');
+const assert=require('node:assert/strict');
+const root=path.join(__dirname,'..');
+const dom=new JSDOM(fs.readFileSync(path.join(root,'index.html'),'utf8'),{url:'https://derej-beta-comunitaria.vercel.app/',runScripts:'outside-only',pretendToBeVisual:true});
+const w=dom.window;
+const evaluate=s=>vm.runInContext(s,dom.getInternalVMContext());
+w.matchMedia=()=>({matches:false,addEventListener(){},removeEventListener(){}});
+w.HTMLElement.prototype.scrollIntoView=function(){};
+w.scrollTo=()=>{};
+let pauses=0;
+w.HTMLMediaElement.prototype.load=function(){};
+w.HTMLMediaElement.prototype.pause=function(){pauses++;};
+w.setInterval=()=>0;
+const requests=[];
+w.fetch=async url=>{
+ requests.push(String(url));
+ return {ok:true,json:async()=>JSON.parse(fs.readFileSync(path.join(root,String(url).includes('caminos-ramak')?'content/caminos-ramak-v25.json':'radio.json'),'utf8'))};
+};
+(async()=>{
+ for(const f of ['encuentros-v21.js','prelaunch-local.js','mobile-v234.js','navigation-v235.js','cleanup-v236.js','navigation-v241.js','midrash-lecturas-es.js','midrash-es.js'])evaluate(fs.readFileSync(path.join(root,f),'utf8'));
+ await new Promise(r=>setTimeout(r,90));
+ evaluate('route("camino")');
+ const oldProgress=w.localStorage.getItem('derej-v23-camino-progress');
+ const oldRequests=requests.length;
+ const oldPauses=pauses;
+ let reader=w.document.getElementById('derejMidrashReader');
+ assert(reader);assert(!reader.open);
+ reader.open=true;reader.dispatchEvent(new w.Event('toggle'));
+ const select=reader.querySelector('select');assert.equal(select.options.length,7);
+ for(let i=0;i<7;i++){
+  select.value=String(i);select.dispatchEvent(new w.Event('change'));
+  const content=reader.querySelector('article');
+  assert(content.querySelector('h3').textContent.length>8);
+  assert(content.textContent.includes('Adaptación editorial de un pasaje seleccionado'));
+  assert(!/[\u0590-\u05ff]/.test(content.textContent));
+  assert.equal(content.querySelectorAll('a').length,0);
+  assert(content.querySelectorAll('p').length>=8);
+  assert.equal(reader.querySelector('[data-midrash-prev]').disabled,i===0);
+  assert.equal(reader.querySelector('[data-midrash-next]').disabled,i===6);
+ }
+ reader.querySelector('[data-midrash-prev]').click();assert.equal(select.value,'5');
+ w.document.querySelector('#ramakDayStrip [data-ramak-day="2"]').click();
+ await new Promise(r=>setTimeout(r,50));
+ reader=w.document.getElementById('derejMidrashReader');
+ assert.equal(w.document.querySelectorAll('#derejMidrashReader').length,1);
+ assert.equal(reader.querySelector('select').value,'5');assert(reader.open);
+ assert.equal(w.localStorage.getItem('derej-v23-camino-progress'),oldProgress);
+ assert.equal(requests.length,oldRequests);assert.equal(pauses,oldPauses);
+ console.log('PASS: siete lecturas españolas, fuente y adaptación identificadas, navegación y límites, estado conservado al cambiar de día, sin solicitudes externas ni interrupción de audio.');
+ dom.window.close();
+})().catch(e=>{console.error(e);dom.window.close();process.exit(1);});
