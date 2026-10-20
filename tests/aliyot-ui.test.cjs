@@ -40,6 +40,8 @@ w.fetch=async url=>({ok:true,json:async()=>String(url).includes('caminos-ramak')
    assert(card.textContent.includes(c.aliyaRange));
    const rootPanel=w.document.querySelector('[data-ramak-panel="raiz"]');assert(rootPanel.textContent.includes(c.pasuk.es));
    assert.equal(w.document.querySelectorAll('.ramakVoices .ramakVoice').length,4);
+   assert.equal(w.document.querySelectorAll('.ramakVoices a[href*="sefaria.org"]').length,0);
+   assert.equal(url.hostname,'parashot.com.ar');
   }
  }
  // El camino seleccionado conserva datos locales de visitas previas.
@@ -50,6 +52,17 @@ w.fetch=async url=>({ok:true,json:async()=>String(url).includes('caminos-ramak')
  const incomplete=JSON.parse(JSON.stringify(data));incomplete.parashot[2].caminos.pop();
  w.fetch=async()=>({ok:true,json:async()=>incomplete});
  await evaluate('loadRamak()');assert(w.document.getElementById('ramakChooser').textContent.includes('Contenido diario incompleto'));
+ // La guía conserva sus referencias dentro de Dérej, sin enlaces a Sefaria.
+ w.HTMLDialogElement.prototype.showModal=function(){this.setAttribute('open','');};
+ w.HTMLDialogElement.prototype.close=function(){this.removeAttribute('open');};
+ w.localStorage.setItem('derej-welcome-v1',JSON.stringify({completed:true}));
+ evaluate(fs.readFileSync(path.join(root,'welcome.js'),'utf8'));
+ w.document.querySelector('[data-welcome-open]').click();
+ w.document.querySelector('[data-welcome="new"]').click();
+ for(let i=0;i<5;i++){
+  assert.equal(w.document.querySelectorAll('#derejWelcome a[href*="sefaria.org"]').length,0);
+  if(i<4)w.document.querySelector('[data-welcome="next"]').click();
+ }
  console.log('PASS: selector y cuatro voces en 140 jornadas, tarjeta de aliyá y rango, número del enlace externo, progreso local conservado y rechazo visible de una edición incompleta.');
  dom.window.close();
 })().catch(e=>{console.error(e);dom.window.close();process.exit(1);});
