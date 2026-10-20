@@ -9091,7 +9091,10 @@ function scene(c,label){
 
 function renderVoiceCard(raw,label){
   if(raw&&typeof raw==='object'){
-    return `<article class="ramakVoice"><small>${esc(label.toUpperCase())}</small><b class="derejVoiceSource">${esc(raw.fuente||label)}</b>${raw.tipo?`<span class="derejVoiceType">${esc(raw.tipo)}</span>`:''}<p>${esc(raw.texto||'')}</p></article>`;
+    const source=raw.url&&/^https:\/\/www\.sefaria\.org\//.test(raw.url)
+      ? `<a href="${esc(raw.url)}" target="_blank" rel="noopener noreferrer">${esc(raw.fuente||label)} ↗</a>`
+      : esc(raw.fuente||label);
+    return `<article class="ramakVoice"><small>${esc(label.toUpperCase())}</small><b class="derejVoiceSource">${source}</b>${raw.tipo?`<span class="derejVoiceType">${esc(raw.tipo)}</span>`:''}${raw.base?`<p><strong>Marco de la fuente.</strong> ${esc(raw.base)}</p>`:''}<p>${raw.base?'<strong>Aplicación Dérej.</strong> ':''}${esc(raw.texto||'')}</p></article>`;
   }
   return `<article class="ramakVoice"><small>${esc(label.toUpperCase())}</small><b>${esc(label)}</b><p>${esc(raw||'')}</p></article>`;
 }
@@ -12807,7 +12810,8 @@ function renderRamak(scrollToChooser=false){
 function renderRamakError(){
   if(!caminoScreen) return;
   const chooser=$('ramakChooser');
-  if(chooser) chooser.innerHTML=`<div class="ramakLoading">No fue posible cargar Caminos Diarios. Verifica que <b>content/caminos-ramak-v25.json</b> esté en la rama.</div>`;
+  const incomplete=String(ramakLoadError||'').startsWith('Contenido diario incompleto');
+  if(chooser) chooser.innerHTML=`<div class="ramakLoading" role="status">${incomplete?esc(ramakLoadError):'No pudimos cargar el estudio. Comprueba tu conexión e inténtalo de nuevo.'}</div>`;
 }
 
 
@@ -13071,6 +13075,13 @@ async function loadRamak(){
     if(!res.ok) throw new Error(`HTTP ${res.status}`);
     const data=await res.json();
     if(!Array.isArray(data.parashot)||!data.parashot.length) throw new Error('Datos vacíos');
+    // Una edición incompleta no debe volver silenciosamente al día 1.
+    for(const p of data.parashot){
+      const days=new Set((p.caminos||[]).map(c=>Number(c.dia)));
+      if(p.caminos?.length!==7||days.size!==7||![1,2,3,4,5,6,7].every(d=>days.has(d))){
+        throw new Error(`Contenido diario incompleto en ${p.parasha||'esta parashá'}. Estamos preparando los días pendientes.`);
+      }
+    }
     RAMAK_DATA=data;
     window.DEREJ_RAMAK_V25=data;
     selectedParasha=data.parashot.some(p=>p.parasha===selectedParasha)?selectedParasha:data.parashot[0].parasha;
