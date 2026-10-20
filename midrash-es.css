@@ -4,28 +4,22 @@
 .ramakCaminoScreen .ramakRefs>span:empty{display:none}
 .ramakCaminoScreen .ramakRefs .derejTermWrap{display:inline!important;padding:0!important;margin:0!important;border:0!important;border-radius:0!important;background:transparent!important;font:inherit!important;line-height:inherit!important}
 
-#derejMidrashReader{margin:18px 0;border:1px solid #c6b595;border-radius:16px;background:#faf3e5;overflow:hidden;color:#39382d}
-#derejMidrashReader>summary{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:56px;padding:13px 15px;cursor:pointer;list-style:none;font:700 .95rem/1.35 Georgia,serif}
-#derejMidrashReader>summary::-webkit-details-marker{display:none}
-#derejMidrashReader>summary small{display:block;margin-top:3px;color:#756b59;font:400 .7rem/1.4 system-ui,sans-serif;letter-spacing:0}
-#derejMidrashReader>summary::after{content:'+';flex:none;font:400 1.4rem/1 system-ui,sans-serif;color:#53624b}
-#derejMidrashReader[open]>summary::after{content:'−'}
-#derejMidrashReader[open]>summary{border-bottom:1px solid #ded1b9}
-#derejMidrashReader summary:focus-visible,#derejMidrashReader select:focus-visible,#derejMidrashReader button:focus-visible{outline:2px solid #53624b;outline-offset:3px}
-#derejMidrashReader .midrashContent{padding:15px}
-#derejMidrashReader label{display:block;font:700 .72rem/1.4 system-ui,sans-serif;margin:0 0 6px;color:#5c614f}
-#derejMidrashReader select{display:block;width:100%;max-width:100%;min-height:44px;padding:9px 30px 9px 10px;border:1px solid #bca985;border-radius:10px;background:#fffaf0;color:#3e4436;font:400 .82rem/1.35 system-ui,sans-serif}
-#derejMidrashReader .midrashCycleNote{margin:9px 0 17px;color:#756b59;font:.72rem/1.5 system-ui,sans-serif}
-#derejMidrashReader h3{margin:0 0 8px;font:1.35rem/1.25 Georgia,serif;color:#354532}
-#derejMidrashReader .midrashSource{display:block;margin:0 0 6px;font:.73rem/1.5 system-ui,sans-serif;color:#6d604d}
-#derejMidrashReader .midrashEditorial{margin:0 0 16px;font:italic .72rem/1.45 system-ui,sans-serif;color:#756b59}
-#derejMidrashReader p{margin:0 0 12px;line-height:1.65;font-size:.94rem;color:#494437}
-#derejMidrashReader .midrashMore{margin:15px 0 0;padding-top:12px;border-top:1px solid #ded1b9}
-#derejMidrashReader .midrashMore>summary{cursor:pointer;color:#46543d;font:700 .82rem/1.4 system-ui,sans-serif;min-height:38px}
-#derejMidrashReader h4{font:700 .78rem/1.4 system-ui,sans-serif;color:#46543d;margin:16px 0 7px}
-#derejMidrashReader .midrashNav{display:flex;justify-content:space-between;gap:10px;margin-top:17px}
-#derejMidrashReader .midrashNav button{min-height:44px;min-width:0;padding:9px 13px;border:1px solid #a99879;border-radius:10px;background:#fffaf0;color:#354532;font:600 .78rem/1.4 system-ui,sans-serif}
-#derejMidrashReader .midrashNav button:disabled{opacity:.42;cursor:default}
-#derejMidrashReader .derejTermWrap{display:inline;font:inherit}
-#derejMidrashReader .derejTermIcon{display:none!important}
-@media(min-width:760px){.ramakCaminoScreen .ramakRefs{gap:5px}#derejMidrashReader .midrashContent{padding:20px}}
+/* La lectura del día se integra en Raíz; las preguntas viven en Profundizar. */
+#derejMidrashDaily{margin:20px 0;padding:18px 0 4px;border-top:1px solid #cdbd9f;color:#494437}
+#derejMidrashDaily .midrashDailyEyebrow{font:800 .62rem/1.4 system-ui,sans-serif;letter-spacing:.13em;color:#657052;margin:0 0 7px}
+#derejMidrashDaily h3{font:1.4rem/1.25 Georgia,serif;color:#354532;margin:0 0 6px}
+#derejMidrashDaily p{font-size:.94rem;line-height:1.65;margin:0 0 12px;color:#494437}
+#derejMidrashDaily .midrashDailyPassage{font:600 .76rem/1.5 system-ui,sans-serif;margin-bottom:5px;color:#58634b}
+#derejMidrashDaily .midrashDailySource{font:.73rem/1.5 system-ui,sans-serif;color:#6d604d;margin-bottom:4px}
+#derejMidrashDaily .midrashDailyEditorial{font:italic .7rem/1.5 system-ui,sans-serif;color:#7b7161;margin-bottom:15px}
+#derejMidrashDaily .midrashDailyBridge{padding-top:10px}
+#derejMidrashDaily h4{font:700 .78rem/1.4 system-ui,sans-serif;margin:0 0 7px;color:#53624b}
+#derejMidrashDaily .midrashDailyBridge p{font-size:.85rem}
+#derejMidrashQuestions{margin:20px 0 15px;border-top:1px solid #cdbd9f;border-bottom:1px solid #cdbd9f}
+#derejMidrashQuestions>summary{padding:14px 0;min-height:48px;cursor:pointer;font:700 .9rem/1.4 Georgia,serif;color:#46543d}
+#derejMidrashQuestions>summary:focus-visible{outline:2px solid #53624b;outline-offset:3px}
+#derejMidrashQuestions .midrashQuestionsIntro{font:.76rem/1.5 system-ui,sans-serif;color:#756b59;margin:0 0 10px}
+#derejMidrashQuestions ol{padding-left:1.3rem;margin:0 0 16px}
+#derejMidrashQuestions li{padding-left:3px;margin-bottom:12px;line-height:1.6;font-size:.9rem;color:#494437}
+#derejMidrashDaily .derejTermWrap,#derejMidrashQuestions .derejTermWrap{display:inline;font:inherit}
+#derejMidrashDaily .derejTermIcon,#derejMidrashQuestions .derejTermIcon{display:none!important}
