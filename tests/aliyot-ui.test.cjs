@@ -39,6 +39,7 @@ w.fetch=async url=>({ok:true,json:async()=>String(url).includes('caminos-ramak')
    const url=new URL(card.querySelector('a').href);assert.equal(url.searchParams.get('aliya'),String(c.dia));
    assert(card.textContent.includes(c.aliyaRange));
    const rootPanel=w.document.querySelector('[data-ramak-panel="raiz"]');assert(rootPanel.textContent.includes(c.pasuk.es));
+   if(c.pasuk.es_tipo)assert.equal(rootPanel.querySelector('.derejVerseKind').textContent,c.pasuk.es_tipo);
    assert.equal(w.document.querySelectorAll('.ramakVoices .ramakVoice').length,4);
    assert.equal(w.document.querySelectorAll('.ramakVoices a[href*="sefaria.org"]').length,0);
    assert.equal(url.hostname,'parashot.com.ar');

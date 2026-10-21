@@ -16,7 +16,7 @@ const pause=()=>new Promise(r=>setTimeout(r,40));
  for(const f of ['encuentros-v21.js','prelaunch-local.js','mobile-v234.js','navigation-v235.js','cleanup-v236.js','navigation-v241.js','midrash-diario-es.js','midrash-es.js'])evaluate(fs.readFileSync(path.join(root,f),'utf8'));
  await pause();evaluate('route("camino")');
  const oldProgress=w.localStorage.getItem('derej-v23-camino-progress'),oldRequests=requests.length,oldPauses=pauses;
- const curated=w.DEREJ_MIDRASH_DIARIO_ES;const seen=new Set();let covered=0;
+ const curated=w.DEREJ_MIDRASH_DIARIO_ES;const seen=new Set(),vayeraSeen=new Set();let covered=0;
  for(const p of data.parashot){
   w.document.querySelector(`[data-ramak-parasha="${p.parasha}"]`).click();
   for(const c of p.caminos){
@@ -29,6 +29,7 @@ const pause=()=>new Promise(r=>setTimeout(r,40));
    assert(article.closest('[data-ramak-panel="raiz"]'));assert(questions.closest('[data-ramak-panel="profundizar"]'));
    assert.equal(article.dataset.dayKey,key);assert.equal(questions.dataset.dayKey,key);
    assert.equal(article.querySelector('h3').textContent,item.title);
+   assert.equal(article.querySelector('.midrashDailyEyebrow').textContent,item.eyebrow||'MIDRASH DE HOY');
    assert(article.textContent.includes(item.source));assert(article.textContent.includes('Adaptación al español'));
    assert.equal(article.querySelectorAll('select,a,li').length,0);
    assert.equal(questions.querySelectorAll('li').length,2);assert(!questions.open);
@@ -38,11 +39,12 @@ const pause=()=>new Promise(r=>setTimeout(r,40));
    const point=item.passage.chapter*1000+item.passage.verse;
    assert(point>=Number(range[2])*1000+Number(range[3])&&point<=Number(range[4])*1000+Number(range[5]),key);
    if(p.parasha==='Lej Lejá'){assert(!seen.has(item.text));seen.add(item.text);}
+   if(p.parasha==='Vayera'){assert(!vayeraSeen.has(item.text));vayeraSeen.add(item.text);}
   }
  }
- assert.equal(seen.size,7);assert.equal(covered,10);
+ assert.equal(seen.size,7);assert.equal(vayeraSeen.size,7);assert.equal(covered,17);
  assert.equal(requests.length,oldRequests);assert.equal(pauses,oldPauses);
  assert.equal(w.localStorage.getItem('derej-v23-camino-progress'),oldProgress);
- console.log('PASS: 140 jornadas; 10 lecturas con anclaje bíblico dentro de la lectura diaria, siete Midrash distintos en Lej Lejá, preguntas separadas, ninguna sustitución genérica, progreso y audio conservados.');
+ console.log('PASS: 140 jornadas; 17 lecturas con anclaje bíblico dentro de la lectura diaria, siete Midrash distintos en Lej Lejá, preguntas separadas, ninguna sustitución genérica, progreso y audio conservados.');
  dom.window.close();
 })().catch(e=>{console.error(e);dom.window.close();process.exit(1);});

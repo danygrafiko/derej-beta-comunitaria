@@ -125,7 +125,7 @@ window.DEREJ_MIDRASH_DIARIO_ES={
     "connection": "El versículo sitúa al ser humano en el jardín para trabajarlo y cuidarlo. Este Midrash sobre Eclesiastés ofrece una lectura complementaria de ese cuidado. Nuestra aplicación vuelve al lugar concreto que cada persona puede atender.",
     "questions": [
       "¿Qué bien recibido trato como si fuera inagotable o reemplazable?",
-      "¿Qué práctica de estos siete encuentros quiero mantener?"
+      "¿Qué gesto concreto puede mejorar hoy el cuidado de un lugar que comparto con otros?"
     ]
   },
   "Bereshit|6": {
@@ -159,5 +159,131 @@ window.DEREJ_MIDRASH_DIARIO_ES={
       "¿Qué conducta ajena interpreté demasiado rápido esta semana?",
       "¿Cómo podría preguntar qué ocurre sin invadir ni dar consejos inmediatos?"
     ]
+  },
+  "Vayera|1": {
+    "title": "Ver también es comprender",
+    "passage": {
+      "book": "Bereshit",
+      "chapter": 18,
+      "verse": 2,
+      "label": "Génesis 18:2"
+    },
+    "source": "Rashí sobre Génesis 18:2 · comentario a la repetición de «vio».",
+    "text": "Rashí distingue dos momentos en la mirada de Abraham: primero ve a los visitantes y después comprende que permanecen a distancia para no molestarlo. Abraham se adelanta y sale a recibirlos.",
+    "connection": "Nuestra lectura atiende a la diferencia entre notar una presencia y hacer lugar a una persona. Podemos preguntar qué necesita quien llega, sin suponer que conocemos su situación ni exigirle aceptar nuestra ayuda.",
+    "questions": [
+      "¿Qué diferencia introduce Rashí entre las dos miradas de Abraham?",
+      "¿Cómo puedo ofrecer hoy una bienvenida que deje libertad a la otra persona?"
+    ],
+    "eyebrow": "RASHÍ · LECTURA DE HOY",
+    "editorialLabel": "Adaptación al español de un pasaje seleccionado. La aplicación posterior es elaboración de Dérej."
+  },
+  "Vayera|2": {
+    "title": "Cuando ayudar se vuelve una falta",
+    "passage": {
+      "book": "Bereshit",
+      "chapter": 18,
+      "verse": 21,
+      "label": "Génesis 18:21"
+    },
+    "source": "Talmud de Babilonia · Sanhedrín 109b · relato recogido por Rashí sobre Génesis 18:21.",
+    "text": "La tradición cuenta que una joven daba alimento a una persona pobre en Sodoma. Cuando su ayuda fue descubierta, la castigaron hasta matarla. El clamor de la ciudad queda relacionado con esa violencia contra quien alimenta al necesitado.",
+    "connection": "La escena contiene una violencia que no necesitamos recrear en detalle. Dérej propone preguntar qué ocurre en un entorno cuando ayudar a alguien excluido se vuelve motivo de rechazo. Esta aplicación no identifica a ninguna comunidad actual con Sodoma.",
+    "questions": [
+      "¿Qué revela este relato sobre el trato al pobre y a quien lo ayuda?",
+      "¿A quién podría acompañar de forma concreta, respetuosa y segura?"
+    ],
+    "eyebrow": "AGADÁ DEL TALMUD",
+    "editorialLabel": "Adaptación al español de un pasaje seleccionado. La aplicación posterior es elaboración de Dérej."
+  },
+  "Vayera|3": {
+    "title": "La vida antes que lo que poseemos",
+    "passage": {
+      "book": "Bereshit",
+      "chapter": 19,
+      "verse": 16,
+      "label": "Génesis 19:16"
+    },
+    "source": "Rashí sobre Génesis 19:16 · comentario «se demoraba», basado en Midrash Rabá sobre Génesis 50:11.",
+    "text": "Rashí explica la demora de Lot por su deseo de salvar sus bienes. En el versículo, los mensajeros toman de la mano a Lot, a su esposa y a sus dos hijas y los sacan de la ciudad.",
+    "connection": "La lectura ayuda a distinguir lo que vale conservar de aquello que no puede anteponerse a una vida. En una urgencia real, la práctica es seguir las indicaciones de seguridad y recurrir a ayuda competente; no convertir el riesgo en una prueba de valor personal.",
+    "questions": [
+      "¿Qué razón de la demora destaca Rashí?",
+      "¿Qué apoyo o decisión puede ayudarme a priorizar a las personas frente a lo que poseo?"
+    ],
+    "eyebrow": "MIDRASH DE HOY",
+    "editorialLabel": "Adaptación al español de un pasaje seleccionado. La aplicación posterior es elaboración de Dérej."
+  },
+  "Vayera|4": {
+    "title": "Volver a estar presente por la mañana",
+    "passage": {
+      "book": "Bereshit",
+      "chapter": 19,
+      "verse": 27,
+      "label": "Génesis 19:27"
+    },
+    "source": "Talmud de Babilonia · Berajot 26b · enseñanza transmitida de acuerdo con Rabí Iosei, hijo de Janiná.",
+    "text": "Una enseñanza del Talmud vincula la oración de la mañana con Abraham. Lee su regreso temprano al lugar donde había estado ante Dios como una referencia a la oración. El mismo pasaje conserva otra explicación de los horarios de oración, relacionada con las ofrendas diarias.",
+    "connection": "La fuente describe una tradición de la oración judía. Nuestra propuesta es una pausa personal y libre al comenzar el día. La ubicamos junto a la mirada de Abraham sobre las ciudades destruidas, sin afirmar que la oración borre una pérdida ni obligar a adoptar un rito.",
+    "questions": [
+      "¿Qué relación establece esta enseñanza entre Génesis 19:27 y la oración matinal?",
+      "¿Qué me gustaría reconocer antes de comenzar mis tareas de hoy?"
+    ],
+    "eyebrow": "ENSEÑANZA DEL TALMUD",
+    "editorialLabel": "Adaptación al español de un pasaje seleccionado. La aplicación posterior es elaboración de Dérej."
+  },
+  "Vayera|5": {
+    "title": "Escuchar a quien está aquí, ahora",
+    "passage": {
+      "book": "Bereshit",
+      "chapter": 21,
+      "verse": 17,
+      "label": "Génesis 21:17"
+    },
+    "source": "Rashí sobre Génesis 21:17 · «allí donde está»; remite a Rosh Hashaná 16b y a Midrash Rabá sobre Génesis 53:14.",
+    "text": "Rashí recoge la enseñanza de que Ismael es juzgado por su situación y sus actos presentes, no por lo que puedan hacer sus descendientes. Ante la acusación de los ángeles, la respuesta divina vuelve a quién es el muchacho en ese momento.",
+    "connection": "Esta lectura acompaña el pozo que Agar ve en Génesis 21:19. Dérej propone atender a la persona que necesita agua, sin negarle ayuda por prejuicios sobre su origen o por un futuro imaginado. La necesidad del relato es concreta y urgente.",
+    "questions": [
+      "¿Qué cambia cuando la atención vuelve al muchacho en su situación presente?",
+      "¿Qué suposición necesito suspender para escuchar una necesidad real?"
+    ],
+    "eyebrow": "MIDRASH DE HOY",
+    "editorialLabel": "Adaptación al español de un pasaje seleccionado. La aplicación posterior es elaboración de Dérej."
+  },
+  "Vayera|6": {
+    "title": "Dejar testimonio de un acuerdo",
+    "passage": {
+      "book": "Bereshit",
+      "chapter": 21,
+      "verse": 30,
+      "label": "Génesis 21:30"
+    },
+    "source": "Rashí sobre Génesis 21:30 · comentarios a «como testimonio» y «que cavé este pozo».",
+    "text": "Rashí explica que la señal sirve de testimonio y recuerda la disputa entre los pastores por la autoría del pozo. Recoge también un relato en el que el agua sube al acercarse Abraham y permite reconocerlo.",
+    "connection": "La imagen extraordinaria pertenece al comentario tradicional; no la presentamos como método para resolver conflictos. En nuestra aplicación, un acuerdo necesita hechos claros, reconocimiento del trabajo y condiciones que ambas partes comprendan.",
+    "questions": [
+      "¿Qué disputa concreta acompaña al pacto de Abraham y Avimélej?",
+      "¿Qué responsabilidad o acuerdo conviene dejar claro para cuidar una relación?"
+    ],
+    "eyebrow": "RASHÍ · LECTURA DE HOY",
+    "editorialLabel": "Adaptación al español de un pasaje seleccionado. La aplicación posterior es elaboración de Dérej."
+  },
+  "Vayera|7": {
+    "title": "Escuchar la orden de detenerse",
+    "passage": {
+      "book": "Bereshit",
+      "chapter": 22,
+      "verse": 12,
+      "label": "Génesis 22:12"
+    },
+    "source": "Rashí sobre Génesis 22:12 · comentarios a «no extiendas tu mano» y «no le hagas nada».",
+    "text": "En el diálogo que recoge Rashí, Abraham plantea causar una herida menor después de que se ha detenido el sacrificio. La respuesta vuelve a impedir el daño: tampoco debe hacerle una lesión.",
+    "connection": "Leemos este comentario junto al nombre dado al lugar en Génesis 22:14. La intervención detiene el daño a Isaac. Nuestra práctica pone atención a la capacidad de escuchar un límite y cambiar una acción; no invita a imitar la violencia del relato ni a buscar sufrimiento para demostrar fe.",
+    "questions": [
+      "¿Qué añade Rashí al alcance de la orden de no dañar al muchacho?",
+      "¿Qué límite necesito escuchar o respetar para proteger a otra persona?"
+    ],
+    "eyebrow": "RASHÍ · LECTURA DE HOY",
+    "editorialLabel": "Adaptación al español de un pasaje seleccionado. La aplicación posterior es elaboración de Dérej."
   }
 };

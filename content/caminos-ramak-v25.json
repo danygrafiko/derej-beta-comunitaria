@@ -272,7 +272,7 @@
             "hebreo": "וַיֹּאמֶר יְהֹוָה אֶל־קַיִן אֵי הֶבֶל אָחִיךָ וַיֹּאמֶר לֹא יָדַעְתִּי הֲשֹׁמֵר אָחִי אָנֹֽכִי׃",
             "trans": "",
             "ref": "Bereshit 4:9",
-            "es": "Dios pregunta a Caín por su hermano; Caín responde que no sabe si es su guardián.",
+            "es": "Dios pregunta a Caín dónde está Abel, su hermano. Caín responde que no sabe y pregunta si acaso es el guardián de su hermano.",
             "es_tipo": "PARÁFRASIS DÉREJ",
             "fuente_url": "https://www.sefaria.org/Genesis.4.9"
           },
@@ -919,28 +919,37 @@
             "hebreo": "לֶךְ־לְךָ מֵאַרְצְךָ",
             "trans": "Lej lejá me'artzeja",
             "ref": "Bereshit 12:1",
-            "es": "Vete de tu tierra, de tu lugar de nacimiento y de la casa de tu padre, hacia la tierra que te mostraré."
+            "es": "Vete de tu tierra, de tu lugar de nacimiento y de la casa de tu padre, hacia la tierra que te mostraré.",
+            "es_tipo": "PARÁFRASIS DÉREJ"
           },
           "voces": {
             "rambam": {
-              "fuente": "Mishné Torá · Hiljot Avodá Zará 1:2–3",
-              "tipo": "PARÁFRASIS",
-              "texto": "Rambam describe a Abraham como alguien que empieza a preguntar, observar y buscar la verdad aun cuando todo su entorno sigue otro camino. Salir comienza antes de moverse: comienza cuando ya no puedes dejar de preguntar."
+              "fuente": "Mishné Torá · Hiljot Avodá Zará 1:3",
+              "tipo": "LECTURA DÉREJ",
+              "texto": "El llamado de Abram puede acompañar una pregunta que hemos postergado. Nuestra propuesta es reconocer qué merece ser examinado y dar un paso responsable, sin convertir toda inquietud en una orden de abandonar la propia vida.",
+              "base": "Rambam presenta a Abraham buscando comprender quién gobierna el mundo y cuestionando las creencias de su entorno.",
+              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             },
             "ramak": {
               "fuente": "Tomer Devorah 1:1",
-              "tipo": "SÍNTESIS DÉREJ",
-              "texto": "En clave de Chesed, DÉREJ lee Lej Lejá como una salida que debe volverse conducta de bien. Ir hacia ti no significa encerrarte en ti: significa llegar a una vida capaz de dar mejor."
+              "tipo": "LECTURA DÉREJ",
+              "texto": "Salir hacia una etapa nueva puede ampliar la capacidad de cuidar. En esta lectura, el crecimiento personal se expresa en un gesto de bien hacia alguien concreto.",
+              "base": "Ramak sitúa la semejanza con el Creador en la conducta y en los actos de misericordia.",
+              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             },
             "ramjal": {
-              "fuente": "Derekh Hashem I · propósito de la creación, 2",
-              "tipo": "PARÁFRASIS",
-              "texto": "Ramjal enseña que el ser humano debe adquirir su propia perfección y no recibirla como algo externo. Lej Lejá puede leerse como una invitación a participar activamente en aquello que estás llamado a llegar a ser."
+              "fuente": "Derekh Hashem · parte I, capítulo 2, apartado 2",
+              "tipo": "LECTURA DÉREJ",
+              "texto": "El bien que deseamos necesita participación propia. Nuestra aplicación consiste en elegir una decisión que podamos llevar a la práctica, sin medir el valor de una persona por cuánto logra cambiar.",
+              "base": "Ramjal explica que el bien pleno requiere que quien lo recibe participe en adquirirlo, en lugar de poseerlo solo de manera accidental.",
+              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             },
             "rabiNajman": {
               "fuente": "Likutei Moharan II:48",
               "tipo": "LECTURA DÉREJ",
-              "texto": "Rabí Najman dice que incluso los pequeños movimientos que haces hacia una vida más verdadera se reúnen y llegan a ayudarte. Salir no exige conocer todo el destino: exige dar el siguiente paso real."
+              "texto": "Un paso pequeño puede tener valor aunque el destino todavía no esté claro. Puedes nombrar el siguiente movimiento posible y evitar exigirte una transformación completa en un solo día.",
+              "base": "Rabí Najman anima a perseverar y reconoce el valor de los pequeños movimientos de acercamiento a Dios.",
+              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             }
           },
           "reflexion": "¿Qué lugar conocido necesitas dejar, aunque sea un poco, para acercarte a una vida más verdadera?",
@@ -954,7 +963,8 @@
           },
           "aliya": 1,
           "aliyaRange": "Bereshit 12:1-12:13",
-          "rootNote": "Génesis 12:1 es la base textual. «Vete hacia ti» es una lectura interpretativa, no la traducción literal completa. La aplicación de las fuentes al camino personal es editorial de Dérej."
+          "rootNote": "Génesis 12:1 contiene el llamado a Abram, que parte acompañado por Sarai y Lot. El hebreo mostrado es el fragmento inicial; el español es una paráfrasis del versículo completo. «Vete hacia ti» es una lectura interpretativa del título. Los marcos de las fuentes y nuestras aplicaciones al camino personal se presentan por separado.",
+          "revision_editorial": "v2.7 · marco y aplicación desarrollados · 2026-10-21"
         },
         {
           "dia": 2,
@@ -976,7 +986,7 @@
           "paraLlevar": {
             "avoda": "Retoma un compromiso de cuidado que hayas dejado suspendido y da un paso concreto.",
             "kavana": "Volver requiere revisar las consecuencias de las propias decisiones.",
-            "hitbodedut": "Habla con tus propias palabras sobre lo que deseas retomar. Puedes hacerlo en tus propias palabras; la participación es libre."
+            "hitbodedut": "Habla con tus propias palabras sobre lo que deseas retomar; la participación es libre."
           },
           "voces": {
             "rambam": {
@@ -984,7 +994,7 @@
               "url": "https://www.sefaria.org/Mishneh_Torah%2C_Human_Dispositions.1.6",
               "base": "Rambam presenta la misericordia y otras cualidades como orientaciones para la conducta humana.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "Volver requiere revisar las consecuencias de las propias decisiones.",
+              "texto": "El regreso al altar puede acompañarse de una revisión de las decisiones anteriores. Volver a una práctica espiritual invita también a atender los compromisos y las consecuencias que siguen presentes.",
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             },
             "ramak": {
@@ -992,7 +1002,7 @@
               "url": "https://www.sefaria.org/Tomer_Devorah.1.1",
               "base": "Ramak sitúa la semejanza con el Creador en los actos y desarrolla cualidades de misericordia.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "La lectura invita a no perder de vista la vulnerabilidad de Sarai.",
+              "texto": "La vuelta de Abram no borra lo vivido por Sarai en Egipto. Nuestra mirada procura reconocer a quien quedó vulnerable y preguntarle qué cuidado necesita.",
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             },
             "ramjal": {
@@ -1000,7 +1010,7 @@
               "url": "https://www.sefaria.org/Mesillat_Yesharim.3",
               "base": "Ramjal invita a examinar las acciones, antes de realizarlas y al revisar lo que ya hicimos.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "Pregunta qué debes reparar antes de declarar que todo terminó bien.",
+              "texto": "Antes de declarar que una dificultad terminó, revisa qué sigue pendiente. Puede haber una conversación, una reparación o una responsabilidad que requiera atención.",
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             },
             "rabiNajman": {
@@ -1008,11 +1018,11 @@
               "url": "https://www.sefaria.org/Likutei_Moharan%2C_Part_II.25.1",
               "base": "Rabí Najman describe la conversación personal con el Creador en la lengua habitual de quien habla.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "Habla con tus propias palabras sobre lo que deseas retomar.",
+              "texto": "Puedes hablar de lo que deseas retomar con sencillez. Nombra un compromiso concreto y un paso posible, sin obligarte a recuperar de inmediato el ánimo de antes.",
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             }
           },
-          "revision_editorial": "v2.6 · aliyá, contexto y aplicación propia · 2026-10-20",
+          "revision_editorial": "v2.7 · marco y aplicación desarrollados · 2026-10-21",
           "aliya": 2,
           "aliyaRange": "Bereshit 12:14-13:4"
         },
@@ -1044,7 +1054,7 @@
               "url": "https://www.sefaria.org/Mishneh_Torah%2C_Human_Dispositions.1.6",
               "base": "Rambam presenta la misericordia y otras cualidades como orientaciones para la conducta humana.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "Un acuerdo necesita palabras claras y libertad para responder.",
+              "texto": "Un desacuerdo necesita palabras que permitan comprender el problema. La propuesta de Abram abre una conversación sobre el espacio compartido; nuestra práctica busca acuerdos que ambas partes puedan responder.",
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             },
             "ramak": {
@@ -1052,7 +1062,7 @@
               "url": "https://www.sefaria.org/Tomer_Devorah.1.1",
               "base": "Ramak sitúa la semejanza con el Creador en los actos y desarrolla cualidades de misericordia.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "Dar espacio puede proteger un vínculo.",
+              "texto": "Dar espacio puede cuidar una relación cuando la cercanía se ha vuelto conflicto. El límite merece expresarse conservando el respeto por la otra persona.",
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             },
             "ramjal": {
@@ -1060,7 +1070,7 @@
               "url": "https://www.sefaria.org/Mesillat_Yesharim.3",
               "base": "Ramjal invita a examinar las acciones, antes de realizarlas y al revisar lo que ya hicimos.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "Revisa si tu propuesta atiende a ambas partes o solo a tu comodidad.",
+              "texto": "Revisa si tu propuesta considera a ambas partes. Un acuerdo puede parecer generoso y, aun así, dejar una carga importante sobre quien tiene menos posibilidades de elegir.",
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             },
             "rabiNajman": {
@@ -1068,11 +1078,11 @@
               "url": "https://www.sefaria.org/Likutei_Moharan%2C_Part_II.25.1",
               "base": "Rabí Najman describe la conversación personal con el Creador en la lengua habitual de quien habla.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "Expresa lo que necesitas sin negar el valor de la otra persona.",
+              "texto": "Expresa lo que necesitas sin negar el valor de la otra persona. Puedes reconocer afecto, enojo y límites en una misma conversación personal.",
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             }
           },
-          "revision_editorial": "v2.6 · aliyá, contexto y aplicación propia · 2026-10-20",
+          "revision_editorial": "v2.7 · marco y aplicación desarrollados · 2026-10-21",
           "aliya": 3,
           "aliyaRange": "Bereshit 13:5-13:18"
         },
@@ -1104,7 +1114,7 @@
               "url": "https://www.sefaria.org/Mishneh_Torah%2C_Human_Dispositions.1.6",
               "base": "Rambam presenta la misericordia y otras cualidades como orientaciones para la conducta humana.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "Ayudar exige valorar tanto la necesidad como los medios.",
+              "texto": "La noticia del peligro de Lot provoca una respuesta. Nuestra aplicación pregunta qué ayuda concreta podemos ofrecer y qué medios resultan adecuados para la situación actual.",
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             },
             "ramak": {
@@ -1112,7 +1122,7 @@
               "url": "https://www.sefaria.org/Tomer_Devorah.1.1",
               "base": "Ramak sitúa la semejanza con el Creador en los actos y desarrolla cualidades de misericordia.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "El parentesco del relato abre una pregunta sobre no abandonar a quien sufre.",
+              "texto": "La separación anterior no elimina el vínculo que el relato llama fraterno. Podemos sostener una forma de cuidado después de un desacuerdo, respetando también los límites necesarios.",
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             },
             "ramjal": {
@@ -1120,7 +1130,7 @@
               "url": "https://www.sefaria.org/Mesillat_Yesharim.3",
               "base": "Ramjal invita a examinar las acciones, antes de realizarlas y al revisar lo que ya hicimos.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "Distingue asistencia de una intervención que agrave el peligro.",
+              "texto": "Ayudar exige revisar las consecuencias de intervenir. Distingue entre acompañar, conseguir un recurso y asumir una acción que pueda agravar el peligro.",
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             },
             "rabiNajman": {
@@ -1128,11 +1138,11 @@
               "url": "https://www.sefaria.org/Likutei_Moharan%2C_Part_II.25.1",
               "base": "Rabí Najman describe la conversación personal con el Creador en la lengua habitual de quien habla.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "Nombra a quien quieres acompañar y reconoce tus límites.",
+              "texto": "Puedes nombrar a quien deseas acompañar y reconocer qué puedes hacer. La conversación personal admite también la necesidad de pedir ayuda a otras personas.",
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             }
           },
-          "revision_editorial": "v2.6 · aliyá, contexto y aplicación propia · 2026-10-20",
+          "revision_editorial": "v2.7 · marco y aplicación desarrollados · 2026-10-21",
           "aliya": 4,
           "aliyaRange": "Bereshit 14:1-14:20"
         },
@@ -1164,7 +1174,7 @@
               "url": "https://www.sefaria.org/Mishneh_Torah%2C_Human_Dispositions.1.6",
               "base": "Rambam presenta la misericordia y otras cualidades como orientaciones para la conducta humana.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "La integridad necesita límites que puedan explicarse.",
+              "texto": "Una ventaja puede ser rechazada cuando compromete la integridad. La escena invita a explicar nuestros límites con claridad y a examinar qué vínculo crea aquello que aceptamos.",
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             },
             "ramak": {
@@ -1172,7 +1182,7 @@
               "url": "https://www.sefaria.org/Tomer_Devorah.1.1",
               "base": "Ramak sitúa la semejanza con el Creador en los actos y desarrolla cualidades de misericordia.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "Una renuncia propia no autoriza a disponer de lo ajeno.",
+              "texto": "La renuncia de Abram corresponde a su propia parte. Cuidar a los compañeros incluye reconocer lo que les pertenece y evitar que una decisión personal disponga de sus recursos.",
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             },
             "ramjal": {
@@ -1180,7 +1190,7 @@
               "url": "https://www.sefaria.org/Mesillat_Yesharim.3",
               "base": "Ramjal invita a examinar las acciones, antes de realizarlas y al revisar lo que ya hicimos.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "Examina el costo real de una ventaja antes de aceptarla.",
+              "texto": "Antes de aceptar una ganancia, revisa su costo en compromisos, dependencia o daño a terceros. La evaluación puede llevar tanto a aceptar responsablemente como a renunciar.",
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             },
             "rabiNajman": {
@@ -1188,11 +1198,11 @@
               "url": "https://www.sefaria.org/Likutei_Moharan%2C_Part_II.25.1",
               "base": "Rabí Najman describe la conversación personal con el Creador en la lengua habitual de quien habla.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "Habla de una expectativa que te cuesta soltar.",
+              "texto": "Habla de una expectativa que te cuesta soltar. Puedes reconocer el deseo de obtener algo y preguntar qué decisión te permite conservar un compromiso importante.",
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             }
           },
-          "revision_editorial": "v2.6 · aliyá, contexto y aplicación propia · 2026-10-20",
+          "revision_editorial": "v2.7 · marco y aplicación desarrollados · 2026-10-21",
           "aliya": 5,
           "aliyaRange": "Bereshit 14:21-15:6"
         },
@@ -1224,7 +1234,7 @@
               "url": "https://www.sefaria.org/Mishneh_Torah%2C_Human_Dispositions.1.6",
               "base": "Rambam presenta la misericordia y otras cualidades como orientaciones para la conducta humana.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "La responsabilidad comienza por reconocer la situación real de la otra persona.",
+              "texto": "Agar necesita ser reconocida dentro de una relación desigual. Nuestra aplicación empieza por atender su situación y su voz, sin reducirla al papel que otros le asignan.",
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             },
             "ramak": {
@@ -1232,7 +1242,7 @@
               "url": "https://www.sefaria.org/Tomer_Devorah.1.1",
               "base": "Ramak sitúa la semejanza con el Creador en los actos y desarrolla cualidades de misericordia.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "Ser visto incluye que la vulnerabilidad no sea utilizada.",
+              "texto": "Ver la aflicción de alguien exige cuidar cómo respondemos a su vulnerabilidad. La compasión no debe convertirse en control, exposición de su intimidad o exigencia de gratitud.",
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             },
             "ramjal": {
@@ -1240,7 +1250,7 @@
               "url": "https://www.sefaria.org/Mesillat_Yesharim.3",
               "base": "Ramjal invita a examinar las acciones, antes de realizarlas y al revisar lo que ya hicimos.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "Revisa quién paga el costo de las decisiones de quienes tienen más poder.",
+              "texto": "Pregunta quién asume el costo de una decisión tomada por quien tiene más poder. Esta revisión permite reconocer responsabilidades concretas y buscar una reparación proporcionada.",
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             },
             "rabiNajman": {
@@ -1248,11 +1258,11 @@
               "url": "https://www.sefaria.org/Likutei_Moharan%2C_Part_II.25.1",
               "base": "Rabí Najman describe la conversación personal con el Creador en la lengua habitual de quien habla.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "Trae a la conversación una experiencia que necesitas escuchar mejor.",
+              "texto": "Puedes hablar de una experiencia en la que te sentiste invisible o de alguien a quien necesitas escuchar mejor. La práctica es libre y no exige contar vivencias que prefieras reservar.",
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             }
           },
-          "revision_editorial": "v2.6 · aliyá, contexto y aplicación propia · 2026-10-20",
+          "revision_editorial": "v2.7 · marco y aplicación desarrollados · 2026-10-21",
           "aliya": 6,
           "aliyaRange": "Bereshit 15:7-17:6"
         },
@@ -1284,7 +1294,7 @@
               "url": "https://www.sefaria.org/Mishneh_Torah%2C_Human_Dispositions.1.6",
               "base": "Rambam presenta la misericordia y otras cualidades como orientaciones para la conducta humana.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "Un futuro deseado pide responsabilidad presente.",
+              "texto": "El anuncio de un futuro para Isaac aparece junto a responsabilidades y vínculos presentes. La esperanza puede acompañarse de actos de cuidado hacia quienes ya están en nuestra vida.",
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             },
             "ramak": {
@@ -1292,7 +1302,7 @@
               "url": "https://www.sefaria.org/Tomer_Devorah.1.1",
               "base": "Ramak sitúa la semejanza con el Creador en los actos y desarrolla cualidades de misericordia.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "La esperanza puede hacer lugar a más de una historia.",
+              "texto": "El Midrash conserva la preocupación de Abraham por Ismael. Recibir algo nuevo puede abrir espacio sin borrar la dignidad de una persona o una historia anterior.",
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             },
             "ramjal": {
@@ -1300,7 +1310,7 @@
               "url": "https://www.sefaria.org/Mesillat_Yesharim.3",
               "base": "Ramjal invita a examinar las acciones, antes de realizarlas y al revisar lo que ya hicimos.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "Distingue una promesa del relato de una garantía sobre tus propios resultados.",
+              "texto": "Distingue la promesa que pertenece al relato bíblico de una garantía acerca de tus propios resultados. Nuestra práctica trabaja con decisiones posibles, incertidumbre y responsabilidad.",
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             },
             "rabiNajman": {
@@ -1308,11 +1318,11 @@
               "url": "https://www.sefaria.org/Likutei_Moharan%2C_Part_II.25.1",
               "base": "Rabí Najman describe la conversación personal con el Creador en la lengua habitual de quien habla.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "Expresa tu esperanza sin convertirla en exigencia para otra persona.",
+              "texto": "Puedes expresar una esperanza sin convertirla en una exigencia para otra persona. Nombra también un vínculo presente que deseas cuidar mientras esperas.",
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             }
           },
-          "revision_editorial": "v2.6 · aliyá, contexto y aplicación propia · 2026-10-20",
+          "revision_editorial": "v2.7 · marco y aplicación desarrollados · 2026-10-21",
           "aliya": 7,
           "aliyaRange": "Bereshit 17:7-17:27"
         }
@@ -1336,28 +1346,38 @@
             "hebreo": "וַיָּרָץ לִקְרָאתָם מִפֶּתַח הָאֹהֶל",
             "trans": "Vayaratz likratam mipetaj ha'ohel",
             "ref": "Bereshit 18:2",
-            "es": "Y corrió a su encuentro desde la entrada de la tienda."
+            "es": "Y corrió a su encuentro desde la entrada de la tienda.",
+            "es_tipo": "PARÁFRASIS DÉREJ"
           },
           "voces": {
             "rambam": {
               "fuente": "Mishné Torá · Hiljot Avel 14:1",
-              "tipo": "PARÁFRASIS",
-              "texto": "Rambam reúne la hospitalidad y otros gestos de cuidado dentro de los actos de jesed que sostienen a una comunidad. Abrir la tienda no es una idea: es hacer espacio real para otra persona."
+              "base": "Rambam enumera visitar a quien está enfermo, consolar a quien está de duelo y acompañar a los huéspedes entre los actos de bondad que se realizan con el cuerpo.",
+              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro.",
+              "tipo": "LECTURA DÉREJ",
+              "texto": "La hospitalidad puede comenzar con una pregunta sencilla: qué necesita quien llega. En esta escena, agua y descanso permiten convertir una disposición amable en una ayuda reconocible."
             },
             "ramak": {
               "fuente": "Tomer Devorah 1:1",
-              "tipo": "SÍNTESIS DÉREJ",
-              "texto": "Ramak pide que la semejanza con el Creador se vuelva conducta. En clave de Chesed, DÉREJ lee la tienda abierta como una bondad que sale de sí misma para recibir al otro."
+              "url": "https://www.sefaria.org/Tomer_Devorah.1.1",
+              "base": "Ramak sitúa la semejanza con el Creador en los actos y desarrolla cualidades de misericordia.",
+              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro.",
+              "tipo": "LECTURA DÉREJ",
+              "texto": "Acercarse al otro exige atender también a su pudor o a su cansancio. Ofrecer compañía deja espacio para que la otra persona acepte, decline o diga qué le serviría."
             },
             "ramjal": {
               "fuente": "Mesilat Yesharim 19",
-              "tipo": "PARÁFRASIS",
-              "texto": "Ramjal describe el jesed como hacer bien al otro con el cuerpo, los bienes y el espíritu. Hospitalidad es notar una necesidad y aliviar un poco la carga de quien llega."
+              "base": "En el capítulo dedicado a los componentes de la piedad, Ramjal desarrolla el cuidado del prójimo mediante el cuerpo, los bienes y la atención a su vida interior.",
+              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro.",
+              "tipo": "LECTURA DÉREJ",
+              "texto": "Antes de ofrecer lo que nos resulta fácil, conviene mirar la situación. Una ayuda proporcionada considera la necesidad ajena y la capacidad real de quien recibe en su casa."
             },
             "rabiNajman": {
               "fuente": "Likutei Moharan I:282",
+              "base": "Rabí Najman propone buscar un punto de bien en la otra persona, incluso cuando la primera mirada solo parece encontrar faltas.",
+              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "Rabí Najman enseña a buscar un punto real de bien en cada persona. DÉREJ lleva esa mirada a la puerta de la tienda: recibir empieza por no reducir al otro a una molestia o una etiqueta."
+              "texto": "Una bienvenida puede comenzar por reconocer algo valioso en quien llega. Nuestra aplicación busca recibir a una persona sin reducirla a una apariencia o a una impresión inicial."
             }
           },
           "reflexion": "¿A quién puedes hacerle espacio hoy sin convertir la hospitalidad en una tarea o una apariencia?",
@@ -1367,7 +1387,9 @@
             "hitbodedut": "¿Quién está llegando a mi vida y necesita que yo esté realmente presente?"
           },
           "aliya": 1,
-          "aliyaRange": "Bereshit 18:1-18:14"
+          "aliyaRange": "Bereshit 18:1-18:14",
+          "rootNote": "Abraham está junto a su tienda en Mamré. Al ver a tres visitantes, se acerca, ofrece agua, descanso y alimento; después se anuncia el nacimiento de un hijo de Sara. La hospitalidad ocurre dentro de esa escena y tiene gestos materiales concretos. El español del versículo es una paráfrasis de Dérej. Los marcos de las cuatro fuentes orientan nuestras aplicaciones; no se atribuyen a los maestros comentarios directos sobre esta escena.",
+          "revision_editorial": "v2.7 · contexto, marco y aplicación separados · 2026-10-21"
         },
         {
           "dia": 2,
@@ -1380,28 +1402,38 @@
             "hebreo": "זַעֲקַת סְדֹם וַעֲמֹרָה כִּי רָבָּה",
             "trans": "Za'akat Sedom va'Amora ki raba",
             "ref": "Bereshit 18:20",
-            "es": "El clamor de Sedom y Amorá es muy grande."
+            "es": "El clamor de Sedom y Amorá es muy grande.",
+            "es_tipo": "PARÁFRASIS DÉREJ"
           },
           "voces": {
             "rambam": {
               "fuente": "Moreh Nevujim III:53",
-              "tipo": "PARÁFRASIS",
-              "texto": "Rambam distingue entre bondad, justicia y rectitud. El clamor de Sedom obliga a recordar que la compasión no puede separarse de la responsabilidad por lo que ocurre entre las personas."
+              "base": "Rambam distingue los sentidos de jésed, tzedaká y mishpat al tratar la benevolencia, la rectitud y el juicio.",
+              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro.",
+              "tipo": "LECTURA DÉREJ",
+              "texto": "La justicia empieza por tomar en serio a quien sufre una injusticia. La jornada nos invita a mirar cómo nuestras decisiones afectan a quienes tienen menos recursos para hacerse escuchar."
             },
             "ramak": {
               "fuente": "Tomer Devorah 1:1",
-              "tipo": "SÍNTESIS DÉREJ",
-              "texto": "En clave de Gevurah, DÉREJ entiende el límite como una forma de jesed cuando impide que el daño siga creciendo. Compasión no significa tolerar todo."
+              "url": "https://www.sefaria.org/Tomer_Devorah.1.1",
+              "base": "Ramak sitúa la semejanza con el Creador en los actos y desarrolla cualidades de misericordia.",
+              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro.",
+              "tipo": "LECTURA DÉREJ",
+              "texto": "La misericordia adquiere forma cuando acompañamos a alguien que ha quedado sin apoyo. En esta lectura, cuidar incluye no acostumbrarnos a la exclusión de una persona pobre."
             },
             "ramjal": {
               "fuente": "Mesilat Yesharim 19",
-              "tipo": "PARÁFRASIS",
-              "texto": "Ramjal incluye en el jesed no sólo ayudar, sino también evitar el daño cuando está en nuestras manos hacerlo. Escuchar un clamor pide una respuesta concreta, no sólo indignación."
+              "base": "Ramjal examina la bondad hacia otras personas como parte de la piedad y atiende a diferentes formas de ayudarlas.",
+              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro.",
+              "tipo": "LECTURA DÉREJ",
+              "texto": "Escuchar un clamor requiere averiguar qué ocurrió. Antes de acusar o de restar importancia al daño, distingue los hechos conocidos de lo que todavía necesitas comprender."
             },
             "rabiNajman": {
               "fuente": "Likutei Moharan I:282",
+              "base": "Rabí Najman propone buscar un punto de bien en la otra persona y no reducirla a sus faltas.",
+              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "Encontrar un punto de bien no significa negar el mal. DÉREJ toma de Rabí Najman una disciplina difícil: resistir lo injusto sin convertir a una persona entera en aquello que hizo mal."
+              "texto": "La denuncia de un daño no exige condenar por anticipado a todas las personas de un grupo. Nuestra aplicación procura escuchar a quien sufre y conservar una mirada individual, capaz de reconocer también un punto de bien."
             }
           },
           "reflexion": "¿Qué sufrimiento has normalizado por verlo demasiado tiempo? ¿Hay algo pequeño y concreto que sí está a tu alcance hacer?",
@@ -1411,7 +1443,9 @@
             "hitbodedut": "¿Qué dolor ajeno ya dejé de escuchar?"
           },
           "aliya": 2,
-          "aliyaRange": "Bereshit 18:15-18:33"
+          "aliyaRange": "Bereshit 18:15-18:33",
+          "rootNote": "El clamor de Sodoma introduce la discusión de Abraham sobre la justicia y la posibilidad de preservar la ciudad. La tradición seleccionada atiende a la violencia contra quien ayuda a una persona pobre. El relato no autoriza a identificar pueblos actuales con Sodoma. El español del versículo es una paráfrasis de Dérej. Los marcos de las cuatro fuentes orientan nuestras aplicaciones; no se atribuyen a los maestros comentarios directos sobre esta escena.",
+          "revision_editorial": "v2.7 · contexto, marco y aplicación separados · 2026-10-21"
         },
         {
           "dia": 3,
@@ -1433,44 +1467,44 @@
               "fuente": "Mishné Torá · Hiljot Deot 1:6",
               "url": "https://www.sefaria.org/Mishneh_Torah%2C_Human_Dispositions.1.6",
               "base": "Rambam presenta la misericordia y otras cualidades como orientaciones para la conducta humana.",
+              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "La urgencia necesita acciones proporcionadas.",
-              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
+              "texto": "En una urgencia, la prioridad es proteger a las personas. La escena de Lot nos permite preguntarnos qué decisiones concretas ayudan a salir de un peligro y cuáles nos demoran."
             },
             "ramak": {
               "fuente": "Tomer Devorah 1:1",
               "url": "https://www.sefaria.org/Tomer_Devorah.1.1",
               "base": "Ramak sitúa la semejanza con el Creador en los actos y desarrolla cualidades de misericordia.",
+              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "La vacilación ajena puede requerir apoyo y comprensión.",
-              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
+              "texto": "El cuidado puede sostener a quien todavía no logra decidir. Acompañar supone atender a su situación y buscar ayuda competente cuando la seguridad lo requiere."
             },
             "ramjal": {
               "fuente": "Mesilat Yesharim 3",
               "url": "https://www.sefaria.org/Mesillat_Yesharim.3",
               "base": "Ramjal invita a examinar las acciones, antes de realizarlas y al revisar lo que ya hicimos.",
+              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "No confundas acompañar con decidir todo por otro.",
-              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
+              "texto": "Revisa qué estás intentando conservar cuando una situación exige cambiar de rumbo. Distinguir entre bienes, hábitos y vidas permite ordenar mejor las prioridades."
             },
             "rabiNajman": {
               "fuente": "Likutei Moharan II:25:1",
               "url": "https://www.sefaria.org/Likutei_Moharan%2C_Part_II.25.1",
               "base": "Rabí Najman describe la conversación personal con el Creador en la lengua habitual de quien habla.",
+              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "Pon en palabras el temor que dificulta un paso.",
-              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
+              "texto": "Habla de aquello que te cuesta dejar y de la ayuda que podrías aceptar. Pedir apoyo puede ser parte del primer paso hacia una situación más segura."
             }
           },
           "reflexion": "¿Cómo puedes acompañar una salida difícil sin juzgar la lentitud de quien la vive?",
           "paraLlevar": {
             "avoda": "Pregunta a alguien qué apoyo concreto le sería útil y respeta su respuesta.",
             "kavana": "La urgencia necesita acciones proporcionadas.",
-            "hitbodedut": "Pon en palabras el temor que dificulta un paso. Puedes hacerlo en tus propias palabras; la participación es libre."
+            "hitbodedut": "Pon en palabras el temor que dificulta un paso."
           },
           "aliya": 3,
-          "rootNote": "La tercera aliyá se sitúa en Sedom y contiene amenazas graves de violencia. La ayuda debe leerse atendiendo a las personas expuestas al peligro. El texto español es una paráfrasis de Dérej. Las cuatro voces ofrecen marcos de lectura; sus aplicaciones a esta escena son nuestras y no comentarios directos de los maestros a este versículo.",
-          "revision_editorial": "v2.6 · aliyá, contexto y aplicación propia · 2026-10-20",
+          "rootNote": "La salida de Lot y su familia ocurre después de las amenazas contra los visitantes. Lot se demora y los mensajeros los conducen fuera de la ciudad. La ayuda de emergencia protege vidas; no convierte todas las decisiones anteriores de Lot en modelos de conducta. El español del versículo es una paráfrasis de Dérej. Los marcos de las cuatro fuentes orientan nuestras aplicaciones; no se atribuyen a los maestros comentarios directos sobre esta escena.",
+          "revision_editorial": "v2.7 · contexto, marco y aplicación separados · 2026-10-21",
           "aliyaRange": "Bereshit 19:1-19:20"
         },
         {
@@ -1484,28 +1518,38 @@
             "hebreo": "וַיַּשְׁכֵּם אַבְרָהָם בַּבֹּקֶר",
             "trans": "Vayashkem Avraham baboker",
             "ref": "Bereshit 19:27",
-            "es": "Abraham madrugó por la mañana."
+            "es": "Abraham madrugó por la mañana.",
+            "es_tipo": "PARÁFRASIS DÉREJ"
           },
           "voces": {
             "rambam": {
               "fuente": "Mishné Torá · Hiljot Tefilá 1:1",
+              "base": "Rambam presenta la oración diaria como servicio dirigido a Dios. En este apartado no establece por sí solo la relación entre Abraham y la oración de la mañana.",
+              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "Rambam presenta la oración como una avodá del corazón con lugar cotidiano en la vida. La tradición rabínica vincula precisamente este madrugar de Abraham con la oración de la mañana."
+              "texto": "Una práctica sostenida puede ayudarnos a estar disponibles después de una noche difícil. Volver al lugar de la oración abre una pausa para reconocer lo que ocurre y responder con cuidado."
             },
             "ramak": {
               "fuente": "Tomer Devorah 1:1",
-              "tipo": "SÍNTESIS DÉREJ",
-              "texto": "En clave de Netzach, DÉREJ ve perseverancia en volver al lugar después de una noche difícil. Constancia no es repetir mecánicamente; es regresar con presencia."
+              "url": "https://www.sefaria.org/Tomer_Devorah.1.1",
+              "base": "Ramak sitúa la semejanza con el Creador en los actos y desarrolla cualidades de misericordia.",
+              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro.",
+              "tipo": "LECTURA DÉREJ",
+              "texto": "Acompañar un duelo requiere presencia sin explicaciones apresuradas. Podemos escuchar y ofrecer apoyo sin convertir el dolor de otra persona en una lección para ella."
             },
             "ramjal": {
               "fuente": "Mesilat Yesharim 7",
-              "tipo": "PARÁFRASIS",
-              "texto": "Ramjal llama zerizut a no dejar que la pesadez y la demora gobiernen una acción buena. A veces la victoria de la mañana consiste simplemente en levantarse y volver."
+              "base": "Ramjal describe la diligencia como disposición a comenzar una acción de bien y a llevarla a término sin demoras innecesarias.",
+              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro.",
+              "tipo": "LECTURA DÉREJ",
+              "texto": "Una pausa breve puede convertirse en un acto concreto de cuidado. Elige algo que puedas comenzar hoy, sin exigir que el ánimo o las circunstancias sean perfectos."
             },
             "rabiNajman": {
               "fuente": "Likutei Moharan II:48",
+              "base": "Rabí Najman anima a perseverar en el acercamiento a Dios y a no despreciar los pequeños movimientos realizados en ese camino.",
+              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "Rabí Najman insiste en continuar incluso cuando el camino se vuelve confuso o parece retroceder. Volver al lugar es también una forma de no abandonar."
+              "texto": "Después de una jornada difícil, un regreso pequeño puede tener valor. Nuestra propuesta es reservar un momento posible de recogimiento, sin medir la propia vida por una experiencia espiritual intensa."
             }
           },
           "reflexion": "Después de un día difícil, ¿a qué lugar bueno necesitas volver mañana en vez de empezar desde cero?",
@@ -1515,7 +1559,9 @@
             "hitbodedut": "¿Qué práctica merece que regrese a ella aunque ayer no haya salido bien?"
           },
           "aliya": 4,
-          "aliyaRange": "Bereshit 19:21-21:4"
+          "aliyaRange": "Bereshit 19:21-21:4",
+          "rootNote": "Abraham regresa por la mañana al lugar donde había estado ante Dios y contempla la destrucción de las ciudades. Esta aliyá incluye también el episodio de Sara en Guerar y el nacimiento de Isaac. Volver a orar no permite borrar el duelo ni presentar toda pérdida como una enseñanza necesaria. El español del versículo es una paráfrasis de Dérej. Los marcos de las cuatro fuentes orientan nuestras aplicaciones; no se atribuyen a los maestros comentarios directos sobre esta escena.",
+          "revision_editorial": "v2.7 · contexto, marco y aplicación separados · 2026-10-21"
         },
         {
           "dia": 5,
@@ -1537,44 +1583,44 @@
               "fuente": "Mishné Torá · Hiljot Deot 1:6",
               "url": "https://www.sefaria.org/Mishneh_Torah%2C_Human_Dispositions.1.6",
               "base": "Rambam presenta la misericordia y otras cualidades como orientaciones para la conducta humana.",
+              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "La ayuda se verifica en necesidades atendidas.",
-              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
+              "texto": "La necesidad de agua del muchacho pide auxilio concreto. Cuidar de alguien exige atender su situación presente antes de construir explicaciones acerca de su historia o su futuro."
             },
             "ramak": {
               "fuente": "Tomer Devorah 1:1",
               "url": "https://www.sefaria.org/Tomer_Devorah.1.1",
               "base": "Ramak sitúa la semejanza con el Creador en los actos y desarrolla cualidades de misericordia.",
+              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "La compasión escucha también el cuerpo y sus límites.",
-              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
+              "texto": "Agar y su hijo conservan su dignidad en el desierto. Escuchar a quien sufre incluye reconocer su voz y evitar reducir su vida a la posición que ocupa en el relato de otros."
             },
             "ramjal": {
               "fuente": "Mesilat Yesharim 3",
               "url": "https://www.sefaria.org/Mesillat_Yesharim.3",
               "base": "Ramjal invita a examinar las acciones, antes de realizarlas y al revisar lo que ya hicimos.",
+              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "Pregunta qué falta realmente antes de interpretar espiritualmente el dolor.",
-              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
+              "texto": "Comprueba qué recurso falta realmente: agua, alimento, traslado o compañía. Una interpretación espiritual puede acompañar la ayuda, pero no debe retrasarla."
             },
             "rabiNajman": {
               "fuente": "Likutei Moharan II:25:1",
               "url": "https://www.sefaria.org/Likutei_Moharan%2C_Part_II.25.1",
               "base": "Rabí Najman describe la conversación personal con el Creador en la lengua habitual de quien habla.",
+              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "Nombra una necesidad sin vergüenza y considera a quién pedir ayuda.",
-              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
+              "texto": "Habla de una necesidad propia sin avergonzarte de ella. Si lo deseas, identifica una persona o un servicio al que puedas pedir apoyo concreto."
             }
           },
           "reflexion": "¿Qué necesidad material requiere atención antes que un consejo?",
           "paraLlevar": {
             "avoda": "Ofrece un apoyo concreto, como agua, alimento, traslado o información útil, según lo que la persona necesite.",
             "kavana": "La ayuda se verifica en necesidades atendidas.",
-            "hitbodedut": "Nombra una necesidad sin vergüenza y considera a quién pedir ayuda. Puedes hacerlo en tus propias palabras; la participación es libre."
+            "hitbodedut": "Nombra una necesidad sin vergüenza y considera a quién pedir ayuda."
           },
           "aliya": 5,
-          "rootNote": "Hagar e Ishmael atraviesan una situación extrema tras ser enviados al desierto. El agua es auxilio concreto, no una promesa de que toda dificultad desaparece al cambiar de actitud. El texto español es una paráfrasis de Dérej. Las cuatro voces ofrecen marcos de lectura; sus aplicaciones a esta escena son nuestras y no comentarios directos de los maestros a este versículo.",
-          "revision_editorial": "v2.6 · aliyá, contexto y aplicación propia · 2026-10-20",
+          "rootNote": "Agar e Ismael están en peligro en el desierto tras salir de la casa de Abraham. Dios escucha al muchacho; Agar ve un pozo y le da agua. Se trata de una necesidad material urgente. La lectura espiritual acompaña esa necesidad y no la reemplaza. El español del versículo es una paráfrasis de Dérej. Los marcos de las cuatro fuentes orientan nuestras aplicaciones; no se atribuyen a los maestros comentarios directos sobre esta escena.",
+          "revision_editorial": "v2.7 · contexto, marco y aplicación separados · 2026-10-21",
           "aliyaRange": "Bereshit 21:5-21:21"
         },
         {
@@ -1597,44 +1643,44 @@
               "fuente": "Mishné Torá · Hiljot Deot 1:6",
               "url": "https://www.sefaria.org/Mishneh_Torah%2C_Human_Dispositions.1.6",
               "base": "Rambam presenta la misericordia y otras cualidades como orientaciones para la conducta humana.",
+              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "La buena intención no reemplaza un acuerdo comprensible.",
-              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
+              "texto": "Un trato respetuoso necesita condiciones que ambas partes comprendan. En esta escena, hablar del pozo permite que el pacto atienda también una disputa pendiente."
             },
             "ramak": {
               "fuente": "Tomer Devorah 1:1",
               "url": "https://www.sefaria.org/Tomer_Devorah.1.1",
               "base": "Ramak sitúa la semejanza con el Creador en los actos y desarrolla cualidades de misericordia.",
+              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "La claridad protege a ambas partes.",
-              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
+              "texto": "La claridad puede cuidar un vínculo. Expresar qué se recibió, qué se ofrece y qué se espera evita que la cordialidad oculte un desacuerdo que sigue abierto."
             },
             "ramjal": {
               "fuente": "Mesilat Yesharim 3",
               "url": "https://www.sefaria.org/Mesillat_Yesharim.3",
               "base": "Ramjal invita a examinar las acciones, antes de realizarlas y al revisar lo que ya hicimos.",
+              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "Comprueba si las condiciones pueden cumplirse antes de aceptarlas.",
-              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
+              "texto": "Antes de aceptar un compromiso, revisa sus condiciones y tus posibilidades. Dejar por escrito una responsabilidad y un plazo puede ayudar a cumplir lo prometido."
             },
             "rabiNajman": {
               "fuente": "Likutei Moharan II:25:1",
               "url": "https://www.sefaria.org/Likutei_Moharan%2C_Part_II.25.1",
               "base": "Rabí Najman describe la conversación personal con el Creador en la lengua habitual de quien habla.",
+              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "Habla de aquello que te cuesta pedir con claridad.",
-              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
+              "texto": "Puedes hablar de lo que te cuesta pedir con claridad. Ensaya una petición concreta que deje a la otra persona libertad para responder y proponer un acuerdo."
             }
           },
           "reflexion": "¿Qué acuerdo necesita mayor claridad para evitar un conflicto?",
           "paraLlevar": {
             "avoda": "Confirma con la otra parte una responsabilidad, un plazo y una forma de verificar lo acordado.",
             "kavana": "La buena intención no reemplaza un acuerdo comprensible.",
-            "hitbodedut": "Habla de aquello que te cuesta pedir con claridad. Puedes hacerlo en tus propias palabras; la participación es libre."
+            "hitbodedut": "Habla de aquello que te cuesta pedir con claridad."
           },
           "aliya": 6,
-          "rootNote": "La sexta aliyá trata del acuerdo con Avimélej y del pozo de Beer Sheva. La Akedá pertenece a la séptima. El texto español es una paráfrasis de Dérej. Las cuatro voces ofrecen marcos de lectura; sus aplicaciones a esta escena son nuestras y no comentarios directos de los maestros a este versículo.",
-          "revision_editorial": "v2.6 · aliyá, contexto y aplicación propia · 2026-10-20",
+          "rootNote": "Abraham y Avimélej acuerdan una relación de lealtad, pero también deben tratar la disputa por un pozo. Las siete corderas quedan como testimonio de quién lo cavó. El pacto requiere hablar del conflicto concreto; la Akedá corresponde al día siguiente. El español del versículo es una paráfrasis de Dérej. Los marcos de las cuatro fuentes orientan nuestras aplicaciones; no se atribuyen a los maestros comentarios directos sobre esta escena.",
+          "revision_editorial": "v2.7 · contexto, marco y aplicación separados · 2026-10-21",
           "aliyaRange": "Bereshit 21:22-21:34"
         },
         {
@@ -1648,38 +1694,50 @@
             "hebreo": "וַיִּקְרָא אַבְרָהָם שֵׁם־הַמָּקוֹם הַהוּא יְהוָה יִרְאֶה",
             "trans": "Vayikra Avraham shem hamakom hahu Adonai Yireh",
             "ref": "Bereshit 22:14",
-            "es": "Abraham llamó a aquel lugar: «Adonai Yireh»."
+            "es": "Abraham llamó a aquel lugar: «Adonai Yireh».",
+            "es_tipo": "PARÁFRASIS DÉREJ"
           },
           "voces": {
             "rambam": {
               "fuente": "Moreh Nevujim III:24",
+              "base": "Rambam examina el sentido de los relatos de pruebas y la enseñanza que transmiten, e incluye la Akedá entre los casos que considera.",
+              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "Rambam entiende la Akedá como un relato destinado a enseñar más allá de Abraham. Después de una prueba, una experiencia puede convertirse en memoria y orientación, no sólo en una herida privada."
+              "texto": "La escena exige detenernos en la vida de Isaac y en la orden de no dañarlo. Nuestra aplicación ética cuida que ninguna convicción personal se convierta en permiso para herir a otro."
             },
             "ramak": {
               "fuente": "Tomer Devorah 1:1",
-              "tipo": "SÍNTESIS DÉREJ",
-              "texto": "En clave de Malchut, DÉREJ entiende el final como recepción: después de actuar y detenerse, Abraham nombra el lugar. Dar nombre ayuda a integrar lo vivido."
+              "url": "https://www.sefaria.org/Tomer_Devorah.1.1",
+              "base": "Ramak sitúa la semejanza con el Creador en los actos y desarrolla cualidades de misericordia.",
+              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro.",
+              "tipo": "LECTURA DÉREJ",
+              "texto": "Recibir una interrupción puede proteger una vida. La compasión nos invita a escuchar a quienes advierten un daño, aunque eso obligue a cambiar un camino ya iniciado."
             },
             "ramjal": {
               "fuente": "Mesilat Yesharim 19",
+              "base": "Ramjal desarrolla la piedad atendiendo a los actos, a la intención y al modo de realizarlos, con lugar para la bondad hacia el prójimo.",
+              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "Ramjal insiste en que la intención y el modo de realizar una acción importan tanto como la acción misma. Mirar hacia atrás permite reconocer qué ocurrió realmente y qué merece conservarse."
+              "texto": "Una intención intensa también necesita examen. Antes de insistir, pregunta qué consecuencias tiene tu acción y si debes detenerte o buscar otra forma de responder."
             },
             "rabiNajman": {
               "fuente": "Likutei Moharan II:2",
-              "tipo": "PARÁFRASIS",
-              "texto": "Rabí Najman coloca la gratitud en el centro de la cercanía con Dios. Después de atravesar algo intenso, agradecer no borra lo difícil; permite reconocer también lo que sostuvo."
+              "base": "Rabí Najman relaciona el agradecimiento y la alabanza con la cercanía a Dios.",
+              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro.",
+              "tipo": "LECTURA DÉREJ",
+              "texto": "Agradecer una vida preservada puede acompañar el cierre de esta semana. Nuestra aplicación deja espacio al dolor y a las preguntas: no exige agradecer el daño ni idealizar lo sufrido."
             }
           },
-          "reflexion": "Después de una experiencia intensa, ¿qué viste que no quieres olvidar cuando vuelvas a la vida cotidiana?",
+          "reflexion": "¿Qué acción necesitas detener o cambiar para cuidar mejor una vida?",
           "paraLlevar": {
-            "avoda": "Nombra por escrito una cosa que aprendiste esta semana y una cosa por la que puedes agradecer.",
-            "kavana": "Adonai Yireh — Quiero recordar lo que pude ver.",
-            "hitbodedut": "¿Qué nombre le pondría al lugar interior por el que acabo de pasar?"
+            "avoda": "Revisa una decisión de esta semana: identifica a quién afecta y un ajuste concreto que cuide mejor a esa persona.",
+            "kavana": "Que mi camino cuide la vida.",
+            "hitbodedut": "Si lo deseas, agradece una vida que te ha sido confiada y nombra algo que necesitas dejar de exigir."
           },
           "aliya": 7,
-          "aliyaRange": "Bereshit 22:1-22:24"
+          "aliyaRange": "Bereshit 22:1-22:24",
+          "rootNote": "La séptima aliyá narra la Akedá: Isaac es atado, la intervención del mensajero detiene a Abraham y el carnero es ofrecido en lugar del hijo. Después Abraham nombra el lugar. Nuestra lectura conserva la detención del daño y la vida de Isaac; no propone imitar el sacrificio ni justificar violencia como prueba espiritual. El español del versículo es una paráfrasis de Dérej. Los marcos de las cuatro fuentes orientan nuestras aplicaciones; no se atribuyen a los maestros comentarios directos sobre esta escena.",
+          "revision_editorial": "v2.7 · contexto, marco y aplicación separados · 2026-10-21"
         }
       ]
     },
@@ -7203,10 +7261,11 @@
           },
           "titulo": "OZEN · YAD · REGEL - Escuchar, hacer y caminar",
           "pasuk": {
-            "hebreo": "וְנָתַתָּה עַל־תְּנוּךְ אֹזֶן אַהֲרֹן הַיְמָנִית... וְעַל־בֹּהֶן יָדָם הַיְמָנִית וְעַל־בֹּהֶן רַגְלָם הַיְמָנִית",
-            "trans": "Venatata al tenuj ozen Aharon... ve'al bohen yadam... ve'al bohen raglam",
+            "hebreo": "וְנָתַתָּה עַל־תְּנוּךְ אֹזֶן אַהֲרֹן וְעַל־תְּנוּךְ אֹזֶן בָּנָיו הַיְמָנִית וְעַל־בֹּהֶן יָדָם הַיְמָנִית וְעַל־בֹּהֶן רַגְלָם הַיְמָנִית",
+            "trans": "",
             "ref": "Shemot 29:20",
-            "es": "Pondrás sobre el lóbulo de la oreja derecha de Aharón... sobre el pulgar de su mano derecha y sobre el dedo mayor de su pie derecho."
+            "es": "Se indica aplicar parte de la sangre del carnero en la oreja derecha de Aharón y de sus hijos, y en los pulgares de sus manos derechas y los dedos mayores de sus pies derechos.",
+            "es_tipo": "PARÁFRASIS DÉREJ · FRAGMENTO SELECCIONADO"
           },
           "voces": {
             "rambam": {
@@ -7238,7 +7297,7 @@
           },
           "aliya": 5,
           "aliyaRange": "Shemot 29:19-29:37",
-          "rootNote": "La lectura «oreja–mano–pie = escuchar–actuar–caminar» es una síntesis pedagógica de DÉREJ a partir de la anatomía ritual del versículo; no se presenta como explicación literal de Rambam."
+          "rootNote": "El fragmento hebreo es una selección continua de Éxodo 29:20; omite el comienzo sobre el carnero y la indicación final sobre el altar. El español es una paráfrasis de esa selección. El pasaje pertenece al rito de investidura de Aharón y sus hijos. La relación «oreja–mano–pie = escuchar–actuar–caminar» es una propuesta pedagógica de Dérej, no una explicación literal atribuida a Rambam ni una práctica ritual para realizar."
         },
         {
           "dia": 6,
@@ -7336,11 +7395,18 @@
     "fecha": "2026-10-20",
     "total_parashot": 20,
     "total_caminos": 140,
-    "lej_leja_estado": "COMPLETO · 7/7",
+    "lej_leja_estado": "7/7 jornadas alineadas, con Midrash propio y marcos/aplicaciones separados; cotejo crítico integral de todas las ediciones pendiente.",
     "jornadas_reelaboradas": 56,
     "desalineaciones_de_versiculo_corregidas": 50,
     "criterio": "Versículo central dentro de la aliyá anual correspondiente. Las referencias interpretativas pueden ir a otros textos si se explicita su aplicación.",
-    "alcance": "Correspondencia y contexto revisados; se conservan las fuentes de las jornadas previamente alineadas. No se declara cotejo crítico de todas sus ediciones ni traducciones."
+    "alcance": "Correspondencia y contexto revisados; se conservan las fuentes de las jornadas previamente alineadas. No se declara cotejo crítico de todas sus ediciones ni traducciones.",
+    "cierre_editorial_20261021": {
+      "vayera_lecturas": 7,
+      "vayera_contextos": 7,
+      "vayera_aplicaciones": 28,
+      "alcance": "Primer bloque de preparación. No certifica el cotejo crítico de todas las atribuciones de las 140 jornadas ni la revisión visual en dispositivos reales.",
+      "lej_leja_aplicaciones": 28
+    }
   },
   "schema_version": "2.5",
   "revision_editorial": "DÉREJ v2.6 · secuencia anual de aliyot y curaduría contextual",

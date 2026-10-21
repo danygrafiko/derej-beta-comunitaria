@@ -22,11 +22,11 @@
     if(!item)return;
     const article=document.createElement('section');article.id='derejMidrashDaily';article.dataset.dayKey=key;
     article.setAttribute('aria-labelledby','derejMidrashTitle');
-    paragraph(article,'MIDRASH DE HOY','midrashDailyEyebrow');
+    paragraph(article,item.eyebrow||'MIDRASH DE HOY','midrashDailyEyebrow');
     const title=document.createElement('h3');title.id='derejMidrashTitle';title.textContent=item.title;article.appendChild(title);
     paragraph(article,`Leído junto a ${item.passage.label}`,'midrashDailyPassage');
     paragraph(article,item.source,'midrashDailySource');
-    paragraph(article,'Adaptación al español de un pasaje seleccionado.','midrashDailyEditorial');
+    paragraph(article,item.editorialLabel||'Adaptación al español de un pasaje seleccionado.','midrashDailyEditorial');
     item.text.split('\n\n').forEach(t=>paragraph(article,t));
     const bridge=document.createElement('div');bridge.className='midrashDailyBridge';
     const bridgeTitle=document.createElement('h4');bridgeTitle.textContent='Para leerlo con el estudio de hoy';bridge.appendChild(bridgeTitle);

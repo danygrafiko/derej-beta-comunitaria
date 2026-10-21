@@ -9640,6 +9640,7 @@ function renderPanels(p,c){
       <div class="ramakCard ramakVerseCard">
         <div class="ramakHebrew">${esc(pasuk.hebreo||'')}</div>
         ${pasuk.es?`<p class="derejVerseTranslation">${esc(pasuk.es)}</p>`:''}
+        ${pasuk.es_tipo?`<small class="derejVerseKind">${esc(pasuk.es_tipo)}</small>`:''}
         <div class="ramakPasukMeta">
           ${pasuk.trans?`<span><b>Transliteración</b><br>${esc(pasuk.trans)}</span>`:''}
           ${pasuk.ref?`<span><b>Referencia</b><br>${esc(biblicalRefEs(pasuk.ref))}</span>`:''}
