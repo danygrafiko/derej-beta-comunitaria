@@ -6,6 +6,7 @@
   const PREF = 'derej.metrics.enabled.v1';
   const DAILY = 'derej.metrics.daily.v1';
   const SESSION = 'derej.metrics.session.v1';
+  const STUDY = 'derej.metrics.study.v1';
   const IDLE = 30 * 60 * 1000;
   const SECTIONS = new Set(['home', 'camino', 'shabat', 'moed', 'radio', 'personal', 'pozo']);
   const production = location.hostname === 'derej-beta-comunitaria.vercel.app';
@@ -15,6 +16,7 @@
   let queue = [], sending = false, started = false, session = null, daily = null;
   let currentSection = '', sectionSince = performance.now(), lastInteraction = Date.now();
   let radio = null;
+  let study = null;
 
   function read(storage, key) { try { return storage.getItem(key); } catch { return null; } }
   function save(storage, key, value) { try { storage.setItem(key, value); } catch {} }
@@ -36,6 +38,12 @@
     if (fresh) session = {id: uuid(), day: date, last: now, test: isTest};
     session.last = now;
     save(sessionStorage, SESSION, JSON.stringify(session));
+    if (!study || study.session !== session.id) {
+      const saved = json(sessionStorage, STUDY);
+      const valid = !fresh && saved?.session === session.id;
+      const keys = values => Array.isArray(values) ? values.filter(x => typeof x === 'string' && x.length <= 120).slice(0, 140) : [];
+      study = {session: session.id, starts: new Set(valid ? keys(saved.starts) : []), completes: new Set(valid ? keys(saved.completes) : [])};
+    }
     return fresh;
   }
   function row(type, details = {}) {
@@ -44,10 +52,16 @@
       collection_id: null, track_id: null, seconds: null,
       release: 'metrics-v1', ...details};
   }
-  function emit(type, details = {}) {
+  function emit(type, details = {}, studyKey = null) {
     if (!allowed()) return;
     const fresh = identities();
     if (fresh) queue.push(row('visit'));
+    if (studyKey) {
+      const seen = type === 'study_start' ? study.starts : study.completes;
+      if (seen.has(studyKey)) { flush(); return; }
+      seen.add(studyKey);
+      save(sessionStorage, STUDY, JSON.stringify({session: study.session, starts: [...study.starts], completes: [...study.completes]}));
+    }
     if (type !== 'visit' || !fresh) queue.push(row(type, details));
     if (queue.length > 40) queue = queue.slice(-40);
     flush();
@@ -84,6 +98,35 @@
     currentSection = next;
     sectionSince = performance.now();
     if (document.visibilityState !== 'hidden') emit('section_view');
+  }
+  function currentStudy() {
+    if (!allowed() || document.visibilityState === 'hidden' || visibleSection() !== 'camino') return null;
+    const screen = document.querySelector('[data-screen="camino"]');
+    const parasha = screen?.querySelector('[data-ramak-parasha][aria-selected="true"]')?.dataset.ramakParasha;
+    const chosen = screen?.querySelector('#ramakDayStrip .ramakDay.on');
+    const dayNumber = Number(chosen?.dataset.ramakDay);
+    if (!screen?.querySelector('.ramakPanel.on') || !parasha || parasha.length > 80 || !chosen || chosen.disabled || !Number.isInteger(dayNumber) || dayNumber < 1 || dayNumber > 7) return null;
+    // Clave local para evitar duplicados. No se incluye en los eventos enviados.
+    return {key: `${parasha}|${dayNumber}`, parasha, day: dayNumber};
+  }
+  function syncStudy() {
+    if (Date.now() - lastInteraction >= IDLE) return;
+    const selected = currentStudy();
+    if (selected && study?.starts.has(selected.key) && session?.day === day() && Date.now() - session.last <= IDLE) return;
+    if (selected) emit('study_start', {section: 'camino'}, selected.key);
+  }
+  function onStudyComplete(event) {
+    const button = event.target.closest?.('[data-ramak-complete]');
+    const selected = currentStudy();
+    if (!button || !selected || button.classList.contains('done') || button.dataset.parasha !== selected.parasha || Number(button.dataset.day) !== selected.day) return;
+    // Esperar la acción de la app: si no se pudo guardar, no contar un final.
+    queueMicrotask(() => {
+      const active = currentStudy();
+      const confirmed = [...document.querySelectorAll('[data-ramak-complete]')].find(el => el.dataset.parasha === selected.parasha && Number(el.dataset.day) === selected.day);
+      if (active?.key !== selected.key || !confirmed?.classList.contains('done')) return;
+      syncStudy();
+      emit('study_complete', {section: 'camino'}, selected.key);
+    });
   }
   function mediaDetails(audio) {
     const track = audio.dataset.metricsTrack || '', collection = audio.dataset.metricsCollection || '';
@@ -125,13 +168,15 @@
       sectionSince = performance.now();
       emit('section_view');
     }
+    syncStudy();
   }
   function setEnabled(value) {
     enabled = !!value && !browserOptOut;
     save(localStorage, PREF, String(enabled));
     if (!enabled) {
-      queue = []; session = null; daily = null; radio = null; started = false;
+      queue = []; session = null; daily = null; radio = null; study = null; started = false;
       remove(localStorage, DAILY); remove(sessionStorage, SESSION);
+      remove(sessionStorage, STUDY);
     } else begin();
   }
   function privacy() {
@@ -146,12 +191,13 @@
   document.getElementById('metricsPrivacyClose')?.addEventListener('click', () => document.getElementById('metricsPrivacy').close());
   document.getElementById('metricsConsent')?.addEventListener('change', event => setEnabled(event.target.checked));
   document.getElementById('metricsPrivacy')?.addEventListener('click', event => { if (event.target === event.currentTarget) event.currentTarget.close(); });
-  new MutationObserver(syncSection).observe(document.querySelector('.appShell'), {subtree:true, attributes:true, attributeFilter:['hidden']});
+  new MutationObserver(() => { syncSection(); syncStudy(); }).observe(document.querySelector('.appShell'), {subtree:true, childList:true, attributes:true, attributeFilter:['hidden','class','aria-selected']});
+  document.addEventListener('click', onStudyComplete, true);
   for (const type of ['playing', 'timeupdate', 'pause', 'ended', 'seeking', 'seeked']) document.addEventListener(type, onMedia, true);
   for (const type of ['pointerdown', 'keydown']) document.addEventListener(type, () => {
     const inactive = Date.now() - lastInteraction >= IDLE;
     lastInteraction = Date.now();
-    if (inactive) { sectionSince = performance.now(); if (allowed()) emit('section_view'); }
+    if (inactive) { sectionSince = performance.now(); if (allowed()) { emit('section_view'); syncStudy(); } }
   }, {passive:true});
   document.addEventListener('visibilitychange', () => {
     if (document.visibilityState === 'hidden') {

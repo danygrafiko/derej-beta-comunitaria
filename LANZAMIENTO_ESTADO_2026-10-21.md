@@ -45,3 +45,11 @@ La separación de marcos y aplicaciones en Lej Lejá y Vayerá no sustituye el c
 - El reintento reconstruye la interfaz del estudio que había mostrado el error y limpia el estado de fallo al recuperar los datos.
 - Aclarado que el avance y las reflexiones pertenecen al navegador: no se trasladan automáticamente a otro y pueden perderse si se borran sus datos.
 - Estas comprobaciones funcionales no reemplazan la observación de personas nuevas ni la revisión en teléfonos reales.
+
+## Parte 3 · Inicio y finalización del estudio
+- Dos señales agregadas: apertura de una jornada y acción de marcarla como realizada. No se envía la identidad de la lectura, la nota, la etapa ni el historial privado.
+- Se evita duplicar la misma jornada por etapa, renderizado o recarga de pestaña durante una sesión. El final requiere confirmación del guardado local.
+- La preferencia de métricas y las señales de privacidad del navegador se aplican a ambos eventos. Las pruebas quedan excluidas.
+- La vista administrativa diaria incorpora los contadores de estudio. La lectura pública de la tabla y la vista continúa bloqueada. La prueba de inserción se ejecutó bajo el rol público y revirtió sus filas.
+- Se conserva el identificador diario cambiante: no se ha implementado seguimiento de personas entre días.
+- La revisión de seguridad no informó incidencias de las tablas o vistas de métricas. Quedaron para la revisión final de accesos las advertencias existentes sobre políticas de `mission_actions`, `testimonies` y protección de contraseñas. Esas advertencias requieren revisar su contexto; no certifican por sí solas una exposición. [Políticas](https://supabase.com/docs/guides/database/database-advisors?queryGroups=lint&lint=0012_auth_allow_anonymous_sign_ins) · [Contraseñas](https://supabase.com/docs/guides/auth/password-security#password-strength-and-leaked-password-protection).

@@ -1,4 +1,4 @@
-# Métricas de Dérej · v1
+# Métricas de Dérej · visitas, estudio y Radio
 
 La medición comienza con esta publicación. No reconstruye visitas ni estudios anteriores.
 Se activa sólo en `derej-beta-comunitaria.vercel.app`; los previews y las copias locales no envían eventos.
@@ -11,13 +11,15 @@ El enlace **Privacidad y métricas** en el patio permite desactivarla. Se respet
 | visit | Nueva sesión por pestaña, después de 30 minutos sin eventos o al cambiar el día de Chile. No equivale a una persona. |
 | section_view | Entrada a una puerta: patio, Camino, Shabat, Moed, Radio, Mi Camino o Pozo. No lee sus contenidos. |
 | section_time | Segundos con esa sección visible, hasta 30 minutos por tramo. No demuestra atención. Se detiene al ocultar la pestaña. |
+| study_start | Apertura de una jornada con el estudio visible. Una por jornada y sesión; cambiar de etapa o recargar la misma pestaña no duplica el inicio. |
+| study_complete | Acción explícita de marcar una jornada como realizada, después de confirmar el guardado local. Una por jornada y sesión; guardar una nota o llegar a Llevar no equivale a completar. |
 | radio_start | El navegador confirma reproducción. Pausar y continuar no suma otro inicio. No incluye precargas. |
 | radio_30s | Al menos 30 segundos reales de reproducción con volumen y sin silencio. No cuenta saltos por la barra. No prueba que la persona estuviera escuchando. |
 | radio_complete | Llega al final después de 30 segundos reales y de reproducir al menos el 90% de la duración. |
 
 Un código aleatorio de navegador cambia cada día en `America/Santiago`; sólo se conserva el actual. No hay huella digital ni identificador permanente. La sesión usa otro código, guardado por pestaña. La etiqueta móvil/tablet/escritorio es aproximada.
 
-El registro no almacena nombres, correos, IP, URLs, búsquedas, texto escrito ni progreso personal. Los proveedores conservan sus registros técnicos habituales. Los IDs de colección y pista proceden del catálogo editorial, no de contenido de usuarios.
+El registro no almacena nombres, correos, IP, URLs, búsquedas, texto escrito, parashá, número de día, etapa ni historial personal de avance. Se cuentan las acciones nuevas de inicio y finalización, sin enviar la identidad de la jornada. La deduplicación usa claves de jornada sólo en la memoria de la pestaña; se renueva con la sesión y se borra al desactivar las métricas. Los proveedores conservan sus registros técnicos habituales. Los IDs de colección y pista proceden del catálogo editorial, no de contenido de usuarios.
 
 ## Datos y consulta
 
@@ -52,3 +54,16 @@ Los navegadores diarios no deben sumarse para presentarlos como personas únicas
 - Enviar pruebas con `?metricas=prueba`; estos eventos quedan excluidos de los informes. No se envía el parámetro ni la URL al registro.
 - Base publicada antes de activar el cliente. Los SQL en `backend/` documentan el esquema final ya aplicado; no se deben ejecutar de nuevo en producción.
 - La medición no modifica reflexiones, progreso, ejercicios ni fuentes editoriales.
+- `tests/analytics-study.test.cjs`: apertura de jornadas, etapas y recargas sin duplicados, final confirmado, desmarcar, notas, almacenamiento fallido, pestaña oculta, sesiones, exclusión voluntaria, GPC y previews.
+- `backend/analytics-study-validation.sql`: prueba transaccional bajo el rol público; comprueba inserción válida, rechazo de formas y campos privados, y lectura bloqueada; revierte las filas de prueba.
+
+## Alcance de la extensión del 21 de octubre de 2026
+
+La migración `analytics_study_lifecycle` añade dos tipos de evento y las columnas `study_starts` y `study_completes` al final de `analytics_daily`. Conserva los campos, políticas y permisos existentes y la compatibilidad del registro `metrics-v1`. No añade un identificador de persona ni un seguimiento entre días.
+
+Un final es una declaración de la persona, no una prueba de lectura completa o de aprendizaje. Desmarcar un encuentro no resta una acción histórica ya registrada; volver a marcarlo durante la misma sesión tampoco suma otra. Los bloqueos y fallos de red pueden causar subregistro. La preferencia de métricas afecta también a estas dos señales; no se reconstruyen acciones anteriores ni se importan marcadores locales antiguos.
+
+```sql
+select day,study_starts,study_completes
+from public.analytics_daily order by day;
+```
