@@ -119,14 +119,15 @@
     const button = event.target.closest?.('[data-ramak-complete]');
     const selected = currentStudy();
     if (!button || !selected || button.classList.contains('done') || button.dataset.parasha !== selected.parasha || Number(button.dataset.day) !== selected.day) return;
-    // Esperar la acción de la app: si no se pudo guardar, no contar un final.
-    queueMicrotask(() => {
+    // Una nueva tarea espera a todos los manejadores del clic nativo.
+    // Una microtarea en captura puede ejecutarse antes del guardado de la app.
+    setTimeout(() => {
       const active = currentStudy();
       const confirmed = [...document.querySelectorAll('[data-ramak-complete]')].find(el => el.dataset.parasha === selected.parasha && Number(el.dataset.day) === selected.day);
       if (active?.key !== selected.key || !confirmed?.classList.contains('done')) return;
       syncStudy();
       emit('study_complete', {section: 'camino'}, selected.key);
-    });
+    }, 0);
   }
   function mediaDetails(audio) {
     const track = audio.dataset.metricsTrack || '', collection = audio.dataset.metricsCollection || '';

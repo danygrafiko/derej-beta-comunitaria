@@ -5,6 +5,9 @@ const pause=ms=>new Promise(r=>setTimeout(r,ms));
 async function boot({url='https://derej-beta-comunitaria.vercel.app/?metricas=prueba',disabled=false,gpc=false,hidden=false,storage={},tabStorage={}}={}){
  const dom=new JSDOM(fs.readFileSync(path.join(root,'index.html'),'utf8'),{url,runScripts:'outside-only',pretendToBeVisual:true});
  const w=dom.window,events=[],requests=[],observers=[];let visible=!hidden,wallOffset=0;const NativeDate=w.Date;
+ // Modelar el checkpoint de microtareas que Chrome puede hacer entre
+ // captura y el manejador de la app; la confirmación debe esperar otra tarea.
+ w.queueMicrotask=fn=>fn();
  w.Date=class extends NativeDate{constructor(...args){super(...(args.length?args:[NativeDate.now()+wallOffset]));}static now(){return NativeDate.now()+wallOffset;}};
  const Observer=w.MutationObserver;w.MutationObserver=class extends Observer{constructor(fn){super(fn);observers.push(this);}};
  Object.defineProperty(w.document,'visibilityState',{get:()=>visible?'visible':'hidden'});Object.defineProperty(w.navigator,'globalPrivacyControl',{value:gpc});

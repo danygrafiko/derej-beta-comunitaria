@@ -49,6 +49,7 @@ La separación de marcos y aplicaciones en Lej Lejá y Vayerá no sustituye el c
 ## Parte 3 · Inicio y finalización del estudio
 - Dos señales agregadas: apertura de una jornada y acción de marcarla como realizada. No se envía la identidad de la lectura, la nota, la etapa ni el historial privado.
 - Se evita duplicar la misma jornada por etapa, renderizado o recarga de pestaña durante una sesión. El final requiere confirmación del guardado local.
+- La comprobación del guardado espera una tarea posterior al clic: Chrome puede ejecutar microtareas entre captura y el manejador de la app. La prueba automatizada cubre ese orden.
 - La preferencia de métricas y las señales de privacidad del navegador se aplican a ambos eventos. Las pruebas quedan excluidas.
 - La vista administrativa diaria incorpora los contadores de estudio. La lectura pública de la tabla y la vista continúa bloqueada. La prueba de inserción se ejecutó bajo el rol público y revirtió sus filas.
 - Se conserva el identificador diario cambiante: no se ha implementado seguimiento de personas entre días.
