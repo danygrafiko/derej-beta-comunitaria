@@ -22153,6 +22153,7 @@ loadRamak();
         <span>CICLOS · ENCUENTROS · SEÑALES</span>
         <h2 id="moedJourneyTitle">Cada tiempo<br>tiene un propósito.</h2>
       </header>
+      <div id="moedCalendarRoot">${window.DerejMoedCalendar?.annual()||''}</div>
       <div id="moedGates" class="moedGates"></div>
     </section>
 
@@ -23806,6 +23807,17 @@ loadRamak();
 
 
 
+  screen.addEventListener('change',function(e){
+    const field=e.target.matches('[data-moed-year]')?'year':e.target.matches('[data-moed-region]')?'region':null;
+    if(!field||!window.DerejMoedCalendar)return;
+    window.DerejMoedCalendar.update(field,e.target.value);
+    const host=document.getElementById('moedCalendarRoot');
+    const openStates=Array.from(host.querySelectorAll('details')).map(x=>x.open);
+    host.innerHTML=window.DerejMoedCalendar.annual();
+    host.querySelectorAll('details').forEach((x,i)=>{x.open=!!openStates[i];});
+    host.querySelector(field==='year'?'[data-moed-year]':'[data-moed-region]')?.focus({preventScroll:true});
+    renderDetail();
+  });
   function renderGates(){
     const host=document.getElementById('moedGates');
     host.innerHTML=MOED_DATA.map(x=>`
@@ -23817,6 +23829,7 @@ loadRamak();
         <h3>${x.titleEs}</h3>
         <small>${x.titleHeLatin.toUpperCase()}</small>
         <p>${x.tag}</p>
+        ${window.DerejMoedCalendar?.compact(x.id)||''}
       </button>
     `).join('');
   }
@@ -24385,6 +24398,7 @@ loadRamak();
         <h2>${x.titleEs}</h2>
         <p class="moedSub">${x.titleHeLatin} · ${x.hebrewFull}</p>
         <p class="moedTagline">${x.tag}</p>
+        ${window.DerejMoedCalendar?.detail(x.id)||''}
         ${x.experiences?.length?experienceDoors(x):''}
         <div class="moedTabs" role="tablist" aria-label="Profundidad de lectura">
           <button type="button" class="moedTab${selectedTab==='abierta'?' on':''}" data-moed-tab="abierta">Abierta</button>
