@@ -4232,11 +4232,10 @@ function prepareCaminoShell(){
       <div class="heroScrim"></div>
       <div class="heroCopy">
         <span class="eyebrow">CAMINO</span>
-        <span class="ramakSignature">ED. RAMAK</span>
         <span class="heroHebrew" aria-hidden="true">דרך</span>
         <h1 id="caminoTitle">Caminos Diarios</h1>
         <p class="weekTitle">Bereshit a Tetzavé</p>
-        <p class="heroEditorial">Una voz antigua. Una pregunta para hoy. Una práctica para llevar.</p>
+        <p class="heroEditorial">Una lectura. Una pregunta para hoy. Una práctica para llevar.</p>
         <button class="heroEnter" type="button" data-ramak-scroll="ramakChooser">Elegir un Camino <span>↓</span></button>
       </div>
     </section>
@@ -4498,7 +4497,7 @@ function prepareCaminoShell(){
 
     <section class="ramakChooser" id="ramakChooser" aria-labelledby="ramakChooserTitle">
       <header class="ramakChooserHead">
-        <span>20 PARASHOT · 134 CAMINOS</span>
+        <span id="ramakContentCount">PARASHOT · CAMINOS DIARIOS</span>
         <h2 id="ramakChooserTitle">Caminos Diarios</h2>
         <p>Recorre una Parashá, elige un día y entra por cinco umbrales: Encuentro, Raíz, Profundizar, Práctica y Llevar.</p>
       </header>
@@ -10714,6 +10713,8 @@ function renderPanels(p,c){
 
 function renderRamak(scrollToChooser=false){
   if(!RAMAK_DATA||!caminoScreen) return;
+  const contentCount=document.getElementById('ramakContentCount');
+  if(contentCount) contentCount.textContent=`${RAMAK_DATA.parashot.length} PARASHOT · ${RAMAK_DATA.parashot.reduce((total,p)=>total+(p.caminos?.length||0),0)} CAMINOS`;
   if($('ramakGlossSheet')) $('ramakGlossSheet').hidden=true;
   if($('ramakGlossBackdrop')) $('ramakGlossBackdrop').hidden=true;
   let p=currentParasha();
@@ -38384,9 +38385,9 @@ loadRamak();
 
 
 
-  const homeCourtyard=document.querySelector('[data-screen="home"] .courtyard');
-  if(homeCourtyard&&!document.getElementById('derejFeedbackHome')){
-    homeCourtyard.insertAdjacentHTML('beforeend',`
+  const homeFooter=document.querySelector('[data-screen="home"] .homeFooter');
+  if(homeFooter&&!document.getElementById('derejFeedbackHome')){
+    homeFooter.insertAdjacentHTML('afterbegin',`
       <button type="button" class="derejFeedbackHome" id="derejFeedbackHome" data-derej-feedback-open>
         <span>COMUNIDAD</span><b>Ayúdanos a mejorar DÉREJ</b><i>→</i>
       </button>`);
@@ -38819,7 +38820,7 @@ loadRamak();
     const style=document.createElement('style');
     style.id='derejFeedbackStyles';
     style.textContent=`
-      .derejFeedbackHome{position:absolute;z-index:10;left:50%;bottom:max(49px,calc(env(safe-area-inset-bottom) + 42px));transform:translateX(-50%);display:flex;align-items:center;gap:7px;max-width:88%;white-space:nowrap;border:1px solid rgba(244,220,169,.52);border-radius:999px;background:rgba(12,17,12,.60);color:#f5e6c8;padding:8px 11px;backdrop-filter:blur(8px);box-shadow:0 6px 22px rgba(0,0,0,.18);text-shadow:0 1px 8px #000}
+      .derejFeedbackHome{position:static;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:8px;max-width:100%;white-space:normal;transform:none;border:1px solid rgba(244,220,169,.52);border-radius:999px;background:rgba(12,17,12,.60);color:#f5e6c8;padding:8px 11px;backdrop-filter:blur(8px);box-shadow:0 6px 22px rgba(0,0,0,.18);text-shadow:0 1px 8px #000}
       .derejFeedbackHome span{font-size:.43rem;letter-spacing:.15em;font-weight:900;color:#d9bd78}.derejFeedbackHome b{font:700 .68rem/1.1 Georgia,serif}.derejFeedbackHome i{font-style:normal;color:#e6ca86}
       .derejFeedbackCard{display:grid;grid-template-columns:52px 1fr;gap:13px;align-items:start;margin-top:13px;padding:17px;border:1px solid #c8b89b;border-radius:22px;background:linear-gradient(145deg,#fff7e9,#edf0e4);box-shadow:0 12px 28px rgba(64,49,28,.07)}
       .derejFeedbackMiniMark{display:grid;place-items:center;width:50px;height:50px;border-radius:50%;background:#40523d;color:#f6e5bf;font:1.45rem Georgia,serif;position:relative}.derejFeedbackMiniMark span{position:absolute;right:6px;bottom:3px;font-size:.72rem;color:#d9bd78}

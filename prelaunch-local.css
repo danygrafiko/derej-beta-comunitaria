@@ -246,3 +246,19 @@
     bottom:16px;
   }
 }
+/* Patio: comunidad, mensaje y privacidad comparten un pie en flujo normal. */
+.homeScreen>.homeFooter{position:static;inset:auto;display:flex;flex-direction:column;align-items:center;gap:12px;margin:0;padding:22px max(18px,env(safe-area-inset-left)) max(22px,env(safe-area-inset-bottom));background:#101810;color:#e3d7bc;text-align:center;text-shadow:none;font:italic .82rem/1.6 Georgia,serif}
+.homeScreen>.homeFooter .homeFooterMessage{margin:0;max-width:36rem;overflow-wrap:anywhere}
+.homeScreen>.homeFooter .derejFeedbackHome{position:static;inset:auto;transform:none;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:8px;white-space:normal;width:fit-content;max-width:100%;min-height:46px;margin:0;padding:12px 18px;text-align:center}
+.homeScreen>.homeFooter .derejFeedbackHome b{font-size:.9rem;line-height:1.45;overflow-wrap:anywhere}
+.homeScreen>.homeFooter .metricsPrivacyOpen{position:static;margin:0;max-width:100%;min-height:44px;padding:10px 16px;font-size:.82rem;line-height:1.5;white-space:normal;overflow-wrap:anywhere}
+/* La cabecera crece con su contenido y admite texto ampliado. */
+.caminoScreen .caminoPortalHero.ramakHero{display:flex;align-items:flex-end;height:auto;min-height:min(70svh,42rem);padding:clamp(9rem,26vh,16rem) clamp(16px,4vw,32px) 28px}
+.caminoScreen .ramakHero .heroCopy{position:relative;inset:auto;flex:1 1 auto;min-width:0;width:100%;max-width:100%;margin:0;padding:0;text-align:center}
+.caminoScreen .ramakHero .heroCopy h1{max-width:100%;margin:.2em 0 .35em;font:400 clamp(2rem,7vw,3.5rem)/1.12 Georgia,serif;white-space:normal;overflow-wrap:anywhere}
+.caminoScreen .ramakHero .heroHebrew{display:block;font:clamp(2rem,8vw,3rem)/1.25 Georgia,serif;margin:.4rem 0}
+.caminoScreen .ramakHero .heroCopy p{max-width:100%;margin:.5rem auto;white-space:normal;overflow-wrap:anywhere}
+.caminoScreen .ramakHero .heroCopy .heroEnter{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-width:0;width:100%;max-width:28rem;min-height:48px;padding:14px 18px;font:600 1rem/1.45 system-ui,sans-serif;white-space:normal;overflow-wrap:anywhere}
+.ramakCaminoScreen .ramakChooser{min-width:0;max-width:100%}
+.ramakCaminoScreen .ramakChooserHead h2{font-size:clamp(1.7rem,7vw,2.6rem);line-height:1.2;white-space:normal;overflow-wrap:anywhere}
+.ramakCaminoScreen .ramakChooserHead p,.ramakCaminoScreen .ramakChooserHead span{max-width:100%;white-space:normal;overflow-wrap:anywhere}
