@@ -13086,6 +13086,8 @@ async function loadRamak(){
         throw new Error(`Contenido diario incompleto en ${p.parasha||'esta parashá'}. Estamos preparando los días pendientes.`);
       }
     }
+    ramakLoadError='';
+    if(!document.getElementById('ramakWeekIndex'))prepareCaminoShell();
     RAMAK_DATA=data;
     window.DEREJ_RAMAK_V25=data;
     selectedParasha=data.parashot.some(p=>p.parasha===selectedParasha)?selectedParasha:data.parashot[0].parasha;
@@ -13094,6 +13096,7 @@ async function loadRamak(){
   }catch(err){
     ramakLoadError=String(err?.message||err);
     renderRamakError();
+    document.dispatchEvent(new Event('derej-study-load-failed'));
   }
 }
 

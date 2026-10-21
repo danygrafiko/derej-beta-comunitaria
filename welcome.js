@@ -59,7 +59,7 @@
     },
     {
       title:'Un pequeño paso puede dar fruto.',
-      content:`<h2>Lo aprendido continúa en la vida</h2><p>En Camino encontrarás cinco momentos: <b>Encuentro, Raíz, Profundizar, Práctica y Llevar</b>. Te ayudan a pasar de una pregunta al texto, del texto a la reflexión y de la reflexión a una acción posible.</p><p>Una visita puede dejarte una palabra, una pregunta o un gesto: escuchar con más atención, agradecer, reparar una conversación o acompañar a alguien que lo necesita.</p><p>El sentido de este portal se expresa en cómo nos tratamos. Queremos acercarnos al Creador del universo y aprender a amarnos los unos a los otros, reconociendo el mismo valor en cada alma.</p><p><b>Al pulsar «Entrar a Dérej» llegarás al patio.</b> Allí podrás elegir por dónde comenzar.</p><p class="welcomeNotice welcomePrivacyHint">Tus reflexiones permanecen en este dispositivo. Esta bienvenida recuerda tu elección en este navegador. Puedes consultar o cambiar la preferencia de métricas en «Privacidad y métricas», al pie del patio.</p>`
+      content:`<h2>Lo aprendido continúa en la vida</h2><p>En Camino encontrarás cinco momentos: <b>Encuentro, Raíz, Profundizar, Práctica y Llevar</b>. Te ayudan a pasar de una pregunta al texto, del texto a la reflexión y de la reflexión a una acción posible.</p><p>Una visita puede dejarte una palabra, una pregunta o un gesto: escuchar con más atención, agradecer, reparar una conversación o acompañar a alguien que lo necesita.</p><p>El sentido de este portal se expresa en cómo nos tratamos. Queremos acercarnos al Creador del universo y aprender a amarnos los unos a los otros, reconociendo el mismo valor en cada alma.</p><p><b>Al pulsar «Entrar a Dérej» llegarás al patio.</b> Allí podrás elegir por dónde comenzar.</p><p class="welcomeNotice welcomePrivacyHint">Tu avance y tus reflexiones se guardan en este navegador. Al cambiar de navegador o dispositivo no se trasladan automáticamente; si borras sus datos, puedes perderlos. Esta bienvenida recuerda aquí tu elección. Puedes consultar o cambiar la preferencia de métricas en «Privacidad y métricas», al pie del patio.</p>`
     }
   ];
   function guide(){
@@ -71,7 +71,7 @@
     if(working)return;
     if(target==='camino'&&!currentData()){
       pending={target,mode};const status=dialog.querySelector('#welcomeStatus');if(status)status.textContent='Preparando el estudio… Puedes ir al patio mientras carga.';
-      if(typeof ramakLoadError!=='undefined'&&ramakLoadError){error('No pudimos cargar el estudio. Inténtalo de nuevo o entra al patio.');loadRamak();}
+      if(typeof ramakLoadError!=='undefined'&&ramakLoadError)loadRamak();
       return;
     }
     working=true;
@@ -90,6 +90,9 @@
     finally{window.DEREJ_INTRO_RESUMING=false;suspendCapture=false;working=false;}
     if(target==='camino')remember();
   }
+  document.addEventListener('derej-study-load-failed',()=>{
+    if(pending&&dialog.open)error('No pudimos cargar el estudio. Comprueba tu conexión y vuelve a pulsar la opción elegida, o entra al patio.');
+  });
   const previousRender=renderRamak;
   renderRamak=function(...args){const value=previousRender.apply(this,args);if(pending&&currentData()){const action=pending;pending=null;queueMicrotask(()=>{if(dialog.open)enter(action.target,action.mode);});}return value;};
   const previousStep=activateRamakStep;

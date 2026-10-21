@@ -37,3 +37,11 @@ La separación de marcos y aplicaciones en Lej Lejá y Vayerá no sustituye el c
 5. Verificar respaldos, capacidad operativa y canal de observaciones.
 6. Continuar el cierre editorial por Jaye Sara y las semanas siguientes; completar Bereshit y Noaj.
 7. Mantener la curaduría musical en su propio flujo de trabajo.
+
+## Parte 2 · Bienvenida y recuperación del avance
+- Verificadas la guía de primera visita, la entrada posterior al Patio y la recuperación de la parashá, el día y la etapa exactos entre visitas.
+- Comprobado que la recuperación conserva notas privadas, encuentros completados y preferencia de métricas.
+- Corregida la espera que permanecía en «Preparando el estudio…» cuando fallaba la carga inicial: ahora informa el fallo y permite reintentar la opción elegida desde la misma bienvenida.
+- El reintento reconstruye la interfaz del estudio que había mostrado el error y limpia el estado de fallo al recuperar los datos.
+- Aclarado que el avance y las reflexiones pertenecen al navegador: no se trasladan automáticamente a otro y pueden perderse si se borran sus datos.
+- Estas comprobaciones funcionales no reemplazan la observación de personas nuevas ni la revisión en teléfonos reales.
