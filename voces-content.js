@@ -1,6 +1,6 @@
 /* Dérej · Colección editorial en español. Síntesis y aplicaciones identificadas. */
 window.DEREJ_VOCES_CONTENT={
-  "version": 1,
+  "version": 2,
   "order": [
     "rashi",
     "ramjal",
@@ -56,12 +56,13 @@ window.DEREJ_VOCES_CONTENT={
         [
           "Hiljot Deot 1:6–7",
           "Mechon Mamre · Numeración tradicional [6] y [7]",
-          "https://mechon-mamre.org/i/en/1201.htm"
+          null
         ],
         [
-          "Vida y obras",
-          "Stanford Encyclopedia of Philosophy",
-          "https://plato.stanford.edu/entries/maimonides/"
+          "Lectura complementaria: vida y obras",
+          "Jabad en español · Biografía, no traducción del pasaje",
+          "https://es.chabad.org/library/article_cdo/aid/426526/jewish/El-Rambam.htm",
+          "es"
         ]
       ]
     },
@@ -116,12 +117,13 @@ window.DEREJ_VOCES_CONTENT={
         [
           "Tomer Devorah, capítulo 1, apertura",
           "Wikisource · Transcripción hebrea; cotejo limitado a la apertura",
-          "https://he.wikisource.org/wiki/תומר_דבורה/א"
+          null
         ],
         [
-          "Vida y obras",
-          "Posen Library",
-          "https://www.posenlibrary.com/author/moses-cordovero"
+          "Lectura complementaria: vida y obras",
+          "Gal Einai en español · Biografía, no edición del pasaje",
+          "https://galeinai.org/2025/07/17/el-ramak-rabi-moshe-cordovero/",
+          "es"
         ]
       ]
     },
@@ -172,12 +174,13 @@ window.DEREJ_VOCES_CONTENT={
         [
           "Mesilat Yesharim, capítulo 3",
           "D.A.F. · Texto con comentarios separados",
-          "https://www.dafyomi.co.il/general/info/ref/mesilat.php?d=5"
+          null
         ],
         [
-          "Vida y contexto",
-          "Posen Library",
-          "https://www.posenlibrary.com/author/moses-hayim-luzzatto"
+          "Lectura complementaria: vida y contexto",
+          "Jabad en español · Biografía, no traducción del capítulo",
+          "https://es.chabad.org/library/article_cdo/aid/595905/jewish/El-Ramjal.htm",
+          "es"
         ]
       ]
     },
@@ -222,14 +225,16 @@ window.DEREJ_VOCES_CONTENT={
       "id": "najman",
       "sources": [
         [
-          "Likutei Moharán II:25",
-          "Localización y explicación de Chaim Kramer · Breslov Research Institute",
-          "https://breslov.org/hitbodedut-when-and-where/"
+          "Lectura complementaria sobre Likutei Moharán II:25",
+          "Yehudis Golshevsky · Breslov en español · Explicación, no traducción íntegra",
+          "https://es.breslov.org/el-nivel-mas-alto-de-todos/",
+          "es"
         ],
         [
-          "Vida y transmisión",
-          "Breslov Research Institute",
-          "https://breslov.org/breslov-faq/"
+          "Lectura complementaria: vida y transmisión",
+          "Ester Shechter · Breslov en español",
+          "https://es.breslov.org/todo-lo-que-siempre-quisiste-saber-sobre-rebe-najman/?print=print",
+          "es"
         ]
       ]
     },
@@ -275,12 +280,13 @@ window.DEREJ_VOCES_CONTENT={
         [
           "Comentario a Génesis 13:3",
           "Jabad · Texto hebreo y edición consultada",
-          "https://www.chabad.org/parshah/torahreading.asp?aid=2474599&p=2&showrashi=true"
+          null
         ],
         [
           "Biografía de Rashí",
           "Jabad en español",
-          "https://es.chabad.org/library/article_cdo/aid/710452/jewish/Rashi.htm"
+          "https://es.chabad.org/library/article_cdo/aid/710452/jewish/Rashi.htm",
+          "es"
         ]
       ]
     }
