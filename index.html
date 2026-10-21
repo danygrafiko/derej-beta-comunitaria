@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="analytics.css?v=1">
 <link rel="stylesheet" href="welcome.css?v=1">
 <link rel="stylesheet" href="midrash-es.css?v=27.2">
+<link rel="stylesheet" href="voces.css?v=1">
 <style>
   .brandButton .derejWordmark{display:flex;flex-direction:column;align-items:flex-start;line-height:1}
   .brandButton .derejWordmark b{letter-spacing:.16em}
@@ -42,6 +43,10 @@
       <button class="portal portalPersonal" data-route="personal" aria-label="Entrar a Mi Camino"><span class="portalSigil">⌁</span><span class="portalLabel"><small>HUELLAS · BROTES</small><b>Mi Camino</b></span></button>
       <button class="pozoHotspot" data-route="pozo" aria-label="Acercarse al Pozo y descubrir su interior"><span class="pozoRipple" aria-hidden="true"></span></button>
       <div class="homeFooter">La pantalla abre una puerta. El Camino continúa fuera de ella.<button type="button" id="metricsPrivacyOpen" class="metricsPrivacyOpen">Privacidad y métricas</button></div>
+    </div>
+    <div class="vocHomeEntry">
+      <div><span>VIDAS · OBRAS · ENSEÑANZAS</span><h2>Voces del Camino</h2><p>Conoce a quienes leemos en Dérej y vuelve al texto con una pregunta nueva.</p></div>
+      <button type="button" data-voces-open>Explorar las voces →</button>
     </div>
   </section>
 
@@ -174,6 +179,9 @@
   <section class="screen pozoScreen" data-screen="pozo" hidden aria-labelledby="pozoTitle">
     <div id="pozoRoot"><button class="backBtn" data-route="home">← Patio</button><h1 id="pozoTitle">El Pozo</h1><p>Preparando el encuentro…</p></div>
   </section>
+  <section class="screen vocesScreen" data-screen="voces" hidden aria-labelledby="vocesTitle">
+    <div class="vocInner" id="vocesRoot"><button type="button" class="backBtn" data-route="home">← Patio</button><h1 id="vocesTitle">Voces del Camino</h1><p>Vidas, obras y enseñanzas. Preparando la lectura…</p></div>
+  </section>
 </main>
 <dialog id="metricsPrivacy" class="metricsPrivacy" aria-labelledby="metricsPrivacyTitle">
   <h2 id="metricsPrivacyTitle">Privacidad en Dérej</h2>
@@ -195,11 +203,13 @@
 
 <script src="navigation-v241.js"></script>
 <script src="pozo-content.js?v=4"></script>
-<script src="pozo-learning.js?v=6"></script>
+<script src="pozo-learning.js?v=7"></script>
 <script src="analytics.js?v=1"></script>
 <script src="welcome.js?v=26.2"></script>
 <script src="midrash-diario-es.js?v=27.2"></script>
 <script src="midrash-es.js?v=27.2"></script>
+<script src="voces-content.js?v=1"></script>
+<script src="voces.js?v=1"></script>
   
 </body>
 </html>
