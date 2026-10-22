@@ -1,0 +1,40 @@
+const {JSDOM}=require('jsdom');
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict'),path=require('node:path');
+const root=path.join(__dirname,'..'),source=fs.readFileSync(path.join(root,'connection-reminders.js'),'utf8');
+const wait=()=>new Promise(r=>setTimeout(r,30));
+async function boot({ios=false,permission='default',offline=false,storageFails=false}={}){
+ const dom=new JSDOM('<main class="appShell"><section class="homeScreen"><footer class="homeFooter"><button id="metricsPrivacyOpen">Privacidad</button></footer></section><section data-screen="personal"></section></main>',{url:'https://derej-beta-comunitaria.vercel.app/?metricas=prueba',runScripts:'outside-only'});
+ const w=dom.window,calls=[],posts=[];let sub=null;
+ w.HTMLDialogElement.prototype.showModal=function(){this.open=true;};w.HTMLDialogElement.prototype.close=function(){this.open=false;this.dispatchEvent(new w.Event('close'));};
+ w.matchMedia=()=>({matches:false});w.isSecureContext=true;w.PushManager=function(){};w.URL.createObjectURL=()=> 'blob:test';w.URL.revokeObjectURL=()=>{};w.HTMLAnchorElement.prototype.click=function(){};
+ if(ios)Object.defineProperty(w.navigator,'userAgent',{value:'iPhone'});
+ w.Notification={permission,requestPermission(){calls.push('permission');this.permission='granted';return Promise.resolve('granted');}};
+ const reg={active:{},pushManager:{async getSubscription(){return sub;},async subscribe(){calls.push('subscribe');sub={toJSON:()=>({endpoint:'https://fcm.googleapis.com/test',keys:{p256dh:'x'.repeat(87),auth:'x'.repeat(22)}}),async unsubscribe(){calls.push('unsubscribe');sub=null;return true;}};return sub;}}};
+ Object.defineProperty(w.navigator,'serviceWorker',{value:{register:async()=>reg,getRegistration:async()=>reg,addEventListener(){}}});
+ w.fetch=async(url,opts)=>{if(offline)throw Error('Sin conexión.');if(opts?.method==='POST'){posts.push(JSON.parse(opts.body));calls.push('post');}return{ok:true,json:async()=>opts?.method==='POST'?{ok:true}:{publicKey:'public-test-key'}};};
+ if(storageFails)w.Storage.prototype.setItem=function(){throw Error('Almacenamiento no disponible.');};
+ w.route=()=>{};vm.runInContext(source,dom.getInternalVMContext());
+ const click=async id=>{w.document.querySelector(id).click();await wait();};
+ await click('[data-connection-open]');
+ return{w,calls,posts,click,close:()=>dom.window.close(),status:()=>w.document.querySelector('#connectionStatus').textContent};
+}
+(async()=>{
+ let b=await boot();assert.equal(b.w.document.querySelectorAll('[data-connection-open]').length,2);assert.equal(b.calls.length,0);assert.equal(b.posts.length,0);
+ await b.click('#connectionEnable');assert.equal(b.calls.length,0);assert.match(b.status(),/autorización/);
+ b.w.document.querySelector('#connectionConsent').checked=true;await b.click('#connectionEnable');assert.deepEqual(b.calls.slice(0,3),['permission','subscribe','post']);assert.equal(b.posts[0].action,'subscribe');assert.equal(b.posts[0].time,'07:30');assert.match(b.posts[0].token,/^[a-f0-9]{64}$/);assert.match(b.status(),/Listo/);
+ b.w.document.querySelector('#connectionTime').value='21:00';await b.click('#connectionEnable');assert.equal(b.posts.length,2);assert.equal(b.posts[1].token,b.posts[0].token);assert.equal(b.calls.filter(x=>x==='subscribe').length,1);
+ await b.click('#connectionDisable');assert.equal(b.posts[2].action,'unsubscribe');assert.equal(JSON.parse(b.w.localStorage.getItem('derej.connection.v1')).active,false);assert.match(b.status(),/desactivado/);b.close();
+ b=await boot({ios:true});assert.match(b.w.document.querySelector('#connectionHelp').textContent,/pantalla de inicio/);assert(b.w.document.querySelector('#connectionEnable').disabled);await b.click('#connectionCalendar');assert.match(b.status(),/confirma el evento diario/);assert.equal(b.posts.length,0);b.close();
+ b=await boot({offline:true});assert(b.w.document.querySelector('#connectionEnable').disabled);assert.match(b.status(),/Calendario/);b.close();
+ b=await boot({permission:'denied'});assert(b.w.document.querySelector('#connectionEnable').disabled);assert.match(b.status(),/bloqueadas/);b.close();
+ b=await boot({storageFails:true});b.w.document.querySelector('#connectionConsent').checked=true;await b.click('#connectionEnable');assert.equal(b.posts.length,0);assert(!b.calls.includes('subscribe'));assert.match(b.status(),/Almacenamiento/);b.close();
+ const logic=await import('data:text/javascript;base64,'+Buffer.from(fs.readFileSync(path.join(root,'backend/connection-reminders/logic.js'),'utf8')).toString('base64'));
+ const good={endpoint:'https://fcm.googleapis.com/test',keys:{p256dh:'x'.repeat(87),auth:'x'.repeat(22)}};
+ assert(logic.validSubscription(good));for(const endpoint of ['http://fcm.googleapis.com/test','https://localhost/test','https://fcm.googleapis.com.evil.test/test','https://fcm.googleapis.com:8080/test','https://user@fcm.googleapis.com/test'])assert(!logic.validSubscription({...good,endpoint}));
+ assert(logic.validSettings({time:'07:30',timezone:'America/Santiago',destination:'camino'}));assert(!logic.validSettings({time:'24:00',timezone:'America/Santiago',destination:'camino'}));assert(!logic.validSettings({time:'07:30',timezone:'fake/zone',destination:'camino'}));
+ const handlers={},notifications=[],opened=[];const self={addEventListener:(type,fn)=>handlers[type]=fn,skipWaiting(){},location:{origin:'https://derej-beta-comunitaria.vercel.app'},registration:{showNotification:async(...args)=>notifications.push(args)},clients:{claim:async()=>{},matchAll:async()=>[],openWindow:async url=>opened.push(url)}};
+ vm.runInNewContext(fs.readFileSync(path.join(root,'connection-sw.js'),'utf8'),{self,URL});let done;
+ handlers.push({data:{json:()=>({destination:'https://evil.test',body:'private'})},waitUntil:p=>done=p});await done;assert.equal(notifications[0][1].data.destination,'camino');assert(!JSON.stringify(notifications).includes('private'));
+ handlers.notificationclick({notification:{close(){},data:{destination:'https://evil.test'}},waitUntil:p=>done=p});await done;assert.equal(opened[0],'/?conexion=camino');
+ console.log('PASS: activación explícita, permiso en gesto, guardado y baja, sin duplicar suscripción, errores de red/almacenamiento, guía iPhone, calendario y destinos seguros.');
+})().catch(e=>{console.error(e);process.exitCode=1;});
