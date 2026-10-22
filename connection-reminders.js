@@ -118,4 +118,9 @@
   }
   navigator.serviceWorker?.addEventListener('message',e=>{if(e.data?.type==='DEREJ_CONNECTION')go(e.data.destination);});
   const destination=new URLSearchParams(location.search).get('conexion');if(['camino','radio'].includes(destination)){go(destination);const url=new URL(location.href);url.searchParams.delete('conexion');history.replaceState(null,'',url);}
+  if(new URLSearchParams(location.search).get('recordatorio')==='1'){
+    const show=()=>open(document.querySelector('.connectionHeader')||document.querySelector('[data-connection-open]'));
+    const welcome=document.getElementById('derejWelcome');
+    if(welcome?.open)welcome.addEventListener('close',show,{once:true});else show();
+  }
 })();
