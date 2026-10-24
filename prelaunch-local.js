@@ -39358,7 +39358,7 @@ loadRamak();
         .ramakProgressCopy{display:grid;gap:3px;min-width:0}.ramakProgressCopy small{font-size:.52rem;letter-spacing:.15em;font-weight:900;color:#6d765f}.ramakProgressCopy b{font:1rem/1.2 Georgia,serif;color:#34402f}.ramakProgressCopy p{margin:0;font-size:.64rem;line-height:1.35;color:#737869}
         .ramakProgressPrivate>button{border:0;border-radius:999px;background:#40523d;color:#fff;padding:10px 12px;font-size:.66rem;font-weight:900;white-space:nowrap}
         .ramakDay.done{background:#40523d!important;color:#fff!important;border-color:#40523d!important}.ramakDay.pending:not(.on){box-shadow:inset 0 0 0 2px rgba(156,116,49,.18)}.ramakDay.future{opacity:.62}.ramakDay small{display:block;margin-top:2px;font-size:.48rem;line-height:1}
-        .ramakComplete{width:100%;margin-top:9px;border:1px solid #40523d;border-radius:14px;background:#40523d;color:#fff;padding:12px;font-size:.72rem;font-weight:900}.ramakComplete.done{background:#eef0e5;color:#354432}
+        .ramakComplete{width:100%;min-height:44px;margin-top:9px;border:1px solid #40523d;border-radius:14px;background:#40523d;color:#fff;padding:12px;font-size:.72rem;font-weight:900}.ramakComplete.done{background:#eef0e5;color:#354432}
         .ramakCompleteHint{text-align:center;margin:7px 0 0;font-size:.62rem;color:#78705f}
         .ramakProgressModal[hidden]{display:none}.ramakProgressModal{position:fixed;z-index:110;inset:0;display:grid;place-items:end center}.ramakProgressBackdrop{position:absolute;inset:0;background:rgba(6,9,7,.64);backdrop-filter:blur(5px)}
         .ramakProgressSheet{position:relative;z-index:1;width:min(100%,720px);max-height:88dvh;overflow:auto;border:1px solid #c9b896;border-radius:28px 28px 0 0;background:#f7eddd;color:#332d25;padding:18px 14px calc(22px + env(safe-area-inset-bottom));box-shadow:0 -22px 60px rgba(0,0,0,.28)}
@@ -39877,18 +39877,21 @@ loadRamak();
   const originalPanels=renderPanels;
   renderPanels=function(p,c){
     originalPanels(p,c);
-    const panel=caminoScreen?.querySelector('[data-ramak-panel="llevar"] .ramakBody');
-    if(panel&&!panel.querySelector('[data-ramak-complete]')){
-      const done=isCompleted(p.parasha,c.dia);
-      const nav=panel.querySelector('.ramakNav');
-      const wrap=document.createElement('div');
-      wrap.innerHTML=`
-        <button type="button" class="ramakComplete${done?' done':''}" data-ramak-complete data-parasha="${esc(p.parasha)}" data-day="${Number(c.dia)}">
-          ${done?'✓ Realizado':'Marcar como realizado'}
-        </button>
-        <p class="ramakCompleteHint">${done?'Puedes volver a marcarlo como pendiente si fue un error.':'Este registro es privado y queda sólo en este dispositivo.'}</p>`;
-      if(nav) nav.insertAdjacentElement('beforebegin',wrap);
-      else panel.appendChild(wrap);
+    for(const stage of ['practica','llevar']){
+      const panel=caminoScreen?.querySelector(`[data-ramak-panel="${stage}"] .ramakBody`);
+      if(panel&&!panel.querySelector('[data-ramak-complete]')){
+        const done=isCompleted(p.parasha,c.dia);
+        const nav=panel.querySelector('.ramakNav');
+        const wrap=document.createElement('div');
+        wrap.className='ramakCompleteWrap';
+        wrap.innerHTML=`
+          <button type="button" class="ramakComplete${done?' done':''}" aria-pressed="${done}" data-ramak-complete data-parasha="${esc(p.parasha)}" data-day="${Number(c.dia)}">
+            ${done?'✓ Estudio realizado':'He terminado este estudio'}
+          </button>
+          <p class="ramakCompleteHint" role="status">${done?'Guardado en este dispositivo. Puedes desmarcarlo si fue un error.':'Cuando termines, puedes guardar tu avance aquí. No necesitas escribir una nota.'}</p>`;
+        if(nav) nav.insertAdjacentElement('beforebegin',wrap);
+        else panel.appendChild(wrap);
+      }
     }
     addPassageHelp(p,c);
   };

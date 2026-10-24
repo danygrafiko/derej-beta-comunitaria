@@ -5,7 +5,7 @@ const path = require('node:path');
 const source = fs.readFileSync(path.join(__dirname, '../analytics.js'), 'utf8');
 const pause = () => new Promise(r => setTimeout(r, 10));
 const fixture = `<main class="appShell"><section data-screen="home" class="active"></section><section data-screen="radio" hidden></section><section data-screen="pozo" hidden></section></main><button id="metricsPrivacyOpen"></button><dialog id="metricsPrivacy"><input type="checkbox" id="metricsConsent"><small id="metricsBrowserChoice"></small><button id="metricsPrivacyClose"></button></dialog><audio id="radioV21Audio" data-metrics-track="med-01" data-metrics-collection="meditacion-i" src="https://example.test/audio.mp3"></audio><textarea>PRIVATE SENTINEL</textarea>`;
-function boot({url='https://derej-beta-comunitaria.vercel.app/?metricas=prueba',gpc=false,disabled=false,failure=false}={}) {
+function boot({url='https://derej-beta-comunitaria.vercel.app/?metricas=prueba',gpc=false,disabled=false,failure=false,internal=false}={}) {
   const dom = new JSDOM(fixture, {url,runScripts:'outside-only',pretendToBeVisual:true});
   const w = dom.window, events = [], requests = [];
   let clock=0, paused=true, seeking=false, current=0, visibility='visible', fail=failure;
@@ -16,6 +16,9 @@ function boot({url='https://derej-beta-comunitaria.vercel.app/?metricas=prueba',
   Object.defineProperty(w.document,'visibilityState',{get:()=>visibility});
   w.matchMedia=()=>({matches:false});
   if(disabled)w.localStorage.setItem('derej.metrics.enabled.v1','false');
+  if(internal)w.localStorage.setItem('derej.metrics.internal.v1','true');
+  const review=w.document.createElement('input');review.id='metricsInternal';review.type='checkbox';w.document.querySelector('dialog').appendChild(review);
+  for(const name of ['arbol','voces','nombres']){const section=w.document.createElement('section');section.dataset.screen=name;section.hidden=true;w.document.querySelector('main').appendChild(section);}
   w.fetch=async (url,options)=>{requests.push({url,options}); if(fail){fail=false;throw new Error('offline');} events.push(...JSON.parse(options.body).events);return {ok:true,status:204};};
   const audio=w.document.querySelector('audio');
   Object.defineProperties(audio,{paused:{get:()=>paused},seeking:{get:()=>seeking},currentTime:{get:()=>current},duration:{get:()=>180}});
@@ -47,5 +50,21 @@ function boot({url='https://derej-beta-comunitaria.vercel.app/?metricas=prueba',
   for(const config of [{gpc:true},{disabled:true},{url:'https://preview.vercel.app/'}]){b=boot(config);b.show('radio');b.play();b.advance(40);await pause();assert.equal(b.events.length,0);b.dom.window.close();}
   b=boot({failure:true});await pause();b.w.dispatchEvent(new b.w.Event('online'));await pause();assert.equal(b.count('visit'),1);assert.equal(b.count('section_view'),1);b.dom.window.close();
   b=boot();await pause();const first=b.events.find(e=>e.event_type==='visit');b.jump(31*60*1000);b.w.document.dispatchEvent(new b.w.Event('pointerdown'));await pause();assert.equal(b.count('visit'),2);assert.equal(b.events.filter(e=>e.event_type==='visit')[1].daily_id,first.daily_id);b.jump(24*60*60*1000);b.show('pozo');await pause();assert.equal(b.count('visit'),3);assert.notEqual(b.events.filter(e=>e.event_type==='visit')[2].daily_id,first.daily_id);b.dom.window.close();
+  // Las puertas nuevas tienen vistas y tiempo propios, sin atribuirlos al patio.
+  b=boot();await pause();b.advance(5);
+  for(const name of ['arbol','voces','nombres']){b.show(name);await pause();b.advance(7);}
+  b.show('home');await pause();
+  for(const name of ['arbol','voces','nombres']){assert.equal(b.events.filter(e=>e.event_type==='section_view'&&e.section===name).length,1);assert.equal(b.events.filter(e=>e.event_type==='section_time'&&e.section===name).reduce((n,e)=>n+e.seconds,0),7);}
+  assert.equal(b.count('visit'),1);b.dom.window.close();
+  // El enlace interno persiste y la elección pública revoca esa preferencia.
+  b=boot();await pause();assert.equal(b.w.localStorage.getItem('derej.metrics.internal.v1'),'true');b.dom.window.close();
+  b=boot({url:'https://derej-beta-comunitaria.vercel.app/',internal:true});await pause();assert(b.events.length>0&&b.events.every(e=>e.is_test));b.dom.window.close();
+  b=boot({url:'https://derej-beta-comunitaria.vercel.app/?metricas=publico',internal:true});await pause();assert(b.events.every(e=>!e.is_test));assert.equal(b.w.localStorage.getItem('derej.metrics.internal.v1'),'false');b.dom.window.close();
+  // Cambiar de modo crea una sesión distinta; la cola anterior conserva su etiqueta.
+  b=boot({url:'https://derej-beta-comunitaria.vercel.app/'});await pause();const publicSession=b.events[0].session_id;
+  let offset=b.events.length;const review=b.w.document.querySelector('#metricsInternal');review.checked=true;review.dispatchEvent(new b.w.Event('change'));await pause();
+  const internalVisit=b.events.slice(offset).find(e=>e.event_type==='visit');assert(internalVisit?.is_test);assert.notEqual(internalVisit.session_id,publicSession);
+  offset=b.events.length;b.w.dispatchEvent(new b.w.StorageEvent('storage',{key:'derej.metrics.internal.v1',newValue:'false'}));await pause();assert(b.events.slice(offset).find(e=>e.event_type==='visit'&&!e.is_test));b.dom.window.close();
+  for(const config of [{disabled:true,internal:true},{gpc:true,internal:true}]){b=boot(config);const review=b.w.document.querySelector('#metricsInternal');review.checked=false;review.dispatchEvent(new b.w.Event('change'));await pause();assert.equal(b.requests.length,0);b.dom.window.close();}
   console.log('PASS: visitas/secciones sin duplicados; precargas, pausas, saltos y silencio excluidos; 30 segundos y finalización; privacidad, opt-out, GPC, previews y reintento sin bloquear la app.');
 })().catch(e=>{console.error(e);process.exit(1);});

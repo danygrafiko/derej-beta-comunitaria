@@ -38,6 +38,13 @@ async function boot({url='https://derej-beta-comunitaria.vercel.app/?metricas=pr
  const saved=b.snapshot(),originalDay=b.run('selectedDay');
  await b.click(`#ramakDayStrip [data-ramak-day="${originalDay===1?2:1}"]`);assert.equal(b.count('study_start'),2);await b.click(`#ramakDayStrip [data-ramak-day="${originalDay}"]`);assert.equal(b.count('study_start'),2);
  const payload=JSON.stringify(b.events);assert(!payload.includes('PRIVATE NOTE SENTINEL'));assert(!payload.includes('Lej'));assert(!payload.includes('Bereshit'));assert(b.events.filter(e=>e.event_type.startsWith('study_')).every(e=>e.section==='camino'&&e.collection_id===null&&e.track_id===null&&e.seconds===null&&e.is_test));b.close();
+ // Se puede declarar el final desde Práctica; ambas opciones conservan el mismo avance.
+ b=await boot();await b.show();await b.click('.ramakThreshold[data-ramak-step=practica]');
+ assert(b.w.document.querySelector('.ramakPanel.on [data-ramak-complete]'));
+ await b.click('.ramakPanel.on [data-ramak-complete]');assert.equal(b.count('study_complete'),1);
+ assert.equal(b.w.document.querySelector('.ramakPanel.on [data-ramak-complete]').getAttribute('aria-pressed'),'true');
+ await b.click('.ramakThreshold[data-ramak-step=llevar]');assert(b.w.document.querySelector('.ramakPanel.on [data-ramak-complete]').classList.contains('done'));assert.equal(b.count('study_complete'),1);
+ await b.click('.ramakPanel.on [data-ramak-complete]');assert.equal(b.count('study_complete'),1);assert.equal(b.w.document.querySelector('.ramakPanel.on [data-ramak-complete]').getAttribute('aria-pressed'),'false');b.close();
  // Recargar la misma pestaña no duplica el inicio ya enviado en esta sesión.
  b=await boot(saved);await b.show();assert.equal(b.count('study_start'),0);assert.equal(b.count('study_complete'),0);b.close();
  // El botón de guardar una nota no equivale a declarar terminado un estudio.

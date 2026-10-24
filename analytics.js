@@ -4,13 +4,17 @@
   const ENDPOINT = 'https://ryeztkcyopbmwwaacpxl.supabase.co/rest/v1/rpc/record_analytics';
   const PUBLIC_KEY = 'sb_publishable_NsYJH1ziasj7vfSsmeoe-g_ribPU_PG';
   const PREF = 'derej.metrics.enabled.v1';
+  const INTERNAL = 'derej.metrics.internal.v1';
   const DAILY = 'derej.metrics.daily.v1';
   const SESSION = 'derej.metrics.session.v1';
   const STUDY = 'derej.metrics.study.v1';
   const IDLE = 30 * 60 * 1000;
-  const SECTIONS = new Set(['home', 'camino', 'shabat', 'moed', 'radio', 'personal', 'pozo']);
+  const SECTIONS = new Set(['home', 'camino', 'shabat', 'moed', 'radio', 'personal', 'pozo', 'arbol', 'voces', 'nombres']);
   const production = location.hostname === 'derej-beta-comunitaria.vercel.app';
-  const isTest = new URLSearchParams(location.search).get('metricas') === 'prueba';
+  const requestedMode = new URLSearchParams(location.search).get('metricas');
+  if (requestedMode === 'prueba') save(localStorage, INTERNAL, 'true');
+  if (requestedMode === 'publico') save(localStorage, INTERNAL, 'false');
+  let isTest = requestedMode === 'prueba' || (requestedMode !== 'publico' && read(localStorage, INTERNAL) === 'true');
   const browserOptOut = navigator.globalPrivacyControl === true || navigator.doNotTrack === '1';
   let enabled = !browserOptOut && read(localStorage, PREF) !== 'false';
   let queue = [], sending = false, started = false, session = null, daily = null;
@@ -180,10 +184,25 @@
       remove(sessionStorage, STUDY);
     } else begin();
   }
+  function setInternal(value, persist = true) {
+    const next = !!value;
+    if (persist) save(localStorage, INTERNAL, String(next));
+    if (next === isTest) return;
+    closeSection();
+    isTest = next;
+    session = null; study = null; radio = null; started = false;
+    remove(sessionStorage, SESSION); remove(sessionStorage, STUDY);
+    sectionSince = performance.now();
+    const toggle = document.getElementById('metricsInternal');
+    if (toggle) toggle.checked = isTest;
+    begin();
+  }
   function privacy() {
     const dialog = document.getElementById('metricsPrivacy');
     const toggle = document.getElementById('metricsConsent');
     toggle.checked = enabled; toggle.disabled = browserOptOut;
+    const internal = document.getElementById('metricsInternal');
+    if (internal) internal.checked = isTest;
     document.getElementById('metricsBrowserChoice').hidden = !browserOptOut;
     dialog.showModal();
   }
@@ -191,6 +210,7 @@
   document.getElementById('metricsPrivacyOpen')?.addEventListener('click', privacy);
   document.getElementById('metricsPrivacyClose')?.addEventListener('click', () => document.getElementById('metricsPrivacy').close());
   document.getElementById('metricsConsent')?.addEventListener('change', event => setEnabled(event.target.checked));
+  document.getElementById('metricsInternal')?.addEventListener('change', event => setInternal(event.target.checked));
   document.getElementById('metricsPrivacy')?.addEventListener('click', event => { if (event.target === event.currentTarget) event.currentTarget.close(); });
   new MutationObserver(() => { syncSection(); syncStudy(); }).observe(document.querySelector('.appShell'), {subtree:true, childList:true, attributes:true, attributeFilter:['hidden','class','aria-selected']});
   document.addEventListener('click', onStudyComplete, true);
@@ -211,6 +231,7 @@
   addEventListener('pagehide', () => { closeSection(); flush(); });
   addEventListener('online', flush);
   addEventListener('storage', event => { if (event.key === PREF) setEnabled(event.newValue !== 'false'); });
+  addEventListener('storage', event => { if (event.key === INTERNAL) setInternal(event.newValue === 'true', false); });
   setInterval(flush, 15000);
   // Una pestaña restaurada o inicialmente oculta no cuenta hasta hacerse visible.
   if (document.visibilityState !== 'hidden') begin();

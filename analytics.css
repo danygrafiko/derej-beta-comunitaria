@@ -9,3 +9,7 @@
 .metricsPrivacy [hidden]{display:none!important}
 .metricsPrivacyClose{display:block;width:100%;padding:12px 18px;border:0;border-radius:12px;background:#354532;color:#fff7e8;font-weight:700;cursor:pointer}
 .metricsPrivacy button:focus-visible,.metricsPrivacyOpen:focus-visible{outline:3px solid #d9b86f;outline-offset:3px}
+.metricsInternalSettings{margin:16px 0;border-top:1px solid #cdbb9d;padding-top:12px}
+.metricsInternalSettings summary{cursor:pointer;font-size:13px;color:#4b503d;min-height:28px}
+.metricsInternalSettings label{font-size:13px;border-top:0}
+.metricsInternalSettings summary:focus-visible{outline:3px solid #9b773b;outline-offset:3px}

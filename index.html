@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="connection-reminders.css?v=3">
 <link rel="stylesheet" href="prelaunch-local.css?v=28.1">
 <link rel="stylesheet" href="pozo-learning.css?v=7">
-<link rel="stylesheet" href="analytics.css?v=1">
+<link rel="stylesheet" href="analytics.css?v=2">
 <link rel="stylesheet" href="welcome.css?v=1">
 <link rel="stylesheet" href="midrash-es.css?v=27.2">
 <link rel="stylesheet" href="voces.css?v=2">
@@ -203,10 +203,14 @@
   <h2 id="metricsPrivacyTitle">Privacidad en Dérej</h2>
   <p>Tus reflexiones, textos e historial de avance se guardan en este navegador.</p>
   <p>Si activas «Mi momento diario», guardamos por separado la suscripción técnica del dispositivo, la hora, la zona horaria y la puerta elegida para enviar el recordatorio. Puedes desactivarlo desde esa opción. No se adjuntan tus reflexiones ni tu historial.</p>
-  <p>Para mejorar el Camino contamos visitas, puertas abiertas, estudios iniciados, acciones de marcar un estudio como realizado y actividad de la radio. Usamos códigos aleatorios que cambian cada día, sin nombres ni correos. El registro de métricas no guarda tu dirección IP, lo que escribes, qué jornada elegiste ni tu historial personal de avance.</p>
+  <p>Para mejorar el Camino contamos visitas, puertas abiertas —incluidos Árbol, Voces y Nombres—, tiempo visible, estudios iniciados, acciones de marcar un estudio como realizado y actividad de la radio. Usamos códigos aleatorios que cambian cada día, sin nombres ni correos. El registro de métricas no guarda tu dirección IP, lo que escribes, qué jornada elegiste ni tu historial personal de avance.</p>
   <label><input type="checkbox" id="metricsConsent">Permitir métricas anónimas</label>
   <small>Puedes desactivarlas aquí cuando quieras. Esto no afecta al estudio ni a la radio. Los proveedores de alojamiento pueden conservar sus registros técnicos habituales.</small>
   <small id="metricsBrowserChoice" hidden>Tu navegador solicita no participar en el seguimiento. Respetamos esa preferencia y las métricas están desactivadas.</small>
+  <details class="metricsInternalSettings"><summary>Revisiones del equipo</summary>
+    <label><input type="checkbox" id="metricsInternal">Este navegador se usa para revisión interna</label>
+    <small>Marca esta opción en cada navegador donde revises Dérej. Sus visitas, estudios y escuchas se registrarán como pruebas y se excluirán de los informes de comunidad. La preferencia se conserva al volver. Puedes desmarcarla para registrar uso habitual. No modifica registros anteriores ni activa métricas deshabilitadas.</small>
+  </details>
   <button type="button" id="metricsPrivacyClose" class="metricsPrivacyClose">Volver al Camino</button>
 </dialog>
 <script src="encuentros-v21.js"></script>
@@ -223,7 +227,7 @@
 <script src="navigation-v241.js"></script>
 <script src="pozo-content.js?v=5"></script>
 <script src="pozo-learning.js?v=8"></script>
-<script src="analytics.js?v=3"></script>
+<script src="analytics.js?v=4"></script>
 <script src="welcome.js?v=29.2"></script>
 <script src="midrash-diario-es.js?v=29.1"></script>
 <script src="midrash-es.js?v=29.1"></script>
