@@ -1,0 +1,19 @@
+/* Entradas del patio: dos parejas alineadas y el Camino como centro. */
+.courtyard .portal{justify-content:flex-start;gap:0;min-height:120px;isolation:isolate}
+.courtyard .portalShabat,.courtyard .portalMoed{top:37%;width:29%;height:18%}
+.courtyard .portalShabat,.courtyard .portalRadio{left:1%;right:auto}
+.courtyard .portalMoed,.courtyard .portalArbol{right:1%;left:auto}
+.courtyard .portalRadio,.courtyard .portalArbol{top:65%;width:29%;height:20%;max-height:none}
+.courtyard .portalCamino{left:34%;top:61.5%;width:32%;height:23%}
+.courtyard .portalSigil{width:46px;height:46px;flex:0 0 46px;margin:0 0 8px;border:1.5px solid #dec38a;color:#ffedbd;background:radial-gradient(circle at 35% 25%,#596148f2,#202c20f5 75%);box-shadow:0 0 0 4px #e8c88712,0 0 19px #f6cc6a29,0 5px 14px #0008;backdrop-filter:blur(5px);font:20px/1 Georgia,serif}
+.courtyard .portalSigil svg{width:25px;height:25px}
+.courtyard .portalCamino .portalSigil{width:52px;height:52px;flex-basis:52px;font-size:23px;border-color:#f5dca1;box-shadow:0 0 0 5px #e8c88716,0 0 25px #f6cc6a38,0 5px 14px #0008}
+.courtyard .portalLabel{display:flex;flex-direction:column;align-items:center;gap:4px;width:100%;max-width:100%;min-width:0;padding:7px 3px 10px;border-radius:12px;background:radial-gradient(ellipse at 50% 50%,#10190be8, #111a0bb0 55%,transparent 76%);text-align:center;text-shadow:0 2px 4px #000,0 0 10px #000}
+.courtyard .portalLabel small{display:flex;align-items:center;justify-content:center;min-height:25px;width:100%;font:700 clamp(9px,1.2vw,11px)/1.35 system-ui,sans-serif;letter-spacing:.11em;color:#f0dba9;white-space:normal;text-wrap:balance}
+.courtyard .portalLabel b{display:block;width:100%;min-height:2.3em;font:400 clamp(18px,2.2vw,25px)/1.15 Georgia,serif;color:#fff3d9;text-wrap:balance}
+.courtyard .portalCamino .portalLabel b{font-size:clamp(23px,2.7vw,31px);min-height:1.2em}
+.courtyard .portalLabel em{font:600 10px/1.5 system-ui;letter-spacing:.18em;color:#f3d8a0;margin-top:2px}
+.courtyard .portal:focus-visible{outline:2px solid #ffe4a9;outline-offset:4px;border-radius:16px}
+.courtyard .portal:hover .portalSigil{border-color:#fff0c9;box-shadow:0 0 0 5px #e8c88725,0 0 24px #f6cc6a50,0 5px 14px #0008}
+@media(max-width:699px){.courtyard .portalShabat,.courtyard .portalMoed{top:35.5%}.courtyard .portalRadio,.courtyard .portalArbol{top:64.5%}.courtyard .portalCamino{top:60.5%}.courtyard .portalSigil{width:44px;height:44px;flex-basis:44px}.courtyard .portalLabel b{font-size:19px}.courtyard .portalLabel small{font-size:9px;letter-spacing:.09em}.courtyard .portalCamino .portalLabel b{font-size:25px}.courtyard .portalArbol .portalLabel{width:100%;max-width:100%;min-width:0}.courtyard .portalArbol .portalLabel small{white-space:normal;font-size:9px;letter-spacing:.09em}.courtyard .portalArbol .portalLabel b{font-size:19px;line-height:1.15}}
+@media(max-width:370px){.courtyard .portalLabel b,.courtyard .portalArbol .portalLabel b{font-size:17px}.courtyard .portalSigil{width:42px;height:42px;flex-basis:42px}.courtyard .portalCamino .portalSigil{width:48px;height:48px;flex-basis:48px}}
