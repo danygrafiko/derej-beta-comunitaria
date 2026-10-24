@@ -219,8 +219,8 @@ window.DEREJ_NOMBRES = {
     },
     {
       "id": 18,
-      "label": "Daat sobre los 72 nombres",
-      "url": "https://daat.org.il/es/shut/meditar-con-los-72-nombres-de-dios/"
+      "label": "Jabad Uruguay · Origen de los 72 nombres (PDF en español, página 1, nota 6)",
+      "url": "https://www.jabad.org.uy/media/pdf/1201/xnTf12017838.pdf#page=1"
     },
     {
       "id": 19,
