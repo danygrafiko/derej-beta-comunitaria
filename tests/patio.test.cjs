@@ -8,7 +8,7 @@ function mount(saved,blocked=false){
  w.eval(script);return dom;
 }
 let dom=mount(),d=dom.window.document,t=d.querySelector('.patioExplore'),doors=[...d.querySelectorAll('.courtyard .portal')];
-assert.equal(doors.length,5);assert(doors.every(p=>p.hidden));assert(!t.hidden);assert.equal(t.getAttribute('aria-expanded'),'false');
+assert.equal(doors.length,6);assert(doors.every(p=>p.hidden));assert(!t.hidden);assert.equal(t.getAttribute('aria-expanded'),'false');
 assert(doors.every(p=>t.getAttribute('aria-controls').split(' ').includes(p.id)));
 let routes=0;d.addEventListener('click',e=>{if(e.target.closest('[data-route]'))routes++;});
 t.click();assert(doors.every(p=>!p.hidden));assert.equal(t.getAttribute('aria-expanded'),'true');assert.equal(routes,0);assert.equal(dom.window.localStorage.getItem('derej.patio.exploring.v1'),'true');

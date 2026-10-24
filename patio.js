@@ -24,6 +24,12 @@
     render();
     try { localStorage.setItem(key, String(exploring)); } catch (_) {}
   });
+  document.addEventListener('click', function (event) {
+    if (!event.target.closest('[data-route="biblioteca"]')) return;
+    requestAnimationFrame(function () {
+      document.getElementById('bibliotecaTitle')?.focus({preventScroll:true});
+    });
+  });
   render();
   toggle.hidden = false;
 })();

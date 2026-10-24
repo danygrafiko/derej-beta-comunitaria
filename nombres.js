@@ -15,7 +15,7 @@
  function persist(){try{localStorage.setItem(KEY,JSON.stringify(state));storageOK=true;}catch{storageOK=false;}return storageOK;}
  function focusTitle(){const title=root.querySelector('#npTitle');title?.setAttribute('tabindex','-1');title?.focus({preventScroll:true});window.scrollTo({top:0,behavior:'instant'});}
  const btn=(id,label)=>`<button type="button" data-np-view="${esc(id)}">${esc(label)}</button>`;
- function top(){return `<nav class="npTop" aria-label="Navegación del estudio"><button type="button" data-np-back>← ${returnPoint?.name==='camino'?'Volver a mi estudio':'Patio'}</button>${view!=='catalog'?btn('catalog','Ver el recorrido'):''}</nav>`;}
+ function top(){return `<nav class="npTop" aria-label="Navegación del estudio"><button type="button" data-np-back>← ${returnPoint?.name==='biblioteca'?'Biblioteca':returnPoint?.name==='camino'?'Volver a mi estudio':'Patio'}</button>${view!=='catalog'?btn('catalog','Ver el recorrido'):''}</nav>`;}
  function sourceList(ids){return `<ul class="npSources">${data.sources.filter(s=>!ids||ids.includes(s.id)).map(s=>`<li><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer" hreflang="es">${s.id}. ${esc(s.label)} ↗</a></li>`).join('')}</ul>`;}
  function catalog(){
   const last=data.sessions.find(s=>s.id===state.last);

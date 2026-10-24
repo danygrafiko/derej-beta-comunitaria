@@ -16,7 +16,7 @@
  };
  const connections={rashi:'Del detalle del texto al examen de una decisión.',ramjal:'De revisar una acción a pensar cómo se afianza.',rambam:'Otra formulación del vínculo entre cualidades y acciones.',ramak:'Del cuidado en nuestras acciones a la atención con que servimos al Creador.',baalshemtov:'De la atención al orar a encontrar palabras propias ante el Creador.',najman:'Volver al pasaje y descubrir una pregunta nueva.'};
  let mode='voces',selected=null,returnPoint=null,dailyContext=null;
- function top(profile=false){return `<div class="vocTop"><button type="button" class="vocTextButton" data-voc-action="return">← ${returnPoint?.name==='camino'?'Volver a mi estudio':returnPoint?.name==='pozo'?'Volver al Pozo':'Patio'}</button>${profile?'<button type="button" class="vocTextButton" data-voc-action="catalog">Ver todas las voces</button>':'<span class="vocEyebrow">DÉREJ · EL CAMINO</span>'}</div>`;}
+ function top(profile=false){return `<div class="vocTop"><button type="button" class="vocTextButton" data-voc-action="return">← ${returnPoint?.name==='biblioteca'?'Biblioteca':returnPoint?.name==='camino'?'Volver a mi estudio':returnPoint?.name==='pozo'?'Volver al Pozo':'Patio'}</button>${profile?'<button type="button" class="vocTextButton" data-voc-action="catalog">Ver todas las voces</button>':'<span class="vocEyebrow">DÉREJ · EL CAMINO</span>'}</div>`;}
  function catalog(){
   selected=null;
   let ids=mode==='tiempo'?Object.keys(people).sort((a,b)=>parseInt(people[a].date,10)-parseInt(people[b].date,10)):['rambam','ramak','ramjal','baalshemtov','najman','rashi'];

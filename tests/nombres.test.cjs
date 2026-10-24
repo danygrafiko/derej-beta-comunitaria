@@ -21,6 +21,12 @@ async function app(query='',saved=null){
 }
 (async()=>{
  const a=await app();const {d,w,click,ev}=a;
+ ev('route("biblioteca")');
+ assert(!d.querySelector('[data-screen=biblioteca]').hidden);
+ assert(!d.querySelector('[data-screen=home] .npEntry'));
+ click('[data-screen=biblioteca] [data-nombres-open]');
+ assert.match(d.querySelector('[data-np-back]').textContent,/Biblioteca/);
+ click('[data-np-back]');assert(!d.querySelector('[data-screen=biblioteca]').hidden);
  ev('route("home")');click('[data-nombres-open]');assert(!d.querySelector('[data-screen=nombres]').hidden);
  assert.equal(d.querySelectorAll('.npCard').length,7);
  click('[data-np-view=intro]');assert.match(d.querySelector('#nombresRoot').textContent,/Hashem.*El Nombre/s);

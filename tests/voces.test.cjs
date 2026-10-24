@@ -24,6 +24,12 @@ function click(selector){const el=doc.querySelector(selector);assert(el,'Missing
 (async()=>{
  for(const s of doc.querySelectorAll('script[src]'))evaluate(fs.readFileSync(path.join(root,s.getAttribute('src').split('?')[0]),'utf8'));
  await pause();if(doc.querySelector('#derejWelcome')?.open)doc.querySelector('#derejWelcome').close();
+ evaluate('route("home")');click('.patioExplore');click('#patio-biblioteca');
+ assert(!doc.querySelector('[data-screen=biblioteca]').hidden);
+ assert(!doc.querySelector('[data-screen=home] .vocHomeEntry'));
+ click('[data-screen=biblioteca] [data-voces-open]');
+ assert.match(doc.querySelector('[data-voc-action="return"]').textContent,/Biblioteca/);
+ click('[data-voc-action="return"]');assert(!doc.querySelector('[data-screen=biblioteca]').hidden);
  evaluate('route("home")');click('[data-voces-open]');assert(!doc.querySelector('[data-screen="voces"]').hidden);
  assert.equal(doc.querySelectorAll('#vocesRoot .vocCard').length,6);
  click('[data-voc-mode="tiempo"]');assert.match(doc.querySelector('.vocList li').textContent,/1040.*Rashí/);

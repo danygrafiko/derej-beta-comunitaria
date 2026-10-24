@@ -16,7 +16,7 @@
 <link rel="stylesheet" href="voces.css?v=2">
 <link rel="stylesheet" href="nombres.css?v=1">
 <link rel="stylesheet" href="arbol.css?v=6">
-<link rel="stylesheet" href="patio-portals.css?v=3">
+<link rel="stylesheet" href="patio-portals.css?v=4">
 <link rel="stylesheet" href="moed-calendar.css?v=1">
 <style>
   .brandButton .derejWordmark{display:flex;flex-direction:column;align-items:flex-start;line-height:1}
@@ -36,14 +36,14 @@
 
 
   <section class="screen homeScreen active" data-screen="home" aria-labelledby="homeTitle">
-    <div class="courtyard" role="group" aria-label="Patio de Dérej: cinco entradas y el Pozo">
+    <div class="courtyard" role="group" aria-label="Patio de Dérej: seis entradas y el Pozo">
       <img class="courtyardBg" src="assets/home-courtyard-olive-door-v2.webp" alt="Patio de piedra con cuatro portales y un olivo a la derecha como entrada al Árbol de la Vida">
       <div class="courtyardShade" aria-hidden="true"></div>
       <div class="homeIntro">
         <div class="eyebrow">DÉREJ · EL CAMINO</div>
-        <h1 id="homeTitle">Cinco puertas.<br>Un mismo Camino.</h1>
+        <h1 id="homeTitle">Seis puertas.<br>Un mismo Camino.</h1>
         <p>Entra por lo que hoy resuene contigo.</p>
-        <button type="button" class="patioExplore" hidden aria-expanded="true" aria-controls="patio-shabat patio-moed patio-camino patio-radio patio-arbol">Contemplar el patio <span aria-hidden="true">−</span></button>
+        <button type="button" class="patioExplore" hidden aria-expanded="true" aria-controls="patio-shabat patio-moed patio-camino patio-radio patio-arbol patio-biblioteca">Contemplar el patio <span aria-hidden="true">−</span></button>
       </div>
       <button hidden id="patio-shabat" class="portal portalShabat" data-route="shabat" aria-label="Entrar a Shabat"><span class="portalSigil">שבת</span><span class="portalLabel"><small>LUZ · REFUGIO · MESA</small><b>Shabat</b></span></button>
       <button hidden id="patio-moed" class="portal portalMoed" data-route="moed" aria-label="Entrar a Moed"><span class="portalSigil">מועד</span><span class="portalLabel"><small>TIEMPO · ESTACIONES</small><b>Moed</b></span></button>
@@ -53,10 +53,19 @@
         <span class="portalSigil"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"><path d="M6 20c5-4 8-9 10-16M9 16c-5-1-5-5-5-5 4 0 6 2 5 5ZM12 12c-5-1-5-5-5-5 4 0 6 2 5 5ZM12 13c1-5 6-5 6-5 0 4-2 6-6 5ZM15 8c0-4 4-6 4-6 1 4 0 6-4 6Z"/></svg></span>
         <span class="portalLabel"><small>SEFIROT · CÁBALA</small><b>Árbol de la Vida</b></span>
       </button>
+      <button type="button" hidden id="patio-biblioteca" class="portal portalBiblioteca" data-route="biblioteca" aria-label="Entrar a Biblioteca y estudios"><span class="portalSigil"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6v15M12 6C9 3 5 3 2 4v15c3-1 7-1 10 2 3-3 7-3 10-2V4c-3-1-7-1-10 2Z"/></svg></span><span class="portalLabel"><b>Biblioteca</b></span></button>
       <button class="pozoHotspot" data-route="pozo" aria-label="Acercarse al Pozo y descubrir su interior"><span class="pozoWaterLight" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><span class="pozoRipple" aria-hidden="true"></span></button>
       <button type="button" class="pozoDescent" data-route="pozo" aria-label="Descubrir el Pozo · Letras, palabras y voces">Descubrir el Pozo <span aria-hidden="true">↓</span></button>
     </div>
     <footer class="homeFooter"><p class="homeFooterMessage">La pantalla abre una puerta. El Camino continúa fuera de ella.</p><button type="button" id="metricsPrivacyOpen" class="metricsPrivacyOpen">Privacidad y métricas</button></footer>
+
+  </section>
+
+
+  <section class="screen bibliotecaScreen" data-screen="biblioteca" hidden aria-labelledby="bibliotecaTitle">
+    <div class="bibliotecaInner">
+      <button type="button" class="bibliotecaBack" data-route="home">← Patio</button>
+      <header class="bibliotecaIntro"><span>BEIT MIDRASH · CASA DE ESTUDIO</span><div class="bibliotecaBook" aria-hidden="true">✧</div><h1 id="bibliotecaTitle" tabindex="-1">Biblioteca</h1><p>Un lugar para leer con calma, conocer a nuestros sabios y volver a las fuentes.</p></header>
     <section class="npEntry" aria-labelledby="npEntryTitle">
       <div><span class="npEyebrow">BEIT MIDRASH · ESTUDIOS</span><h2 id="npEntryTitle">Nombres y presencia</h2><p>Leer los nombres de Dios en su contexto. Comprender, contemplar y responder en la vida.</p></div>
       <button type="button" data-nombres-open>Abrir el recorrido →</button>
@@ -65,8 +74,9 @@
       <div><span>VIDAS · OBRAS · ENSEÑANZAS</span><h2>Voces del Camino</h2><p>Conoce a quienes leemos en Dérej y vuelve al texto con una pregunta nueva.</p></div>
       <button type="button" data-voces-open>Explorar las voces →</button>
     </div>
+      <p class="bibliotecaClosing">Elige una lectura. Quédate con una pregunta. Llévala a tu vida.</p>
+    </div>
   </section>
-
 
   <section class="screen caminoScreen" data-screen="camino" hidden aria-labelledby="caminoTitle">
     <button class="backBtn floatingBack" data-route="home">← Patio</button>
@@ -220,7 +230,7 @@
 <script src="moed-calendar.js?v=1"></script>
 <script src="voces-content.js?v=3"></script>
 <script src="prelaunch-local.js?v=29.5"></script>
-<script src="patio.js?v=1"></script>
+<script src="patio.js?v=2"></script>
 
 
 <script src="mobile-v234.js"></script>
@@ -235,9 +245,9 @@
 <script src="welcome.js?v=29.2"></script>
 <script src="midrash-diario-es.js?v=29.1"></script>
 <script src="midrash-es.js?v=29.1"></script>
-<script src="voces.js?v=3"></script>
+<script src="voces.js?v=4"></script>
 <script src="nombres-content.js?v=3"></script>
-<script src="nombres.js?v=1"></script>
+<script src="nombres.js?v=2"></script>
 <script src="arbol-content.js?v=2"></script>
 <script src="arbol.js?v=4"></script>
 <script src="connection-reminders.js?v=2"></script>
