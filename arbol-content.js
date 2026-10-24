@@ -89,7 +89,7 @@ window.DEREJ_ARBOL = {
       action:'Cumple una promesa pequeña pendiente o conversa con honestidad si necesitas renegociarla.',
       balance:'Un vínculo cuidado respeta la libertad, el consentimiento y los límites de cada persona.',
       example:'Escuchar unos minutos sin revisar el teléfono y sin ofrecer soluciones antes de tiempo.'},
-    {id:'maljut',name:'Maljut',he:'מלכות',meaning:'Reino',practice:'Dar forma en la vida',x:50,y:94,refs:['mapa','omer'],
+    {id:'maljut',name:'Maljut',he:'מלכות',meaning:'Reino',practice:'Dar forma en la vida',x:50,y:100,refs:['mapa','omer'],
       tradition:'Maljut significa reino y cierra este esquema de diez sefirot. Jacobson lo relaciona con la soberanía y el liderazgo. Dérej propone llevar esa lectura al ejercicio responsable de la propia acción.',
       reflection:'Lo comprendido encuentra expresión en el modo de hablar, trabajar y convivir. Dérej propone terminar el recorrido con una responsabilidad concreta: dar forma a una intención en el lugar que habitamos. Una acción pequeña puede beneficiar a alguien sin llamar la atención.',
       question:'¿Qué puedo hacer hoy con lo que he comprendido?',
