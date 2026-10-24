@@ -20,9 +20,17 @@ async function app(query='',saved=null){
 }
 (async()=>{
  const a=await app(),{d,w,click,ev}=a;
+ assert(d.querySelector('.courtyard .avPatioTree[data-arbol-open]'));
  click('[data-arbol-open]');assert(!d.querySelector('[data-screen=arbol]').hidden);assert.equal(d.querySelectorAll('.avTree [data-av-node]').length,10);
+ assert(d.querySelector('.avScene.avFlat'));assert(!d.querySelector('#arbolRoot canvas'));assert(!d.querySelector('#arbolRoot [data-av-scene]'));assert(!d.querySelector('script[src*="arbol-scene"]'));
  click('[data-av-action=intro]');assert(!d.querySelector('.avWelcome'));
- for(const s of w.DEREJ_ARBOL.sefirot){click('.avTree [data-av-node='+s.id+']');assert.match(d.querySelector('#avTitle').textContent,new RegExp(s.name));assert(d.querySelector('#avPanel').textContent.includes(s.question));assert(d.querySelectorAll('#avPanel a[hreflang=es]').length>=1);}
+ for(const s of w.DEREJ_ARBOL.sefirot){click('.avTree [data-av-node='+s.id+']');assert.match(d.querySelector('#avTitle').textContent,new RegExp(s.name));assert(d.querySelector('#avPanel').textContent.includes(s.question));assert(d.querySelectorAll('#avPanel a[hreflang=es]').length>=1);
+  assert.equal(d.querySelectorAll('.avTree [aria-pressed=true]').length,1);assert.equal(d.querySelector('.avTree [aria-pressed=true]').dataset.avNode,s.id);const activeRoute=d.querySelector('[data-av-route][aria-pressed=true]');assert(w.DEREJ_ARBOL.routes.find(r=>r.id===activeRoute.dataset.avRoute).ids.includes(s.id));
+  assert.equal(d.querySelectorAll('.avPatioLights .lit').length,1);assert.equal(d.querySelector('.avPatioLights .lit').dataset.avPatioNode,s.id);
+  click('[data-av-mode=practice]');click('[data-av-action=start]');
+  for(const expected of [s.image,s.question,s.prayer,s.action]){click('[data-av-action=next]');assert(d.querySelector('.avReading').textContent.includes(expected),'Guidance belongs to '+s.id);}
+  click('[data-av-action=next]');assert(d.querySelector('#avPanel').textContent.includes(s.balance));
+ }
  click('[data-av-route=dar]');click('[data-av-mode=practice]');const duration=d.querySelector('#avDuration');duration.value='3';duration.dispatchEvent(new w.Event('change',{bubbles:true}));
  click('[data-av-action=start]');assert.equal(d.querySelector('#avTimer').textContent,'00:36');
  a.tick(10000);assert.equal(d.querySelector('#avTimer').textContent,'00:26');click('[data-av-action=toggle]');a.tick(60000);assert.equal(d.querySelector('#avTimer').textContent,'00:26');assert.match(d.querySelector('#avRunState').textContent,/pausa/);
@@ -40,5 +48,5 @@ async function app(query='',saved=null){
  const input=d.querySelector('[data-ramak-panel="practica"] textarea');assert(input);input.value='Escrito anterior sin guardar';const before={day:ev('selectedDay'),parasha:ev('selectedParasha'),step:ev('selectedRamakStep'),pauses:a.pauses};w.scrollTo({top:800});const entry=click('.avStudyEntry [data-arbol-open]');click('[data-av-action=back]');
  assert.equal(d.querySelector('[data-ramak-panel="practica"] textarea'),input);assert.equal(input.value,'Escrito anterior sin guardar');assert.equal(a.y,800);assert.equal(d.activeElement,entry);assert.equal(ev('selectedDay'),before.day);assert.equal(ev('selectedParasha'),before.parasha);assert.equal(ev('selectedRamakStep'),before.step);assert.equal(a.pauses,before.pauses);
  ev('route("pozo")');await new Promise(r=>setTimeout(r,30));d.querySelector('[data-pz="discover"]')?.click();await new Promise(r=>setTimeout(r,30));click('.avPozoEntry [data-arbol-open]');click('[data-av-action=back]');assert(!d.querySelector('[data-screen=pozo]').hidden);
- assert.equal(a.errors.length,0,a.errors.join('\n'));assert.equal(b.errors.length,0,b.errors.join('\n'));a.dom.window.close();b.dom.window.close();console.log('PASS Árbol: 10 sefirot; 5-step timing, pause/background/return; opt-in notes, reload, XSS/quota/delete; Camino context and Radio preserved; Pozo entry.');
+ assert.equal(a.errors.length,0,a.errors.join('\n'));assert.equal(b.errors.length,0,b.errors.join('\n'));a.dom.window.close();b.dom.window.close();console.log('PASS Árbol: fixed flat tree, courtyard entry, 10 illuminated selections and complete guides; 5-step timing, pause/background/return; opt-in notes, reload, XSS/quota/delete; Camino context and Radio preserved; Pozo entry.');
 })().catch(e=>{console.error(e);process.exit(1);});
