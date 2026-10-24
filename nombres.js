@@ -64,5 +64,9 @@
  }
  studyEntry();
  view='catalog';catalog();
- if(new URLSearchParams(location.search).get('estudio')==='nombres')open(null);
+ if(new URLSearchParams(location.search).get('estudio')==='nombres'){
+  const welcome=document.querySelector('#derejWelcome');
+  if(welcome?.open)welcome.addEventListener('close',()=>queueMicrotask(()=>open(null)),{once:true});
+  else open(null);
+ }
 })();

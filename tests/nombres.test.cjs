@@ -8,12 +8,14 @@ async function app(query='',saved=null){
  const w=dom.window,d=w.document,ev=s=>vm.runInContext(s,dom.getInternalVMContext());let y=0,pauses=0;
  Object.defineProperty(w,'scrollY',{get:()=>y});w.scrollTo=o=>{y=o.top||0;};w.HTMLElement.prototype.scrollIntoView=function(){};
  w.HTMLMediaElement.prototype.load=function(){};w.HTMLMediaElement.prototype.pause=function(){pauses++;};w.setInterval=()=>0;
- w.HTMLDialogElement.prototype.showModal=function(){this.open=true;};w.HTMLDialogElement.prototype.close=function(){this.open=false;};
+ w.HTMLDialogElement.prototype.showModal=function(){this.open=true;};w.HTMLDialogElement.prototype.close=function(){this.open=false;this.dispatchEvent(new w.Event('close'));};
  w.matchMedia=()=>({matches:false,addEventListener(){},removeEventListener(){}});
  w.fetch=async url=>{const file=String(url).split('?')[0];try{return {ok:true,json:async()=>JSON.parse(fs.readFileSync(path.join(root,file),'utf8'))};}catch{return {ok:false,json:async()=>({})};}};
  if(saved)w.localStorage.setItem('derej-nombres-presencia-v1',saved);
  for(const s of d.querySelectorAll('script[src]'))ev(fs.readFileSync(path.join(root,s.getAttribute('src').split('?')[0]),'utf8'));
- await new Promise(r=>setTimeout(r,150));d.querySelector('#derejWelcome')?.close();
+ await new Promise(r=>setTimeout(r,150));
+ d.querySelector('#derejWelcome [data-welcome="skip"]')?.click();
+ await new Promise(r=>setTimeout(r,20));
  const click=s=>{const el=d.querySelector(s);assert(el,s);el.click();return el;};
  return {w,d,ev,click,dom,errors,get y(){return y;},get pauses(){return pauses;}};
 }
