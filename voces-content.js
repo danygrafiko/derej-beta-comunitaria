@@ -1,13 +1,14 @@
 /* Dérej · Colección editorial en español. Síntesis y aplicaciones identificadas. */
 window.DEREJ_VOCES_CONTENT={
-  "version": 3,
+  "version": 4,
   "order": [
     "rashi",
     "ramjal",
     "rambam",
     "ramak",
     "baalshemtov",
-    "najman"
+    "najman",
+    "hilel"
   ],
   "profiles": {
     "rambam": {
@@ -476,6 +477,163 @@ window.DEREJ_VOCES_CONTENT={
           "es"
         ]
       ]
+    },
+    "hilel": {
+      "id": "hilel",
+      "name": "Hilel",
+      "full": "Hilel el Anciano · Hillel HaZakén",
+      "date": "Siglo I a. e. c. e inicios del I e. c.",
+      "sortYear": -50,
+      "place": "Babilonia · Tierra de Israel",
+      "context": "Sabios del Segundo Templo",
+      "hook": "Buscar la paz, asumir nuestra parte y aprender con paciencia.",
+      "question": "¿Cómo cambia el estudio nuestra manera de tratar a otros?",
+      "life": [
+        "Hilel el Anciano, también escrito Hillel y llamado Hilel HaZakén, fue un sabio judío de la época del Segundo Templo, situado habitualmente entre el siglo I antes de la era común y los inicios del siglo I de la era común. La tradición lo vincula con Babilonia, su traslado a la tierra de Israel y el aprendizaje junto a Shemaiá y Avtalión. Lo recuerda como dirigente y contemporáneo de Shamai. Ambos aparecen como colegas en la transmisión de la tradición, no como maestro y discípulo entre sí.",
+        "Las noticias sobre su vida nos llegan principalmente por escritos rabínicos redactados después de su época. Por ello, este estudio no fija fechas exactas de nacimiento o muerte ni presenta los detalles de sus relatos como una biografía contemporánea documentada. Tampoco debe confundirse con Hilel II, figura posterior vinculada a la tradición del calendario judío."
+      ],
+      "works": [
+        [
+          "Enseñanzas transmitidas en Pirkei Avot",
+          "No conservamos un libro escrito por Hilel. La Mishná recoge dichos atribuidos a él, entre ellos Avot 1:12–14 y 2:4–7."
+        ],
+        [
+          "Relatos del Talmud",
+          "Shabat 31a y Yomá 35b transmiten relatos tradicionales sobre su paciencia y dedicación al estudio. Son fuentes rabínicas posteriores a su época."
+        ],
+        [
+          "Beit Hilel",
+          "La escuela de Hilel continúa su legado. Eruvín 13b habla de las escuelas de Hilel y Shamai; sus afirmaciones no se presentan como palabras autobiográficas del maestro."
+        ]
+      ],
+      "source": "Pirkei Avot · Shabat 31a · Eruvín 13b",
+      "teaching": "En Pirkei Avot 1:12, Hilel invita a seguir el ejemplo de Aarón: amar la paz, buscarla activamente, amar a las criaturas y acercarlas a la Torá. La formulación reúne una disposición interior y un movimiento hacia otras personas.",
+      "reflection": "Desear tranquilidad puede quedarse en una preferencia privada. Buscar la paz exige intervenir en el modo en que nos relacionamos: dejar de alimentar un rumor, reconocer un agravio o preparar una conversación que hemos postergado. La enseñanza permite preguntar qué parte de la reconciliación depende efectivamente de nosotros.",
+      "ask": "¿Qué paso puedo dar hoy para cuidar un vínculo?",
+      "notes": "Estudio curado de Hilel el Anciano, Dérej, 24 de octubre de 2026. Se distinguen dichos clásicos, relatos tradicionales y prácticas actuales. Referencias adicionales: Sheviit 10:3–4; Guitín 36a–b, sobre el pruzbul. Hilel precede a las formulaciones medievales de la Cábala y al jasidismo moderno.",
+      "sources": [
+        [
+          "Pirkei Avot 1:12–15 y 2:4–7",
+          "Texto y comentarios de Rambam en Masuah",
+          "https://www.masuah.org/pirke-avot-con-comentarios-de-rambam/",
+          "es"
+        ],
+        [
+          "Hilel HaZaken",
+          "Biografía tradicional · Jabad en español",
+          "https://es.chabad.org/library/article_cdo/aid/562977/jewish/Hilel-HaZaken.htm",
+          "es"
+        ],
+        [
+          "Pruzbul",
+          "Explicación conceptual · el artículo contiene una fecha operativa antigua",
+          "https://es.chabad.org/library/article_cdo/aid/565714/jewish/Perdn-de-las-deudas.htm",
+          "es"
+        ]
+      ],
+      "readings": [
+        {
+          "title": "La paz necesita iniciativa",
+          "source": "Avot 1:12",
+          "summary": "En Pirkei Avot 1:12, Hilel invita a seguir el ejemplo de Aarón: amar la paz, buscarla activamente, amar a las criaturas y acercarlas a la Torá. La formulación reúne una disposición interior y un movimiento hacia otras personas.",
+          "reflection": [
+            "Desear tranquilidad puede quedarse en una preferencia privada. Buscar la paz exige intervenir en el modo en que nos relacionamos: dejar de alimentar un rumor, reconocer un agravio o preparar una conversación que hemos postergado. La enseñanza permite preguntar qué parte de la reconciliación depende efectivamente de nosotros.",
+            "En esta lectura, amar a las personas no se usa como recompensa por aceptar nuestras ideas. El acercamiento a la Torá requiere un trato que preserve su dignidad. Invitar a aprender pierde credibilidad cuando la invitación viene acompañada de humillación, presión o superioridad."
+          ],
+          "practice": "Elegir un vínculo que necesite cuidado. Si corresponde y es posible, iniciar una conversación describiendo un hecho concreto, reconociendo la propia parte y escuchando antes de pedir un cambio. Buscar la paz también puede requerir límites claros y protección frente al daño; no implica forzar la reconciliación.",
+          "understand": "¿Qué propone el pasaje y qué pertenece a nuestra aplicación actual?",
+          "personal": "¿Qué acción concreta puedo intentar hoy?",
+          "note": "Síntesis y práctica editorial de Dérej. Consulta las fuentes y el estudio completo desde Biblioteca."
+        },
+        {
+          "title": "Las tres preguntas de Hilel",
+          "source": "Avot 1:14",
+          "summary": "Pirkei Avot 1:14 encadena tres preguntas: quién se ocupará de mí si yo no lo hago; qué soy si vivo solamente para mí; y cuándo actuaré si no comienzo ahora.",
+          "reflection": [
+            "Leídas juntas, las preguntas evitan que la responsabilidad personal se vuelva encierro. Cada persona tiene decisiones que no puede delegar por completo, pero el cuidado de sí necesita abrirse a otros. La última pregunta vuelve concreta la reflexión: pide identificar un comienzo posible.",
+            "Ocuparse de uno mismo incluye reconocer el cansancio, pedir ayuda y cuidar los compromisos que permiten sostener la vida. Servir a otros exige también discernir la propia capacidad. La pregunta por el ahora invita a actuar dentro de esas condiciones reales, sin esperar una versión ideal de nosotros mismos."
+          ],
+          "practice": "Escribir una decisión pendiente que dependa de mí y un paso realizable durante el día. Después revisar si ese paso cuida también a quienes se ven afectados. Ejemplo: reservar diez minutos para estudiar y acordar ese espacio con la familia cuando sea necesario.",
+          "understand": "¿Qué propone el pasaje y qué pertenece a nuestra aplicación actual?",
+          "personal": "¿Qué acción concreta puedo intentar hoy?",
+          "note": "Síntesis y práctica editorial de Dérej. Consulta las fuentes y el estudio completo desde Biblioteca."
+        },
+        {
+          "title": "La regla que obliga a seguir aprendiendo",
+          "source": "Shabat 31a",
+          "summary": "Shabat 31a cuenta que un no judío pide ser convertido con la condición de aprender toda la Torá mientras permanece sobre un pie. Hilel responde desde la experiencia de aquello que resulta odioso para uno mismo: no hacerlo al prójimo. El relato termina enviándolo a estudiar la explicación.",
+          "reflection": [
+            "Su respuesta ofrece una orientación para entrar al aprendizaje y conserva la exigencia de profundizar. Deja una tarea inmediata: reconocer en la otra persona una sensibilidad que debo considerar. Para aplicarla bien necesito escuchar qué le ocurre a ella; mis preferencias no describen automáticamente sus necesidades.",
+            "El contexto del pasaje es la conversión al judaísmo. En Dérej podemos aprender de su enseñanza ética respetando ese contexto, sin convertir el relato en un procedimiento actual de conversión ni suponer que las obligaciones religiosas son idénticas para todos los lectores."
+          ],
+          "practice": "Antes de enviar una crítica, revisar si su contenido es necesario, si los hechos están comprobados y si el modo elegido expone innecesariamente a alguien. Cuando corresponda, hablar en privado y permitir una respuesta.",
+          "understand": "¿Qué propone el pasaje y qué pertenece a nuestra aplicación actual?",
+          "personal": "¿Qué acción concreta puedo intentar hoy?",
+          "note": "Síntesis y práctica editorial de Dérej. Consulta las fuentes y el estudio completo desde Biblioteca."
+        },
+        {
+          "title": "Preguntar y enseñar sin humillar",
+          "source": "Avot 2:5",
+          "summary": "Avot 2:5 relaciona el aprendizaje con la posibilidad de preguntar y señala el obstáculo que representa el maestro irritable. También llama a asumir una conducta responsable cuando falta quien lo haga.",
+          "reflection": [
+            "Quien teme quedar en ridículo puede ocultar su duda. Quien enseña con impaciencia puede cerrar el acceso a una comprensión que estaba comenzando. En Dérej, la calidad de una conversación se reconoce también por el espacio que deja a quien conoce menos."
+          ],
+          "practice": "El moderador invita a formular preguntas básicas, admite lo que desconoce y evita corregir para exhibir autoridad. Puede preguntar: ¿qué parte del texto todavía no resulta clara? Quien participa intenta nombrar una duda precisa en lugar de fingir que entendió.",
+          "understand": "¿Qué propone el pasaje y qué pertenece a nuestra aplicación actual?",
+          "personal": "¿Qué acción concreta puedo intentar hoy?",
+          "note": "Síntesis y práctica editorial de Dérej. Consulta las fuentes y el estudio completo desde Biblioteca."
+        },
+        {
+          "title": "La escuela de Hilel y la escucha del adversario",
+          "source": "Eruvín 13b",
+          "summary": "Eruvín 13b elogia la disposición de Beit Hilel para estudiar también los argumentos de Beit Shamai y presentarlos antes de los propios. El pasaje trata de las escuelas y de la decisión halájica; no es un dicho autobiográfico de Hilel.",
+          "reflection": [
+            "La escucha adquiere aquí una exigencia intelectual: comprender una postura lo suficiente como para explicarla con fidelidad. Para una comunidad de estudio, esto permite discutir un argumento sin reducir a quien lo sostiene a una caricatura.",
+            "Shamai también pertenece a la tradición de los sabios. Avot 1:15 le atribuye, entre otros consejos, recibir a las personas con semblante amable. Por eso, presentar siempre a Hilel como bondadoso y a Shamai como incapaz de acoger empobrece la lectura."
+          ],
+          "practice": "Antes de responder a una diferencia, resumir la otra posición y preguntar si fue entendida correctamente. Después señalar el punto preciso de desacuerdo, sus fuentes y aquello que todavía necesita investigación. Escuchar con respeto no obliga a considerar igualmente correctas todas las afirmaciones.",
+          "understand": "¿Qué propone el pasaje y qué pertenece a nuestra aplicación actual?",
+          "personal": "¿Qué acción concreta puedo intentar hoy?",
+          "note": "Síntesis y práctica editorial de Dérej. Consulta las fuentes y el estudio completo desde Biblioteca."
+        },
+        {
+          "title": "El aprendizaje dentro de la vida cotidiana",
+          "source": "Avot 2:4",
+          "summary": "En Avot 2:4, Hilel aconseja no aplazar el estudio hasta disponer de tiempo libre, porque ese momento puede no llegar. El mismo pasaje invita a permanecer vinculado a la comunidad y a ser prudente al juzgar al otro.",
+          "reflection": [
+            "Para nuestro recorrido, estas indicaciones sugieren integrar el estudio en una vida compartida. Podemos ofrecer un espacio pequeño y regular, con una pregunta que acompañe las tareas diarias. La continuidad se favorece cuando el compromiso es sostenible y tiene un sentido reconocible."
+          ],
+          "practice": "Elegir un momento unido a una costumbre existente: después del desayuno, al llegar a casa o antes de acostarse. Leer un pasaje breve y anotar una aplicación. Si se pierde un día, retomar en la siguiente ocasión prevista, sin acumular una deuda de lecturas.",
+          "understand": "¿Qué propone el pasaje y qué pertenece a nuestra aplicación actual?",
+          "personal": "¿Qué acción concreta puedo intentar hoy?",
+          "note": "Síntesis y práctica editorial de Dérej. Consulta las fuentes y el estudio completo desde Biblioteca."
+        },
+        {
+          "title": "Qué estamos haciendo crecer",
+          "source": "Avot 2:7",
+          "summary": "Avot 2:7 contrapone distintos tipos de aumento y sus consecuencias. Entre sus afirmaciones relaciona el aumento de la Torá con la vida y el de la tzedaká con la paz. Aquí se seleccionan esos ejes de un pasaje más amplio, cuyo lenguaje refleja también su contexto antiguo.",
+          "reflection": [
+            "Para Dérej, la pregunta puede orientarse a lo cotidiano: ¿qué alimentan mis hábitos? El crecimiento espiritual se examina en sus frutos y en la calidad de la atención. Esta es una aplicación editorial; el pasaje no ofrece una promesa de bienestar automático ni una explicación de toda dificultad personal."
+          ],
+          "practice": "Al terminar la semana, comparte un aprendizaje y una dificultad sin comparar el valor espiritual de los participantes.",
+          "understand": "¿Qué propone el pasaje y qué pertenece a nuestra aplicación actual?",
+          "personal": "¿Qué acción concreta puedo intentar hoy?",
+          "note": "Síntesis y práctica editorial de Dérej. Consulta las fuentes y el estudio completo desde Biblioteca."
+        }
+      ],
+      "study": {
+        "title": "La paz necesita iniciativa",
+        "source": "Avot 1:12",
+        "summary": "En Pirkei Avot 1:12, Hilel invita a seguir el ejemplo de Aarón: amar la paz, buscarla activamente, amar a las criaturas y acercarlas a la Torá. La formulación reúne una disposición interior y un movimiento hacia otras personas.",
+        "reflection": [
+          "Desear tranquilidad puede quedarse en una preferencia privada. Buscar la paz exige intervenir en el modo en que nos relacionamos: dejar de alimentar un rumor, reconocer un agravio o preparar una conversación que hemos postergado. La enseñanza permite preguntar qué parte de la reconciliación depende efectivamente de nosotros.",
+          "En esta lectura, amar a las personas no se usa como recompensa por aceptar nuestras ideas. El acercamiento a la Torá requiere un trato que preserve su dignidad. Invitar a aprender pierde credibilidad cuando la invitación viene acompañada de humillación, presión o superioridad."
+        ],
+        "practice": "Elegir un vínculo que necesite cuidado. Si corresponde y es posible, iniciar una conversación describiendo un hecho concreto, reconociendo la propia parte y escuchando antes de pedir un cambio. Buscar la paz también puede requerir límites claros y protección frente al daño; no implica forzar la reconciliación.",
+        "understand": "¿Qué propone el pasaje y qué pertenece a nuestra aplicación actual?",
+        "personal": "¿Qué acción concreta puedo intentar hoy?",
+        "note": "Síntesis y práctica editorial de Dérej. Consulta las fuentes y el estudio completo desde Biblioteca."
+      }
     }
   }
 };

@@ -31,10 +31,10 @@ function click(selector){const el=doc.querySelector(selector);assert(el,'Missing
  assert.match(doc.querySelector('[data-voc-action="return"]').textContent,/Biblioteca/);
  click('[data-voc-action="return"]');assert(!doc.querySelector('[data-screen=biblioteca]').hidden);
  evaluate('route("home")');click('[data-voces-open]');assert(!doc.querySelector('[data-screen="voces"]').hidden);
- assert.equal(doc.querySelectorAll('#vocesRoot .vocCard').length,6);
- click('[data-voc-mode="tiempo"]');assert.match(doc.querySelector('.vocList li').textContent,/1040.*Rashí/);
- click('[data-voc-mode="preguntas"]');assert.equal(doc.querySelectorAll('.vocList li').length,6);
- for(const id of ['rashi','ramjal','rambam','ramak','najman','baalshemtov']){
+ assert.equal(doc.querySelectorAll('#vocesRoot .vocCard').length,7);
+ click('[data-voc-mode="tiempo"]');assert.match(doc.querySelector('.vocList li').textContent,/Hilel/);
+ click('[data-voc-mode="preguntas"]');assert.equal(doc.querySelectorAll('.vocList li').length,7);
+ for(const id of ['rashi','ramjal','rambam','ramak','najman','baalshemtov','hilel']){
   click(`#vocesRoot [data-voces-author="${id}"]`);
   assert.equal(doc.querySelectorAll('#vocesVida,#vocesObra,#vocesEnsenanza').length,3);
   assert(!/undefined|\[D[1-5]\]|Selección pendiente/.test(doc.querySelector('#vocesRoot').textContent),id);
@@ -42,6 +42,10 @@ function click(selector){const el=doc.querySelector(selector);assert(el,'Missing
   assert(doc.querySelector('.vocSources a[rel="noopener noreferrer"]'));
   click('[data-voc-action="catalog"]');click('[data-voc-mode="preguntas"]');
  }
+ click('#vocesRoot [data-voces-author="hilel"]');
+ assert.equal(doc.querySelectorAll('[data-voc-reading]').length,7);
+ for(let i=0;i<7;i++){click('[data-voc-reading="'+i+'"]');assert.equal(doc.querySelector('[data-voc-reading="'+i+'"]').getAttribute('aria-pressed'),'true');assert(doc.querySelector('#vocesEnsenanza').textContent.includes(w.DEREJ_VOCES_CONTENT.profiles.hilel.readings[i].title));}
+ click('[data-voc-action="catalog"]');
  click('#vocesRoot [data-voces-author="baalshemtov"]');
  assert.equal(doc.querySelectorAll('[data-voc-reading]').length,7);
  for(let i=0;i<7;i++){click('[data-voc-reading="'+i+'"]');assert.equal(doc.querySelector('[data-voc-reading="'+i+'"]').getAttribute('aria-pressed'),'true');assert(doc.querySelector('#vocesEnsenanza').textContent.includes(w.DEREJ_VOCES_CONTENT.profiles.baalshemtov.readings[i].title));}
@@ -71,6 +75,6 @@ function click(selector){const el=doc.querySelector(selector);assert(el,'Missing
  const pozoHTML=pozo.innerHTML;click('#pozoRoot [data-voces-author="ramak"]');assert.match(doc.querySelector('#vocesTitle').textContent,/Ramak/);
  click('[data-voc-action="return"]');assert.equal(pozo.innerHTML,pozoHTML);assert(!doc.querySelector('[data-screen="pozo"]').hidden);
  assert.equal(errors.length,0,errors.join('\n'));
- console.log('PASS: six profiles, seven Baal Shem Tov readings, five daily voices, three catalog views, continuous readings, daily source context, return/focus/scroll/unsaved text, unchanged storage and audio, no external fetch, Pozo return.');
+ console.log('PASS: seven profiles, seven Baal Shem Tov readings, five daily voices, three catalog views, continuous readings, daily source context, return/focus/scroll/unsaved text, unchanged storage and audio, no external fetch, Pozo return.');
  dom.window.close();
 })().catch(e=>{console.error(e);dom.window.close();process.exitCode=1;});
