@@ -94,3 +94,5 @@
 .courtyard .portalArbol{top:58%;right:0;left:auto;width:27%}
 .courtyard .portalBiblioteca{top:73%;right:0;left:auto;width:27%}
 @media(max-width:699px){.courtyard .portalArbol{top:57%}.courtyard .portalBiblioteca{top:73%}}
+
+.courtyard .pozoLearn[hidden]{display:none!important}

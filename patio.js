@@ -4,7 +4,7 @@
   var patio = document.querySelector('.courtyard');
   if (!patio) return;
   var toggle = patio.querySelector('.patioExplore');
-  var portals = Array.from(patio.querySelectorAll('.portal'));
+  var portals = Array.from(patio.querySelectorAll('.portal, .pozoLearn'));
   if (!toggle || !portals.length) return;
   var key = 'derej.patio.exploring.v1';
   var exploring = false;
