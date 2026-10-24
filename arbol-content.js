@@ -1,11 +1,11 @@
 /* Dérej · Síntesis de fuentes y prácticas originales claramente distinguidas. */
 window.DEREJ_ARBOL = {
-  version: 2,
+  version: 3,
   sources: [
     {id:'mapa',label:'Gal Einai · Las diez sefirot',url:'https://galeinai.org/2022/09/30/las-diez-sefirot/',lang:'es'},
     {id:'tania',label:'Rabí Shneur Zalman de Liadí · Tania, capítulo 3 · Jabad en español',url:'https://es.chabad.org/library/article_cdo/aid/693531/jewish/Captulo-3.htm',lang:'es'},
     {id:'omer',label:'Simon Jacobson · Introducción a la guía espiritual del Ómer · Jabad en español',url:'https://es.chabad.org/library/article_cdo/aid/672665/jewish/Introduccion.htm',lang:'es'},
-    {id:'daat',label:'Gal Einai · Dáat, conocimiento',url:'https://galeinai.org/2022/09/26/daat-conocimiento/',lang:'es'}
+    {id:'daat',label:'Rabí Jacob Immanuel Schochet · El orden de las sefirot · Torá en español',url:'https://www.tora.org.ar/2-el-orden-de-las-sefirot/',lang:'es'}
   ],
   sefirot: [
     {id:'keter',name:'Kéter',he:'כתר',meaning:'Corona',practice:'Orientar la intención',x:50,y:8,refs:['mapa'],
@@ -35,6 +35,15 @@ window.DEREJ_ARBOL = {
       action:'Toma una inquietud y escribe un hecho que conoces, una suposición y una pregunta que falta resolver.',
       balance:'Detenerse a comprender también requiere reconocer cuándo ya es posible dar un primer paso.',
       example:'Antes de atribuir desinterés a un silencio, averiguar si la otra persona recibió el mensaje.'},
+    {id:'daat',name:'Dáat',he:'דעת',meaning:'Conocimiento',practice:'Unir comprensión y vida',x:50,y:30,refs:['tania','daat'],
+      tradition:'Dáat significa conocimiento. En el Tania, capítulo 3, expresa ligazón y unión: sostener la atención en lo comprendido para que influya en las cualidades del corazón. Hay enumeraciones que incluyen Kéter y otras que cuentan Dáat en su lugar. Aquí se muestran ambos para el estudio; Dáat se distingue en gris y no se suma como una undécima sefirá independiente.',
+      reflection:'Comprender una idea puede abrir una posibilidad; permanecer con ella nos permite reconocer qué cambia en nuestra manera de vivir. Dérej propone elegir una enseñanza, atender a su sentido y buscar un gesto que la vuelva presente en una relación concreta.',
+      question:'¿Qué he comprendido que todavía necesita hacerse vida en mí?',
+      image:'Si te ayuda, imagina un hilo que une una idea con un gesto de cuidado. También puedes permanecer en silencio con esa idea, sin visualizar.',
+      prayer:'Creador, ayúdame a sostener lo comprendido y a expresarlo con cuidado.',
+      action:'Elige una enseñanza de hoy, exprésala con tus palabras y concreta una acción coherente con ella.',
+      balance:'Darte tiempo para integrar una enseñanza no exige sentir algo especial ni alcanzar un estado espiritual.',
+      example:'Después de estudiar sobre la escucha, dejar el teléfono a un lado y atender con calma a una persona.'},
     {id:'jesed',name:'Jésed',he:'חסד',meaning:'Bondad',practice:'Dar con atención',x:79,y:40,refs:['mapa','omer'],
       tradition:'Jésed significa bondad. En la guía del Ómer de Simon Jacobson, la benevolencia se examina junto con otras cualidades, como la disciplina y la compasión.',
       reflection:'Dar empieza por advertir una vida distinta de la propia. Podemos ofrecer tiempo, alimento, una palabra o ayuda material. En esta propuesta Dérej, la bondad presta atención a lo que la otra persona necesita y a la forma en que desea recibirlo.',
@@ -101,7 +110,7 @@ window.DEREJ_ARBOL = {
   ],
   routes: [
     {id:'dar',title:'Dar y cuidar',text:'Jésed · Guevurá · Tiféret',ids:['jesed','guevura','tiferet']},
-    {id:'comprender',title:'Escuchar y comprender',text:'Jojmá · Biná',ids:['jojma','bina']},
+    {id:'comprender',title:'Escuchar y comprender',text:'Jojmá · Biná · Dáat',ids:['jojma','bina','daat']},
     {id:'sostener',title:'Sostener y agradecer',text:'Nétzaj · Hod · Iesod',ids:['netzaj','hod','iesod']},
     {id:'realizar',title:'De la intención al acto',text:'Kéter · Maljut',ids:['keter','maljut']}
   ]

@@ -53,3 +53,8 @@
 .avScreen .avScene .avNode[aria-pressed=true] .avNodeLabel{background:#f3dfac;border:2px solid #866b30}.avScreen .avScene .avNode[aria-pressed=true] b,.avScreen .avScene .avNode[aria-pressed=true] small{color:#3c351f}
 .avScreen :focus-visible{outline:3px solid #886323;outline-offset:4px}
 @media(max-width:720px){.avInner{padding-left:20px;padding-right:25px}.avScreen .avHero p,.avScreen .avWelcome p,.avScreen .avCard p,.avScreen .avDetails p,.avScreen .avDetails li{font-size:1.125rem;line-height:1.85}.avScreen .avCard{padding:25px 21px}.avScreen .avScene .avNode b{font-size:1.08rem}.avScreen .avScene .avNode small{font-size:.75rem}.avScreen .avStillLabel{font-size:.75rem}}
+
+/* Dáat se distingue sin depender sólo del color; conserva selección y foco. */
+.avScreen .avScene .avDaat .avOrbGlyph{background:radial-gradient(circle at 30% 25%,#faf9ef,#b4b5a9 70%,#757b70);border:2px dashed #71766c;color:#26392a;text-shadow:none;box-shadow:0 3px 10px #63714b20}
+.avScreen .avScene .avDaat .avNodeLabel{border:1px dashed #71766c}
+.avScreen .avScene .avDaat[aria-pressed=true] .avOrbGlyph{background:radial-gradient(circle at 30% 24%,#fff9e7,#ffe19a 38%,#c2933d 75%,#74501e);border-color:#866b30;box-shadow:0 0 24px #ffda7180}
