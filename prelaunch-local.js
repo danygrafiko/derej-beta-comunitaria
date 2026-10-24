@@ -4236,7 +4236,7 @@ function prepareCaminoShell(){
         <h1 id="caminoTitle">Caminos Diarios</h1>
         <p class="weekTitle">Bereshit a Tetzavé</p>
         <p class="heroEditorial">Una lectura. Una pregunta para hoy. Una práctica para llevar.</p>
-        <button class="heroEnter" type="button" data-ramak-scroll="ramakChooser">Elegir un Camino <span>↓</span></button>
+        <button class="heroEnter" type="button" data-ramak-scroll="ramakChooser">Elegir un Camino <span>↓</span></button><button type="button" class="caminoPersonalEntry" data-route="personal">Mi Camino · Mis huellas y recuerdos →</button>
       </div>
     </section>
 
@@ -31059,7 +31059,7 @@ loadRamak();
   screen.innerHTML=`
     <section class="personalHero">
       <div class="personalHeroShade" aria-hidden="true"></div>
-      <button class="backBtn personalBack" data-route="home">← Patio</button>
+      <button class="backBtn personalBack" data-route="camino">← Camino</button>
       <div class="personalHeroCopy">
         <span class="personalEyebrow">MI CAMINO · זיכרון</span>
         <h1 id="personalV21Title">Huellas<br>que florecen.</h1>

@@ -16,3 +16,6 @@
 
 /* Olivo integrado a la imagen; acceso del mismo sistema que las puertas. */
 .portalArbol{left:1.8%;top:77%;width:28%;height:18%;min-height:88px}.portalArbol .portalSigil svg{width:23px;height:23px}.portalArbol .portalLabel{min-width:0;width:max-content;max-width:100%;text-align:center}.portalArbol .portalLabel b{white-space:normal;line-height:1.12;text-wrap:balance}.portalArbol .portalLabel small{white-space:nowrap}@media(max-width:699px){.portalArbol .portalLabel{min-width:0;width:102px;max-width:100%}.portalArbol .portalLabel b{font-size:.99rem}.portalArbol .portalLabel small{font-size:.43rem;letter-spacing:.1em}}@media(max-width:390px){.portalArbol .portalLabel b{font-size:.88rem}.portalArbol .portalLabel small{font-size:.39rem}}
+
+/* La quinta entrada del patio es el olivo. Mi Camino vive dentro de Camino. */
+.courtyard .portalArbol{left:auto;right:3%;top:50%;width:30%;height:27%;max-height:none}.caminoPersonalEntry{display:block;margin:16px auto 0;padding:12px 18px;border:1px solid #dbc799;border-radius:24px;background:#213729dd;color:#fff3d8;min-height:44px;font:600 .9rem/1.4 system-ui;cursor:pointer}.caminoPersonalEntry:focus-visible{outline:3px solid #ecd89f;outline-offset:4px}@media(max-width:699px){.courtyard .portalArbol{right:.5%;top:47.8%}}@media(max-width:390px){.courtyard .portalArbol{right:0;top:47.4%}}
