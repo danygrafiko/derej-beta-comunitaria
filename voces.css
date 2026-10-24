@@ -49,3 +49,9 @@
 .vocInner :focus-visible,.vocHomeEntry button:focus-visible,.vocAuthorLink:focus-visible{outline:3px solid #8c631e;outline-offset:4px}
 .vocStatus{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
 @media(max-width:600px){.vocHomeEntry{display:block}.vocHomeEntry button{margin-top:20px}.vocGrid{grid-template-columns:1fr}.vocCard{padding:20px}.vocInner{padding-top:18px}.vocProfile p{font-size:1.04rem}.vocTop{margin-bottom:22px}}
+
+.vocReadingNav{margin:32px 0;padding:22px 0;border-top:1px solid #d2c8b5;border-bottom:1px solid #d2c8b5}
+.vocReadingChoices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 18px}
+.vocReadingChoices button{padding:10px;text-decoration:none;border-radius:6px}
+.vocReadingChoices button[aria-pressed=true]{background:#344e3c;color:#fff9ec}
+@media(max-width:600px){.vocReadingChoices{grid-template-columns:1fr}}

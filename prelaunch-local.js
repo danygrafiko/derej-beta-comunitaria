@@ -9905,6 +9905,8 @@ function renderPanels(p,c){
 
 
 
+  const bstReadings=window.DEREJ_VOCES_CONTENT?.profiles.baalshemtov?.readings||[];
+  const bstReading=bstReadings[Math.max(0,Math.min(6,Number(c.dia)-1))];
   const voiceNames=[
     ['rambam','Rambam'],
     ['ramak','Ramak'],
@@ -9914,11 +9916,12 @@ function renderPanels(p,c){
   caminoScreen.querySelector('[data-ramak-panel="profundizar"]').innerHTML=`
     ${scene(c,'03 · PROFUNDIZAR')}
     <div class="ramakBody">
-      <span class="ramakBodyEyebrow">CUATRO VOCES · UNA MISMA RAÍZ</span>
+      <span class="ramakBodyEyebrow">VOCES PARA PROFUNDIZAR</span>
       <div class="ramakVoices">
         ${voiceNames.map(([key,label])=>renderVoiceCard(voices[key],label)).join('')}
+        ${bstReading?renderVoiceCard({fuente:bstReading.source,tipo:'Lectura de acompañamiento · '+bstReading.title,base:bstReading.summary,texto:bstReading.reflection[0]},'Baal Shem Tov'):''}
       </div>
-      <p class="ramakSourceNote">${esc(RAMAK_DATA?.nota_fuentes||'Las cuatro voces son síntesis editoriales de DÉREJ inspiradas en las fuentes señaladas; no reproducen citas textuales salvo indicación.')}</p>
+      <p class="ramakSourceNote">Las voces son síntesis editoriales de Dérej, con referencias identificadas. La lectura del Baal Shem Tov acompaña la semana; no se presenta como comentario directo suyo al pasaje diario.</p>
       ${navButtons('profundizar')}
     </div>`;
 

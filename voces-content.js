@@ -1,11 +1,12 @@
 /* Dérej · Colección editorial en español. Síntesis y aplicaciones identificadas. */
 window.DEREJ_VOCES_CONTENT={
-  "version": 2,
+  "version": 3,
   "order": [
     "rashi",
     "ramjal",
     "rambam",
     "ramak",
+    "baalshemtov",
     "najman"
   ],
   "profiles": {
@@ -286,6 +287,192 @@ window.DEREJ_VOCES_CONTENT={
           "Biografía de Rashí",
           "Jabad en español",
           "https://es.chabad.org/library/article_cdo/aid/710452/jewish/Rashi.htm",
+          "es"
+        ]
+      ]
+    },
+    "baalshemtov": {
+      "id": "baalshemtov",
+      "name": "Baal Shem Tov",
+      "full": "Rabí Israel ben Eliezer · Besht",
+      "date": "1698–1760",
+      "place": "Europa oriental · Medzhybizh",
+      "context": "Orígenes del jasidismo",
+      "hook": "Orar con atención y llevar el servicio al Creador a la vida cotidiana.",
+      "question": "¿Cómo encuentro al Creador en la vida cotidiana?",
+      "life": [
+        "Rabí Israel ben Eliezer, conocido como Baal Shem Tov o Besht, es reconocido como fundador del movimiento jasídico. Vivió en Europa oriental durante el siglo XVIII; Medzhybizh, hoy en Ucrania, fue un centro de su actividad.",
+        "La tradición jasídica destaca su aprecio por la oración sincera y por las personas sencillas. Sus discípulos y las recopilaciones posteriores desempeñaron un papel central en la transmisión de sus enseñanzas.",
+        "En Dérej leemos ese legado conservando su contexto judío. Las aplicaciones para nuestra comunidad se identifican como reflexiones propias; no se presentan como palabras literales del maestro."
+      ],
+      "works": [
+        [
+          "Enseñanzas transmitidas",
+          "Su legado se conoce a través de discípulos, recopilaciones y exposiciones posteriores. Las lecturas de esta ficha se apoyan en publicaciones jasídicas en español, no en una obra escrita y firmada por él."
+        ],
+        [
+          "Recopilaciones y lecturas en español",
+          "La selección incluye Treinta y seis aforismos del Baal Shem Tov y estudios sobre oración, ayuda al prójimo, cuidado del cuerpo y alegría. Las notas identifican la publicación consultada y distinguen la fuente de nuestra aplicación."
+        ]
+      ],
+      "source": "Ingresa a la Teivá y Sálvate",
+      "teaching": "El Baal Shem Tov relaciona la entrada de Noaj al arca con entrar en las palabras de la Torá y la plegaria.",
+      "reflection": "Podemos terminar una oración y descubrir que nuestra atención estuvo ocupada preparando la siguiente tarea. Esta enseñanza nos invita a detenernos en el sentido de lo que pronunciamos. Una palabra comprendida puede ayudarnos a reconocer qué estamos agradeciendo, pidiendo o evitando.",
+      "ask": "¿Qué palabra pronuncié hoy sin haberla escuchado?",
+      "notes": "Siete lecturas de acompañamiento semanal. Las enseñanzas de base son paráfrasis de las publicaciones indicadas. Los comentarios y prácticas pertenecen a Dérej. Son fuentes de transmisión y divulgación jasídica en español; no se afirma un cotejo crítico de los primeros testimonios.",
+      "study": {
+        "title": "Entrar en una palabra",
+        "summary": "El Baal Shem Tov relaciona la entrada de Noaj al arca con entrar en las palabras de la Torá y la plegaria.",
+        "reflection": [
+          "Podemos terminar una oración y descubrir que nuestra atención estuvo ocupada preparando la siguiente tarea. Esta enseñanza nos invita a detenernos en el sentido de lo que pronunciamos. Una palabra comprendida puede ayudarnos a reconocer qué estamos agradeciendo, pidiendo o evitando.",
+          "En Dérej, leer más despacio puede abrir una conversación honesta con el Creador. Si digo gracias, puedo nombrar aquello que recibí. Si pido ayuda, puedo admitir dónde la necesito. Después de esa pausa, regreso a mis responsabilidades con una intención más clara."
+        ],
+        "practice": "Escoge una oración breve. Léela una vez y detente en una palabra. Explica con tus propias palabras qué significa para ti hoy.",
+        "understand": "¿Qué propone la enseñanza de base y qué añade nuestra aplicación?",
+        "personal": "¿Qué palabra pronuncié hoy sin haberla escuchado?",
+        "source": "Ingresa a la Teivá y Sálvate",
+        "note": "La relación entre arca y palabra es una lectura homilética de tevá; no reemplaza el sentido narrativo de Génesis."
+      },
+      "readings": [
+        {
+          "title": "Entrar en una palabra",
+          "summary": "El Baal Shem Tov relaciona la entrada de Noaj al arca con entrar en las palabras de la Torá y la plegaria.",
+          "reflection": [
+            "Podemos terminar una oración y descubrir que nuestra atención estuvo ocupada preparando la siguiente tarea. Esta enseñanza nos invita a detenernos en el sentido de lo que pronunciamos. Una palabra comprendida puede ayudarnos a reconocer qué estamos agradeciendo, pidiendo o evitando.",
+            "En Dérej, leer más despacio puede abrir una conversación honesta con el Creador. Si digo gracias, puedo nombrar aquello que recibí. Si pido ayuda, puedo admitir dónde la necesito. Después de esa pausa, regreso a mis responsabilidades con una intención más clara."
+          ],
+          "practice": "Escoge una oración breve. Léela una vez y detente en una palabra. Explica con tus propias palabras qué significa para ti hoy.",
+          "understand": "¿Qué propone la enseñanza de base y qué añade nuestra aplicación?",
+          "personal": "¿Qué palabra pronuncié hoy sin haberla escuchado?",
+          "source": "Ingresa a la Teivá y Sálvate",
+          "note": "La relación entre arca y palabra es una lectura homilética de tevá; no reemplaza el sentido narrativo de Génesis."
+        },
+        {
+          "title": "Hacer del amor una tarea",
+          "summary": "La tradición consultada vincula al Baal Shem Tov con una ayuda material activa y desinteresada dentro del amor a Israel.",
+          "reflection": [
+            "Una persona puede necesitar compañía, alimento o ayuda para resolver una gestión. Antes de ofrecerle una explicación espiritual, conviene escuchar qué le está faltando. Ayudar exige prestar atención a una necesidad real y aceptar que quizá sea distinta de la que imaginábamos.",
+            "Nuestra aplicación en Dérej es extender esa atención a quienes encontramos. La ayuda debe respetar sus decisiones y su dignidad. Quien recibe un favor no adquiere una deuda de gratitud, de adhesión a nuestra comunidad ni de participación en nuestras actividades. Podemos acompañar sin ocupar el centro de su historia."
+          ],
+          "practice": "Pregunta a alguien qué ayuda concreta le serviría esta semana. Ofrece algo que puedas cumplir y respeta su respuesta.",
+          "understand": "¿Qué propone la enseñanza de base y qué añade nuestra aplicación?",
+          "personal": "¿Estoy atendiendo su necesidad o mi deseo de sentirme necesario?",
+          "source": "Amor al prójimo como Ocupación y Tarea",
+          "note": "La fuente habla de ahavat Israel. La extensión comunitaria aquí propuesta pertenece al comentario de Dérej."
+        },
+        {
+          "title": "Cuidar el cuerpo que nos acompaña",
+          "summary": "En una lectura de Éxodo 23:5, el Baal Shem Tov enseña a trabajar con el cuerpo y fortalecerlo para el servicio a Dios.",
+          "reflection": [
+            "A veces organizamos la vida espiritual como si el cansancio fuera una falta de voluntad. Prometemos estudiar cuando ya no podemos sostener la atención y luego nos reprochamos haber fallado. Conviene revisar también las condiciones de esa promesa.",
+            "En Dérej podemos buscar un momento y una postura que permitan estar presentes. Reconocer un límite ayuda a elegir una práctica posible. Descansar, alimentarse y distribuir las tareas forman parte de la responsabilidad con la vida que hemos recibido. El esfuerzo espiritual puede crecer con paciencia, sin convertir el agotamiento en medida de entrega."
+          ],
+          "practice": "Revisa el horario de tu estudio. Si llegas exhausto, prueba otro momento o una lectura más breve que puedas atender.",
+          "understand": "¿Qué propone la enseñanza de base y qué añade nuestra aplicación?",
+          "personal": "¿Qué condición concreta facilitaría hoy mi atención?",
+          "source": "Ayudar al Cuerpo Ayudar al Alma",
+          "note": "La asociación entre jamor, asno, y jomer, materia, es homilética. No constituye una traducción literal del versículo."
+        },
+        {
+          "title": "Examinar nuestra manera de mirar",
+          "summary": "La enseñanza del prójimo como espejo invita a reconocer nuestras propias faltas al observar las de otra persona.",
+          "reflection": [
+            "Nuestra mirada suele ser más rápida para detectar una falta ajena que para reconocer una propia. Antes de corregir, podemos preguntarnos qué sabemos de lo ocurrido y si aplicamos el mismo criterio a nuestra conducta. Esa pausa puede volver más justa una conversación difícil.",
+            "Para Dérej, esta es una invitación al examen personal. No podemos concluir que alguien comparte toda falta que identifica. Tampoco corresponde responsabilizar a una persona por el daño que recibe. Ante una injusticia, revisar nuestra reacción puede acompañar la necesidad de poner límites y proteger a quien fue afectado."
+          ],
+          "practice": "Recuerda un juicio reciente. Separa el hecho que observaste de las intenciones que supusiste. Revisa si necesitas corregir algo en tu respuesta.",
+          "understand": "¿Qué propone la enseñanza de base y qué añade nuestra aplicación?",
+          "personal": "¿Qué parte de mi juicio puedo sostener con hechos?",
+          "source": "Espejito espejito quien es el más bonito",
+          "note": "Esta aplicación acotada es una decisión editorial de Dérej; evita convertir una exhortación espiritual en una regla psicológica universal."
+        },
+        {
+          "title": "Aprender de lo cotidiano",
+          "summary": "Al Baal Shem Tov se le atribuye la invitación a aprender para el servicio a Dios de lo que vemos, oímos y experimentamos.",
+          "reflection": [
+            "Una espera puede mostrar nuestra impaciencia. Una conversación interrumpida puede hacernos notar que escuchábamos sólo hasta encontrar ocasión de responder. La vida cotidiana ofrece situaciones en las que reconocer nuestra conducta con bastante precisión.",
+            "En Dérej podemos recoger esas ocasiones sin apresurarnos a descifrar mensajes ocultos. No conocemos por qué sucede cada acontecimiento ni nos corresponde explicar desde fuera el sufrimiento de otro. Sí podemos preguntarnos qué respuesta está en nuestras manos: pedir disculpas, corregir una distracción o acompañar a alguien. El aprendizaje se vuelve concreto cuando produce una acción que podemos realizar."
+          ],
+          "practice": "Elige un hecho ordinario del día. Escribe qué ocurrió, cómo respondiste y qué harías de otra manera la próxima vez.",
+          "understand": "¿Qué propone la enseñanza de base y qué añade nuestra aplicación?",
+          "personal": "¿Qué respuesta depende de mí en esta situación?",
+          "source": "Terapia de Grupo",
+          "note": "Aprender de un acontecimiento no demuestra que conozcamos su causa o propósito divinos. La propuesta no consiste en buscar presagios."
+        },
+        {
+          "title": "Dar lugar a la alegría",
+          "summary": "La tradición jasídica vinculada al Baal Shem Tov extiende la alegría del servicio a Dios a las actividades de la vida diaria.",
+          "reflection": [
+            "Podemos acostumbrarnos a revisar el día únicamente desde sus pendientes. Entonces incluso una acción buena queda eclipsada por todo lo que falta. Reconocer algo valioso que sí ocurrió puede ayudarnos a recibir el día con mayor gratitud.",
+            "En Dérej queremos dar lugar a esa alegría sin imponer un estado de ánimo. Alguien puede estar agradecido y, al mismo tiempo, atravesar una pena. En una reunión conviene permitir ambas cosas. Una canción compartida, una comida o una conversación tranquila pueden ofrecer compañía; cada persona debe tener espacio para vivir ese encuentro con sinceridad."
+          ],
+          "practice": "Reconoce algo bueno que ocurrió hoy. Si lo deseas, agradécelo en voz baja o compártelo con alguien, sin exigirte sentir más de lo que sientes.",
+          "understand": "¿Qué propone la enseñanza de base y qué añade nuestra aplicación?",
+          "personal": "¿Qué bien recibido pasó inadvertido entre mis pendientes?",
+          "source": "Ensayo para la redención",
+          "note": "Aquí simjá designa alegría en el servicio. El comentario no permite medir la fe de una persona por su estado de ánimo."
+        },
+        {
+          "title": "Estudiar con sencillez",
+          "summary": "La colección consultada atribuye al Baal Shem Tov un aprecio especial por la fe sencilla y el apego a Dios mediante el estudio y la plegaria.",
+          "reflection": [
+            "Cuando empezamos a estudiar, es fácil comparar nuestro vocabulario con el de quienes llevan años aprendiendo. Podemos callar una pregunta por vergüenza o repetir una explicación que todavía no comprendemos. La sencillez permite decir con honestidad dónde estamos.",
+            "En Dérej, una lectura profunda debería dejar espacio para preguntar y comprobar. Una palabra hebrea necesita explicación; una afirmación sobre el maestro necesita fuente. Podemos valorar el conocimiento y recibir con respeto a quien apenas comienza. La persona que pregunta algo elemental puede ayudar a toda la comunidad a descubrir una dificultad que había pasado por alto."
+          ],
+          "practice": "Escoge una idea del estudio y explícasela a alguien con palabras habituales. Si encuentras un vacío, anótalo como una pregunta para investigar.",
+          "understand": "¿Qué propone la enseñanza de base y qué añade nuestra aplicación?",
+          "personal": "¿Qué necesito comprender mejor antes de enseñarlo?",
+          "source": "Treinta y seis aforismos del Baal Shem Tov",
+          "note": "Valorar la sencillez no elimina el estudio riguroso ni convierte una impresión personal en una enseñanza atribuible al maestro."
+        }
+      ],
+      "sources": [
+        [
+          "El Baal Shem Tov",
+          "Biografía publicada por Jabad en Español. Apartados sobre revelación y liderazgo y transmisión por sus discípulos.",
+          "https://es.chabad.org/library/article_cdo/aid/1212973/jewish/Biografa.htm",
+          "es"
+        ],
+        [
+          "Ingresa a la Teivá y Sálvate",
+          "Jabad en Español. Lectura sobre Génesis 7:1. La publicación remite a Likutei Sijot, tomo 1, página 5.",
+          "https://es.chabad.org/library/article_cdo/aid/1010273/jewish/Ingresa-a-la-Teiv-y-Slvate.htm",
+          "es"
+        ],
+        [
+          "Amor al prójimo como Ocupación y Tarea",
+          "Adaptación de enseñanzas del Rebe de Lubavitch. La publicación remite a Likutei Sijot, tomo 1, página 260.",
+          "https://es.chabad.org/library/article_cdo/aid/1165535/jewish/Amor-al-prjimo-como-Ocupacin-y-Tarea.htm",
+          "es"
+        ],
+        [
+          "Ayudar al Cuerpo Ayudar al Alma",
+          "Sabiduría diaria. Adaptación de Moshe Wisnefsky y traducción de Eliezer Shemtov. Remite a Hitvaaduiot 5710, páginas 111 y 112.",
+          "https://es.chabad.org/dailystudy/dailywisdom_cdo/aid/3089914/jewish/MircolesAyudar-al-Cuerpo-Ayudar-al-Alma.htm",
+          "es"
+        ],
+        [
+          "Espejito espejito quien es el más bonito",
+          "Mordejai Wollenberg. Artículo de difusión sobre la enseñanza del espejo. La página no da un localizador de una recopilación temprana.",
+          "https://es.chabad.org/library/article_cdo/aid/1478282/jewish/Espejito-espejito-quien-es-el-ms-bonito.htm",
+          "es"
+        ],
+        [
+          "Terapia de Grupo",
+          "Naftali Silberberg. Se utiliza únicamente la enseñanza introductoria sobre aprender de lo que vemos y experimentamos.",
+          "https://es.chabad.org/library/article_cdo/aid/578436/jewish/Terapia-de-Grupo.htm",
+          "es"
+        ],
+        [
+          "Ensayo para la redención",
+          "Sesgo de Positividad, capítulo 13. Pasaje sobre alegría y vida cotidiana. La nota 19 remite a Tzavaat Harivash, sección 110.",
+          "https://es.chabad.org/library/article_cdo/aid/4486413/jewish/Captulo-13-Ensayo-de-redencin.htm",
+          "es"
+        ],
+        [
+          "Treinta y seis aforismos del Baal Shem Tov",
+          "Jabad en Español. Puntos 17 a 20, sobre sencillez y apego a Dios. Recopilación de difusión, no texto autógrafo.",
+          "https://es.chabad.org/library/article_cdo/aid/2352130/jewish/Treinta-y-seis-aforismos-del-Baal-Shem-Tov.htm",
           "es"
         ]
       ]

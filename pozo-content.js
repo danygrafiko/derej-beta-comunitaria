@@ -51,9 +51,10 @@ window.DEREJ_POZO_CONTENT={
    translation:'Dijo Dios: «Que haya luz», y hubo luz.',context:'אוֹר aparece dos veces en este pasaje: en la invitación y en lo que sucede después. Cualquiera de las dos apariciones responde al ejercicio.',symbol:'El encuentro OR de Dérej propone mirar qué necesita recibir luz en nuestra vida. Esta aplicación personal se distingue del significado lingüístico: luz.'}
  ],
  sages:[
-  {id:'rambam',name:'Rambam',full:'Rabí Moshé ben Maimón',work:'Mishné Torá',context:'También conocido como Maimónides. Es una de las cuatro voces que acompañan los Caminos de Dérej.',source:'rambam'},
+  {id:'rambam',name:'Rambam',full:'Rabí Moshé ben Maimón',work:'Mishné Torá',context:'También conocido como Maimónides. Es una de las voces que acompañan los Caminos de Dérej.',source:'rambam'},
   {id:'ramak',name:'Ramak',full:'Rabí Moshé Cordovero',work:'Tomer Devorah',context:'Maestro de Tzfat. Dérej toma sus enseñanzas como una de las voces para estudiar y reflexionar.',source:'ramak'},
-  {id:'ramjal',name:'Ramjal',full:'Rabí Moshé Jaim Luzzatto',work:'Mesilat Yesharim',context:'Su nombre también se translitera Ramchal. Es otra de las cuatro voces presentes en nuestros Caminos.',source:'ramjal'},
+  {id:'ramjal',name:'Ramjal',full:'Rabí Moshé Jaim Luzzatto',work:'Mesilat Yesharim',context:'Su nombre también se translitera Ramchal. Es otra de las voces presentes en nuestros Caminos.',source:'ramjal'},
+  {id:'baalshemtov',name:'Baal Shem Tov',full:'Rabí Israel ben Eliezer',work:'Enseñanzas transmitidas del Baal Shem Tov',context:'Maestro de los orígenes del jasidismo. Sus siete lecturas acompañan la oración y la vida cotidiana; se distinguen las enseñanzas transmitidas de las aplicaciones de Dérej.',source:'baalshemtov'},
   {id:'najman',name:'Rabí Najmán',full:'Rabí Najmán de Breslov',work:'Likutei Moharán',context:'En Dérej, sus enseñanzas abren preguntas y momentos de conversación personal con Dios.',source:'najman'}
  ],
  noaj:[
@@ -68,6 +69,7 @@ window.DEREJ_POZO_CONTENT={
   {id:'genesis-1-6',label:'Génesis 1:6 · RAKIA · las aguas'},
   {id:'lectura',label:'Cómo leer · vocalización y escritura'},
   {id:'rambam',label:'Rambam · nombre y obra'},
+  {id:'baalshemtov',label:'Baal Shem Tov · nombre y enseñanzas transmitidas'},
   {id:'ramak',label:'Ramak · nombre y obra'},
   {id:'ramjal',label:'Ramjal · nombre y obra'},
   {id:'najman',label:'Rabí Najmán · nombre y obra'},
