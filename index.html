@@ -15,6 +15,7 @@
 <link rel="stylesheet" href="midrash-es.css?v=27.2">
 <link rel="stylesheet" href="voces.css?v=1">
 <link rel="stylesheet" href="nombres.css?v=1">
+<link rel="stylesheet" href="arbol.css?v=1">
 <link rel="stylesheet" href="moed-calendar.css?v=1">
 <style>
   .brandButton .derejWordmark{display:flex;flex-direction:column;align-items:flex-start;line-height:1}
@@ -49,6 +50,10 @@
       <button class="pozoHotspot" data-route="pozo" aria-label="Acercarse al Pozo y descubrir su interior"><span class="pozoWaterLight" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><span class="pozoRipple" aria-hidden="true"></span></button>
     </div>
     <footer class="homeFooter"><p class="homeFooterMessage">La pantalla abre una puerta. El Camino continúa fuera de ella.</p><button type="button" id="metricsPrivacyOpen" class="metricsPrivacyOpen">Privacidad y métricas</button></footer>
+    <section class="avEntry" aria-labelledby="avEntryTitle">
+      <div><span class="avEyebrow">UNA NUEVA RAMA · CULTIVAR EL INTERIOR</span><h2 id="avEntryTitle">Árbol de la Vida</h2><p>Explora las sefirot. Aprende, contempla y lleva una intención a tu vida cotidiana.</p></div>
+      <button type="button" class="avButton" data-arbol-open>Acercarme al árbol →</button>
+    </section>
     <section class="npEntry" aria-labelledby="npEntryTitle">
       <div><span class="npEyebrow">BEIT MIDRASH · ESTUDIOS</span><h2 id="npEntryTitle">Nombres y presencia</h2><p>Leer los nombres de Dios en su contexto. Comprender, contemplar y responder en la vida.</p></div>
       <button type="button" data-nombres-open>Abrir el recorrido →</button>
@@ -192,6 +197,7 @@
     <div class="vocInner" id="vocesRoot"><button type="button" class="backBtn" data-route="home">← Patio</button><h1 id="vocesTitle">Voces del Camino</h1><p>Vidas, obras y enseñanzas. Preparando la lectura…</p></div>
   </section>
   <section class="screen npScreen" data-screen="nombres" hidden aria-labelledby="npTitle"><div id="nombresRoot" class="npInner"></div></section>
+  <section class="screen avScreen" data-screen="arbol" hidden aria-labelledby="arbolTitle"><div id="arbolRoot" class="avInner"></div></section>
 </main>
 <dialog id="metricsPrivacy" class="metricsPrivacy" aria-labelledby="metricsPrivacyTitle">
   <h2 id="metricsPrivacyTitle">Privacidad en Dérej</h2>
@@ -224,6 +230,8 @@
 <script src="voces.js?v=2"></script>
 <script src="nombres-content.js?v=3"></script>
 <script src="nombres.js?v=1"></script>
+<script src="arbol-content.js?v=1"></script>
+<script src="arbol.js?v=1"></script>
 <script src="connection-reminders.js?v=2"></script>
   
 </body>
