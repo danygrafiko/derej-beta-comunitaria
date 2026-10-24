@@ -16,13 +16,14 @@
 <link rel="stylesheet" href="voces.css?v=2">
 <link rel="stylesheet" href="nombres.css?v=1">
 <link rel="stylesheet" href="arbol.css?v=6">
-<link rel="stylesheet" href="patio-portals.css?v=2">
+<link rel="stylesheet" href="patio-portals.css?v=3">
 <link rel="stylesheet" href="moed-calendar.css?v=1">
 <style>
   .brandButton .derejWordmark{display:flex;flex-direction:column;align-items:flex-start;line-height:1}
   .brandButton .derejWordmark b{letter-spacing:.16em}
   .brandButton .derejWordmark small{letter-spacing:.18em}
 </style>
+<noscript><style>.courtyard .portal[hidden]{display:flex!important}</style></noscript>
 </head>
 <body>
 <main class="appShell">
@@ -42,17 +43,18 @@
         <div class="eyebrow">DÉREJ · EL CAMINO</div>
         <h1 id="homeTitle">Cinco puertas.<br>Un mismo Camino.</h1>
         <p>Entra por lo que hoy resuene contigo.</p>
+        <button type="button" class="patioExplore" hidden aria-expanded="true" aria-controls="patio-shabat patio-moed patio-camino patio-radio patio-arbol">Contemplar el patio <span aria-hidden="true">−</span></button>
       </div>
-      <button class="portal portalShabat" data-route="shabat" aria-label="Entrar a Shabat"><span class="portalSigil">שבת</span><span class="portalLabel"><small>LUZ · REFUGIO · MESA</small><b>Shabat</b></span></button>
-      <button class="portal portalMoed" data-route="moed" aria-label="Entrar a Moed"><span class="portalSigil">מועד</span><span class="portalLabel"><small>TIEMPO · ESTACIONES</small><b>Moed</b></span></button>
-      <button class="portal portalCamino" data-route="camino" aria-label="Entrar a Camino"><span class="portalSigil">דרך</span><span class="portalLabel"><small>SENDERO · AMANECER</small><b>Camino</b><em>Entrar</em></span></button>
-      <button class="portal portalRadio" data-route="radio" aria-label="Entrar a Radio"><span class="portalSigil"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 14v-3a8 8 0 0 1 16 0v3M4 13h3v7H5a2 2 0 0 1-2-2v-3a2 2 0 0 1 1-2Zm16 0h-3v7h2a2 2 0 0 0 2-2v-3a2 2 0 0 0-1-2Z"/></svg></span><span class="portalLabel"><small>NOCHE · ESCUCHA</small><b>Radio</b></span></button>
-      <button type="button" class="portal portalPersonal portalArbol" data-arbol-open aria-label="Entrar al Árbol de la Vida y la Cábala">
+      <button hidden id="patio-shabat" class="portal portalShabat" data-route="shabat" aria-label="Entrar a Shabat"><span class="portalSigil">שבת</span><span class="portalLabel"><small>LUZ · REFUGIO · MESA</small><b>Shabat</b></span></button>
+      <button hidden id="patio-moed" class="portal portalMoed" data-route="moed" aria-label="Entrar a Moed"><span class="portalSigil">מועד</span><span class="portalLabel"><small>TIEMPO · ESTACIONES</small><b>Moed</b></span></button>
+      <button hidden id="patio-camino" class="portal portalCamino" data-route="camino" aria-label="Entrar a Camino"><span class="portalSigil">דרך</span><span class="portalLabel"><small>SENDERO · AMANECER</small><b>Camino</b><em>Entrar</em></span></button>
+      <button hidden id="patio-radio" class="portal portalRadio" data-route="radio" aria-label="Entrar a Radio"><span class="portalSigil"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M4 14v-3a8 8 0 0 1 16 0v3M4 13h3v7H5a2 2 0 0 1-2-2v-3a2 2 0 0 1 1-2Zm16 0h-3v7h2a2 2 0 0 0 2-2v-3a2 2 0 0 0-1-2Z"/></svg></span><span class="portalLabel"><small>NOCHE · ESCUCHA</small><b>Radio</b></span></button>
+      <button type="button" hidden id="patio-arbol" class="portal portalPersonal portalArbol" data-arbol-open aria-label="Entrar al Árbol de la Vida y la Cábala">
         <span class="portalSigil"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"><path d="M6 20c5-4 8-9 10-16M9 16c-5-1-5-5-5-5 4 0 6 2 5 5ZM12 12c-5-1-5-5-5-5 4 0 6 2 5 5ZM12 13c1-5 6-5 6-5 0 4-2 6-6 5ZM15 8c0-4 4-6 4-6 1 4 0 6-4 6Z"/></svg></span>
         <span class="portalLabel"><small>SEFIROT · CÁBALA</small><b>Árbol de la Vida</b></span>
       </button>
       <button class="pozoHotspot" data-route="pozo" aria-label="Acercarse al Pozo y descubrir su interior"><span class="pozoWaterLight" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><span class="pozoRipple" aria-hidden="true"></span></button>
-      <button type="button" class="pozoDescent" data-route="pozo" aria-label="Baja al Pozo · Descubre letras, palabras y voces">Baja al Pozo <span aria-hidden="true">↓</span></button>
+      <button type="button" class="pozoDescent" data-route="pozo" aria-label="Descubrir el Pozo · Letras, palabras y voces">Descubrir el Pozo <span aria-hidden="true">↓</span></button>
     </div>
     <footer class="homeFooter"><p class="homeFooterMessage">La pantalla abre una puerta. El Camino continúa fuera de ella.</p><button type="button" id="metricsPrivacyOpen" class="metricsPrivacyOpen">Privacidad y métricas</button></footer>
     <section class="npEntry" aria-labelledby="npEntryTitle">
@@ -218,6 +220,7 @@
 <script src="moed-calendar.js?v=1"></script>
 <script src="voces-content.js?v=3"></script>
 <script src="prelaunch-local.js?v=29.5"></script>
+<script src="patio.js?v=1"></script>
 
 
 <script src="mobile-v234.js"></script>
