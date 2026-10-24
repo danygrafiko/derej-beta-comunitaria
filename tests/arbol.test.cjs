@@ -20,8 +20,8 @@ async function app(query='',saved=null){
 }
 (async()=>{
  const a=await app(),{d,w,click,ev}=a;
- assert(d.querySelector('.courtyard .portalArbol[data-arbol-open] .portalSigil'));assert(!d.querySelector('.avPatioTree'));assert.match(d.querySelector('.courtyardBg').getAttribute('src'),/home-courtyard-olive/);
- assert.equal(d.querySelectorAll('.courtyard .portal').length,5);assert(!d.querySelector('.courtyard [data-route=personal]'));ev('route("camino")');await new Promise(r=>setTimeout(r,80));click('.caminoPersonalEntry');assert(!d.querySelector('[data-screen=personal]').hidden);click('.personalBack');assert(!d.querySelector('[data-screen=camino]').hidden);ev('route("home")');
+ assert(d.querySelector('.courtyard .portalArbol[data-arbol-open] .portalSigil'));assert(!d.querySelector('.avPatioTree'));assert.match(d.querySelector('.courtyardBg').getAttribute('src'),/home-courtyard-library/);
+ assert.equal(d.querySelectorAll('.courtyard .portal').length,6);assert(!d.querySelector('.courtyard [data-route=personal]'));ev('route("camino")');await new Promise(r=>setTimeout(r,80));click('.caminoPersonalEntry');assert(!d.querySelector('[data-screen=personal]').hidden);click('.personalBack');assert(!d.querySelector('[data-screen=camino]').hidden);ev('route("home")');
  click('[data-arbol-open]');assert(!d.querySelector('[data-screen=arbol]').hidden);assert.equal(d.querySelectorAll('.avTree [data-av-node]').length,10);
  assert(d.querySelector('.avScene.avFlat'));assert(!d.querySelector('#arbolRoot canvas'));assert(!d.querySelector('#arbolRoot [data-av-scene]'));assert(!d.querySelector('script[src*="arbol-scene"]'));
  click('[data-av-action=intro]');assert(!d.querySelector('.avWelcome'));

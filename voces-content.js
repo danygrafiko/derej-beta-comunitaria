@@ -543,7 +543,7 @@ window.DEREJ_VOCES_CONTENT={
           "practice": "Elegir un vínculo que necesite cuidado. Si corresponde y es posible, iniciar una conversación describiendo un hecho concreto, reconociendo la propia parte y escuchando antes de pedir un cambio. Buscar la paz también puede requerir límites claros y protección frente al daño; no implica forzar la reconciliación.",
           "understand": "¿Qué propone el pasaje y qué pertenece a nuestra aplicación actual?",
           "personal": "¿Qué acción concreta puedo intentar hoy?",
-          "note": "Síntesis y práctica editorial de Dérej. Consulta las fuentes y el estudio completo desde Biblioteca."
+          "note": "Síntesis y práctica editorial de Dérej. Las siete lecturas forman este estudio dentro de la ficha de Hilel. Puedes consultar sus fuentes y notas más abajo."
         },
         {
           "title": "Las tres preguntas de Hilel",
@@ -556,7 +556,7 @@ window.DEREJ_VOCES_CONTENT={
           "practice": "Escribir una decisión pendiente que dependa de mí y un paso realizable durante el día. Después revisar si ese paso cuida también a quienes se ven afectados. Ejemplo: reservar diez minutos para estudiar y acordar ese espacio con la familia cuando sea necesario.",
           "understand": "¿Qué propone el pasaje y qué pertenece a nuestra aplicación actual?",
           "personal": "¿Qué acción concreta puedo intentar hoy?",
-          "note": "Síntesis y práctica editorial de Dérej. Consulta las fuentes y el estudio completo desde Biblioteca."
+          "note": "Síntesis y práctica editorial de Dérej. Las siete lecturas forman este estudio dentro de la ficha de Hilel. Puedes consultar sus fuentes y notas más abajo."
         },
         {
           "title": "La regla que obliga a seguir aprendiendo",
@@ -569,7 +569,7 @@ window.DEREJ_VOCES_CONTENT={
           "practice": "Antes de enviar una crítica, revisar si su contenido es necesario, si los hechos están comprobados y si el modo elegido expone innecesariamente a alguien. Cuando corresponda, hablar en privado y permitir una respuesta.",
           "understand": "¿Qué propone el pasaje y qué pertenece a nuestra aplicación actual?",
           "personal": "¿Qué acción concreta puedo intentar hoy?",
-          "note": "Síntesis y práctica editorial de Dérej. Consulta las fuentes y el estudio completo desde Biblioteca."
+          "note": "Síntesis y práctica editorial de Dérej. Las siete lecturas forman este estudio dentro de la ficha de Hilel. Puedes consultar sus fuentes y notas más abajo."
         },
         {
           "title": "Preguntar y enseñar sin humillar",
@@ -581,7 +581,7 @@ window.DEREJ_VOCES_CONTENT={
           "practice": "El moderador invita a formular preguntas básicas, admite lo que desconoce y evita corregir para exhibir autoridad. Puede preguntar: ¿qué parte del texto todavía no resulta clara? Quien participa intenta nombrar una duda precisa en lugar de fingir que entendió.",
           "understand": "¿Qué propone el pasaje y qué pertenece a nuestra aplicación actual?",
           "personal": "¿Qué acción concreta puedo intentar hoy?",
-          "note": "Síntesis y práctica editorial de Dérej. Consulta las fuentes y el estudio completo desde Biblioteca."
+          "note": "Síntesis y práctica editorial de Dérej. Las siete lecturas forman este estudio dentro de la ficha de Hilel. Puedes consultar sus fuentes y notas más abajo."
         },
         {
           "title": "La escuela de Hilel y la escucha del adversario",
@@ -594,7 +594,7 @@ window.DEREJ_VOCES_CONTENT={
           "practice": "Antes de responder a una diferencia, resumir la otra posición y preguntar si fue entendida correctamente. Después señalar el punto preciso de desacuerdo, sus fuentes y aquello que todavía necesita investigación. Escuchar con respeto no obliga a considerar igualmente correctas todas las afirmaciones.",
           "understand": "¿Qué propone el pasaje y qué pertenece a nuestra aplicación actual?",
           "personal": "¿Qué acción concreta puedo intentar hoy?",
-          "note": "Síntesis y práctica editorial de Dérej. Consulta las fuentes y el estudio completo desde Biblioteca."
+          "note": "Síntesis y práctica editorial de Dérej. Las siete lecturas forman este estudio dentro de la ficha de Hilel. Puedes consultar sus fuentes y notas más abajo."
         },
         {
           "title": "El aprendizaje dentro de la vida cotidiana",
@@ -606,7 +606,7 @@ window.DEREJ_VOCES_CONTENT={
           "practice": "Elegir un momento unido a una costumbre existente: después del desayuno, al llegar a casa o antes de acostarse. Leer un pasaje breve y anotar una aplicación. Si se pierde un día, retomar en la siguiente ocasión prevista, sin acumular una deuda de lecturas.",
           "understand": "¿Qué propone el pasaje y qué pertenece a nuestra aplicación actual?",
           "personal": "¿Qué acción concreta puedo intentar hoy?",
-          "note": "Síntesis y práctica editorial de Dérej. Consulta las fuentes y el estudio completo desde Biblioteca."
+          "note": "Síntesis y práctica editorial de Dérej. Las siete lecturas forman este estudio dentro de la ficha de Hilel. Puedes consultar sus fuentes y notas más abajo."
         },
         {
           "title": "Qué estamos haciendo crecer",
@@ -618,7 +618,7 @@ window.DEREJ_VOCES_CONTENT={
           "practice": "Al terminar la semana, comparte un aprendizaje y una dificultad sin comparar el valor espiritual de los participantes.",
           "understand": "¿Qué propone el pasaje y qué pertenece a nuestra aplicación actual?",
           "personal": "¿Qué acción concreta puedo intentar hoy?",
-          "note": "Síntesis y práctica editorial de Dérej. Consulta las fuentes y el estudio completo desde Biblioteca."
+          "note": "Síntesis y práctica editorial de Dérej. Las siete lecturas forman este estudio dentro de la ficha de Hilel. Puedes consultar sus fuentes y notas más abajo."
         }
       ],
       "study": {
@@ -632,7 +632,7 @@ window.DEREJ_VOCES_CONTENT={
         "practice": "Elegir un vínculo que necesite cuidado. Si corresponde y es posible, iniciar una conversación describiendo un hecho concreto, reconociendo la propia parte y escuchando antes de pedir un cambio. Buscar la paz también puede requerir límites claros y protección frente al daño; no implica forzar la reconciliación.",
         "understand": "¿Qué propone el pasaje y qué pertenece a nuestra aplicación actual?",
         "personal": "¿Qué acción concreta puedo intentar hoy?",
-        "note": "Síntesis y práctica editorial de Dérej. Consulta las fuentes y el estudio completo desde Biblioteca."
+        "note": "Síntesis y práctica editorial de Dérej. Las siete lecturas forman este estudio dentro de la ficha de Hilel. Puedes consultar sus fuentes y notas más abajo."
       }
     }
   }
