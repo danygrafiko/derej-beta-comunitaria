@@ -20,13 +20,12 @@ async function app(query='',saved=null){
 }
 (async()=>{
  const a=await app(),{d,w,click,ev}=a;
- assert(d.querySelector('.courtyard .avPatioTree[data-arbol-open]'));
+ assert(d.querySelector('.courtyard .portalArbol[data-arbol-open] .portalSigil'));assert(!d.querySelector('.avPatioTree'));assert.match(d.querySelector('.courtyardBg').getAttribute('src'),/home-courtyard-olive/);
  click('[data-arbol-open]');assert(!d.querySelector('[data-screen=arbol]').hidden);assert.equal(d.querySelectorAll('.avTree [data-av-node]').length,10);
  assert(d.querySelector('.avScene.avFlat'));assert(!d.querySelector('#arbolRoot canvas'));assert(!d.querySelector('#arbolRoot [data-av-scene]'));assert(!d.querySelector('script[src*="arbol-scene"]'));
  click('[data-av-action=intro]');assert(!d.querySelector('.avWelcome'));
  for(const s of w.DEREJ_ARBOL.sefirot){click('.avTree [data-av-node='+s.id+']');assert.match(d.querySelector('#avTitle').textContent,new RegExp(s.name));assert(d.querySelector('#avPanel').textContent.includes(s.question));assert(d.querySelectorAll('#avPanel a[hreflang=es]').length>=1);
   assert.equal(d.querySelectorAll('.avTree [aria-pressed=true]').length,1);assert.equal(d.querySelector('.avTree [aria-pressed=true]').dataset.avNode,s.id);const activeRoute=d.querySelector('[data-av-route][aria-pressed=true]');assert(w.DEREJ_ARBOL.routes.find(r=>r.id===activeRoute.dataset.avRoute).ids.includes(s.id));
-  assert.equal(d.querySelectorAll('.avPatioLights .lit').length,1);assert.equal(d.querySelector('.avPatioLights .lit').dataset.avPatioNode,s.id);
   click('[data-av-mode=practice]');click('[data-av-action=start]');
   for(const expected of [s.image,s.question,s.prayer,s.action]){click('[data-av-action=next]');assert(d.querySelector('.avReading').textContent.includes(expected),'Guidance belongs to '+s.id);}
   click('[data-av-action=next]');assert(d.querySelector('#avPanel').textContent.includes(s.balance));

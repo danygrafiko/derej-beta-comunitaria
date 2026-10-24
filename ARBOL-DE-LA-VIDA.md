@@ -13,7 +13,7 @@ Rama integrada de Dérej. Acceso desde el árbol simbólico junto al Pozo del pa
 
 ## Árbol en el patio
 
-Un árbol simbólico en maceta, realizado en SVG, permite entrar directamente desde el primer plano a la izquierda del Pozo. Sus diez señales reproducen la selección del estudio. El área de acceso no invade las cinco puertas ni el Pozo; el retorno conserva el foco y la posición de lectura. Se conserva la imagen existente del patio.
+Un olivo natural, con tronco nudoso y hojas pequeñas plateadas, está integrado en la imagen de fondo a la izquierda del Pozo. Un acceso circular con rama de olivo y rótulo, del mismo sistema visual que las puertas, abre el estudio. Se retiró el árbol ilustrado superpuesto. El área de acceso no invade las cinco puertas ni el Pozo; el retorno conserva el foco y la posición de lectura. La versión original del fondo se conserva para las demás secciones.
 
 ## Revisión editorial · 24 de octubre de 2026
 
@@ -34,6 +34,6 @@ Las preguntas, imágenes, plegarias y acciones son elaboraciones originales Dér
 
 ## Verificación
 
-`tests/arbol.test.cjs` comprueba las diez lecturas y sus guías completas: cada imagen, pregunta, plegaria y acción corresponde a la sefirá elegida. Verifica iluminación única y su correspondencia en el árbol del patio, ausencia de controles gráficos y conservación del estudio, notas y audio al volver. Incluye temporizador, pausas, recarga, escape de HTML, errores de almacenamiento y borrado.
+`tests/arbol.test.cjs` comprueba las diez lecturas y sus guías completas: cada imagen, pregunta, plegaria y acción corresponde a la sefirá elegida. Verifica iluminación única, acceso desde el icono del olivo del patio, ausencia de controles gráficos y conservación del estudio, notas y audio al volver. Incluye temporizador, pausas, recarga, escape de HTML, errores de almacenamiento y borrado.
 
 La revisión visual incluye escritorio y un viewport móvil de 390 píxeles (375 útiles), con comprobación de que el nuevo acceso no se superpone al Pozo ni a las puertas. Falta la prueba en un iPhone físico.

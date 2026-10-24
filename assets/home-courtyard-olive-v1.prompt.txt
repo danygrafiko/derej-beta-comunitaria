@@ -1,0 +1,8 @@
+Mode: built-in image_gen, precise-object-edit.
+Production asset: assets/home-courtyard-olive-v1.webp (941 × 1672, WebP quality 86).
+Original background preserved: assets/home-courtyard-v21.webp.
+Edit target for final pass: generated_images/exec-691a744c-a4ae-4af0-9ba7-ad6e67bb2ae3.png.
+Reference: original courtyard background.
+
+Final prompt:
+Use case: precise-object-edit. Image 1 is the edit target; image 2 is the ORIGINAL courtyard to restore areas behind the tree. Make ONE targeted correction: the olive tree in image 1 is much too big and blocks the lower-left portal. Shrink that olive tree to approximately HALF its current height and width, and move it DOWN into the foreground beside the well. Retain its beautiful photorealistic gnarled trunk and silvery narrow olive leaves and warm lighting. Strict final placement measured on this 941x1672 portrait: tree trunk BASE at approximately x=155, y=1565; tree crown TOP must be at approximately y=1250 (75 percent down the image), crown horizontal extent x=35 through x=280 ONLY. Thus the entire olive tree is about 315 pixels tall, fully contained in the BOTTOM LEFT QUARTER of the picture. It grows naturally from a small earth opening in the paving, no pot. Restore the entire lower-left arch and its blue night sky, chair and lanterns from original image 2 above the small tree. ALL FIVE PORTALS MUST REMAIN VISIBLE. Keep the well, central path, sunrise, stairs, lighting, camera framing, all original architectural positions and image dimensions unchanged. No extra trees. Do not zoom or crop. No text, labels, buttons, glowing dots or symbols. Only a small natural olive tree integrated into the lower-left foreground.

@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="midrash-es.css?v=27.2">
 <link rel="stylesheet" href="voces.css?v=2">
 <link rel="stylesheet" href="nombres.css?v=1">
-<link rel="stylesheet" href="arbol.css?v=3">
+<link rel="stylesheet" href="arbol.css?v=4">
 <link rel="stylesheet" href="moed-calendar.css?v=1">
 <style>
   .brandButton .derejWordmark{display:flex;flex-direction:column;align-items:flex-start;line-height:1}
@@ -35,7 +35,7 @@
 
   <section class="screen homeScreen active" data-screen="home" aria-labelledby="homeTitle">
     <div class="courtyard" role="group" aria-label="Patio de Dérej: cinco puertas, el Pozo y el Árbol de la Vida">
-      <img class="courtyardBg" src="assets/home-courtyard-v21.webp" alt="Patio de piedra con cinco portales, vegetación, luz cálida y un sendero central al amanecer">
+      <img class="courtyardBg" src="assets/home-courtyard-olive-v1.webp" alt="Patio de piedra con cinco portales, un olivo junto al Pozo y un sendero central al amanecer">
       <div class="courtyardShade" aria-hidden="true"></div>
       <div class="homeIntro">
         <div class="eyebrow">DÉREJ · EL CAMINO</div>
@@ -47,21 +47,9 @@
       <button class="portal portalCamino" data-route="camino" aria-label="Entrar a Camino"><span class="portalSigil">דרך</span><span class="portalLabel"><small>SENDERO · AMANECER</small><b>Camino</b><em>Entrar</em></span></button>
       <button class="portal portalRadio" data-route="radio" aria-label="Entrar a Radio"><span class="portalSigil">◔</span><span class="portalLabel"><small>NOCHE · ESCUCHA</small><b>Radio</b></span></button>
       <button class="portal portalPersonal" data-route="personal" aria-label="Entrar a Mi Camino"><span class="portalSigil">⌁</span><span class="portalLabel"><small>HUELLAS · BROTES</small><b>Mi Camino</b></span></button>
-      <button type="button" class="avPatioTree" data-arbol-open aria-label="Árbol de la Vida · Acercarme al recorrido de las sefirot">
-        <svg viewBox="0 0 300 350" aria-hidden="true" focusable="false">
-          <defs><linearGradient id="avBark" x1="0" x2="1"><stop stop-color="#392d1b"/><stop offset=".5" stop-color="#c6a36a"/><stop offset="1" stop-color="#58402a"/></linearGradient><radialGradient id="avCrown"><stop stop-color="#9b9b59"/><stop offset=".65" stop-color="#526143"/><stop offset="1" stop-color="#263c2c"/></radialGradient><linearGradient id="avStone" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#b69c74"/><stop offset="1" stop-color="#67563b"/></linearGradient></defs>
-          <ellipse cx="151" cy="321" rx="97" ry="16" fill="#131c13" opacity=".7"/>
-          <g fill="url(#avCrown)" stroke="#b4a770" stroke-width=".9"><ellipse cx="93" cy="99" rx="62" ry="47" transform="rotate(-22 93 99)"/><ellipse cx="197" cy="93" rx="68" ry="48" transform="rotate(18 197 93)"/><ellipse cx="147" cy="56" rx="66" ry="43"/><ellipse cx="62" cy="152" rx="43" ry="53" transform="rotate(-24 62 152)"/><ellipse cx="235" cy="148" rx="44" ry="54" transform="rotate(21 235 148)"/><ellipse cx="115" cy="165" rx="68" ry="55"/><ellipse cx="188" cy="168" rx="61" ry="57"/><ellipse cx="151" cy="119" rx="76" ry="62"/></g>
-          <g fill="none" stroke="url(#avBark)" stroke-linecap="round"><path stroke-width="17" d="M145 295 Q158 256 148 215 Q136 175 153 126 Q157 91 149 50"/><path stroke-width="10" d="M149 230 Q100 211 87 167 Q75 126 60 113 M150 210 Q197 193 219 159 Q235 134 238 101"/><path stroke-width="7" d="M149 178 Q113 145 92 91 M152 156 Q184 118 211 82 M153 123 Q121 105 115 66 M150 244 Q173 232 191 211"/><path stroke-width="3" d="M87 168 L54 157 M94 195 L62 188 M211 174 L247 171 M207 104 L232 76 M100 109 L71 78 M148 84 L171 57"/></g>
-          <g fill="#b9b582" opacity=".85"><ellipse cx="70" cy="88" rx="5" ry="13" transform="rotate(-45 70 88)"/><ellipse cx="119" cy="54" rx="5" ry="13" transform="rotate(33 119 54)"/><ellipse cx="174" cy="61" rx="5" ry="13" transform="rotate(45 174 61)"/><ellipse cx="235" cy="92" rx="5" ry="13" transform="rotate(-20 235 92)"/><ellipse cx="55" cy="152" rx="5" ry="13" transform="rotate(-60 55 152)"/><ellipse cx="244" cy="164" rx="5" ry="13" transform="rotate(55 244 164)"/><ellipse cx="92" cy="189" rx="5" ry="12" transform="rotate(-40 92 189)"/><ellipse cx="205" cy="196" rx="5" ry="12" transform="rotate(48 205 196)"/></g>
-          <path d="M95 285 L206 285 L194 319 Q150 334 107 319 Z" fill="url(#avStone)" stroke="#cfb98d" stroke-width="2"/>
-          <ellipse cx="150" cy="285" rx="57" ry="14" fill="#b69d73" stroke="#d5bf91" stroke-width="2"/><ellipse cx="150" cy="285" rx="45" ry="8" fill="#48442a"/>
-          <path d="M146 288 L153 260" stroke="url(#avBark)" stroke-width="13" stroke-linecap="round"/>
-          <g class="avPatioLights" fill="#d4c693" stroke="#493c22" stroke-width="1.5">
-            <circle data-av-patio-node="keter" cx="150" cy="36" r="5"/><circle data-av-patio-node="jojma" cx="212" cy="75" r="5"/><circle data-av-patio-node="bina" cx="87" cy="75" r="5"/><circle data-av-patio-node="jesed" cx="221" cy="125" r="5"/><circle data-av-patio-node="guevura" cx="76" cy="125" r="5"/><circle data-av-patio-node="tiferet" cx="150" cy="159" r="5"/><circle data-av-patio-node="netzaj" cx="209" cy="194" r="5"/><circle data-av-patio-node="hod" cx="91" cy="194" r="5"/><circle data-av-patio-node="iesod" cx="150" cy="229" r="5"/><circle data-av-patio-node="maljut" cx="150" cy="268" r="5"/>
-          </g>
-        </svg>
-        <span class="avPatioCaption"><b>Árbol de la Vida</b><small>ACERCARME</small></span>
+      <button type="button" class="portal portalArbol" data-arbol-open aria-label="Entrar al Árbol de la Vida · Olivo del patio">
+        <span class="portalSigil"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"><path d="M6 20c5-4 8-9 10-16M9 16c-5-1-5-5-5-5 4 0 6 2 5 5ZM12 12c-5-1-5-5-5-5 4 0 6 2 5 5ZM12 13c1-5 6-5 6-5 0 4-2 6-6 5ZM15 8c0-4 4-6 4-6 1 4 0 6-4 6Z"/></svg></span>
+        <span class="portalLabel"><small>VIDA · RAÍCES</small><b>Árbol de la Vida</b></span>
       </button>
       <button class="pozoHotspot" data-route="pozo" aria-label="Acercarse al Pozo y descubrir su interior"><span class="pozoWaterLight" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><span class="pozoRipple" aria-hidden="true"></span></button>
     </div>
@@ -243,7 +231,7 @@
 <script src="nombres-content.js?v=3"></script>
 <script src="nombres.js?v=1"></script>
 <script src="arbol-content.js?v=2"></script>
-<script src="arbol.js?v=3"></script>
+<script src="arbol.js?v=4"></script>
 <script src="connection-reminders.js?v=2"></script>
   
 </body>
