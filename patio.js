@@ -6,12 +6,29 @@
   var toggle = patio.querySelector('.patioExplore');
   var portals = Array.from(patio.querySelectorAll('.portal, .pozoLearn'));
   if (!toggle || !portals.length) return;
+  var screen = patio.closest('[data-screen]');
+  var inViewport = true;
+  var atmosphere = document.createElement('div');
+  atmosphere.className = 'patioAtmosphere';
+  atmosphere.setAttribute('aria-hidden', 'true');
+  atmosphere.innerHTML = '<span class="patioGlow patioGlowLeft"></span><span class="patioGlow patioGlowRight"></span><span class="patioGlow patioDawn"></span><span class="patioWater"><i></i><i></i><b></b><b></b></span>' + [false, true].map(function(second) { return '<span class="patioBirdFlight' + (second ? ' patioBirdFlightSecond' : '') + '"><svg viewBox="0 0 14 9" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M1 5 Q4 1 7 5 Q10 1 13 5"/></svg></span>'; }).join('');
+  patio.appendChild(atmosphere);
+  function updateAtmosphere() {
+    patio.classList.toggle('isContemplating', !exploring && !document.hidden && (!screen || !screen.hidden) && inViewport);
+  }
+  document.addEventListener('visibilitychange', updateAtmosphere);
+  if (screen) new MutationObserver(updateAtmosphere).observe(screen, {attributes:true, attributeFilter:['hidden', 'class']});
+  if (typeof IntersectionObserver === 'function') new IntersectionObserver(function(entries) {
+    inViewport = entries[0].isIntersecting;
+    updateAtmosphere();
+  }).observe(patio);
   var key = 'derej.patio.exploring.v1';
   var exploring = false;
   try { exploring = localStorage.getItem(key) === 'true'; } catch (_) {}
   function render() {
     portals.forEach(function (portal) { portal.hidden = !exploring; });
     patio.classList.toggle('isExploring', exploring);
+    updateAtmosphere();
     toggle.setAttribute('aria-expanded', String(exploring));
     toggle.replaceChildren(document.createTextNode(exploring ? 'Contemplar el patio ' : 'Explorar el patio '));
     var symbol = document.createElement('span');
