@@ -1,42 +1,39 @@
 # Árbol de la Vida · Cultivar el interior
 
-Rama integrada de Dérej: acceso desde el patio, Profundizar, el taller del Pozo y Nombres y presencia. Enlace directo: `/?estudio=arbol`, con selección opcional `&sefira=jesed`.
+Rama integrada de Dérej. Acceso desde el árbol simbólico junto al Pozo del patio, Profundizar, el taller del Pozo y Nombres y presencia. Enlace directo: `/?estudio=arbol`, con selección opcional `&sefira=jesed`.
 
-## Experiencia
+## Experiencia vigente
 
-- Diez sefirot navegables, con nombre hebreo, transliteración y significado.
-- Tres modos: Aprender, Contemplar, Llevar a la vida.
+- Vista plana fija de las diez sefirot, con nombre hebreo, transliteración y significado. Se ilumina la esfera elegida y se actualizan su pregunta y su enseñanza.
+- Sin controles de cámara, giro, acercamiento o movimiento ambiental. La interfaz actual utiliza SVG y CSS; no carga el módulo anterior de WebGL/Canvas.
+- Tres modos: Aprender, Contemplar y Llevar a la vida.
 - Cuatro recorridos editoriales: Dar y cuidar; Escuchar y comprender; Sostener y agradecer; De la intención al acto.
-- Guía escrita de 3, 5 u 8 minutos con cinco momentos. Pausa manual y al ocultar la página o abandonar la sección. Se puede avanzar y retroceder libremente.
-- Reflexión opcional guardada por decisión explícita sólo en el navegador. No se transmite ni sincroniza. Borrado individual y aviso de errores de almacenamiento.
+- Guía escrita de 3, 5 u 8 minutos con cinco momentos. Pausa manual y al ocultar la página o abandonar la sección.
+- Reflexión opcional guardada por decisión explícita sólo en este navegador. No se transmite ni sincroniza.
 
-## Criterio editorial
+## Árbol en el patio
 
-Se emplea el esquema con Kéter y siete sefirot inferiores. Dáat se explica aparte, sin agregar una undécima esfera al mismo recuento. Los nombres, significados y posiciones se apoyan en Gal Einai. El Tania 3 aporta el contexto jasídico de las facultades intelectuales y emocionales; la introducción de Jacobson al Ómer es un antecedente para trabajar cualidades relacionadas. Las prácticas de Dérej no se presentan como cuenta ritual del Ómer.
+Un árbol simbólico en maceta, realizado en SVG, permite entrar directamente desde el primer plano a la izquierda del Pozo. Sus diez señales reproducen la selección del estudio. El área de acceso no invade las cinco puertas ni el Pozo; el retorno conserva el foco y la posición de lectura. Se conserva la imagen existente del patio.
 
-Las síntesis tradicionales están separadas de las preguntas, imágenes, plegarias y acciones originales Dérej. Los colores y las líneas del gráfico son recursos pedagógicos. No se atribuyen correspondencias tradicionales a los recorridos ni se muestran niveles espirituales.
+## Revisión editorial · 24 de octubre de 2026
 
-Fuentes consultadas en español:
+Se revisaron las diez fichas completas: nombres y grafías hebreas, significados, síntesis tradicional, reflexión, pregunta, visualización, plegaria, acción, equilibrio y ejemplo. También la introducción, la explicación de Dáat, los cuatro recorridos y los cinco momentos de las guías.
 
-- https://galeinai.org/2022/09/30/las-diez-sefirot/
-- https://galeinai.org/2022/09/26/daat-conocimiento/
-- https://es.chabad.org/library/article_cdo/aid/693531/jewish/Captulo-3.htm
-- https://es.chabad.org/library/article_cdo/aid/672665/jewish/Introduccion.htm
+Se afinó la distinción entre el sentido tradicional y la aplicación de Dérej: orientar una intención no agota el significado de Kéter; el agradecimiento en Hod es una práctica editorial; la responsabilidad cotidiana en Maljut es una aplicación y no su traducción literal. Nétzaj lleva el rótulo breve «Victoria»; la perseverancia se explica en la lectura.
+
+Se mantienen diez sefirot en el esquema con Kéter. Dáat se explica aparte, sin agregar una undécima esfera. Los nombres y la disposición se apoyan en Gal Einai; el Tania 3 aporta el contexto jasídico de las facultades intelectuales y emocionales; la introducción de Jacobson al Ómer es un antecedente de trabajo con cualidades relacionadas. Las prácticas de Dérej no constituyen la cuenta ritual del Ómer.
+
+Las preguntas, imágenes, plegarias y acciones son elaboraciones originales Dérej. La visualización y la bitácora son opcionales. Las prácticas no miden un nivel espiritual ni exigen una emoción determinada.
+
+## Referencias revisadas en español
+
+- Gal Einai, Las diez sefirot: https://galeinai.org/2022/09/30/las-diez-sefirot/
+- Gal Einai, Dáat: https://galeinai.org/2022/09/26/daat-conocimiento/
+- Rabí Shneur Zalman de Liadí, Tania 3: https://es.chabad.org/library/article_cdo/aid/693531/jewish/Captulo-3.htm
+- Simon Jacobson, Introducción a la guía espiritual del Ómer: https://es.chabad.org/library/article_cdo/aid/672665/jewish/Introduccion.htm
 
 ## Verificación
 
-`tests/arbol.test.cjs` recorre las diez enseñanzas, la guía completa con reloj controlado, pausas y regreso, notas sin guardado implícito, recarga, escape de HTML, fallo de almacenamiento, borrado y navegación conservando el estudio y el audio. Las pruebas de Nombres y Voces también se ejecutaron con éxito.
+`tests/arbol.test.cjs` comprueba las diez lecturas y sus guías completas: cada imagen, pregunta, plegaria y acción corresponde a la sefirá elegida. Verifica iluminación única y su correspondencia en el árbol del patio, ausencia de controles gráficos y conservación del estudio, notas y audio al volver. Incluye temporizador, pausas, recarga, escape de HTML, errores de almacenamiento y borrado.
 
-La interfaz se comprobó en navegador de escritorio y dentro de un viewport móvil de 390 píxeles (375 útiles). Se verificó que no hay desbordamiento horizontal y que Maljut permanece dentro de la escena. Falta la prueba en un iPhone físico.
-
-Esta primera versión tiene guía escrita. Las grabaciones de voz y la música específica pueden desarrollarse después con curaduría propia.
-
-## Escena inmersiva
-
-Se reemplazó el mapa inicial por una escena de coordenadas tridimensionales: esferas con iluminación, profundidad entre ejes, senderos curvos, partículas suaves y órbitas de base. El giro está limitado para mantener la orientación de estudio. Al elegir una sefirá, la escena conserva la cámara y muestra su pregunta; la enseñanza y la meditación se abren por decisión del usuario.
-
-WebGL dibuja geometría esférica cuando está disponible. Un segundo renderizador Canvas 2D proyecta las mismas coordenadas 3D y conserva giro, acercamiento y selección cuando WebGL no está disponible. La vista plana permanece accesible. No se descargan bibliotecas, texturas ni servicios nuevos.
-
-Los controles incluyen giro, acercar/alejar, centrar, Quietud y Vista plana. Un gesto horizontal gira; el desplazamiento vertical y el zoom nativo del navegador siguen disponibles. Quietud se activa al comenzar una práctica y respeta la preferencia de movimiento reducido. La animación se detiene cuando la escena sale de la pantalla, la pestaña se oculta o se sale de esta rama.
-
-Se probaron la proyección en cinco anchos, el renderizador Canvas, el giro, la separación entre arrastre y toque, el cambio entre vistas, el reuso del contexto y la limpieza de recursos. En este navegador de revisión WebGL no está disponible; la comprobación visual utilizó el renderizador alternativo con proyección 3D. La ruta GPU queda pendiente de una prueba en hardware real.
+La revisión visual incluye escritorio y un viewport móvil de 390 píxeles (375 útiles), con comprobación de que el nuevo acceso no se superpone al Pozo ni a las puertas. Falta la prueba en un iPhone físico.
