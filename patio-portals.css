@@ -65,3 +65,18 @@
 .bibliotecaScreen button:focus-visible{outline:3px solid #88723e;outline-offset:4px}
 .bibliotecaClosing{text-align:center;color:#655a40;font:italic 17px/1.7 Georgia,serif;margin:32px 12px 0}
 @media(max-width:699px){.courtyard .portalBiblioteca{top:70%;min-height:85px}.courtyard .portalBiblioteca .portalLabel b{font-size:19px}.bibliotecaScreen .npEntry,.bibliotecaScreen .vocHomeEntry{padding:21px}}
+
+/* Biblioteca lateral; el agua tiene su propia entrada a Aprender. */
+.courtyard .portalBiblioteca{left:1%;right:auto;top:70%;width:29%;height:11%}
+.courtyard .pozoLearn{top:82%;left:50%;width:32%;height:auto;min-height:100px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:0;transform:translate(-50%,-28%);border-radius:14px;isolation:isolate;text-shadow:0 2px 5px #000}
+.courtyard .pozoLearn .portalSigil{width:46px;height:46px;flex-basis:46px;margin-bottom:6px}
+.courtyard .pozoLearn .portalSigil svg{width:28px;height:28px}
+.courtyard .pozoLearn .portalLabel{padding:5px 2px 8px}
+.courtyard .pozoLearn .portalLabel b{font-size:21px;min-height:0}
+.courtyard .pozoLearn:focus-visible{outline:2px solid #ffe4a9;outline-offset:4px;background:transparent}
+.courtyard .pozoLearn:hover .portalSigil{border-color:#fff0c9;box-shadow:0 0 0 4px #e8c88720,0 0 18px #f6cc6a38}
+@media(max-width:699px){.courtyard .portalBiblioteca{top:69%;left:1%;width:29%}.courtyard .pozoLearn .portalLabel b{font-size:20px}}
+
+/* Rincón de lectura anclado al banco con libros junto al olivo. */
+.courtyard .portalBiblioteca{top:66%;left:auto;right:1%;width:29%;height:11%;min-height:85px}
+@media(max-width:699px){.courtyard .portalBiblioteca{top:66%;left:auto;right:1%;width:29%}}
