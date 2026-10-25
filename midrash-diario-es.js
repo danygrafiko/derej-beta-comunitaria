@@ -9,7 +9,7 @@ window.DEREJ_MIDRASH_DIARIO_ES={
       "label": "Génesis 12:1"
     },
     "source": "Midrash Rabá sobre Génesis 39:1 · enseñanza del rabino Isaac",
-    "text": "Un viajero ve un edificio encendido y se pregunta si puede carecer de quien lo cuide. Su dueño se manifiesta y le hace saber que es el propietario. El rabino Isaac compara esa pregunta con la búsqueda de Abraham: también él se interroga por quien gobierna el mundo, y Dios se revela ante él.\n\nEl Midrash presenta esta comparación al comentar el llamado a salir de su tierra. Antes del primer paso del viaje, nos hace atender a la pregunta de quien comienza a buscar.",
+    "text": "Un viajero ve un edificio encendido y se pregunta si puede carecer de quien lo cuide. Su dueño se manifiesta y le hace saber que es el propietario. El rabino Isaac compara esa pregunta con la búsqueda de Abraham: también él se interroga por quien gobierna el mundo, y el Creador se revela ante él.\n\nEl Midrash presenta esta comparación al comentar el llamado a salir de su tierra. Antes del primer paso del viaje, nos hace atender a la pregunta de quien comienza a buscar.",
     "connection": "El versículo invita a Abram a partir. Esta lectura permite detenernos también en la búsqueda que precede al movimiento. La imagen del edificio encendido admite lecturas de iluminación o incendio; en Dérej dejamos espacio tanto al asombro como a las preguntas difíciles.",
     "questions": [
       "¿Qué añade la pregunta del viajero a nuestra lectura del llamado a Abram?",
@@ -89,10 +89,10 @@ window.DEREJ_MIDRASH_DIARIO_ES={
       "label": "Génesis 16:13"
     },
     "source": "Midrash Rabá sobre Génesis 45:10 · enseñanza del rabino Aivu",
-    "text": "Agar da un nombre a Dios después del encuentro en el desierto. Al comentar sus palabras, el rabino Aivu destaca que Dios ve la aflicción de quien está afligido.\n\nEn este pasaje de la discusión, la atención recae en el sufrimiento de Agar y en que ese sufrimiento es visto. La mujer que ha quedado fuera de la casa no queda fuera de la mirada divina.",
+    "text": "Agar da un nombre al Creador después del encuentro en el desierto. Al comentar sus palabras, el rabino Aivu destaca que el Creador ve la aflicción de quien está afligido.\n\nEn este pasaje de la discusión, la atención recae en el sufrimiento de Agar y en que ese sufrimiento es visto. La mujer que ha quedado fuera de la casa no queda fuera de la mirada divina.",
     "connection": "La jornada invita a ver a quien queda fuera. La enseñanza elegida parte del mismo versículo central y nos ayuda a escuchar a Agar como persona. La aplicación de Dérej consiste en atender a la necesidad expresada y al cuidado concreto de quien sufre; no convertimos el maltrato del relato en una conducta que deba imitarse.",
     "questions": [
-      "¿Qué resalta el rabino Aivu en el nombre que Agar da a Dios?",
+      "¿Qué resalta el rabino Aivu en el nombre que Agar da al Creador?",
       "¿A quién necesito escuchar con más atención para reconocer una dificultad que he pasado por alto?"
     ]
   },
@@ -105,7 +105,7 @@ window.DEREJ_MIDRASH_DIARIO_ES={
       "label": "Génesis 17:18–19"
     },
     "source": "Midrash Rabá sobre Génesis 47:4 · enseñanza del rabino Yudán en nombre del rabino Judá, hijo de Simón",
-    "text": "Ante el anuncio de un hijo de Sara, Abraham expresa su deseo de que Ismael viva ante Dios. El Midrash explica su respuesta mediante una comparación. Un rey sostiene a un amigo y le anuncia que quiere duplicar lo que le entrega. El amigo responde con cautela: antes que recibir algo mayor, desea que no le sea retirado lo que ya tiene.\n\nLa comparación ilumina la preocupación de Abraham por Ismael en medio del anuncio de Isaac.",
+    "text": "Ante el anuncio de un hijo de Sara, Abraham expresa su deseo de que Ismael viva ante el Creador. El Midrash explica su respuesta mediante una comparación. Un rey sostiene a un amigo y le anuncia que quiere duplicar lo que le entrega. El amigo responde con cautela: antes que recibir algo mayor, desea que no le sea retirado lo que ya tiene.\n\nLa comparación ilumina la preocupación de Abraham por Ismael en medio del anuncio de Isaac.",
     "connection": "El estudio de hoy presenta a Isaac con un nombre y una promesa propios. El Midrash permite leer esa novedad junto con la preocupación por el hijo que ya estaba. Nuestra reflexión pregunta cómo recibir un cambio y conservar la atención hacia las personas y responsabilidades presentes.",
     "questions": [
       "¿Qué permite comprender la comparación del rey y su amigo?",
@@ -121,7 +121,7 @@ window.DEREJ_MIDRASH_DIARIO_ES={
       "label": "Génesis 2:15"
     },
     "source": "Midrash Rabá sobre Eclesiastés 7,13 · en algunas ediciones 7,13,1.",
-    "text": "Cuando Dios creó al primer ser humano, lo llevó a contemplar los árboles del jardín de Edén. Le mostró la belleza de sus obras y le hizo saber que las había creado para él.\n\nJunto con esa presentación, le dirigió una advertencia: debía prestar atención para no estropear ni destruir el mundo recibido. Si lo arruinaba, no habría otro que lo reparara después de él. El pasaje une así la contemplación de las obras de Dios con una exigencia de cuidado dirigida a quien acaba de recibirlas.",
+    "text": "Cuando el Creador creó al primer ser humano, lo llevó a contemplar los árboles del jardín de Edén. Le mostró la belleza de sus obras y le hizo saber que las había creado para él.\n\nJunto con esa presentación, le dirigió una advertencia: debía prestar atención para no estropear ni destruir el mundo recibido. Si lo arruinaba, no habría otro que lo reparara después de él. El pasaje une así la contemplación de las obras del Creador con una exigencia de cuidado dirigida a quien acaba de recibirlas.",
     "connection": "El versículo sitúa al ser humano en el jardín para trabajarlo y cuidarlo. Este Midrash sobre Eclesiastés ofrece una lectura complementaria de ese cuidado. Nuestra aplicación vuelve al lugar concreto que cada persona puede atender.",
     "questions": [
       "¿Qué bien recibido trato como si fuera inagotable o reemplazable?",
@@ -137,7 +137,7 @@ window.DEREJ_MIDRASH_DIARIO_ES={
       "label": "Génesis 5:1"
     },
     "source": "Midrash Rabá sobre Génesis 24,7 · Ben Azai, el rabino Akiva y el rabino Tanjumá.",
-    "text": "Ben Azai destaca el versículo que presenta la descendencia de Adán y recuerda su creación a semejanza de Dios. Lo considera un principio central de la Torá. El rabino Akiva señala, a su vez, el mandato de amar al prójimo como a uno mismo.\n\nLa enseñanza advierte que haber sido humillado no da derecho a humillar a otro; haber recibido una maldición tampoco justifica maldecir al prójimo. El rabino Tanjumá añade que debemos reconocer a quién despreciamos cuando degradamos a una persona: a alguien que ha sido hecho a semejanza de Dios.",
+    "text": "Ben Azai destaca el versículo que presenta la descendencia de Adán y recuerda su creación a semejanza del Creador. Lo considera un principio central de la Torá. El rabino Akiva señala, a su vez, el mandato de amar al prójimo como a uno mismo.\n\nLa enseñanza advierte que haber sido humillado no da derecho a humillar a otro; haber recibido una maldición tampoco justifica maldecir al prójimo. El rabino Tanjumá añade que debemos reconocer a quién despreciamos cuando degradamos a una persona: a alguien que ha sido hecho a semejanza del Creador.",
     "connection": "La jornada recorre una historia de nombres y generaciones. El Midrash comenta el mismo versículo central y une la semejanza divina con el trato al prójimo. En Dérej nos preguntamos cómo recordar esa dignidad en una conversación concreta.",
     "questions": [
       "¿Con quién cambia mi manera de hablar cuando estoy cansado o molesto?",
@@ -153,8 +153,8 @@ window.DEREJ_MIDRASH_DIARIO_ES={
       "label": "Éxodo 3:1"
     },
     "source": "Midrash Rabá sobre Éxodo 2,2 · relato sobre Moisés como pastor.",
-    "text": "Mientras Moisés cuidaba el rebaño de su suegro Jetró en el desierto, un cabrito se alejó. Moisés corrió detrás de él hasta que lo encontró junto a un lugar con agua. El animal se había detenido a beber.\n\nAl alcanzarlo, Moisés comprendió que había corrido porque tenía sed. Reconoció también su cansancio, lo levantó y lo llevó sobre sus hombros. El relato presenta entonces la respuesta de Dios: la compasión que Moisés había mostrado al cuidar un rebaño ajeno revelaba su capacidad para pastorear al pueblo de Israel. Su manera de atender al pequeño animal quedaba vinculada con su futura responsabilidad.",
-    "connection": "Antes de la zarza, Moisés aparece cuidando un rebaño. El Midrash amplía esa escena de la lectura diaria. Su cuidado del animal puede acompañar nuestra reflexión sobre el Dios que ve la aflicción y sobre nuestra propia atención a quien necesita ayuda.",
+    "text": "Mientras Moisés cuidaba el rebaño de su suegro Jetró en el desierto, un cabrito se alejó. Moisés corrió detrás de él hasta que lo encontró junto a un lugar con agua. El animal se había detenido a beber.\n\nAl alcanzarlo, Moisés comprendió que había corrido porque tenía sed. Reconoció también su cansancio, lo levantó y lo llevó sobre sus hombros. El relato presenta entonces la respuesta del Creador: la compasión que Moisés había mostrado al cuidar un rebaño ajeno revelaba su capacidad para pastorear al pueblo de Israel. Su manera de atender al pequeño animal quedaba vinculada con su futura responsabilidad.",
+    "connection": "Antes de la zarza, Moisés aparece cuidando un rebaño. El Midrash amplía esa escena de la lectura diaria. Su cuidado del animal puede acompañar nuestra reflexión sobre el Creador que ve la aflicción y sobre nuestra propia atención a quien necesita ayuda.",
     "questions": [
       "¿Qué conducta ajena interpreté demasiado rápido esta semana?",
       "¿Cómo podría preguntar qué ocurre sin invadir ni dar consejos inmediatos?"
@@ -223,7 +223,7 @@ window.DEREJ_MIDRASH_DIARIO_ES={
       "label": "Génesis 19:27"
     },
     "source": "Talmud de Babilonia · Berajot 26b · enseñanza transmitida de acuerdo con Rabí Iosei, hijo de Janiná.",
-    "text": "Una enseñanza del Talmud vincula la oración de la mañana con Abraham. Lee su regreso temprano al lugar donde había estado ante Dios como una referencia a la oración. El mismo pasaje conserva otra explicación de los horarios de oración, relacionada con las ofrendas diarias.",
+    "text": "Una enseñanza del Talmud vincula la oración de la mañana con Abraham. Lee su regreso temprano al lugar donde había estado ante el Creador como una referencia a la oración. El mismo pasaje conserva otra explicación de los horarios de oración, relacionada con las ofrendas diarias.",
     "connection": "La fuente describe una tradición de la oración judía. Nuestra propuesta es una pausa personal y libre al comenzar el día. La ubicamos junto a la mirada de Abraham sobre las ciudades destruidas, sin afirmar que la oración borre una pérdida ni obligar a adoptar un rito.",
     "questions": [
       "¿Qué relación establece esta enseñanza entre Génesis 19:27 y la oración matinal?",

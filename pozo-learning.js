@@ -142,7 +142,7 @@
     'genesis-6-14':'Nóaj recibe una instrucción concreta: construir un arca. En el encuentro TEVA, Dérej invita a pensar qué necesita protección y qué límites ayudan a cuidar la vida.',
     'genesis-8-11':'La paloma regresa con una hoja de olivo. Nóaj reconoce una señal de que las aguas han disminuido. En la práctica de lectura distinguimos la señal narrada de la esperanza que puede despertar en nosotros.',
     'genesis-9-12':'El relato presenta el arco en las nubes como señal del pacto con los seres vivientes. El encuentro BRIT de Dérej abre una conversación sobre la responsabilidad y los vínculos que queremos sostener.',
-    'genesis-8-1':'El relato dice que Dios recuerda a Nóaj y hace pasar un viento sobre la tierra. Las aguas disminuyen. Al estudiar, observamos esa secuencia antes de conversar sobre los nuevos comienzos.'
+    'genesis-8-1':'El relato dice que el Creador recuerda a Nóaj y hace pasar un viento sobre la tierra. Las aguas disminuyen. Al estudiar, observamos esa secuencia antes de conversar sobre los nuevos comienzos.'
    };
    body=`<article class="pzReadingBox"><span class="pzEyebrow">${n.ref} · RESUMEN DE ESTUDIO DÉREJ</span><h3>${n.q}</h3><p><b>${n.a[0]}.</b> ${n.why}</p><p>${context[materialId]}</p><p class="pzCaption">Este texto es un resumen didáctico propio, no una cita literal del pasaje ni de un comentarista.</p></article>`;
   }else{title='Material de estudio';body='<p>Elige una ficha de nuestro material para continuar.</p>'}

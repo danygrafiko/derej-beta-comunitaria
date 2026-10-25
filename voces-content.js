@@ -35,7 +35,7 @@ window.DEREJ_VOCES_CONTENT={
         ]
       ],
       "source": "Mishné Torá · Hiljot Deot 1:6–7",
-      "teaching": "El pasaje relaciona caminar en los caminos de Dios con cualidades como la misericordia. Explica también que las conductas se afianzan al practicarlas de manera reiterada.",
+      "teaching": "El pasaje relaciona caminar en los caminos del Creador con cualidades como la misericordia. Explica también que las conductas se afianzan al practicarlas de manera reiterada.",
       "reflection": "Podemos observar una respuesta que repetimos cada día y preguntarnos qué manera de tratar a otros estamos cultivando. La elección de esta situación cotidiana es una propuesta de Dérej.",
       "ask": "¿Qué acción repetida está formando mi manera de relacionarme?",
       "notes": "Biografía: Stanford Encyclopedia of Philosophy, «Maimonides». Pasaje: Mechon Mamre, Hiljot Deot 1, numeración tradicional [6] y [7].",
@@ -192,12 +192,12 @@ window.DEREJ_VOCES_CONTENT={
       "date": "1772–1810",
       "place": "Medzhybizh · Breslov · Uman",
       "context": "Jasidut de Breslov",
-      "hook": "Encontrar palabras propias para hablar con Dios.",
-      "question": "¿Cómo hablar con Dios con palabras propias?",
+      "hook": "Encontrar palabras propias para hablar con el Creador.",
+      "question": "¿Cómo hablar con el Creador con palabras propias?",
       "life": [
         "Rabí Najmán fue un maestro jasídico y fundador de la tradición de Breslov. Enseñó mediante discursos y relatos. Vivió en localidades situadas en territorios que hoy pertenecen a Ucrania.",
         "Conocer una enseñanza suya implica atender también a su transmisión. Su discípulo Natán desempeñó una labor decisiva en el registro y la publicación de sus enseñanzas.",
-        "Para este recorrido elegimos la hitbodedut: una práctica de conversación con Dios. Leeremos qué describe el pasaje antes de ofrecer una adaptación para comenzar."
+        "Para este recorrido elegimos la hitbodedut: una práctica de conversación con el Creador. Leeremos qué describe el pasaje antes de ofrecer una adaptación para comenzar."
       ],
       "works": [
         [
@@ -206,7 +206,7 @@ window.DEREJ_VOCES_CONTENT={
         ]
       ],
       "source": "Likutei Moharán · II:25",
-      "teaching": "La práctica descrita invita a dedicar tiempo a hablar con Dios en la lengua habitual. El uso de palabras propias forma parte del sentido de esta enseñanza.",
+      "teaching": "La práctica descrita invita a dedicar tiempo a hablar con el Creador en la lengua habitual. El uso de palabras propias forma parte del sentido de esta enseñanza.",
       "reflection": "Dérej puede ofrecer un comienzo breve para quien quiera probarlo. Esa duración será una adaptación nuestra: la fuente describe una dedicación mayor. La experiencia personal puede permanecer privada.",
       "ask": "¿Qué podría expresar hoy con sinceridad ante el Creador?",
       "notes": "Biografía y transmisión: Breslov Research Institute, «Breslov FAQ». Pasaje: Likutei Moharán II:25, localizado en la explicación de Chaim Kramer, «Hitbodedut: When and Where?».",
@@ -215,7 +215,7 @@ window.DEREJ_VOCES_CONTENT={
         "who": "Rabí Najmán de Breslov fue un maestro jasídico de finales del siglo XVIII y comienzos del XIX. Enseñó mediante discursos y relatos. Su discípulo Natán desempeñó una labor decisiva en la conservación y difusión de sus enseñanzas. Leerlas supone atender también a esa transmisión.",
         "work": "Likutei Moharán reúne enseñanzas cuya referencia debe indicar parte y lección. Para esta entrada elegimos II:25. Otras lecciones abordan asuntos diferentes y necesitan su propio contexto.",
         "passage": "",
-        "summary": "El pasaje propone dedicar tiempo a una conversación personal con Dios usando la lengua habitual. La explicación consultada del Breslov Research Institute localiza esa enseñanza en II:25 y recoge una dedicación de una hora o más. Nuestra propuesta de comenzar brevemente es una adaptación de Dérej. [D5]",
+        "summary": "El pasaje propone dedicar tiempo a una conversación personal con el Creador usando la lengua habitual. La explicación consultada del Breslov Research Institute localiza esa enseñanza en II:25 y recoge una dedicación de una hora o más. Nuestra propuesta de comenzar brevemente es una adaptación de Dérej. [D5]",
         "reflection": [
           "Después de estudiar, puede quedar algo que todavía no sabemos decir con claridad. Podemos empezar por nombrar lo que comprendimos, lo que nos cuesta y lo que deseamos hacer. No es necesario mostrar esas palabras al grupo ni convertirlas en un registro.",
           "Un comienzo posible sería hablar de una situación concreta del día. Cada persona podrá encontrar sus palabras; no ofrecemos una respuesta modelo para repetir. La sinceridad de la experiencia no se mide por la extensión, la elocuencia o la emoción visible.",
@@ -363,7 +363,7 @@ window.DEREJ_VOCES_CONTENT={
         },
         {
           "title": "Cuidar el cuerpo que nos acompaña",
-          "summary": "En una lectura de Éxodo 23:5, el Baal Shem Tov enseña a trabajar con el cuerpo y fortalecerlo para el servicio a Dios.",
+          "summary": "En una lectura de Éxodo 23:5, el Baal Shem Tov enseña a trabajar con el cuerpo y fortalecerlo para el servicio al Creador.",
           "reflection": [
             "A veces organizamos la vida espiritual como si el cansancio fuera una falta de voluntad. Prometemos estudiar cuando ya no podemos sostener la atención y luego nos reprochamos haber fallado. Conviene revisar también las condiciones de esa promesa.",
             "En Dérej podemos buscar un momento y una postura que permitan estar presentes. Reconocer un límite ayuda a elegir una práctica posible. Descansar, alimentarse y distribuir las tareas forman parte de la responsabilidad con la vida que hemos recibido. El esfuerzo espiritual puede crecer con paciencia, sin convertir el agotamiento en medida de entrega."
@@ -389,7 +389,7 @@ window.DEREJ_VOCES_CONTENT={
         },
         {
           "title": "Aprender de lo cotidiano",
-          "summary": "Al Baal Shem Tov se le atribuye la invitación a aprender para el servicio a Dios de lo que vemos, oímos y experimentamos.",
+          "summary": "Al Baal Shem Tov se le atribuye la invitación a aprender para el servicio al Creador de lo que vemos, oímos y experimentamos.",
           "reflection": [
             "Una espera puede mostrar nuestra impaciencia. Una conversación interrumpida puede hacernos notar que escuchábamos sólo hasta encontrar ocasión de responder. La vida cotidiana ofrece situaciones en las que reconocer nuestra conducta con bastante precisión.",
             "En Dérej podemos recoger esas ocasiones sin apresurarnos a descifrar mensajes ocultos. No conocemos por qué sucede cada acontecimiento ni nos corresponde explicar desde fuera el sufrimiento de otro. Sí podemos preguntarnos qué respuesta está en nuestras manos: pedir disculpas, corregir una distracción o acompañar a alguien. El aprendizaje se vuelve concreto cuando produce una acción que podemos realizar."
@@ -402,7 +402,7 @@ window.DEREJ_VOCES_CONTENT={
         },
         {
           "title": "Dar lugar a la alegría",
-          "summary": "La tradición jasídica vinculada al Baal Shem Tov extiende la alegría del servicio a Dios a las actividades de la vida diaria.",
+          "summary": "La tradición jasídica vinculada al Baal Shem Tov extiende la alegría del servicio al Creador a las actividades de la vida diaria.",
           "reflection": [
             "Podemos acostumbrarnos a revisar el día únicamente desde sus pendientes. Entonces incluso una acción buena queda eclipsada por todo lo que falta. Reconocer algo valioso que sí ocurrió puede ayudarnos a recibir el día con mayor gratitud.",
             "En Dérej queremos dar lugar a esa alegría sin imponer un estado de ánimo. Alguien puede estar agradecido y, al mismo tiempo, atravesar una pena. En una reunión conviene permitir ambas cosas. Una canción compartida, una comida o una conversación tranquila pueden ofrecer compañía; cada persona debe tener espacio para vivir ese encuentro con sinceridad."
@@ -415,7 +415,7 @@ window.DEREJ_VOCES_CONTENT={
         },
         {
           "title": "Estudiar con sencillez",
-          "summary": "La colección consultada atribuye al Baal Shem Tov un aprecio especial por la fe sencilla y el apego a Dios mediante el estudio y la plegaria.",
+          "summary": "La colección consultada atribuye al Baal Shem Tov un aprecio especial por la fe sencilla y el apego al Creador mediante el estudio y la plegaria.",
           "reflection": [
             "Cuando empezamos a estudiar, es fácil comparar nuestro vocabulario con el de quienes llevan años aprendiendo. Podemos callar una pregunta por vergüenza o repetir una explicación que todavía no comprendemos. La sencillez permite decir con honestidad dónde estamos.",
             "En Dérej, una lectura profunda debería dejar espacio para preguntar y comprobar. Una palabra hebrea necesita explicación; una afirmación sobre el maestro necesita fuente. Podemos valorar el conocimiento y recibir con respeto a quien apenas comienza. La persona que pregunta algo elemental puede ayudar a toda la comunidad a descubrir una dificultad que había pasado por alto."
@@ -472,7 +472,7 @@ window.DEREJ_VOCES_CONTENT={
         ],
         [
           "Treinta y seis aforismos del Baal Shem Tov",
-          "Jabad en Español. Puntos 17 a 20, sobre sencillez y apego a Dios. Recopilación de difusión, no texto autógrafo.",
+          "Jabad en Español. Puntos 17 a 20, sobre sencillez y apego al Creador. Recopilación de difusión, no texto autógrafo.",
           "https://es.chabad.org/library/article_cdo/aid/2352130/jewish/Treinta-y-seis-aforismos-del-Baal-Shem-Tov.htm",
           "es"
         ]
