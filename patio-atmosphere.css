@@ -1,4 +1,4 @@
-/* Atmósfera del patio: luz, agua y aves lejanas, sin elementos de interfaz. */
+/* Atmósfera del patio: luz y agua, sin elementos de interfaz. */
 .patioAtmosphere{position:absolute;inset:0;z-index:2;overflow:hidden;pointer-events:none;opacity:0;transition:opacity 1.8s ease;contain:layout paint}
 .courtyard.isContemplating .patioAtmosphere{opacity:1}
 .patioAtmosphere *{animation-play-state:paused!important}
@@ -14,19 +14,6 @@
 .patioWater i:nth-child(2){background:repeating-linear-gradient(183deg,transparent 0 13px,#fbe6b580 14px,transparent 16px 23px);animation-duration:11s;animation-delay:-5s;opacity:.35}
 .patioWater b{position:absolute;left:46%;top:22%;width:11%;height:55%;background:linear-gradient(90deg,transparent,#ffe4a37a,transparent);filter:blur(3px);animation:patioWaterGlow 6s ease-in-out infinite alternate}
 .patioWater b:last-child{left:62%;width:6%;animation-delay:-3s}
-/* Siluetas lejanas con alas articuladas, dentro del cielo del portal. */
-.patioBirdFlight{position:absolute;inset:0;opacity:0;animation:patioDistantFlight 28s linear infinite;transform:translate(40%,50%)}
-.patioBirdFlight svg{display:block;width:clamp(7px,2vw,12px);height:auto;overflow:visible;fill:#30352c;opacity:.72}
-.birdWing{transform-box:view-box;transform-origin:40px 23px;animation:patioFeather 1.4s ease-in-out infinite}
-.birdWingFar{animation-delay:-.1s;opacity:.75}
-.patioBirdFlight1{animation-duration:34s;animation-delay:1.6s}
-.patioBirdFlight1 svg{width:clamp(5px,1.4vw,9px);opacity:.52}
-.patioBirdFlight2{animation-duration:39s;animation-delay:3.1s}
-.patioBirdFlight2 svg{width:clamp(4px,1.1vw,7px);opacity:.4}
-.patioBirdFlight1 .birdWing{animation-duration:1.15s}
-.patioBirdFlight2 .birdWing{animation-duration:1.6s}
-@keyframes patioDistantFlight{0%{opacity:0;transform:translate(40%,50%) rotate(-5deg) scale(.85)}5%{opacity:1}19%{transform:translate(48%,48.5%) rotate(2deg) scale(.9)}35%{opacity:1;transform:translate(57%,49%) rotate(7deg) scale(.7)}42%,100%{opacity:0;transform:translate(62%,48%) rotate(0) scale(.55)}}
-@keyframes patioFeather{0%,100%{transform:scaleY(.85)}25%{transform:scaleY(.15)}48%,80%{transform:scaleY(1)}}
 @keyframes patioEmber{0%,100%{opacity:.4;transform:scale(.97)}23%{opacity:.62}61%{opacity:.48}82%{opacity:.7;transform:scale(1.03)}}
 @keyframes patioDaylight{from{opacity:.45;transform:translateY(0)}to{opacity:.85;transform:translateY(-.5%)}}
 @keyframes patioAir{from{opacity:.45;transform:translateX(-2%)}to{opacity:.85;transform:translateX(3%)}}
