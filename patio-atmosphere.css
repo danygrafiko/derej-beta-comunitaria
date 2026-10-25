@@ -1,24 +1,35 @@
-/* Vida discreta del patio, sólo durante la contemplación. */
-.patioAtmosphere{position:absolute;inset:0;z-index:2;overflow:hidden;pointer-events:none;opacity:0;transition:opacity .9s ease;contain:layout paint}
+/* Atmósfera del patio: luz, agua y aves lejanas, sin elementos de interfaz. */
+.patioAtmosphere{position:absolute;inset:0;z-index:2;overflow:hidden;pointer-events:none;opacity:0;transition:opacity 1.8s ease;contain:layout paint}
 .courtyard.isContemplating .patioAtmosphere{opacity:1}
 .patioAtmosphere *{animation-play-state:paused!important}
 .courtyard.isContemplating .patioAtmosphere *{animation-play-state:running!important}
-.patioGlow{position:absolute;border-radius:50%;background:radial-gradient(ellipse,#ffd286c9, #ffc36a66 35%,transparent 70%);opacity:.25;animation:patioWarmth 7s ease-in-out infinite alternate}
-.patioGlowLeft{left:9%;top:31%;width:15%;height:9%}
-.patioGlowRight{left:71%;top:35%;width:15%;height:9%;animation-delay:-3s}
-.patioDawn{left:39%;top:49%;width:24%;height:19%;background:radial-gradient(ellipse,#ffdf9d65,transparent 68%);animation-duration:13s}
-.patioWater{position:absolute;left:35%;top:80.5%;width:30%;height:3.5%;border-radius:50%;overflow:hidden;background:radial-gradient(ellipse,#e3c77d48,transparent 70%)}
-.patioWater i{position:absolute;inset:15% 18%;border:1.5px solid #fff1c9;border-radius:50%;opacity:0;animation:patioWaterRing 5s ease-out infinite}
-.patioWater i:nth-child(2){animation-delay:2.5s}
-.patioWater b{position:absolute;left:40%;top:40%;width:6px;height:3px;background:#fff0c9;border-radius:50%;box-shadow:0 0 5px #f5dca1;animation:patioReflection 5s ease-in-out infinite;opacity:0}
-.patioWater b:last-child{left:67%;top:62%;animation-delay:-2.5s}
-.patioBirdFlight{position:absolute;inset:0;opacity:0;animation:patioBirdPass 18s linear infinite;transform:translate(39%,51%)}
-.patioBirdFlight svg{display:block;width:clamp(15px,4.5vw,23px);height:15px;color:#15221bf2;filter:drop-shadow(0 1px 1px #e3ca9277);animation:patioWings 1.3s ease-in-out infinite alternate;transform-origin:50% 60%}
-.patioBirdFlightSecond{animation-duration:24s;animation-delay:3s}
-.patioBirdFlightSecond svg{width:16px;opacity:.9}
-@keyframes patioWarmth{from{opacity:.4;transform:scale(.94)}to{opacity:.85;transform:scale(1.08)}}
-@keyframes patioWaterRing{0%{opacity:0;transform:scale(.35)}18%{opacity:.7}85%,100%{opacity:0;transform:scale(1.35)}}
-@keyframes patioReflection{0%,35%,75%,100%{opacity:0;transform:translateX(0)}50%{opacity:.95;transform:translateX(7px)}60%{opacity:.55;transform:translateX(12px)}}
-@keyframes patioBirdPass{0%{opacity:0;transform:translate(39%,51%)}3%{opacity:.95}40%{opacity:.95}48%,100%{opacity:0;transform:translate(62%,48%)}}
-@keyframes patioWings{from{transform:scaleY(.55)}to{transform:scaleY(1)}}
+.patioGlow{position:absolute;border-radius:50%;mix-blend-mode:screen;background:radial-gradient(ellipse,#ffc76c70, #e09b3025 32%,transparent 68%);animation:patioEmber 4.7s ease-in-out infinite alternate}
+.patioGlowLeft{left:8%;top:29%;width:10%;height:9%;opacity:.6}
+.patioGlowRight{left:66%;top:30%;width:11%;height:8%;animation-delay:-2.3s}
+.patioDawn{left:37%;top:45%;width:29%;height:23%;background:radial-gradient(ellipse at 45% 30%,#ffe8b736,transparent 65%);animation:patioDaylight 17s ease-in-out infinite alternate}
+.patioHaze{position:absolute;left:38%;top:47%;width:25%;height:24%;background:linear-gradient(105deg,transparent 20%,#ffe8bd12 35%,transparent 48%,#ffe8bd0c 64%,transparent 76%);filter:blur(7px);animation:patioAir 22s ease-in-out infinite alternate;mix-blend-mode:screen}
+/* Reflejos contenidos en la superficie del agua. */
+.patioWater{position:absolute;left:35%;top:80.5%;width:30%;height:3.5%;overflow:hidden;border-radius:50%;mask-image:radial-gradient(ellipse,#000 28%,transparent 71%);-webkit-mask-image:radial-gradient(ellipse,#000 28%,transparent 71%);mix-blend-mode:screen;transform:translateZ(0)}
+.patioWater i{position:absolute;inset:-25% -15%;background:repeating-linear-gradient(177deg,transparent 0 7px,#f3d8a380 8px,#fff2c343 9px,transparent 10px 18px);filter:blur(.6px);animation:patioWaterDrift 8s ease-in-out infinite alternate;opacity:.5}
+.patioWater i:nth-child(2){background:repeating-linear-gradient(183deg,transparent 0 13px,#fbe6b580 14px,transparent 16px 23px);animation-duration:11s;animation-delay:-5s;opacity:.35}
+.patioWater b{position:absolute;left:46%;top:22%;width:11%;height:55%;background:linear-gradient(90deg,transparent,#ffe4a37a,transparent);filter:blur(3px);animation:patioWaterGlow 6s ease-in-out infinite alternate}
+.patioWater b:last-child{left:62%;width:6%;animation-delay:-3s}
+/* Siluetas lejanas con alas articuladas, dentro del cielo del portal. */
+.patioBirdFlight{position:absolute;inset:0;opacity:0;animation:patioDistantFlight 28s linear infinite;transform:translate(40%,50%)}
+.patioBirdFlight svg{display:block;width:clamp(7px,2vw,12px);height:auto;overflow:visible;fill:#30352c;opacity:.72}
+.birdWing{transform-box:view-box;transform-origin:40px 23px;animation:patioFeather 1.4s ease-in-out infinite}
+.birdWingFar{animation-delay:-.1s;opacity:.75}
+.patioBirdFlight1{animation-duration:34s;animation-delay:1.6s}
+.patioBirdFlight1 svg{width:clamp(5px,1.4vw,9px);opacity:.52}
+.patioBirdFlight2{animation-duration:39s;animation-delay:3.1s}
+.patioBirdFlight2 svg{width:clamp(4px,1.1vw,7px);opacity:.4}
+.patioBirdFlight1 .birdWing{animation-duration:1.15s}
+.patioBirdFlight2 .birdWing{animation-duration:1.6s}
+@keyframes patioDistantFlight{0%{opacity:0;transform:translate(40%,50%) rotate(-5deg) scale(.85)}5%{opacity:1}19%{transform:translate(48%,48.5%) rotate(2deg) scale(.9)}35%{opacity:1;transform:translate(57%,49%) rotate(7deg) scale(.7)}42%,100%{opacity:0;transform:translate(62%,48%) rotate(0) scale(.55)}}
+@keyframes patioFeather{0%,100%{transform:scaleY(.85)}25%{transform:scaleY(.15)}48%,80%{transform:scaleY(1)}}
+@keyframes patioEmber{0%,100%{opacity:.4;transform:scale(.97)}23%{opacity:.62}61%{opacity:.48}82%{opacity:.7;transform:scale(1.03)}}
+@keyframes patioDaylight{from{opacity:.45;transform:translateY(0)}to{opacity:.85;transform:translateY(-.5%)}}
+@keyframes patioAir{from{opacity:.45;transform:translateX(-2%)}to{opacity:.85;transform:translateX(3%)}}
+@keyframes patioWaterDrift{from{transform:translate(-1.5%,1%) scaleX(.96)}to{transform:translate(2%,-3%) scaleX(1.04)}}
+@keyframes patioWaterGlow{from{opacity:.35;transform:translateX(-4px) scaleX(.7)}to{opacity:.8;transform:translateX(5px) scaleX(1.2)}}
 @media(prefers-reduced-motion:reduce){.patioAtmosphere{display:none;transition:none}.patioAtmosphere *{animation:none!important}}
