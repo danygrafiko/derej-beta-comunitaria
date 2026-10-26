@@ -9906,7 +9906,9 @@ function renderPanels(p,c){
 
 
   const bstReadings=window.DEREJ_VOCES_CONTENT?.profiles.baalshemtov?.readings||[];
-  const bstReading=bstReadings[Math.max(0,Math.min(6,Number(c.dia)-1))];
+  // Las lecturas generales de la biblioteca no se asignan por día a todas las parashot.
+  const bstReading=p.parasha==='Noaj'&&Number(c.dia)===1?bstReadings[0]:null;
+  const bstVoice=voices.baalshemtov||(bstReading?{fuente:bstReading.source,tipo:'LECTURA DÉREJ · Noaj',base:bstReading.summary,texto:bstReading.reflection[0]}:null);
   const voiceNames=[
     ['rambam','Rambam'],
     ['ramak','Ramak'],
@@ -9919,9 +9921,10 @@ function renderPanels(p,c){
       <span class="ramakBodyEyebrow">VOCES PARA PROFUNDIZAR</span>
       <div class="ramakVoices">
         ${voiceNames.map(([key,label])=>renderVoiceCard(voices[key],label)).join('')}
-        ${bstReading?renderVoiceCard({fuente:bstReading.source,tipo:'Lectura de acompañamiento · '+bstReading.title,base:bstReading.summary,texto:bstReading.reflection[0]},'Baal Shem Tov'):''}
+        ${bstVoice?renderVoiceCard(bstVoice,'Baal Shem Tov'):''}
+        ${bstVoice?.url?`<p class="ramakSourceNote"><a href="${esc(bstVoice.url)}" target="_blank" rel="noopener noreferrer">Consultar la fuente de esta lectura del Baal Shem Tov ↗</a></p>`:''}
       </div>
-      <p class="ramakSourceNote">Las voces son síntesis editoriales de Dérej, con referencias identificadas. La lectura del Baal Shem Tov acompaña la semana; no se presenta como comentario directo suyo al pasaje diario.</p>
+      <p class="ramakSourceNote">Las voces son síntesis editoriales de Dérej, con referencias identificadas. Las conexiones con el pasaje diario son aplicaciones de Dérej. Cuando una enseñanza se transmite en una exposición posterior, se identifica esa fuente; no se presenta como cita literal del maestro.</p>
       ${navButtons('profundizar')}
     </div>`;
 

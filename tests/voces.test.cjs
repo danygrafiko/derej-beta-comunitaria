@@ -56,6 +56,16 @@ function click(selector){const el=doc.querySelector(selector);assert(el,'Missing
  click('.ramakThresholdRail [data-ramak-step="profundizar"]');await pause();
  assert(doc.querySelectorAll('.ramakVoices .ramakVoice').length>=1,'Preserve daily source commentary');
  assert(!doc.querySelector('[data-screen=camino] [data-voces-author], [data-screen=camino] [data-voces-open]'),'Biographies belong in their collection');
+ // Regression: Vayerá must use daily sources, never the generic Noaj reading.
+ click('[data-ramak-parasha="Vayera"]');
+ for(let day=1;day<=7;day++){
+  click('#ramakDayStrip [data-ramak-day="'+day+'"]');
+  click('.ramakThresholdRail [data-ramak-step="profundizar"]');
+  const panel=doc.querySelector('[data-ramak-panel="profundizar"]');
+  assert(!/Teivá|entrada de Noaj al arca/.test(panel.textContent),'Wrong parasha on day '+day);
+  if(day===1){assert.match(panel.textContent,/bendición de la hospitalidad/);assert(panel.querySelector('a[href="https://galeinai.org/2023/05/23/vaiera-2/"]'));}
+  assert.equal(panel.querySelectorAll('.ramakVoice').length,day===1?5:4);
+ }
  evaluate('route("pozo")');await pause();if(doc.querySelector('[data-pz="discover"]'))click('[data-pz="discover"]');click('[data-pz="voices"]');const pozo=doc.querySelector('#pozoRoot');
  const pozoHTML=pozo.innerHTML;click('#pozoRoot [data-voces-author="ramak"]');assert.match(doc.querySelector('#vocesTitle').textContent,/Ramak/);
  click('[data-voc-action="return"]');assert.equal(pozo.innerHTML,pozoHTML);assert(!doc.querySelector('[data-screen="pozo"]').hidden);
