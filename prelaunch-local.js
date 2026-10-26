@@ -9095,7 +9095,7 @@ function scene(c,label){
 function renderVoiceCard(raw,label){
   if(raw&&typeof raw==='object'){
     const source=esc(raw.fuente||label);
-    return `<article class="ramakVoice"><small>${esc(label.toUpperCase())}</small><b class="derejVoiceSource">${source}</b>${raw.tipo?`<span class="derejVoiceType">${esc(raw.tipo)}</span>`:''}${raw.base?`<p><strong>Marco de la fuente.</strong> ${esc(raw.base)}</p>`:''}<p>${raw.base?'<strong>Aplicación Dérej.</strong> ':''}${esc(raw.texto||'')}</p></article>`;
+    return `<article class="ramakVoice"><small>${esc(label.toUpperCase())}</small><b class="derejVoiceSource">${source}</b>${raw.tipo?`<span class="derejVoiceType">${esc(raw.tipo)}</span>`:''}${raw.base?`<p><strong>Marco de la fuente.</strong> ${esc(raw.base)}</p>`:''}<p>${raw.base?'<strong>Aplicación Dérej.</strong> ':'<strong>Lectura editorial Dérej.</strong> '}${esc(raw.texto||'')}</p></article>`;
   }
   return `<article class="ramakVoice"><small>${esc(label.toUpperCase())}</small><b>${esc(label)}</b><p>${esc(raw||'')}</p></article>`;
 }

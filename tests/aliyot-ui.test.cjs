@@ -40,8 +40,9 @@ w.fetch=async url=>({ok:true,json:async()=>String(url).includes('caminos-ramak')
    assert(card.textContent.includes(c.aliyaRange));
    const rootPanel=w.document.querySelector('[data-ramak-panel="raiz"]');assert(rootPanel.textContent.includes(c.pasuk.es));
    if(c.pasuk.es_tipo)assert.equal(rootPanel.querySelector('.derejVerseKind').textContent,c.pasuk.es_tipo);
-   assert.equal(w.document.querySelectorAll('.ramakVoices .ramakVoice').length,5);
-   assert(w.document.querySelector('.ramakVoices').textContent.includes(w.DEREJ_VOCES_CONTENT.profiles.baalshemtov.readings[c.dia-1].title));
+   assert.equal(w.document.querySelectorAll('.ramakVoices .ramakVoice').length,4+(c.voces.baalshemtov||p.parasha==='Noaj'&&c.dia===1?1:0));
+   if(p.parasha!=='Noaj')assert(!/Teivá|entrada de Noaj al arca/.test(w.document.querySelector('.ramakVoices').textContent),p.parasha+'/'+c.dia);
+   if(data.parashot.indexOf(p)>=3)for(const voice of Object.values(c.voces)){assert(voice.base);assert(voice.atribucion);}
    assert.equal(w.document.querySelectorAll('.ramakVoices a[href*="sefaria.org"]').length,0);
    assert.equal(url.hostname,'parashot.com.ar');
   }
@@ -65,6 +66,6 @@ w.fetch=async url=>({ok:true,json:async()=>String(url).includes('caminos-ramak')
   assert.equal(w.document.querySelectorAll('#derejWelcome a[href*="sefaria.org"]').length,0);
   if(i<4)w.document.querySelector('[data-welcome="next"]').click();
  }
- console.log('PASS: selector y cinco voces en 140 jornadas, tarjeta de aliyá y rango, número del enlace externo, progreso local conservado y rechazo visible de una edición incompleta.');
+ console.log('PASS: selector y voces contextualizadas en 140 jornadas, tarjeta de aliyá y rango, número del enlace externo, progreso local conservado y rechazo visible de una edición incompleta.');
  dom.window.close();
 })().catch(e=>{console.error(e);dom.window.close();process.exit(1);});
