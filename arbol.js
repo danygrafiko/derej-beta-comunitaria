@@ -112,14 +112,10 @@
  const previousRoute=route;route=function(name){if(name!=='arbol')pause();previousRoute(name);};
  new MutationObserver(()=>{if(screen.hidden)pause();}).observe(screen,{attributes:true,attributeFilter:['hidden']});
  function entries(){
-  const study=document.querySelector('[data-ramak-panel="profundizar"] .ramakSourceNote');
-  if(study&&!study.parentElement.querySelector('.avStudyEntry'))study.insertAdjacentHTML('afterend','<section class="avStudyEntry"><h3>Árbol de la Vida</h3><p>Comprender las sefirot y cultivar una intención en la vida diaria.</p><button type="button" class="avButton" data-arbol-open>Explorar el árbol →</button></section>');
   const pozo=document.querySelector('#pozoRoot [data-pz="welcome"]')?document.querySelector('#pozoRoot .pzGrid'):null;
   if(pozo&&!pozo.parentElement.querySelector('.avPozoEntry'))pozo.insertAdjacentHTML('afterend','<section class="avStudyEntry avPozoEntry"><h3>Árbol de la Vida</h3><p>Una rama de Dérej para aprender, contemplar y llevar una intención al mundo.</p><button type="button" class="avButton" data-arbol-open>Acercarme al árbol →</button></section>');
  }
- for(const id of ['ramakContent','pozoRoot']){const el=document.getElementById(id);if(el)new MutationObserver(entries).observe(el,{childList:true,subtree:true});}
- // Camino is rendered asynchronously and may replace its complete study container.
- if(typeof renderRamak==='function'){const previous=renderRamak;renderRamak=function(...args){const result=previous.apply(this,args);entries();return result;};}
+ for(const id of ['pozoRoot']){const el=document.getElementById(id);if(el)new MutationObserver(entries).observe(el,{childList:true,subtree:true});}
  entries();render();
  const query=new URLSearchParams(location.search);
  if(query.get('estudio')==='arbol'){

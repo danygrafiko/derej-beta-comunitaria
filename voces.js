@@ -48,12 +48,6 @@
   if(point.focus?.isConnected)point.focus.focus({preventScroll:true});
   window.scrollTo({top:point.y,behavior:'instant'});returnPoint=null;dailyContext=null;
  }
- function authorButton(id,text){return `<button type="button" class="vocAuthorLink" data-voces-author="${id}" aria-label="Conocer la vida y obra de ${esc(people[id].name)}">${esc(text)}</button>`;}
- if(typeof renderVoiceCard==='function'){
-  const original=renderVoiceCard;
-  renderVoiceCard=function(raw,label){const html=original(raw,label),id=aliases[norm(label)];return id?html.replace(/<small>([^<]*)<\/small>/,(_,text)=>`<small>${authorButton(id,text)}</small>`):html;};
- }
- document.querySelectorAll('.ramakVoice>small').forEach(el=>{const id=aliases[norm(el.textContent)];if(id&&!el.querySelector('button'))el.innerHTML=authorButton(id,el.textContent);});
  document.addEventListener('click',event=>{
   const openButton=event.target.closest('[data-voces-open]');
   const author=event.target.closest('[data-voces-author]');

@@ -47,11 +47,7 @@ async function app(query='',saved=null){
  b.d.querySelector('#np-action').value='No perder esta nota';b.d.querySelector('#np-action').dispatchEvent(new b.w.Event('input',{bubbles:true}));assert.match(b.d.querySelector('#npSaveStatus').textContent,/No se pudo guardar/);
  click('[data-np-back]');ev('route("camino")');await new Promise(r=>setTimeout(r,80));
  click('[data-ramak-parasha="Lej Lejá"]');click('#ramakDayStrip [data-ramak-day="2"]');click('.ramakThresholdRail [data-ramak-step="profundizar"]');
- const existing=d.querySelector('[data-ramak-panel="practica"] textarea');assert(existing);existing.value='Mi escrito sin guardar';
- const before={day:ev('selectedDay'),parasha:ev('selectedParasha'),step:ev('selectedRamakStep'),pauses:a.pauses};
- w.scrollTo({top:800});const entry=click('.npStudyEntry [data-nombres-open]');click('[data-np-view="3"]');click('[data-np-back]');
- assert.equal(d.querySelector('[data-ramak-panel="practica"] textarea'),existing);assert.equal(existing.value,'Mi escrito sin guardar');
- assert.equal(a.y,800);assert.equal(d.activeElement,entry);assert.equal(ev('selectedDay'),before.day);assert.equal(ev('selectedParasha'),before.parasha);assert.equal(ev('selectedRamakStep'),before.step);assert.equal(a.pauses,before.pauses);
+ assert(!d.querySelector('[data-screen=camino] [data-nombres-open]'),'Independent names study belongs in Biblioteca');
  assert.equal(a.errors.length,0,a.errors.join('\n'));assert.equal(b.errors.length,0,b.errors.join('\n'));
  a.dom.window.close();b.dom.window.close();console.log('PASS: 7 studies, 20 references, notes/reload/quota/XSS, text size, direct link, preserved Camino and Radio.');
 })().catch(e=>{console.error(e);process.exit(1);});

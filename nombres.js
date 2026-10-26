@@ -54,15 +54,6 @@
   state.notes[view]||={};state.notes[view][key]=event.target.value;
   const ok=persist();root.querySelector('#npSaveStatus').textContent=ok?'Guardado en este dispositivo.':'No se pudo guardar. Conserva una copia antes de salir.';
  });
- function studyEntry(){
-  const anchor=document.querySelector('[data-ramak-panel="profundizar"] .ramakSourceNote');
-  if(anchor&&!anchor.parentElement.querySelector('.npStudyEntry'))anchor.insertAdjacentHTML('afterend','<div class="npStudyEntry"><span>BEIT MIDRASH</span><h3>Nombres y presencia</h3><p>Siete encuentros para estudiar cómo las Escrituras hablan del Creador.</p><button type="button" data-nombres-open>Explorar este estudio →</button></div>');
- }
- if(typeof renderRamak==='function'){
-  const previousRender=renderRamak;
-  renderRamak=function(...args){const result=previousRender.apply(this,args);studyEntry();return result;};
- }
- studyEntry();
  view='catalog';catalog();
  if(new URLSearchParams(location.search).get('estudio')==='nombres'){
   const welcome=document.querySelector('#derejWelcome');
