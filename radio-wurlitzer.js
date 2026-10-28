@@ -209,8 +209,9 @@ fetch('radio-wurlitzer.json',{cache:'no-store'})
    $('rwCount').textContent=playlists.length+' colecciones · '+playlists.reduce((n,p)=>n+p.tracks.length,0)+' canciones';
    let saved='';try{saved=localStorage.getItem('derej:rw:playlist')||''}catch{}
    const favorite=playlists.find(p=>p.id===saved);
-   if(favorite){filter=favorite.parasha||'archivo';}
-   setFilter(filter);
+   // Todas las colecciones, incluidas las de Noaj, deben ser visibles al entrar.
+   setFilter('todas');
+   if(favorite)choose(favorite.id);
    $('rwStatus').textContent='Lista para escuchar';
  })
  .catch(()=>{$('rwStatus').textContent='No se pudo cargar el catálogo. Vuelve a abrir Radio Dérej.'});
