@@ -267,7 +267,7 @@ audio.addEventListener('ended',()=>{
 });
 audio.addEventListener('error',()=>{$('rwStatus').textContent='No se pudo cargar esta pista. Prueba la siguiente.'});
 if('mediaSession' in navigator)try{
- navigator.mediaSession.setActionHandler('play',()=>toggleDock());
+ navigator.mediaSession.setActionHandler('play',()=>{if(audio.paused)toggleDock()});
  navigator.mediaSession.setActionHandler('pause',()=>audio.pause());
  navigator.mediaSession.setActionHandler('previoustrack',()=>{if(playingPlaylist)selectTrack(index-1,true,playingPlaylist)});
  navigator.mediaSession.setActionHandler('nexttrack',()=>{if(playingPlaylist)selectTrack(index+1,true,playingPlaylist)});
