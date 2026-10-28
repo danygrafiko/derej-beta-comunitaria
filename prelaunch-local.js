@@ -40898,6 +40898,7 @@ loadRamak();
           <b id="derejToolsTrackTitle">Preparando la escucha…</b>
           <span id="derejToolsAlbumName" class="derejToolsAlbumName">Radio DÉREJ</span>
         </div>
+        <div class="derejToolsMiniProgress"><input id="derejToolsSeek" type="range" min="0" max="1000" value="0" aria-label="Posición de reproducción"><div><span id="derejToolsElapsed">0:00</span><span id="derejToolsDuration">0:00</span></div></div>
         <div class="derejToolsRadioControls" role="group" aria-label="Controles de Radio DÉREJ">
           <button type="button" class="derejMiniStep" data-derej-tools-prev aria-label="Canción anterior" title="Canción anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 20 9 12l10-8v16Z"/><path d="M5 5v14"/></svg></button>
           <button type="button" class="derejMiniPrimary" data-derej-tools-play aria-label="Reproducir" title="Reproducir"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 4.8c0-.83.9-1.33 1.6-.86l9.72 6.57c.96.65.96 1.42 0 2.08L9.6 19.16c-.7.48-1.6-.02-1.6-.85V4.8Z"/></svg></button>
@@ -41016,7 +41017,20 @@ loadRamak();
     audio?.addEventListener('pause',syncRadio);
     audio?.addEventListener('ended',syncRadio);
     audio?.addEventListener('loadedmetadata',syncRadio);
-    syncRadio();
+    const popupSeek=document.getElementById('derejToolsSeek');
+    const syncPosition=()=>{
+      if(!audio)return;
+      const duration=audio.duration,finite=Number.isFinite(duration)&&duration>0;
+      if(popupSeek)popupSeek.value=finite?String(Math.round(1000*audio.currentTime/duration)):'0';
+      const fmt=s=>Number.isFinite(s)?Math.floor(s/60)+':'+String(Math.floor(s%60)).padStart(2,'0'):'0:00';
+      const elapsed=document.getElementById('derejToolsElapsed'),total=document.getElementById('derejToolsDuration');
+      if(elapsed)elapsed.textContent=fmt(audio.currentTime);
+      if(total)total.textContent=fmt(duration);
+    };
+    audio?.addEventListener('timeupdate',syncPosition);
+    audio?.addEventListener('loadedmetadata',syncPosition);
+    popupSeek?.addEventListener('input',()=>{if(audio&&Number.isFinite(audio.duration))audio.currentTime=audio.duration*Number(popupSeek.value)/1000});
+    syncRadio();syncPosition();
 
 
     document.addEventListener('click',e=>{
