@@ -152,7 +152,7 @@
       "title": "Vayerá · Mediterránea",
       "kind": "Parashat · Mediterránea",
       "parasha": "Vayerá",
-      "artwork": "icon-512.png",
+      "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Parshat%20Vayera%20Mediterranean/Caratula/Bajo%20el%20arbol%2C%20junto%20al%20agua.png",
       "tracks": [
         {
           "id": "vayera-parashat-1",
@@ -161,7 +161,7 @@
           "collection": "Vayerá · Mediterránea",
           "aliyah": 1,
           "path": "Parshat Vayera Mediterranean/MP3/1.Hay sitio bajo el arbol.mp3",
-          "artwork": "icon-512.png"
+          "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Parshat%20Vayera%20Mediterranean/Caratula/Bajo%20el%20arbol%2C%20junto%20al%20agua.png"
         },
         {
           "id": "vayera-parashat-2",
@@ -170,7 +170,7 @@
           "collection": "Vayerá · Mediterránea",
           "aliyah": 2,
           "path": "Parshat Vayera Mediterranean/MP3/2.Aunque fueran diez.mp3",
-          "artwork": "icon-512.png"
+          "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Parshat%20Vayera%20Mediterranean/Caratula/Bajo%20el%20arbol%2C%20junto%20al%20agua.png"
         },
         {
           "id": "vayera-parashat-3",
@@ -179,7 +179,7 @@
           "collection": "Vayerá · Mediterránea",
           "aliyah": 3,
           "path": "Parshat Vayera Mediterranean/MP3/3.La mano que te saca.mp3",
-          "artwork": "icon-512.png"
+          "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Parshat%20Vayera%20Mediterranean/Caratula/Bajo%20el%20arbol%2C%20junto%20al%20agua.png"
         },
         {
           "id": "vayera-parashat-4",
@@ -188,7 +188,7 @@
           "collection": "Vayerá · Mediterránea",
           "aliyah": 4,
           "path": "Parshat Vayera Mediterranean/MP3/4.Un Hijo para Sara.mp3",
-          "artwork": "icon-512.png"
+          "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Parshat%20Vayera%20Mediterranean/Caratula/Bajo%20el%20arbol%2C%20junto%20al%20agua.png"
         },
         {
           "id": "vayera-parashat-5",
@@ -197,7 +197,7 @@
           "collection": "Vayerá · Mediterránea",
           "aliyah": 5,
           "path": "Parshat Vayera Mediterranean/MP3/5.Donde esta su voz.mp3",
-          "artwork": "icon-512.png"
+          "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Parshat%20Vayera%20Mediterranean/Caratula/Bajo%20el%20arbol%2C%20junto%20al%20agua.png"
         },
         {
           "id": "vayera-parashat-6",
@@ -206,7 +206,7 @@
           "collection": "Vayerá · Mediterránea",
           "aliyah": 6,
           "path": "Parshat Vayera Mediterranean/MP3/6.Siete corderas y un pozo.mp3",
-          "artwork": "icon-512.png"
+          "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Parshat%20Vayera%20Mediterranean/Caratula/Bajo%20el%20arbol%2C%20junto%20al%20agua.png"
         },
         {
           "id": "vayera-parashat-7",
@@ -215,7 +215,7 @@
           "collection": "Vayerá · Mediterránea",
           "aliyah": 7,
           "path": "Parshat Vayera Mediterranean/MP3/7.No extiendas la mano.mp3",
-          "artwork": "icon-512.png"
+          "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Parshat%20Vayera%20Mediterranean/Caratula/Bajo%20el%20arbol%2C%20junto%20al%20agua.png"
         }
       ]
     },
