@@ -468,146 +468,88 @@ document.querySelectorAll('[data-route="frutos"]').forEach(b=>b.addEventListener
 $('submitFruit')?.addEventListener('click',fruitSubmit);
 $('rootShareFruit')?.addEventListener('click',fruitOpenFromCurrent);
 
-/* Radio Dérej · migrado desde RC2 */
-let RADIO_TRACKS=[];
-let radioIndex=0;
-let radioInitialized=false;
-let radioInitPromise=null;
+/* Radio Dérej · playlists por parashá, reproducción continua */
+let RADIO_PLAYLISTS=[],RADIO_TRACKS=[],radioPlaylistId='',radioIndex=0,radioInitialized=false,radioInitPromise=null;
 const radioAudio=$('radioAudio');
-
-function radioFmt(sec){
-  if(!Number.isFinite(sec)) return '0:00';
-  sec=Math.max(0,Math.round(sec));
-  return Math.floor(sec/60)+':'+String(sec%60).padStart(2,'0');
-}
+function radioFmt(sec){if(!Number.isFinite(sec))return '0:00';sec=Math.max(0,Math.round(sec));return Math.floor(sec/60)+':'+String(sec%60).padStart(2,'0')}
 function radioResolveUrl(t){
-  if(t?.url) return t.url;
-  const cfg=window.DEREJ_CONFIG||{};
-  const base=(cfg.audioBase||'').replace(/\/$/,'');
-  return base&&t?.path?`${base}/${String(t.path).replace(/^\//,'')}`:'';
+ if(t?.url)return t.url;
+ const base=(window.DEREJ_CONFIG?.audioBase||'').replace(/\/$/,'');
+ return base&&t?.path?base+'/'+t.path.split('/').map(encodeURIComponent).join('/'):'';
+}
+function radioArtwork(t){return t?.artwork||RADIO_PLAYLISTS.find(p=>p.id===radioPlaylistId)?.artwork||'radio-meditacion.png'}
+function radioRenderPlaylists(){
+ const box=$('radioCollections');if(!box)return;box.replaceChildren();
+ RADIO_PLAYLISTS.forEach(p=>{const b=el('button',p.id===radioPlaylistId?'on':'');b.type='button';b.textContent=p.title+' · '+p.tracks.length+' pistas';b.setAttribute('aria-pressed',String(p.id===radioPlaylistId));b.addEventListener('click',()=>radioChoosePlaylist(p.id));box.appendChild(b)});
 }
 function radioRenderList(){
-  const box=$('radioTrackList');
-  box.replaceChildren();
-  RADIO_TRACKS.forEach((t,i)=>{
-    const b=el('button',`radioTrack${i===radioIndex?' on':''}`);
-    b.type='button';
-    b.dataset.radioIndex=String(i);
-    const num=el('span','radioTrackNum',String(i+1));
-    const copy=el('span','radioTrackCopy');
-    addText(copy,'b','',t.title);
-    addText(copy,'span','small',t.collection||'Radio Dérej · Meditación');
-    const dur=el('span','radioTrackDur',t.duration||'');
-    b.append(num,copy,dur);
-    b.addEventListener('click',()=>radioLoad(i,true));
-    box.appendChild(b);
-  });
+ const box=$('radioTrackList');box.replaceChildren();
+ RADIO_TRACKS.forEach((t,i)=>{const b=el('button','radioTrack'+(i===radioIndex?' on':''));b.type='button';
+ const num=el('span','radioTrackNum',String(t.aliyah||i+1));const copy=el('span','radioTrackCopy');
+ addText(copy,'b','',t.title);addText(copy,'span','small',t.aliyah?'Aliyá '+t.aliyah:t.collection||'Radio Dérej');
+ const dur=el('span','radioTrackDur',t.duration||'');b.append(num,copy,dur);b.addEventListener('click',()=>radioLoad(i,true));box.appendChild(b)});
 }
-function radioArtwork(track){
-  const cfg=window.DEREJ_CONFIG||{};
-  return cfg.artworkUrl||track?.artwork||'radio-meditacion.png';
-}
-function radioSyncMediaSession(track){
-  if(!('mediaSession' in navigator)||!track) return;
-  try{
-    navigator.mediaSession.metadata=new MediaMetadata({
-      title:track.title,
-      artist:track.artist||'Danygrafiko',
-      album:track.collection||'Radio Dérej · Meditación',
-      artwork:[{src:radioArtwork(track),sizes:'1254x1254',type:'image/png'}]
-    });
-  }catch(e){}
+function radioSyncMediaSession(t){
+ if(!('mediaSession'in navigator)||!t)return;
+ try{navigator.mediaSession.metadata=new MediaMetadata({title:t.title,artist:t.artist||'Danygrafiko',album:t.collection||'Radio Dérej',artwork:[{src:radioArtwork(t),sizes:'any',type:'image/png'}]})}catch(e){}
 }
 function radioLoad(i,autoplay=false){
-  if(!RADIO_TRACKS.length) return;
-  radioIndex=(i+RADIO_TRACKS.length)%RADIO_TRACKS.length;
-  localStorage.setItem('derej:radio:index',String(radioIndex));
-  const t=RADIO_TRACKS[radioIndex];
-  const url=radioResolveUrl(t);
-  $('radioTitle').textContent=t.title;
-  $('radioSeek').value=0;
-  $('radioCurrent').textContent='0:00';
-  $('radioDuration').textContent=t.duration||'0:00';
-  document.querySelectorAll('.radioTrack').forEach((b,j)=>b.classList.toggle('on',j===radioIndex));
-  if(!url){
-    radioAudio.removeAttribute('src');
-    radioAudio.load();
-    $('radioStatus').textContent='Audio pendiente de conexión al almacenamiento de producción.';
-    $('radioPlay').disabled=true;
-    return;
-  }
-  $('radioPlay').disabled=false;
-  radioAudio.src=url;
-  $('radioStatus').textContent='Lista para escuchar.';
-  radioSyncMediaSession(t);
-  if(autoplay) radioAudio.play().catch(()=>{$('radioStatus').textContent='Toca Reproducir para iniciar el audio.'});
+ if(!RADIO_TRACKS.length)return;
+ radioIndex=(i+RADIO_TRACKS.length)%RADIO_TRACKS.length;
+ localStorage.setItem('derej:radio:playlist',radioPlaylistId);
+ localStorage.setItem('derej:radio:index:'+radioPlaylistId,String(radioIndex));
+ const t=RADIO_TRACKS[radioIndex],url=radioResolveUrl(t);
+ $('radioTitle').textContent=t.title;$('radioSeek').value=0;$('radioCurrent').textContent='0:00';$('radioDuration').textContent=t.duration||'0:00';
+ const cover=$('radioNativeCover');if(cover){cover.src=radioArtwork(t);cover.onerror=()=>{cover.onerror=null;cover.src='icon-512.png'};}
+ document.querySelectorAll('.radioTrack').forEach((b,j)=>b.classList.toggle('on',j===radioIndex));
+ if(!url){radioAudio.removeAttribute('src');radioAudio.load();$('radioStatus').textContent='Audio no disponible.';$('radioPlay').disabled=true;return}
+ $('radioPlay').disabled=false;radioAudio.src=url;$('radioStatus').textContent='Lista para escuchar.';radioSyncMediaSession(t);
+ if(autoplay)radioAudio.play().catch(()=>{$('radioStatus').textContent='Toca Reproducir para escuchar.'});
+}
+function radioChoosePlaylist(id){
+ const p=RADIO_PLAYLISTS.find(p=>p.id===id);if(!p)return;
+ radioAudio.pause();radioPlaylistId=id;RADIO_TRACKS=p.tracks;
+ const saved=Number(localStorage.getItem('derej:radio:index:'+id));
+ radioIndex=Number.isInteger(saved)&&saved>=0&&saved<RADIO_TRACKS.length?saved:0;
+ $('radioPlaylistTitle').textContent=p.title;$('radioPlaylistDescription').textContent=p.tracks.length+' canciones · '+(p.parasha||'Colección')+' · Danygrafiko';
+ radioRenderPlaylists();radioRenderList();radioLoad(radioIndex,false);
 }
 function radioUpdateButton(){
-  $('radioPlay').textContent=radioAudio.paused?'▶ Reproducir':'⏸ Pausar';
-  $('radioStatus').textContent=radioAudio.paused?'En pausa.':'Reproduciendo dentro de Dérej.';
-  if('mediaSession' in navigator){try{navigator.mediaSession.playbackState=radioAudio.paused?'paused':'playing'}catch(e){}}
+ $('radioPlay').textContent=radioAudio.paused?'▶ Reproducir':'⏸ Pausar';
+ $('radioStatus').textContent=radioAudio.paused?'En pausa.':'Reproduciendo dentro de Dérej.';
+ if('mediaSession'in navigator)try{navigator.mediaSession.playbackState=radioAudio.paused?'paused':'playing'}catch(e){}
 }
 function radioSetPositionState(){
-  if(!('mediaSession' in navigator)||!Number.isFinite(radioAudio.duration)||radioAudio.duration<=0) return;
-  try{navigator.mediaSession.setPositionState({duration:radioAudio.duration,playbackRate:radioAudio.playbackRate||1,position:Math.min(radioAudio.currentTime,radioAudio.duration)})}catch(e){}
+ if(!('mediaSession'in navigator)||!Number.isFinite(radioAudio.duration)||radioAudio.duration<=0)return;
+ try{navigator.mediaSession.setPositionState({duration:radioAudio.duration,playbackRate:radioAudio.playbackRate||1,position:Math.min(radioAudio.currentTime,radioAudio.duration)})}catch(e){}
 }
 async function radioInit(){
-  if(radioInitialized) return;
-  if(radioInitPromise) return radioInitPromise;
-  radioInitPromise=(async()=>{
-    try{
-      const cfg=window.DEREJ_CONFIG||{};
-      const catalogUrl=cfg.catalogUrl||'radio.json';
-      const res=await fetch(catalogUrl,{cache:'no-store'});
-      if(!res.ok) throw new Error(`Catálogo ${res.status}`);
-      const data=await res.json();
-      RADIO_TRACKS=Array.isArray(data.tracks)?data.tracks:[];const cover=$('radioNativeCover');if(cover){cover.src=radioArtwork(RADIO_TRACKS[0]);cover.onerror=()=>{cover.onerror=null;cover.src='icon-512.png'}};
-      if(!RADIO_TRACKS.length) throw new Error('Catálogo vacío');
-      const saved=Number(localStorage.getItem('derej:radio:index'));
-      radioIndex=Number.isInteger(saved)&&saved>=0&&saved<RADIO_TRACKS.length?saved:0;
-      radioRenderList();
-      radioLoad(radioIndex,false);
-      radioInitialized=true;
-    }catch(e){
-      $('radioTrackList').replaceChildren(el('div','memoryCard',''));
-      $('radioTrackList').firstChild.append(el('b','', 'Radio Dérej está en preparación.'),el('p','small','El catálogo musical no pudo cargarse. El resto de Dérej continúa disponible.'));
-      $('radioStatus').textContent='Catálogo temporalmente no disponible.';
-      $('radioPlay').disabled=true;
-      radioInitPromise=null;
-    }
-  })();
-  return radioInitPromise;
+ if(radioInitialized)return;if(radioInitPromise)return radioInitPromise;
+ radioInitPromise=(async()=>{try{
+ const res=await fetch(window.DEREJ_CONFIG?.catalogUrl||'radio.json',{cache:'no-store'});if(!res.ok)throw Error('Catálogo '+res.status);
+ const data=await res.json();RADIO_PLAYLISTS=Array.isArray(data.playlists)?data.playlists:Array.isArray(data.tracks)?[{id:'meditacion-original',title:'Meditación',tracks:data.tracks}]:[];
+ RADIO_PLAYLISTS=RADIO_PLAYLISTS.filter(p=>Array.isArray(p.tracks)&&p.tracks.length);
+ if(!RADIO_PLAYLISTS.length)throw Error('Catálogo vacío');
+ const id=localStorage.getItem('derej:radio:playlist')||RADIO_PLAYLISTS[0].id;radioChoosePlaylist(RADIO_PLAYLISTS.some(p=>p.id===id)?id:RADIO_PLAYLISTS[0].id);radioInitialized=true;
+ }catch(e){$('radioTrackList').replaceChildren(el('p','small','El catálogo musical no pudo cargarse.'));$('radioStatus').textContent='Catálogo temporalmente no disponible.';$('radioPlay').disabled=true;radioInitPromise=null}})();
+ return radioInitPromise;
 }
-
-$('radioPlay').addEventListener('click',()=>{
-  if(!radioAudio.src) return;
-  if(radioAudio.paused) radioAudio.play().catch(()=>{$('radioStatus').textContent='Toca nuevamente Reproducir para iniciar el audio.'});
-  else radioAudio.pause();
-});
+$('radioPlay').addEventListener('click',()=>{if(!radioAudio.src)return;if(radioAudio.paused)radioAudio.play().catch(()=>{$('radioStatus').textContent='Toca nuevamente Reproducir.'});else radioAudio.pause()});
 $('radioPrev').addEventListener('click',()=>radioLoad(radioIndex-1,true));
 $('radioNext').addEventListener('click',()=>radioLoad(radioIndex+1,true));
-radioAudio.addEventListener('play',radioUpdateButton);
-radioAudio.addEventListener('pause',radioUpdateButton);
+radioAudio.addEventListener('play',radioUpdateButton);radioAudio.addEventListener('pause',radioUpdateButton);
 radioAudio.addEventListener('loadedmetadata',()=>{$('radioDuration').textContent=radioFmt(radioAudio.duration);radioSetPositionState()});
-radioAudio.addEventListener('timeupdate',()=>{
-  $('radioCurrent').textContent=radioFmt(radioAudio.currentTime);
-  if(Number.isFinite(radioAudio.duration)&&radioAudio.duration>0)$('radioSeek').value=String(Math.round((radioAudio.currentTime/radioAudio.duration)*1000));
-  if(Math.round(radioAudio.currentTime)%5===0) radioSetPositionState();
-});
-$('radioSeek').addEventListener('input',()=>{if(Number.isFinite(radioAudio.duration))radioAudio.currentTime=(Number($('radioSeek').value)/1000)*radioAudio.duration});
+radioAudio.addEventListener('timeupdate',()=>{$('radioCurrent').textContent=radioFmt(radioAudio.currentTime);if(Number.isFinite(radioAudio.duration)&&radioAudio.duration>0)$('radioSeek').value=String(Math.round(radioAudio.currentTime/radioAudio.duration*1000));if(Math.round(radioAudio.currentTime)%5===0)radioSetPositionState()});
+$('radioSeek').addEventListener('input',()=>{if(Number.isFinite(radioAudio.duration))radioAudio.currentTime=Number($('radioSeek').value)/1000*radioAudio.duration});
 radioAudio.addEventListener('ended',()=>radioLoad(radioIndex+1,true));
-radioAudio.addEventListener('error',()=>{$('radioStatus').textContent='No se pudo reproducir esta pista. Puedes intentar la siguiente.'});
-if('mediaSession' in navigator){
-  try{
-    navigator.mediaSession.setActionHandler('play',()=>radioAudio.play());
-    navigator.mediaSession.setActionHandler('pause',()=>radioAudio.pause());
-    navigator.mediaSession.setActionHandler('previoustrack',()=>radioLoad(radioIndex-1,true));
-    navigator.mediaSession.setActionHandler('nexttrack',()=>radioLoad(radioIndex+1,true));
-    navigator.mediaSession.setActionHandler('seekbackward',d=>{radioAudio.currentTime=Math.max(0,radioAudio.currentTime-(d.seekOffset||10))});
-    navigator.mediaSession.setActionHandler('seekforward',d=>{radioAudio.currentTime=Math.min(radioAudio.duration||Infinity,radioAudio.currentTime+(d.seekOffset||10))});
-    navigator.mediaSession.setActionHandler('seekto',d=>{if(Number.isFinite(d.seekTime))radioAudio.currentTime=d.seekTime});
-  }catch(e){}
-}
+radioAudio.addEventListener('error',()=>{$('radioStatus').textContent='No se pudo reproducir esta pista. Intenta la siguiente.'});
+if('mediaSession'in navigator)try{
+ navigator.mediaSession.setActionHandler('play',()=>radioAudio.play());navigator.mediaSession.setActionHandler('pause',()=>radioAudio.pause());
+ navigator.mediaSession.setActionHandler('previoustrack',()=>radioLoad(radioIndex-1,true));navigator.mediaSession.setActionHandler('nexttrack',()=>radioLoad(radioIndex+1,true));
+ navigator.mediaSession.setActionHandler('seekbackward',d=>{radioAudio.currentTime=Math.max(0,radioAudio.currentTime-(d.seekOffset||10))});
+ navigator.mediaSession.setActionHandler('seekforward',d=>{radioAudio.currentTime=Math.min(radioAudio.duration||Infinity,radioAudio.currentTime+(d.seekOffset||10))});
+ navigator.mediaSession.setActionHandler('seekto',d=>{if(Number.isFinite(d.seekTime))radioAudio.currentTime=d.seekTime});
+}catch(e){}
 
 function getMasterActions(){const found=[];for(let i=0;i<localStorage.length;i++){const key=localStorage.key(i);if(!key?.startsWith('derej:content:')||!key.endsWith(':actions'))continue;try{const arr=JSON.parse(localStorage.getItem(key)||'[]');if(Array.isArray(arr))found.push(...arr)}catch(e){}}const byKey=new Map();found.forEach(a=>{const k=`${a.content_id||''}:${a.block_id||''}`;const prev=byKey.get(k);if(!prev||String(a.at)>String(prev.at))byKey.set(k,a)});return [...byKey.values()].sort((a,b)=>String(b.at).localeCompare(String(a.at)))}
 function getPrivateReflections(){const found=[];for(let i=0;i<localStorage.length;i++){const key=localStorage.key(i);if(!key?.startsWith('derej:community:private:'))continue;const body=(localStorage.getItem(key)||'').trim();if(body)found.push({key,body})}return found}
