@@ -317,3 +317,109 @@ body.rwDockHidden .rwScreen{padding-bottom:32px!important}
   body.rwDockVisible>.rwPlayer .rwNow b{font-size:.75rem!important}
   body.rwDockVisible>.rwPlayer .rwNow small{font-size:.65rem!important}
 }
+
+
+/* Radio Dérej v5 — Galería viva: la obra sonora ocupa el primer plano.
+   El selector conserva portadas de álbum; este marco muestra la carátula ID3. */
+.rwDetails{
+  grid-template-columns:minmax(245px,370px) minmax(195px,1fr) minmax(275px,1.2fr);
+  align-items:start;gap:clamp(18px,2.8vw,36px);
+  padding:clamp(20px,2.8vw,38px);
+}
+.rwDetails>.rwVisual{
+  margin:0;grid-column:1;grid-row:1;min-width:0;
+  width:100%;max-width:440px;align-self:start;
+}
+.rwVisualFrame{
+  position:relative;isolation:isolate;
+  padding:10px;
+  border:1px solid rgba(189,157,98,.52);
+  background:linear-gradient(145deg,#fff9eb,#d9c7a8);
+  border-radius:22px;
+  box-shadow:0 12px 32px rgba(48,30,14,.19),inset 0 1px rgba(255,255,255,.9);
+}
+.rwVisualFrame::after{
+  content:"";position:absolute;inset:5px;border:1px solid rgba(255,255,255,.35);
+  border-radius:18px;pointer-events:none;z-index:2;
+}
+.rwVisualFrame #rwBigCover{
+  display:block!important;
+  width:100%!important;max-width:none!important;
+  height:auto!important;aspect-ratio:1/1;
+  object-fit:cover!important;
+  border-radius:13px;
+  box-shadow:0 9px 26px rgba(22,26,21,.22);
+  background:#cbbca0;
+}
+.rwVisualCaption{
+  display:flex;flex-direction:column;gap:7px;
+  padding:15px 5px 0;
+  min-width:0;text-align:left;
+}
+.rwVisualEyebrow{
+  font:700 .67rem/1.35 system-ui,sans-serif;
+  letter-spacing:.19em;text-transform:uppercase;color:#8b7044;
+}
+.rwVisualTitle{
+  font:400 clamp(1.1rem,1.65vw,1.5rem)/1.24 Georgia,serif;
+  color:#2b352b;text-wrap:balance;overflow-wrap:break-word;
+}
+.rwHeroSong .rwVisualFrame{
+  border-color:#b38b42;
+  box-shadow:0 0 0 2px rgba(194,148,63,.14),
+             0 17px 40px rgba(44,33,17,.24);
+}
+.rwDetails>.rwInfo{min-width:0;grid-column:2;grid-row:1}
+.rwDetails>.rwTracks{grid-column:3;grid-row:1;min-width:0;width:100%}
+@media(max-width:1050px){
+ .rwDetails{grid-template-columns:minmax(220px,400px) minmax(0,1fr)}
+ .rwDetails>.rwVisual{grid-column:1;grid-row:1}
+ .rwDetails>.rwInfo{grid-column:2;grid-row:1}
+ .rwDetails>.rwTracks{grid-column:1 / -1!important;grid-row:2}
+}
+@media(max-width:700px){
+ .rwDetails{
+   display:flex!important;
+   flex-direction:column!important;
+   align-items:stretch!important;
+   gap:17px!important;
+   padding:19px 17px 25px!important;
+   border-radius:25px!important;
+ }
+ .rwDetails>.rwVisual{
+   display:block;flex:none;
+   width:100%;max-width:440px;
+   margin:0 auto!important;
+   align-self:center!important;
+ }
+ .rwVisualFrame{padding:9px;border-radius:19px}
+ .rwVisualFrame #rwBigCover{
+   width:100%!important;max-width:none!important;
+   height:auto!important;aspect-ratio:1/1;
+ }
+ .rwVisualCaption{padding:15px 5px 2px;gap:7px;text-align:center}
+ .rwVisualEyebrow{font-size:.67rem;letter-spacing:.16em}
+ .rwVisualTitle{font-size:clamp(1.3rem,5.6vw,1.85rem);line-height:1.21}
+ .rwDetails>.rwInfo{
+   display:block;flex:none;width:100%;min-width:0;
+   text-align:center!important;
+   padding:4px 0 7px!important;
+ }
+ .rwInfo h2{font-size:clamp(1.65rem,7.1vw,2.2rem)!important}
+ .rwInfo .rwSub{font-size:.8rem!important}
+ .rwInfo p{max-width:39ch!important;margin:10px auto!important;line-height:1.52!important}
+ .rwButton{width:auto!important;min-width:190px!important;max-width:100%}
+ .rwDetails>.rwTracks,#rwTracks{
+   display:grid;flex:none;width:100%!important;
+   min-width:0;max-width:none;
+   margin:5px 0 0;
+ }
+}
+@media(max-width:380px){
+ .rwDetails{padding:15px 12px 23px!important}
+ .rwVisualFrame{padding:7px}
+ .rwDetails>.rwVisual{max-width:100%}
+}
+@media(prefers-reduced-motion:reduce){
+ .rwHeroSong .rwVisualFrame{transition:none}
+}
