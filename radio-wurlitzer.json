@@ -220,6 +220,150 @@
       ]
     },
     {
+      "id": "noaj-parashat",
+      "title": "Noaj · Parashat",
+      "kind": "Parashat",
+      "parasha": "Noaj",
+      "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Parashat%20Noaj%20I/noaj/Caratula/Radio%20Derej_%20Parashat%20Noaj.png",
+      "tracks": [
+        {
+          "id": "noaj-parashat-1",
+          "title": "Íntegro en mi tiempo",
+          "artist": "Danygrafiko",
+          "collection": "Noaj · Parashat",
+          "aliyah": 1,
+          "path": "Parashat Noaj I/noaj/MP3/1.Integro en mi tiempo.mp3",
+          "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Parashat%20Noaj%20I/noaj/Caratula/Radio%20Derej_%20Parashat%20Noaj.png"
+        },
+        {
+          "id": "noaj-parashat-2",
+          "title": "La puerta y la lluvia",
+          "artist": "Danygrafiko",
+          "collection": "Noaj · Parashat",
+          "aliyah": 2,
+          "path": "Parashat Noaj I/noaj/MP3/2.La puerta y la lluvia.mp3",
+          "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Parashat%20Noaj%20I/noaj/Caratula/Radio%20Derej_%20Parashat%20Noaj.png"
+        },
+        {
+          "id": "noaj-parashat-3",
+          "title": "Una hoja al atardecer",
+          "artist": "Danygrafiko",
+          "collection": "Noaj · Parashat",
+          "aliyah": 3,
+          "path": "Parashat Noaj I/noaj/MP3/3.Una hoja al atardecer.mp3",
+          "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Parashat%20Noaj%20I/noaj/Caratula/Radio%20Derej_%20Parashat%20Noaj.png"
+        },
+        {
+          "id": "noaj-parashat-4",
+          "title": "Salir para cuidar",
+          "artist": "Danygrafiko",
+          "collection": "Noaj · Parashat",
+          "aliyah": 4,
+          "path": "Parashat Noaj I/noaj/MP3/4.Salir para cuidar.mp3",
+          "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Parashat%20Noaj%20I/noaj/Caratula/Radio%20Derej_%20Parashat%20Noaj.png"
+        },
+        {
+          "id": "noaj-parashat-5",
+          "title": "El arco en la nube",
+          "artist": "Danygrafiko",
+          "collection": "Noaj · Parashat",
+          "aliyah": 5,
+          "path": "Parashat Noaj I/noaj/MP3/5.El arco en la nube.mp3",
+          "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Parashat%20Noaj%20I/noaj/Caratula/Radio%20Derej_%20Parashat%20Noaj.png"
+        },
+        {
+          "id": "noaj-parashat-6",
+          "title": "Cubrir la herida",
+          "artist": "Danygrafiko",
+          "collection": "Noaj · Parashat",
+          "aliyah": 6,
+          "path": "Parashat Noaj I/noaj/MP3/6.Cubrir la herida.mp3",
+          "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Parashat%20Noaj%20I/noaj/Caratula/Radio%20Derej_%20Parashat%20Noaj.png"
+        },
+        {
+          "id": "noaj-parashat-7",
+          "title": "La torre y el camino",
+          "artist": "Danygrafiko",
+          "collection": "Noaj · Parashat",
+          "aliyah": 7,
+          "path": "Parashat Noaj I/noaj/MP3/7.La torre y el camino.mp3",
+          "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Parashat%20Noaj%20I/noaj/Caratula/Radio%20Derej_%20Parashat%20Noaj.png"
+        }
+      ]
+    },
+    {
+      "id": "noaj-meditacion",
+      "title": "Noaj · Meditación guiada",
+      "kind": "Meditación guiada",
+      "parasha": "Noaj",
+      "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Meditacion%20Noaj%20I/noaj/Caratula/Radio%20Derej%20Noaj%20Meditacion.png",
+      "tracks": [
+        {
+          "id": "noaj-meditacion-1",
+          "title": "Una tabla para otro",
+          "artist": "Danygrafiko",
+          "collection": "Noaj · Meditación guiada",
+          "aliyah": 1,
+          "path": "Meditacion Noaj I/noaj/MP3/1.Una tabla para otro.mp3",
+          "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Meditacion%20Noaj%20I/noaj/Caratula/Radio%20Derej%20Noaj%20Meditacion.png"
+        },
+        {
+          "id": "noaj-meditacion-2",
+          "title": "El límite que protege",
+          "artist": "Danygrafiko",
+          "collection": "Noaj · Meditación guiada",
+          "aliyah": 2,
+          "path": "Meditacion Noaj I/noaj/MP3/2.El limite que protege.mp3",
+          "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Meditacion%20Noaj%20I/noaj/Caratula/Radio%20Derej%20Noaj%20Meditacion.png"
+        },
+        {
+          "id": "noaj-meditacion-3",
+          "title": "La paciencia de la paloma",
+          "artist": "Danygrafiko",
+          "collection": "Noaj · Meditación guiada",
+          "aliyah": 3,
+          "path": "Meditacion Noaj I/noaj/MP3/3.La paciencia de la paloma.mp3",
+          "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Meditacion%20Noaj%20I/noaj/Caratula/Radio%20Derej%20Noaj%20Meditacion.png"
+        },
+        {
+          "id": "noaj-meditacion-4",
+          "title": "Volver a pisar tierra",
+          "artist": "Danygrafiko",
+          "collection": "Noaj · Meditación guiada",
+          "aliyah": 4,
+          "path": "Meditacion Noaj I/noaj/MP3/4.Volver a pisar tierra.mp3",
+          "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Meditacion%20Noaj%20I/noaj/Caratula/Radio%20Derej%20Noaj%20Meditacion.png"
+        },
+        {
+          "id": "noaj-meditacion-5",
+          "title": "Bajo el mismo arco",
+          "artist": "Danygrafiko",
+          "collection": "Noaj · Meditación guiada",
+          "aliyah": 5,
+          "path": "Meditacion Noaj I/noaj/MP3/5.Bajo el mismo arco.mp3",
+          "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Meditacion%20Noaj%20I/noaj/Caratula/Radio%20Derej%20Noaj%20Meditacion.png"
+        },
+        {
+          "id": "noaj-meditacion-6",
+          "title": "El manto de dignidad",
+          "artist": "Danygrafiko",
+          "collection": "Noaj · Meditación guiada",
+          "aliyah": 6,
+          "path": "Meditacion Noaj I/noaj/MP3/6.El Manto de dignidad.mp3",
+          "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Meditacion%20Noaj%20I/noaj/Caratula/Radio%20Derej%20Noaj%20Meditacion.png"
+        },
+        {
+          "id": "noaj-meditacion-7",
+          "title": "Hacer lugar a otra voz",
+          "artist": "Danygrafiko",
+          "collection": "Noaj · Meditación guiada",
+          "aliyah": 7,
+          "path": "Meditacion Noaj I/noaj/MP3/7.Hacer lugar a otra voz.mp3",
+          "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Meditacion%20Noaj%20I/noaj/Caratula/Radio%20Derej%20Noaj%20Meditacion.png"
+        }
+      ]
+    },
+    {
       "id": "meditacion-original",
       "title": "Meditación · Colección original",
       "kind": "Meditación",
@@ -358,5 +502,6 @@
         }
       ]
     }
-  ]
+  ],
+  "description": "Colecciones musicales por parashá y experiencia; las anteriores permanecen disponibles."
 }
