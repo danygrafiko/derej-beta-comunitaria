@@ -101,3 +101,34 @@
 #rwTracks .rwTrack:not(.active){background:transparent}
 #rwTracks .rwTrack.active{background:#ead6ad}
 #rwTracks .rwTrack:not(.active):hover{background:#f5e7ca}
+
+/* Curaduría visual v3: carátulas protagonistas y controles sobrios */
+.rwAlbums{align-items:stretch;padding-top:18px;padding-bottom:24px;gap:18px}
+.rwAlbum{background:linear-gradient(160deg,#292e24,#171e19);border:1px solid #b9a17685;padding:10px 10px 15px;box-shadow:0 10px 24px #0004;overflow:hidden}
+.rwAlbum img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:9px;box-shadow:0 6px 18px #0006}
+.rwAlbum.active{transform:translateY(-2px);border-color:#e8c981;box-shadow:0 0 0 2px #d6b66b,0 0 24px #d7af5260,0 10px 24px #0005}
+.rwAlbum span{font-family:Georgia,serif;letter-spacing:.015em}
+.rwControls button,.rwButton{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.rwControls button{display:grid;place-items:center;line-height:1;border-radius:50%;width:42px;height:42px;background:#ffffff0a;border:1px solid #c9b47a88;color:#f4e9d1}
+.rwControls button svg,.rwButton svg{display:block;width:22px;height:22px}
+.rwControls #rwPlay{display:grid;place-items:center;width:52px;height:52px;background:#e9d4a4;color:#243128;border:2px solid #a88a4d}
+.rwButton{display:inline-flex;align-items:center;justify-content:center;gap:9px;background:#374a38;color:#fff6df;border:1px solid #bca46d;box-shadow:0 3px 12px #0002}
+.rwTrack{border-bottom:1px solid #dacdb6!important}.rwTrack.active{background:#ead6ad!important}.rwTrack:not(.active){background:#fffaf3!important}
+#derejToolsRadioSheet .derejToolsTrack{display:grid;grid-template-columns:84px minmax(0,1fr);column-gap:14px;align-items:center}
+#derejToolsRadioSheet .derejToolsCover{grid-row:1/4;width:84px;height:84px;object-fit:cover;border-radius:12px}
+#derejToolsRadioSheet .derejToolsTrack small,#derejToolsRadioSheet .derejToolsTrack b,#derejToolsRadioSheet .derejToolsAlbumName{grid-column:2;min-width:0}
+#derejToolsRadioSheet .derejToolsTrack b{overflow-wrap:anywhere}
+@media(max-width:580px){
+ .rwAlbums{gap:12px}
+ .rwAlbum{flex-basis:min(64vw,235px);padding:8px 8px 13px}
+ .rwDetails{grid-template-columns:100px minmax(0,1fr);gap:14px}
+ .rwInfo{text-align:left;padding:0}
+ .rwInfo h2{font-size:clamp(1.3rem,5.5vw,1.8rem);line-height:1.12}
+ .rwInfo p{margin:8px 0}
+ .rwInfo .rwSub{font-size:.73rem}
+ .rwButton{width:100%;min-width:0;padding:12px 10px;margin-top:8px}
+ .rwBigCover{width:100%;max-width:100px}
+ .rwControls button{width:43px;height:43px}
+ #derejToolsRadioSheet .derejToolsCover{width:74px;height:74px}
+ #derejToolsRadioSheet .derejToolsTrack{grid-template-columns:74px minmax(0,1fr)}
+}
