@@ -40893,6 +40893,7 @@ loadRamak();
       <section class="derejToolsCard" role="dialog" aria-modal="true" aria-labelledby="derejToolsRadioTitle">
         <header><div><small>RADIO DÉREJ</small><h2 id="derejToolsRadioTitle">Escuchar mientras caminas</h2></div><button type="button" data-derej-tools-close aria-label="Cerrar">×</button></header>
         <div class="derejToolsTrack" aria-live="polite" aria-atomic="true">
+          <img class="derejToolsCover" id="derejToolsCover" src="icon-512.png" alt="Carátula de la canción actual" loading="lazy">
           <small>AHORA ESCUCHANDO</small>
           <b id="derejToolsTrackTitle">Preparando la escucha…</b>
           <span id="derejToolsAlbumName" class="derejToolsAlbumName">Radio DÉREJ</span>
@@ -40984,9 +40985,11 @@ loadRamak();
     document.head.appendChild(style);
 
 
-    const audio=document.getElementById('radioV21Audio');
-    const sourceTitle=document.getElementById('radioV21TrackTitle');
-    const sourceAlbum=document.getElementById('radioV21AlbumTitle');
+    const audio=document.getElementById('rwAudio')||document.getElementById('radioV21Audio');
+    const sourceTitle=document.getElementById('rwNowTitle')||document.getElementById('radioV21TrackTitle');
+    const sourceAlbum=document.getElementById('rwNowAlbum')||document.getElementById('radioV21AlbumTitle');
+    const sourceCover=document.getElementById('rwMiniCover');
+    const popupCover=document.getElementById('derejToolsCover');
     const play=document.querySelector('[data-derej-tools-play]');
     const track=document.getElementById('derejToolsTrackTitle');
     const albumName=document.getElementById('derejToolsAlbumName');
@@ -40995,6 +40998,7 @@ loadRamak();
     const syncRadio=()=>{
       if(track&&sourceTitle)track.textContent=(sourceTitle.textContent&&sourceTitle.textContent!=='Preparando la escucha…')?sourceTitle.textContent:'Sin canción seleccionada';
       if(albumName&&sourceAlbum)albumName.textContent=sourceAlbum.textContent||'Radio DÉREJ';
+      if(popupCover&&sourceCover&&popupCover.getAttribute('src')!==sourceCover.getAttribute('src'))popupCover.src=sourceCover.src;
       if(play&&audio){
         const playing=!audio.paused&&!audio.ended;
         if(play.dataset.playing!==String(playing)){
@@ -41007,6 +41011,7 @@ loadRamak();
     };
     sourceTitle&&new MutationObserver(syncRadio).observe(sourceTitle,{childList:true,subtree:true});
     sourceAlbum&&new MutationObserver(syncRadio).observe(sourceAlbum,{childList:true,subtree:true});
+    sourceCover&&new MutationObserver(syncRadio).observe(sourceCover,{attributes:true,attributeFilter:['src']});
     audio?.addEventListener('play',syncRadio);
     audio?.addEventListener('pause',syncRadio);
     audio?.addEventListener('ended',syncRadio);
@@ -41047,9 +41052,9 @@ loadRamak();
         document.querySelectorAll('.derejToolsSheet').forEach(x=>x.hidden=true);
         return;
       }
-      if(e.target.closest('[data-derej-tools-play]')){document.getElementById('radioV21Play')?.click();setTimeout(syncRadio,100);return;}
-      if(e.target.closest('[data-derej-tools-prev]')){document.getElementById('radioV21Prev')?.click();setTimeout(syncRadio,100);return;}
-      if(e.target.closest('[data-derej-tools-next]')){document.getElementById('radioV21Next')?.click();setTimeout(syncRadio,100);return;}
+      if(e.target.closest('[data-derej-tools-play]')){(document.getElementById('rwPlay')||document.getElementById('radioV21Play'))?.click();syncRadio();return;}
+      if(e.target.closest('[data-derej-tools-prev]')){(document.getElementById('rwPrev')||document.getElementById('radioV21Prev'))?.click();syncRadio();return;}
+      if(e.target.closest('[data-derej-tools-next]')){(document.getElementById('rwNext')||document.getElementById('radioV21Next'))?.click();syncRadio();return;}
       if(!e.target.closest('#derejSideTools')){
         const menu=document.getElementById('derejToolsMenu');
         if(menu&&!menu.hidden){menu.hidden=true;document.querySelector('[data-derej-tools-toggle]')?.setAttribute('aria-expanded','false');}
