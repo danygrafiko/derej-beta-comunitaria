@@ -132,3 +132,61 @@
  #derejToolsRadioSheet .derejToolsCover{width:74px;height:74px}
  #derejToolsRadioSheet .derejToolsTrack{grid-template-columns:74px minmax(0,1fr)}
 }
+
+/* Corrección iPhone 2026-10-28 · La lista ocupa TODAS las columnas.
+   El grid anterior dejaba las pistas dentro de una columna de 100px,
+   apilando las letras verticalmente. */
+.rwDetails{min-width:0}
+.rwTracks{width:100%;min-width:0;max-width:100%;box-sizing:border-box}
+.rwTrack{width:100%;min-width:0;box-sizing:border-box}
+.rwTrackName{display:block;min-width:0;max-width:100%;white-space:normal;word-break:normal;overflow-wrap:break-word;hyphens:none;text-align:left;line-height:1.4}
+@media(max-width:960px){
+ .rwDetails>.rwTracks,#rwTracks{grid-column:1 / -1 !important;grid-row:auto;width:100%;min-width:0}
+}
+@media(max-width:580px){
+ .rwDetails{grid-template-columns:minmax(0,100px) minmax(0,1fr)}
+ .rwDetails>.rwTracks,#rwTracks{grid-column:1 / -1 !important;width:100%;min-width:0;max-width:100%}
+ #rwTracks .rwTrack{display:grid;grid-template-columns:24px minmax(0,1fr) auto 24px;gap:10px;align-items:center;padding:13px 12px;min-height:58px}
+ #rwTracks .rwTrackName{font-size:.88rem;line-height:1.38;white-space:normal;overflow-wrap:break-word;word-break:normal}
+}
+
+/* Reproductor compacto: una banda baja, no un panel grande sobre las carátulas.
+   Fuera de la pantalla principal permite seguir escuchando al recorrer Dérej. */
+body:not(.rwDockVisible)>.rwPlayer{display:none!important}
+body.rwDockVisible>.rwPlayer{
+ position:fixed!important;inset:auto auto calc(8px + env(safe-area-inset-bottom)) 50%!important;
+ transform:translateX(-50%)!important;width:min(calc(100vw - 24px),960px)!important;
+ max-width:960px;z-index:155;box-sizing:border-box;
+ display:grid!important;grid-template-columns:minmax(0,1fr) auto;
+ grid-template-rows:auto auto;gap:2px 14px;align-items:center;
+ padding:8px 14px 9px;margin:0;border-radius:18px;
+ background:rgba(23,39,29,.98);border:1px solid #bda36d;
+ box-shadow:0 6px 28px rgba(0,0,0,.48);
+}
+body.rwDockVisible>.rwPlayer .rwNow{grid-column:1;grid-row:1;gap:10px;min-width:0;overflow:hidden}
+body.rwDockVisible>.rwPlayer .rwNow img{width:42px;height:42px;flex:0 0 42px;object-fit:cover;border-radius:8px}
+body.rwDockVisible>.rwPlayer .rwNow div{min-width:0}
+body.rwDockVisible>.rwPlayer .rwNow b{font:600 .82rem/1.25 system-ui,sans-serif;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+body.rwDockVisible>.rwPlayer .rwNow small{font:.71rem/1.25 system-ui,sans-serif;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+body.rwDockVisible>.rwPlayer .rwPlayerRight{display:contents}
+body.rwDockVisible>.rwPlayer .rwControls{grid-column:2;grid-row:1;gap:4px;justify-content:end}
+body.rwDockVisible>.rwPlayer .rwControls button{width:34px;height:34px;padding:5px;border-radius:50%;border:0;background:transparent;color:#f1e2c1}
+body.rwDockVisible>.rwPlayer .rwControls button svg{width:19px;height:19px}
+body.rwDockVisible>.rwPlayer .rwControls #rwPlay{width:42px;height:42px;padding:10px;background:#ecd6a2;color:#1b2b23;border:1px solid #caa964;box-shadow:0 0 0 2px rgba(232,203,142,.18)}
+body.rwDockVisible>.rwPlayer .rwSeekRow{grid-column:1/-1;grid-row:2;gap:7px;margin-top:2px;height:15px;min-height:15px}
+body.rwDockVisible>.rwPlayer .rwSeekRow input{min-height:15px;height:15px;width:100%;margin:0}
+body.rwDockVisible>.rwPlayer .rwSeekRow span{font-size:.66rem;white-space:nowrap}
+body.rwDockVisible>.rwPlayer .rwStatus{display:none!important}
+.rwScreen{padding-bottom:120px!important}
+body.rwDockPlaying .screen.active:not(.rwScreen){padding-bottom:112px}
+@media(max-width:580px){
+ body.rwDockVisible>.rwPlayer{width:calc(100vw - 18px)!important;bottom:calc(6px + env(safe-area-inset-bottom));padding:8px 10px 8px;gap:1px 7px;border-radius:16px}
+ body.rwDockVisible>.rwPlayer .rwNow{gap:8px}
+ body.rwDockVisible>.rwPlayer .rwNow img{width:38px;height:38px;flex-basis:38px}
+ body.rwDockVisible>.rwPlayer .rwNow b{font-size:.78rem}
+ body.rwDockVisible>.rwPlayer .rwNow small{font-size:.67rem}
+ body.rwDockVisible>.rwPlayer .rwControls{gap:2px}
+ body.rwDockVisible>.rwPlayer .rwControls button{width:32px;height:34px}
+ body.rwDockVisible>.rwPlayer .rwControls #rwPlay{width:40px;height:40px}
+ .rwScreen{padding-bottom:115px!important}
+}
