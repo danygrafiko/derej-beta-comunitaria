@@ -13,3 +13,86 @@
 .rwNow{display:flex;align-items:center;gap:12px;min-width:0}.rwNow img{width:56px;height:56px;object-fit:cover;border-radius:7px}.rwNow div{min-width:0}.rwNow b{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.rwNow small{display:block;color:#d6c59f}
 .rwControls{display:flex;gap:14px;align-items:center;justify-content:center}.rwControls button{background:none;color:#f8ebcf;border:0;font-size:1.3rem;cursor:pointer}.rwControls #rwPlay{border:1px solid #d3b16a;border-radius:100%;width:45px;height:45px;font-size:1.1rem}.rwSeekRow{display:flex;gap:10px;align-items:center;font-size:.72rem;color:#d6c59f}.rwSeekRow input{flex:1;min-width:0;accent-color:#d8b56c}.rwPlayerRight{display:grid;gap:4px}.rwStatus{font-size:.72rem;color:#d8c69f;text-align:center}
 @media(max-width:960px){.rwDetails{grid-template-columns:minmax(110px,190px) 1fr}.rwTracks{grid-column:1/-1}}@media(max-width:580px){.rwScreen{padding:16px;border-radius:17px}.rwDetails{grid-template-columns:110px minmax(0,1fr);gap:12px;padding:14px}.rwInfo h2{font-size:1.35rem}.rwInfo p:not(.rwSub){font-size:.8rem}.rwBigCover{max-width:110px}.rwTracks{grid-column:1/-1}.rwAlbum{flex-basis:165px}.rwPlayer{grid-template-columns:1fr;padding:10px;gap:6px;bottom:4px}.rwNow img{height:39px;width:39px}.rwControls{gap:22px}.rwNow b{font-size:.83rem}}@media(prefers-reduced-motion:reduce){.rwAlbum{transition:none}}
+
+
+/* Radio Dérej · acabado editorial Wurlitzer 2.1 */
+.rwScreen{overflow:visible;isolation:isolate;background:radial-gradient(ellipse at 60% -10%,rgba(175,134,71,.23),transparent 56%),linear-gradient(135deg,#111a14,#283024 48%,#171e17);border:1px solid rgba(198,166,106,.25)}
+.rwHeader{padding:12px 0 6px}
+.rwHeader h1{letter-spacing:.015em;text-wrap:balance}
+.rwHeader p{font:clamp(.95rem,1.6vw,1.16rem)/1.55 Georgia,serif}
+.rwFilters{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:6px auto 20px}
+.rwFilters button{font:600 .82rem/1.1 system-ui,sans-serif;color:#e2d6b8;background:rgba(242,219,178,.07);border:1px solid rgba(218,185,126,.37);border-radius:999px;padding:10px 15px;cursor:pointer;min-height:40px}
+.rwFilters button.active{background:#f0dfb9;color:#243025;border-color:#ead4a1}
+.rwFilters button:focus-visible,.rwCarouselArrow:focus-visible{outline:3px solid #edcb8c;outline-offset:3px}
+.rwCarouselShell{display:grid;grid-template-columns:44px minmax(0,1fr) 44px;gap:8px;align-items:center;margin:0 auto 8px;max-width:1450px}
+.rwCarouselArrow{display:grid;place-items:center;width:42px;height:42px;border:1px solid rgba(238,204,143,.65);border-radius:50%;background:rgba(34,39,26,.85);color:#f7dfac;cursor:pointer}
+.rwCarouselArrow:hover{background:#67552f;color:#fff}
+.rwAlbums{gap:18px;scroll-padding-inline:16px;padding:15px 14px 33px;overscroll-behavior-x:contain}
+.rwAlbum{flex-basis:clamp(190px,21vw,264px);padding:9px 9px 17px;min-height:0;border:1px solid rgba(220,190,137,.5);background:linear-gradient(160deg,rgba(236,207,156,.08),rgba(49,46,33,.25));border-radius:18px;box-shadow:0 9px 24px rgba(0,0,0,.25)}
+.rwAlbum img{border:1px solid rgba(240,220,175,.25);border-radius:12px;aspect-ratio:1/1;object-position:center}
+.rwAlbum small{display:block;margin-top:13px;text-transform:uppercase;letter-spacing:.18em;font:700 .59rem/1.3 system-ui,sans-serif;color:#d2b77d}
+.rwAlbum span{margin:4px 0 0;font:1.02rem/1.3 Georgia,serif;color:#fff3dc}
+.rwAlbum:hover{border-color:#daba7d}
+.rwAlbum.active{border-color:#edd18a;box-shadow:0 0 0 2px #e2b962,0 0 34px rgba(229,179,88,.5);background:linear-gradient(165deg,rgba(196,152,80,.19),rgba(40,45,32,.42))}
+.rwDetails{border:1px solid #e9dcc4;grid-template-columns:minmax(180px,270px) minmax(175px,1fr) minmax(245px,1.3fr);gap:clamp(16px,2.5vw,32px)}
+.rwInfo .rwSub{font:600 .79rem/1.6 system-ui,sans-serif;color:#66583e}
+.rwButton{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:49px;background:linear-gradient(145deg,#79612f,#53431d);box-shadow:inset 0 1px #a28a55,0 6px 18px #3d2d1740;font:600 .92rem/1.2 system-ui,sans-serif;transition:transform .16s ease,box-shadow .16s ease}
+.rwButton svg{display:block;flex-shrink:0}
+.rwButton:hover{box-shadow:0 7px 22px #3d2d1755;transform:translateY(-1px)}
+.rwTrack{grid-template-columns:26px minmax(0,1fr) auto 27px;gap:8px;min-height:55px}
+.rwTrackName{line-height:1.35}
+.rwTrackDuration{font-size:.76rem;color:#8c7b5c}
+.rwTrackIcon{display:grid;place-items:center;color:#6a552f}
+.rwTrackIcon svg{height:16px;width:16px}
+.rwTrack.active{background:#e9d7b0;color:#312815}
+.rwControls button{width:44px;height:44px;display:grid;place-items:center;border-radius:50%;transition:background .15s ease,transform .15s ease}
+.rwControls button svg{display:block}
+.rwControls button:hover{background:#efe1bd22}
+.rwControls #rwPlay{width:53px;height:53px;background:linear-gradient(140deg,#7d6537,#433b20);border:1.5px solid #e8c982;box-shadow:0 0 0 4px #e0b76b22}
+.rwControls #rwPlay:hover{background:#7b6435}
+.rwControls button:active,.rwAlbum:active{transform:scale(.97)}
+.rwPlayer{box-shadow:0 9px 32px #000a;backdrop-filter:blur(14px);background:rgba(25,38,28,.97)}
+.rwNow b{font:600 .95rem/1.3 system-ui,sans-serif}
+.rwNow small{font:.78rem/1.3 system-ui,sans-serif}
+.rwSeekRow input{min-height:22px;cursor:pointer}
+#derejToolsRadioSheet .derejToolsTrack{display:grid;grid-template-columns:84px minmax(0,1fr);gap:4px 15px;align-items:center}
+#derejToolsRadioSheet .derejToolsCover{display:block;grid-row:1 / 4;grid-column:1;width:84px;height:84px;object-fit:cover;border-radius:12px;box-shadow:0 4px 12px rgba(45,31,18,.18)}
+#derejToolsRadioSheet .derejToolsTrack small,#derejToolsRadioSheet .derejToolsTrack b,#derejToolsRadioSheet .derejToolsAlbumName{grid-column:2;min-width:0}
+#derejToolsRadioSheet .derejToolsTrack b{font-size:1.18rem}
+#derejToolsRadioSheet .derejToolsMiniProgress{margin:0 0 17px}
+#derejToolsRadioSheet .derejToolsMiniProgress input{display:block;width:100%;accent-color:#8e7240;height:24px;cursor:pointer}
+#derejToolsRadioSheet .derejToolsMiniProgress div{display:flex;justify-content:space-between;color:#796a51;font:600 .71rem/1.3 system-ui,sans-serif}
+@media(max-width:920px){.rwDetails{grid-template-columns:minmax(140px,210px) minmax(0,1fr)}.rwTracks{grid-column:1/-1}}
+@media(max-width:700px){
+ .rwScreen{padding:18px 13px 20px;min-height:65vh;border-radius:20px}
+ .rwHeader{padding:9px 5px 12px;margin-bottom:0}
+ .rwHeader h1{font-size:clamp(2.5rem,10vw,3.6rem)}
+ .rwHeader p{font-size:.96rem}
+ .rwFilters{gap:6px;flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;padding:0 5px 8px;margin:0 0 15px;scrollbar-width:none}
+ .rwFilters button{flex:0 0 auto;padding:9px 13px;font-size:.78rem}
+ .rwCarouselShell{display:block;margin:0 -5px 9px}
+ .rwCarouselArrow{display:none}
+ .rwAlbums{gap:16px;padding:11px 8% 31px;scroll-padding-inline:8%;scrollbar-width:none}
+ .rwAlbums::-webkit-scrollbar{display:none}
+ .rwAlbum{flex:0 0 min(76vw,320px);padding:9px 9px 18px;border-radius:19px}
+ .rwAlbum small{font-size:.63rem;margin-top:13px}
+ .rwAlbum span{font-size:1.1rem}
+ .rwDetails{display:grid;grid-template-columns:1fr;padding:20px 16px;gap:10px;border-radius:24px}
+ .rwBigCover{width:min(70vw,275px);max-width:100%;margin:0 auto 5px;border-radius:15px}
+ .rwInfo{text-align:center;padding:4px 2px 16px}
+ .rwInfo h2{font-size:clamp(1.8rem,7vw,2.4rem);margin:6px auto 8px}
+ .rwInfo p{margin:8px auto;max-width:35ch}
+ .rwButton{margin-top:16px;min-width:178px;padding:14px 24px}
+ .rwTracks{grid-column:1;padding:0}
+ .rwTrack{grid-template-columns:24px minmax(0,1fr) auto 25px;gap:9px;min-height:62px;padding:12px 10px}
+ .rwTrackName{font-size:.88rem}
+ .rwPlayer{grid-template-columns:minmax(0,1fr);gap:6px;bottom:calc(3px + env(safe-area-inset-bottom));margin:16px 0 0;padding:10px 12px;border-radius:19px}
+ .rwPlayerRight{gap:5px}
+ .rwNow img{width:49px;height:49px}
+ .rwNow b{font-size:.84rem}.rwNow small{font-size:.72rem}
+ .rwControls{gap:25px}
+ .rwControls #rwPlay{width:48px;height:48px}
+ #derejToolsRadioSheet .derejToolsTrack{grid-template-columns:74px minmax(0,1fr)}
+ #derejToolsRadioSheet .derejToolsCover{width:74px;height:74px}
+}
+@media(prefers-reduced-motion:reduce){.rwButton,.rwAlbum,.rwControls button{transition:none}}
