@@ -9107,6 +9107,18 @@ function renderVoiceCard(raw,label){
 
 
 
+// Decodificar formato editorial antes de escapar el texto: nunca insertar HTML de la fuente.
+function normalizeHebrewText(value){
+  const named={nbsp:' ',thinsp:' ',ensp:' ',emsp:' ',amp:'&',lt:'<',gt:'>',quot:'"',apos:"'"};
+  let text=String(value||'');
+  for(let i=0;i<3;i++)text=text.replace(/&(#x[0-9a-f]+|#\d+|[a-z]+);/gi,(whole,key)=>{
+    if(key[0]!=='#')return named[key.toLowerCase()]??whole;
+    const code=key[1].toLowerCase()==='x'?parseInt(key.slice(2),16):Number(key.slice(1));
+    return code>0&&code<=0x10ffff&&!(code>=0xd800&&code<=0xdfff)?String.fromCodePoint(code):whole;
+  });
+  return text.normalize('NFC').replace(/\s+/gu,' ').trim();
+}
+
 function renderPanels(p,c){
   const rc=c.ramak_color||{};
   const saved=loadRamakMemory(p.parasha,c.dia)||{};
@@ -9638,7 +9650,7 @@ function renderPanels(p,c){
     <div class="ramakBody">
       <span class="ramakBodyEyebrow">RAÍZ · ${esc(p.parasha)}</span>
       <div class="ramakCard ramakVerseCard">
-        <div class="ramakHebrew">${esc(pasuk.hebreo||'')}</div>
+        <div class="ramakHebrew" lang="he" dir="rtl">${esc(normalizeHebrewText(pasuk.hebreo))}</div>
         ${pasuk.es?`<p class="derejVerseTranslation">${esc(pasuk.es)}</p>`:''}
         ${pasuk.es_tipo?`<small class="derejVerseKind">${esc(pasuk.es_tipo)}</small>`:''}
         <div class="ramakPasukMeta">

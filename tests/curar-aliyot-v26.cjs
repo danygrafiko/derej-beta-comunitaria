@@ -27,7 +27,7 @@ for(const [parasha,day,verse,title,es,context,question,action,...applications] o
  const hebrew=books[book]?.he?.[chapter-1]?.[v-1];
  if(!hebrew)throw Error('Versículo no encontrado: '+book+' '+verse);
  c.titulo=title;
- c.pasuk={hebreo:hebrew.replace(/<[^>]*>/g,'').replace(/[\u0591-\u05af]/g,''),trans:'',ref:book+' '+verse,es,es_tipo:'PARÁFRASIS DÉREJ',fuente_url:'https://www.sefaria.org/'+(book==='Bereshit'?'Genesis':'Exodus')+'.'+verse.replace(':','.')};
+ c.pasuk={hebreo:hebrew.replace(/&(?:nbsp|thinsp|ensp|emsp);/gi,' ').replace(/&#(?:x([0-9a-f]+)|(\d+));/gi,(_,hex,dec)=>String.fromCodePoint(parseInt(hex||dec,hex?16:10))).replace(/<[^>]*>/g,'').replace(/[\u0591-\u05af]/g,''),trans:'',ref:book+' '+verse,es,es_tipo:'PARÁFRASIS DÉREJ',fuente_url:'https://www.sefaria.org/'+(book==='Bereshit'?'Genesis':'Exodus')+'.'+verse.replace(':','.')};
  c.rootNote=context+' El texto español es una paráfrasis de Dérej. Las cuatro voces ofrecen marcos de lectura; sus aplicaciones a esta escena son nuestras y no comentarios directos de los maestros a este versículo.';
  c.reflexion=question;
  c.paraLlevar={avoda:action,kavana:applications[0],hitbodedut:applications[3]+' Puedes hacerlo en tus propias palabras; la participación es libre.'};

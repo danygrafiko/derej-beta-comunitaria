@@ -19,6 +19,8 @@ w.fetch=async url=>({ok:true,json:async()=>String(url).includes('caminos-ramak')
 (async()=>{
  for(const f of ['voces-content.js','encuentros-v21.js','prelaunch-local.js','mobile-v234.js','navigation-v235.js','cleanup-v236.js','navigation-v241.js'])evaluate(fs.readFileSync(path.join(root,f),'utf8'));
  await pause();
+ assert.equal(evaluate("normalizeHebrewText('א&thinsp;ב&nbsp;ג&#x5d3;&#1492;')"),'א ב גדה');
+ assert.equal(evaluate("normalizeHebrewText('&amp;thinsp;א')"),'א');
  evaluate('route("camino")');
  // Recorrido de ida y vuelta: solo una etapa y un panel activos por selección.
  for(const step of ['profundizar','raiz','practica','llevar','encuentro','profundizar','encuentro']){
@@ -39,6 +41,11 @@ w.fetch=async url=>({ok:true,json:async()=>String(url).includes('caminos-ramak')
    const url=new URL(card.querySelector('a').href);assert.equal(url.searchParams.get('aliya'),String(c.dia));
    assert(card.textContent.includes(c.aliyaRange));
    const rootPanel=w.document.querySelector('[data-ramak-panel="raiz"]');assert(rootPanel.textContent.includes(c.pasuk.es));
+   const hebrew=rootPanel.querySelector('.ramakHebrew');
+   assert.equal(hebrew.lang,'he');assert.equal(hebrew.dir,'rtl');
+   assert(!/&#?\w+;|<[^>]+>|�/.test(hebrew.textContent),p.parasha+'/'+c.dia);
+   assert.equal(hebrew.textContent,evaluate('normalizeHebrewText('+JSON.stringify(c.pasuk.hebreo)+')'));
+
    if(c.pasuk.es_tipo)assert.equal(rootPanel.querySelector('.derejVerseKind').textContent,c.pasuk.es_tipo);
    assert.equal(w.document.querySelectorAll('.ramakVoices .ramakVoice').length,4+(c.voces.baalshemtov||p.parasha==='Noaj'&&c.dia===1?1:0));
    if(p.parasha!=='Noaj')assert(!/Teivá|entrada de Noaj al arca/.test(w.document.querySelector('.ramakVoices').textContent),p.parasha+'/'+c.dia);
