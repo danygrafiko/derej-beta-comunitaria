@@ -26248,6 +26248,8 @@ loadRamak();
 (()=>{
   const screen=document.querySelector('[data-screen="radio"]');
   if(!screen) return;
+  // Wurlitzer is the dedicated Radio renderer. Keep the legacy renderer inactive.
+  if(screen.id === 'radioWurlitzer') return;
 
 
 
