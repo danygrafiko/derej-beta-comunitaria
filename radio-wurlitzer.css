@@ -96,3 +96,8 @@
  #derejToolsRadioSheet .derejToolsCover{width:74px;height:74px}
 }
 @media(prefers-reduced-motion:reduce){.rwButton,.rwAlbum,.rwControls button{transition:none}}
+
+/* Una sola pista destacada; no colorear filas alternas */
+#rwTracks .rwTrack:not(.active){background:transparent}
+#rwTracks .rwTrack.active{background:#ead6ad}
+#rwTracks .rwTrack:not(.active):hover{background:#f5e7ca}
