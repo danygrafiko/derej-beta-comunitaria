@@ -37,9 +37,14 @@ $('rwDockToggle')?.addEventListener('click',()=>{rwDockMode=rwDockMode==='expand
 $('rwDockDismiss')?.addEventListener('click',()=>{rwDockMode='hidden';syncDockVisibility()});
 rwRestore?.addEventListener('click',()=>{rwDockMode='compact';syncDockVisibility()});
 new MutationObserver(syncDockVisibility).observe(root,{attributes:true,attributeFilter:['hidden','class','style']});
-audio.addEventListener('play',()=>{rwPlaybackStarted=true;syncDockVisibility()});
+audio.addEventListener('play',()=>{
+ rwPlaybackStarted=true;rwShowingTrackArt=true;
+ if(current?.tracks?.[index])showNowCover(current.tracks[index]);
+ syncDockVisibility();
+});
 syncDockVisibility();
 let playlists=[],current=null,index=0,filter='todas',requestVersion=0;
+let rwShowingTrackArt=false; // album in selector; original song artwork in the hero after play
 const embeddedCovers=new Map();
 function pathUrl(path){
  if(!path)return '';
@@ -64,8 +69,28 @@ function musicMeta(t){
    navigator.mediaSession.metadata=new MediaMetadata({title:t.title,artist:t.artist||'Danygrafiko',album:current?.title||'Radio Dérej',artwork:[{src:trackArt(t),sizes:'any',type:trackArt(t).startsWith('blob:')?(t.embeddedMime||'image/jpeg'):'image/png'}]});
  }catch{}
 }
-function showNowCover(src){
- cover($('rwMiniCover'),src);cover($('rwBigCover'),src);
+function showNowCover(track){
+ // El Wurlitzer siempre conserva las portadas de álbum en el carrusel.
+ // El panel de escucha muestra la carátula individual cuando comienza una pista.
+ const songArt=trackArt(track);
+ const coverSrc=rwShowingTrackArt?songArt:art(current);
+ cover($('rwMiniCover'),songArt);
+ cover($('rwBigCover'),coverSrc);
+ const figure=$('rwBigCover');
+ if(figure){
+   figure.alt=rwShowingTrackArt
+     ? 'Carátula de '+track.title+' · '+(current?.title||'Radio Dérej')
+     : 'Carátula de '+(current?.title||'Radio Dérej');
+ }
+ const visualLabel=$('rwVisualLabel');
+ const visualTitle=$('rwVisualTrack');
+ if(visualLabel){
+   visualLabel.textContent=rwShowingTrackArt
+     ? (track.aliyah?'ALIYÁ '+track.aliyah+' · CARÁTULA DE LA CANCIÓN':'CARÁTULA DE LA CANCIÓN')
+     : 'PORTADA DE LA COLECCIÓN';
+ }
+ if(visualTitle) visualTitle.textContent=rwShowingTrackArt ? track.title : current?.title||'Radio Dérej';
+ root.classList.toggle('rwHeroSong',rwShowingTrackArt);
 }
 function setPlayerButtons(){
  const playing=!audio.paused&&!audio.ended;
@@ -91,7 +116,8 @@ function selectTrack(i,play=false){
  $('rwNowAlbum').textContent=current.title;
  $('rwDuration').textContent=t.duration||'0:00';
  $('rwElapsed').textContent='0:00';$('rwSeek').value='0';
- showNowCover(trackArt(t));
+ if(play)rwShowingTrackArt=true;
+ showNowCover(t);
  $('rwTracks').querySelectorAll('button').forEach((b,j)=>{b.classList.toggle('active',j===index);b.setAttribute('aria-current',j===index?'true':'false')});
  musicMeta(t);setPlayerButtons();
  try{localStorage.setItem('derej:rw:track:'+current.id,String(index))}catch{}
@@ -100,7 +126,7 @@ function selectTrack(i,play=false){
  readEmbeddedCover(t).then(src=>{
    if(!src||version!==requestVersion)return;
    t.embeddedArtwork=src;
-   showNowCover(src);musicMeta(t);
+   showNowCover(t);musicMeta(t);
    if(current?.id==='vayera-parashat'&&!current.embeddedArtwork){
      current.embeddedArtwork=src;
      const card=$('rwAlbums').querySelector('button[data-id="vayera-parashat"] img');
@@ -111,7 +137,7 @@ function selectTrack(i,play=false){
 function choose(id,play=false){
  const p=playlists.find(p=>p.id===id);if(!p)return;
  const changed=current?.id!==id;
- if(changed){audio.pause();current=p;index=0;}
+ if(changed){audio.pause();current=p;index=0;rwShowingTrackArt=false;root.classList.remove('rwHeroSong');}
  $('rwTitle').textContent=p.title;
  $('rwSubtitle').textContent=[p.kind,p.tracks.length+' canciones','Danygrafiko'].filter(Boolean).join(' · ');
  $('rwDescription').textContent=description(p);
