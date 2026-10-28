@@ -26248,6 +26248,8 @@ loadRamak();
 (()=>{
   const screen=document.querySelector('[data-screen="radio"]');
   if(!screen) return;
+  // Wurlitzer is the dedicated Radio renderer. Keep the legacy renderer inactive.
+  if(screen.id === 'radioWurlitzer') return;
 
 
 
@@ -40891,10 +40893,12 @@ loadRamak();
       <section class="derejToolsCard" role="dialog" aria-modal="true" aria-labelledby="derejToolsRadioTitle">
         <header><div><small>RADIO DÉREJ</small><h2 id="derejToolsRadioTitle">Escuchar mientras caminas</h2></div><button type="button" data-derej-tools-close aria-label="Cerrar">×</button></header>
         <div class="derejToolsTrack" aria-live="polite" aria-atomic="true">
+          <img class="derejToolsCover" id="derejToolsCover" src="icon-512.png" alt="Carátula de la canción actual" loading="lazy">
           <small>AHORA ESCUCHANDO</small>
           <b id="derejToolsTrackTitle">Preparando la escucha…</b>
           <span id="derejToolsAlbumName" class="derejToolsAlbumName">Radio DÉREJ</span>
         </div>
+        <div class="derejToolsMiniProgress"><input id="derejToolsSeek" type="range" min="0" max="1000" value="0" aria-label="Posición de reproducción"><div><span id="derejToolsElapsed">0:00</span><span id="derejToolsDuration">0:00</span></div></div>
         <div class="derejToolsRadioControls" role="group" aria-label="Controles de Radio DÉREJ">
           <button type="button" class="derejMiniStep" data-derej-tools-prev aria-label="Canción anterior" title="Canción anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 20 9 12l10-8v16Z"/><path d="M5 5v14"/></svg></button>
           <button type="button" class="derejMiniPrimary" data-derej-tools-play aria-label="Reproducir" title="Reproducir"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 4.8c0-.83.9-1.33 1.6-.86l9.72 6.57c.96.65.96 1.42 0 2.08L9.6 19.16c-.7.48-1.6-.02-1.6-.85V4.8Z"/></svg></button>
@@ -40982,9 +40986,11 @@ loadRamak();
     document.head.appendChild(style);
 
 
-    const audio=document.getElementById('radioV21Audio');
-    const sourceTitle=document.getElementById('radioV21TrackTitle');
-    const sourceAlbum=document.getElementById('radioV21AlbumTitle');
+    const audio=document.getElementById('rwAudio')||document.getElementById('radioV21Audio');
+    const sourceTitle=document.getElementById('rwNowTitle')||document.getElementById('radioV21TrackTitle');
+    const sourceAlbum=document.getElementById('rwNowAlbum')||document.getElementById('radioV21AlbumTitle');
+    const sourceCover=document.getElementById('rwMiniCover');
+    const popupCover=document.getElementById('derejToolsCover');
     const play=document.querySelector('[data-derej-tools-play]');
     const track=document.getElementById('derejToolsTrackTitle');
     const albumName=document.getElementById('derejToolsAlbumName');
@@ -40993,6 +40999,7 @@ loadRamak();
     const syncRadio=()=>{
       if(track&&sourceTitle)track.textContent=(sourceTitle.textContent&&sourceTitle.textContent!=='Preparando la escucha…')?sourceTitle.textContent:'Sin canción seleccionada';
       if(albumName&&sourceAlbum)albumName.textContent=sourceAlbum.textContent||'Radio DÉREJ';
+      if(popupCover&&sourceCover&&popupCover.getAttribute('src')!==sourceCover.getAttribute('src'))popupCover.src=sourceCover.src;
       if(play&&audio){
         const playing=!audio.paused&&!audio.ended;
         if(play.dataset.playing!==String(playing)){
@@ -41005,11 +41012,25 @@ loadRamak();
     };
     sourceTitle&&new MutationObserver(syncRadio).observe(sourceTitle,{childList:true,subtree:true});
     sourceAlbum&&new MutationObserver(syncRadio).observe(sourceAlbum,{childList:true,subtree:true});
+    sourceCover&&new MutationObserver(syncRadio).observe(sourceCover,{attributes:true,attributeFilter:['src']});
     audio?.addEventListener('play',syncRadio);
     audio?.addEventListener('pause',syncRadio);
     audio?.addEventListener('ended',syncRadio);
     audio?.addEventListener('loadedmetadata',syncRadio);
-    syncRadio();
+    const popupSeek=document.getElementById('derejToolsSeek');
+    const syncPosition=()=>{
+      if(!audio)return;
+      const duration=audio.duration,finite=Number.isFinite(duration)&&duration>0;
+      if(popupSeek)popupSeek.value=finite?String(Math.round(1000*audio.currentTime/duration)):'0';
+      const fmt=s=>Number.isFinite(s)?Math.floor(s/60)+':'+String(Math.floor(s%60)).padStart(2,'0'):'0:00';
+      const elapsed=document.getElementById('derejToolsElapsed'),total=document.getElementById('derejToolsDuration');
+      if(elapsed)elapsed.textContent=fmt(audio.currentTime);
+      if(total)total.textContent=fmt(duration);
+    };
+    audio?.addEventListener('timeupdate',syncPosition);
+    audio?.addEventListener('loadedmetadata',syncPosition);
+    popupSeek?.addEventListener('input',()=>{if(audio&&Number.isFinite(audio.duration))audio.currentTime=audio.duration*Number(popupSeek.value)/1000});
+    syncRadio();syncPosition();
 
 
     document.addEventListener('click',e=>{
@@ -41045,9 +41066,9 @@ loadRamak();
         document.querySelectorAll('.derejToolsSheet').forEach(x=>x.hidden=true);
         return;
       }
-      if(e.target.closest('[data-derej-tools-play]')){document.getElementById('radioV21Play')?.click();setTimeout(syncRadio,100);return;}
-      if(e.target.closest('[data-derej-tools-prev]')){document.getElementById('radioV21Prev')?.click();setTimeout(syncRadio,100);return;}
-      if(e.target.closest('[data-derej-tools-next]')){document.getElementById('radioV21Next')?.click();setTimeout(syncRadio,100);return;}
+      if(e.target.closest('[data-derej-tools-play]')){(document.getElementById('rwPlay')||document.getElementById('radioV21Play'))?.click();syncRadio();return;}
+      if(e.target.closest('[data-derej-tools-prev]')){(document.getElementById('rwPrev')||document.getElementById('radioV21Prev'))?.click();syncRadio();return;}
+      if(e.target.closest('[data-derej-tools-next]')){(document.getElementById('rwNext')||document.getElementById('radioV21Next'))?.click();syncRadio();return;}
       if(!e.target.closest('#derejSideTools')){
         const menu=document.getElementById('derejToolsMenu');
         if(menu&&!menu.hidden){menu.hidden=true;document.querySelector('[data-derej-tools-toggle]')?.setAttribute('aria-expanded','false');}
