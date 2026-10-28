@@ -1,0 +1,362 @@
+{
+  "schema_version": 2,
+  "station": "Radio Dérej",
+  "updated_at": "2026-10-28",
+  "playlists": [
+    {
+      "id": "vayera-meditacion",
+      "title": "Vayerá · Meditación guiada",
+      "kind": "Meditación guiada",
+      "parasha": "Vayerá",
+      "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Meditacion%20Guiada%20Vayera/Caratula/Amanecer%20de%20olivos%20en%20Mamre-4.png",
+      "tracks": [
+        {
+          "id": "vayera-meditacion-1",
+          "title": "Una sombra para el otro",
+          "artist": "Danygrafiko",
+          "collection": "Vayerá · Meditación guiada",
+          "aliyah": 1,
+          "path": "Meditacion Guiada Vayera/MP3/1.Una sombra para el otro.mp3",
+          "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Meditacion%20Guiada%20Vayera/Caratula/Amanecer%20de%20olivos%20en%20Mamre-4.png"
+        },
+        {
+          "id": "vayera-meditacion-2",
+          "title": "Una voz para el otro",
+          "artist": "Danygrafiko",
+          "collection": "Vayerá · Meditación guiada",
+          "aliyah": 2,
+          "path": "Meditacion Guiada Vayera/MP3/2.Una voz para el otro.mp3",
+          "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Meditacion%20Guiada%20Vayera/Caratula/Amanecer%20de%20olivos%20en%20Mamre-4.png"
+        },
+        {
+          "id": "vayera-meditacion-3",
+          "title": "Un paso hacia el cuidado",
+          "artist": "Danygrafiko",
+          "collection": "Vayerá · Meditación guiada",
+          "aliyah": 3,
+          "path": "Meditacion Guiada Vayera/MP3/3.Un paso hacia el cuidado.mp3",
+          "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Meditacion%20Guiada%20Vayera/Caratula/Amanecer%20de%20olivos%20en%20Mamre-4.png"
+        },
+        {
+          "id": "vayera-meditacion-4",
+          "title": "Dar lugar a lo que nace",
+          "artist": "Danygrafiko",
+          "collection": "Vayerá · Meditación guiada",
+          "aliyah": 4,
+          "path": "Meditacion Guiada Vayera/MP3/4.Dar lugar a lo que nace.mp3",
+          "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Meditacion%20Guiada%20Vayera/Caratula/Amanecer%20de%20olivos%20en%20Mamre-4.png"
+        },
+        {
+          "id": "vayera-meditacion-5",
+          "title": "El agua que aún no veo",
+          "artist": "Danygrafiko",
+          "collection": "Vayerá · Meditación guiada",
+          "aliyah": 5,
+          "path": "Meditacion Guiada Vayera/MP3/5.El agua que aun no veo.mp3",
+          "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Meditacion%20Guiada%20Vayera/Caratula/Amanecer%20de%20olivos%20en%20Mamre-4.png"
+        },
+        {
+          "id": "vayera-meditacion-6",
+          "title": "Un lugar para la paz",
+          "artist": "Danygrafiko",
+          "collection": "Vayerá · Meditación guiada",
+          "aliyah": 6,
+          "path": "Meditacion Guiada Vayera/MP3/6.Un lugar para la paz.mp3",
+          "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Meditacion%20Guiada%20Vayera/Caratula/Amanecer%20de%20olivos%20en%20Mamre-4.png"
+        },
+        {
+          "id": "vayera-meditacion-7",
+          "title": "Hineni, aquí estoy",
+          "artist": "Danygrafiko",
+          "collection": "Vayerá · Meditación guiada",
+          "aliyah": 7,
+          "path": "Meditacion Guiada Vayera/MP3/7.Hineni_ aqui estoy.mp3",
+          "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Meditacion%20Guiada%20Vayera/Caratula/Amanecer%20de%20olivos%20en%20Mamre-4.png"
+        }
+      ]
+    },
+    {
+      "id": "vayera-suite",
+      "title": "Vayerá · Suite",
+      "kind": "Suite sinfónica",
+      "parasha": "Vayerá",
+      "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Parashat%20Vayera%20Suite/Caratula/Vayera_%20violin%20al%20amanecer-1.png",
+      "tracks": [
+        {
+          "id": "vayera-suite-1",
+          "title": "Bajo la sombra de Mamré",
+          "artist": "Danygrafiko",
+          "collection": "Vayerá · Suite",
+          "aliyah": 1,
+          "path": "Parashat Vayera Suite/MP3/1.Bajo la sombra de Mamre.mp3",
+          "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Parashat%20Vayera%20Suite/Caratula/Vayera_%20violin%20al%20amanecer-1.png"
+        },
+        {
+          "id": "vayera-suite-2",
+          "title": "Todavía quedan diez",
+          "artist": "Danygrafiko",
+          "collection": "Vayerá · Suite",
+          "aliyah": 2,
+          "path": "Parashat Vayera Suite/MP3/2.Todavia quedan diez.mp3",
+          "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Parashat%20Vayera%20Suite/Caratula/Vayera_%20violin%20al%20amanecer-1.png"
+        },
+        {
+          "id": "vayera-suite-3",
+          "title": "Hay una mano que te saca",
+          "artist": "Danygrafiko",
+          "collection": "Vayerá · Suite",
+          "aliyah": 3,
+          "path": "Parashat Vayera Suite/MP3/3.Hay una mano que te saca.mp3",
+          "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Parashat%20Vayera%20Suite/Caratula/Vayera_%20violin%20al%20amanecer-1.png"
+        },
+        {
+          "id": "vayera-suite-4",
+          "title": "Al tiempo prometido",
+          "artist": "Danygrafiko",
+          "collection": "Vayerá · Suite",
+          "aliyah": 4,
+          "path": "Parashat Vayera Suite/MP3/4.Al tiempo prometido.mp3",
+          "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Parashat%20Vayera%20Suite/Caratula/Vayera_%20violin%20al%20amanecer-1.png"
+        },
+        {
+          "id": "vayera-suite-5",
+          "title": "Agar y el pozo de agua",
+          "artist": "Danygrafiko",
+          "collection": "Vayerá · Suite",
+          "aliyah": 5,
+          "path": "Parashat Vayera Suite/MP3/5.Agar y el pozo de agua.mp3",
+          "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Parashat%20Vayera%20Suite/Caratula/Vayera_%20violin%20al%20amanecer-1.png"
+        },
+        {
+          "id": "vayera-suite-6",
+          "title": "Siete corderas",
+          "artist": "Danygrafiko",
+          "collection": "Vayerá · Suite",
+          "aliyah": 6,
+          "path": "Parashat Vayera Suite/MP3/6.Siete corderas.mp3",
+          "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Parashat%20Vayera%20Suite/Caratula/Vayera_%20violin%20al%20amanecer-1.png"
+        },
+        {
+          "id": "vayera-suite-7",
+          "title": "Detén la mano",
+          "artist": "Danygrafiko",
+          "collection": "Vayerá · Suite",
+          "aliyah": 7,
+          "path": "Parashat Vayera Suite/MP3/7.Deten la mano.mp3",
+          "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Parashat%20Vayera%20Suite/Caratula/Vayera_%20violin%20al%20amanecer-1.png"
+        }
+      ]
+    },
+    {
+      "id": "vayera-parashat",
+      "title": "Vayerá · Mediterránea",
+      "kind": "Parashat · Mediterránea",
+      "parasha": "Vayerá",
+      "artwork": "icon-512.png",
+      "tracks": [
+        {
+          "id": "vayera-parashat-1",
+          "title": "Hay sitio bajo el árbol",
+          "artist": "Danygrafiko",
+          "collection": "Vayerá · Mediterránea",
+          "aliyah": 1,
+          "path": "Parshat Vayera Mediterranean/MP3/1.Hay sitio bajo el arbol.mp3",
+          "artwork": "icon-512.png"
+        },
+        {
+          "id": "vayera-parashat-2",
+          "title": "Aunque fueran diez",
+          "artist": "Danygrafiko",
+          "collection": "Vayerá · Mediterránea",
+          "aliyah": 2,
+          "path": "Parshat Vayera Mediterranean/MP3/2.Aunque fueran diez.mp3",
+          "artwork": "icon-512.png"
+        },
+        {
+          "id": "vayera-parashat-3",
+          "title": "La mano que te saca",
+          "artist": "Danygrafiko",
+          "collection": "Vayerá · Mediterránea",
+          "aliyah": 3,
+          "path": "Parshat Vayera Mediterranean/MP3/3.La mano que te saca.mp3",
+          "artwork": "icon-512.png"
+        },
+        {
+          "id": "vayera-parashat-4",
+          "title": "Un Hijo para Sara",
+          "artist": "Danygrafiko",
+          "collection": "Vayerá · Mediterránea",
+          "aliyah": 4,
+          "path": "Parshat Vayera Mediterranean/MP3/4.Un Hijo para Sara.mp3",
+          "artwork": "icon-512.png"
+        },
+        {
+          "id": "vayera-parashat-5",
+          "title": "Donde está su voz",
+          "artist": "Danygrafiko",
+          "collection": "Vayerá · Mediterránea",
+          "aliyah": 5,
+          "path": "Parshat Vayera Mediterranean/MP3/5.Donde esta su voz.mp3",
+          "artwork": "icon-512.png"
+        },
+        {
+          "id": "vayera-parashat-6",
+          "title": "Siete corderas y un pozo",
+          "artist": "Danygrafiko",
+          "collection": "Vayerá · Mediterránea",
+          "aliyah": 6,
+          "path": "Parshat Vayera Mediterranean/MP3/6.Siete corderas y un pozo.mp3",
+          "artwork": "icon-512.png"
+        },
+        {
+          "id": "vayera-parashat-7",
+          "title": "No extiendas la mano",
+          "artist": "Danygrafiko",
+          "collection": "Vayerá · Mediterránea",
+          "aliyah": 7,
+          "path": "Parshat Vayera Mediterranean/MP3/7.No extiendas la mano.mp3",
+          "artwork": "icon-512.png"
+        }
+      ]
+    },
+    {
+      "id": "meditacion-original",
+      "title": "Meditación · Colección original",
+      "kind": "Meditación",
+      "parasha": null,
+      "artwork": "radio-meditacion.png",
+      "tracks": [
+        {
+          "id": "med-01",
+          "title": "Shofar of Contemplation",
+          "artist": "Danygrafiko",
+          "collection": "Radio Dérej · Meditación",
+          "duration": "3:24",
+          "path": "Meditacion I/MP3/01-shofar-of-contemplation.mp3",
+          "artwork": "radio-meditacion.png",
+          "ai_assisted": true
+        },
+        {
+          "id": "med-02",
+          "title": "Dawn over the Stone Room",
+          "artist": "Danygrafiko",
+          "collection": "Radio Dérej · Meditación",
+          "duration": "3:14",
+          "path": "Meditacion I/MP3/02-dawn-over-the-stone-room.mp3",
+          "artwork": "radio-meditacion.png",
+          "ai_assisted": true
+        },
+        {
+          "id": "med-03",
+          "title": "Breathing Through the Woods",
+          "artist": "Danygrafiko",
+          "collection": "Radio Dérej · Meditación",
+          "duration": "3:58",
+          "path": "Meditacion I/MP3/03-breathing-through-the-woods.mp3",
+          "artwork": "radio-meditacion.png",
+          "ai_assisted": true
+        },
+        {
+          "id": "med-04",
+          "title": "Cosmic Serenity",
+          "artist": "Danygrafiko",
+          "collection": "Radio Dérej · Meditación",
+          "duration": "4:04",
+          "path": "Meditacion I/MP3/04-cosmic-serenity.mp3",
+          "artwork": "radio-meditacion.png",
+          "ai_assisted": true
+        },
+        {
+          "id": "med-05",
+          "title": "Resonancia Oceánica",
+          "artist": "Danygrafiko",
+          "collection": "Radio Dérej · Meditación",
+          "duration": "4:00",
+          "path": "Meditacion I/MP3/05-resonancia-oceanica.mp3",
+          "artwork": "radio-meditacion.png",
+          "ai_assisted": true
+        },
+        {
+          "id": "med-06",
+          "title": "Oy, Neshama",
+          "artist": "Danygrafiko",
+          "collection": "Radio Dérej · Meditación",
+          "duration": "2:00",
+          "path": "Meditacion I/MP3/06-oy-coma-neshama.mp3",
+          "artwork": "radio-meditacion.png",
+          "ai_assisted": true
+        },
+        {
+          "id": "med-07",
+          "title": "Nafshi Adonai",
+          "artist": "Danygrafiko",
+          "collection": "Radio Dérej · Meditación",
+          "duration": "3:00",
+          "path": "Meditacion I/MP3/07-nafshi-adonai.mp3",
+          "artwork": "radio-meditacion.png",
+          "ai_assisted": true
+        },
+        {
+          "id": "med-08",
+          "title": "Dum Na, Dum Na Re",
+          "artist": "Danygrafiko",
+          "collection": "Radio Dérej · Meditación",
+          "duration": "2:09",
+          "path": "Meditacion I/MP3/08-dum-na-dum-na-re.mp3",
+          "artwork": "radio-meditacion.png",
+          "ai_assisted": true
+        },
+        {
+          "id": "med-09",
+          "title": "Oy",
+          "artist": "Danygrafiko",
+          "collection": "Radio Dérej · Meditación",
+          "duration": "3:03",
+          "path": "Meditacion I/MP3/09-oy.mp3",
+          "artwork": "radio-meditacion.png",
+          "ai_assisted": true
+        },
+        {
+          "id": "med-10",
+          "title": "Oy Neshama",
+          "artist": "Danygrafiko",
+          "collection": "Radio Dérej · Meditación",
+          "duration": "3:00",
+          "path": "Meditacion I/MP3/10-oy-neshama.mp3",
+          "artwork": "radio-meditacion.png",
+          "ai_assisted": true
+        },
+        {
+          "id": "med-11",
+          "title": "Nafshi et Adonai",
+          "artist": "Danygrafiko",
+          "collection": "Radio Dérej · Meditación",
+          "duration": "3:57",
+          "path": "Meditacion I/MP3/11-nafshi-et-adonai.mp3",
+          "artwork": "radio-meditacion.png",
+          "ai_assisted": true
+        },
+        {
+          "id": "med-12",
+          "title": "Sod",
+          "artist": "Danygrafiko",
+          "collection": "Radio Dérej · Meditación",
+          "duration": "3:03",
+          "path": "Meditacion I/MP3/12-sod.mp3",
+          "artwork": "radio-meditacion.png",
+          "ai_assisted": true
+        },
+        {
+          "id": "med-13",
+          "title": "Shofar Invocation",
+          "artist": "Danygrafiko",
+          "collection": "Radio Dérej · Meditación",
+          "duration": "3:48",
+          "path": "Meditacion I/MP3/13-shofar-invocation.mp3",
+          "artwork": "radio-meditacion.png",
+          "ai_assisted": true
+        }
+      ]
+    }
+  ]
+}
