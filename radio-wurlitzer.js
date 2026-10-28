@@ -23,7 +23,10 @@ function syncDockVisibility(){
  document.body.classList.toggle('rwDockHidden',active&&rwDockMode==='hidden');
  document.body.classList.toggle('rwDockExpanded',visible&&rwDockMode==='expanded');
  document.body.classList.toggle('rwDockPlaying',active);
- if(rwRestore)rwRestore.hidden=!(active&&rwDockMode==='hidden');
+ const onRadio=!root.hidden;
+ if(rwRestore)rwRestore.hidden=!(active&&rwDockMode==='hidden'&&!onRadio);
+ const inlineRestore=$('rwShowDockInline');
+ if(inlineRestore)inlineRestore.hidden=!(active&&rwDockMode==='hidden'&&onRadio);
  const toggle=$('rwDockToggle');
  if(toggle){
    const expanded=rwDockMode==='expanded';
@@ -36,6 +39,7 @@ function syncDockVisibility(){
 $('rwDockToggle')?.addEventListener('click',()=>{rwDockMode=rwDockMode==='expanded'?'compact':'expanded';syncDockVisibility()});
 $('rwDockDismiss')?.addEventListener('click',()=>{rwDockMode='hidden';syncDockVisibility()});
 rwRestore?.addEventListener('click',()=>{rwDockMode='compact';syncDockVisibility()});
+$('rwShowDockInline')?.addEventListener('click',()=>{rwDockMode='compact';syncDockVisibility()});
 new MutationObserver(syncDockVisibility).observe(root,{attributes:true,attributeFilter:['hidden','class','style']});
 audio.addEventListener('play',()=>{
  rwPlaybackStarted=true;rwShowingTrackArt=true;
