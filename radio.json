@@ -76,9 +76,81 @@
       ]
     },
     {
+      "id": "vayera-suite",
+      "title": "Vayerá · Suite",
+      "kind": "Suite sinfónica",
+      "parasha": "Vayerá",
+      "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Parashat%20Vayera%20Suite/Caratula/Vayera_%20violin%20al%20amanecer-1.png",
+      "tracks": [
+        {
+          "id": "vayera-suite-1",
+          "title": "Bajo la sombra de Mamré",
+          "artist": "Danygrafiko",
+          "collection": "Vayerá · Suite",
+          "aliyah": 1,
+          "path": "Parashat Vayera Suite/MP3/1.Bajo la sombra de Mamre.mp3",
+          "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Parashat%20Vayera%20Suite/Caratula/Vayera_%20violin%20al%20amanecer-1.png"
+        },
+        {
+          "id": "vayera-suite-2",
+          "title": "Todavía quedan diez",
+          "artist": "Danygrafiko",
+          "collection": "Vayerá · Suite",
+          "aliyah": 2,
+          "path": "Parashat Vayera Suite/MP3/2.Todavia quedan diez.mp3",
+          "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Parashat%20Vayera%20Suite/Caratula/Vayera_%20violin%20al%20amanecer-1.png"
+        },
+        {
+          "id": "vayera-suite-3",
+          "title": "Hay una mano que te saca",
+          "artist": "Danygrafiko",
+          "collection": "Vayerá · Suite",
+          "aliyah": 3,
+          "path": "Parashat Vayera Suite/MP3/3.Hay una mano que te saca.mp3",
+          "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Parashat%20Vayera%20Suite/Caratula/Vayera_%20violin%20al%20amanecer-1.png"
+        },
+        {
+          "id": "vayera-suite-4",
+          "title": "Al tiempo prometido",
+          "artist": "Danygrafiko",
+          "collection": "Vayerá · Suite",
+          "aliyah": 4,
+          "path": "Parashat Vayera Suite/MP3/4.Al tiempo prometido.mp3",
+          "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Parashat%20Vayera%20Suite/Caratula/Vayera_%20violin%20al%20amanecer-1.png"
+        },
+        {
+          "id": "vayera-suite-5",
+          "title": "Agar y el pozo de agua",
+          "artist": "Danygrafiko",
+          "collection": "Vayerá · Suite",
+          "aliyah": 5,
+          "path": "Parashat Vayera Suite/MP3/5.Agar y el pozo de agua.mp3",
+          "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Parashat%20Vayera%20Suite/Caratula/Vayera_%20violin%20al%20amanecer-1.png"
+        },
+        {
+          "id": "vayera-suite-6",
+          "title": "Siete corderas",
+          "artist": "Danygrafiko",
+          "collection": "Vayerá · Suite",
+          "aliyah": 6,
+          "path": "Parashat Vayera Suite/MP3/6.Siete corderas.mp3",
+          "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Parashat%20Vayera%20Suite/Caratula/Vayera_%20violin%20al%20amanecer-1.png"
+        },
+        {
+          "id": "vayera-suite-7",
+          "title": "Detén la mano",
+          "artist": "Danygrafiko",
+          "collection": "Vayerá · Suite",
+          "aliyah": 7,
+          "path": "Parashat Vayera Suite/MP3/7.Deten la mano.mp3",
+          "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Parashat%20Vayera%20Suite/Caratula/Vayera_%20violin%20al%20amanecer-1.png"
+        }
+      ]
+    },
+    {
       "id": "vayera-parashat",
-      "title": "Vayerá · Parashat",
-      "kind": "Parashat",
+      "title": "Vayerá · Mediterránea",
+      "kind": "Parashat · Mediterránea",
       "parasha": "Vayerá",
       "artwork": "icon-512.png",
       "tracks": [
@@ -86,63 +158,63 @@
           "id": "vayera-parashat-1",
           "title": "Hay sitio bajo el árbol",
           "artist": "Danygrafiko",
-          "collection": "Vayerá · Parashat",
+          "collection": "Vayerá · Mediterránea",
           "aliyah": 1,
-          "path": "Parshat Vayera I/MP3/1.Hay sitio bajo el arbol.mp3",
+          "path": "Parshat Vayera Mediterranean/MP3/1.Hay sitio bajo el arbol.mp3",
           "artwork": "icon-512.png"
         },
         {
           "id": "vayera-parashat-2",
           "title": "Aunque fueran diez",
           "artist": "Danygrafiko",
-          "collection": "Vayerá · Parashat",
+          "collection": "Vayerá · Mediterránea",
           "aliyah": 2,
-          "path": "Parshat Vayera I/MP3/2.Aunque fueran diez.mp3",
+          "path": "Parshat Vayera Mediterranean/MP3/2.Aunque fueran diez.mp3",
           "artwork": "icon-512.png"
         },
         {
           "id": "vayera-parashat-3",
           "title": "La mano que te saca",
           "artist": "Danygrafiko",
-          "collection": "Vayerá · Parashat",
+          "collection": "Vayerá · Mediterránea",
           "aliyah": 3,
-          "path": "Parshat Vayera I/MP3/3.La mano que te saca.mp3",
+          "path": "Parshat Vayera Mediterranean/MP3/3.La mano que te saca.mp3",
           "artwork": "icon-512.png"
         },
         {
           "id": "vayera-parashat-4",
           "title": "Un Hijo para Sara",
           "artist": "Danygrafiko",
-          "collection": "Vayerá · Parashat",
+          "collection": "Vayerá · Mediterránea",
           "aliyah": 4,
-          "path": "Parshat Vayera I/MP3/4.Un Hijo para Sara.mp3",
+          "path": "Parshat Vayera Mediterranean/MP3/4.Un Hijo para Sara.mp3",
           "artwork": "icon-512.png"
         },
         {
           "id": "vayera-parashat-5",
           "title": "Donde está su voz",
           "artist": "Danygrafiko",
-          "collection": "Vayerá · Parashat",
+          "collection": "Vayerá · Mediterránea",
           "aliyah": 5,
-          "path": "Parshat Vayera I/MP3/5.Donde esta su voz.mp3",
+          "path": "Parshat Vayera Mediterranean/MP3/5.Donde esta su voz.mp3",
           "artwork": "icon-512.png"
         },
         {
           "id": "vayera-parashat-6",
           "title": "Siete corderas y un pozo",
           "artist": "Danygrafiko",
-          "collection": "Vayerá · Parashat",
+          "collection": "Vayerá · Mediterránea",
           "aliyah": 6,
-          "path": "Parshat Vayera I/MP3/6.Siete corderas y un pozo.mp3",
+          "path": "Parshat Vayera Mediterranean/MP3/6.Siete corderas y un pozo.mp3",
           "artwork": "icon-512.png"
         },
         {
           "id": "vayera-parashat-7",
           "title": "No extiendas la mano",
           "artist": "Danygrafiko",
-          "collection": "Vayerá · Parashat",
+          "collection": "Vayerá · Mediterránea",
           "aliyah": 7,
-          "path": "Parshat Vayera I/MP3/7.No extiendas la mano.mp3",
+          "path": "Parshat Vayera Mediterranean/MP3/7.No extiendas la mano.mp3",
           "artwork": "icon-512.png"
         }
       ]
