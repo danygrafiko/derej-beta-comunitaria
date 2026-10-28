@@ -25,6 +25,7 @@
   .brandButton .derejWordmark small{letter-spacing:.18em}
 </style>
 <noscript><style>.courtyard .portal[hidden],.courtyard .pozoLearn[hidden]{display:flex!important}</style></noscript>
+<link rel="stylesheet" href="radio-wurlitzer.css?v=1">
 </head>
 <body>
 <main class="appShell">
@@ -202,7 +203,25 @@
 
   <section class="screen placeholder" data-screen="shabat" hidden><button class="backBtn" data-route="home">← Volver al patio</button><div><small>SHABAT</small><h1>Luz cálida · refugio · mesa</h1><p>Una pausa para recibir, encender, compartir, descansar y volver a mirar la semana.</p></div></section>
   <section class="screen placeholder" data-screen="moed" hidden><button class="backBtn" data-route="home">← Volver al patio</button><div><small>MOED</small><h1>Tiempo · estaciones · memoria</h1><p>Tiempos señalados para detenerse, recordar y volver a mirar el Camino.</p></div></section>
-  <section class="screen placeholder dark" data-screen="radio" hidden><button class="backBtn" data-route="home">← Volver al patio</button><div><small>RADIO</small><h1>Noche · escucha · contemplación</h1><p>Meditación · Parashá · Hitbodedut. Escucha sin salir del Camino.</p></div></section>
+  <section class="screen rwScreen" data-screen="radio" hidden id="radioWurlitzer" aria-label="Radio Dérej">
+  <button type="button" class="backBtn" data-route="home">← Volver al patio</button>
+  <header class="rwHeader"><div class="rwEyebrow">Música · palabra · silencio</div><h1>Radio Dérej</h1><p>Escoge una playlist y entra al clima sonoro.</p><div id="rwCount">Preparando biblioteca musical…</div></header>
+  <div class="rwAlbums" id="rwAlbums" role="group" aria-label="Seleccionar playlist"></div>
+  <section class="rwDetails" aria-label="Playlist seleccionada">
+   <img id="rwBigCover" class="rwBigCover" src="icon-512.png" alt="Carátula de la playlist"/>
+   <div class="rwInfo"><h2 id="rwTitle">Selecciona una playlist</h2><p class="rwSub" id="rwSubtitle">Radio Dérej</p><p id="rwDescription">Las siete aliyot en música y contemplación.</p><button class="rwButton" type="button" id="rwMainPlay">▶ Reproducir</button></div>
+   <div class="rwTracks" id="rwTracks" aria-label="Canciones de la playlist"></div>
+  </section>
+  <section class="rwPlayer" aria-label="Reproductor de Radio Dérej">
+    <div class="rwNow"><img src="icon-512.png" alt="" id="rwMiniCover"/><div><b id="rwNowTitle">Radio Dérej</b><small id="rwNowAlbum">Escoge una playlist</small></div></div>
+    <div class="rwPlayerRight">
+      <div class="rwControls"><button type="button" id="rwPrev" aria-label="Pista anterior">⏮</button><button type="button" id="rwPlay" aria-label="Reproducir o pausar">▶</button><button type="button" id="rwNext" aria-label="Siguiente pista">⏭</button></div>
+      <div class="rwSeekRow"><span id="rwElapsed">0:00</span><input type="range" min="0" max="1000" value="0" id="rwSeek" aria-label="Posición de reproducción"/><span id="rwDuration">0:00</span></div>
+      <div class="rwStatus" id="rwStatus" role="status">Preparando catálogo…</div>
+    </div>
+  </section>
+  <audio id="rwAudio" preload="metadata"></audio>
+</section>
   <section class="screen placeholder" data-screen="personal" hidden><button class="backBtn" data-route="home">← Volver al patio</button><div><small>MI CAMINO</small><h1>Huellas · brotes · memoria</h1><p>Memoria personal sin puntuación, niveles ni rachas.</p></div></section>
   <section class="screen pozoScreen" data-screen="pozo" hidden aria-labelledby="pozoTitle">
     <div id="pozoRoot"><button class="backBtn" data-route="home">← Patio</button><h1 id="pozoTitle">El Pozo</h1><p>Preparando el encuentro…</p></div>
@@ -253,6 +272,8 @@
 <script src="arbol.js?v=camino-limpio-1"></script>
 <script src="connection-reminders.js?v=editorial-creador-1"></script>
   
+<script src="config.js"></script>
+<script src="radio-wurlitzer.js?v=1"></script>
 </body>
 </html>
 
