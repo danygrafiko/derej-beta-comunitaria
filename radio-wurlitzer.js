@@ -8,6 +8,19 @@ const icons={
  pause:'<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><rect x="6" y="4" width="4.5" height="16" rx="1.3"/><rect x="13.5" y="4" width="4.5" height="16" rx="1.3"/></svg>'
 };
 const audio=$('rwAudio');
+/* Reproductor único: barra compacta fuera de la pantalla Radio, para poder
+   continuar escuchando al recorrer el Patio y los estudios. */
+const rwDock=root.querySelector('.rwPlayer');
+if(rwDock)document.body.appendChild(rwDock);
+let rwPlaybackStarted=false;
+function syncDockVisibility(){
+ const inRadio=!root.hidden&&root.classList.contains('active');
+ document.body.classList.toggle('rwDockVisible',inRadio||rwPlaybackStarted);
+ document.body.classList.toggle('rwDockPlaying',rwPlaybackStarted);
+}
+new MutationObserver(syncDockVisibility).observe(root,{attributes:true,attributeFilter:['hidden','class','style']});
+audio.addEventListener('play',()=>{rwPlaybackStarted=true;syncDockVisibility()});
+syncDockVisibility();
 let playlists=[],current=null,index=0,filter='todas',requestVersion=0;
 const embeddedCovers=new Map();
 function pathUrl(path){
