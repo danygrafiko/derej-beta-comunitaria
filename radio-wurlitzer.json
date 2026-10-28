@@ -368,7 +368,7 @@
       "title": "Meditación · Colección original",
       "kind": "Meditación",
       "parasha": null,
-      "artwork": "radio-meditacion.png",
+      "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Meditacion%20I/Caratula/Radio%20Derej%20Meditacion%20I.png",
       "tracks": [
         {
           "id": "med-01",
@@ -377,7 +377,7 @@
           "collection": "Radio Dérej · Meditación",
           "duration": "3:24",
           "path": "Meditacion I/MP3/01-shofar-of-contemplation.mp3",
-          "artwork": "radio-meditacion.png",
+          "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Meditacion%20I/Caratula/Radio%20Derej%20Meditacion%20I.png",
           "ai_assisted": true
         },
         {
@@ -387,7 +387,7 @@
           "collection": "Radio Dérej · Meditación",
           "duration": "3:14",
           "path": "Meditacion I/MP3/02-dawn-over-the-stone-room.mp3",
-          "artwork": "radio-meditacion.png",
+          "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Meditacion%20I/Caratula/Radio%20Derej%20Meditacion%20I.png",
           "ai_assisted": true
         },
         {
@@ -397,7 +397,7 @@
           "collection": "Radio Dérej · Meditación",
           "duration": "3:58",
           "path": "Meditacion I/MP3/03-breathing-through-the-woods.mp3",
-          "artwork": "radio-meditacion.png",
+          "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Meditacion%20I/Caratula/Radio%20Derej%20Meditacion%20I.png",
           "ai_assisted": true
         },
         {
@@ -407,7 +407,7 @@
           "collection": "Radio Dérej · Meditación",
           "duration": "4:04",
           "path": "Meditacion I/MP3/04-cosmic-serenity.mp3",
-          "artwork": "radio-meditacion.png",
+          "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Meditacion%20I/Caratula/Radio%20Derej%20Meditacion%20I.png",
           "ai_assisted": true
         },
         {
@@ -417,7 +417,7 @@
           "collection": "Radio Dérej · Meditación",
           "duration": "4:00",
           "path": "Meditacion I/MP3/05-resonancia-oceanica.mp3",
-          "artwork": "radio-meditacion.png",
+          "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Meditacion%20I/Caratula/Radio%20Derej%20Meditacion%20I.png",
           "ai_assisted": true
         },
         {
@@ -427,7 +427,7 @@
           "collection": "Radio Dérej · Meditación",
           "duration": "2:00",
           "path": "Meditacion I/MP3/06-oy-coma-neshama.mp3",
-          "artwork": "radio-meditacion.png",
+          "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Meditacion%20I/Caratula/Radio%20Derej%20Meditacion%20I.png",
           "ai_assisted": true
         },
         {
@@ -437,7 +437,7 @@
           "collection": "Radio Dérej · Meditación",
           "duration": "3:00",
           "path": "Meditacion I/MP3/07-nafshi-adonai.mp3",
-          "artwork": "radio-meditacion.png",
+          "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Meditacion%20I/Caratula/Radio%20Derej%20Meditacion%20I.png",
           "ai_assisted": true
         },
         {
@@ -447,7 +447,7 @@
           "collection": "Radio Dérej · Meditación",
           "duration": "2:09",
           "path": "Meditacion I/MP3/08-dum-na-dum-na-re.mp3",
-          "artwork": "radio-meditacion.png",
+          "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Meditacion%20I/Caratula/Radio%20Derej%20Meditacion%20I.png",
           "ai_assisted": true
         },
         {
@@ -457,7 +457,7 @@
           "collection": "Radio Dérej · Meditación",
           "duration": "3:03",
           "path": "Meditacion I/MP3/09-oy.mp3",
-          "artwork": "radio-meditacion.png",
+          "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Meditacion%20I/Caratula/Radio%20Derej%20Meditacion%20I.png",
           "ai_assisted": true
         },
         {
@@ -467,7 +467,7 @@
           "collection": "Radio Dérej · Meditación",
           "duration": "3:00",
           "path": "Meditacion I/MP3/10-oy-neshama.mp3",
-          "artwork": "radio-meditacion.png",
+          "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Meditacion%20I/Caratula/Radio%20Derej%20Meditacion%20I.png",
           "ai_assisted": true
         },
         {
@@ -477,7 +477,7 @@
           "collection": "Radio Dérej · Meditación",
           "duration": "3:57",
           "path": "Meditacion I/MP3/11-nafshi-et-adonai.mp3",
-          "artwork": "radio-meditacion.png",
+          "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Meditacion%20I/Caratula/Radio%20Derej%20Meditacion%20I.png",
           "ai_assisted": true
         },
         {
@@ -487,7 +487,7 @@
           "collection": "Radio Dérej · Meditación",
           "duration": "3:03",
           "path": "Meditacion I/MP3/12-sod.mp3",
-          "artwork": "radio-meditacion.png",
+          "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Meditacion%20I/Caratula/Radio%20Derej%20Meditacion%20I.png",
           "ai_assisted": true
         },
         {
@@ -497,7 +497,7 @@
           "collection": "Radio Dérej · Meditación",
           "duration": "3:48",
           "path": "Meditacion I/MP3/13-shofar-invocation.mp3",
-          "artwork": "radio-meditacion.png",
+          "artwork": "https://ryeztkcyopbmwwaacpxl.supabase.co/storage/v1/object/public/radio-derej/Meditacion%20I/Caratula/Radio%20Derej%20Meditacion%20I.png",
           "ai_assisted": true
         }
       ]
