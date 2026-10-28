@@ -169,13 +169,22 @@ async function readEmbeddedCover(track){
  const promise=(async()=>{
    try{
      const url=track.url||pathUrl(track.path);
-     const res=await fetch(url,{headers:{Range:'bytes=0-2621439'},cache:'force-cache'});
+     // Dos etapas: primero sólo la cabecera ID3; después únicamente su tamaño real.
+     let res=await fetch(url,{headers:{Range:'bytes=0-65535'},cache:'force-cache'});
      if(!res.ok)return '';
-     const bytes=new Uint8Array(await res.arrayBuffer());
+     let bytes=new Uint8Array(await res.arrayBuffer());
      if(bytes.length<20||bytes[0]!==73||bytes[1]!==68||bytes[2]!==51)return '';
      const version=bytes[3];if(version!==3&&version!==4)return '';
      const syn=(n)=>(bytes[n]<<21)|(bytes[n+1]<<14)|(bytes[n+2]<<7)|bytes[n+3];
-     const max=Math.min(bytes.length,10+syn(6));let pos=10;
+     const tagEnd=10+syn(6);
+     if(tagEnd>bytes.length){
+       if(tagEnd>3000000)return ''; // límite de descarga para cuidar el tráfico comunitario
+       res=await fetch(url,{headers:{Range:'bytes=0-'+String(tagEnd-1)},cache:'force-cache'});
+       if(!res.ok)return '';
+       bytes=new Uint8Array(await res.arrayBuffer());
+       if(bytes.length<tagEnd)return '';
+     }
+     const max=Math.min(bytes.length,tagEnd);let pos=10;
      if(bytes[5]&0x40){const n=version===4?syn(pos):((bytes[pos]<<24)|(bytes[pos+1]<<16)|(bytes[pos+2]<<8)|bytes[pos+3]);pos+=version===4?n+4:n}
      while(pos+10<max){
        const id=String.fromCharCode(...bytes.subarray(pos,pos+4));
