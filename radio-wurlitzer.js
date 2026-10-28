@@ -5,7 +5,7 @@ const base=(window.DEREJ_CONFIG?.audioBase||'https://ryeztkcyopbmwwaacpxl.supaba
 const localArt='icon-512.png';
 let playlists=[],current=null,index=0,playStarted=false;
 const audio=$('rwAudio');
-function pathUrl(path){if(!path)return '';if(/^https?:\/\//i.test(path))return path;return base+'/'+path.split('/').map(encodeURIComponent).join('/')}
+function pathUrl(path){if(!path)return '';if(/^https?:\/\//i.test(path))return path;if(!path.includes('/'))return path;return base+'/'+path.split('/').map(encodeURIComponent).join('/')}
 function art(t){return pathUrl(t?.artwork)||localArt}
 function label(t){return t?.title||'Radio Dérej'}
 function fmt(sec){if(!Number.isFinite(sec))return '0:00';return Math.floor(sec/60)+':'+String(Math.floor(sec%60)).padStart(2,'0')}
