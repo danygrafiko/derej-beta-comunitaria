@@ -423,3 +423,15 @@ body.rwDockHidden .rwScreen{padding-bottom:32px!important}
 @media(prefers-reduced-motion:reduce){
  .rwHeroSong .rwVisualFrame{transition:none}
 }
+
+
+/* Recuperar mini reproductor desde la propia ficha, sin botón flotante sobre las portadas. */
+.rwShowDockInline[hidden]{display:none!important}
+.rwShowDockInline{
+ display:block;min-height:42px;margin:13px auto 0;
+ padding:9px 15px;border-radius:999px;border:1px solid #b99a63;
+ background:transparent;color:#66502c;
+ font:600 .8rem/1.4 system-ui,sans-serif;
+ cursor:pointer;touch-action:manipulation
+}
+.rwShowDockInline:focus-visible{outline:3px solid #94763a;outline-offset:3px}
