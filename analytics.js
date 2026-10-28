@@ -140,11 +140,11 @@
   }
   function onMedia(event) {
     const audio = event.target;
-    if (audio.id !== 'radioV21Audio' || !allowed()) return;
+    if (!['radioV21Audio', 'rwAudio'].includes(audio.id) || !allowed()) return;
     const details = mediaDetails(audio);
     if (!details) return;
     const source = audio.getAttribute('src');
-    if (!radio || radio.source !== source || radio.finished) radio = {source, heard: 0, mediaHeard: 0, last: audio.currentTime, wall: performance.now(), started: false, qualified: false, finished: false};
+    if (!radio || radio.audio !== audio || radio.source !== source || radio.finished) radio = {audio, source, heard: 0, mediaHeard: 0, last: audio.currentTime, wall: performance.now(), started: false, qualified: false, finished: false};
     if (event.type === 'playing') {
       if (!radio.started) { radio.started = true; emit('radio_start', details); }
       radio.last = audio.currentTime; radio.wall = performance.now();

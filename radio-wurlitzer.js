@@ -132,6 +132,8 @@ function selectTrack(i,play=true,owner=current){
  document.getElementById('radioV21Audio')?.pause();
  const version=++requestVersion;
  const url=track.url||pathUrl(track.path);
+ audio.dataset.metricsTrack=track.id||'';
+ audio.dataset.metricsCollection=owner.id||'';
  audio.src=url;audio.load();
  $('rwNowTitle').textContent=track.title;
  $('rwNowAlbum').textContent=owner.title;
