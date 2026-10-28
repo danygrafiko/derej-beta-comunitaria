@@ -25,7 +25,7 @@
   .brandButton .derejWordmark small{letter-spacing:.18em}
 </style>
 <noscript><style>.courtyard .portal[hidden],.courtyard .pozoLearn[hidden]{display:flex!important}</style></noscript>
-<link rel="stylesheet" href="radio-wurlitzer.css?v=1">
+<link rel="stylesheet" href="radio-wurlitzer.css?v=2">
 </head>
 <body>
 <main class="appShell">
@@ -206,16 +206,17 @@
   <section class="screen rwScreen" data-screen="radio" hidden id="radioWurlitzer" aria-label="Radio Dérej">
   <button type="button" class="backBtn" data-route="home">← Volver al patio</button>
   <header class="rwHeader"><div class="rwEyebrow">Música · palabra · silencio</div><h1>Radio Dérej</h1><p>Escoge una playlist y entra al clima sonoro.</p><div id="rwCount">Preparando biblioteca musical…</div></header>
-  <div class="rwAlbums" id="rwAlbums" role="group" aria-label="Seleccionar playlist"></div>
+  <div class="rwFilters" role="group" aria-label="Filtrar colecciones"><button type="button" class="active" data-rw-filter="todas" aria-pressed="true">Todas</button><button type="button" data-rw-filter="Vayerá" aria-pressed="false">Vayerá</button><button type="button" data-rw-filter="Noaj" aria-pressed="false">Noaj</button><button type="button" data-rw-filter="archivo" aria-pressed="false">Archivo</button></div>
+  <div class="rwCarouselShell"><button type="button" class="rwCarouselArrow" id="rwAlbumPrev" aria-label="Carátula anterior"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg></button><div class="rwAlbums" id="rwAlbums" role="group" aria-label="Seleccionar playlist"></div><button type="button" class="rwCarouselArrow" id="rwAlbumNext" aria-label="Carátula siguiente"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg></button></div>
   <section class="rwDetails" aria-label="Playlist seleccionada">
    <img id="rwBigCover" class="rwBigCover" src="icon-512.png" alt="Carátula de la playlist"/>
-   <div class="rwInfo"><h2 id="rwTitle">Selecciona una playlist</h2><p class="rwSub" id="rwSubtitle">Radio Dérej</p><p id="rwDescription">Las siete aliyot en música y contemplación.</p><button class="rwButton" type="button" id="rwMainPlay">▶ Reproducir</button></div>
+   <div class="rwInfo"><h2 id="rwTitle">Selecciona una playlist</h2><p class="rwSub" id="rwSubtitle">Radio Dérej</p><p id="rwDescription">Las siete aliyot en música y contemplación.</p><button class="rwButton" type="button" id="rwMainPlay"><svg viewBox="0 0 24 24" width="21" height="21" aria-hidden="true" fill="currentColor"><path d="M8 4.5a1 1 0 0 1 1.5-.86l10 7a1.6 1.6 0 0 1 0 2.72l-10 7A1 1 0 0 1 8 19.5z"/></svg><span>Reproducir</span></button></div>
    <div class="rwTracks" id="rwTracks" aria-label="Canciones de la playlist"></div>
   </section>
   <section class="rwPlayer" aria-label="Reproductor de Radio Dérej">
     <div class="rwNow"><img src="icon-512.png" alt="" id="rwMiniCover"/><div><b id="rwNowTitle">Radio Dérej</b><small id="rwNowAlbum">Escoge una playlist</small></div></div>
     <div class="rwPlayerRight">
-      <div class="rwControls"><button type="button" id="rwPrev" aria-label="Pista anterior">⏮</button><button type="button" id="rwPlay" aria-label="Reproducir o pausar">▶</button><button type="button" id="rwNext" aria-label="Siguiente pista">⏭</button></div>
+      <div class="rwControls"><button type="button" id="rwPrev" aria-label="Pista anterior"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="currentColor"><path d="M6 5h2v14H6zM19 5v14L9 12z"/></svg></button><button type="button" id="rwPlay" aria-label="Reproducir o pausar"><svg viewBox="0 0 24 24" width="21" height="21" aria-hidden="true" fill="currentColor"><path d="M8 4.5a1 1 0 0 1 1.5-.86l10 7a1.6 1.6 0 0 1 0 2.72l-10 7A1 1 0 0 1 8 19.5z"/></svg></button><button type="button" id="rwNext" aria-label="Siguiente pista"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="currentColor"><path d="M16 5h2v14h-2zM5 5v14l10-7z"/></svg></button></div>
       <div class="rwSeekRow"><span id="rwElapsed">0:00</span><input type="range" min="0" max="1000" value="0" id="rwSeek" aria-label="Posición de reproducción"/><span id="rwDuration">0:00</span></div>
       <div class="rwStatus" id="rwStatus" role="status">Preparando catálogo…</div>
     </div>
@@ -273,7 +274,7 @@
 <script src="connection-reminders.js?v=editorial-creador-1"></script>
   
 <script src="config.js"></script>
-<script src="radio-wurlitzer.js?v=1"></script>
+<script src="radio-wurlitzer.js?v=2"></script>
 </body>
 </html>
 
