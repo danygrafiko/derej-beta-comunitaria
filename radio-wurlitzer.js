@@ -14,8 +14,8 @@ const rwDock=root.querySelector('.rwPlayer');
 if(rwDock)document.body.appendChild(rwDock);
 let rwPlaybackStarted=false;
 function syncDockVisibility(){
- const inRadio=!root.hidden&&root.classList.contains('active');
- document.body.classList.toggle('rwDockVisible',inRadio||rwPlaybackStarted);
+ // Hasta la primera reproducción, las carátulas permanecen libres de barras flotantes.
+ document.body.classList.toggle('rwDockVisible',rwPlaybackStarted);
  document.body.classList.toggle('rwDockPlaying',rwPlaybackStarted);
 }
 new MutationObserver(syncDockVisibility).observe(root,{attributes:true,attributeFilter:['hidden','class','style']});
