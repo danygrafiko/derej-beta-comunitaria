@@ -189,16 +189,17 @@
 
     <section class="screen" data-screen="radio" hidden>
       <div class="eyebrow">Radio Dérej · reproductor propio</div>
-      <h1>♫ Meditación</h1>
+      <h1>♫ Radio Dérej</h1>
       <p class="lede">Un espacio sonoro para bajar el ruido, respirar y volver al centro. El audio se reproduce directamente dentro de Dérej.</p>
-      <div class="radioCollections" aria-label="Colecciones de Radio Dérej"><span class="on">Meditación · disponible</span><span>Parashá · en preparación</span><span>Hitbodedut · en preparación</span></div>
+      <div class="radioCollections" id="radioCollections" aria-label="Playlists de Radio Dérej"></div>
 
       <section class="radioNative">
         <img class="radioNativeCover" id="radioNativeCover" src="https://raw.githubusercontent.com/danygrafiko/derej-beta-comunitaria/aeb90db649997d28fc966ea8891f24e035a61f3b/radio-meditacion.png" alt="Radio Dérej · Meditación">
         <div class="radioNativeMeta">
           <div class="radioMeta">Radio Dérej · Meditación</div>
-          <h2 id="radioTitle">Radio Dérej · Meditación</h2>
-          <p>13 canciones · 42:40 · Danygrafiko</p>
+          <h2 id="radioTitle">Radio Dérej</h2>
+          <p id="radioPlaylistTitle">Selecciona una colección</p>
+          <p id="radioPlaylistDescription">Música para acompañar el camino</p>
           <div class="radioNativeStatus" id="radioStatus">Preparando catálogo…</div>
         </div>
         <audio id="radioAudio" preload="metadata" playsinline></audio>
