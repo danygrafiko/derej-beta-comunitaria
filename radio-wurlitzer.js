@@ -141,6 +141,10 @@ function selectTrack(i,play=false){
 function choose(id,play=false){
  const p=playlists.find(p=>p.id===id);if(!p)return;
  const changed=current?.id!==id;
+ // Preservar el estado ANTES de pausar/cambiar la fuente de audio.
+ // La selección directa de un álbum debe continuar la música, sin obligar a otro toque en iOS.
+ const wasPlaying=Boolean(current&&!audio.paused&&!audio.ended);
+ const shouldPlay=play||(changed&&wasPlaying);
  if(changed){audio.pause();current=p;index=0;rwShowingTrackArt=false;root.classList.remove('rwHeroSong');}
  $('rwTitle').textContent=p.title;
  $('rwSubtitle').textContent=[p.kind,p.tracks.length+' canciones','Danygrafiko'].filter(Boolean).join(' · ');
@@ -164,10 +168,10 @@ function choose(id,play=false){
      b.append(num,txt,d,iEl);b.addEventListener('click',()=>selectTrack(i,true));$('rwTracks').append(b);
    });
    let saved=0;try{saved=Number(localStorage.getItem('derej:rw:track:'+p.id))||0}catch{}
-   selectTrack(Math.min(Math.max(0,saved),p.tracks.length-1),false);
+   selectTrack(Math.min(Math.max(0,saved),p.tracks.length-1),shouldPlay);
  }
  try{localStorage.setItem('derej:rw:playlist',id)}catch{}
- if(play)audio.play().catch(()=>{});
+ if(play&&!changed)audio.play().catch(()=>{$('rwStatus').textContent='Toca Reproducir para escuchar.'});
 }
 function available(){return playlists.filter(p=>filter==='todas'||(filter==='archivo'?!p.parasha:p.parasha===filter))}
 function renderAlbums(){
@@ -181,8 +185,13 @@ function renderAlbums(){
    b.append(image,small,title);
    b.addEventListener('click',()=>choose(p.id));root.append(b);
  });
- if(!list.some(p=>p.id===current?.id))choose(list[0]?.id);
- else choose(current.id);
+ // Filtrar sólo modifica las carátulas visibles; nunca cambia el audio por sí solo.
+ // Si ya hay una playlist seleccionada, se conserva aunque no esté en este filtro.
+ if(!current&&list.length)choose(list[0].id);
+ else if(list.some(p=>p.id===current?.id))choose(current.id);
+ else if(current){
+   root.querySelectorAll('.rwAlbum').forEach(b=>b.setAttribute('aria-pressed','false'));
+ }
 }
 function setFilter(value){
  filter=value;
