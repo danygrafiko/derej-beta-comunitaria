@@ -17,6 +17,7 @@ function pathUrl(path){
  return storageBase+'/'+path.split('/').map(encodeURIComponent).join('/');
 }
 function art(value){return pathUrl(value?.embeddedArtwork||value?.artwork)||fallback}
+function trackArt(t){return t?.embeddedArtwork?art(t):(!t?.artwork||t.artwork===fallback)?art(current):art(t)}
 function fmt(s){return Number.isFinite(s)&&s>=0?Math.floor(s/60)+':'+String(Math.floor(s%60)).padStart(2,'0'):'0:00'}
 function cover(img,url){if(!img)return;img.onerror=()=>{img.onerror=null;img.src=fallback};img.src=url||fallback}
 function description(p){
@@ -29,7 +30,7 @@ function description(p){
 function musicMeta(t){
  if(!('mediaSession' in navigator)||!t)return;
  try{
-   navigator.mediaSession.metadata=new MediaMetadata({title:t.title,artist:t.artist||'Danygrafiko',album:current?.title||'Radio Dérej',artwork:[{src:art(t),sizes:'any',type:art(t).startsWith('blob:')?'image/jpeg':'image/png'}]});
+   navigator.mediaSession.metadata=new MediaMetadata({title:t.title,artist:t.artist||'Danygrafiko',album:current?.title||'Radio Dérej',artwork:[{src:trackArt(t),sizes:'any',type:trackArt(t).startsWith('blob:')?(t.embeddedMime||'image/jpeg'):'image/png'}]});
  }catch{}
 }
 function showNowCover(src){
@@ -59,7 +60,7 @@ function selectTrack(i,play=false){
  $('rwNowAlbum').textContent=current.title;
  $('rwDuration').textContent=t.duration||'0:00';
  $('rwElapsed').textContent='0:00';$('rwSeek').value='0';
- showNowCover(art(t)||art(current));
+ showNowCover(trackArt(t));
  $('rwTracks').querySelectorAll('button').forEach((b,j)=>{b.classList.toggle('active',j===index);b.setAttribute('aria-current',j===index?'true':'false')});
  musicMeta(t);setPlayerButtons();
  try{localStorage.setItem('derej:rw:track:'+current.id,String(index))}catch{}
@@ -191,6 +192,7 @@ async function readEmbeddedCover(track){
          if(!/^image\/(jpeg|png|webp)$/i.test(type))return '';
          const bytesImage=bytes.slice(i,pos+10+size);
          if(bytesImage.length<250)return '';
+         track.embeddedMime=type;
          return URL.createObjectURL(new Blob([bytesImage],{type}));
        }
        pos+=10+size;
