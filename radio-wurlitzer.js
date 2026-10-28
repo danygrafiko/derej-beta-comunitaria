@@ -57,7 +57,10 @@ function pathUrl(path){
  return storageBase+'/'+path.split('/').map(encodeURIComponent).join('/');
 }
 function art(value){return pathUrl(value?.embeddedArtwork||value?.artwork)||fallback}
-function trackArt(t){return t?.embeddedArtwork?art(t):(!t?.artwork||t.artwork===fallback)?art(current):art(t)}
+// Portadas de álbum: la imagen oficial del catálogo nunca debe reemplazarse por una carátula ID3.
+// Sólo recurrimos a la carátula incrustada si falta la portada de la colección.
+function albumArt(p){const official=p?.artwork&&p.artwork!==fallback?p.artwork:null;return pathUrl(official||p?.embeddedArtwork)||fallback}
+function trackArt(t){return t?.embeddedArtwork?art(t):(!t?.artwork||t.artwork===fallback)?albumArt(current):art(t)}
 function fmt(s){return Number.isFinite(s)&&s>=0?Math.floor(s/60)+':'+String(Math.floor(s%60)).padStart(2,'0'):'0:00'}
 function cover(img,url){if(!img)return;img.onerror=()=>{img.onerror=null;img.src=fallback};img.src=url||fallback}
 function description(p){
@@ -77,7 +80,7 @@ function showNowCover(track){
  // El Wurlitzer siempre conserva las portadas de álbum en el carrusel.
  // El panel de escucha muestra la carátula individual cuando comienza una pista.
  const songArt=trackArt(track);
- const coverSrc=rwShowingTrackArt?songArt:art(current);
+ const coverSrc=rwShowingTrackArt?songArt:albumArt(current);
  cover($('rwMiniCover'),songArt);
  cover($('rwBigCover'),coverSrc);
  const figure=$('rwBigCover');
@@ -131,11 +134,6 @@ function selectTrack(i,play=false){
    if(!src||version!==requestVersion)return;
    t.embeddedArtwork=src;
    showNowCover(t);musicMeta(t);
-   if(current?.id==='vayera-parashat'&&!current.embeddedArtwork){
-     current.embeddedArtwork=src;
-     const card=$('rwAlbums').querySelector('button[data-id="vayera-parashat"] img');
-     if(card)cover(card,src);
-   }
  }).catch(()=>{});
 }
 function choose(id,play=false){
@@ -179,7 +177,7 @@ function renderAlbums(){
  list.forEach(p=>{
    const b=document.createElement('button');b.type='button';b.className='rwAlbum';b.dataset.id=p.id;
    b.setAttribute('aria-label','Elegir '+p.title);b.setAttribute('aria-pressed','false');
-   const image=document.createElement('img');image.loading='lazy';image.alt='';cover(image,art(p));
+   const image=document.createElement('img');image.loading='lazy';image.alt='';cover(image,albumArt(p));
    const small=document.createElement('small');small.textContent=p.parasha||'Colección permanente';
    const title=document.createElement('span');title.textContent=p.title;
    b.append(image,small,title);
@@ -295,7 +293,7 @@ fetch('radio-wurlitzer.json',{cache:'no-store'})
    if(favorite)choose(favorite.id);
    // Si una colección no tiene portada de álbum subida, recuperar la ilustración
    // incrustada en el primer MP3, sin crear ni sustituir arte editorial.
-   playlists.filter(p=>art(p)===fallback).forEach(p=>{
+   playlists.filter(p=>albumArt(p)===fallback).forEach(p=>{
      readEmbeddedCover(p.tracks[0]).then(src=>{
        if(!src)return;
        p.embeddedArtwork=src;
