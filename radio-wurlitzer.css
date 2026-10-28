@@ -190,3 +190,130 @@ body.rwDockPlaying .screen.active:not(.rwScreen){padding-bottom:112px}
  body.rwDockVisible>.rwPlayer .rwControls #rwPlay{width:40px;height:40px}
  .rwScreen{padding-bottom:115px!important}
 }
+
+
+/* Radio Dérej · reproductor flotante v4. El estado inicial es una pastilla
+   de una línea; los controles secundarios sólo aparecen al expandir.
+   Ocultar no interrumpe la escucha: queda un icono para reabrir. */
+body.rwDockVisible>.rwPlayer{
+  position:fixed!important;
+  left:50%!important;right:auto!important;top:auto!important;
+  bottom:calc(10px + env(safe-area-inset-bottom,0px))!important;
+  transform:translateX(-50%)!important;
+  width:min(calc(100vw - 20px),720px)!important;
+  max-width:720px!important;min-height:0!important;
+  grid-template-columns:minmax(0,1fr) 45px 69px!important;
+  grid-template-rows:54px!important;
+  align-items:center!important;
+  gap:0 7px!important;
+  padding:6px 10px!important;
+  margin:0!important;
+  border-radius:18px!important;
+  box-shadow:0 6px 25px rgba(0,0,0,.38)!important;
+  box-sizing:border-box!important;
+}
+body.rwDockVisible>.rwPlayer .rwNow{
+  grid-column:1!important;grid-row:1!important;min-width:0;
+}
+body.rwDockVisible>.rwPlayer .rwNow img{
+  width:40px!important;height:40px!important;flex:0 0 40px!important;
+}
+body.rwDockVisible>.rwPlayer .rwNow div{min-width:0;overflow:hidden}
+body.rwDockVisible>.rwPlayer .rwNow b,
+body.rwDockVisible>.rwPlayer .rwNow small{
+  display:block;max-width:100%;overflow:hidden;text-overflow:ellipsis;
+  white-space:nowrap;
+}
+body.rwDockVisible>.rwPlayer .rwPlayerRight{display:contents!important}
+body.rwDockVisible>.rwPlayer .rwControls{
+  grid-column:2!important;grid-row:1!important;
+  display:flex!important;align-items:center;justify-content:center!important;
+  width:45px;gap:0!important;
+}
+body.rwDockVisible>.rwPlayer #rwPrev,
+body.rwDockVisible>.rwPlayer #rwNext{
+  display:none!important;
+}
+body.rwDockVisible>.rwPlayer #rwPlay{
+  display:grid!important;place-items:center;
+  width:42px!important;height:42px!important;
+  padding:8px!important;border-radius:50%;
+}
+body.rwDockVisible>.rwPlayer .rwSeekRow{
+  display:none!important;
+}
+body.rwDockVisible>.rwPlayer .rwStatus{display:none!important}
+body.rwDockVisible>.rwPlayer .rwDockActions{
+  grid-column:3!important;grid-row:1!important;
+  display:flex!important;align-items:center;justify-content:flex-end;
+  gap:2px;width:69px;
+}
+body.rwDockVisible>.rwPlayer .rwDockActions button{
+  display:grid;place-items:center;flex:0 0 32px;
+  width:32px;height:40px;
+  border:0;border-radius:10px;background:transparent;
+  color:#ead7ae;cursor:pointer;touch-action:manipulation;
+}
+body.rwDockVisible>.rwPlayer .rwDockActions button:focus-visible,
+.rwDockRestore:focus-visible{outline:3px solid #ebc987;outline-offset:2px}
+body.rwDockVisible>.rwPlayer .rwDockActions button:active{background:rgba(255,255,255,.12)}
+
+/* El estado ampliado se solicita, no aparece automáticamente. */
+body.rwDockExpanded>.rwPlayer{
+  grid-template-columns:minmax(0,1fr) auto!important;
+  grid-template-rows:50px 48px 24px!important;
+  gap:4px 6px!important;
+  padding:9px 12px 11px!important;
+}
+body.rwDockExpanded>.rwPlayer .rwDockActions{
+  grid-column:2!important;grid-row:1!important
+}
+body.rwDockExpanded>.rwPlayer .rwControls{
+  grid-column:1/-1!important;grid-row:2!important;
+  width:auto!important;gap:20px!important;
+}
+body.rwDockExpanded>.rwPlayer #rwPrev,
+body.rwDockExpanded>.rwPlayer #rwNext{
+  display:grid!important;
+  width:40px;height:40px;
+}
+body.rwDockExpanded>.rwPlayer .rwSeekRow{
+  grid-column:1/-1!important;grid-row:3!important;
+  display:flex!important;gap:8px;
+  margin:0!important;height:24px!important;
+  min-height:24px!important;
+}
+body.rwDockExpanded>.rwPlayer .rwSeekRow input{height:18px;width:100%;margin:0}
+
+/* Sólo cuando el usuario oculta la barra: botón flotante de recuperación. */
+body>.rwDockRestore[hidden]{display:none!important}
+body.rwDockHidden>.rwDockRestore:not([hidden]){
+  position:fixed;
+  right:calc(12px + env(safe-area-inset-right,0px));
+  bottom:calc(14px + env(safe-area-inset-bottom,0px));
+  z-index:125;
+  display:grid;place-items:center;
+  width:48px;height:48px;border-radius:50%;
+  background:#24382b;color:#f5dfac;
+  border:1px solid #d6b36c;box-shadow:0 4px 18px #0006;
+  cursor:pointer;
+}
+body:not(.rwDockHidden)>.rwDockRestore{display:none!important}
+/* Una barra de 66px no debe tapar la lista del final. */
+body.rwDockVisible .rwScreen{padding-bottom:92px!important}
+body.rwDockExpanded .rwScreen{padding-bottom:175px!important}
+body.rwDockHidden .rwScreen{padding-bottom:32px!important}
+@media(max-width:580px){
+  body.rwDockVisible>.rwPlayer{
+    width:calc(100vw - 16px)!important;
+    bottom:calc(8px + env(safe-area-inset-bottom,0px))!important;
+    padding:5px 8px!important;
+    border-radius:16px!important;
+  }
+  body.rwDockVisible>.rwPlayer .rwNow{gap:7px!important}
+  body.rwDockVisible>.rwPlayer .rwNow img{
+    width:37px!important;height:37px!important;flex-basis:37px!important
+  }
+  body.rwDockVisible>.rwPlayer .rwNow b{font-size:.75rem!important}
+  body.rwDockVisible>.rwPlayer .rwNow small{font-size:.65rem!important}
+}
