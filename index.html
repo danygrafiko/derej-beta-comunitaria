@@ -26,6 +26,7 @@
 </style>
 <noscript><style>.courtyard .portal[hidden],.courtyard .pozoLearn[hidden]{display:flex!important}</style></noscript>
 <link rel="stylesheet" href="radio-wurlitzer.css?v=5">
+<link rel="stylesheet" href="genealogias.css?v=1">
 </head>
 <body>
 <main class="appShell">
@@ -75,6 +76,11 @@
       <div><span>VIDAS · OBRAS · ENSEÑANZAS</span><h2>Voces del Camino</h2><p>Conoce a quienes leemos en Dérej y vuelve al texto con una pregunta nueva.</p></div>
       <button type="button" data-voces-open>Explorar las voces →</button>
     </div>
+
+    <section class="genealogyEntry" aria-labelledby="genealogiasEntryTitle">
+      <div><small>FAMILIAS · GENERACIONES · MEMORIA</small><h2 id="genealogiasEntryTitle">Genealogías</h2><p>Explora las raíces de Abraham y sus familias. Continúa más allá de David, hasta el retorno del exilio, con ramas que se abren y fichas junto a cada nombre.</p></div>
+      <a href="?estudio=genealogias" data-genealogias-open>Explorar el árbol →</a>
+    </section>
 
       <p class="bibliotecaClosing">Elige una lectura. Quédate con una pregunta. Llévala a tu vida.</p>
     </div>
@@ -245,6 +251,29 @@
   </section>
   <section class="screen npScreen" data-screen="nombres" hidden aria-labelledby="npTitle"><div id="nombresRoot" class="npInner"></div></section>
   <section class="screen avScreen" data-screen="arbol" hidden aria-labelledby="arbolTitle"><div id="arbolRoot" class="avInner"></div></section>
+  <section class="screen genealogyScreen" data-screen="genealogias" hidden aria-labelledby="genealogiasTitle"><div class="genealogyInner"><button type="button" class="genealogyBack" data-genealogias-back>← Biblioteca</button><section id="derej-raices-v2" aria-label="Genealogías desplegables de Dérej">
+<header class="r-header"><p class="r-eyebrow">Dérej / Biblioteca</p><h1 id="genealogiasTitle" tabindex="-1">Genealogías</h1><p class="r-subtitle">De Adam al retorno del exilio</p><p class="r-guide">Toca un nombre para leer su ficha aquí mismo. Abre las ramas con + y continúa con ›. Puedes comenzar por cualquiera de estas familias.</p></header>
+<nav class="r-nav" aria-label="Comenzar por una familia">
+  <button class="r-route" data-start="adam" aria-pressed="false" type="button">Desde Adam</button>
+  <button class="r-route" data-start="abraham" aria-pressed="false" type="button">Abraham</button>
+  <button class="r-route" data-start="yaakov" aria-pressed="false" type="button">Israel</button>
+  <button class="r-route" data-start="david" aria-pressed="false" type="button">David</button>
+  <button class="r-route" data-start="shlomo" aria-pressed="true" type="button">Reyes de Judá</button>
+  <button class="r-route" data-start="zerubavel" aria-pressed="false" type="button">Retorno</button>
+</nav>
+<div class="r-context"><nav class="r-breadcrumbs" id="r-breadcrumbs" aria-label="Línea de ascendencia"></nav><button type="button" id="r-ancestor-toggle" class="r-ancestors-toggle" aria-expanded="false" aria-controls="r-ancestors">Ver antepasados</button></div>
+<div class="r-ancestors" id="r-ancestors" hidden><p>Línea paterna de esta selección · orden de generaciones</p><ol class="r-ancestry-list" id="r-ancestry-list"></ol></div>
+<div class="r-canvas">
+  <div class="r-parent-line" id="r-parent-line"></div>
+  <div class="r-root" id="r-root"><button type="button" class="r-root-name" id="r-root-name">Abraham</button><span class="r-root-small" id="r-root-small">8 hijos nombrados</span></div>
+  <div class="r-read-slot" id="r-read-slot">
+    <article class="r-detail" id="r-reading" aria-live="polite" aria-atomic="true"><div class="r-detail-top"><div class="r-source" id="r-source">Texto bíblico</div><button type="button" id="r-close" class="r-close" aria-label="Cerrar ficha del personaje">Cerrar</button></div><h3 id="r-detail-name">Shelomó</h3><p id="r-story"></p><details id="r-note-details" hidden><summary class="cursor-interaction" id="r-note-title">Nota de lectura</summary><p id="r-note"></p></details><div class="r-actions" id="r-actions"></div></article>
+  </div>
+  <div class="r-groups" id="r-groups"></div>
+  <div class="r-legend"><span><i></i>Descendencia</span><span><i class="r-dashed"></i>Otro progenitor</span><span>+ Desplegar rama</span></div>
+</div>
+<p class="r-status" id="r-status">Toca un nombre para leer su historia o + para abrir sus descendientes.</p>
+<details class="r-editorial"><summary>Cómo leer este árbol · Fuentes y alcance</summary><p>Una selección de 176 personajes: la línea de Shet desde Adam, las familias de Abraham, Israel, David y los reyes de Judá, hasta los nietos de Zerubavel nombrados al comienzo de 1 Crónicas 3:21. No reúne todas las familias bíblicas.</p><p>Las conexiones representan parentescos expresados en los pasajes indicados; no equivalen al orden de sucesión en el trono. Los nombres y sus variantes conservan su referencia para distinguir personajes homónimos.</p><p>Las fichas son síntesis originales de Dérej. Las notas distinguen el texto bíblico, las interpretaciones tradicionales y las filiaciones que admiten lecturas distintas. El árbol no completa generaciones ausentes ni resuelve diferencias mediante parentescos supuestos.</p><p>Lecturas principales: Génesis 5, 11, 16, 21–25, 29–30, 35–36 y 48; Rut 4:12–22; 1 Crónicas 3; Ageo 1:1. Cada personaje incluye su pasaje.</p></details></section></div></section>
 </main>
 <dialog id="metricsPrivacy" class="metricsPrivacy" aria-labelledby="metricsPrivacyTitle">
   <h2 id="metricsPrivacyTitle">Privacidad en Dérej</h2>
@@ -288,6 +317,8 @@
   
 <script src="config.js"></script>
 <script src="radio-wurlitzer.js?v=9"></script>
+<script src="genealogias.js?v=1"></script>
 </body>
 </html>
+
 
