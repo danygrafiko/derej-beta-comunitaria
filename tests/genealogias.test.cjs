@@ -114,3 +114,7 @@ readerClick({target:{closest:s=>s==='[data-gs-back]'?{}:null}});
 assert(reader.hidden&&!root.hidden);assert.equal(position,128,'Return must preserve tree reading position');
 const oldHTML=reader.innerHTML;api.openStudy('unknown-person');assert.equal(reader.innerHTML,oldHTML);assert(reader.hidden);
 console.log('PASS: all 176 full studies render, source lists and return controls included, tree scroll preserved, unknown person rejected.');
+
+api.openStudy('abraham',focusTarget);
+for(const parent of ['sara','hagar','ketura'])assert(reader.innerHTML.includes('data-gs-person=\"'+parent+'\"'),'Missing shared family '+parent);
+console.log('PASS: shared maternal branches link to their own studies.');
