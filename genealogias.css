@@ -88,7 +88,7 @@
 @media(max-width:530px){.genealogyInner{padding:12px 8px 35px}.genealogyEntry{align-items:flex-start;flex-direction:column;gap:16px;padding:22px}.genealogyEntry a{width:100%;text-align:center}#derej-raices-v2 .r-editorial{padding-inline:16px}}
 /* Estudios: lectura serena dentro de Genealogías. */
 #derej-raices-v2[hidden],#genealogyStudy[hidden],#genealogyCatalog[hidden]{display:none!important}
-#derej-raices-v2 .r-study-open{background:var(--r-deep);color:var(--r-on);border-color:var(--r-deep);font-weight:600}
+#derej-raices-v2 .r-actions .r-study-open{background:var(--r-deep);color:var(--r-on);border-color:var(--r-deep);font-weight:600}
 #derej-raices-v2 .r-study-entry{padding:0 24px 20px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
 #derej-raices-v2 .r-study-entry p{margin:0;font:15px/1.5 Georgia,serif;color:var(--r-muted)}
 #derej-raices-v2 .r-study-entry button{background:var(--r-soft);border:1px solid var(--r-line);border-radius:9px;padding:11px 13px;min-height:44px;color:var(--r-olive);font-size:13px}
@@ -150,3 +150,6 @@
  .gsReader .gsToolbar{padding:8px 10px;top:58px}.gsReader .gsToolbar>button{font-size:12px}.gsReader .gsToolbar [data-gs-size]{min-width:36px}
  .gsReader .gsArticle{padding:23px 18px;font-size:calc(17px * var(--gs-size))}.gsReader .gsLead{font-size:22px}.gsReader h2{font-size:25px}.gsReader .gsReflection{padding:18px}.gsReader .gsContents{gap:5px}.gsReader .gsContents a{padding:10px 9px}.gsReader .gsRelated>div{grid-template-columns:1fr}.gsReader .gsFooter button{width:100%;text-align:left}
 }
+
+/* El retorno contrasta con el fondo oscuro del Patio. */
+.genealogyInner>.genealogyBack{color:#e2d5b5}
