@@ -36,6 +36,12 @@
   Object.values(people).filter(k=>k.id!==id&&((p.father&&p.father===k.father)||(p.mother&&p.mother===k.mother))).forEach(k=>items.push([k.id,'Hermandad por un progenitor conocido']));
   return [...new Map(items.map(item=>[item[0],item])).values()];
  }
+ function studyURL(id){
+  if(!window.history?.replaceState||!window.location)return;
+  const url=new URL(window.location.href);url.searchParams.set('estudio','genealogias');
+  if(id)url.searchParams.set('persona',id);else url.searchParams.delete('persona');
+  url.hash='';window.history.replaceState(window.history.state,'',url.href);
+ }
  function openStudy(id,trigger=null){
   const p=people[id],s=profiles[id];if(!p||!s)return;
   if(reader.hidden)point={y:window.scrollY,focus:trigger||document.activeElement};
@@ -56,13 +62,13 @@
    ${related.length?`<section class="gsRelated"><p class="gsSectionLabel">FAMILIA · CONTINUAR LA LECTURA</p><h2>Otros nombres de esta rama</h2><div>${related.map(([pid,label])=>`<button type="button" data-gs-person="${esc(pid)}"><small>${esc(label)}</small><b>${esc(people[pid].name)}</b>${people[pid].alias?`<span>${esc(people[pid].alias)}</span>`:''}</button>`).join('')}</div></section>`:''}
    <footer class="gsFooter"><button type="button" data-gs-back>← Volver donde estabas en el árbol</button><button type="button" data-gs-tree="${esc(id)}">Ver a ${esc(p.name)} en el árbol</button><a href="?estudio=genealogias&amp;persona=${encodeURIComponent(id)}" target="_blank" rel="noopener">Abrir enlace de este estudio ↗</a></footer></article>`;
   reader.style.setProperty('--gs-size',fontSize);
-  tree.hidden=true;reader.hidden=false;
+  tree.hidden=true;reader.hidden=false;studyURL(id);
   document.getElementById('genealogyStudyTitle').focus({preventScroll:true});
   window.scrollTo({top:0,behavior:'instant'});
  }
  function closeStudy(center=null){
   if(reader.hidden)return;
-  reader.hidden=true;tree.hidden=false;current=null;
+  reader.hidden=true;tree.hidden=false;current=null;studyURL(null);
   if(center){api.setFocus(center);document.getElementById('r-root-name').focus({preventScroll:true});}
   else{if(point?.focus?.isConnected)point.focus.focus({preventScroll:true});else document.getElementById('genealogiasTitle').focus({preventScroll:true});window.scrollTo({top:point?.y||0,behavior:'instant'});}
   point=null;

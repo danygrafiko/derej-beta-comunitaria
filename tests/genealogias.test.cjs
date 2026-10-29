@@ -118,3 +118,14 @@ console.log('PASS: all 176 full studies render, source lists and return controls
 api.openStudy('abraham',focusTarget);
 for(const parent of ['sara','hagar','ketura'])assert(reader.innerHTML.includes('data-gs-person=\"'+parent+'\"'),'Missing shared family '+parent);
 console.log('PASS: shared maternal branches link to their own studies.');
+
+// Reading a relative updates the shareable URL without reloading or creating history entries.
+let sharedURL='https://derej-beta-comunitaria.vercel.app/?estudio=genealogias&persona=abraham#gsSources';
+studyWindow.location={get href(){return sharedURL;}};
+studyWindow.history={state:null,replaceState:(state,title,url)=>sharedURL=url};
+// Reload the controller with browser-like URL support; retain the original tree API.
+vm.runInNewContext(fs.readFileSync(path.join(appRoot,'genealogias-estudios.js'),'utf8'),{document:readerDocument,window:studyWindow,URL,URLSearchParams,location:{search:''}});
+api.openStudy('sara',focusTarget);assert.equal(new URL(sharedURL).searchParams.get('persona'),'sara');assert.equal(new URL(sharedURL).hash,'');
+studyScreen.events.click.at(-1)({target:{closest:s=>s==='[data-gs-back]'?{}:null}});
+assert(!new URL(sharedURL).searchParams.has('persona'));
+console.log('PASS: direct study URL follows related reading and returns to the tree without a reload.');
