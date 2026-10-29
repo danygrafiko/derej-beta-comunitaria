@@ -86,3 +86,67 @@
 #derej-raices-v2 .r-editorial p{margin:8px 0}
 #derej-raices-v2 button:focus-visible,.genealogyBack:focus-visible,.genealogyEntry a:focus-visible{outline:3px solid #896a34;outline-offset:3px}
 @media(max-width:530px){.genealogyInner{padding:12px 8px 35px}.genealogyEntry{align-items:flex-start;flex-direction:column;gap:16px;padding:22px}.genealogyEntry a{width:100%;text-align:center}#derej-raices-v2 .r-editorial{padding-inline:16px}}
+/* Estudios: lectura serena dentro de Genealogías. */
+#derej-raices-v2[hidden],#genealogyStudy[hidden],#genealogyCatalog[hidden]{display:none!important}
+#derej-raices-v2 .r-study-open{background:var(--r-deep);color:var(--r-on);border-color:var(--r-deep);font-weight:600}
+#derej-raices-v2 .r-study-entry{padding:0 24px 20px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+#derej-raices-v2 .r-study-entry p{margin:0;font:15px/1.5 Georgia,serif;color:var(--r-muted)}
+#derej-raices-v2 .r-study-entry button{background:var(--r-soft);border:1px solid var(--r-line);border-radius:9px;padding:11px 13px;min-height:44px;color:var(--r-olive);font-size:13px}
+#derej-raices-v2 .r-study-catalog{padding:18px 24px;border-block:1px solid var(--r-line);background:var(--r-surface);margin-bottom:18px}
+#derej-raices-v2 .r-study-catalog label{display:block;font-size:13px;margin-bottom:8px;color:var(--r-olive)}
+#derej-raices-v2 .r-study-catalog input{width:100%;min-height:48px;padding:11px 13px;border:1px solid var(--r-line);border-radius:9px;background:var(--r-paper);color:var(--r-ink);font:16px/1.4 system-ui,sans-serif}
+#derej-raices-v2 .r-study-catalog input:focus-visible{outline:3px solid var(--r-gold);outline-offset:2px}
+#derej-raices-v2 #genealogySearchStatus{font-size:12px;line-height:1.5;color:var(--r-muted)}
+#derej-raices-v2 #genealogyResults{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;max-height:370px;overflow:auto;overscroll-behavior:contain}
+#derej-raices-v2 #genealogyResults button{width:100%;height:100%;display:flex;flex-direction:column;gap:4px;text-align:left;padding:12px;border:1px solid var(--r-line);border-radius:9px;background:var(--r-paper);min-height:75px}
+#derej-raices-v2 #genealogyResults button b{font:18px/1.2 Georgia,serif}
+#derej-raices-v2 #genealogyResults button span,#derej-raices-v2 #genealogyResults button small{font-size:11px;color:var(--r-muted);line-height:1.4}
+.gsReader{--gs-size:1;max-width:780px;margin:auto;color:#2b3e30;background:#fffaf0;border:1px solid #ccd0bb;border-radius:20px;overflow:clip}
+.gsReader *{box-sizing:border-box}
+.gsReader button,.gsReader a{-webkit-tap-highlight-color:transparent}
+.gsReader button{font:inherit;cursor:pointer}
+.gsReader button:focus-visible,.gsReader a:focus-visible{outline:3px solid #896a34;outline-offset:3px}
+.gsReader .gsToolbar{position:sticky;top:62px;z-index:3;background:#f6f0e2;border-bottom:1px solid #d3d5c2;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:9px 18px}
+.gsReader .gsToolbar>button{background:transparent;border:0;color:#40553b;min-height:44px;padding:8px 5px;font-size:13px;text-align:left}
+.gsReader .gsToolbar>div{display:flex;gap:4px}
+.gsReader .gsToolbar [data-gs-size]{border:1px solid #c7cdb7;background:#fffbf2;border-radius:7px;min-width:40px;min-height:44px;font-size:13px;color:#40553b}
+.gsReader .gsToolbar [aria-pressed=true]{background:#354f39;color:#fffaf0}
+.gsReader .gsArticle{padding:30px 34px 26px;max-width:750px;margin:auto;font:calc(18px * var(--gs-size))/1.8 Georgia,serif;overflow-wrap:anywhere}
+.gsReader .gsArticle p{margin:0 0 1em}
+.gsReader .gsHero{border-bottom:1px solid #d3d5c2;padding-bottom:22px;margin-bottom:18px}
+.gsReader .gsEyebrow{font:11px/1.5 system-ui,sans-serif;letter-spacing:.16em;color:#727857;margin:0 0 14px}
+.gsReader h1{font:400 clamp(36px,5vw,48px)/1.1 Georgia,serif;color:#304b36;margin:0 0 9px}
+.gsReader .gsAlias{font:16px/1.5 system-ui,sans-serif;color:#7b745b;margin:0 0 14px}
+.gsReader .gsLead{font:24px/1.45 Georgia,serif;color:#536147;margin:0 0 17px}
+.gsReader .gsMeta{font:12px/1.6 system-ui,sans-serif;color:#73785f;margin:0}
+.gsReader .gsContents{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:20px;font:12px/1.5 system-ui,sans-serif}
+.gsReader .gsContents a{border:1px solid #d3d5c2;border-radius:8px;background:#f4f1e5;padding:11px;color:#43563c;text-decoration:none;min-height:44px}
+.gsReader .gsKinship{padding:17px 19px;background:#eef0e1;border-radius:12px;font:14px/1.7 system-ui,sans-serif;margin-bottom:28px}
+.gsReader .gsKinship b{font-size:12px;letter-spacing:.02em}
+.gsReader .gsKinship p{margin:7px 0 0}
+.gsReader .gsArticle>section{margin:0 0 32px;scroll-margin-top:140px}
+.gsReader .gsSectionLabel{font:10px/1.6 system-ui,sans-serif;letter-spacing:.15em;color:#7b7658;margin:0 0 8px}
+.gsReader h2{font:400 27px/1.25 Georgia,serif;color:#304b36;margin:0 0 15px}
+.gsReader h3{font:400 22px/1.3 Georgia,serif;color:#304b36;margin:20px 0 10px}
+.gsReader .gsTradition{border-left:3px solid #aa9367;padding:8px 0 4px 20px}
+.gsReader .gsSourceRef,.gsReader .gsSmall{font:12px/1.7 system-ui,sans-serif;color:#71725d}
+.gsReader .gsReflection{padding:23px;background:#eef0e1;border:1px solid #d1d8be;border-radius:14px}
+.gsReader .gsQuestion{font-style:italic;font-size:1.12em;line-height:1.6}
+.gsReader .gsSources{font:14px/1.75 system-ui,sans-serif;padding-left:23px}
+.gsReader .gsSources li{padding-bottom:8px}
+.gsReader a{color:#45613e;text-underline-offset:4px}
+.gsReader .gsEditorial{border-block:1px solid #d3d5c2;font:13px/1.75 system-ui,sans-serif;padding:6px 0}
+.gsReader .gsEditorial summary{cursor:pointer;min-height:44px;padding:10px 0;color:#45613e}
+.gsReader .gsEditorial p{margin:8px 0}
+.gsReader .gsRelated>div{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.gsReader .gsRelated button{display:flex;flex-direction:column;align-items:flex-start;gap:5px;text-align:left;background:#f4f1e5;border:1px solid #d3d5c2;border-radius:10px;padding:13px;color:#354c35;min-height:84px}
+.gsReader .gsRelated small,.gsReader .gsRelated span{font:11px/1.5 system-ui,sans-serif;color:#73785f}
+.gsReader .gsRelated b{font:20px/1.2 Georgia,serif}
+.gsReader .gsFooter{display:flex;flex-wrap:wrap;gap:10px;border-top:1px solid #d3d5c2;padding-top:20px;font:13px/1.6 system-ui,sans-serif}
+.gsReader .gsFooter button{padding:12px;border:1px solid #bdc7ad;border-radius:8px;background:#eaf0dd;color:#354c35;min-height:46px}
+.gsReader .gsFooter a{width:100%;padding-block:10px}
+@media(max-width:530px){
+ #derej-raices-v2 .r-study-entry{padding-inline:16px;gap:9px}#derej-raices-v2 .r-study-entry button{width:100%}#derej-raices-v2 .r-study-catalog{padding:16px}
+ .gsReader .gsToolbar{padding:8px 10px;top:58px}.gsReader .gsToolbar>button{font-size:12px}.gsReader .gsToolbar [data-gs-size]{min-width:36px}
+ .gsReader .gsArticle{padding:23px 18px;font-size:calc(17px * var(--gs-size))}.gsReader .gsLead{font-size:22px}.gsReader h2{font-size:25px}.gsReader .gsReflection{padding:18px}.gsReader .gsContents{gap:5px}.gsReader .gsContents a{padding:10px 9px}.gsReader .gsRelated>div{grid-template-columns:1fr}.gsReader .gsFooter button{width:100%;text-align:left}
+}

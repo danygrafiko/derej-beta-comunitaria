@@ -63,3 +63,54 @@ assert(html.includes('href="?estudio=genealogias" data-genealogias-open'));
 assert(html.includes('data-screen="genealogias" hidden'));
 assert(html.indexOf('data-genealogias-open')<html.indexOf('class="bibliotecaClosing"'));
 console.log('PASS: Biblioteca entry and native screen included.');
+
+// Every real tree entry must have an authored study and a working in-place action.
+const studyContext={window:{}};
+vm.runInNewContext(fs.readFileSync(path.join(appRoot,'genealogias-estudios-content.js'),'utf8'),studyContext);
+const profiles=studyContext.window.DEREJ_GENEALOGY_STUDIES.profiles;
+assert.deepEqual(Object.keys(profiles).sort(),Object.keys(api.people).sort());
+const storySet=new Set();
+for(const [id,profile] of Object.entries(profiles)){
+ assert(['relato','registro'].includes(profile.kind),id);
+ assert(profile.title&&profile.refs.length&&profile.story.length,id);
+ const story=profile.story.join(' ');assert(!storySet.has(story),'Copied biography '+id);storySet.add(story);
+ assert(story.split(/\s+/).length>=35,'Missing individual context '+id);
+ assert(profile.reading.length>150&&profile.question.endsWith('?')&&profile.practice.length>35,id);
+ assert(!/undefined|\[object Object\]|<script|\ufffd/.test(JSON.stringify(profile)),id);
+ if(profile.tradition)assert(profile.tradition.ref&&profile.tradition.text,id);
+ api.setFocus(id);
+ const more=root.querySelector('[data-study-person="'+id+'"]');assert(more,'No Saber más for '+id);
+ let opened=null;api.openStudy=person=>opened=person;more.click();assert.equal(opened,id,'Wrong person in study action');
+}
+assert.notEqual(profiles.tamar.story.join(' '),profiles.tamardavid.story.join(' '));
+assert.match(profiles.danieldavid.reading,/Quilab|listas|Daniel/);
+assert.match(profiles.zerubavel.reading,/Pedayá.*Shealtiel/);
+assert.match(profiles.pedaya.reading,/legal|adopción|explicación/);
+assert.match(profiles.natan.story.join(' '),/profeta/);
+assert.match(profiles.menasherey.story.join(' '),/Yosef/);
+console.log('PASS: 176 authored studies, source references, homonyms, textual differences and Saber más actions.');
+
+// Exercise the full reader renderer against every profile and its return navigation.
+const controls=new Map();
+for(const id of ['genealogyStudy','genealogyCatalog','genealogyCatalogToggle','genealogySearch','genealogyResults','genealogySearchStatus','genealogyStudyTitle','genealogiasTitle']){
+ const e=new El('div');e.hidden=['genealogyStudy','genealogyCatalog'].includes(id);e.value='';e.isConnected=true;controls.set(id,e);
+}
+const studyScreen=new El('section'),reader=controls.get('genealogyStudy');
+let position=128;
+const focusTarget=new El('button');focusTarget.isConnected=true;
+const readerDocument={activeElement:focusTarget,getElementById:id=>id==='derej-raices-v2'?root:controls.get(id)||document.getElementById(id),querySelector:s=>s.includes('data-screen')?studyScreen:null};
+const studyWindow={DEREJ_GENEALOGY_STUDIES:studyContext.window.DEREJ_GENEALOGY_STUDIES,get scrollY(){return position;},scrollTo:o=>position=o.top};
+vm.runInNewContext(fs.readFileSync(path.join(appRoot,'genealogias-estudios.js'),'utf8'),{document:readerDocument,window:studyWindow,URLSearchParams,location:{search:''}});
+for(const id of Object.keys(profiles)){
+ api.openStudy(id,focusTarget);
+ assert(!reader.hidden&&root.hidden,'Reader visibility '+id);
+ assert(reader.innerHTML.includes('id="genealogyStudyTitle"'),id);
+ assert(reader.innerHTML.includes(profiles[id].refs[0]),'Missing source in rendered study '+id);
+ assert(reader.innerHTML.includes('data-gs-back'),'Missing return action '+id);
+ assert(!/undefined|\[object Object\]/.test(reader.innerHTML),'Broken rendered study '+id);
+}
+const readerClick=studyScreen.events.click[0];
+readerClick({target:{closest:s=>s==='[data-gs-back]'?{}:null}});
+assert(reader.hidden&&!root.hidden);assert.equal(position,128,'Return must preserve tree reading position');
+const oldHTML=reader.innerHTML;api.openStudy('unknown-person');assert.equal(reader.innerHTML,oldHTML);assert(reader.hidden);
+console.log('PASS: all 176 full studies render, source lists and return controls included, tree scroll preserved, unknown person rejected.');

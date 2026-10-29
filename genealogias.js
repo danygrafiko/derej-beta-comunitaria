@@ -100,6 +100,7 @@
     $('r-note-details').hidden=!p.note;$('r-note-details').open=false;$('r-note').textContent=p.note;
     $('r-note-title').textContent=['sara','isca','ketura'].includes(id)?'Texto e interpretación tradicional':'Nota de lectura';
     $('r-actions').replaceChildren();
+    const more=button('Saber más sobre '+p.name,'r-study-open',event=>root.genealogy.openStudy?.(id,event?.currentTarget));more.dataset.studyPerson=id;$('r-actions').appendChild(more);
     if(id!==focus)$('r-actions').appendChild(button('Centrar esta rama','',()=>setFocus(id)));
     [p.father,p.mother].filter(Boolean).forEach(par=>$('r-actions').appendChild(button('Ir a '+people[par].name,'',()=>setFocus(par))));
     (p.related||[]).forEach(par=>$('r-actions').appendChild(button('Otra referencia: '+people[par].name,'',()=>select(par))));

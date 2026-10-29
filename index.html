@@ -26,7 +26,7 @@
 </style>
 <noscript><style>.courtyard .portal[hidden],.courtyard .pozoLearn[hidden]{display:flex!important}</style></noscript>
 <link rel="stylesheet" href="radio-wurlitzer.css?v=5">
-<link rel="stylesheet" href="genealogias.css?v=1">
+<link rel="stylesheet" href="genealogias.css?v=2">
 </head>
 <body>
 <main class="appShell">
@@ -78,7 +78,7 @@
     </div>
 
     <section class="genealogyEntry" aria-labelledby="genealogiasEntryTitle">
-      <div><small>FAMILIAS · GENERACIONES · MEMORIA</small><h2 id="genealogiasEntryTitle">Genealogías</h2><p>Explora las raíces de Abraham y sus familias. Continúa más allá de David, hasta el retorno del exilio, con ramas que se abren y fichas junto a cada nombre.</p></div>
+      <div><small>FAMILIAS · GENERACIONES · MEMORIA</small><h2 id="genealogiasEntryTitle">Genealogías</h2><p>Explora las raíces de Abraham y sus familias. Continúa más allá de David, hasta el retorno del exilio, con ramas que se abren, fichas junto a cada nombre y estudios para saber más.</p></div>
       <a href="?estudio=genealogias" data-genealogias-open>Explorar el árbol →</a>
     </section>
 
@@ -253,6 +253,8 @@
   <section class="screen avScreen" data-screen="arbol" hidden aria-labelledby="arbolTitle"><div id="arbolRoot" class="avInner"></div></section>
   <section class="screen genealogyScreen" data-screen="genealogias" hidden aria-labelledby="genealogiasTitle"><div class="genealogyInner"><button type="button" class="genealogyBack" data-genealogias-back>← Biblioteca</button><section id="derej-raices-v2" aria-label="Genealogías desplegables de Dérej">
 <header class="r-header"><p class="r-eyebrow">Dérej / Biblioteca</p><h1 id="genealogiasTitle" tabindex="-1">Genealogías</h1><p class="r-subtitle">De Adam al retorno del exilio</p><p class="r-guide">Toca un nombre para leer su ficha aquí mismo. Abre las ramas con + y continúa con ›. Puedes comenzar por cualquiera de estas familias.</p></header>
+<div class="r-study-entry"><p>Detrás de cada nombre, una lectura para comprender.</p><button type="button" id="genealogyCatalogToggle" aria-expanded="false" aria-controls="genealogyCatalog">Buscar un personaje · Saber más</button></div>
+<div id="genealogyCatalog" class="r-study-catalog" hidden><label for="genealogySearch">Nombre, variante o pasaje</label><input type="search" id="genealogySearch" maxlength="120" placeholder="Abraham, Sará, Salomón, Tamar…" autocomplete="off"><p id="genealogySearchStatus" role="status"></p><ul id="genealogyResults"></ul></div>
 <nav class="r-nav" aria-label="Comenzar por una familia">
   <button class="r-route" data-start="adam" aria-pressed="false" type="button">Desde Adam</button>
   <button class="r-route" data-start="abraham" aria-pressed="false" type="button">Abraham</button>
@@ -273,7 +275,7 @@
   <div class="r-legend"><span><i></i>Descendencia</span><span><i class="r-dashed"></i>Otro progenitor</span><span>+ Desplegar rama</span></div>
 </div>
 <p class="r-status" id="r-status">Toca un nombre para leer su historia o + para abrir sus descendientes.</p>
-<details class="r-editorial"><summary>Cómo leer este árbol · Fuentes y alcance</summary><p>Una selección de 176 personajes: la línea de Shet desde Adam, las familias de Abraham, Israel, David y los reyes de Judá, hasta los nietos de Zerubavel nombrados al comienzo de 1 Crónicas 3:21. No reúne todas las familias bíblicas.</p><p>Las conexiones representan parentescos expresados en los pasajes indicados; no equivalen al orden de sucesión en el trono. Los nombres y sus variantes conservan su referencia para distinguir personajes homónimos.</p><p>Las fichas son síntesis originales de Dérej. Las notas distinguen el texto bíblico, las interpretaciones tradicionales y las filiaciones que admiten lecturas distintas. El árbol no completa generaciones ausentes ni resuelve diferencias mediante parentescos supuestos.</p><p>Lecturas principales: Génesis 5, 11, 16, 21–25, 29–30, 35–36 y 48; Rut 4:12–22; 1 Crónicas 3; Ageo 1:1. Cada personaje incluye su pasaje.</p></details></section></div></section>
+<details class="r-editorial"><summary>Cómo leer este árbol · Fuentes y alcance</summary><p>Una selección de 176 personajes: la línea de Shet desde Adam, las familias de Abraham, Israel, David y los reyes de Judá, hasta los nietos de Zerubavel nombrados al comienzo de 1 Crónicas 3:21. No reúne todas las familias bíblicas.</p><p>Las conexiones representan parentescos expresados en los pasajes indicados; no equivalen al orden de sucesión en el trono. Los nombres y sus variantes conservan su referencia para distinguir personajes homónimos.</p><p>Las fichas son síntesis originales de Dérej. Las notas distinguen el texto bíblico, las interpretaciones tradicionales y las filiaciones que admiten lecturas distintas. El árbol no completa generaciones ausentes ni resuelve diferencias mediante parentescos supuestos.</p><p>Lecturas principales: Génesis 5, 11, 16, 21–25, 29–30, 35–36 y 48; Rut 4:12–22; 1 Crónicas 3; Ageo 1:1. Cada personaje incluye su pasaje.</p></details></section><div id="genealogyStudy" class="gsReader" hidden aria-labelledby="genealogyStudyTitle"></div></div></section>
 </main>
 <dialog id="metricsPrivacy" class="metricsPrivacy" aria-labelledby="metricsPrivacyTitle">
   <h2 id="metricsPrivacyTitle">Privacidad en Dérej</h2>
@@ -317,7 +319,9 @@
   
 <script src="config.js"></script>
 <script src="radio-wurlitzer.js?v=9"></script>
-<script src="genealogias.js?v=1"></script>
+<script src="genealogias-estudios-content.js?v=1"></script>
+<script src="genealogias.js?v=2"></script>
+<script src="genealogias-estudios.js?v=1"></script>
 </body>
 </html>
 
