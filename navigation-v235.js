@@ -80,6 +80,7 @@
 
     requestAnimationFrame(()=>{
       requestAnimationFrame(()=>{
+        if(caminoScreen?.hidden)return;
         const rail=caminoScreen?.querySelector('.ramakThresholdRail');
         rail?.scrollIntoView({behavior:'smooth',block:'start'});
       });
@@ -138,7 +139,7 @@
   route=function(name){
     previousRoute(name);
     if(!window.DEREJ_INTRO_RESUMING && name==='camino' && typeof RAMAK_DATA!=='undefined' && RAMAK_DATA){
-      setTimeout(focusEncounter,110);
+      focusEncounter();
     }
   };
 })();

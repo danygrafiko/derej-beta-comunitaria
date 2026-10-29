@@ -9,14 +9,17 @@
   const SESSION = 'derej.metrics.session.v1';
   const STUDY = 'derej.metrics.study.v1';
   const IDLE = 30 * 60 * 1000;
-  const SECTIONS = new Set(['home', 'camino', 'shabat', 'moed', 'radio', 'personal', 'pozo', 'arbol', 'voces', 'nombres']);
+  const SECTIONS = new Set(['home', 'camino', 'shabat', 'moed', 'radio', 'personal', 'pozo', 'arbol', 'voces', 'nombres', 'biblioteca', 'genealogias']);
+  let localStore=null,sessionStore=null;
+  try{localStore=localStorage;}catch{}
+  try{sessionStore=sessionStorage;}catch{}
   const production = location.hostname === 'derej-beta-comunitaria.vercel.app';
   const requestedMode = new URLSearchParams(location.search).get('metricas');
-  if (requestedMode === 'prueba') save(localStorage, INTERNAL, 'true');
-  if (requestedMode === 'publico') save(localStorage, INTERNAL, 'false');
-  let isTest = requestedMode === 'prueba' || (requestedMode !== 'publico' && read(localStorage, INTERNAL) === 'true');
+  if (requestedMode === 'prueba') save(localStore, INTERNAL, 'true');
+  if (requestedMode === 'publico') save(localStore, INTERNAL, 'false');
+  let isTest = requestedMode === 'prueba' || (requestedMode !== 'publico' && read(localStore, INTERNAL) === 'true');
   const browserOptOut = navigator.globalPrivacyControl === true || navigator.doNotTrack === '1';
-  let enabled = !browserOptOut && read(localStorage, PREF) !== 'false';
+  let enabled = !browserOptOut && read(localStore, PREF) !== 'false';
   let queue = [], sending = false, started = false, session = null, daily = null;
   let currentSection = '', sectionSince = performance.now(), lastInteraction = Date.now();
   let radio = null;
@@ -33,17 +36,17 @@
   function identities() {
     const now = Date.now(), date = day();
     if (!daily || daily.day !== date) {
-      daily = json(localStorage, DAILY);
+      daily = json(localStore, DAILY);
       if (!daily || daily.day !== date || !/^[0-9a-f-]{36}$/.test(daily.id)) daily = {day: date, id: uuid()};
-      save(localStorage, DAILY, JSON.stringify(daily));
+      save(localStore, DAILY, JSON.stringify(daily));
     }
-    if (!session) session = json(sessionStorage, SESSION);
+    if (!session) session = json(sessionStore, SESSION);
     const fresh = !session || now - session.last > IDLE || session.day !== date || session.test !== isTest;
     if (fresh) session = {id: uuid(), day: date, last: now, test: isTest};
     session.last = now;
-    save(sessionStorage, SESSION, JSON.stringify(session));
+    save(sessionStore, SESSION, JSON.stringify(session));
     if (!study || study.session !== session.id) {
-      const saved = json(sessionStorage, STUDY);
+      const saved = json(sessionStore, STUDY);
       const valid = !fresh && saved?.session === session.id;
       const keys = values => Array.isArray(values) ? values.filter(x => typeof x === 'string' && x.length <= 120).slice(0, 140) : [];
       study = {session: session.id, starts: new Set(valid ? keys(saved.starts) : []), completes: new Set(valid ? keys(saved.completes) : [])};
@@ -64,7 +67,7 @@
       const seen = type === 'study_start' ? study.starts : study.completes;
       if (seen.has(studyKey)) { flush(); return; }
       seen.add(studyKey);
-      save(sessionStorage, STUDY, JSON.stringify({session: study.session, starts: [...study.starts], completes: [...study.completes]}));
+      save(sessionStore, STUDY, JSON.stringify({session: study.session, starts: [...study.starts], completes: [...study.completes]}));
     }
     if (type !== 'visit' || !fresh) queue.push(row(type, details));
     if (queue.length > 40) queue = queue.slice(-40);
@@ -177,21 +180,21 @@
   }
   function setEnabled(value) {
     enabled = !!value && !browserOptOut;
-    save(localStorage, PREF, String(enabled));
+    save(localStore, PREF, String(enabled));
     if (!enabled) {
       queue = []; session = null; daily = null; radio = null; study = null; started = false;
-      remove(localStorage, DAILY); remove(sessionStorage, SESSION);
-      remove(sessionStorage, STUDY);
+      remove(localStore, DAILY); remove(sessionStore, SESSION);
+      remove(sessionStore, STUDY);
     } else begin();
   }
   function setInternal(value, persist = true) {
     const next = !!value;
-    if (persist) save(localStorage, INTERNAL, String(next));
+    if (persist) save(localStore, INTERNAL, String(next));
     if (next === isTest) return;
     closeSection();
     isTest = next;
     session = null; study = null; radio = null; started = false;
-    remove(sessionStorage, SESSION); remove(sessionStorage, STUDY);
+    remove(sessionStore, SESSION); remove(sessionStore, STUDY);
     sectionSince = performance.now();
     const toggle = document.getElementById('metricsInternal');
     if (toggle) toggle.checked = isTest;

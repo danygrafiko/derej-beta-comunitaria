@@ -6,6 +6,7 @@ async function app(query='',saved=null){
  const errors=[],vc=new VirtualConsole();vc.on('jsdomError',e=>errors.push(e.message));
  const dom=new JSDOM(fs.readFileSync(path.join(root,'index.html'),'utf8'),{url:'https://derej-beta-comunitaria.vercel.app/'+query,runScripts:'outside-only',pretendToBeVisual:true,virtualConsole:vc});
  const w=dom.window,d=w.document,ev=s=>vm.runInContext(s,dom.getInternalVMContext());let y=0,pauses=0,now=1000000,clockId=0;const clocks=new Map();
+ require('./browser-lifecycle.cjs')(w);
  Object.defineProperty(w,'scrollY',{get:()=>y});w.scrollTo=o=>{y=o.top||0;};w.HTMLElement.prototype.scrollIntoView=function(){};
  w.HTMLMediaElement.prototype.load=function(){};w.HTMLMediaElement.prototype.pause=function(){pauses++;};
  w.setInterval=fn=>{const id=++clockId;clocks.set(id,fn);return id;};w.clearInterval=id=>clocks.delete(id);w.Date.now=()=>now;

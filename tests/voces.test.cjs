@@ -5,6 +5,7 @@ const root=path.join(__dirname,'..');
 const errors=[],consoleForTest=new VirtualConsole();consoleForTest.on('jsdomError',e=>errors.push(e.message));
 const dom=new JSDOM(fs.readFileSync(path.join(root,'index.html'),'utf8'),{url:'https://derej-beta-comunitaria.vercel.app/',runScripts:'outside-only',pretendToBeVisual:true,virtualConsole:consoleForTest});
 const w=dom.window,doc=w.document,evaluate=s=>vm.runInContext(s,dom.getInternalVMContext());
+ require('./browser-lifecycle.cjs')(w);
 let y=0,pauses=0;const requests=[];
 Object.defineProperty(w,'scrollY',{get:()=>y});
 w.scrollTo=arg=>{y=typeof arg==='object'?arg.top:arg||0;};

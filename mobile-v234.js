@@ -102,7 +102,7 @@
     const buttons=[...document.querySelectorAll('#ramakDayStrip .ramakDay')];
     buttons.forEach(btn=>{
       const isToday=!!(p&&t&&p.parasha===t.parasha&&Number(btn.dataset.ramakDay)===Number(t.day)&&!btn.disabled);
-      btn.classList.toggle('today',isToday);
+      if(btn.classList.contains('today')!==isToday)btn.classList.toggle('today',isToday);
       if(!isToday) return;
       const small=btn.querySelector('small');
       if(!btn.classList.contains('done')){
@@ -140,7 +140,8 @@
     renderRamak=function(scroll=false){prev(scroll);requestAnimationFrame(apply);};
   }
 
-  const obs=new MutationObserver(()=>requestAnimationFrame(apply));
-  const host=document.querySelector('.ramakCaminoScreen')||document.body;
+  let pending=false;
+  const obs=new MutationObserver(()=>{if(pending)return;pending=true;requestAnimationFrame(()=>{pending=false;apply();});});
+  const host=document.querySelector('.caminoScreen')||document.body;
   obs.observe(host,{subtree:true,childList:true,attributes:true,attributeFilter:['class','hidden']});
 })();

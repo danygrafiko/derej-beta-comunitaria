@@ -44,7 +44,8 @@
  function restore(){
   const point=returnPoint||{name:'home',y:0};
   // Restore existing nodes instead of rendering Camino again: unsaved writing survives.
-  document.querySelectorAll('.screen[data-screen]').forEach(el=>{const on=el.dataset.screen===point.name;el.hidden=!on;el.classList.toggle('active',on);});
+  if(window.DEREJ_NAVIGATION)window.DEREJ_NAVIGATION.restore(point.name);
+  else document.querySelectorAll('.screen[data-screen]').forEach(el=>{const on=el.dataset.screen===point.name;el.hidden=!on;el.classList.toggle('active',on);});
   if(point.focus?.isConnected)point.focus.focus({preventScroll:true});
   window.scrollTo({top:point.y,behavior:'instant'});returnPoint=null;dailyContext=null;
  }

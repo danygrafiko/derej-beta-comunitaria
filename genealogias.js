@@ -191,7 +191,7 @@
   $('r-close').addEventListener('click',()=>{const trigger=root.querySelector('[data-read-button="'+selected+'"]')||$('r-root-name');detail.hidden=true;readOpen=false;root.querySelectorAll('[data-read-button]').forEach(b=>b.setAttribute('aria-expanded','false'));$('r-root-name').setAttribute('aria-expanded','false');trigger.focus({preventScroll:true});requestAnimationFrame(drawConnections);});
   $('r-ancestor-toggle').addEventListener('click',()=>{showAncestors=!showAncestors;render(false);});
   root.querySelectorAll('[data-start]').forEach(b=>b.addEventListener('click',()=>setFocus(b.dataset.start)));
-  new ResizeObserver(drawConnections).observe($('r-groups'));
+  if(typeof ResizeObserver==='function')new ResizeObserver(drawConnections).observe($('r-groups'));
   root.genealogy={people,children,grouping,paternalPath,setFocus,select};
   render();
 })();

@@ -51,6 +51,7 @@
 
   function addStyles(){
     let st=document.getElementById(STYLE_ID);
+    if(st)return;
     if(!st){
       st=document.createElement('style');
       st.id=STYLE_ID;
@@ -106,7 +107,8 @@
     }
     const p=typeof currentParasha==='function'?currentParasha():null;
     const strong=btn.querySelector('strong');
-    if(strong) strong.textContent=p?.parasha||'Elegir';
+    const label=p?.parasha||'Elegir';
+    if(strong&&strong.textContent!==label) strong.textContent=label;
   }
 
 
@@ -231,5 +233,5 @@
       scheduled=false;
       apply();
     });
-  }).observe(document.body,{subtree:true,childList:true});
+  }).observe(caminoScreen,{subtree:true,childList:true});
 })();

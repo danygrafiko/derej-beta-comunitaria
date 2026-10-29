@@ -435,3 +435,5 @@ body.rwDockHidden .rwScreen{padding-bottom:32px!important}
  cursor:pointer;touch-action:manipulation
 }
 .rwShowDockInline:focus-visible{outline:3px solid #94763a;outline-offset:3px}
+
+.rwCatalogNotice{margin:18px 0;padding:16px;border:1px solid #bea77b;border-radius:14px;background:#eee3ca;color:#3f382b;font:15px/1.6 system-ui}.rwCatalogNotice[hidden]{display:none}.rwCatalogNotice button{min-height:44px;border:1px solid #687552;border-radius:10px;padding:10px 16px;background:#3f5139;color:#fff;font:600 14px/1.4 system-ui;cursor:pointer}

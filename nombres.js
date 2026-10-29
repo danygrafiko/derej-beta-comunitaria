@@ -39,7 +39,8 @@
  }
  function back(){
   const point=returnPoint||{name:'home',y:0};
-  document.querySelectorAll('.screen[data-screen]').forEach(el=>{const on=el.dataset.screen===point.name;el.hidden=!on;el.classList.toggle('active',on);});
+  if(window.DEREJ_NAVIGATION)window.DEREJ_NAVIGATION.restore(point.name);
+  else document.querySelectorAll('.screen[data-screen]').forEach(el=>{const on=el.dataset.screen===point.name;el.hidden=!on;el.classList.toggle('active',on);});
   point.focus?.isConnected&&point.focus.focus({preventScroll:true});window.scrollTo({top:point.y,behavior:'instant'});returnPoint=null;
  }
  document.addEventListener('click',event=>{

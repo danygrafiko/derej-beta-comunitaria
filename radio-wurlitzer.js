@@ -326,7 +326,15 @@ async function readEmbeddedCover(track){
  embeddedCovers.set(key,promise);return promise;
 }
 window.addEventListener('pagehide',()=>{embeddedCovers.forEach(async p=>{try{const u=await p;if(u.startsWith('blob:'))URL.revokeObjectURL(u)}catch{}})},{once:true});
-fetch('radio-wurlitzer.json',{cache:'no-store'})
+const catalogNotice=document.createElement('div');catalogNotice.className='rwCatalogNotice';catalogNotice.hidden=true;
+const catalogMessage=document.createElement('p');catalogMessage.setAttribute('role','status');
+const catalogRetry=document.createElement('button');catalogRetry.type='button';catalogRetry.textContent='Volver a cargar la música';
+catalogNotice.append(catalogMessage,catalogRetry);$('rwDescription').after(catalogNotice);
+let loadingCatalog=false;
+function loadCatalog(){
+ if(loadingCatalog)return;loadingCatalog=true;catalogRetry.disabled=true;catalogMessage.textContent='Preparando las colecciones…';
+ $('rwMainPlay').disabled=!current;
+ return fetch('radio-wurlitzer.json',{cache:'no-store'})
  .then(r=>{if(!r.ok)throw Error('Catálogo '+r.status);return r.json()})
  .then(data=>{
    playlists=(data.playlists||[]).filter(p=>p.tracks?.length);
@@ -349,5 +357,10 @@ fetch('radio-wurlitzer.json',{cache:'no-store'})
    });
    $('rwStatus').textContent='Lista para escuchar';
  })
- .catch(()=>{$('rwStatus').textContent='No se pudo cargar el catálogo. Vuelve a abrir Radio Dérej.'});
+ .then(()=>{catalogNotice.hidden=true;})
+ .catch(()=>{catalogNotice.hidden=false;catalogMessage.textContent='No pudimos cargar las colecciones. Comprueba tu conexión y vuelve a intentarlo.';$('rwStatus').textContent='No se pudo cargar el catálogo.';})
+ .finally(()=>{loadingCatalog=false;catalogRetry.disabled=false;$('rwMainPlay').disabled=!current;});
+}
+catalogRetry.addEventListener('click',loadCatalog);
+loadCatalog();
 })();

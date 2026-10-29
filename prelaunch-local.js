@@ -3708,7 +3708,14 @@ function saveRamakDraft(){
     note,
     updatedAt:new Date().toISOString()
   };
-  try{localStorage.setItem(memoryKey(p.parasha,c.dia),JSON.stringify(draft));}catch{}
+  try{
+    localStorage.setItem(memoryKey(p.parasha,c.dia),JSON.stringify(draft));
+    if($('ramakDraftStatus'))$('ramakDraftStatus').textContent='Borrador guardado en este navegador. Puedes añadirlo a Mi Camino al terminar.';
+    return true;
+  }catch{
+    if($('ramakDraftStatus'))$('ramakDraftStatus').textContent='No pudimos guardar este borrador. Conserva una copia antes de salir.';
+    return false;
+  }
 }
 
 
@@ -10202,6 +10209,7 @@ function renderPanels(p,c){
       <div class="ramakCard ramakPractice"><small>AVODÁ · GESTO DE HOY</small><strong>${esc(carry.avoda||'')}</strong></div>
       <label for="ramakNote">Una nota para guardar este momento</label>
       <textarea id="ramakNote" rows="4" maxlength="700" placeholder="Escribe libremente lo que quieras guardar de este momento.">${esc(saved.note||'')}</textarea>
+      <p id="ramakDraftStatus" class="ramakSourceNote" role="status"></p>
       ${navButtons('practica')}
     </div>`;
 
@@ -12833,7 +12841,7 @@ function renderRamakError(){
   if(!caminoScreen) return;
   const chooser=$('ramakChooser');
   const incomplete=String(ramakLoadError||'').startsWith('Contenido diario incompleto');
-  if(chooser) chooser.innerHTML=`<div class="ramakLoading" role="status">${incomplete?esc(ramakLoadError):'No pudimos cargar el estudio. Comprueba tu conexión e inténtalo de nuevo.'}</div>`;
+  if(chooser) chooser.innerHTML=`<div class="ramakLoading" role="status">${incomplete?esc(ramakLoadError):'No pudimos cargar el estudio. Comprueba tu conexión e inténtalo de nuevo.'}<p><button type="button" data-study-retry>Volver a cargar el estudio</button></p></div>`;
 }
 
 
@@ -13374,6 +13382,8 @@ async function loadRamak(){
 
 
 document.addEventListener('click',e=>{
+  const retry=e.target.closest('[data-study-retry]');
+  if(retry){retry.disabled=true;retry.textContent='Preparando el estudio…';loadRamak();return;}
   const r=e.target.closest('[data-route]');
   if(r){route(r.dataset.route);return;}
 
@@ -34287,10 +34297,12 @@ loadRamak();
 
 
 
+  function personalStorageKeys(){
+    try{return Array.from({length:localStorage.length},(_,i)=>localStorage.key(i));}catch{return [];}
+  }
   function encounterMemories(){
     const out=[];
-    for(let i=0;i<localStorage.length;i++){
-      const key=localStorage.key(i);
+    for(const key of personalStorageKeys()){
       if(!key?.startsWith('derej-v21-encuentro-')) continue;
       try{
         const x=JSON.parse(localStorage.getItem(key)||'null');
@@ -34557,8 +34569,7 @@ loadRamak();
 
   function legacyActions(){
     const out=[];
-    for(let i=0;i<localStorage.length;i++){
-      const key=localStorage.key(i);
+    for(const key of personalStorageKeys()){
       if(!key?.startsWith('derej:content:')||!key.endsWith(':actions')) continue;
       try{
         const arr=JSON.parse(localStorage.getItem(key)||'[]');
@@ -34825,8 +34836,7 @@ loadRamak();
 
   function legacyReflections(){
     const out=[];
-    for(let i=0;i<localStorage.length;i++){
-      const key=localStorage.key(i);
+    for(const key of personalStorageKeys()){
       if(!key?.startsWith('derej:community:private:')) continue;
       const body=(localStorage.getItem(key)||'').trim();
       if(body) out.push({key,body});
@@ -36152,10 +36162,10 @@ loadRamak();
       footprintCards.push(`
         <article class="personalMemoryCard">
           <small>${isRamak?'CAMINO DIARIO · EDICIÓN RAMAK':'CAMINO · ENCUENTRO GUARDADO'}</small>
-          <h4>${title}</h4>
-          ${isRamak&&x.sefira?`<p>${x.sefira}</p>`:''}
-          ${!isRamak&&x.choice?`<p>${x.choice}${x.midah?` — ${x.midah}`:''}</p>`:''}
-          ${x.note?`<blockquote>“${x.note}”</blockquote>`:''}
+          <h4>${esc(title)}</h4>
+          ${isRamak&&x.sefira?`<p>${esc(x.sefira)}</p>`:''}
+          ${!isRamak&&x.choice?`<p>${esc(x.choice)}${x.midah?` — ${esc(x.midah)}`:''}</p>`:''}
+          ${x.note?`<blockquote>“${esc(x.note)}”</blockquote>`:''}
           ${x.savedAt?`<time>${formatDate(x.savedAt)}</time>`:''}
         </article>`);
     });
@@ -36164,7 +36174,7 @@ loadRamak();
         <article class="personalMemoryCard">
           <small>CAMINO · HUELLA RC2</small>
           <h4>Encuentro vivido</h4>
-          <p>${x.date}</p>
+          <p>${esc(x.date)}</p>
           ${x.at?`<time>${formatDate(x.at)}</time>`:''}
         </article>`);
     });
@@ -36434,8 +36444,8 @@ loadRamak();
       memoryCards.push(`
         <article class="personalMemoryCard">
           <small>${isRamak?'TU NOTA · CAMINO DIARIO':'TU NOTA · CAMINO'}</small>
-          <h4>${isRamak?`${x.parasha||'Camino'} · Día ${x.dia||''}`:`${x.parasha||'Encuentro'}${x.encounter?` · ${x.encounter}`:''}`}</h4>
-          <p>“${x.note}”</p>
+          <h4>${esc(isRamak?`${x.parasha||'Camino'} · Día ${x.dia||''}`:`${x.parasha||'Encuentro'}${x.encounter?` · ${x.encounter}`:''}`)}</h4>
+          <p>“${esc(x.note)}”</p>
           ${x.savedAt?`<time>${formatDate(x.savedAt)}</time>`:''}
         </article>`);
     });
@@ -36443,8 +36453,8 @@ loadRamak();
       memoryCards.push(`
         <article class="personalMemoryCard">
           <small>PRÁCTICA GUARDADA · RC2</small>
-          <h4>${a.block_title||a.block_id||'Práctica'}</h4>
-          <p>${a.content_title||a.content_id||''}${a.selection?` · ${a.selection}`:''}</p>
+          <h4>${esc(a.block_title||a.block_id||'Práctica')}</h4>
+          <p>${esc(a.content_title||a.content_id||'')}${a.selection?` · ${esc(a.selection)}`:''}</p>
           ${a.at?`<time>${formatDate(a.at)}</time>`:''}
         </article>`);
     });
@@ -36453,7 +36463,7 @@ loadRamak();
         <article class="personalMemoryCard">
           <small>REFLEXIÓN PRIVADA · RC2</small>
           <h4>Una frase que guardaste</h4>
-          <p>“${r.body.length>220?r.body.slice(0,217)+'…':r.body}”</p>
+          <p>“${esc(r.body.length>220?r.body.slice(0,217)+'…':r.body)}”</p>
         </article>`);
     });
     if(brote?.body){
@@ -36461,7 +36471,7 @@ loadRamak();
         <article class="personalMemoryCard">
           <small>BROTE ACTUAL</small>
           <h4>Lo que está naciendo</h4>
-          <p>“${brote.body}”</p>
+          <p>“${esc(brote.body)}”</p>
           ${brote.updatedAt?`<time>${formatDate(brote.updatedAt)}</time>`:''}
         </article>`);
     }
@@ -38034,6 +38044,7 @@ loadRamak();
 
 
 
+  document.addEventListener('derej-route-change',e=>{if(e.detail?.name==='personal')render();});
   activate('huellas');
   render();
 })();
@@ -39229,7 +39240,7 @@ loadRamak();
     return {schema:'derej-progress-v1',completed:{}};
   }
   function saveProgress(x){
-    try{localStorage.setItem(PROGRESS_KEY,JSON.stringify(x));}catch{}
+    try{localStorage.setItem(PROGRESS_KEY,JSON.stringify(x));return true;}catch{return false;}
   }
   function isCompleted(parasha,day){return !!loadProgress().completed[progressId(parasha,day)];}
   function setCompleted(parasha,day,value){
@@ -39242,7 +39253,7 @@ loadRamak();
         completedAt:new Date().toISOString()
       };
     }else delete x.completed[id];
-    saveProgress(x);
+    return saveProgress(x);
   }
   function eligibleEntries(){
     if(!RAMAK_DATA) return [];
@@ -40064,7 +40075,11 @@ loadRamak();
     const complete=e.target.closest('[data-ramak-complete]');
     if(complete){
       const parasha=complete.dataset.parasha,day=Number(complete.dataset.day);
-      setCompleted(parasha,day,!isCompleted(parasha,day));
+      if(!setCompleted(parasha,day,!isCompleted(parasha,day))){
+        const hint=complete.parentElement.querySelector('.ramakCompleteHint');
+        if(hint)hint.textContent='No pudimos guardar tu avance en este navegador. Vuelve a intentarlo antes de salir.';
+        return;
+      }
       renderRamak(false);
       renderProgressSheet();
       return;
