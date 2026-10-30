@@ -126,6 +126,30 @@
         </div>
         <p id="thAtlasLoad" aria-live="polite">Preparando atlas…</p>
         <div id="thAtlasContent" hidden>
+          <div class="thAtlasMapLayout">
+            <div class="thAtlasMap" role="group" aria-label="Mapa corporal interactivo: selecciona una región">
+              <svg viewBox="0 0 200 365" aria-hidden="true" focusable="false">
+                <defs><linearGradient id="thBodyFill" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d5dfc8"/><stop offset="1" stop-color="#b2c5b2"/></linearGradient></defs>
+                <ellipse cx="100" cy="42" rx="24" ry="29" fill="url(#thBodyFill)" stroke="#6f927a" stroke-width="2"/>
+                <path d="M87 69 L87 83 C66 88 61 99 56 125 L48 182 Q48 193 58 194 Q67 193 69 183 L77 139 L77 184 L84 229 L77 311 L73 345 Q74 355 86 354 L93 349 L100 254 L108 349 L116 354 Q128 353 126 344 L122 311 L115 229 L123 184 L123 139 L131 183 Q133 193 143 194 Q153 193 152 182 L144 125 C139 99 134 88 113 83 L113 69" fill="url(#thBodyFill)" stroke="#6f927a" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M100 85 L100 228 M77 139 L123 139 M84 229 L115 229" fill="none" stroke="#86a28b" stroke-opacity=".55" stroke-dasharray="4 6"/>
+              </svg>
+              <button type="button" data-th-region="cabeza" style="--x:50%;--y:9%" aria-label="Cabeza" title="Cabeza">●</button>
+              <button type="button" data-th-region="ojos" style="--x:56%;--y:13%" aria-label="Ojos" title="Ojos">●</button>
+              <button type="button" data-th-region="oidos" style="--x:39%;--y:12%" aria-label="Oídos" title="Oídos">●</button>
+              <button type="button" data-th-region="boca" style="--x:50%;--y:17%" aria-label="Boca" title="Boca">●</button>
+              <button type="button" data-th-region="corazon" style="--x:55%;--y:31%" aria-label="Corazón" title="Corazón">●</button>
+              <button type="button" data-th-region="pecho" style="--x:44%;--y:35%" aria-label="Pecho" title="Pecho">●</button>
+              <button type="button" data-th-region="brazos" style="--x:72%;--y:44%" aria-label="Brazos" title="Brazos">●</button>
+              <button type="button" data-th-region="espalda" style="--x:44%;--y:48%" aria-label="Espalda" title="Espalda">●</button>
+              <button type="button" data-th-region="vientre" style="--x:54%;--y:54%" aria-label="Vientre" title="Vientre">●</button>
+              <button type="button" data-th-region="integral" style="--x:51%;--y:63%" aria-label="Todo el cuerpo" title="Todo el cuerpo">●</button>
+              <button type="button" data-th-region="rodillas" style="--x:44%;--y:76%" aria-label="Rodillas" title="Rodillas">●</button>
+              <button type="button" data-th-region="pies" style="--x:40%;--y:94%" aria-label="Pies" title="Pies">●</button>
+              <button type="button" data-th-region="descanso" style="--x:65%;--y:8%" aria-label="Descanso" title="Descanso">●</button>
+            </div>
+            <div class="thAtlasMapCopy"><span class="thEyebrow">ATLAS INTERACTIVO</span><h3>Escucha el cuerpo, estudia el Salmo</h3><p>Selecciona un punto del mapa o utiliza el menú. La relación es temática y contemplativa: no es una indicación clínica ni una correspondencia mística obligatoria.</p><p class="thAtlasFine">13 regiones · 5 momentos de lectura · 3 duraciones · 7 días de acompañamiento.</p></div>
+          </div>
           <div class="thAtlasControls">
             <label>¿Qué parte del cuerpo deseas contemplar?
               <select id="thAtlasRegion" aria-label="Seleccionar parte del cuerpo"></select>
