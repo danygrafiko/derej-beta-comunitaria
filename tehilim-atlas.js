@@ -90,6 +90,16 @@ async function open(){
    $('thAtlasSafety').textContent=data.medical;
    $('thAtlasTimesEditorial').textContent=data.timesEditorial;
    $('thAtlasHorarios').textContent=data.horariosCurados?.principio+' '+data.horariosCurados?.liturgia+' '+data.horariosCurados?.tradicion;
+   const general=data.curaduriaGeneral||{};
+   $('thAtlasPrologue').textContent=general.prologo||'';
+   const books=$('thAtlasBooks');books.replaceChildren();
+   for(const b of general.cincoLibros||[]){const c=el('article',undefined,'thAtlasBook');c.append(el('h4','Libro '+b.libro+' · '+b.rango),el('p',b.lectura),el('p',b.clave,'thAtlasFine'));books.append(c);}
+   const levels=$('thAtlasReadingLevels');levels.replaceChildren();
+   for(const level of general.lecturas||[]){const c=el('div',undefined,'thAtlasCuratedItem');c.append(el('h4',level.nivel),el('p',level.pregunta));levels.append(c);}
+   $('thAtlasCautions').replaceChildren(...(general.cautelas||[]).map(x=>el('li',x)));
+   const bibliography=$('thAtlasBibliography');bibliography.replaceChildren();
+   for(const src of general.fuentes||[]){if(!/^https:\/\/(www\.sefaria\.org|www\.chabad\.org)\//.test(src.url))continue;const li=el('li');li.append(safeLink(src.label,src.url));bibliography.append(li);}
+   $('thAtlasEditorialStatus').textContent=general.estatus||'';
    const policy=$('thAtlasPolicy');policy.replaceChildren(...(data.editorialPolicy?.principles||[]).map(x=>el('li',x)));
   }
   $('thAtlasLoad').hidden=true;
