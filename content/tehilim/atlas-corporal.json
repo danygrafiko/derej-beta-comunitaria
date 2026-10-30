@@ -1,0 +1,350 @@
+{
+  "version": "2026-10-30.2",
+  "title": "Tehilim · Atlas contemplativo del cuerpo",
+  "subtitle": "Elegir una región, leer con sentido, cuidar la vida",
+  "intro": "El atlas propone correspondencias temáticas para la contemplación. No es un mapa médico ni un repertorio de salmos curativos tradicionales por órgano.",
+  "regions": [
+    {
+      "id": "cabeza",
+      "name": "Cabeza y pensamientos",
+      "symbol": "Atención, inquietud y claridad",
+      "psalms": [
+        94,
+        139,
+        121
+      ],
+      "anchor": "Salmo 94:19",
+      "passage": "Cuando mis inquietudes se multiplican dentro de mí, tus consuelos alegran mi alma.",
+      "sourceNote": "El versículo menciona inquietudes interiores; su aplicación a molestias de cabeza es simbólica, no clínica.",
+      "questions": [
+        "¿Qué pensamiento me está agotando?",
+        "¿Qué ayuda concreta puedo pedir?"
+      ],
+      "action": "Hacer una pausa, reconocer una preocupación y compartirla con alguien de confianza."
+    },
+    {
+      "id": "ojos",
+      "name": "Ojos y mirada",
+      "symbol": "Percepción, perspectiva y atención",
+      "psalms": [
+        119,
+        123,
+        19
+      ],
+      "anchor": "Salmo 119:18",
+      "passage": "Abre mis ojos para que contemple las maravillas de tu enseñanza.",
+      "sourceNote": "El Salmo habla de comprensión espiritual, no de recuperación de la vista.",
+      "questions": [
+        "¿Qué no estoy logrando ver con claridad?",
+        "¿Cómo puedo mirar a otro con más compasión?"
+      ],
+      "action": "Leer despacio un pasaje y anotar una nueva perspectiva."
+    },
+    {
+      "id": "oidos",
+      "name": "Oídos y escucha",
+      "symbol": "Escucha, receptividad y diálogo",
+      "psalms": [
+        40,
+        116,
+        85
+      ],
+      "anchor": "Salmo 116:1–2",
+      "passage": "El salmista agradece que su voz y su súplica sean escuchadas.",
+      "sourceNote": "El tema es la escucha de la plegaria, no la función auditiva.",
+      "questions": [
+        "¿A quién necesito escuchar sin interrumpir?",
+        "¿Qué voz interior he desatendido?"
+      ],
+      "action": "Dedicar unos minutos a escuchar atentamente a otra persona."
+    },
+    {
+      "id": "boca",
+      "name": "Boca, voz y garganta",
+      "symbol": "Palabra, verdad y silencio",
+      "psalms": [
+        141,
+        19,
+        51
+      ],
+      "anchor": "Salmo 141:3",
+      "passage": "Pon, Creador, una guarda ante mi boca; vigila la puerta de mis labios. (Paráfrasis editorial.)",
+      "sourceNote": "El pasaje se refiere al cuidado ético del habla, no a enfermedades de garganta.",
+      "questions": [
+        "¿Qué palabra debería cuidar hoy?",
+        "¿Qué silencio puede ser más compasivo?"
+      ],
+      "action": "Elegir una conversación para practicar un lenguaje cuidadoso."
+    },
+    {
+      "id": "corazon",
+      "name": "Corazón y emociones",
+      "symbol": "Consuelo, tristeza y gratitud",
+      "psalms": [
+        147,
+        34,
+        73
+      ],
+      "anchor": "Salmo 147:3",
+      "passage": "Sana a los quebrantados de corazón y venda sus heridas.",
+      "sourceNote": "El corazón quebrantado es una imagen poética del sufrimiento; no equivale a una indicación para cardiopatías.",
+      "questions": [
+        "¿Qué emoción necesita ser acogida?",
+        "¿Cómo puedo acompañar a alguien que sufre?"
+      ],
+      "action": "Enviar un mensaje de acompañamiento o pedir compañía."
+    },
+    {
+      "id": "pecho",
+      "name": "Pecho y respiración",
+      "symbol": "Aliento, vida y gratitud",
+      "psalms": [
+        150,
+        63,
+        104
+      ],
+      "anchor": "Salmo 150:6",
+      "passage": "Que todo cuanto respira alabe al Creador. (Paráfrasis editorial.)",
+      "sourceNote": "La respiración aparece como imagen de vida y alabanza, no como tratamiento respiratorio.",
+      "questions": [
+        "¿Qué agradezco por estar vivo hoy?",
+        "¿Qué situación requiere serenidad?"
+      ],
+      "action": "Sentarse cómodamente y leer sin forzar ni retener la respiración."
+    },
+    {
+      "id": "brazos",
+      "name": "Brazos y manos",
+      "symbol": "Acción, servicio y responsabilidad",
+      "psalms": [
+        90,
+        144,
+        28
+      ],
+      "anchor": "Salmo 90:17",
+      "passage": "Afirma la obra de nuestras manos.",
+      "sourceNote": "La imagen de las manos alude al trabajo y la acción humana.",
+      "questions": [
+        "¿Qué puedo construir o reparar hoy?",
+        "¿A quién puedo ayudar con mis manos?"
+      ],
+      "action": "Realizar una pequeña acción de servicio."
+    },
+    {
+      "id": "espalda",
+      "name": "Espalda y sostén",
+      "symbol": "Carga, apoyo y confianza",
+      "psalms": [
+        3,
+        18,
+        55
+      ],
+      "anchor": "Salmo 3:6",
+      "passage": "Me acuesto, duermo y despierto, porque el Creador me sostiene. (Paráfrasis editorial.)",
+      "sourceNote": "Sostener es aquí una imagen de confianza; no una correspondencia anatómica con la espalda.",
+      "questions": [
+        "¿Qué carga estoy llevando solo?",
+        "¿Quién puede ayudarme a sostenerla?"
+      ],
+      "action": "Delegar o compartir una responsabilidad razonable."
+    },
+    {
+      "id": "vientre",
+      "name": "Vientre y vulnerabilidad",
+      "symbol": "Sensibilidad, angustia y cuidado",
+      "psalms": [
+        6,
+        13,
+        42
+      ],
+      "anchor": "Salmo 6:3–4",
+      "passage": "El salmista describe debilidad y estremecimiento de sus huesos.",
+      "sourceNote": "No hay correspondencia textual específica con el aparato digestivo; la relación es una lectura contemporánea de la vulnerabilidad.",
+      "questions": [
+        "¿Qué preocupación me cuesta expresar?",
+        "¿Qué necesito para sentirme acompañado?"
+      ],
+      "action": "Escribir una preocupación sin juzgarla y pedir apoyo si hace falta."
+    },
+    {
+      "id": "rodillas",
+      "name": "Rodillas y articulaciones",
+      "symbol": "Firmeza, flexibilidad y humildad",
+      "psalms": [
+        6,
+        18,
+        147
+      ],
+      "anchor": "Salmo 18:37",
+      "passage": "Ensanchas el espacio de mis pasos y mis tobillos no vacilan. (Paráfrasis editorial.)",
+      "sourceNote": "Nétzaj y Hod se vinculan simbólicamente con las piernas en Pataj Eliyahu, Tikunéi Zóhar 17a. No existe una asignación médica tradicional de estos Salmos a la rodilla.",
+      "questions": [
+        "¿Dónde necesito sostén?",
+        "¿Cuándo la perseverancia se vuelve rigidez?"
+      ],
+      "action": "Reconocer un límite y aceptar ayuda sin culpa."
+    },
+    {
+      "id": "pies",
+      "name": "Pies y caminar",
+      "symbol": "Dirección, decisiones y camino",
+      "psalms": [
+        119,
+        18,
+        121
+      ],
+      "anchor": "Salmo 119:105",
+      "passage": "Tu palabra es lámpara para mis pies y luz para mi camino.",
+      "sourceNote": "La metáfora habla de orientación ética, no de tratamiento de pies o tobillos.",
+      "questions": [
+        "¿Qué decisión necesito iluminar?",
+        "¿Cuál es el siguiente paso pequeño?"
+      ],
+      "action": "Elegir una decisión concreta y escribir el primer paso posible."
+    },
+    {
+      "id": "descanso",
+      "name": "Sueño y descanso",
+      "symbol": "Reposo, confianza y límites",
+      "psalms": [
+        4,
+        91,
+        121
+      ],
+      "anchor": "Salmo 4:9",
+      "passage": "En paz me acostaré y dormiré, porque tú me haces habitar confiado. (Paráfrasis editorial.)",
+      "sourceNote": "La lectura nocturna puede acompañar una rutina de descanso, pero no cura trastornos del sueño.",
+      "questions": [
+        "¿Qué necesito soltar antes de dormir?",
+        "¿Cómo puedo cuidar mi descanso?"
+      ],
+      "action": "Cerrar la jornada con una gratitud y dejar pendientes por escrito."
+    },
+    {
+      "id": "integral",
+      "name": "Todo el cuerpo",
+      "symbol": "Dignidad, creación y cuidado",
+      "psalms": [
+        103,
+        139,
+        147
+      ],
+      "anchor": "Salmo 139:14",
+      "passage": "Te agradezco porque he sido hecho de manera admirable. (Paráfrasis editorial.)",
+      "sourceNote": "El texto celebra la vida y la creación, sin afirmar que la oración sustituya tratamientos.",
+      "questions": [
+        "¿Qué parte de mí necesita más cuidado?",
+        "¿Cómo honro mis límites corporales?"
+      ],
+      "action": "Agradecer una capacidad del cuerpo y realizar una acción de autocuidado."
+    }
+  ],
+  "times": [
+    {
+      "id": "despertar",
+      "name": "Al despertar",
+      "label": "Mañana",
+      "note": "Una lectura breve al comenzar el día; no existe una hora universal obligatoria para estos Salmos."
+    },
+    {
+      "id": "pausa",
+      "name": "Durante una pausa",
+      "label": "Mediodía",
+      "note": "Una pausa voluntaria en la jornada; no corresponde a una prescripción rabínica específica."
+    },
+    {
+      "id": "tarde",
+      "name": "Al cerrar la tarde",
+      "label": "Tarde",
+      "note": "Momento para revisar lo vivido y agradecer; la elección es personal."
+    },
+    {
+      "id": "noche",
+      "name": "Antes de descansar",
+      "label": "Noche",
+      "note": "Lectura serena antes del sueño, sin equipararla a una obligación ritual ni prometer mejoras del sueño."
+    },
+    {
+      "id": "libre",
+      "name": "Cuando lo necesite",
+      "label": "Flexible",
+      "note": "La lectura de Salmos puede realizarse en distintos momentos, según las costumbres y la situación personal."
+    }
+  ],
+  "durations": [
+    {
+      "minutes": 5,
+      "steps": [
+        "Leer el pasaje señalado",
+        "Responder una pregunta breve"
+      ]
+    },
+    {
+      "minutes": 10,
+      "steps": [
+        "Leer el pasaje señalado",
+        "Leer el Salmo completo si es posible",
+        "Escribir una reflexión"
+      ]
+    },
+    {
+      "minutes": 15,
+      "steps": [
+        "Leer el Salmo completo",
+        "Explorar una fuente y una palabra hebrea",
+        "Conversar o realizar una acción de cuidado"
+      ]
+    }
+  ],
+  "method": [
+    {
+      "title": "1. Leer",
+      "body": "Comienza por el texto bíblico y su contexto. Distingue la numeración de versículos y evita extraer promesas médicas de la poesía."
+    },
+    {
+      "title": "2. Comprender",
+      "body": "Revisa el sentido literal, la estructura literaria y los comentarios tradicionales disponibles; no toda asociación contemporánea tiene un antecedente cabalístico."
+    },
+    {
+      "title": "3. Contemplar",
+      "body": "Relaciona el tema del Salmo con una experiencia personal sin convertir un síntoma en culpa o castigo."
+    },
+    {
+      "title": "4. Actuar",
+      "body": "Transforma la lectura en cuidado concreto: pedir ayuda, visitar a alguien, descansar o seguir la atención profesional que corresponda."
+    }
+  ],
+  "traditionalSources": [
+    {
+      "label": "Tikunéi Zóhar 17a · Pataj Eliyahu (piernas y sefirot)",
+      "url": "https://www.sefaria.org/Tikkunei_Zohar.17a"
+    },
+    {
+      "label": "Nedarim 40a · Visita y cuidado del enfermo",
+      "url": "https://www.sefaria.org/Nedarim.40a"
+    },
+    {
+      "label": "Berakhot 10a · Plegaria de Ezequías",
+      "url": "https://www.sefaria.org/Berakhot.10a"
+    },
+    {
+      "label": "Salmo 119 · Luz y camino",
+      "url": "https://www.sefaria.org/Psalms.119"
+    },
+    {
+      "label": "Salmo 147 · Restauración",
+      "url": "https://www.sefaria.org/Psalms.147"
+    }
+  ],
+  "timesEditorial": "No hay una regla universal en las fuentes clásicas que asigne una hora específica a cada Salmo para sanar un órgano. Shajarit, Minjá y Arvit son momentos de la liturgia judía, pero este atlas no presenta sus horarios como tratamientos.",
+  "medical": "La elección de una región corporal es una ayuda de navegación y reflexión. Si existe dolor persistente, lesión, dificultad respiratoria, dolor torácico u otros síntomas preocupantes, busca atención sanitaria apropiada. La oración no sustituye diagnóstico, tratamiento ni rehabilitación.",
+  "sevenDaySequence": [
+    "Escuchar el texto y reconocer una necesidad.",
+    "Leer de nuevo y observar una palabra clave.",
+    "Explorar el contexto y una fuente tradicional.",
+    "Contemplar la diferencia entre firmeza y flexibilidad.",
+    "Pensar en alguien que necesita compañía.",
+    "Convertir la reflexión en una acción concreta.",
+    "Releer y compartir lo aprendido sin evaluar resultados médicos."
+  ]
+}
