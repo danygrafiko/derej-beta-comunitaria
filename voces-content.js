@@ -1,4 +1,3 @@
-/* Dérej · Colección editorial en español. Síntesis y aplicaciones identificadas. */
 window.DEREJ_VOCES_CONTENT={
   "version": 5,
   "order": [
@@ -706,9 +705,8 @@ window.DEREJ_VOCES_CONTENT={
         {
           "title": "La responsabilidad hacia otros",
           "source": "Estudio editorial Dérej · Referencias numeradas en Fuentes y notas de lectura",
-          "summary": "La responsabilidad que alcanza a otros",
+          "summary": "En su comentario sobre Noaj, Sacks distingue la rectitud personal del liderazgo. Propone una lectura exigente: una persona puede conservar su integridad y, sin embargo, hacer poco por transformar su entorno. Relaciona los relatos de Adán y Eva, Caín y Noaj con fallas de responsabilidad personal, moral y colectiva. Presenta esta interpretación como una lectura posible, no como la única explicación del texto. [2]",
           "reflection": [
-            "En su comentario sobre Noaj, Sacks distingue la rectitud personal del liderazgo. Propone una lectura exigente: una persona puede conservar su integridad y, sin embargo, hacer poco por transformar su entorno. Relaciona los relatos de Adán y Eva, Caín y Noaj con fallas de responsabilidad personal, moral y colectiva. Presenta esta interpretación como una lectura posible, no como la única explicación del texto. [2]",
             "El interrogante que deja es incómodo: ¿basta con estar a salvo cuando otros necesitan ayuda? En esta perspectiva, la vida moral incluye la disposición a hablar, intervenir y favorecer el bien común, incluso cuando el resultado es incierto. [2]",
             "Aplicación Dérej. Pensemos en una persona nueva que llega a nuestra comunidad y permanece sola. Podemos celebrar nuestra buena convivencia sin advertir su aislamiento. La responsabilidad comienza al reconocer esa necesidad y ofrecer compañía, sin invadirla ni decidir por ella. El mismo criterio puede orientar a quien lidera un equipo: advertir a quién no se escucha y abrirle un espacio real."
           ],
@@ -732,9 +730,8 @@ window.DEREJ_VOCES_CONTENT={
         {
           "title": "El pacto y la dignidad de la diferencia",
           "source": "Estudio editorial Dérej · Referencias numeradas en Fuentes y notas de lectura",
-          "summary": "Relaciones que construyen un nosotros",
+          "summary": "Sacks distingue entre contrato y pacto. En su explicación, el contrato permite un intercambio de beneficios; el pacto crea una relación de confianza, fidelidad y responsabilidad recíproca. Quienes participan se comprometen a realizar juntos algo que no alcanzarían por separado. Es una idea central para comprender su visión de la comunidad. [4]",
           "reflection": [
-            "Sacks distingue entre contrato y pacto. En su explicación, el contrato permite un intercambio de beneficios; el pacto crea una relación de confianza, fidelidad y responsabilidad recíproca. Quienes participan se comprometen a realizar juntos algo que no alcanzarían por separado. Es una idea central para comprender su visión de la comunidad. [4]",
             "El pacto no elimina la individualidad. Su fuerza depende de reconocer la dignidad e integridad de cada participante. El vínculo compartido puede pedir esfuerzo y continuidad, pero no autoriza a tratar a la otra persona como un instrumento de nuestros propósitos. [4]",
             "Aplicación Dérej. Una comunidad puede revisar sus compromisos preguntando cómo recibe, acompaña y cuida. Proponemos explicitar acuerdos sencillos: respetar la confidencialidad, distribuir tareas y permitir disentir. La reciprocidad también implica que nadie tenga que sostener todas las necesidades del grupo.",
             "Convivir con convicciones diferentes",
@@ -750,9 +747,8 @@ window.DEREJ_VOCES_CONTENT={
         {
           "title": "La escucha y la lectura de la Torá",
           "source": "Estudio editorial Dérej · Referencias numeradas en Fuentes y notas de lectura",
-          "summary": "Escuchar implica una respuesta",
+          "summary": "En The Spirituality of Listening, Sacks desarrolla la riqueza de shemá, término que relaciona con oír, prestar atención, comprender, interiorizar y responder. Lo presenta como una clave de Devarim, el Deuteronomio. La escucha expresa una relación en la que lo oído puede transformar a quien escucha. [6]",
           "reflection": [
-            "En The Spirituality of Listening, Sacks desarrolla la riqueza de shemá, término que relaciona con oír, prestar atención, comprender, interiorizar y responder. Lo presenta como una clave de Devarim, el Deuteronomio. La escucha expresa una relación en la que lo oído puede transformar a quien escucha. [6]",
             "Su exposición contrasta las imágenes visuales del conocimiento con el encuentro que ocurre mediante la palabra. Conviene recibir esa comparación como un recurso de su argumentación, sin convertirla en una descripción exhaustiva de todas las culturas. La idea práctica es fecunda: escuchar a alguien requiere involucrarse en su presencia, no limitarse a observarlo. [6]",
             "Ejercicio Dérej de escucha",
             "En parejas, una persona habla durante tres minutos sobre algo que le preocupa. La otra escucha sin preparar consejos. Luego expresa con sus propias palabras lo que entendió y pregunta si comprendió bien. Intercambian los roles. Antes de ofrecer una solución, cada participante puede preguntar qué tipo de ayuda necesita la otra persona.",
@@ -770,9 +766,8 @@ window.DEREJ_VOCES_CONTENT={
         {
           "title": "Jaye Sará y la construcción del futuro",
           "source": "Estudio editorial Dérej · Referencias numeradas en Fuentes y notas de lectura",
-          "summary": "La pérdida y la continuidad",
+          "summary": "En A Call from the Future, Sacks lee la conducta de Abraham tras la muerte de Sará. Después del duelo, Abraham atiende dos tareas: adquirir un lugar para sepultarla y buscar esposa para Isaac. Sacks relaciona esas acciones con las promesas de tierra y descendencia, y subraya la participación humana en su realización. [7]",
           "reflection": [
-            "En A Call from the Future, Sacks lee la conducta de Abraham tras la muerte de Sará. Después del duelo, Abraham atiende dos tareas: adquirir un lugar para sepultarla y buscar esposa para Isaac. Sacks relaciona esas acciones con las promesas de tierra y descendencia, y subraya la participación humana en su realización. [7]",
             "Su interpretación presenta el futuro como una llamada que invita a asumir una tarea. Recordar el pasado puede acompañarse de la construcción de algo que continúe la vida. El relato abre así una pregunta sobre la vocación: qué responsabilidad se presenta ante nosotros y qué respuesta podemos ofrecer. [7]",
             "Lectura cuidadosa desde Dérej",
             "Esta enseñanza puede ayudarnos a pensar en el legado de una persona querida. No la convertimos en una exigencia de superar rápidamente una pérdida. El dolor tiene ritmos diversos; mantener proyectos y pedir compañía pueden coexistir con el llanto y la memoria. La actividad no mide el valor de quien atraviesa un duelo.",
@@ -790,9 +785,8 @@ window.DEREJ_VOCES_CONTENT={
         {
           "title": "Su legado y un itinerario para estudiarlo",
           "source": "Estudio editorial Dérej · Referencias numeradas en Fuentes y notas de lectura",
-          "summary": "Una ética para la vida compartida",
+          "summary": "En Morality, Sacks cuestiona la prioridad del interés individual sobre el bien común. Sostiene que la libertad necesita responsabilidad y que ni el mercado ni el Estado bastan por sí solos para enseñar cómo vivir. Es una propuesta de filosofía moral y social que merece examinarse y discutirse, no una explicación única de todos los problemas contemporáneos. [8]",
           "reflection": [
-            "En Morality, Sacks cuestiona la prioridad del interés individual sobre el bien común. Sostiene que la libertad necesita responsabilidad y que ni el mercado ni el Estado bastan por sí solos para enseñar cómo vivir. Es una propuesta de filosofía moral y social que merece examinarse y discutirse, no una explicación única de todos los problemas contemporáneos. [8]",
             "Su legado reúne enseñanza bíblica, pensamiento público y recursos de formación. La continuidad de sus comentarios y materiales educativos permite que nuevas generaciones dialoguen con sus preguntas. Para Dérej, ese diálogo puede ofrecer una formación espiritual que incluya compromisos de convivencia.",
             "Un recorrido de lectura",
             "Comenzar con Righteousness is not Leadership para examinar la responsabilidad. Continuar con The Spirituality of Listening y practicar una conversación atenta. Leer A Call from the Future para trabajar la relación entre memoria, vocación y continuidad. Los enlaces completos se encuentran en las fuentes.",
