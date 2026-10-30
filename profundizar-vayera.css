@@ -11,3 +11,37 @@
 .prDialog button:focus-visible,.prEntry button:focus-visible,.prLibrary a:focus-visible,.prLibrary button:focus-visible,.prReturn:focus-visible{outline:3px solid #a67e36;outline-offset:3px}
 @media(min-width:850px){.prDialog{max-height:85dvh;margin:auto;border-radius:24px}.prHeader{padding-top:30px}.prContent{padding:28px 36px}}
 @media(max-width:520px){.prHeader{padding:23px 18px 14px}.prHeader h2{font-size:26px}.prDays{gap:5px;padding-inline:18px}.prDays button{width:calc((100% - 30px)/7);min-width:0}.prTabs{padding-inline:10px}.prContent{padding:22px 20px}.prEntry{flex-direction:column;align-items:stretch}.prEntry button{width:100%}.prPeople{grid-template-columns:1fr}.prFooter{padding-inline:20px}}
+
+
+/* Profundizar Vayerá v2: una sola lectura, recursos complementarios sin duplicación */
+.prDeep{display:grid;gap:14px;font:16px/1.68 Georgia,serif;color:#38342b}
+.prDeepIntro{margin:2px 0 3px;padding:12px 15px;border-left:3px solid #6f8164;background:#eef0e7;color:#4c5c47;font:13px/1.6 system-ui,sans-serif;border-radius:0 12px 12px 0}
+.prDeepSection{padding:20px;border:1px solid #d4c8b1;border-radius:18px;background:#fffaf0}
+.prDeepSection>small{display:block;margin-bottom:12px;letter-spacing:.11em;color:#6f745b;font:800 10px/1.45 system-ui,sans-serif}
+.prDeepSection h3{font:normal clamp(1.35rem,4.8vw,1.65rem)/1.26 Georgia,serif;color:#354535;margin:0 0 12px}
+.prDeepSection>p{margin:0 0 12px}
+.prDeepWord{overflow-wrap:anywhere;color:#4b5748;font-size:1.2rem;line-height:1.5}
+.prDeepRef,.prDeepFootnote{font:12px/1.55 system-ui,sans-serif;color:#6d6252}
+.prDeepVoices{display:grid;gap:11px}
+.prSelectedVoice{padding:16px 0;border-bottom:1px solid #e4dac9}
+.prSelectedVoice:last-child{border-bottom:0}
+.prSelectedVoice small{display:block;margin-bottom:5px;color:#6e775c;font:800 11px/1.4 system-ui,sans-serif;letter-spacing:.08em}
+.prSelectedVoice h4{margin:0 0 10px;font:600 1.1rem/1.4 Georgia,serif;color:#334632}
+.prSelectedVoice p{margin:0 0 11px}
+.prSelectedVoice summary{cursor:pointer;min-height:44px;padding:10px 2px;color:#3f5d43;font:650 13px/1.6 system-ui,sans-serif}
+.prSelectedVoice details[open] p{padding:11px 14px;border-radius:10px;background:#f4f0e7}
+.prDeepQuestion{border-color:#afbca1;background:#edf0e6}
+.prDeepQuestion h3{font-style:italic}
+.prDeepQuestion p{color:#59634e;font:13px/1.55 system-ui,sans-serif}
+.prDeepTools{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.prDeepTools a,.prDeepTools button{display:flex;align-items:center;justify-content:center;min-height:48px;padding:11px 12px;border:1px solid #aab49b;border-radius:12px;background:#f1f1e9;color:#324a35;text-decoration:none;text-align:center;font:700 12px/1.35 system-ui,sans-serif;cursor:pointer}
+.prDeepTools button[aria-pressed=true]{background:#40543e;color:white;border-color:#40543e}
+.prDeepTools a:focus-visible,.prDeepTools button:focus-visible{outline:3px solid #a67e36;outline-offset:3px}
+.prDeepSaveStatus{margin:0;min-height:18px;color:#52684a;font:12px/1.5 system-ui,sans-serif}
+.prTabs{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:580px){
+ .prDeep{gap:11px}
+ .prDeepSection{padding:16px}
+ .prDeepTools{grid-template-columns:1fr}
+ .prDeepTools a,.prDeepTools button{min-height:46px}
+}
