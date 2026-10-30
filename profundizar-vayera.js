@@ -68,7 +68,7 @@
  function attach(){
   const p=typeof currentParasha==='function'?currentParasha():null,c=typeof currentCamino==='function'?currentCamino():null;
   if(p?.parasha!=='Vayera'||!c)return;
-  for(const stage of ['encuentro','raiz','profundizar']){
+  for(const stage of ['profundizar']){
    const body=document.querySelector(`[data-ramak-panel="${stage}"] .ramakBody`);
    if(!body||body.querySelector('[data-pr-open]'))continue;
    const block=document.createElement('div');block.className='prEntry';
