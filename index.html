@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="prelaunch-local.css?v=28.1">
 <link rel="stylesheet" href="pozo-learning.css?v=7">
 <link rel="stylesheet" href="tehilim-biblioteca.css?v=1">
+<link rel="stylesheet" href="tehilim-atlas.css?v=1">
 <link rel="stylesheet" href="analytics.css?v=2">
 <link rel="stylesheet" href="welcome.css?v=1">
 <link rel="stylesheet" href="midrash-es.css?v=27.2">
@@ -99,7 +100,7 @@
         <h2>Los 150 Salmos</h2>
         <p class="thLead">Cinco libros, muchas voces: súplica, gratitud, justicia, restauración y alabanza.</p>
         <p>Los 150 capítulos están indexados. Los estudios iniciales están señalados; el comentario exhaustivo de cada capítulo se publicará progresivamente.</p>
-        <div class="thActions"><button type="button" id="thBodyOpen">El cuerpo y el alma · Unidad 01</button><button type="button" id="thGlossaryOpen">Glosario hebreo</button></div>
+        <div class="thActions"><button type="button" id="thAtlasOpen">Explorar el cuerpo y sus Salmos</button><button type="button" id="thBodyOpen">Unidad 01 · Rodilla, Nétzaj y Hod</button><button type="button" id="thGlossaryOpen">Glosario hebreo</button></div>
         <div class="thControls">
           <input type="search" id="thSearch" placeholder="Buscar número, título o tema" aria-label="Buscar Salmos">
           <div class="thBookFilters" role="group" aria-label="Filtrar los cinco libros">
@@ -117,6 +118,57 @@
       <article id="thStudy" class="thStudyBody" hidden><div id="thStudyContent"></div></article>
       <article id="thBody" class="thStudyBody" hidden><div id="thBodyContent"></div></article>
       <article id="thGlossary" class="thStudyBody" hidden><div id="thGlossaryContent"></div></article>
+      <article id="thAtlas" class="thAtlas" hidden aria-label="Atlas contemplativo del cuerpo">
+        <div class="thAtlasHeader">
+          <span class="thEyebrow">CUERPO · SALMOS · TIEMPOS · CAMINO PERSONAL</span>
+          <h2>El cuerpo y el alma</h2>
+          <p id="thAtlasIntro" class="thLead">Explora una región del cuerpo y encuentra una lectura de acompañamiento.</p>
+        </div>
+        <p id="thAtlasLoad" aria-live="polite">Preparando atlas…</p>
+        <div id="thAtlasContent" hidden>
+          <div class="thAtlasControls">
+            <label>¿Qué parte del cuerpo deseas contemplar?
+              <select id="thAtlasRegion" aria-label="Seleccionar parte del cuerpo"></select>
+            </label>
+            <label>¿Cuándo prefieres leer?
+              <select id="thAtlasTime" aria-label="Elegir momento de lectura"></select>
+            </label>
+            <label>¿Cuánto tiempo tienes?
+              <select id="thAtlasDuration" aria-label="Elegir duración">
+                <option value="5">5 minutos</option><option value="10" selected>10 minutos</option><option value="15">15 minutos</option>
+              </select>
+            </label>
+          </div>
+          <section class="thAtlasFeature">
+            <span class="thEyebrow">LECTURA CONTEMPLATIVA · NO PRESCRIPCIÓN MÉDICA</span>
+            <h3 id="thAtlasTheme"></h3>
+            <p class="thAtlasAnchor" id="thAtlasAnchor"></p>
+            <blockquote id="thAtlasPassage"></blockquote>
+            <p id="thAtlasSourceNote" class="thAtlasFine"></p>
+          </section>
+          <h3>Salmos para estudiar</h3>
+          <div class="thAtlasPsalms" id="thAtlasPsalms"></div>
+          <section class="thAtlasTwoCols">
+            <div><h3>Preguntas para contemplar</h3><ul id="thAtlasQuestions"></ul><h3>Un gesto concreto</h3><p id="thAtlasAction"></p></div>
+            <div><div id="thAtlasGuide" class="thAtlasGuide"></div><p id="thAtlasTimeNote" class="thAtlasFine"></p></div>
+          </section>
+          <h3>Tu recorrido de siete días</h3>
+          <p>Un camino voluntario. El progreso se mantiene solo mientras esta página esté abierta y no se guarda información sobre tu cuerpo.</p>
+          <div id="thAtlasPlan" class="thAtlasPlan" role="radiogroup" aria-label="Elegir día de lectura"></div>
+          <section class="thAtlasDayDetail">
+            <h4 id="thAtlasDayTitle"></h4><p id="thAtlasDayTask"></p>
+            <label class="thAtlasCheck"><input type="checkbox" id="thAtlasDone"> He realizado esta lectura o reflexión</label>
+            <div class="thAtlasProgress"><span id="thAtlasProgress" aria-live="polite"></span><button type="button" id="thAtlasClear">Reiniciar recorrido</button></div>
+          </section>
+          <h3>Cuatro niveles de lectura</h3>
+          <div id="thAtlasMethod" class="thAtlasMethod"></div>
+          <h3>Fuentes tradicionales y sus límites</h3>
+          <p id="thAtlasTimesEditorial"></p>
+          <ul id="thAtlasSources" class="thSources"></ul>
+          <p id="thAtlasSafety" class="thCaution"></p>
+        </div>
+      </article>
+      
     </section>
     <section class="prLibrary" aria-labelledby="prLibraryTitle">
       <small class="prEyebrow">EL PASAJE · SUS VOCES · SUS PERSONAJES</small>
@@ -382,6 +434,7 @@
 <script src="autoestima-content.js?v=1"></script>
 <script src="autoestima.js?v=1"></script>
 <script src="tehilim-biblioteca.js?v=1"></script>
+<script src="tehilim-atlas.js?v=1"></script>
 </body>
 </html>
 
