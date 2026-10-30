@@ -38,3 +38,10 @@
 .thRelated{display:flex;gap:8px;flex-wrap:wrap}
 .thGlossaryTerm{border-bottom:1px solid var(--th-line);padding-bottom:12px}
 @media(max-width:540px){.thEntry{padding:20px}.thExplorer{padding:17px}.thGrid{grid-template-columns:repeat(2,minmax(0,1fr))}.thPsalm{min-height:112px}.thBookFilters button{padding:9px 10px}}
+
+.thDeepDive{margin:24px 0;padding:18px 20px;border-radius:16px;border:1px solid #d8d7c8;background:#fffaf0}
+.thDeepDive h3{margin-top:0}
+.thHebrew{font-size:1.55rem;line-height:1.9;text-align:right;font-family:Georgia,serif}
+.thVerse{font:italic 1.16rem/1.65 Georgia,serif;color:#475b45}
+.thReflection{border-left:3px solid #ba9b6b;padding:10px 14px;background:#f4eddd}
+.thStudyBody h4{margin:15px 0 3px;font-size:1rem;color:#39543e}
