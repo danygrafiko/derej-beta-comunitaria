@@ -1368,8 +1368,117 @@
       {
         "label": "Nedarim 40a",
         "url": "https://www.sefaria.org/Nedarim.40a"
+      },
+      {
+        "label": "Berakhot 10a",
+        "url": "https://www.sefaria.org/Berakhot.10a"
       }
     ],
-    "safety": "Este estudio es espiritual y educativo. No diagnostica ni cura lesiones; ante dolor o limitación de la rodilla corresponde evaluación profesional."
+    "safety": "Este estudio es espiritual y educativo. No diagnostica ni cura lesiones; ante dolor o limitación de la rodilla corresponde evaluación profesional.",
+    "deepDive": [
+      {
+        "number": 6,
+        "title": "La voz que pide misericordia",
+        "verse": "Salmo 6:3 (numeración hebrea)",
+        "hebrew": "חָנֵּנִי יְהוָה כִּי אֻמְלַל אָנִי רְפָאֵנִי יְהוָה כִּי נִבְהֲלוּ עֲצָמָי",
+        "rendering": "Ten misericordia de mí, pues estoy debilitado; sáname, pues mis huesos están estremecidos.",
+        "commentary": "El poeta no disimula la debilidad. La expresión sobre los huesos comunica una conmoción que abarca la persona entera. En el lenguaje de la súplica, el cuerpo puede expresar también angustia; esto no permite diagnosticar una enfermedad concreta ni inferir castigo divino.",
+        "reflection": "¿Puedo reconocer mi fragilidad sin convertirla en culpa? ¿Qué ayuda necesito pedir hoy?"
+      },
+      {
+        "number": 18,
+        "title": "La firmeza que permite caminar",
+        "verse": "Salmo 18:37 (numeración hebrea)",
+        "hebrew": "",
+        "rendering": "Ensanchas el espacio de mis pasos, y mis tobillos no vacilan. (Paráfrasis editorial del sentido del versículo.)",
+        "commentary": "El Salmo 18 presenta la liberación mediante imágenes de roca, fortaleza y camino seguro. Su paralelo en 2 Samuel 22 sitúa estas imágenes en una tradición de gratitud y rescate. No debe leerse como promesa de recuperación ortopédica.",
+        "reflection": "¿Qué apoyo, relación o práctica hace hoy más seguro mi camino?"
+      },
+      {
+        "number": 147,
+        "title": "El cuidado de los corazones quebrantados",
+        "verse": "Salmo 147:3",
+        "hebrew": "הָרֹפֵא לִשְׁבוּרֵי לֵב וּמְחַבֵּשׁ לְעַצְּבוֹתָם",
+        "rendering": "Él sana a los quebrantados de corazón y venda sus heridas.",
+        "commentary": "La alabanza vincula la restauración de la comunidad con el cuidado de quienes sufren. La imagen de vendar heridas es poética y ética: nos invita a acompañar, no a sustituir tratamientos clínicos.",
+        "reflection": "¿Qué gesto concreto de presencia y cuidado puedo ofrecer a otra persona?"
+      }
+    ],
+    "traditionalContext": [
+      {
+        "title": "Nétzaj y Hod en la tradición cabalística",
+        "body": "Pataj Eliyahu, en Tikunéi Zóhar 17a, asocia Nétzaj y Hod con las dos piernas. La fuente no afirma que el Salmo 6, 18 o 147 corresponda exclusivamente a una rodilla ni que su lectura cure una lesión."
+      },
+      {
+        "title": "Oración y responsabilidad",
+        "body": "Berakhot 10a presenta la oración de Ezequías durante su enfermedad. Nedarim 40a subraya la importancia de visitar y atender al enfermo. Estos textos permiten estudiar oración y cuidado como dimensiones complementarias, no como alternativas a la medicina."
+      },
+      {
+        "title": "Lenguaje y límites interpretativos",
+        "body": "La raíz hebrea ברך se relaciona con rodilla y bendecir, pero compartir consonantes no demuestra por sí solo una doctrina mística sobre cada articulación. La comparación entre firmeza y flexibilidad es una lectura contemporánea explícita de Dérej."
+      }
+    ],
+    "glossary": [
+      {
+        "term": "Bérej · בֶּרֶךְ",
+        "definition": "Rodilla; término corporal hebreo."
+      },
+      {
+        "term": "Nétzaj · נצח",
+        "definition": "Sefirá que en diversas lecturas representa persistencia, duración y victoria."
+      },
+      {
+        "term": "Hod · הוד",
+        "definition": "Sefirá asociada a esplendor y reconocimiento; la humildad es una aplicación ética."
+      },
+      {
+        "term": "Refuá · רפואה",
+        "definition": "Curación, recuperación."
+      },
+      {
+        "term": "Bikur jolim · ביקור חולים",
+        "definition": "Visitar y atender a quienes están enfermos."
+      }
+    ],
+    "sevenDays": [
+      {
+        "day": 1,
+        "task": "Leer el Salmo 6 y reconocer una necesidad real."
+      },
+      {
+        "day": 2,
+        "task": "Volver al Salmo 6 y pedir o aceptar ayuda."
+      },
+      {
+        "day": 3,
+        "task": "Leer el Salmo 18 y reconocer un sostén concreto."
+      },
+      {
+        "day": 4,
+        "task": "Contemplar Nétzaj y Hod como firmeza y reconocimiento."
+      },
+      {
+        "day": 5,
+        "task": "Leer el Salmo 147 y pensar en alguien que necesita compañía."
+      },
+      {
+        "day": 6,
+        "task": "Realizar una acción concreta de cuidado."
+      },
+      {
+        "day": 7,
+        "task": "Releer los tres Salmos y compartir un aprendizaje, sin medir resultados médicos."
+      }
+    ],
+    "facilitation": {
+      "duration": "60–75 minutos",
+      "steps": [
+        "Lectura pausada de Salmos 6, 18 y 147, distinguiendo texto de interpretación.",
+        "Contexto bíblico y lectura de los términos hebreos esenciales.",
+        "Presentación de Nétzaj y Hod con referencia a Pataj Eliyahu.",
+        "Diálogo comunitario sobre fragilidad, perseverancia y cuidado.",
+        "Compromiso voluntario de acompañamiento durante la semana."
+      ]
+    }
   }
 }
