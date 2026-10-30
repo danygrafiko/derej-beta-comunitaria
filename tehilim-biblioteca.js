@@ -47,6 +47,18 @@
   const c=$('thBodyContent');c.replaceChildren();const u=collection.bodyUnit;
   c.append(block('div','TEHILIM · CUERPO Y ALMA','thEyebrow'),block('h2',u.title),block('p',u.subtitle,'thLead'),block('p',u.safety,'thCaution'));
   c.append(block('h3','Tres Salmos para contemplar'));c.append(list(u.reading));
+  for(const study of u.deepDive||[]){
+   const article=document.createElement('section');article.className='thDeepDive';
+   article.append(block('h3','Salmo '+study.number+' · '+study.title),block('p',study.verse,'thStatus'));
+   if(study.hebrew){const he=block('p',study.hebrew,'thHebrew');he.lang='he';he.dir='rtl';article.append(he);}
+   article.append(block('p',study.rendering,'thVerse'),block('p',study.commentary),block('p',study.reflection,'thReflection'));c.append(article);
+  }
+  for(const item of u.traditionalContext||[])appendSection(c,item.title,item.body);
+  c.append(block('h3','Glosario de la unidad'));
+  for(const term of u.glossary||[]){c.append(block('h4',term.term),block('p',term.definition));}
+  c.append(block('h3','Siete días de contemplación'));
+  const days=document.createElement('ol');for(const day of u.sevenDays||[])days.append(block('li','Día '+day.day+' · '+day.task));c.append(days);
+  if(u.facilitation){c.append(block('h3','Guía para encuentro comunitario · '+u.facilitation.duration),list(u.facilitation.steps));}
   appendSection(c,'Fuente tradicional',u.tradition);appendSection(c,'Lectura contemporánea Dérej',u.contemporary);
   c.append(block('h3','Preguntas para la comunidad'),list(u.questions));
   renderSources(c,u.sources);
