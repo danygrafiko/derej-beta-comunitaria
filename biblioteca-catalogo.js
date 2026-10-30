@@ -10,7 +10,6 @@
  intro.after(catalog);
  const extra=document.createElement('section');extra.innerHTML='<div><h2>Abraham Ibn Ezra</h2><p>Lengua, contexto y lectura atenta. Conoce su vida y su manera de acercarse al texto.</p></div><button type="button" data-voces-author="ibnezra">Conocer su mirada →</button>';root.append(extra);
  const entries=[
- ['.prLibrary','vayera','texto','Profundizar en Vayerá','LECTURA DE LA SEMANA','pasaje aliyá fuentes personajes'],
  ['.thEntry','tehilim','texto','Salmos para el camino','COLECCIÓN · 150 SALMOS','tehilim cuerpo alma oración'],
  ['.npEntry','nombres','texto','Nombres y presencia','RECORRIDO DE ESTUDIO','creador nombres hebreo'],
  ['.vocHomeEntry','voces','voces','Voces del Camino','VIDAS · OBRAS · ENSEÑANZAS','hilel baal shem tov ramak rambam najman sabios'],
@@ -28,7 +27,6 @@
   const heading=el.querySelector('h2');if(heading)heading.textContent=title;
   el.querySelectorAll('small,.npEyebrow,.thEntry>small,.prEyebrow,.vocHomeEntry>div>span,.aeEntry>div>span,.mdEntry>div>span').forEach(n=>n.hidden=true);
   const top=document.createElement('div');top.className='libCardTop';const tag=document.createElement('span');tag.textContent=label;const num=document.createElement('span');num.textContent=String(i+1).padStart(2,'0');top.append(tag,num);el.prepend(top);
-  if(id==='vayera')el.classList.add('libFeature');
   grid.append(el);return {el,id,title,category,search:title+' '+tags+' '+(el.querySelector('p')?.textContent||'')};
  }).filter(Boolean);
  let category='todos';const input=catalog.querySelector('input');const normalize=s=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
