@@ -579,5 +579,102 @@
       "label": "Shulján Aruj, Oraj Jaim 1:4",
       "url": "https://www.sefaria.org/Shulchan_Arukh%2C_Orach_Chayim.1.4"
     }
+  },
+  "curaduriaGeneral": {
+    "titulo": "Tehilim · Leer la vida sin convertir la poesía en receta",
+    "prologo": "Tehilim es un libro de oración y poesía que acoge alegría, culpa, duelo, miedo, gratitud y justicia. La selección de una zona corporal sirve como puerta de entrada pedagógica, no como clasificación antigua de enfermedades ni garantía de sanación.",
+    "cincoLibros": [
+      {
+        "libro": "I",
+        "rango": "1–41",
+        "lectura": "El justo, la súplica, el conflicto y la confianza. La tensión entre vulnerabilidad y justicia atraviesa numerosos poemas.",
+        "clave": "No reducir los lamentos a optimismo; reconocer la voz que pregunta y protesta."
+      },
+      {
+        "libro": "II",
+        "rango": "42–72",
+        "lectura": "La nostalgia de Sion, las crisis personales y la justicia del gobierno se entrelazan con la alabanza comunitaria.",
+        "clave": "Leer el ideal del rey justo en el Salmo 72 como exigencia de defender al pobre."
+      },
+      {
+        "libro": "III",
+        "rango": "73–89",
+        "lectura": "La prosperidad del injusto, la ruina colectiva y la crisis de la promesa son temas centrales.",
+        "clave": "El Salmo 88 termina en oscuridad: no imponer una resolución feliz."
+      },
+      {
+        "libro": "IV",
+        "rango": "90–106",
+        "lectura": "La fragilidad humana se contempla ante la eternidad del Creador, la creación y la memoria del éxodo.",
+        "clave": "El Salmo 91 es poesía de confianza; no equivale a invulnerabilidad."
+      },
+      {
+        "libro": "V",
+        "rango": "107–150",
+        "lectura": "El rescate, la enseñanza, las canciones de las subidas y la alabanza final organizan el recorrido.",
+        "clave": "El Salmo 119 tiene estructura acróstica; los Salmos 146–150 cierran con alabanza."
+      }
+    ],
+    "lecturas": [
+      {
+        "nivel": "Peshat · sentido contextual",
+        "pregunta": "¿Quién habla, a quién, en qué situación y con qué imágenes?"
+      },
+      {
+        "nivel": "Lectura rabínica",
+        "pregunta": "¿Qué enseña una fuente identificada, en vez de atribuir al texto una tradición supuesta?"
+      },
+      {
+        "nivel": "Lectura simbólica",
+        "pregunta": "¿Qué correspondencia aparece realmente en una fuente cabalística y qué parte añadimos nosotros?"
+      },
+      {
+        "nivel": "Práctica comunitaria",
+        "pregunta": "¿Qué acción de cuidado y justicia se desprende sin prometer efectos médicos?"
+      }
+    ],
+    "cautelas": [
+      "La numeración de versículos puede variar entre ediciones hebreas y traducciones; citar siempre capítulo y versículo con su sistema.",
+      "No presentar las superscripciones davídicas como demostración de autoría histórica de todos los Salmos.",
+      "Los salmos imprecatorios (por ejemplo 58, 69, 109, 137 y 149) requieren contextualización histórica y ética; no legitiman dañar a otros.",
+      "No confundir el uso litúrgico de un Salmo con un tratamiento de una enfermedad.",
+      "Evitar un lenguaje que sugiera que enfermedad, discapacidad o dolor prueban un defecto moral o espiritual.",
+      "Los términos del cuerpo en la poesía hebrea pueden expresar emociones y experiencias colectivas, no solo anatomía."
+    ],
+    "fuentes": [
+      {
+        "label": "Texto hebreo completo de los 150 Salmos",
+        "url": "https://www.sefaria.org/Psalms"
+      },
+      {
+        "label": "Midrash Tehilim 1:2 · cinco libros",
+        "url": "https://www.sefaria.org/Midrash_Tehillim.1.2"
+      },
+      {
+        "label": "Rashi sobre Tehilim · comentario clásico",
+        "url": "https://www.sefaria.org/Rashi_on_Psalms"
+      },
+      {
+        "label": "Ibn Ezra sobre Tehilim · comentario clásico",
+        "url": "https://www.sefaria.org/Ibn_Ezra_on_Psalms"
+      },
+      {
+        "label": "Radak sobre Tehilim · comentario clásico",
+        "url": "https://www.sefaria.org/Radak_on_Psalms"
+      },
+      {
+        "label": "Pataj Eliyahu · correspondencias corporales simbólicas",
+        "url": "https://www.chabad.org/kabbalah/article_cdo/aid/380333/jewish/Patach-Eliyahu.htm"
+      },
+      {
+        "label": "Nedarim 40a · acompañar al enfermo",
+        "url": "https://www.sefaria.org/Nedarim.40a"
+      },
+      {
+        "label": "Berakhot 10a · Ezequías, enfermedad y oración",
+        "url": "https://www.sefaria.org/Berakhot.10a"
+      }
+    ],
+    "estatus": "Curaduría editorial de estructura, temas, 13 relaciones contemplativas y fuentes. Pendiente de exégesis completa versículo a versículo de los 150 Salmos y cotejo de comentarios clásicos."
   }
 }
