@@ -9928,7 +9928,18 @@ function renderPanels(p,c){
   // Las lecturas generales de la biblioteca no se asignan por día a todas las parashot.
   const bstReading=p.parasha==='Noaj'&&Number(c.dia)===1?bstReadings[0]:null;
   const bstVoice=voices.baalshemtov||(bstReading?{fuente:bstReading.source,tipo:'LECTURA DÉREJ · Noaj',base:bstReading.summary,texto:bstReading.reflection[0]}:null);
-  const voiceNames=[
+  const isVayera=p.parasha==='Vayera';
+  const curatedVayera={
+    1:{title:'La hospitalidad como encuentro',detail:'La carrera de Abraham hacia los visitantes (Génesis 18:2) convierte la acogida en un gesto concreto. Shabat 127a atribuye especial importancia a recibir huéspedes; es una interpretación rabínica posterior, no una frase del versículo.',question:'¿Por qué el relato muestra a Abraham corriendo en vez de esperar?',keys:['rambam','baalshemtov']},
+    2:{title:'La justicia también escucha',detail:'En Génesis 18:23–33, Abraham pregunta por la suerte de los justos ante el juicio de Sodoma. Su diálogo invita a distinguir responsabilidad individual y condena colectiva.',question:'¿Qué cambia cuando Abraham pregunta antes de juzgar?',keys:['rambam','ramjal']},
+    3:{title:'El instante de decidir',detail:'Génesis 19:16 describe la vacilación de Lot y la intervención de quienes lo conducen fuera de peligro. El relato permite estudiar la distancia entre reconocer una amenaza y actuar.',question:'¿Cuándo la ayuda ajena hace posible una decisión?',keys:['ramjal','rabiNajman']},
+    4:{title:'Volver a mirar después de la crisis',detail:'Génesis 19:27 presenta a Abraham regresando al lugar donde había estado ante el Creador. El regreso al mismo sitio ocurre después de los acontecimientos de Sodoma.',question:'¿Cómo puede cambiar un lugar cuando quien vuelve ya ha vivido otra cosa?',keys:['rambam','ramjal']},
+    5:{title:'Los ojos que descubren agua',detail:'Génesis 21:19 cuenta que se abrieron los ojos de Hagar y vio un pozo. La escena invita a estudiar la relación entre necesidad, percepción y cuidado sin convertirla en una promesa de solución automática.',question:'¿Qué diferencia hay entre que exista una posibilidad y poder reconocerla?',keys:['rambam','rabiNajman']},
+    6:{title:'Un pacto que se puede reconocer',detail:'En Génesis 21:27–32, Abraham y Avimélej establecen un acuerdo en torno al pozo. Los actos y los testigos permiten reconocer públicamente lo convenido.',question:'¿Por qué una buena intención no siempre basta para sostener un acuerdo?',keys:['rambam','ramjal']},
+    7:{title:'La prueba y sus límites',detail:'Génesis 22:1 presenta la Akedá como prueba y 22:12 interrumpe el sacrificio. La tradición ofrece lecturas distintas; ninguna debe usarse para justificar daño a personas.',question:'¿Qué importancia tiene que el relato incluya una orden explícita de detenerse?',keys:['rambam','rabiNajman']}
+  };
+  const vayeraStudy=isVayera?curatedVayera[Number(c.dia)]:null;
+  const voiceNames=vayeraStudy?vayeraStudy.keys.filter(k=>voices[k]).map(k=>[k,({rambam:'Rambam',ramak:'Ramak',ramjal:'Ramjal',rabiNajman:'Rabí Najmán',baalshemtov:'Baal Shem Tov'})[k]]):[
     ['rambam','Rambam'],
     ['ramak','Ramak'],
     ['ramjal','Ramjal'],
@@ -9937,10 +9948,11 @@ function renderPanels(p,c){
   caminoScreen.querySelector('[data-ramak-panel="profundizar"]').innerHTML=`
     ${scene(c,'03 · PROFUNDIZAR')}
     <div class="ramakBody">
-      <span class="ramakBodyEyebrow">VOCES PARA PROFUNDIZAR</span>
+      <span class="ramakBodyEyebrow">${vayeraStudy?'UNA NUEVA MIRADA SOBRE EL TEXTO':'VOCES PARA PROFUNDIZAR'}</span>
+      ${vayeraStudy?`<div class="ramakCard"><small>CLAVE DE LECTURA · GÉNESIS</small><strong>${esc(vayeraStudy.title)}</strong><p>${esc(vayeraStudy.detail)}</p></div><div class="ramakReflection"><small>PREGUNTA PARA ESTUDIAR</small><p>${esc(vayeraStudy.question)}</p></div><p class="ramakSourceNote">Selección de voces por pertinencia temática; las aplicaciones editoriales no son citas literales de los maestros.</p>`:''}
       <div class="ramakVoices">
         ${voiceNames.map(([key,label])=>renderVoiceCard(voices[key],label)).join('')}
-        ${bstVoice?renderVoiceCard(bstVoice,'Baal Shem Tov'):''}
+        ${bstVoice&&!vayeraStudy?renderVoiceCard(bstVoice,'Baal Shem Tov'):''}
         ${bstVoice?.url?`<p class="ramakSourceNote"><a href="${esc(bstVoice.url)}" target="_blank" rel="noopener noreferrer">Consultar la fuente de esta lectura del Baal Shem Tov ↗</a></p>`:''}
       </div>
       <p class="ramakSourceNote">Las voces son síntesis editoriales de Dérej, con referencias identificadas. Las conexiones con el pasaje diario son aplicaciones de Dérej. Cuando una enseñanza se transmite en una exposición posterior, se identifica esa fuente; no se presenta como cita literal del maestro.</p>
