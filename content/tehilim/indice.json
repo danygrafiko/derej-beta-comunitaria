@@ -1,0 +1,1162 @@
+{
+  "title": "Tehilim · Los 150 Salmos",
+  "status": "curaduría progresiva",
+  "books": [
+    {
+      "book": 1,
+      "start": 1,
+      "end": 41
+    },
+    {
+      "book": 2,
+      "start": 42,
+      "end": 72
+    },
+    {
+      "book": 3,
+      "start": 73,
+      "end": 89
+    },
+    {
+      "book": 4,
+      "start": 90,
+      "end": 106
+    },
+    {
+      "book": 5,
+      "start": 107,
+      "end": 150
+    }
+  ],
+  "psalms": [
+    {
+      "number": 1,
+      "book": 1,
+      "title": "Salmo 1",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 2,
+      "book": 1,
+      "title": "Salmo 2",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 3,
+      "book": 1,
+      "title": "Salmo 3",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 4,
+      "book": 1,
+      "title": "Salmo 4",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 5,
+      "book": 1,
+      "title": "Oración al amanecer",
+      "status": "estudio inicial",
+      "study": {
+        "theme": "Palabra, rectitud y atención",
+        "summary": "El salmista presenta su voz al amanecer y pide ser guiado en la justicia. La oración se relaciona con la responsabilidad sobre nuestras palabras.",
+        "questions": [
+          "¿Qué palabras quiero cuidar hoy?",
+          "¿Cómo distingo la espera atenta de la pasividad?"
+        ],
+        "refs": [
+          "Salmo 5:2–4",
+          "Salmo 5:8–9"
+        ]
+      }
+    },
+    {
+      "number": 6,
+      "book": 1,
+      "title": "La fragilidad y la súplica",
+      "status": "estudio inicial",
+      "study": {
+        "theme": "Vulnerabilidad, súplica y misericordia",
+        "summary": "El sufrimiento corporal y emocional aparece sin disimulo. Pedir ayuda no equivale a fracasar espiritualmente.",
+        "questions": [
+          "¿Me permito pedir ayuda?",
+          "¿Cómo acompañamos a quien está cansado?"
+        ],
+        "refs": [
+          "Salmo 6:3–4",
+          "Salmo 6:7"
+        ]
+      }
+    },
+    {
+      "number": 7,
+      "book": 1,
+      "title": "Salmo 7",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 8,
+      "book": 1,
+      "title": "Salmo 8",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 9,
+      "book": 1,
+      "title": "Salmo 9",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 10,
+      "book": 1,
+      "title": "Salmo 10",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 11,
+      "book": 1,
+      "title": "Cuando los fundamentos tiemblan",
+      "status": "estudio inicial",
+      "study": {
+        "theme": "Confianza y justicia",
+        "summary": "Ante el derrumbe de los fundamentos, el poema enfrenta la tentación de huir y afirma la vigilancia de la justicia.",
+        "questions": [
+          "¿Cuáles son mis fundamentos?",
+          "¿Qué acción justa puedo sostener hoy?"
+        ],
+        "refs": [
+          "Salmo 11:1–4"
+        ]
+      }
+    },
+    {
+      "number": 12,
+      "book": 1,
+      "title": "Salmo 12",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 13,
+      "book": 1,
+      "title": "Salmo 13",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 14,
+      "book": 1,
+      "title": "Salmo 14",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 15,
+      "book": 1,
+      "title": "Salmo 15",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 16,
+      "book": 1,
+      "title": "Salmo 16",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 17,
+      "book": 1,
+      "title": "Salmo 17",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 18,
+      "book": 1,
+      "title": "Fortaleza y liberación",
+      "status": "estudio inicial",
+      "study": {
+        "theme": "Fortaleza, liberación y gratitud",
+        "summary": "Canto de liberación paralelo a 2 Samuel 22. Los pasos firmes y el espacio amplio expresan seguridad y restauración.",
+        "questions": [
+          "¿Qué me sostiene al caminar?",
+          "¿Qué dificultad puedo recordar con gratitud?"
+        ],
+        "refs": [
+          "Salmo 18:33–37",
+          "2 Samuel 22"
+        ]
+      }
+    },
+    {
+      "number": 19,
+      "book": 1,
+      "title": "Salmo 19",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 20,
+      "book": 1,
+      "title": "Salmo 20",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 21,
+      "book": 1,
+      "title": "Salmo 21",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 22,
+      "book": 1,
+      "title": "Salmo 22",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 23,
+      "book": 1,
+      "title": "Salmo 23",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 24,
+      "book": 1,
+      "title": "Salmo 24",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 25,
+      "book": 1,
+      "title": "Salmo 25",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 26,
+      "book": 1,
+      "title": "Salmo 26",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 27,
+      "book": 1,
+      "title": "Salmo 27",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 28,
+      "book": 1,
+      "title": "Salmo 28",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 29,
+      "book": 1,
+      "title": "Salmo 29",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 30,
+      "book": 1,
+      "title": "Salmo 30",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 31,
+      "book": 1,
+      "title": "Salmo 31",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 32,
+      "book": 1,
+      "title": "Salmo 32",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 33,
+      "book": 1,
+      "title": "Salmo 33",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 34,
+      "book": 1,
+      "title": "Salmo 34",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 35,
+      "book": 1,
+      "title": "Salmo 35",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 36,
+      "book": 1,
+      "title": "Salmo 36",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 37,
+      "book": 1,
+      "title": "Salmo 37",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 38,
+      "book": 1,
+      "title": "Salmo 38",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 39,
+      "book": 1,
+      "title": "Salmo 39",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 40,
+      "book": 1,
+      "title": "Salmo 40",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 41,
+      "book": 1,
+      "title": "Salmo 41",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 42,
+      "book": 2,
+      "title": "Salmo 42",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 43,
+      "book": 2,
+      "title": "Salmo 43",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 44,
+      "book": 2,
+      "title": "Salmo 44",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 45,
+      "book": 2,
+      "title": "Salmo 45",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 46,
+      "book": 2,
+      "title": "Salmo 46",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 47,
+      "book": 2,
+      "title": "Salmo 47",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 48,
+      "book": 2,
+      "title": "Salmo 48",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 49,
+      "book": 2,
+      "title": "Salmo 49",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 50,
+      "book": 2,
+      "title": "Salmo 50",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 51,
+      "book": 2,
+      "title": "Salmo 51",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 52,
+      "book": 2,
+      "title": "Salmo 52",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 53,
+      "book": 2,
+      "title": "Salmo 53",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 54,
+      "book": 2,
+      "title": "Salmo 54",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 55,
+      "book": 2,
+      "title": "Salmo 55",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 56,
+      "book": 2,
+      "title": "Salmo 56",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 57,
+      "book": 2,
+      "title": "Salmo 57",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 58,
+      "book": 2,
+      "title": "Salmo 58",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 59,
+      "book": 2,
+      "title": "Salmo 59",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 60,
+      "book": 2,
+      "title": "Salmo 60",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 61,
+      "book": 2,
+      "title": "Salmo 61",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 62,
+      "book": 2,
+      "title": "Salmo 62",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 63,
+      "book": 2,
+      "title": "Salmo 63",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 64,
+      "book": 2,
+      "title": "Salmo 64",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 65,
+      "book": 2,
+      "title": "Salmo 65",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 66,
+      "book": 2,
+      "title": "Salmo 66",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 67,
+      "book": 2,
+      "title": "Salmo 67",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 68,
+      "book": 2,
+      "title": "Salmo 68",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 69,
+      "book": 2,
+      "title": "Salmo 69",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 70,
+      "book": 2,
+      "title": "Salmo 70",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 71,
+      "book": 2,
+      "title": "Salmo 71",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 72,
+      "book": 2,
+      "title": "Salmo 72",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 73,
+      "book": 3,
+      "title": "Salmo 73",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 74,
+      "book": 3,
+      "title": "Salmo 74",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 75,
+      "book": 3,
+      "title": "Salmo 75",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 76,
+      "book": 3,
+      "title": "Salmo 76",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 77,
+      "book": 3,
+      "title": "Salmo 77",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 78,
+      "book": 3,
+      "title": "Salmo 78",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 79,
+      "book": 3,
+      "title": "Salmo 79",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 80,
+      "book": 3,
+      "title": "Salmo 80",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 81,
+      "book": 3,
+      "title": "Salmo 81",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 82,
+      "book": 3,
+      "title": "Salmo 82",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 83,
+      "book": 3,
+      "title": "Salmo 83",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 84,
+      "book": 3,
+      "title": "Salmo 84",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 85,
+      "book": 3,
+      "title": "Salmo 85",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 86,
+      "book": 3,
+      "title": "Salmo 86",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 87,
+      "book": 3,
+      "title": "Salmo 87",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 88,
+      "book": 3,
+      "title": "Salmo 88",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 89,
+      "book": 3,
+      "title": "Salmo 89",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 90,
+      "book": 4,
+      "title": "Salmo 90",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 91,
+      "book": 4,
+      "title": "Salmo 91",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 92,
+      "book": 4,
+      "title": "Salmo 92",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 93,
+      "book": 4,
+      "title": "Salmo 93",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 94,
+      "book": 4,
+      "title": "Salmo 94",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 95,
+      "book": 4,
+      "title": "Salmo 95",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 96,
+      "book": 4,
+      "title": "Salmo 96",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 97,
+      "book": 4,
+      "title": "Salmo 97",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 98,
+      "book": 4,
+      "title": "Salmo 98",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 99,
+      "book": 4,
+      "title": "Salmo 99",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 100,
+      "book": 4,
+      "title": "Salmo 100",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 101,
+      "book": 4,
+      "title": "Salmo 101",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 102,
+      "book": 4,
+      "title": "Salmo 102",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 103,
+      "book": 4,
+      "title": "Salmo 103",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 104,
+      "book": 4,
+      "title": "Salmo 104",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 105,
+      "book": 4,
+      "title": "Salmo 105",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 106,
+      "book": 4,
+      "title": "Salmo 106",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 107,
+      "book": 5,
+      "title": "Salmo 107",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 108,
+      "book": 5,
+      "title": "Salmo 108",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 109,
+      "book": 5,
+      "title": "Salmo 109",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 110,
+      "book": 5,
+      "title": "Salmo 110",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 111,
+      "book": 5,
+      "title": "Salmo 111",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 112,
+      "book": 5,
+      "title": "Salmo 112",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 113,
+      "book": 5,
+      "title": "Salmo 113",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 114,
+      "book": 5,
+      "title": "Salmo 114",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 115,
+      "book": 5,
+      "title": "Salmo 115",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 116,
+      "book": 5,
+      "title": "Salmo 116",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 117,
+      "book": 5,
+      "title": "Salmo 117",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 118,
+      "book": 5,
+      "title": "Salmo 118",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 119,
+      "book": 5,
+      "title": "Salmo 119",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 120,
+      "book": 5,
+      "title": "Salmo 120",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 121,
+      "book": 5,
+      "title": "Salmo 121",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 122,
+      "book": 5,
+      "title": "Salmo 122",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 123,
+      "book": 5,
+      "title": "Salmo 123",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 124,
+      "book": 5,
+      "title": "Salmo 124",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 125,
+      "book": 5,
+      "title": "Salmo 125",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 126,
+      "book": 5,
+      "title": "Salmo 126",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 127,
+      "book": 5,
+      "title": "Salmo 127",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 128,
+      "book": 5,
+      "title": "Salmo 128",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 129,
+      "book": 5,
+      "title": "Salmo 129",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 130,
+      "book": 5,
+      "title": "Salmo 130",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 131,
+      "book": 5,
+      "title": "Salmo 131",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 132,
+      "book": 5,
+      "title": "Salmo 132",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 133,
+      "book": 5,
+      "title": "Salmo 133",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 134,
+      "book": 5,
+      "title": "Salmo 134",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 135,
+      "book": 5,
+      "title": "Salmo 135",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 136,
+      "book": 5,
+      "title": "Salmo 136",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 137,
+      "book": 5,
+      "title": "Salmo 137",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 138,
+      "book": 5,
+      "title": "Salmo 138",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 139,
+      "book": 5,
+      "title": "Salmo 139",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 140,
+      "book": 5,
+      "title": "Salmo 140",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 141,
+      "book": 5,
+      "title": "Salmo 141",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 142,
+      "book": 5,
+      "title": "Salmo 142",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 143,
+      "book": 5,
+      "title": "Salmo 143",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 144,
+      "book": 5,
+      "title": "Salmo 144",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 145,
+      "book": 5,
+      "title": "Salmo 145",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 146,
+      "book": 5,
+      "title": "Salmo 146",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 147,
+      "book": 5,
+      "title": "El Creador restaura",
+      "status": "estudio inicial",
+      "study": {
+        "theme": "Restauración y cuidado comunitario",
+        "summary": "La alabanza une la restauración de Jerusalén con el cuidado de los quebrantados de corazón.",
+        "questions": [
+          "¿A quién puedo acompañar concretamente?",
+          "¿Cómo se transforma la oración en cuidado?"
+        ],
+        "refs": [
+          "Salmo 147:2–6"
+        ]
+      }
+    },
+    {
+      "number": 148,
+      "book": 5,
+      "title": "Salmo 148",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 149,
+      "book": 5,
+      "title": "Salmo 149",
+      "status": "pendiente de curaduría",
+      "study": null
+    },
+    {
+      "number": 150,
+      "book": 5,
+      "title": "Salmo 150",
+      "status": "pendiente de curaduría",
+      "study": null
+    }
+  ],
+  "bodyAtlas": [
+    {
+      "region": "Rodillas y piernas",
+      "psalms": [
+        6,
+        18,
+        147
+      ],
+      "note": "Nétzaj y Hod se asocian simbólicamente con las piernas en Pataj Eliyahu, Tikunéi Zóhar 17a; no existe una receta curativa específica para la rodilla."
+    },
+    {
+      "region": "Corazón",
+      "psalms": [
+        147
+      ],
+      "note": "Consuelo y restauración emocional."
+    },
+    {
+      "region": "Palabra",
+      "psalms": [
+        5
+      ],
+      "note": "Responsabilidad y rectitud del habla."
+    }
+  ],
+  "editorialNote": "No sustituye atención médica. Diferenciar texto bíblico, tradición documentada e interpretación contemplativa."
+}
