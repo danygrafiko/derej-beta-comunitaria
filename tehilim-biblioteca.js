@@ -6,7 +6,7 @@
  const open=document.querySelector('[data-tehilim-open]');
  if(!root||!open)return;
  const $=id=>root.querySelector('#'+id);
- let collection=null,book=0,search='',view='index';
+ let collection=null,loading=null,book=0,search='',view='index';
  const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const link=(label,url)=>{const a=document.createElement('a');a.textContent=label;a.href=url;a.target='_blank';a.rel='noopener noreferrer';return a;};
  const block=(tag,text,cls)=>{const el=document.createElement(tag);el.textContent=text;if(cls)el.className=cls;return el;};
@@ -73,21 +73,24 @@
   const c=$('thGlossaryContent');c.replaceChildren();c.append(block('h2','Glosario de Tehilim'));
   for(const g of collection.glossary||[]){const d=document.createElement('div');d.className='thGlossaryTerm';d.append(block('h3',g.term+' · '+g.hebrew),block('p',g.definition));c.append(d);}showView('glossary');
  }
- function openExplorer(){
+ function openExplorer(which='index'){
   root.hidden=false;open.setAttribute('aria-expanded','true');
-  if(collection){showView('index');return;}
+  showView(which);
+  if(which==='atlas')window.DerejTehilimAtlas?.open();
+  if(collection||loading)return;
   $('thCount').textContent='Cargando los Salmos…';
-  fetch('content/tehilim/indice.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Índice no disponible');return r.json()}).then(d=>{
+  loading=fetch('content/tehilim/indice.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Índice no disponible');return r.json()}).then(d=>{
    if(!Array.isArray(d.psalms)||d.psalms.length!==150)throw Error('Índice incompleto');
-   collection=d;renderIndex();showView('index');
-  }).catch(()=>{$('thCount').textContent='No fue posible cargar los Salmos. Cierra y vuelve a abrir para reintentar.';});
+   collection=d;renderIndex();
+  }).catch(()=>{$('thCount').textContent='No fue posible cargar los Salmos. Cierra y vuelve a abrir para reintentar.';}).finally(()=>{loading=null;});
  }
  open.addEventListener('click',()=>{if(root.hidden)openExplorer();else{root.hidden=true;open.setAttribute('aria-expanded','false');open.focus();}});
  $('thBack').addEventListener('click',()=>showView('index'));
  $('thClose').addEventListener('click',()=>{root.hidden=true;open.setAttribute('aria-expanded','false');open.focus();});
  $('thSearch').addEventListener('input',e=>{search=e.target.value.trim().toLocaleLowerCase('es');renderIndex();});
  root.querySelectorAll('[data-th-book]').forEach(b=>b.addEventListener('click',()=>{book=Number(b.dataset.thBook);renderIndex();}));
- $('thAtlasOpen').addEventListener('click',()=>{if(!collection)return;showView('atlas');window.DerejTehilimAtlas?.open();});
+ $('thAtlasOpen').addEventListener('click',()=>{showView('atlas');window.DerejTehilimAtlas?.open();});
+ document.querySelector('[data-tehilim-atlas-open]')?.addEventListener('click',()=>openExplorer('atlas'));
  window.DerejTehilimOpenPsalm=n=>{if(!collection)return;const p=collection.psalms.find(x=>x.number===Number(n));if(p)renderStudy(p);};
  $('thBodyOpen').addEventListener('click',()=>{if(collection)renderBody();});
  $('thGlossaryOpen').addEventListener('click',()=>{if(collection)renderGlossary();});
