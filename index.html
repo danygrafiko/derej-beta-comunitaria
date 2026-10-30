@@ -33,6 +33,7 @@
 <link rel="stylesheet" href="profundizar-vayera.css?v=1">
 <link rel="stylesheet" href="portal-navigation.css?v=1">
 <link rel="stylesheet" href="autoestima.css?v=1">
+<link rel="stylesheet" href="meditacion.css?v=1">
 </head>
 <body>
 <main class="appShell">
@@ -207,6 +208,10 @@
       <h2 id="prLibraryTitle">Profundizar en Vayerá</h2>
       <p>Siete aliyot para explorar con calma. Abre el contexto, reconoce las fuentes y conoce a las personas del relato sin perder tu lugar.</p>
       <div><a class="prPrimary" href="?estudio=profundizar&amp;dia=1" data-pr-pilot>Comenzar la lectura →</a><button class="prSecondary" type="button" data-pr-saved>Mis lecturas guardadas</button></div>
+    </section>
+    <section class="mdEntry" aria-labelledby="meditacionEntryTitle">
+      <div><small>CONTEMPLACIÓN · TRADICIÓN Y VIDA COTIDIANA</small><h2 id="meditacionEntryTitle">Meditación judía y cabalística</h2><p>Diez enfoques para orientar la atención y acercarnos al Creador de todo. Conoce sus raíces, explora prácticas introductorias y lleva una pregunta a tu vida.</p><span>Lectura por capítulos · Glosario · Fuentes consultables</span></div>
+      <a href="?puerta=meditacion" data-route="meditacion">Explorar el estudio →</a>
     </section>
     <section class="aeEntry" aria-labelledby="autoestimaEntryTitle">
       <div><small>PARA TODO TIEMPO · EDITORIAL DÉREJ</small><h2 id="autoestimaEntryTitle">Autoestima y dignidad</h2><p>Mirarnos con verdad y aprender a cuidarnos. Un estudio profundo con fuentes judías, reflexión personal y prácticas para siete días.</p><span>Lectura por capítulos · Para estudiar a tu ritmo</span></div>
@@ -416,6 +421,14 @@
       <div class="aePaper"><p class="aePosition" id="aePosition"></p><article id="aeArticle" aria-labelledby="aeChapterTitle"></article><nav class="aePager" aria-label="Continuar el estudio"><button type="button" id="aePrevious">← Anterior</button><button type="button" id="aeNext">Siguiente →</button></nav><p id="aeStatus" role="status"></p></div></div>
     </div>
   </section>
+  <section class="screen mdScreen" data-screen="meditacion" hidden aria-labelledby="meditacionTitle">
+    <div class="mdInner"><button type="button" class="mdBack" data-route="biblioteca">← Biblioteca</button>
+      <header class="mdHero"><p class="mdEyebrow">EDITORIAL DÉREJ · ESTUDIO Y CONTEMPLACIÓN</p><h1 id="meditacionTitle" tabindex="-1">Meditación judía y cabalística</h1><p>Diez enfoques para comprender, contemplar y llevar a la vida.</p><span>Fuentes tradicionales · Prácticas de Dérej · Lectura a tu ritmo</span></header>
+      <nav class="mdShortcuts" aria-label="Recorridos de meditación"><button type="button" data-md-chapter="inicio">Comenzar</button><button type="button" data-md-chapter="recorrido">Cuatro semanas</button><button type="button" data-md-chapter="glosario">Glosario</button><button type="button" data-md-chapter="fuentes">Fuentes</button></nav>
+      <div class="mdLayout"><aside class="mdIndex"><details id="mdIndexDetails"><summary>Elegir una lectura <span id="mdIndexCount"></span></summary><nav id="mdChapters" aria-label="Capítulos de meditación"></nav></details></aside>
+      <div class="mdPaper"><p class="mdPosition" id="mdPosition"></p><button type="button" id="mdReturn" hidden>← Volver a la lectura</button><article id="mdArticle" aria-labelledby="mdChapterTitle"></article><nav class="mdPager" aria-label="Continuar el estudio"><button type="button" id="mdPrevious">← Anterior</button><button type="button" id="mdNext">Siguiente →</button></nav><p class="mdStatus" id="mdStatus" role="status" aria-live="polite"></p></div></div>
+    </div>
+  </section>
 </main>
 <dialog id="metricsPrivacy" class="metricsPrivacy" aria-labelledby="metricsPrivacyTitle">
   <h2 id="metricsPrivacyTitle">Privacidad en Dérej</h2>
@@ -466,6 +479,8 @@
 <script src="portal-navigation.js?v=1"></script>
 <script src="autoestima-content.js?v=1"></script>
 <script src="autoestima.js?v=1"></script>
+<script src="meditacion-content.js?v=1"></script>
+<script src="meditacion.js?v=1"></script>
 <script src="tehilim-biblioteca.js?v=2"></script>
 <script src="tehilim-atlas.js?v=2"></script>
 <script src="patriarcas-sefirot.js?v=1"></script>
