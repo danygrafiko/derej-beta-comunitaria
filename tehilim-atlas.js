@@ -43,6 +43,10 @@ function render(){
  $('thAtlasPassage').textContent=r.passage;
  $('thAtlasSourceNote').textContent=r.sourceNote;
  $('thAtlasTimeNote').textContent=t.note;
+ const cd=$('thAtlasCuratedDetails');cd.replaceChildren();
+ for(const [label,key] of [['Pasaje base','pasaje'],['Lectura literal','lecturaLiteral'],['Contexto del Salmo','contexto'],['Fuente y límites','fuenteYLimites'],['Práctica responsable','practica']]){
+  const item=el('div',undefined,'thAtlasCuratedItem');item.append(el('h4',label),el('p',r.curaduria?.[key]||'En revisión'));cd.append(item);
+ }
  $('thAtlasMethod').replaceChildren();
  for(const m of data.method){const d=el('div',undefined,'thAtlasMethodItem');d.append(el('h4',m.title),el('p',m.body));$('thAtlasMethod').append(d);}
  const ps=$('thAtlasPsalms');ps.replaceChildren();
@@ -73,7 +77,7 @@ function render(){
  const check=$('thAtlasDone');check.checked=checked.has(day);
  $('thAtlasProgress').textContent=checked.size+' de 7 días marcados en esta sesión';
  const source=$('thAtlasSources');source.replaceChildren();
- for(const s of data.traditionalSources){if(!s.url.startsWith('https://www.sefaria.org/'))continue;const li=el('li');li.append(safeLink(s.label,s.url));source.append(li);}
+ for(const s of data.traditionalSources){if(!/^https:\/\/(www\.sefaria\.org|www\.chabad\.org)\//.test(s.url))continue;const li=el('li');li.append(safeLink(s.label,s.url));source.append(li);}
 }
 async function open(){
  panel.querySelector('#thAtlasLoad').textContent='Cargando atlas…';
@@ -85,6 +89,8 @@ async function open(){
    $('thAtlasScope').textContent=data.intro;
    $('thAtlasSafety').textContent=data.medical;
    $('thAtlasTimesEditorial').textContent=data.timesEditorial;
+   $('thAtlasHorarios').textContent=data.horariosCurados?.principio+' '+data.horariosCurados?.liturgia+' '+data.horariosCurados?.tradicion;
+   const policy=$('thAtlasPolicy');policy.replaceChildren(...(data.editorialPolicy?.principles||[]).map(x=>el('li',x)));
   }
   $('thAtlasLoad').hidden=true;
   $('thAtlasContent').hidden=false;
