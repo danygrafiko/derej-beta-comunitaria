@@ -29,6 +29,7 @@
 <noscript><style>.courtyard .portal[hidden],.courtyard .pozoLearn[hidden]{display:flex!important}</style></noscript>
 <link rel="stylesheet" href="radio-wurlitzer.css?v=portal-logica-20261029-1">
 <link rel="stylesheet" href="genealogias.css?v=3">
+<link rel="stylesheet" href="patriarcas-sefirot.css?v=1">
 <link rel="stylesheet" href="profundizar-vayera.css?v=1">
 <link rel="stylesheet" href="portal-navigation.css?v=1">
 <link rel="stylesheet" href="autoestima.css?v=1">
@@ -87,6 +88,10 @@
       <a href="?estudio=genealogias" data-genealogias-open>Explorar el árbol →</a>
     </section>
 
+    <section class="psEntry" aria-labelledby="psEntryTitle">
+      <div><small>ÁRBOL DE LA VIDA · TORÁ · HISTORIAS</small><h2 id="psEntryTitle">Patriarcas y matriarcas: las sefirot</h2><p>Siete vidas y sus dimensiones espirituales. Explora las correspondencias tradicionales, las interpretaciones de las matriarcas y prácticas de reflexión, conectadas con las genealogías.</p></div>
+      <button type="button" data-ps-open>Entrar al estudio →</button>
+    </section>
     <section class="thEntry" aria-labelledby="thEntryTitle">
       <small>TEHILIM · LOS 150 SALMOS</small>
       <h2 id="thEntryTitle">Salmos para el camino</h2>
@@ -376,7 +381,8 @@
     <div class="vocInner" id="vocesRoot"><button type="button" class="backBtn" data-route="home">← Patio</button><h1 id="vocesTitle">Voces del Camino</h1><p>Vidas, obras y enseñanzas. Preparando la lectura…</p></div>
   </section>
   <section class="screen npScreen" data-screen="nombres" hidden aria-labelledby="npTitle"><div id="nombresRoot" class="npInner"></div></section>
-  <section class="screen avScreen" data-screen="arbol" hidden aria-labelledby="arbolTitle"><div id="arbolRoot" class="avInner"></div></section>
+  <section class="screen psScreen" data-screen="patriarcas-sefirot" hidden aria-labelledby="psTitle"><div id="psRoot"><h1 id="psTitle">Patriarcas, matriarcas y las sefirot</h1></div></section>
+   <section class="screen avScreen" data-screen="arbol" hidden aria-labelledby="arbolTitle"><div id="arbolRoot" class="avInner"></div></section>
   <section class="screen genealogyScreen" data-screen="genealogias" hidden aria-labelledby="genealogiasTitle"><div class="genealogyInner"><button type="button" class="genealogyBack" data-genealogias-back>← Biblioteca</button><section id="derej-raices-v2" aria-label="Genealogías desplegables de Dérej">
 <header class="r-header"><p class="r-eyebrow">Dérej / Biblioteca</p><h1 id="genealogiasTitle" tabindex="-1">Genealogías</h1><p class="r-subtitle">De Adam al retorno del exilio</p><p class="r-guide">Toca un nombre para leer su ficha aquí mismo. Abre las ramas con + y continúa con ›. Puedes comenzar por cualquiera de estas familias.</p></header>
 <div class="r-study-entry"><p>Detrás de cada nombre, una lectura para comprender.</p><button type="button" id="genealogyCatalogToggle" aria-expanded="false" aria-controls="genealogyCatalog">Buscar un personaje · Saber más</button></div>
@@ -462,6 +468,7 @@
 <script src="autoestima.js?v=1"></script>
 <script src="tehilim-biblioteca.js?v=2"></script>
 <script src="tehilim-atlas.js?v=2"></script>
+<script src="patriarcas-sefirot.js?v=1"></script>
 </body>
 </html>
 
