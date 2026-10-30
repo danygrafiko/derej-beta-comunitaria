@@ -1,0 +1,38 @@
+/* Dérej Tehilim · Atlas del cuerpo, responsive y accesible */
+.thAtlas{max-width:100%;color:#304634}
+.thAtlas[hidden],.thAtlas [hidden]{display:none!important}
+.thAtlasHeader{padding:12px 0 18px}
+.thAtlasControls{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:18px 0 25px}
+.thAtlasControls label{display:flex;flex-direction:column;gap:8px;font-size:.85rem;font-weight:700;color:#4b5d4c}
+.thAtlasControls select{width:100%;min-width:0;padding:12px;border-radius:11px;border:1px solid #c5c9b9;background:#fffaf0;color:#263e2d;font:inherit}
+.thAtlasFeature{border-radius:20px;padding:clamp(17px,3vw,28px);background:linear-gradient(130deg,#e7ebdc,#fff8eb);border:1px solid #d9d2b9}
+.thAtlasFeature h3{font:normal 1.65rem/1.25 Georgia,serif;margin:10px 0}
+.thAtlasFeature blockquote{margin:12px 0;padding:12px 16px;border-left:3px solid #ad8f5e;font:italic 1.2rem/1.6 Georgia,serif;color:#40543d}
+.thAtlasAnchor{font-size:.83rem;font-weight:700;letter-spacing:.06em}
+.thAtlasFine{font-size:.82rem;color:#667268;line-height:1.6}
+.thAtlasPsalms{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.thAtlasPsalmCard{display:flex;flex-direction:column;gap:10px;padding:16px;border:1px solid #d5d7c8;background:#fffaf1;border-radius:14px}
+.thAtlasPsalmCard strong{font:normal 1.5rem Georgia,serif}
+.thAtlasPsalmCard button{background:#314b37;color:white;border:0;border-radius:10px;padding:10px 8px;min-height:42px;font-size:.85rem}
+.thAtlasPsalmCard a{font-size:.82rem;color:#365d4a;text-decoration:underline}
+.thAtlasTwoCols{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:12px 0}
+.thAtlasGuide{padding:17px;border-radius:15px;background:#e9eddf}
+.thAtlasGuide h4{margin:0 0 10px;font:normal 1.2rem Georgia,serif}
+.thAtlasGuide ol{padding-left:22px}
+.thAtlasPlan{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:7px;margin:18px 0}
+.thAtlasDay{display:flex;flex-direction:column;gap:5px;padding:10px 6px;border:1px solid #d0d4c4;border-radius:12px;background:#fffaf1;cursor:pointer;text-align:center;align-items:center;font-size:.8rem}
+.thAtlasDay.selected{background:#dfeade;border-color:#7c9d7d;font-weight:700}
+.thAtlasDay input{accent-color:#486d50}
+.thAtlasDay small{font-size:.68rem}
+.thAtlasDayDetail{border:1px solid #d1d8c8;border-radius:15px;padding:18px;background:#f5f7ed}
+.thAtlasDayDetail h4{margin:0 0 8px;font:normal 1.25rem Georgia,serif}
+.thAtlasCheck{display:flex;gap:10px;align-items:center;margin:14px 0;font-weight:600}
+.thAtlasCheck input{width:18px;height:18px;accent-color:#486d50}
+.thAtlasProgress{display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap;font-size:.82rem;color:#526355}
+.thAtlasProgress button{border:1px solid #b7c6b2;border-radius:9px;padding:7px 11px;background:#fffaf1;color:#304634}
+.thAtlasMethod{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.thAtlasMethodItem{padding:14px;background:#fffaf1;border:1px solid #d6d9cb;border-radius:13px}
+.thAtlasMethodItem h4{margin:0 0 8px;font:normal 1.15rem Georgia,serif}
+.thAtlasMethodItem p{margin:0;font-size:.87rem}
+@media(max-width:760px){.thAtlasControls{grid-template-columns:1fr}.thAtlasTwoCols{grid-template-columns:1fr}.thAtlasPlan{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:500px){.thAtlasPsalms{grid-template-columns:1fr}.thAtlasPlan{grid-template-columns:repeat(4,minmax(0,1fr))}.thAtlasMethod{grid-template-columns:1fr}.thAtlasPsalmCard{gap:7px}}
