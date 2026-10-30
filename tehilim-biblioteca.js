@@ -12,7 +12,7 @@
  const block=(tag,text,cls)=>{const el=document.createElement(tag);el.textContent=text;if(cls)el.className=cls;return el;};
  const list=(items)=>{const ul=document.createElement('ul');for(const item of items)ul.appendChild(block('li',item));return ul;};
  function scrollTop(){root.scrollIntoView({behavior:'smooth',block:'start'});}
- function showView(which){view=which;$('thIndex').hidden=which!=='index';$('thStudy').hidden=which!=='study';$('thBody').hidden=which!=='body';$('thGlossary').hidden=which!=='glossary';$('thBack').hidden=which==='index';scrollTop();}
+ function showView(which){view=which;$('thIndex').hidden=which!=='index';$('thStudy').hidden=which!=='study';$('thBody').hidden=which!=='body';$('thGlossary').hidden=which!=='glossary';$('thAtlas').hidden=which!=='atlas';$('thBack').hidden=which==='index';scrollTop();}
  function renderIndex(){
   if(!collection)return;
   const grid=$('thGrid');grid.replaceChildren();
@@ -87,6 +87,8 @@
  $('thClose').addEventListener('click',()=>{root.hidden=true;open.setAttribute('aria-expanded','false');open.focus();});
  $('thSearch').addEventListener('input',e=>{search=e.target.value.trim().toLocaleLowerCase('es');renderIndex();});
  root.querySelectorAll('[data-th-book]').forEach(b=>b.addEventListener('click',()=>{book=Number(b.dataset.thBook);renderIndex();}));
+ $('thAtlasOpen').addEventListener('click',()=>{if(!collection)return;showView('atlas');window.DerejTehilimAtlas?.open();});
+ window.DerejTehilimOpenPsalm=n=>{if(!collection)return;const p=collection.psalms.find(x=>x.number===Number(n));if(p)renderStudy(p);};
  $('thBodyOpen').addEventListener('click',()=>{if(collection)renderBody();});
  $('thGlossaryOpen').addEventListener('click',()=>{if(collection)renderGlossary();});
 })();
