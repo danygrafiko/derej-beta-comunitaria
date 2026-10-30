@@ -1,0 +1,1356 @@
+{
+  "version": "2026-10-30.5",
+  "level": "índice temático curado: no comentario exegético completo",
+  "psalms": [
+    {
+      "number": 1,
+      "title": "Dos caminos",
+      "source": {
+        "label": "Salmo 1 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.1"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 2,
+      "title": "Reinado y refugio",
+      "source": {
+        "label": "Salmo 2 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.2"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 3,
+      "title": "Confianza ante adversarios",
+      "source": {
+        "label": "Salmo 3 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.3"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 4,
+      "title": "Dormir en paz",
+      "source": {
+        "label": "Salmo 4 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.4"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 5,
+      "title": "Plegaria al amanecer",
+      "source": {
+        "label": "Salmo 5 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.5"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 6,
+      "title": "Súplica en el sufrimiento",
+      "source": {
+        "label": "Salmo 6 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.6"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 7,
+      "title": "Justicia ante la acusación",
+      "source": {
+        "label": "Salmo 7 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.7"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 8,
+      "title": "Dignidad de la creación",
+      "source": {
+        "label": "Salmo 8 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.8"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 9,
+      "title": "Memoria de la justicia",
+      "source": {
+        "label": "Salmo 9 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.9"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 10,
+      "title": "El clamor del vulnerable",
+      "source": {
+        "label": "Salmo 10 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.10"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 11,
+      "title": "Cuando tiemblan los fundamentos",
+      "source": {
+        "label": "Salmo 11 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.11"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 12,
+      "title": "Palabras que dañan",
+      "source": {
+        "label": "Salmo 12 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.12"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 13,
+      "title": "¿Hasta cuándo?",
+      "source": {
+        "label": "Salmo 13 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.13"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 14,
+      "title": "Corrupción y restauración",
+      "source": {
+        "label": "Salmo 14 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.14"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 15,
+      "title": "Habitar con integridad",
+      "source": {
+        "label": "Salmo 15 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.15"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 16,
+      "title": "Herencia y confianza",
+      "source": {
+        "label": "Salmo 16 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.16"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 17,
+      "title": "Escucha una causa justa",
+      "source": {
+        "label": "Salmo 17 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.17"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 18,
+      "title": "Canto de liberación",
+      "source": {
+        "label": "Salmo 18 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.18"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 19,
+      "title": "Cielo y enseñanza",
+      "source": {
+        "label": "Salmo 19 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.19"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 20,
+      "title": "Oración por el gobernante",
+      "source": {
+        "label": "Salmo 20 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.20"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 21,
+      "title": "Gratitud del rey",
+      "source": {
+        "label": "Salmo 21 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.21"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 22,
+      "title": "Clamor de abandono",
+      "source": {
+        "label": "Salmo 22 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.22"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 23,
+      "title": "El pastor y la mesa",
+      "source": {
+        "label": "Salmo 23 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.23"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 24,
+      "title": "Puertas de integridad",
+      "source": {
+        "label": "Salmo 24 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.24"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 25,
+      "title": "Enséñame tus caminos",
+      "source": {
+        "label": "Salmo 25 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.25"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 26,
+      "title": "Examen de integridad",
+      "source": {
+        "label": "Salmo 26 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.26"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 27,
+      "title": "Luz frente al miedo",
+      "source": {
+        "label": "Salmo 27 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.27"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 28,
+      "title": "Que mi voz sea escuchada",
+      "source": {
+        "label": "Salmo 28 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.28"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 29,
+      "title": "La voz en la tormenta",
+      "source": {
+        "label": "Salmo 29 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.29"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 30,
+      "title": "Del duelo a la danza",
+      "source": {
+        "label": "Salmo 30 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.30"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 31,
+      "title": "En tus manos",
+      "source": {
+        "label": "Salmo 31 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.31"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 32,
+      "title": "El alivio del perdón",
+      "source": {
+        "label": "Salmo 32 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.32"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 33,
+      "title": "Una alabanza comunitaria",
+      "source": {
+        "label": "Salmo 33 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.33"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 34,
+      "title": "Bendecir en la aflicción",
+      "source": {
+        "label": "Salmo 34 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.34"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 35,
+      "title": "Defensa ante perseguidores",
+      "source": {
+        "label": "Salmo 35 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.35"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 36,
+      "title": "El mal y la fidelidad",
+      "source": {
+        "label": "Salmo 36 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.36"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 37,
+      "title": "No envidiar al injusto",
+      "source": {
+        "label": "Salmo 37 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.37"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 38,
+      "title": "Una súplica desde el abatimiento",
+      "source": {
+        "label": "Salmo 38 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.38"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 39,
+      "title": "El límite de la vida",
+      "source": {
+        "label": "Salmo 39 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.39"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 40,
+      "title": "Esperar y responder",
+      "source": {
+        "label": "Salmo 40 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.40"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 41,
+      "title": "Cuidar al vulnerable",
+      "source": {
+        "label": "Salmo 41 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.41"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 42,
+      "title": "Sed de presencia",
+      "source": {
+        "label": "Salmo 42 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.42"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 43,
+      "title": "Defensa ante la tristeza",
+      "source": {
+        "label": "Salmo 43 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.43"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 44,
+      "title": "Lamento colectivo",
+      "source": {
+        "label": "Salmo 44 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.44"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 45,
+      "title": "Canto nupcial y justicia",
+      "source": {
+        "label": "Salmo 45 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.45"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 46,
+      "title": "Refugio en la conmoción",
+      "source": {
+        "label": "Salmo 46 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.46"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 47,
+      "title": "El reinado del Creador",
+      "source": {
+        "label": "Salmo 47 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.47"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 48,
+      "title": "La ciudad y su justicia",
+      "source": {
+        "label": "Salmo 48 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.48"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 49,
+      "title": "El límite de la riqueza",
+      "source": {
+        "label": "Salmo 49 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.49"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 50,
+      "title": "El culto y la justicia",
+      "source": {
+        "label": "Salmo 50 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.50"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 51,
+      "title": "Un corazón renovado",
+      "source": {
+        "label": "Salmo 51 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.51"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 52,
+      "title": "El poder de la lengua",
+      "source": {
+        "label": "Salmo 52 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.52"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 53,
+      "title": "El retrato de la corrupción",
+      "source": {
+        "label": "Salmo 53 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.53"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 54,
+      "title": "Auxilio frente al enemigo",
+      "source": {
+        "label": "Salmo 54 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.54"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 55,
+      "title": "Traición y confianza",
+      "source": {
+        "label": "Salmo 55 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.55"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 56,
+      "title": "Temor y palabra",
+      "source": {
+        "label": "Salmo 56 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.56"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 57,
+      "title": "Refugio bajo las alas",
+      "source": {
+        "label": "Salmo 57 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.57"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 58,
+      "title": "Denuncia de jueces injustos",
+      "source": {
+        "label": "Salmo 58 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.58"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 59,
+      "title": "Protección en la noche",
+      "source": {
+        "label": "Salmo 59 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.59"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 60,
+      "title": "Después de la derrota",
+      "source": {
+        "label": "Salmo 60 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.60"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 61,
+      "title": "Desde los confines",
+      "source": {
+        "label": "Salmo 61 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.61"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 62,
+      "title": "Mi alma espera en silencio",
+      "source": {
+        "label": "Salmo 62 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.62"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 63,
+      "title": "Sed en el desierto",
+      "source": {
+        "label": "Salmo 63 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.63"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 64,
+      "title": "El daño de las palabras",
+      "source": {
+        "label": "Salmo 64 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.64"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 65,
+      "title": "Gratitud por la tierra",
+      "source": {
+        "label": "Salmo 65 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.65"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 66,
+      "title": "Memoria de la liberación",
+      "source": {
+        "label": "Salmo 66 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.66"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 67,
+      "title": "Bendición para las naciones",
+      "source": {
+        "label": "Salmo 67 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.67"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 68,
+      "title": "Procesión y solidaridad",
+      "source": {
+        "label": "Salmo 68 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.68"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 69,
+      "title": "Clamor desde aguas profundas",
+      "source": {
+        "label": "Salmo 69 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.69"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 70,
+      "title": "Acude pronto",
+      "source": {
+        "label": "Salmo 70 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.70"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 71,
+      "title": "Oración en la vejez",
+      "source": {
+        "label": "Salmo 71 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.71"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 72,
+      "title": "Justicia para el rey",
+      "source": {
+        "label": "Salmo 72 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.72"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 73,
+      "title": "La prosperidad injusta",
+      "source": {
+        "label": "Salmo 73 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.73"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 74,
+      "title": "Ruinas del santuario",
+      "source": {
+        "label": "Salmo 74 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.74"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 75,
+      "title": "El juez de toda la tierra",
+      "source": {
+        "label": "Salmo 75 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.75"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 76,
+      "title": "Justicia frente al poder",
+      "source": {
+        "label": "Salmo 76 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.76"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 77,
+      "title": "Recordar la liberación",
+      "source": {
+        "label": "Salmo 77 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.77"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 78,
+      "title": "Aprender de los errores",
+      "source": {
+        "label": "Salmo 78 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.78"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 79,
+      "title": "Un pueblo herido",
+      "source": {
+        "label": "Salmo 79 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.79"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 80,
+      "title": "Restáuranos",
+      "source": {
+        "label": "Salmo 80 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.80"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 81,
+      "title": "Escuchar la advertencia",
+      "source": {
+        "label": "Salmo 81 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.81"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 82,
+      "title": "Defender al desamparado",
+      "source": {
+        "label": "Salmo 82 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.82"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 83,
+      "title": "Una amenaza compartida",
+      "source": {
+        "label": "Salmo 83 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.83"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 84,
+      "title": "Anhelo de la casa sagrada",
+      "source": {
+        "label": "Salmo 84 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.84"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 85,
+      "title": "Hablar de paz",
+      "source": {
+        "label": "Salmo 85 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.85"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 86,
+      "title": "Enséñame tu camino",
+      "source": {
+        "label": "Salmo 86 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.86"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 87,
+      "title": "Todas las naciones pertenecen",
+      "source": {
+        "label": "Salmo 87 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.87"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 88,
+      "title": "Desde la oscuridad",
+      "source": {
+        "label": "Salmo 88 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.88"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 89,
+      "title": "Promesa y crisis",
+      "source": {
+        "label": "Salmo 89 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.89"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 90,
+      "title": "Enséñanos a contar los días",
+      "source": {
+        "label": "Salmo 90 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.90"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 91,
+      "title": "Refugio en el peligro",
+      "source": {
+        "label": "Salmo 91 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.91"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 92,
+      "title": "Alabanza en el reposo",
+      "source": {
+        "label": "Salmo 92 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.92"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 93,
+      "title": "El Creador reina",
+      "source": {
+        "label": "Salmo 93 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.93"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 94,
+      "title": "Clamor contra la injusticia",
+      "source": {
+        "label": "Salmo 94 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.94"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 95,
+      "title": "Escuchar hoy",
+      "source": {
+        "label": "Salmo 95 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.95"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 96,
+      "title": "Una canción nueva",
+      "source": {
+        "label": "Salmo 96 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.96"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 97,
+      "title": "Justicia y luz",
+      "source": {
+        "label": "Salmo 97 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.97"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 98,
+      "title": "Celebrar la salvación",
+      "source": {
+        "label": "Salmo 98 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.98"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 99,
+      "title": "Justicia y santidad",
+      "source": {
+        "label": "Salmo 99 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.99"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 100,
+      "title": "Entrar con gratitud",
+      "source": {
+        "label": "Salmo 100 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.100"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 101,
+      "title": "Compromiso de integridad",
+      "source": {
+        "label": "Salmo 101 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.101"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 102,
+      "title": "Oración del afligido",
+      "source": {
+        "label": "Salmo 102 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.102"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 103,
+      "title": "Bendice, alma mía",
+      "source": {
+        "label": "Salmo 103 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.103"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 104,
+      "title": "La creación como tejido",
+      "source": {
+        "label": "Salmo 104 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.104"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 105,
+      "title": "Recordar el pacto",
+      "source": {
+        "label": "Salmo 105 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.105"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 106,
+      "title": "Confesar en comunidad",
+      "source": {
+        "label": "Salmo 106 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.106"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 107,
+      "title": "Rescatados de muchos caminos",
+      "source": {
+        "label": "Salmo 107 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.107"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 108,
+      "title": "Mi corazón está dispuesto",
+      "source": {
+        "label": "Salmo 108 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.108"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 109,
+      "title": "Acusación y justicia",
+      "source": {
+        "label": "Salmo 109 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.109"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 110,
+      "title": "El rey y la justicia",
+      "source": {
+        "label": "Salmo 110 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.110"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 111,
+      "title": "Grandes son sus obras",
+      "source": {
+        "label": "Salmo 111 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.111"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 112,
+      "title": "Feliz quien obra con justicia",
+      "source": {
+        "label": "Salmo 112 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.112"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 113,
+      "title": "Desde la salida del sol",
+      "source": {
+        "label": "Salmo 113 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.113"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 114,
+      "title": "Cuando Israel salió de Egipto",
+      "source": {
+        "label": "Salmo 114 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.114"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 115,
+      "title": "No a nosotros",
+      "source": {
+        "label": "Salmo 115 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.115"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 116,
+      "title": "El agradecimiento del rescatado",
+      "source": {
+        "label": "Salmo 116 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.116"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 117,
+      "title": "Alabanza de todos los pueblos",
+      "source": {
+        "label": "Salmo 117 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.117"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 118,
+      "title": "La piedra rechazada",
+      "source": {
+        "label": "Salmo 118 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.118"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 119,
+      "title": "Amar la enseñanza",
+      "source": {
+        "label": "Salmo 119 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.119"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 120,
+      "title": "Anhelo de paz",
+      "source": {
+        "label": "Salmo 120 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.120"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 121,
+      "title": "Alzar los ojos",
+      "source": {
+        "label": "Salmo 121 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.121"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 122,
+      "title": "Alegría de subir a Jerusalén",
+      "source": {
+        "label": "Salmo 122 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.122"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 123,
+      "title": "Los ojos de quien espera",
+      "source": {
+        "label": "Salmo 123 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.123"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 124,
+      "title": "Si no hubiera habido ayuda",
+      "source": {
+        "label": "Salmo 124 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.124"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 125,
+      "title": "Como el monte Sion",
+      "source": {
+        "label": "Salmo 125 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.125"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 126,
+      "title": "Sembrar entre lágrimas",
+      "source": {
+        "label": "Salmo 126 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.126"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 127,
+      "title": "Construir y descansar",
+      "source": {
+        "label": "Salmo 127 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.127"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 128,
+      "title": "El fruto del trabajo",
+      "source": {
+        "label": "Salmo 128 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.128"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 129,
+      "title": "Mucho me han afligido",
+      "source": {
+        "label": "Salmo 129 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.129"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 130,
+      "title": "Desde lo profundo",
+      "source": {
+        "label": "Salmo 130 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.130"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 131,
+      "title": "Un alma aquietada",
+      "source": {
+        "label": "Salmo 131 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.131"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 132,
+      "title": "Recordar a David",
+      "source": {
+        "label": "Salmo 132 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.132"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 133,
+      "title": "La alegría de estar juntos",
+      "source": {
+        "label": "Salmo 133 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.133"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 134,
+      "title": "Bendecir en la noche",
+      "source": {
+        "label": "Salmo 134 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.134"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 135,
+      "title": "Alabar el nombre",
+      "source": {
+        "label": "Salmo 135 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.135"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 136,
+      "title": "Porque su bondad permanece",
+      "source": {
+        "label": "Salmo 136 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.136"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 137,
+      "title": "Junto a los ríos de Babilonia",
+      "source": {
+        "label": "Salmo 137 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.137"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 138,
+      "title": "Gratitud desde el peligro",
+      "source": {
+        "label": "Salmo 138 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.138"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 139,
+      "title": "Conocido desde dentro",
+      "source": {
+        "label": "Salmo 139 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.139"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 140,
+      "title": "Rescate de la violencia",
+      "source": {
+        "label": "Salmo 140 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.140"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 141,
+      "title": "Guarda mi boca",
+      "source": {
+        "label": "Salmo 141 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.141"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 142,
+      "title": "Mi voz en la cueva",
+      "source": {
+        "label": "Salmo 142 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.142"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 143,
+      "title": "Enséñame a hacer el bien",
+      "source": {
+        "label": "Salmo 143 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.143"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 144,
+      "title": "Preparación y paz",
+      "source": {
+        "label": "Salmo 144 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.144"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 145,
+      "title": "Alabanza cotidiana",
+      "source": {
+        "label": "Salmo 145 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.145"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 146,
+      "title": "No confiar solo en príncipes",
+      "source": {
+        "label": "Salmo 146 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.146"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 147,
+      "title": "Reconstruir y sanar",
+      "source": {
+        "label": "Salmo 147 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.147"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 148,
+      "title": "Que alabe toda la creación",
+      "source": {
+        "label": "Salmo 148 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.148"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 149,
+      "title": "Alabanza y conflicto",
+      "source": {
+        "label": "Salmo 149 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.149"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    },
+    {
+      "number": 150,
+      "title": "Que todo lo que respira alabe",
+      "source": {
+        "label": "Salmo 150 · texto hebreo",
+        "url": "https://www.sefaria.org/Psalms.150"
+      },
+      "editorialStatus": "Guía temática introductoria; comentario tradicional versículo a versículo pendiente"
+    }
+  ]
+}
