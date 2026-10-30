@@ -8,6 +8,24 @@ if(!root||!panel)return;
 const $=id=>panel.querySelector('#'+id);
 const el=(tag,txt,cls)=>{const n=document.createElement(tag);if(txt!==undefined)n.textContent=txt;if(cls)n.className=cls;return n;};
 const safeLink=(text,url)=>{const a=el('a',text);a.href=url;a.target='_blank';a.rel='noopener noreferrer';return a;};
+const mapRegions=[
+ ['cabeza','Cabeza','left',40,160,42],['oidos','Oídos','left',92,142,61],
+ ['pecho','Pecho','left',154,151,137],['brazos','Brazos y manos','left',214,113,221],
+ ['vientre','Vientre','left',274,160,205],['rodillas','Rodillas','left',350,147,310],
+ ['ojos','Ojos','right',56,167,54],['boca','Boca y voz','right',112,160,72],
+ ['corazon','Corazón','right',176,169,130],['espalda','Espalda','right',246,176,176],
+ ['pies','Pies','right',404,143,400]
+];
+for(const [id,label,side,y,x,pointY] of mapRegions){
+ const button=el('button',label);button.type='button';button.dataset.thRegion=id;
+ button.className='thAtlasMapLabel '+side;button.style.setProperty('--label-y',(y/440*100)+'%');
+ $('thAtlasMapLabels').append(button);
+ const ns='http://www.w3.org/2000/svg',group=document.createElementNS(ns,'g');group.dataset.thMapRegion=id;
+ const line=document.createElementNS(ns,'path');const edge=side==='left'?90:230,elbow=side==='left'?112:208;
+ line.setAttribute('d',`M${edge} ${y} H${elbow} L${x} ${pointY}`);
+ const dot=document.createElementNS(ns,'circle');dot.setAttribute('cx',x);dot.setAttribute('cy',pointY);dot.setAttribute('r','3');
+ group.append(line,dot);$('thAtlasMapLines').append(group);
+}
 let data=null,regionId='rodillas',timeId='libre',minutes=10,clock='',day=1,checked=new Set();
 function selectedRegion(){return data.regions.find(x=>x.id===regionId)||data.regions[0];}
 function selectedTime(){return data.times.find(x=>x.id===timeId)||data.times[0];}
@@ -16,6 +34,10 @@ function render(){
  const r=selectedRegion(),t=selectedTime();
  $('thAtlasRegion').value=regionId;$('thAtlasTime').value=timeId;$('thAtlasDuration').value=String(minutes);
  panel.querySelectorAll('[data-th-region]').forEach(b=>{const active=b.dataset.thRegion===regionId;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));});
+ panel.querySelectorAll('[data-th-map-region]').forEach(g=>g.classList.toggle('active',g.dataset.thMapRegion===regionId));
+ panel.querySelector('.thAtlasBody').classList.toggle('whole',regionId==='integral'||regionId==='descanso');
+ $('thAtlasSelectedName').textContent=r.name;
+ $('thAtlasSelectedPsalms').textContent='Salmos '+r.psalms.join(' · ');
  $('thAtlasTheme').textContent=r.symbol;
  $('thAtlasAnchor').textContent=r.anchor;
  $('thAtlasPassage').textContent=r.passage;
@@ -59,7 +81,8 @@ async function open(){
   if(!data){const res=await fetch('content/tehilim/atlas-corporal.json',{cache:'no-store'});if(!res.ok)throw Error('Atlas no disponible');data=await res.json();if(!Array.isArray(data.regions)||data.regions.length<10)throw Error('Atlas incompleto');
    const select=$('thAtlasRegion');select.replaceChildren(...data.regions.map(x=>{const o=document.createElement('option');o.value=x.id;o.textContent=x.name;return o;}));
    const times=$('thAtlasTime');times.replaceChildren(...data.times.map(x=>{const o=document.createElement('option');o.value=x.id;o.textContent=x.name;return o;}));
-   $('thAtlasIntro').textContent=data.intro;
+   $('thAtlasIntro').textContent='Un espacio para leer con atención y acompañar lo que estás viviendo.';
+   $('thAtlasScope').textContent=data.intro;
    $('thAtlasSafety').textContent=data.medical;
    $('thAtlasTimesEditorial').textContent=data.timesEditorial;
   }
@@ -70,6 +93,7 @@ async function open(){
 }
 $('thAtlasRegion').addEventListener('change',e=>{regionId=e.target.value;day=1;checked.clear();render();});
 panel.querySelectorAll('[data-th-region]').forEach(b=>b.addEventListener('click',()=>{regionId=b.dataset.thRegion;day=1;checked.clear();render();}));
+$('thAtlasGoReading').addEventListener('click',()=>{const target=$('thAtlasTheme');target.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});target.focus({preventScroll:true});});
 $('thAtlasTime').addEventListener('change',e=>{timeId=e.target.value;render();});
 $('thAtlasDuration').addEventListener('change',e=>{minutes=Number(e.target.value);render();});
 $('thAtlasClock').addEventListener('change',e=>{clock=e.target.value;render();});

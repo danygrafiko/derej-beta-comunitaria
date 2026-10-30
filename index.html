@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="prelaunch-local.css?v=28.1">
 <link rel="stylesheet" href="pozo-learning.css?v=7">
 <link rel="stylesheet" href="tehilim-biblioteca.css?v=2">
-<link rel="stylesheet" href="tehilim-atlas.css?v=2">
+<link rel="stylesheet" href="tehilim-atlas.css?v=3">
 <link rel="stylesheet" href="analytics.css?v=2">
 <link rel="stylesheet" href="welcome.css?v=1">
 <link rel="stylesheet" href="midrash-es.css?v=27.2">
@@ -135,28 +135,20 @@
         <p id="thAtlasLoad" aria-live="polite">Preparando atlas…</p>
         <div id="thAtlasContent" hidden>
           <div class="thAtlasMapLayout">
-            <div class="thAtlasMap" role="group" aria-label="Mapa corporal interactivo: selecciona una región">
-              <svg viewBox="0 0 200 365" aria-hidden="true" focusable="false">
-                <defs><linearGradient id="thBodyFill" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d5dfc8"/><stop offset="1" stop-color="#b2c5b2"/></linearGradient></defs>
-                <ellipse cx="100" cy="42" rx="24" ry="29" fill="url(#thBodyFill)" stroke="#6f927a" stroke-width="2"/>
-                <path d="M87 69 L87 83 C66 88 61 99 56 125 L48 182 Q48 193 58 194 Q67 193 69 183 L77 139 L77 184 L84 229 L77 311 L73 345 Q74 355 86 354 L93 349 L100 254 L108 349 L116 354 Q128 353 126 344 L122 311 L115 229 L123 184 L123 139 L131 183 Q133 193 143 194 Q153 193 152 182 L144 125 C139 99 134 88 113 83 L113 69" fill="url(#thBodyFill)" stroke="#6f927a" stroke-width="2" stroke-linejoin="round"/>
-                <path d="M100 85 L100 228 M77 139 L123 139 M84 229 L115 229" fill="none" stroke="#86a28b" stroke-opacity=".55" stroke-dasharray="4 6"/>
+            <div class="thAtlasMapCopy"><span class="thEyebrow">UN MOMENTO PARA ESCUCHARTE</span><h3>Del cuerpo a la palabra</h3><p>Elige una región y encuentra salmos para contemplar, hacer una pausa y volver a tu día.</p></div>
+            <div class="thAtlasMap" role="group" aria-label="Mapa corporal: elige uno de los nombres a los lados de la silueta">
+              <svg viewBox="0 0 320 440" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+                <defs><linearGradient id="thBodyFill" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e4e9d9"/><stop offset=".5" stop-color="#bdcebc"/><stop offset="1" stop-color="#e8eddf"/></linearGradient></defs>
+                <ellipse cx="160" cy="416" rx="48" ry="6" fill="#354b3b" opacity=".07"/>
+                <path class="thAtlasBody" d="M160 27 C145 27 140 39 141 53 L143 66 Q145 77 151 80 L151 94 C135 97 126 101 122 118 L110 177 L105 222 Q105 232 113 233 Q121 234 123 224 L134 163 L137 195 Q135 217 139 245 L142 279 L135 383 L131 402 Q130 410 143 411 L153 408 L160 291 L168 408 L179 411 Q191 410 188 401 L184 383 L178 279 L181 245 Q186 217 183 195 L186 163 L197 224 Q199 234 207 233 Q216 232 214 222 L210 177 L198 118 C194 101 184 97 169 94 L169 80 Q177 76 178 66 L180 53 C181 39 175 27 160 27Z" fill="url(#thBodyFill)" stroke="#78917b" stroke-width="1.5" stroke-linejoin="round"/>
+                <path d="M152 117 Q160 121 168 117 M144 164 Q160 171 176 164 M150 239 Q160 243 170 239" fill="none" stroke="#8fa48b" stroke-width="1" opacity=".6"/>
+                <g id="thAtlasMapLines"></g>
               </svg>
-              <button type="button" data-th-region="cabeza" style="--x:50%;--y:9%" aria-label="Cabeza" title="Cabeza">●</button>
-              <button type="button" data-th-region="ojos" style="--x:56%;--y:13%" aria-label="Ojos" title="Ojos">●</button>
-              <button type="button" data-th-region="oidos" style="--x:39%;--y:12%" aria-label="Oídos" title="Oídos">●</button>
-              <button type="button" data-th-region="boca" style="--x:50%;--y:17%" aria-label="Boca" title="Boca">●</button>
-              <button type="button" data-th-region="corazon" style="--x:55%;--y:31%" aria-label="Corazón" title="Corazón">●</button>
-              <button type="button" data-th-region="pecho" style="--x:44%;--y:35%" aria-label="Pecho" title="Pecho">●</button>
-              <button type="button" data-th-region="brazos" style="--x:72%;--y:44%" aria-label="Brazos" title="Brazos">●</button>
-              <button type="button" data-th-region="espalda" style="--x:44%;--y:48%" aria-label="Espalda" title="Espalda">●</button>
-              <button type="button" data-th-region="vientre" style="--x:54%;--y:54%" aria-label="Vientre" title="Vientre">●</button>
-              <button type="button" data-th-region="integral" style="--x:51%;--y:63%" aria-label="Todo el cuerpo" title="Todo el cuerpo">●</button>
-              <button type="button" data-th-region="rodillas" style="--x:44%;--y:76%" aria-label="Rodillas" title="Rodillas">●</button>
-              <button type="button" data-th-region="pies" style="--x:40%;--y:94%" aria-label="Pies" title="Pies">●</button>
-              <button type="button" data-th-region="descanso" style="--x:65%;--y:8%" aria-label="Descanso" title="Descanso">●</button>
+              <div id="thAtlasMapLabels"></div>
             </div>
-            <div class="thAtlasMapCopy"><span class="thEyebrow">ATLAS INTERACTIVO</span><h3>Escucha el cuerpo, estudia el Salmo</h3><p>Selecciona un punto del mapa o utiliza el menú. La relación es temática y contemplativa: no es una indicación clínica ni una correspondencia mística obligatoria.</p><p class="thAtlasFine">13 regiones · 5 momentos de lectura · 3 duraciones · 7 días de acompañamiento.</p></div>
+            <div class="thAtlasWhole" role="group" aria-label="Otras lecturas del cuerpo"><button type="button" data-th-region="integral">Todo el cuerpo</button><button type="button" data-th-region="descanso">Sueño y descanso</button></div>
+            <div class="thAtlasSelection" aria-live="polite" aria-atomic="true"><div><small>TU LECTURA COMIENZA AQUÍ</small><h4 id="thAtlasSelectedName"></h4><p id="thAtlasSelectedPsalms"></p></div><button type="button" id="thAtlasGoReading">Ver lectura <span aria-hidden="true">↓</span></button></div>
+            <details class="derejEditorialReference"><summary>Sobre este recorrido</summary><div><p id="thAtlasScope">La relación entre cuerpo y salmos es temática y contemplativa. No es una indicación clínica ni una correspondencia mística obligatoria.</p></div></details>
           </div>
           <div class="thAtlasControls">
             <label>¿Qué parte del cuerpo deseas contemplar?
@@ -176,7 +168,7 @@
           </div>
           <section class="thAtlasFeature">
             <span class="thEyebrow">LECTURA CONTEMPLATIVA · NO PRESCRIPCIÓN MÉDICA</span>
-            <h3 id="thAtlasTheme"></h3>
+            <h3 id="thAtlasTheme" tabindex="-1"></h3>
             <p class="thAtlasAnchor" id="thAtlasAnchor"></p>
             <blockquote id="thAtlasPassage"></blockquote>
             <p id="thAtlasSourceNote" class="thAtlasFine"></p>
@@ -478,7 +470,7 @@
 <script src="meditacion-content.js?v=1"></script>
 <script src="meditacion.js?v=1"></script>
 <script src="tehilim-biblioteca.js?v=2"></script>
-<script src="tehilim-atlas.js?v=2"></script>
+<script src="tehilim-atlas.js?v=3"></script>
 <script src="patriarcas-sefirot.js?v=1"></script>
 <script src="biblioteca-catalogo.js?v=4"></script>
 </body>
