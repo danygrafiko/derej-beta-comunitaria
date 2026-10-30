@@ -8,13 +8,10 @@
  const catalog=document.createElement('div');catalog.className='libCatalog';
  catalog.innerHTML='<div class="libTools"><label class="libSearch"><span>Buscar una lectura</span><input id="libSearch" type="search" placeholder="Salmos, meditación, Abraham…" autocomplete="off"></label><p class="libHint">Elige un tema.<br>Encuentra una pregunta.</p></div><div class="libFilters" role="group" aria-label="Temas de la biblioteca"></div><aside class="libResume" hidden><div><small>TU ÚLTIMA LECTURA ABIERTA</small><strong></strong></div><button type="button">Volver al estudio ↗</button></aside><div class="libResults"><h2>Explorar la colección</h2><span id="libCount" role="status"></span></div><div class="libGrid"></div><div class="libEmpty" hidden><h3>No encontramos esa lectura.</h3><p>Prueba con otro nombre o explora todos los temas.</p><button type="button">Ver toda la biblioteca</button></div>';
  intro.after(catalog);
- const extra=document.createElement('section');extra.innerHTML='<div><h2>Abraham Ibn Ezra</h2><p>Lengua, contexto y lectura atenta. Conoce su vida y su manera de acercarse al texto.</p></div><button type="button" data-voces-author="ibnezra">Conocer su mirada →</button>';root.append(extra);
  const entries=[
  ['.thEntry','tehilim','texto','Salmos para el camino','COLECCIÓN · 150 SALMOS','tehilim cuerpo alma oración'],
  ['.npEntry','nombres','texto','Nombres y presencia','RECORRIDO DE ESTUDIO','creador nombres hebreo'],
- ['.vocHomeEntry','voces','voces','Voces del Camino','VIDAS · OBRAS · ENSEÑANZAS','hilel baal shem tov ramak rambam najman sabios'],
- ['[aria-labelledby="sacksEntryTitle"]','sacks','voces','Jonathan Sacks','VIDA Y LEGADO','esperanza escucha responsabilidad'],
- [null,'ibnezra','voces','Abraham Ibn Ezra','VIDA Y LEGADO','lengua exégesis biblia'],
+ ['.vocHomeEntry','voces','voces','Voces del Camino','VIDAS · OBRAS · ENSEÑANZAS','hilel baal shem tov ramak rambam najman rashi jonathan sacks abraham ibn ezra sabios esperanza escucha lengua exégesis'],
  ['.genealogyEntry','genealogias','raices','Genealogías','MAPA INTERACTIVO','abraham sara david familias generaciones'],
  ['.psEntry','patriarcas','raices','Patriarcas y matriarcas','SEFIROT · HISTORIAS','árbol vida correspondencias'],
  ['.mdEntry','meditacion','interior','Meditación judía y cabalística','DIEZ ENFOQUES','contemplación atención cabala silencio'],
@@ -22,7 +19,7 @@
  ];
  const grid=catalog.querySelector('.libGrid');
  const cards=entries.map(([selector,id,category,title,label,tags],i)=>{
-  const el=selector?root.querySelector(selector):extra;if(!el)return null;
+  const el=root.querySelector(selector);if(!el)return null;
   el.classList.add('libCard');el.dataset.libId=id;el.dataset.libCategory=category;
   const heading=el.querySelector('h2');if(heading)heading.textContent=title;
   el.querySelectorAll('small,.npEyebrow,.thEntry>small,.prEyebrow,.vocHomeEntry>div>span,.aeEntry>div>span,.mdEntry>div>span').forEach(n=>n.hidden=true);
@@ -36,5 +33,5 @@
  const key='derej.library.last.v1',resume=catalog.querySelector('.libResume');
  function showResume(id){const c=cards.find(c=>c.id===id);if(!c)return;resume.hidden=false;resume.querySelector('strong').textContent=c.title;resume.querySelector('button').onclick=()=>c.el.querySelector('button,a')?.click();}
  root.addEventListener('click',e=>{const c=e.target.closest('.libCard');if(!c||!e.target.closest('button,a'))return;try{localStorage.setItem(key,c.dataset.libId);}catch{}showResume(c.dataset.libId);},true);
- try{showResume(localStorage.getItem(key));}catch{}render();
+ try{const saved=localStorage.getItem(key);showResume(saved==='sacks'||saved==='ibnezra'?'voces':saved);}catch{}render();
 })();
