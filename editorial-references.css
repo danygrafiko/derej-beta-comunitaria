@@ -1,0 +1,5 @@
+.derejEditorialReference{margin:20px 0;border-top:1px solid #cdbd9f;border-bottom:1px solid #cdbd9f;color:#655e50}
+.derejEditorialReference>summary{cursor:pointer;padding:14px 4px;min-height:44px;font:600 .8rem/1.5 system-ui,sans-serif;color:#53624b}
+.derejEditorialReference>summary:focus-visible{outline:2px solid #53624b;outline-offset:3px}
+.derejEditorialReference>div{padding:0 4px 12px}
+.derejEditorialReference>div>p,#derejMidrashDaily .derejEditorialReference p{font:.78rem/1.6 system-ui,sans-serif;color:#6d6456;margin:8px 0}

@@ -9664,7 +9664,7 @@ function renderPanels(p,c){
           ${pasuk.trans?`<span><b>Transliteración</b><br>${esc(pasuk.trans)}</span>`:''}
           ${pasuk.ref?`<span><b>Referencia</b><br>${esc(biblicalRefEs(pasuk.ref))}</span>`:''}
         </div>
-        ${c.rootNote?`<p class="derejRootNote">${esc(c.rootNote)}</p>`:''}
+        ${c.rootNote?(()=>{const r=window.DEREJ_EDITORIAL.splitRoot(c.rootNote);return (r.context?`<p class="derejRootNote">${esc(r.context)}</p>`:'')+window.DEREJ_EDITORIAL.reference(r.note);})():''}
       </div>
       ${navButtons('raiz')}
     </div>`;
@@ -9943,7 +9943,7 @@ function renderPanels(p,c){
         ${bstVoice?renderVoiceCard(bstVoice,'Baal Shem Tov'):''}
         ${bstVoice?.url?`<p class="ramakSourceNote"><a href="${esc(bstVoice.url)}" target="_blank" rel="noopener noreferrer">Consultar la fuente de esta lectura del Baal Shem Tov ↗</a></p>`:''}
       </div>
-      <p class="ramakSourceNote">Las voces son síntesis editoriales de Dérej, con referencias identificadas. Las conexiones con el pasaje diario son aplicaciones de Dérej. Cuando una enseñanza se transmite en una exposición posterior, se identifica esa fuente; no se presenta como cita literal del maestro.</p>
+      ${window.DEREJ_EDITORIAL.reference('Las voces son síntesis editoriales de Dérej, con referencias identificadas. Las conexiones con el pasaje diario son aplicaciones de Dérej. Cuando una enseñanza se transmite en una exposición posterior, se identifica esa fuente; no se presenta como cita literal del maestro.')}
       ${navButtons('profundizar')}
     </div>`;
 

@@ -13,7 +13,7 @@ const requests=[];
 w.fetch=async url=>{requests.push(String(url));return {ok:true,json:async()=>JSON.parse(fs.readFileSync(path.join(root,String(url).includes('caminos-ramak')?'content/caminos-ramak-v25.json':'radio.json'),'utf8'))};};
 const pause=()=>new Promise(r=>setTimeout(r,40));
 (async()=>{
- for(const f of ['encuentros-v21.js','prelaunch-local.js','mobile-v234.js','navigation-v235.js','cleanup-v236.js','navigation-v241.js','midrash-diario-es.js','midrash-es.js'])evaluate(fs.readFileSync(path.join(root,f),'utf8'));
+ for(const f of ['encuentros-v21.js','editorial-references.js','prelaunch-local.js','mobile-v234.js','navigation-v235.js','cleanup-v236.js','navigation-v241.js','midrash-diario-es.js','midrash-es.js'])evaluate(fs.readFileSync(path.join(root,f),'utf8'));
  await pause();evaluate('route("camino")');
  const oldProgress=w.localStorage.getItem('derej-v23-camino-progress'),oldRequests=requests.length,oldPauses=pauses;
  const curated=w.DEREJ_MIDRASH_DIARIO_ES;const seen=new Set(),vayeraSeen=new Set();let covered=0;
@@ -22,6 +22,8 @@ const pause=()=>new Promise(r=>setTimeout(r,40));
   for(const c of p.caminos){
    w.document.querySelector(`#ramakDayStrip [data-ramak-day="${c.dia}"]`).click();await pause();
    const key=`${p.parasha}|${c.dia}`,item=curated[key];
+   const rootNote=w.document.querySelector('.derejRootNote');
+   assert(!/El (?:español del versículo|texto español) es una paráfrasis/.test(rootNote?.textContent||''),key);
    assert.equal(w.document.querySelectorAll('#derejMidrashReader,#derejMidrashSelect').length,0);
    const article=w.document.getElementById('derejMidrashDaily'),questions=w.document.getElementById('derejMidrashQuestions');
    if(!item){assert(!article,key);assert(!questions,key);continue;}
@@ -31,6 +33,8 @@ const pause=()=>new Promise(r=>setTimeout(r,40));
    assert.equal(article.querySelector('h3').textContent,item.title);
    assert.equal(article.querySelector('.midrashDailyEyebrow').textContent,item.eyebrow||'MIDRASH DE HOY');
    assert(article.textContent.includes(item.source));assert(article.textContent.includes('Adaptación al español'));
+   const refs=article.querySelector('.derejEditorialReference');assert(refs&&!refs.open,key);
+   assert(refs.textContent.includes(item.source));assert(refs.textContent.includes(item.editorialLabel||'Adaptación al español'));
    assert.equal(article.querySelectorAll('select,a,li').length,0);
    assert.equal(questions.querySelectorAll('li').length,2);assert(!questions.open);
    assert(!/[\u0590-\u05ff]/.test(article.textContent));

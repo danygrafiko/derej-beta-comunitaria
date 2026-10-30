@@ -25,7 +25,7 @@
     "ref": "Génesis 18:23–33",
     "insight": "Abraham no se limita a observar el destino de Sodoma: formula preguntas sobre la justicia y discute números decrecientes de personas justas. El diálogo mismo ocupa un lugar central.",
     "connection": "Génesis 18:25 y 18:32",
-    "meaning": "La pregunta sobre el juez de toda la tierra abre un problema ético: cómo juzgar colectivamente sin borrar a las personas inocentes. La aplicación contemporánea es editorial.",
+    "meaning": "La pregunta sobre el juez de toda la tierra abre un problema ético: cómo juzgar colectivamente sin borrar a las personas inocentes.",
     "question": "¿Qué revela del personaje de Abraham que su respuesta al juicio sea preguntar y argumentar?",
     "voices": [
       "rambam",
@@ -150,14 +150,15 @@ function deepStudy(c){
    + '<p class="prDeepWord" lang="he">'+esc(t.detail)+'</p><p class="prDeepRef">'+esc(t.ref)+'</p><p>'+esc(t.insight)+'</p></section>'
    + '<section class="prDeepSection"><small>02 · TRADICIÓN EN CONTEXTO</small>'
    + '<div class="prDeepVoices">'+voiceBlock(c,t.voices)+'</div>'
-   + '<p class="prDeepFootnote">Fuentes identificadas, síntesis y aplicaciones editoriales. No son citas literales atribuidas a los maestros.</p></section>'
+   + '</section>'
    + '<section class="prDeepSection"><small>03 · CONEXIONES Y MATICES</small><h3>'+esc(t.connection)+'</h3><p>'+esc(t.meaning)+'</p></section>'
    + '<section class="prDeepSection prDeepQuestion"><small>04 · PREGUNTA PARA EL ESTUDIO</small><h3>'+esc(t.question)+'</h3>'
    + '<p>Para pensar y conversar. Las acciones personales corresponden a la etapa Práctica.</p></section>'
    + '<div class="prDeepTools"><a href="'+urlForDay(c.dia)+'" target="_blank" rel="noopener noreferrer" hreflang="es">Leer la aliyá completa ↗</a>'
    + '<button type="button" data-pr-people>Conocer personajes →</button>'
    + '<button type="button" data-pr-save aria-pressed="'+saved+'">'+(saved?'✓ Lectura guardada · Quitar':'Guardar esta lectura')+'</button></div>'
-   + '<p class="prDeepSaveStatus" role="status" aria-live="polite"></p></div>';
+   + '<p class="prDeepSaveStatus" role="status" aria-live="polite"></p>'
+   + window.DEREJ_EDITORIAL.reference('Fuentes identificadas, síntesis y aplicaciones editoriales. Las conexiones con el pasaje y las aplicaciones contemporáneas son elaboraciones de Dérej. No son citas literales atribuidas a los maestros.')+'</div>';
 }
 function draw(focus=false){
   const c=dayData(openedDay);if(!c)return;
