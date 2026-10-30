@@ -1,5 +1,5 @@
 window.DEREJ_VOCES_CONTENT={
-  "version": 5,
+  "version": 6,
   "order": [
     "rashi",
     "ramjal",
@@ -8,7 +8,8 @@ window.DEREJ_VOCES_CONTENT={
     "baalshemtov",
     "najman",
     "hilel",
-    "sacks"
+    "sacks",
+    "ibnezra"
   ],
   "profiles": {
     "rambam": {
@@ -862,6 +863,193 @@ window.DEREJ_VOCES_CONTENT={
         ]
       ],
       "readingIntro": "Siete lecturas sobre su vida y su legado. Puedes elegir cualquiera y regresar a las fuentes al final de la ficha."
+    },
+    "ibnezra": {
+      "id": "ibnezra",
+      "name": "Abraham ibn Ezra",
+      "full": "Abraham ben Meir ibn Ezra · Aben Ezra",
+      "date": "c. 1089–1093 / c. 1164–1167",
+      "sortYear": 1090,
+      "place": "Tudela · Italia · Francia · Inglaterra",
+      "context": "Torá, lenguaje, poesía y conocimiento",
+      "hook": "Leer con atención, educar el deseo y unir el corazón con las acciones.",
+      "question": "¿Cómo cambia nuestra vida cuando aprendemos a leer con cuidado?",
+      "life": [
+        "Abraham ben Meir ibn Ezra, también llamado Aben Ezra, nació en Tudela. Las fuentes discrepan sobre sus fechas exactas: suelen situar su nacimiento hacia 1089–1093 y su muerte hacia 1164–1167. Fue comentarista bíblico, gramático y poeta. Su formación estuvo vinculada a la cultura judía de la península ibérica y al mundo intelectual de lengua árabe. [1, 2]",
+        "Desde alrededor de 1140 desarrolló una vida de viajes por Italia, Francia e Inglaterra. Buena parte de su obra pertenece a esta etapa. Conoció la precariedad económica y escribió para enseñar y sostenerse. Sus desplazamientos también contribuyeron a transmitir conocimientos entre comunidades con lenguas y tradiciones distintas. [1]",
+        "Conviene distinguirlo de Moisés ibn Ezra, otro poeta judío medieval, y de Ezra o Esdras, el escriba bíblico. Compartir un nombre no significa compartir época, obra o identidad."
+      ],
+      "works": [
+        [
+          "Comentarios bíblicos",
+          "Estudia el sentido contextual y la gramática del hebreo. Aquí profundizamos en Génesis 1:1, Éxodo 20:14 y Deuteronomio 30:14."
+        ],
+        [
+          "Yesod Mora",
+          "Examina fundamentos y razones de los mandamientos."
+        ],
+        [
+          "Sefer ha Shem",
+          "Estudia nombres divinos a través de letras, números y lenguaje, dentro de su contexto medieval."
+        ],
+        [
+          "Obras científicas y poesía",
+          "Escribió sobre números, calendario y astrolabio. Su poesía aborda también la vida interior y el anhelo del alma."
+        ]
+      ],
+      "source": "Génesis 1:1 · Éxodo 20:14 · Deuteronomio 30:14",
+      "teaching": "Peshat designa el sentido que una expresión adquiere por su lengua y su contexto. En el comentario de Ibn Ezra, la gramática y la comparación de usos bíblicos ocupan un lugar decisivo. Una lectura contextual puede reconocer una metáfora; no obliga a interpretar cada imagen de manera material. [3] Para el lector de Dérej, esto ofrece una disciplina concreta: antes de preguntar qué simboliza una palabra, averiguar qué está diciendo en ese pasaje. Un detalle gramatical puede cambiar quién actúa, a quién se dirige una frase o qué relación existe entre dos versículos.",
+      "reflection": "Lectura editorial Dérej basada en el estudio de Ibn Ezra.",
+      "ask": "¿Qué relación hay entre comprender, desear y actuar?",
+      "notes": "Síntesis y prácticas en español de Editorial Dérej. Las fuentes históricas y los comentarios se distinguen de nuestras aplicaciones actuales. Las fechas exactas son discutidas. Los secretos del comentarista deben leerse en su contexto medieval.",
+      "study": {
+        "title": "Leer con atención al lenguaje",
+        "source": "Génesis 1:1 · Comentario de Ibn Ezra",
+        "summary": "Peshat designa el sentido que una expresión adquiere por su lengua y su contexto. En el comentario de Ibn Ezra, la gramática y la comparación de usos bíblicos ocupan un lugar decisivo. Una lectura contextual puede reconocer una metáfora; no obliga a interpretar cada imagen de manera material. [3] Para el lector de Dérej, esto ofrece una disciplina concreta: antes de preguntar qué simboliza una palabra, averiguar qué está diciendo en ese pasaje. Un detalle gramatical puede cambiar quién actúa, a quién se dirige una frase o qué relación existe entre dos versículos.",
+        "reflection": [
+          "En Génesis 1:1, Ibn Ezra examina el verbo bará, habitualmente traducido como crear. Compara sus usos con otros pasajes, entre ellos Génesis 1:21 y 1:27, y cuestiona que el verbo, por sí solo, demuestre siempre una creación a partir de la nada. Su análisis incluye sentidos relacionados con cortar o delimitar. [4]",
+          "Este argumento lingüístico exige cuidado: establecer lo que una palabra permite afirmar es una cuestión distinta de reconstruir toda la cosmología del comentarista. Sus alusiones finales han recibido interpretaciones diferentes. En una sesión inicial basta reconocer el procedimiento y dejar abierta la discusión filosófica.",
+          "Propuesta de Dérej. Leamos Génesis 1:1–5 y anotemos por separado las palabras del pasaje y las ideas que asociamos con ellas. Después comparemos dos traducciones. Si una traducción resuelve una ambigüedad, conviene preguntar qué decisión tomó y qué otra posibilidad dejó fuera.",
+          "Podemos trabajar con cuatro preguntas: ¿quién habla o actúa?, ¿qué significa aquí la palabra?, ¿qué aporta el versículo anterior?, ¿qué parte de mi explicación procede de otra enseñanza? Esta secuencia es una herramienta pedagógica actual, no una lista redactada por Ibn Ezra.",
+          "Ibn Ezra reconoce la autoridad de la tradición rabínica, aunque puede distinguir la norma recibida de la explicación contextual de un versículo. También discute interpretaciones y evalúa argumentos de autores con quienes discrepa. Su independencia debe leerse dentro de ese compromiso con la tradición. [5]",
+          "Pregunta para conversar: ¿puedo explicar con mis propias palabras qué dice el pasaje antes de exponer lo que me inspira?"
+        ],
+        "understand": "¿Qué afirma la fuente y qué aporta la reflexión de Dérej?",
+        "personal": "¿Qué pregunta de esta lectura quiero llevar a mi vida cotidiana?"
+      },
+      "readings": [
+        {
+          "title": "Leer con atención al lenguaje",
+          "source": "Génesis 1:1 · Comentario de Ibn Ezra",
+          "summary": "Peshat designa el sentido que una expresión adquiere por su lengua y su contexto. En el comentario de Ibn Ezra, la gramática y la comparación de usos bíblicos ocupan un lugar decisivo. Una lectura contextual puede reconocer una metáfora; no obliga a interpretar cada imagen de manera material. [3] Para el lector de Dérej, esto ofrece una disciplina concreta: antes de preguntar qué simboliza una palabra, averiguar qué está diciendo en ese pasaje. Un detalle gramatical puede cambiar quién actúa, a quién se dirige una frase o qué relación existe entre dos versículos.",
+          "reflection": [
+            "En Génesis 1:1, Ibn Ezra examina el verbo bará, habitualmente traducido como crear. Compara sus usos con otros pasajes, entre ellos Génesis 1:21 y 1:27, y cuestiona que el verbo, por sí solo, demuestre siempre una creación a partir de la nada. Su análisis incluye sentidos relacionados con cortar o delimitar. [4]",
+            "Este argumento lingüístico exige cuidado: establecer lo que una palabra permite afirmar es una cuestión distinta de reconstruir toda la cosmología del comentarista. Sus alusiones finales han recibido interpretaciones diferentes. En una sesión inicial basta reconocer el procedimiento y dejar abierta la discusión filosófica.",
+            "Propuesta de Dérej. Leamos Génesis 1:1–5 y anotemos por separado las palabras del pasaje y las ideas que asociamos con ellas. Después comparemos dos traducciones. Si una traducción resuelve una ambigüedad, conviene preguntar qué decisión tomó y qué otra posibilidad dejó fuera.",
+            "Podemos trabajar con cuatro preguntas: ¿quién habla o actúa?, ¿qué significa aquí la palabra?, ¿qué aporta el versículo anterior?, ¿qué parte de mi explicación procede de otra enseñanza? Esta secuencia es una herramienta pedagógica actual, no una lista redactada por Ibn Ezra.",
+            "Ibn Ezra reconoce la autoridad de la tradición rabínica, aunque puede distinguir la norma recibida de la explicación contextual de un versículo. También discute interpretaciones y evalúa argumentos de autores con quienes discrepa. Su independencia debe leerse dentro de ese compromiso con la tradición. [5]",
+            "Pregunta para conversar: ¿puedo explicar con mis propias palabras qué dice el pasaje antes de exponer lo que me inspira?"
+          ],
+          "understand": "¿Qué afirma la fuente y qué aporta la reflexión de Dérej?",
+          "personal": "¿Qué pregunta de esta lectura quiero llevar a mi vida cotidiana?"
+        },
+        {
+          "title": "La educación del deseo",
+          "source": "Éxodo 20:14 en numeración hebrea · Comentario largo",
+          "summary": "Texto de estudio: comentario largo a Éxodo 20:14, según la numeración hebrea; algunas Biblias lo presentan como 20:17. Ibn Ezra pregunta cómo puede exigirse que una persona no codicie algo atractivo. Su respuesta considera que lo que alguien juzga posible o apropiado influye en lo que desea. [6] Utiliza la comparación de un aldeano que considera fuera de su alcance a la hija del rey. Traslada esa imagen al respeto por lo ajeno: comprender que algo no nos corresponde puede modificar la relación interior con ello. Asocia esta disposición con alegrarse por la propia porción y confiar en el Creador. [6]",
+          "reflection": [
+            "La imagen procede de una sociedad jerárquica medieval. Podemos examinar su argumento sin adoptar esa jerarquía como ideal para nuestras relaciones. El punto que estudiamos es la relación entre las representaciones que alimentamos y el deseo que cultivamos.",
+            "La pregunta útil para nuestra comunidad sería: ¿qué ocurre cuando convierto continuamente la vida de otra persona en la medida de la mía? Desear aprender de alguien puede orientarme. Sentir que su reconocimiento, sus vínculos o sus bienes deberían pertenecerme puede llevarme a desconocer su libertad y mi propio camino.",
+            "Esta propuesta actual distingue entre aspiración, comparación y apropiación. La aspiración permite elegir una tarea propia. La comparación puede aportar información, aunque también convertirse en una medida permanente de insuficiencia. La apropiación aparece cuando empiezo a justificar pasar por encima de lo que pertenece a otro.",
+            "Durante cinco minutos, escribamos una comparación que se repita en nuestra vida. Identifiquemos qué necesitamos realmente: seguridad, afecto, reconocimiento o una oportunidad. Luego elijamos una acción que responda a esa necesidad respetando a los demás. Por ejemplo, pedir una conversación, comenzar un aprendizaje o revisar una decisión de gasto.",
+            "El ejercicio no pretende borrar una emoción apenas aparece ni convertir la confianza en resignación frente a una injusticia. Nos ayuda a observar qué hacemos con el deseo y qué relatos lo refuerzan. Esta formulación pertenece a Dérej y no debe presentarse como una cita del comentarista.",
+            "Pregunta para conversar: ¿qué deseo puedo convertir en una acción propia, sin exigir que otra persona pierda lo suyo?"
+          ],
+          "understand": "¿Qué afirma la fuente y qué aporta la reflexión de Dérej?",
+          "personal": "¿Qué pregunta de esta lectura quiero llevar a mi vida cotidiana?"
+        },
+        {
+          "title": "El corazón y la conducta",
+          "source": "Deuteronomio 30:14 · Comentario de Ibn Ezra",
+          "summary": "Texto de estudio: Deuteronomio 30:14. Al comentar la cercanía de la palabra en la boca y el corazón, Ibn Ezra sitúa el corazón en el centro de los mandamientos. La palabra pronunciada puede fortalecer esa disposición interior y las acciones participan de su formación. [7] En el lenguaje bíblico, corazón puede abarcar pensamiento y voluntad, además de sentimiento. Por eso, este comentario permite examinar la relación entre lo que comprendemos, lo que decimos y lo que hacemos. Una intención puede expresarse en palabras y necesitar una conducta que la vuelva reconocible.",
+          "reflection": [
+            "Propuesta de Dérej. Pensemos en una situación sencilla: alguien estudia sobre el cuidado del prójimo y después responde con desprecio a una persona cercana. El estudio aporta un criterio con el cual revisar esa respuesta. La pregunta es qué aprendizaje logró orientar efectivamente su comportamiento.",
+            "También puede ocurrir que una persona actúe de forma responsable aun cuando no sienta una emoción intensa. El valor de la acción no depende de experimentar un estado especial. Para la lectura comunitaria, podemos observar cómo un hábito sostiene una intención y cómo una intención permite corregir un hábito.",
+            "Elijamos una disposición interior que deseamos cultivar hoy: paciencia, gratitud o disposición a reparar un daño. Formulemos una frase que podamos decir con sinceridad. Después definamos una acción verificable antes del final del día. Si elegimos paciencia, puede consistir en escuchar una explicación completa antes de responder.",
+            "Al terminar, revisemos qué pasó. ¿La frase ayudó a recordar la decisión? ¿La acción modificó la relación con la otra persona? ¿Qué obstáculo apareció? Escribamos lo observado sin convertir una dificultad en una condena de nuestra identidad.",
+            "Las mitzvot pertenecen a la vida judía y conservan su contexto particular. Nuestra comunidad puede estudiar esta enseñanza y conversar sobre sus implicaciones éticas sin asumir que todos los participantes tienen las mismas obligaciones religiosas. Reconocer esa diferencia permite aprender con respeto y explicar desde dónde participa cada persona.",
+            "Pregunta para conversar: ¿qué acto cotidiano permitiría reconocer que una enseñanza comenzó a transformar mi manera de relacionarme?"
+          ],
+          "understand": "¿Qué afirma la fuente y qué aporta la reflexión de Dérej?",
+          "personal": "¿Qué pregunta de esta lectura quiero llevar a mi vida cotidiana?"
+        },
+        {
+          "title": "Conocimiento y vida interior",
+          "source": "Estudio editorial de su obra y su contexto",
+          "summary": "Ibn Ezra escribió sobre aritmética, astronomía, calendario y astrología. Entre sus obras figuran Sefer ha Mispar, sobre números; Sefer ha Ibbur, sobre el calendario; y Keli ha Nehoshet, dedicado al astrolabio. Su trabajo contribuyó a transmitir conocimientos científicos del ámbito árabe a lectores de hebreo. [2] En la cultura medieval esas disciplinas podían relacionarse de formas que hoy no aceptamos. La astronomía estudia los cuerpos celestes mediante métodos científicos; la astrología propone influencias y predicciones de otro orden. La importancia histórica de un autor no demuestra la validez actual de cada explicación que sostuvo.",
+          "reflection": [
+            "En su pensamiento y su poesía aparecen el origen elevado del alma y su anhelo de retorno, dentro de un horizonte con influencias neoplatónicas. La vida interior puede orientarse hacia una realidad que supera la experiencia material inmediata. Esta descripción pertenece a su marco filosófico medieval. [8]",
+            "Lectura de Dérej. Podemos conversar sobre lo que significa vivir distraídos de aquello que consideramos valioso. Esa experiencia cotidiana ofrece una pregunta para el lector actual, pero no equivale por sí misma a la doctrina medieval del alma. Mantener esta distinción ayuda a escuchar al autor sin hacerle decir exactamente lo que nosotros pensamos.",
+            "Sus comentarios bíblicos permiten estudiar cómo razona ante un versículo. Yesod Mora examina los fundamentos y las razones de los mandamientos. Sefer ha Shem trata los nombres divinos mediante consideraciones sobre letras, números y lenguaje. Estos últimos temas requieren acompañamiento y contexto; una correspondencia numérica no explica por sí sola toda su teología. [8]",
+            "Para comenzar, conviene estudiar un comentario completo y comparar las razones que presenta. Después puede elegirse una obra temática. Este orden permite reconocer su vocabulario antes de abordar las alusiones que concentran varias ideas en pocas palabras.",
+            "Observemos durante unos minutos un árbol, la luz o el cielo. Describamos primero lo que vemos con precisión. Después anotemos qué pregunta despierta esa observación sobre nuestra vida. Podemos cerrar con una expresión de gratitud al Creador de todo. Este ejercicio es una creación editorial actual, inspirada en el interés por conocer y contemplar.",
+            "Pregunta para conversar: ¿qué aprendo cuando doy tiempo a observar antes de atribuir un significado?"
+          ],
+          "understand": "¿Qué afirma la fuente y qué aporta la reflexión de Dérej?",
+          "personal": "¿Qué pregunta de esta lectura quiero llevar a mi vida cotidiana?"
+        },
+        {
+          "title": "Los secretos y sus límites",
+          "source": "Estudio editorial de su obra y su contexto",
+          "summary": "Ibn Ezra escribe en ocasiones de forma enigmática y remite a asuntos que no desarrolla. Esas alusiones pueden involucrar exégesis, filosofía o concepciones astrales. La presencia de la palabra secreto no identifica automáticamente una enseñanza con el sistema de sefirot de la cábala posterior. [5, 8] La interpretación requiere localizar el comentario completo, revisar pasajes paralelos y distinguir las palabras del autor de las explicaciones de sus lectores. Si varias reconstrucciones resultan posibles, corresponde conservar esa incertidumbre.",
+          "reflection": [
+            "Una de las discusiones más conocidas se relaciona con sus comentarios a Deuteronomio 1 y 34 y con la posibilidad de que ciertos versículos fueran escritos después de Moisés. Las observaciones de Ibn Ezra influyeron en debates posteriores sobre la composición de la Torá. [5, 9]",
+            "El investigador Eran Viezel advierte que la semejanza entre algunas conclusiones medievales y modernas no elimina sus distintos puntos de partida. Ibn Ezra debe estudiarse dentro de la interpretación judía tradicional de su tiempo; identificarlo directamente con un investigador bíblico moderno puede deformar su posición. [9]",
+            "Propuesta editorial. Al presentar una enseñanza, indiquemos si se trata de una paráfrasis de Ibn Ezra, una interpretación de otro autor o una reflexión nuestra. Cuando haya una controversia, expliquemos al menos qué se discute y por qué importa. La claridad de estas atribuciones permite que el lector pueda volver a la fuente.",
+            "Por ejemplo, una visualización sobre luz y conciencia puede ser valiosa como experiencia creativa, pero necesitaría presentarse con ese carácter. Para atribuirla a Ibn Ezra haría falta encontrar un pasaje que realmente la sostenga. El interés espiritual del ejercicio y la precisión de la atribución son responsabilidades diferentes.",
+            "Pregunta para conversar: ¿qué afirmaciones puedo sostener con una fuente y cuáles debo ofrecer como una interpretación abierta?"
+          ],
+          "understand": "¿Qué afirma la fuente y qué aporta la reflexión de Dérej?",
+          "personal": "¿Qué pregunta de esta lectura quiero llevar a mi vida cotidiana?"
+        }
+      ],
+      "readingIntro": "Cinco lecturas del estudio de Editorial Dérej. Elige un tema para leer dentro de la aplicación; las reflexiones y prácticas actuales están identificadas como propuestas de Dérej.",
+      "sources": [
+        [
+          "1  Avigail Rock   R Avraham ibn Ezra Background   Torat Har Etzion",
+          "Fuente del estudio; síntesis en español en esta ficha",
+          "https://www.etzion.org.il/en/tanakh/studies-tanakh/biblical-commentaries/r-avraham-ibn-ezra-background",
+          "en"
+        ],
+        [
+          "2  Tamar M Rudavsky   Ibn Ezra   Biographical Encyclopedia of Astronomers   ISMI",
+          "Fuente del estudio; síntesis en español en esta ficha",
+          "https://ismi.mpiwg-berlin.mpg.de/biography/Ibn_Ezra_BEA.htm",
+          "en"
+        ],
+        [
+          "3  Ibn Ezra on Genesis   Presentación del comentario   Sefaria",
+          "Fuente del estudio; síntesis en español en esta ficha",
+          "https://www.sefaria.org/Genesis.1.1?aliyot=0&lang2=en&lang3=bi&p2=Ibn_Ezra_on_Genesis.1.1.1&w2=About",
+          "en"
+        ],
+        [
+          "4  Ibn Ezra   Comentario a Génesis 1 1   Texto y notas de traducción",
+          "Fuente del estudio; síntesis en español en esta ficha",
+          "https://www.sefaria.org/Genesis.1.1?lang2=en&with=Ibn+Ezra",
+          "en"
+        ],
+        [
+          "5  Avigail Rock   His Approach to Midrash and the Secrets in his Commentary",
+          "Fuente del estudio; síntesis en español en esta ficha",
+          "https://etzion.org.il/en/tanakh/studies-tanakh/biblical-commentaries/rabbi-avraham-ibn-ezra-c-his-approach-midrash-and",
+          "en"
+        ],
+        [
+          "6  Ibn Ezra   Comentario largo a Éxodo 20 14   Sefaria",
+          "Fuente del estudio; síntesis en español en esta ficha",
+          "https://www.sefaria.org/Ibn_Ezra_on_Exodus.20.14/",
+          "en"
+        ],
+        [
+          "7  Michael Hattin   Nitzavim Vayelekh Service of the Heart   Comentario a Dt 30 14",
+          "Fuente del estudio; síntesis en español en esta ficha",
+          "https://etzion.org.il/en/tanakh/torah/sefer-devarim/parashat-nitzavim/nitzavim-vayelekh-service-heart",
+          "en"
+        ],
+        [
+          "8  Y Tzvi Langermann   Abraham Ibn Ezra   Stanford Encyclopedia of Philosophy",
+          "Fuente del estudio; síntesis en español en esta ficha",
+          "https://plato.stanford.edu/entries/ibn-ezra/",
+          "en"
+        ],
+        [
+          "9  Eran Viezel   Abraham Ibn Ezras Account of the Composition of the Torah   2023",
+          "Fuente del estudio; síntesis en español en esta ficha",
+          "https://cris.bgu.ac.il/en/publications/abraham-ibn-ezras-account-of-the-composition-of-the-torah-a-medie/",
+          "en"
+        ]
+      ]
     }
   }
 };

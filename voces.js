@@ -4,7 +4,7 @@
  const root=document.getElementById('vocesRoot'),screen=root?.closest('[data-screen]'),content=window.DEREJ_VOCES_CONTENT;
  if(!root||!screen||!content?.profiles)return;
  const people=content.profiles,order=content.order;
- const aliases={sacks:'sacks',jonathansacks:'sacks',zacks:'sacks',hilel:'hilel',hillel:'hilel',hilelelanciano:'hilel',rambam:'rambam',ramak:'ramak',ramjal:'ramjal',rabinajman:'najman',najman:'najman',rashi:'rashi',baalshemtov:'baalshemtov',besht:'baalshemtov'};
+ const aliases={ibnezra:'ibnezra',abrahamibnezra:'ibnezra',abenezra:'ibnezra',sacks:'sacks',jonathansacks:'sacks',zacks:'sacks',hilel:'hilel',hillel:'hilel',hilelelanciano:'hilel',rambam:'rambam',ramak:'ramak',ramjal:'ramjal',rabinajman:'najman',najman:'najman',rashi:'rashi',baalshemtov:'baalshemtov',besht:'baalshemtov'};
  const norm=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z]/g,'');
  const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const clean=s=>String(s||'').replace(/\s*\[D[1-5]\]/g,'');
@@ -65,4 +65,5 @@
 })();
 
 undefined
+
 
