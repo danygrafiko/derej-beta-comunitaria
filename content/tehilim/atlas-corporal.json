@@ -1,5 +1,5 @@
 {
-  "version": "2026-10-30.2",
+  "version": "2026-10-30.4",
   "title": "Tehilim · Atlas contemplativo del cuerpo",
   "subtitle": "Elegir una región, leer con sentido, cuidar la vida",
   "intro": "El atlas propone correspondencias temáticas para la contemplación. No es un mapa médico ni un repertorio de salmos curativos tradicionales por órgano.",
@@ -20,7 +20,21 @@
         "¿Qué pensamiento me está agotando?",
         "¿Qué ayuda concreta puedo pedir?"
       ],
-      "action": "Hacer una pausa, reconocer una preocupación y compartirla con alguien de confianza."
+      "action": "Hacer una pausa, reconocer una preocupación y compartirla con alguien de confianza.",
+      "curaduria": {
+        "pasaje": "Salmo 94:19",
+        "lecturaLiteral": "El versículo habla de pensamientos inquietantes y consuelo; no menciona cefaleas ni enfermedades neurológicas.",
+        "fuenteYLimites": "La relación con la cabeza nace de la experiencia cotidiana de pensar, no de una doctrina rabínica sobre órganos.",
+        "contexto": "El tema del Salmo 94 es la justicia frente a la arrogancia. La consolación no borra la exigencia ética de defender a quienes sufren.",
+        "practica": "Distinguir entre un pensamiento insistente y una acción posible; pedir ayuda si la angustia persiste.",
+        "tipoVinculo": "aplicación temática editorial, no asignación médica ni fórmula tradicional de sanación",
+        "fuentes": [
+          {
+            "label": "Texto del Salmo 94",
+            "url": "https://www.sefaria.org/Psalms.94"
+          }
+        ]
+      }
     },
     {
       "id": "ojos",
@@ -38,7 +52,21 @@
         "¿Qué no estoy logrando ver con claridad?",
         "¿Cómo puedo mirar a otro con más compasión?"
       ],
-      "action": "Leer despacio un pasaje y anotar una nueva perspectiva."
+      "action": "Leer despacio un pasaje y anotar una nueva perspectiva.",
+      "curaduria": {
+        "pasaje": "Salmo 119:18",
+        "lecturaLiteral": "La apertura de los ojos es una metáfora de comprensión de la Torá; no alude a recuperación oftalmológica.",
+        "fuenteYLimites": "En el Salmo 119, el aprendizaje se expresa como atención constante a la enseñanza.",
+        "contexto": "La imagen no permite inferir que los ojos sean una puerta cabalística específica para sanar la visión.",
+        "practica": "Leer el versículo junto al contexto de 119:17–24 y anotar una enseñanza.",
+        "tipoVinculo": "aplicación temática editorial, no asignación médica ni fórmula tradicional de sanación",
+        "fuentes": [
+          {
+            "label": "Texto del Salmo 119",
+            "url": "https://www.sefaria.org/Psalms.119"
+          }
+        ]
+      }
     },
     {
       "id": "oidos",
@@ -56,7 +84,21 @@
         "¿A quién necesito escuchar sin interrumpir?",
         "¿Qué voz interior he desatendido?"
       ],
-      "action": "Dedicar unos minutos a escuchar atentamente a otra persona."
+      "action": "Dedicar unos minutos a escuchar atentamente a otra persona.",
+      "curaduria": {
+        "pasaje": "Salmo 116:1–2",
+        "lecturaLiteral": "El poeta celebra que su súplica fue escuchada; no trata la audición humana.",
+        "fuenteYLimites": "El texto propone una relación de escucha y gratitud, no un remedio para oídos.",
+        "contexto": "Evitar confundir lenguaje antropomórfico de escucha divina con una anatomía mística literal.",
+        "practica": "Escuchar a alguien sin interrumpir durante unos minutos.",
+        "tipoVinculo": "aplicación temática editorial, no asignación médica ni fórmula tradicional de sanación",
+        "fuentes": [
+          {
+            "label": "Texto del Salmo 40",
+            "url": "https://www.sefaria.org/Psalms.40"
+          }
+        ]
+      }
     },
     {
       "id": "boca",
@@ -74,7 +116,21 @@
         "¿Qué palabra debería cuidar hoy?",
         "¿Qué silencio puede ser más compasivo?"
       ],
-      "action": "Elegir una conversación para practicar un lenguaje cuidadoso."
+      "action": "Elegir una conversación para practicar un lenguaje cuidadoso.",
+      "curaduria": {
+        "pasaje": "Salmo 141:3",
+        "lecturaLiteral": "La guarda de la boca es una petición de autocontrol ético del habla.",
+        "fuenteYLimites": "La asociación entre boca y Malkhut aparece en Pataj Eliyahu; es simbólica, no terapéutica.",
+        "contexto": "Distinguir la fuente cabalística (Malkhut y boca) de la elección editorial de Salmos 141, 19 y 51.",
+        "practica": "Revisar un mensaje antes de enviarlo y retirar expresiones dañinas.",
+        "tipoVinculo": "aplicación temática editorial, no asignación médica ni fórmula tradicional de sanación",
+        "fuentes": [
+          {
+            "label": "Texto del Salmo 141",
+            "url": "https://www.sefaria.org/Psalms.141"
+          }
+        ]
+      }
     },
     {
       "id": "corazon",
@@ -92,7 +148,21 @@
         "¿Qué emoción necesita ser acogida?",
         "¿Cómo puedo acompañar a alguien que sufre?"
       ],
-      "action": "Enviar un mensaje de acompañamiento o pedir compañía."
+      "action": "Enviar un mensaje de acompañamiento o pedir compañía.",
+      "curaduria": {
+        "pasaje": "Salmo 147:3",
+        "lecturaLiteral": "La expresión 'quebrantados de corazón' designa sufrimiento y vulnerabilidad.",
+        "fuenteYLimites": "Pataj Eliyahu vincula Biná con el corazón en lenguaje simbólico; el Salmo 147 no formula esa correspondencia.",
+        "contexto": "El contexto une la reconstrucción de Jerusalén y la atención a personas heridas: restauración comunitaria y personal.",
+        "practica": "Visitar, llamar o acompañar a alguien sin prometer soluciones.",
+        "tipoVinculo": "aplicación temática editorial, no asignación médica ni fórmula tradicional de sanación",
+        "fuentes": [
+          {
+            "label": "Texto del Salmo 147",
+            "url": "https://www.sefaria.org/Psalms.147"
+          }
+        ]
+      }
     },
     {
       "id": "pecho",
@@ -110,7 +180,21 @@
         "¿Qué agradezco por estar vivo hoy?",
         "¿Qué situación requiere serenidad?"
       ],
-      "action": "Sentarse cómodamente y leer sin forzar ni retener la respiración."
+      "action": "Sentarse cómodamente y leer sin forzar ni retener la respiración.",
+      "curaduria": {
+        "pasaje": "Salmo 150:6",
+        "lecturaLiteral": "La alabanza de todo ser que respira celebra la vida, no describe una técnica respiratoria.",
+        "fuenteYLimites": "La respiración en el versículo es un símbolo de universalidad y alabanza.",
+        "contexto": "No asignar frecuencias, retenciones de aire ni prácticas respiratorias como prescripciones del texto.",
+        "practica": "Leer con respiración natural y sin ejercicios que produzcan malestar.",
+        "tipoVinculo": "aplicación temática editorial, no asignación médica ni fórmula tradicional de sanación",
+        "fuentes": [
+          {
+            "label": "Texto del Salmo 150",
+            "url": "https://www.sefaria.org/Psalms.150"
+          }
+        ]
+      }
     },
     {
       "id": "brazos",
@@ -128,7 +212,21 @@
         "¿Qué puedo construir o reparar hoy?",
         "¿A quién puedo ayudar con mis manos?"
       ],
-      "action": "Realizar una pequeña acción de servicio."
+      "action": "Realizar una pequeña acción de servicio.",
+      "curaduria": {
+        "pasaje": "Salmo 90:17",
+        "lecturaLiteral": "La 'obra de nuestras manos' se refiere al trabajo y sus frutos.",
+        "fuenteYLimites": "Pataj Eliyahu asocia Jésed con brazo derecho y Guevurá con izquierdo; no vincula específicamente el Salmo 90 a las extremidades.",
+        "contexto": "Las manos representan acción y responsabilidad, no una promesa de mejoría musculoesquelética.",
+        "practica": "Elegir una tarea pequeña que beneficie a otra persona.",
+        "tipoVinculo": "aplicación temática editorial, no asignación médica ni fórmula tradicional de sanación",
+        "fuentes": [
+          {
+            "label": "Texto del Salmo 90",
+            "url": "https://www.sefaria.org/Psalms.90"
+          }
+        ]
+      }
     },
     {
       "id": "espalda",
@@ -146,7 +244,21 @@
         "¿Qué carga estoy llevando solo?",
         "¿Quién puede ayudarme a sostenerla?"
       ],
-      "action": "Delegar o compartir una responsabilidad razonable."
+      "action": "Delegar o compartir una responsabilidad razonable.",
+      "curaduria": {
+        "pasaje": "Salmo 3:6",
+        "lecturaLiteral": "El sostén en el Salmo 3 es una imagen de confianza durante la amenaza.",
+        "fuenteYLimites": "La relación con espalda y carga es una analogía editorial contemporánea.",
+        "contexto": "La experiencia de cargar responsabilidades puede ser una puerta de reflexión, pero no explica el origen de un dolor físico.",
+        "practica": "Pedir colaboración para una responsabilidad concreta.",
+        "tipoVinculo": "aplicación temática editorial, no asignación médica ni fórmula tradicional de sanación",
+        "fuentes": [
+          {
+            "label": "Texto del Salmo 3",
+            "url": "https://www.sefaria.org/Psalms.3"
+          }
+        ]
+      }
     },
     {
       "id": "vientre",
@@ -164,7 +276,21 @@
         "¿Qué preocupación me cuesta expresar?",
         "¿Qué necesito para sentirme acompañado?"
       ],
-      "action": "Escribir una preocupación sin juzgarla y pedir apoyo si hace falta."
+      "action": "Escribir una preocupación sin juzgarla y pedir apoyo si hace falta.",
+      "curaduria": {
+        "pasaje": "Salmo 6:3–4",
+        "lecturaLiteral": "El Salmo 6 expresa temor y fragilidad mediante el cuerpo; no menciona un diagnóstico digestivo.",
+        "fuenteYLimites": "No hay correspondencia cabalística documentada en estas fuentes entre el vientre y estos tres Salmos.",
+        "contexto": "Es importante evitar atribuir síntomas físicos a angustia, pecado o falta de fe.",
+        "practica": "Reconocer una necesidad y consultar a profesionales cuando corresponda.",
+        "tipoVinculo": "aplicación temática editorial, no asignación médica ni fórmula tradicional de sanación",
+        "fuentes": [
+          {
+            "label": "Texto del Salmo 6",
+            "url": "https://www.sefaria.org/Psalms.6"
+          }
+        ]
+      }
     },
     {
       "id": "rodillas",
@@ -182,7 +308,21 @@
         "¿Dónde necesito sostén?",
         "¿Cuándo la perseverancia se vuelve rigidez?"
       ],
-      "action": "Reconocer un límite y aceptar ayuda sin culpa."
+      "action": "Reconocer un límite y aceptar ayuda sin culpa.",
+      "curaduria": {
+        "pasaje": "Salmo 18:37",
+        "lecturaLiteral": "El pasaje describe la seguridad del caminar después del rescate; no habla de una lesión de rodilla.",
+        "fuenteYLimites": "Pataj Eliyahu nombra conjuntamente Nétzaj y Hod como las dos piernas; no distingue rodilla derecha e izquierda ni asigna los Salmos 6, 18 y 147.",
+        "contexto": "La relación entre perseverancia, humildad y flexibilidad es una aplicación pedagógica de Dérej, claramente separada de la fuente.",
+        "practica": "Reconocer una limitación, buscar apoyo y seguir los cuidados indicados.",
+        "tipoVinculo": "aplicación temática editorial, no asignación médica ni fórmula tradicional de sanación",
+        "fuentes": [
+          {
+            "label": "Texto del Salmo 6",
+            "url": "https://www.sefaria.org/Psalms.6"
+          }
+        ]
+      }
     },
     {
       "id": "pies",
@@ -200,7 +340,21 @@
         "¿Qué decisión necesito iluminar?",
         "¿Cuál es el siguiente paso pequeño?"
       ],
-      "action": "Elegir una decisión concreta y escribir el primer paso posible."
+      "action": "Elegir una decisión concreta y escribir el primer paso posible.",
+      "curaduria": {
+        "pasaje": "Salmo 119:105",
+        "lecturaLiteral": "La lámpara para los pies expresa orientación ética mediante la enseñanza.",
+        "fuenteYLimites": "No es una indicación terapéutica para pies, marcha o tobillos.",
+        "contexto": "Leer también Salmo 121 para ampliar el motivo del viaje y la protección, sin confundir protección poética con ausencia de riesgo.",
+        "practica": "Escribir el siguiente paso prudente ante una decisión.",
+        "tipoVinculo": "aplicación temática editorial, no asignación médica ni fórmula tradicional de sanación",
+        "fuentes": [
+          {
+            "label": "Texto del Salmo 119",
+            "url": "https://www.sefaria.org/Psalms.119"
+          }
+        ]
+      }
     },
     {
       "id": "descanso",
@@ -218,7 +372,21 @@
         "¿Qué necesito soltar antes de dormir?",
         "¿Cómo puedo cuidar mi descanso?"
       ],
-      "action": "Cerrar la jornada con una gratitud y dejar pendientes por escrito."
+      "action": "Cerrar la jornada con una gratitud y dejar pendientes por escrito.",
+      "curaduria": {
+        "pasaje": "Salmo 4:9",
+        "lecturaLiteral": "La imagen de acostarse en paz pertenece al lenguaje de confianza.",
+        "fuenteYLimites": "El Salmo no establece un horario obligatorio ni trata trastornos del sueño.",
+        "contexto": "La lectura nocturna puede ser una elección personal; no se presenta como obligación universal ni sustituto de atención clínica.",
+        "practica": "Crear un cierre sereno de la jornada sin exigir resultados.",
+        "tipoVinculo": "aplicación temática editorial, no asignación médica ni fórmula tradicional de sanación",
+        "fuentes": [
+          {
+            "label": "Texto del Salmo 4",
+            "url": "https://www.sefaria.org/Psalms.4"
+          }
+        ]
+      }
     },
     {
       "id": "integral",
@@ -236,7 +404,21 @@
         "¿Qué parte de mí necesita más cuidado?",
         "¿Cómo honro mis límites corporales?"
       ],
-      "action": "Agradecer una capacidad del cuerpo y realizar una acción de autocuidado."
+      "action": "Agradecer una capacidad del cuerpo y realizar una acción de autocuidado.",
+      "curaduria": {
+        "pasaje": "Salmo 139:14",
+        "lecturaLiteral": "El poeta expresa asombro ante la propia formación y la mirada divina.",
+        "fuenteYLimites": "El Salmo 139 tiene versos complejos sobre conocimiento, límites y enemigos; no debe reducirse a una consigna de autoestima.",
+        "contexto": "La dignidad corporal es una aplicación ética; no se atribuye al texto una receta médica integral.",
+        "practica": "Identificar un cuidado cotidiano y agradecer sin negar las dificultades.",
+        "tipoVinculo": "aplicación temática editorial, no asignación médica ni fórmula tradicional de sanación",
+        "fuentes": [
+          {
+            "label": "Texto del Salmo 103",
+            "url": "https://www.sefaria.org/Psalms.103"
+          }
+        ]
+      }
     }
   ],
   "times": [
@@ -334,6 +516,14 @@
     {
       "label": "Salmo 147 · Restauración",
       "url": "https://www.sefaria.org/Psalms.147"
+    },
+    {
+      "label": "Pataj Eliyahu · texto con traducción y comentario (Jabad)",
+      "url": "https://www.chabad.org/kabbalah/article_cdo/aid/380333/jewish/Patach-Eliyahu.htm"
+    },
+    {
+      "label": "Shulján Aruj, Oraj Jaim 1:4 · intención en la oración",
+      "url": "https://www.sefaria.org/Shulchan_Arukh%2C_Orach_Chayim.1.4"
     }
   ],
   "timesEditorial": "No hay una regla universal en las fuentes clásicas que asigne una hora específica a cada Salmo para sanar un órgano. Shajarit, Minjá y Arvit son momentos de la liturgia judía, pero este atlas no presenta sus horarios como tratamientos.",
@@ -346,5 +536,48 @@
     "Pensar en alguien que necesita compañía.",
     "Convertir la reflexión en una acción concreta.",
     "Releer y compartir lo aprendido sin evaluar resultados médicos."
-  ]
+  ],
+  "editorialPolicy": {
+    "principles": [
+      "La palabra 'curación' en un Salmo se interpreta primero en su contexto literario e histórico.",
+      "No afirmar correspondencias anatómicas o sefiroticas sin una fuente primaria explícita.",
+      "No adjudicar enseñanzas a Rashi, Ibn Ezra, Radak o el Zóhar sin una referencia textual verificable.",
+      "Diferenciar oración, costumbre litúrgica, lectura contemporánea y medicina.",
+      "No recomendar horarios, frecuencias sonoras, números de repeticiones ni mantras como terapias.",
+      "No interpretar enfermedad o discapacidad como culpa, castigo o fracaso espiritual.",
+      "Mantener una puerta abierta a la lectura para no judíos sin presentar reinterpretaciones como halajá."
+    ],
+    "sourceLevels": [
+      {
+        "id": "biblico",
+        "name": "Texto bíblico",
+        "meaning": "Lo que el pasaje afirma en su contexto."
+      },
+      {
+        "id": "rabínico",
+        "name": "Fuente rabínica",
+        "meaning": "Enseñanza atribuible a un texto identificable."
+      },
+      {
+        "id": "cabalístico",
+        "name": "Correspondencia cabalística",
+        "meaning": "Simbolismo citado con fuente y alcance precisos."
+      },
+      {
+        "id": "editorial",
+        "name": "Contemplación Dérej",
+        "meaning": "Aplicación moderna explícita, sin atribución tradicional."
+      }
+    ]
+  },
+  "horariosCurados": {
+    "principio": "El horario personal no es un tratamiento y no sustituye la oración litúrgica judía.",
+    "liturgia": "Shajarit, Minjá y Arvit son marcos de oración judía con horarios propios. El atlas no impone esos tiempos a toda persona ni vincula un Salmo a un órgano por la hora.",
+    "tradicion": "Algunas costumbres de recitación de Tehilim se organizan por días del mes, situaciones personales o comunidades. No constituyen una prescripción médica universal.",
+    "cita": "Shulján Aruj, Oraj Jaim 1:4 valora la súplica breve con intención; no establece el atlas corporal propuesto.",
+    "source": {
+      "label": "Shulján Aruj, Oraj Jaim 1:4",
+      "url": "https://www.sefaria.org/Shulchan_Arukh%2C_Orach_Chayim.1.4"
+    }
+  }
 }
