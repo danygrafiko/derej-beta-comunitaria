@@ -46,3 +46,8 @@
 .thAtlasMapCopy h3{font:normal clamp(1.35rem,3vw,1.9rem)/1.3 Georgia,serif;margin:10px 0}
 .thAtlasMapCopy p{line-height:1.7}
 @media(max-width:550px){.thAtlasMapLayout{grid-template-columns:1fr;padding:15px}.thAtlasMap{max-width:190px}.thAtlasMapCopy{order:-1}}
+
+.thAtlasControls{grid-template-columns:repeat(4,minmax(0,1fr))}
+.thAtlasControls input[type="time"]{width:100%;min-width:0;box-sizing:border-box;padding:12px;border-radius:11px;border:1px solid #c5c9b9;background:#fffaf0;color:#263e2d;font:inherit}
+@media(max-width:850px){.thAtlasControls{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:550px){.thAtlasControls{grid-template-columns:1fr}}
