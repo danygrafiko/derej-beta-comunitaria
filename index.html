@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="connection-reminders.css?v=3">
 <link rel="stylesheet" href="prelaunch-local.css?v=28.1">
 <link rel="stylesheet" href="pozo-learning.css?v=7">
+<link rel="stylesheet" href="tehilim-biblioteca.css?v=1">
 <link rel="stylesheet" href="analytics.css?v=2">
 <link rel="stylesheet" href="welcome.css?v=1">
 <link rel="stylesheet" href="midrash-es.css?v=27.2">
@@ -85,6 +86,38 @@
       <a href="?estudio=genealogias" data-genealogias-open>Explorar el árbol →</a>
     </section>
 
+    <section class="thEntry" aria-labelledby="thEntryTitle">
+      <small>TEHILIM · LOS 150 SALMOS</small>
+      <h2 id="thEntryTitle">Salmos para el camino</h2>
+      <p>Los cinco libros de Tehilim en una colección de estudio profundo, tradición y contemplación. Explora los 150 capítulos, los primeros estudios editoriales y un espacio dedicado al cuerpo y al alma.</p>
+      <button type="button" data-tehilim-open aria-expanded="false" aria-controls="tehilimExplorer">Explorar Tehilim →</button>
+    </section>
+    <section class="thExplorer" id="tehilimExplorer" hidden aria-label="Colección Tehilim">
+      <div class="thToolbar"><span class="thEyebrow">BIBLIOTECA · TEHILIM · תהילים</span><button id="thClose" type="button">Cerrar colección ×</button></div>
+      <button id="thBack" type="button" hidden>← Volver a los 150 Salmos</button>
+      <div id="thIndex">
+        <h2>Los 150 Salmos</h2>
+        <p class="thLead">Cinco libros, muchas voces: súplica, gratitud, justicia, restauración y alabanza.</p>
+        <p>Los 150 capítulos están indexados. Los estudios iniciales están señalados; el comentario exhaustivo de cada capítulo se publicará progresivamente.</p>
+        <div class="thActions"><button type="button" id="thBodyOpen">El cuerpo y el alma · Unidad 01</button><button type="button" id="thGlossaryOpen">Glosario hebreo</button></div>
+        <div class="thControls">
+          <input type="search" id="thSearch" placeholder="Buscar número, título o tema" aria-label="Buscar Salmos">
+          <div class="thBookFilters" role="group" aria-label="Filtrar los cinco libros">
+            <button type="button" data-th-book="0" class="active" aria-pressed="true">Todos</button>
+            <button type="button" data-th-book="1" aria-pressed="false">I · 1–41</button>
+            <button type="button" data-th-book="2" aria-pressed="false">II · 42–72</button>
+            <button type="button" data-th-book="3" aria-pressed="false">III · 73–89</button>
+            <button type="button" data-th-book="4" aria-pressed="false">IV · 90–106</button>
+            <button type="button" data-th-book="5" aria-pressed="false">V · 107–150</button>
+          </div>
+        </div>
+        <p id="thCount" class="thStatus">Preparando índice…</p>
+        <div id="thGrid" class="thGrid" aria-live="polite"></div>
+      </div>
+      <article id="thStudy" class="thStudyBody" hidden><div id="thStudyContent"></div></article>
+      <article id="thBody" class="thStudyBody" hidden><div id="thBodyContent"></div></article>
+      <article id="thGlossary" class="thStudyBody" hidden><div id="thGlossaryContent"></div></article>
+    </section>
     <section class="prLibrary" aria-labelledby="prLibraryTitle">
       <small class="prEyebrow">EL PASAJE · SUS VOCES · SUS PERSONAJES</small>
       <h2 id="prLibraryTitle">Profundizar en Vayerá</h2>
@@ -348,6 +381,7 @@
 <script src="portal-navigation.js?v=1"></script>
 <script src="autoestima-content.js?v=1"></script>
 <script src="autoestima.js?v=1"></script>
+<script src="tehilim-biblioteca.js?v=1"></script>
 </body>
 </html>
 
