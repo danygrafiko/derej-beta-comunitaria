@@ -29,6 +29,7 @@
 <link rel="stylesheet" href="genealogias.css?v=3">
 <link rel="stylesheet" href="profundizar-vayera.css?v=1">
 <link rel="stylesheet" href="portal-navigation.css?v=1">
+<link rel="stylesheet" href="autoestima.css?v=1">
 </head>
 <body>
 <main class="appShell">
@@ -89,6 +90,10 @@
       <h2 id="prLibraryTitle">Profundizar en Vayerá</h2>
       <p>Siete aliyot para explorar con calma. Abre el contexto, reconoce las fuentes y conoce a las personas del relato sin perder tu lugar.</p>
       <div><a class="prPrimary" href="?estudio=profundizar&amp;dia=1" data-pr-pilot>Comenzar la lectura →</a><button class="prSecondary" type="button" data-pr-saved>Mis lecturas guardadas</button></div>
+    </section>
+    <section class="aeEntry" aria-labelledby="autoestimaEntryTitle">
+      <div><small>PARA TODO TIEMPO · EDITORIAL DÉREJ</small><h2 id="autoestimaEntryTitle">Autoestima y dignidad</h2><p>Mirarnos con verdad y aprender a cuidarnos. Un estudio profundo con fuentes judías, reflexión personal y prácticas para siete días.</p><span>Lectura por capítulos · Para estudiar a tu ritmo</span></div>
+      <a href="?puerta=autoestima" data-route="autoestima">Abrir el estudio →</a>
     </section>
       <p class="bibliotecaClosing">Elige una lectura. Quédate con una pregunta. Llévala a tu vida.</p>
     </div>
@@ -284,6 +289,14 @@
 </div>
 <p class="r-status" id="r-status">Toca un nombre para leer su historia o + para abrir sus descendientes.</p>
 <details class="r-editorial"><summary>Cómo leer este árbol · Fuentes y alcance</summary><p>Una selección de 176 personajes: la línea de Shet desde Adam, las familias de Abraham, Israel, David y los reyes de Judá, hasta los nietos de Zerubavel nombrados al comienzo de 1 Crónicas 3:21. No reúne todas las familias bíblicas.</p><p>Las conexiones representan parentescos expresados en los pasajes indicados; no equivalen al orden de sucesión en el trono. Los nombres y sus variantes conservan su referencia para distinguir personajes homónimos.</p><p>Las fichas son síntesis originales de Dérej. Las notas distinguen el texto bíblico, las interpretaciones tradicionales y las filiaciones que admiten lecturas distintas. El árbol no completa generaciones ausentes ni resuelve diferencias mediante parentescos supuestos.</p><p>Lecturas principales: Génesis 5, 11, 16, 21–25, 29–30, 35–36 y 48; Rut 4:12–22; 1 Crónicas 3; Ageo 1:1. Cada personaje incluye su pasaje.</p></details></section><div id="genealogyStudy" class="gsReader" hidden aria-labelledby="genealogyStudyTitle"></div></div></section>
+  <section class="screen aeScreen" data-screen="autoestima" hidden aria-labelledby="autoestimaTitle">
+    <div class="aeInner"><button type="button" class="aeBack" data-route="biblioteca">← Biblioteca</button>
+      <header class="aeHero"><p class="aeEyebrow">PARA TODO TIEMPO · EDITORIAL DÉREJ</p><h1 id="autoestimaTitle" tabindex="-1">Autoestima y dignidad</h1><p>Mirarnos con verdad y aprender a cuidarnos.</p><span>Fuentes judías · Reflexión · Vida cotidiana</span></header>
+      <nav class="aeShortcuts" aria-label="Recorridos del estudio"><button type="button" data-ae-chapter="inicio">Estudio</button><button type="button" data-ae-chapter="14">Siete días</button><button type="button" data-ae-chapter="13">Práctica personal</button><button type="button" data-ae-chapter="fuentes">Fuentes</button></nav>
+      <div class="aeLayout"><aside class="aeIndex"><details id="aeIndexDetails"><summary>Elegir un capítulo <span id="aeIndexCount"></span></summary><nav id="aeChapters" aria-label="Capítulos del estudio"></nav></details></aside>
+      <div class="aePaper"><p class="aePosition" id="aePosition"></p><article id="aeArticle" aria-labelledby="aeChapterTitle"></article><nav class="aePager" aria-label="Continuar el estudio"><button type="button" id="aePrevious">← Anterior</button><button type="button" id="aeNext">Siguiente →</button></nav><p id="aeStatus" role="status"></p></div></div>
+    </div>
+  </section>
 </main>
 <dialog id="metricsPrivacy" class="metricsPrivacy" aria-labelledby="metricsPrivacyTitle">
   <h2 id="metricsPrivacyTitle">Privacidad en Dérej</h2>
@@ -332,6 +345,8 @@
 <script src="genealogias-estudios.js?v=3"></script>
 <script src="profundizar-vayera.js?v=1"></script>
 <script src="portal-navigation.js?v=1"></script>
+<script src="autoestima-content.js?v=1"></script>
+<script src="autoestima.js?v=1"></script>
 </body>
 </html>
 
