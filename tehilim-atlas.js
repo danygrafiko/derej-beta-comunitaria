@@ -15,6 +15,7 @@ function render(){
  if(!data)return;
  const r=selectedRegion(),t=selectedTime();
  $('thAtlasRegion').value=regionId;$('thAtlasTime').value=timeId;$('thAtlasDuration').value=String(minutes);
+ panel.querySelectorAll('[data-th-region]').forEach(b=>{const active=b.dataset.thRegion===regionId;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));});
  $('thAtlasTheme').textContent=r.symbol;
  $('thAtlasAnchor').textContent=r.anchor;
  $('thAtlasPassage').textContent=r.passage;
@@ -68,6 +69,7 @@ async function open(){
  }catch(e){$('thAtlasLoad').textContent='No se pudo cargar el atlas. Cierra y vuelve a abrir la colección para reintentar.';}
 }
 $('thAtlasRegion').addEventListener('change',e=>{regionId=e.target.value;day=1;checked.clear();render();});
+panel.querySelectorAll('[data-th-region]').forEach(b=>b.addEventListener('click',()=>{regionId=b.dataset.thRegion;day=1;checked.clear();render();}));
 $('thAtlasTime').addEventListener('change',e=>{timeId=e.target.value;render();});
 $('thAtlasDuration').addEventListener('change',e=>{minutes=Number(e.target.value);render();});
 $('thAtlasDone').addEventListener('change',e=>{if(e.target.checked)checked.add(day);else checked.delete(day);render();});
