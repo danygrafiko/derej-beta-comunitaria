@@ -1,6 +1,6 @@
 /* Dérej · Colección editorial en español. Síntesis y aplicaciones identificadas. */
 window.DEREJ_VOCES_CONTENT={
-  "version": 4,
+  "version": 5,
   "order": [
     "rashi",
     "ramjal",
@@ -8,7 +8,8 @@ window.DEREJ_VOCES_CONTENT={
     "ramak",
     "baalshemtov",
     "najman",
-    "hilel"
+    "hilel",
+    "sacks"
   ],
   "profiles": {
     "rambam": {
@@ -634,6 +635,239 @@ window.DEREJ_VOCES_CONTENT={
         "personal": "¿Qué acción concreta puedo intentar hoy?",
         "note": "Síntesis y práctica editorial de Dérej. Las siete lecturas forman este estudio dentro de la ficha de Hilel. Puedes consultar sus fuentes y notas más abajo."
       }
+    },
+    "sacks": {
+      "id": "sacks",
+      "name": "Jonathan Sacks",
+      "full": "Rabino Jonathan Sacks",
+      "date": "1948–2020",
+      "sortYear": 1948,
+      "place": "Londres · Reino Unido",
+      "context": "Torá, ética y responsabilidad comunitaria",
+      "hook": "La esperanza, la escucha y el cuidado de una vida compartida.",
+      "question": "¿Qué responsabilidad me invita a asumir la vida?",
+      "life": [
+        "Jonathan Sacks fue rabino ortodoxo, filósofo y escritor. Nació en Londres en 1948 y ejerció como gran rabino de las United Hebrew Congregations de la Commonwealth entre 1991 y 2013. Falleció el 7 de noviembre de 2020, a los 72 años. [1]",
+        "Su pensamiento relaciona la tradición judía con preguntas contemporáneas sobre responsabilidad, convivencia y sentido. En Dérej lo estudiamos conservando ese contexto y distinguiendo sus enseñanzas de nuestras aplicaciones."
+      ],
+      "works": [
+        [
+          "Covenant & Conversation",
+          "Comentarios a la porción semanal de la Torá y una entrada a su interpretación ética."
+        ],
+        [
+          "To Heal a Fractured World",
+          "Una exploración de la ética de la responsabilidad."
+        ],
+        [
+          "The Dignity of Difference",
+          "Una reflexión sobre convivencia y diferencias religiosas."
+        ],
+        [
+          "Morality",
+          "La responsabilidad y el bien común en tiempos de división."
+        ],
+        [
+          "The Great Partnership",
+          "Ciencia, fe y búsqueda de sentido."
+        ]
+      ],
+      "source": "The Rabbi Sacks Legacy · Ensayos y obras",
+      "notes": "Estudio original de Dérej basado en fuentes primarias y el archivo oficial. [1] a [9] corresponden a las referencias del estudio. Los enlaces se identifican como fuentes originales en inglés; la lectura y las aplicaciones permanecen en español. Utilizamos Creador de todo en nuestra exposición editorial, sin presentarlo como cita literal del autor.",
+      "study": {
+        "title": "Conocer a Jonathan Sacks",
+        "source": "Estudio editorial Dérej · Referencias numeradas en Fuentes y notas de lectura",
+        "summary": "Nacido en Londres en 1948, Jonathan Sacks fue rabino ortodoxo, filósofo y escritor. Ejerció como gran rabino de las United Hebrew Congregations de la Commonwealth entre 1991 y 2013. Recibió el Premio Templeton en 2016 y falleció el 7 de noviembre de 2020, a los 72 años. Su obra incluye comentarios a la Torá, ensayos sobre ética y reflexiones dirigidas a públicos religiosos y seculares. [1]",
+        "reflection": [
+          "Su singularidad está en relacionar el estudio judío con las preguntas públicas de su tiempo. Para leerlo bien conviene mantener juntas esas dos dimensiones: su arraigo en el judaísmo y su voluntad de conversar con personas de otras convicciones. No hablamos de una espiritualidad desligada de su tradición, sino de un maestro que busca comunicar desde ella.",
+          "Cómo leer este estudio",
+          "Los apartados con referencias numéricas sintetizan fuentes identificadas al final. Las preguntas, ejercicios y aplicaciones expresamente señaladas como propuestas de Dérej son elaboración editorial propia. No son citas ni instrucciones originales de Sacks.",
+          "En nuestra exposición utilizamos Creador de todo conforme a la línea editorial de Dérej. Esta elección no pretende reproducir literalmente su vocabulario ni sustituir los nombres y conceptos del texto judío original. Estudiarlo desde una comunidad no judía requiere conservar ese contexto y escuchar antes de adaptar."
+        ],
+        "understand": "¿Qué afirma la fuente y qué pertenece a nuestra aplicación editorial?",
+        "personal": "¿Qué pregunta o acción pequeña te deja esta lectura?",
+        "note": "Síntesis en español. Las prácticas son propuestas de Dérej, no citas de Jonathan Sacks."
+      },
+      "readings": [
+        {
+          "title": "Conocer a Jonathan Sacks",
+          "source": "Estudio editorial Dérej · Referencias numeradas en Fuentes y notas de lectura",
+          "summary": "Nacido en Londres en 1948, Jonathan Sacks fue rabino ortodoxo, filósofo y escritor. Ejerció como gran rabino de las United Hebrew Congregations de la Commonwealth entre 1991 y 2013. Recibió el Premio Templeton en 2016 y falleció el 7 de noviembre de 2020, a los 72 años. Su obra incluye comentarios a la Torá, ensayos sobre ética y reflexiones dirigidas a públicos religiosos y seculares. [1]",
+          "reflection": [
+            "Su singularidad está en relacionar el estudio judío con las preguntas públicas de su tiempo. Para leerlo bien conviene mantener juntas esas dos dimensiones: su arraigo en el judaísmo y su voluntad de conversar con personas de otras convicciones. No hablamos de una espiritualidad desligada de su tradición, sino de un maestro que busca comunicar desde ella.",
+            "Cómo leer este estudio",
+            "Los apartados con referencias numéricas sintetizan fuentes identificadas al final. Las preguntas, ejercicios y aplicaciones expresamente señaladas como propuestas de Dérej son elaboración editorial propia. No son citas ni instrucciones originales de Sacks.",
+            "En nuestra exposición utilizamos Creador de todo conforme a la línea editorial de Dérej. Esta elección no pretende reproducir literalmente su vocabulario ni sustituir los nombres y conceptos del texto judío original. Estudiarlo desde una comunidad no judía requiere conservar ese contexto y escuchar antes de adaptar."
+          ],
+          "understand": "¿Qué afirma la fuente y qué pertenece a nuestra aplicación editorial?",
+          "personal": "¿Qué pregunta o acción pequeña te deja esta lectura?",
+          "note": "Síntesis en español. Las prácticas son propuestas de Dérej, no citas de Jonathan Sacks."
+        },
+        {
+          "title": "La responsabilidad hacia otros",
+          "source": "Estudio editorial Dérej · Referencias numeradas en Fuentes y notas de lectura",
+          "summary": "La responsabilidad que alcanza a otros",
+          "reflection": [
+            "En su comentario sobre Noaj, Sacks distingue la rectitud personal del liderazgo. Propone una lectura exigente: una persona puede conservar su integridad y, sin embargo, hacer poco por transformar su entorno. Relaciona los relatos de Adán y Eva, Caín y Noaj con fallas de responsabilidad personal, moral y colectiva. Presenta esta interpretación como una lectura posible, no como la única explicación del texto. [2]",
+            "El interrogante que deja es incómodo: ¿basta con estar a salvo cuando otros necesitan ayuda? En esta perspectiva, la vida moral incluye la disposición a hablar, intervenir y favorecer el bien común, incluso cuando el resultado es incierto. [2]",
+            "Aplicación Dérej. Pensemos en una persona nueva que llega a nuestra comunidad y permanece sola. Podemos celebrar nuestra buena convivencia sin advertir su aislamiento. La responsabilidad comienza al reconocer esa necesidad y ofrecer compañía, sin invadirla ni decidir por ella. El mismo criterio puede orientar a quien lidera un equipo: advertir a quién no se escucha y abrirle un espacio real."
+          ],
+          "understand": "¿Qué afirma la fuente y qué pertenece a nuestra aplicación editorial?",
+          "personal": "¿Qué pregunta o acción pequeña te deja esta lectura?",
+          "note": "Síntesis en español. Las prácticas son propuestas de Dérej, no citas de Jonathan Sacks."
+        },
+        {
+          "title": "La esperanza que nos compromete",
+          "source": "Estudio editorial Dérej · Referencias numeradas en Fuentes y notas de lectura",
+          "summary": "Sacks distingue el optimismo, entendido como expectativa de que el mundo mejorará, de la esperanza, que compromete nuestra participación para mejorarlo. La esperanza necesita valentía porque reconoce dificultades y aun así sostiene la posibilidad de responder. [3]",
+          "reflection": [
+            "No se trata de atribuir a la persona control sobre todo lo que ocurre. La distinción permite reconocer el espacio de acción que sí existe. Esa es nuestra lectura práctica: una llamada, una reparación o un compromiso pequeño pueden dar forma a una esperanza que de otro modo quedaría en deseo.",
+            "Para conversar",
+            "¿Qué necesidad hemos aprendido a considerar problema de otro? ¿Qué esperamos que cambie sin haber ofrecido todavía nuestra participación? Cada persona puede nombrar una acción acotada y realizable durante esta semana. Conviene precisar a quién beneficiará y cuándo podremos cumplirla."
+          ],
+          "understand": "¿Qué afirma la fuente y qué pertenece a nuestra aplicación editorial?",
+          "personal": "¿Qué pregunta o acción pequeña te deja esta lectura?",
+          "note": "Síntesis en español. Las prácticas son propuestas de Dérej, no citas de Jonathan Sacks."
+        },
+        {
+          "title": "El pacto y la dignidad de la diferencia",
+          "source": "Estudio editorial Dérej · Referencias numeradas en Fuentes y notas de lectura",
+          "summary": "Relaciones que construyen un nosotros",
+          "reflection": [
+            "Sacks distingue entre contrato y pacto. En su explicación, el contrato permite un intercambio de beneficios; el pacto crea una relación de confianza, fidelidad y responsabilidad recíproca. Quienes participan se comprometen a realizar juntos algo que no alcanzarían por separado. Es una idea central para comprender su visión de la comunidad. [4]",
+            "El pacto no elimina la individualidad. Su fuerza depende de reconocer la dignidad e integridad de cada participante. El vínculo compartido puede pedir esfuerzo y continuidad, pero no autoriza a tratar a la otra persona como un instrumento de nuestros propósitos. [4]",
+            "Aplicación Dérej. Una comunidad puede revisar sus compromisos preguntando cómo recibe, acompaña y cuida. Proponemos explicitar acuerdos sencillos: respetar la confidencialidad, distribuir tareas y permitir disentir. La reciprocidad también implica que nadie tenga que sostener todas las necesidades del grupo.",
+            "Convivir con convicciones diferentes",
+            "En su intervención sobre The Dignity of Difference, Sacks examina cómo las tradiciones religiosas pueden contribuir a la convivencia. Su preocupación es que las diferencias no se conviertan en fuentes de enfrentamiento. Propone trabajar desde los propios textos y compromisos religiosos para abrir caminos de paz y colaboración. [5]",
+            "La lectura editorial que adoptamos en Dérej es esta: podemos mantener nuestras convicciones y reconocer que otra persona merece ser escuchada. Respetar su dignidad no exige afirmar que todas las ideas son equivalentes. Exige examinar las diferencias sin humillar a quien las sostiene.",
+            "Para conversar",
+            "¿Qué diferencia nos cuesta escuchar sin defendernos de inmediato? ¿En qué momento hemos confundido cuidar una convicción con descalificar a alguien? Propongamos una tarea de servicio que podamos compartir con personas que no creen o no interpretan como nosotros. El objetivo del ejercicio es aprender cooperación concreta, sin exigir uniformidad."
+          ],
+          "understand": "¿Qué afirma la fuente y qué pertenece a nuestra aplicación editorial?",
+          "personal": "¿Qué pregunta o acción pequeña te deja esta lectura?",
+          "note": "Síntesis en español. Las prácticas son propuestas de Dérej, no citas de Jonathan Sacks."
+        },
+        {
+          "title": "La escucha y la lectura de la Torá",
+          "source": "Estudio editorial Dérej · Referencias numeradas en Fuentes y notas de lectura",
+          "summary": "Escuchar implica una respuesta",
+          "reflection": [
+            "En The Spirituality of Listening, Sacks desarrolla la riqueza de shemá, término que relaciona con oír, prestar atención, comprender, interiorizar y responder. Lo presenta como una clave de Devarim, el Deuteronomio. La escucha expresa una relación en la que lo oído puede transformar a quien escucha. [6]",
+            "Su exposición contrasta las imágenes visuales del conocimiento con el encuentro que ocurre mediante la palabra. Conviene recibir esa comparación como un recurso de su argumentación, sin convertirla en una descripción exhaustiva de todas las culturas. La idea práctica es fecunda: escuchar a alguien requiere involucrarse en su presencia, no limitarse a observarlo. [6]",
+            "Ejercicio Dérej de escucha",
+            "En parejas, una persona habla durante tres minutos sobre algo que le preocupa. La otra escucha sin preparar consejos. Luego expresa con sus propias palabras lo que entendió y pregunta si comprendió bien. Intercambian los roles. Antes de ofrecer una solución, cada participante puede preguntar qué tipo de ayuda necesita la otra persona.",
+            "Una lectura que interroga la vida",
+            "Covenant & Conversation, su serie de comentarios a la porción semanal de la Torá, constituye una parte importante de su legado. Sus ensayos permiten recorrer el texto bíblico y abrir preguntas éticas para el presente. [1]",
+            "En Dérej proponemos trabajar en tres momentos: Texto, Yo y Mundo. Primero identificamos qué dice el pasaje y qué pregunta formula Sacks. Después examinamos nuestra propia respuesta. Finalmente consideramos qué consecuencia tendría esa lectura en la convivencia. Esta estructura es una adaptación pedagógica de Dérej.",
+            "Discernimiento al interpretar",
+            "Es necesario distinguir el relato bíblico, los comentarios de la tradición, la interpretación de Sacks y nuestra aplicación. Una posibilidad interpretativa no debe presentarse como dato histórico demostrado. Tampoco debemos convertir una reflexión editorial en una frase supuestamente pronunciada por el maestro.",
+            "Pregunta de cierre. ¿Qué he escuchado hoy que merezca modificar una decisión mía?"
+          ],
+          "understand": "¿Qué afirma la fuente y qué pertenece a nuestra aplicación editorial?",
+          "personal": "¿Qué pregunta o acción pequeña te deja esta lectura?",
+          "note": "Síntesis en español. Las prácticas son propuestas de Dérej, no citas de Jonathan Sacks."
+        },
+        {
+          "title": "Jaye Sará y la construcción del futuro",
+          "source": "Estudio editorial Dérej · Referencias numeradas en Fuentes y notas de lectura",
+          "summary": "La pérdida y la continuidad",
+          "reflection": [
+            "En A Call from the Future, Sacks lee la conducta de Abraham tras la muerte de Sará. Después del duelo, Abraham atiende dos tareas: adquirir un lugar para sepultarla y buscar esposa para Isaac. Sacks relaciona esas acciones con las promesas de tierra y descendencia, y subraya la participación humana en su realización. [7]",
+            "Su interpretación presenta el futuro como una llamada que invita a asumir una tarea. Recordar el pasado puede acompañarse de la construcción de algo que continúe la vida. El relato abre así una pregunta sobre la vocación: qué responsabilidad se presenta ante nosotros y qué respuesta podemos ofrecer. [7]",
+            "Lectura cuidadosa desde Dérej",
+            "Esta enseñanza puede ayudarnos a pensar en el legado de una persona querida. No la convertimos en una exigencia de superar rápidamente una pérdida. El dolor tiene ritmos diversos; mantener proyectos y pedir compañía pueden coexistir con el llanto y la memoria. La actividad no mide el valor de quien atraviesa un duelo.",
+            "Para nuestra comunidad, la pregunta puede formularse con delicadeza: ¿qué bien recibido de alguien quisiéramos seguir cultivando? A veces la respuesta será cuidar a una persona, conservar una historia o sostener una costumbre familiar. También puede ser reservar un tiempo de silencio antes de decidir.",
+            "Estudio comunitario de Jaye Sará",
+            "Leer Génesis 23 y 24. Identificar qué decisiones aparecen en el relato y qué personas intervienen en ellas. Leer después el ensayo de Sacks y distinguir lo que el texto narra de la interpretación que el comentarista desarrolla.",
+            "Propuesta Dérej. Cada participante puede escribir tres líneas: algo recibido que desea agradecer, una responsabilidad presente y un pequeño bien que quiere transmitir. Compartir es opcional. No se pide revelar experiencias dolorosas para participar.",
+            "El vínculo con su legado",
+            "Estudiar a Sacks plantea la misma pregunta: qué hacemos con la sabiduría recibida. Conservar sus escritos tiene sentido junto con el trabajo de leerlos, discutirlos y dejar que orienten acciones responsables. Esta conclusión es nuestra síntesis editorial."
+          ],
+          "understand": "¿Qué afirma la fuente y qué pertenece a nuestra aplicación editorial?",
+          "personal": "¿Qué pregunta o acción pequeña te deja esta lectura?",
+          "note": "Síntesis en español. Las prácticas son propuestas de Dérej, no citas de Jonathan Sacks."
+        },
+        {
+          "title": "Su legado y un itinerario para estudiarlo",
+          "source": "Estudio editorial Dérej · Referencias numeradas en Fuentes y notas de lectura",
+          "summary": "Una ética para la vida compartida",
+          "reflection": [
+            "En Morality, Sacks cuestiona la prioridad del interés individual sobre el bien común. Sostiene que la libertad necesita responsabilidad y que ni el mercado ni el Estado bastan por sí solos para enseñar cómo vivir. Es una propuesta de filosofía moral y social que merece examinarse y discutirse, no una explicación única de todos los problemas contemporáneos. [8]",
+            "Su legado reúne enseñanza bíblica, pensamiento público y recursos de formación. La continuidad de sus comentarios y materiales educativos permite que nuevas generaciones dialoguen con sus preguntas. Para Dérej, ese diálogo puede ofrecer una formación espiritual que incluya compromisos de convivencia.",
+            "Un recorrido de lectura",
+            "Comenzar con Righteousness is not Leadership para examinar la responsabilidad. Continuar con The Spirituality of Listening y practicar una conversación atenta. Leer A Call from the Future para trabajar la relación entre memoria, vocación y continuidad. Los enlaces completos se encuentran en las fuentes.",
+            "Para profundizar, el catálogo oficial permite ubicar To Heal a Fractured World sobre responsabilidad, The Dignity of Difference sobre convivencia, Morality sobre el bien común y The Great Partnership sobre ciencia, fe y sentido. Son orientaciones temáticas a partir del catálogo; este estudio no reemplaza una lectura completa de esas obras. [9]",
+            "Cuatro encuentros propuestos por Dérej",
+            "Encuentro 1. Responsabilidad. Leer el comentario de Noaj y elegir una necesidad cercana que podamos atender.",
+            "Encuentro 2. Escucha. Estudiar shemá en el ensayo de Sacks y realizar el ejercicio en parejas.",
+            "Encuentro 3. Comunidad. Comparar contrato y pacto; revisar un compromiso compartido que necesite cuidado.",
+            "Encuentro 4. Legado. Leer Jaye Sará; conversar sobre lo que hemos recibido y queremos transmitir.",
+            "Cada encuentro puede durar una hora, con lectura previa. Reservar tiempo para preguntas que no alcancen una respuesta inmediata.",
+            "Una pregunta para llevar",
+            "Propuesta editorial Dérej. Al terminar el recorrido, cada persona puede preguntarse qué cambiará en su trato con alguien concreto. La comprensión se hace visible cuando el estudio mejora nuestra capacidad de escuchar, cuidar y responder."
+          ],
+          "understand": "¿Qué afirma la fuente y qué pertenece a nuestra aplicación editorial?",
+          "personal": "¿Qué pregunta o acción pequeña te deja esta lectura?",
+          "note": "Síntesis en español. Las prácticas son propuestas de Dérej, no citas de Jonathan Sacks."
+        }
+      ],
+      "sources": [
+        [
+          "[1] The Rabbi Sacks Legacy. A Biography of Rabbi Jonathan Sacks.",
+          "Fuente original en inglés",
+          "https://rabbisacks.org/life-of-rabbi-jonathan-sacks/biography/",
+          "en"
+        ],
+        [
+          "[2] Jonathan Sacks. Righteousness is not Leadership. Noaj, Covenant & Conversation.",
+          "Fuente original en inglés",
+          "https://rabbisacks.org/covenant-conversation/noach/righteousness-is-not-leadership-noach-5774/",
+          "en"
+        ],
+        [
+          "[3] Jonathan Sacks. Optimism and Hope. Extracto de To Heal a Fractured World, p. 166, reproducido en el archivo oficial.",
+          "Fuente original en inglés",
+          "https://rabbisacks.org/quotes/optimism-and-hope/",
+          "en"
+        ],
+        [
+          "[4] Jonathan Sacks. Covenants Transform. Extracto de Morality, capítulo 23, p. 326, según el archivo oficial.",
+          "Fuente original en inglés",
+          "https://rabbisacks.org/quotes/covenants-transform/",
+          "en"
+        ],
+        [
+          "[5] Jonathan Sacks. The Dignity of Difference. Intervención y conversación en Carnegie Council, 1 de mayo de 2003.",
+          "Fuente original en inglés",
+          "https://www.carnegiecouncil.org/media/series/39/20030501-the-dignity-of-difference-how-to-avoid-the-clash-of-civilizations",
+          "en"
+        ],
+        [
+          "[6] Jonathan Sacks. The Spirituality of Listening. Eikev, Covenant & Conversation.",
+          "Fuente original en inglés",
+          "https://rabbisacks.org/covenant-conversation/eikev/the-spirituality-of-listening/",
+          "en"
+        ],
+        [
+          "[7] Jonathan Sacks. A Call from the Future. Jaye Sará, Covenant & Conversation.",
+          "Fuente original en inglés",
+          "https://rabbisacks.org/covenant-conversation/chayei-sarah/a-call-from-the-future/",
+          "en"
+        ],
+        [
+          "[8] The Rabbi Sacks Legacy. Morality Restoring the Common Good in Divided Times. Presentación e índice del libro.",
+          "Fuente original en inglés",
+          "https://rabbisacks.org/book-indexes/morality-restoring-the-common-good-in-divided-times/",
+          "en"
+        ],
+        [
+          "[9] The Rabbi Sacks Legacy. Book Indexes. Catálogo de obras e índices.",
+          "Fuente original en inglés",
+          "https://rabbisacks.org/book-indexes/",
+          "en"
+        ]
+      ],
+      "readingIntro": "Siete lecturas sobre su vida y su legado. Puedes elegir cualquiera y regresar a las fuentes al final de la ficha."
     }
   }
 };
