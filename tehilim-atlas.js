@@ -26,14 +26,9 @@ function render(){
  for(const n of r.psalms){
    const card=el('article',undefined,'thAtlasPsalmCard');
    card.append(el('strong','Salmo '+n));
-   const b=el('button','Abrir estudio en Dérej →');b.type='button';b.addEventListener('click',()=>{
-     const cardButton=root.querySelectorAll('.thPsalm');
-     const match=[...cardButton].find(x=>x.querySelector('.thPsalmNumber')?.textContent===String(n));
-     if(match){match.click();return;}
-     const a=card.querySelector('a');if(a)a.focus();
-   });
+   const b=el('button','Explorar en Dérej →');b.type='button';b.addEventListener('click',()=>window.DerejTehilimOpenPsalm?.(n));
    const a=safeLink('Leer texto bíblico ↗','https://www.sefaria.org/Psalms.'+n);
-   card.append(a);
+   card.append(b,a);
    ps.append(card);
  }
  const q=$('thAtlasQuestions');q.replaceChildren(...r.questions.map(x=>el('li',x)));
