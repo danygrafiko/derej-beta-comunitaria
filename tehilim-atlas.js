@@ -8,7 +8,7 @@ if(!root||!panel)return;
 const $=id=>panel.querySelector('#'+id);
 const el=(tag,txt,cls)=>{const n=document.createElement(tag);if(txt!==undefined)n.textContent=txt;if(cls)n.className=cls;return n;};
 const safeLink=(text,url)=>{const a=el('a',text);a.href=url;a.target='_blank';a.rel='noopener noreferrer';return a;};
-let data=null,regionId='rodillas',timeId='libre',minutes=10,day=1,checked=new Set();
+let data=null,regionId='rodillas',timeId='libre',minutes=10,clock='',day=1,checked=new Set();
 function selectedRegion(){return data.regions.find(x=>x.id===regionId)||data.regions[0];}
 function selectedTime(){return data.times.find(x=>x.id===timeId)||data.times[0];}
 function render(){
@@ -36,7 +36,7 @@ function render(){
  $('thAtlasAction').textContent=r.action;
  const guide=$('thAtlasGuide');guide.replaceChildren();
  const steps=data.durations.find(x=>x.minutes===minutes)?.steps||[];
- guide.append(el('h4','Tu lectura de '+minutes+' minutos · '+t.name));
+ guide.append(el('h4','Tu lectura de '+minutes+' minutos · '+t.name+(clock?' · '+clock:'')));
  const ul=el('ol');for(const s of steps)ul.append(el('li',s));guide.append(ul);
  guide.append(el('p','Este horario es una sugerencia de organización personal, no una indicación tradicional de sanación.','thAtlasFine'));
  const plan=$('thAtlasPlan');plan.replaceChildren();
@@ -72,6 +72,7 @@ $('thAtlasRegion').addEventListener('change',e=>{regionId=e.target.value;day=1;c
 panel.querySelectorAll('[data-th-region]').forEach(b=>b.addEventListener('click',()=>{regionId=b.dataset.thRegion;day=1;checked.clear();render();}));
 $('thAtlasTime').addEventListener('change',e=>{timeId=e.target.value;render();});
 $('thAtlasDuration').addEventListener('change',e=>{minutes=Number(e.target.value);render();});
+$('thAtlasClock').addEventListener('change',e=>{clock=e.target.value;render();});
 $('thAtlasDone').addEventListener('change',e=>{if(e.target.checked)checked.add(day);else checked.delete(day);render();});
 $('thAtlasClear').addEventListener('click',()=>{checked.clear();day=1;render();});
 window.DerejTehilimAtlas={open};
