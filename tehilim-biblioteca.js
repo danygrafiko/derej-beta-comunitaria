@@ -20,7 +20,7 @@
   $('thCount').textContent=items.length+' de 150 Salmos';
   for(const p of items){
    const b=document.createElement('button');b.type='button';b.className='thPsalm'+(p.study?' thPsalmReady':'');
-   b.append(block('span',String(p.number),'thPsalmNumber'),block('strong',p.title,'thPsalmName'),block('small',p.study?'Estudio inicial':'Pendiente de curaduría','thPsalmStatus'));
+   b.append(block('span',String(p.number),'thPsalmNumber'),block('strong',p.title,'thPsalmName'),block('small',p.study?'Estudio ampliado':'Guía temática','thPsalmStatus'));
    b.addEventListener('click',()=>renderStudy(p));grid.appendChild(b);
   }
   if(!items.length)grid.appendChild(block('p','No hay resultados para esta búsqueda.','thEmpty'));
@@ -31,6 +31,7 @@
  function renderStudy(p){
   const c=$('thStudyContent');c.replaceChildren();
   c.append(block('div','LIBRO '+p.book+' · SALMO '+p.number,'thEyebrow'),block('h2',p.title),block('p',p.study?.editorialStatus||'Este Salmo está indexado. Su estudio profundo aún no se ha publicado.','thStatus'));
+  if(p.guide){c.append(block('p','Guía editorial temática · no exégesis completa','thStatus'));}
   if(p.study){
    c.append(block('p',p.study.theme,'thLead'),block('p',p.study.summary));
    for(const s of p.study.sections||[])appendSection(c,s.title,s.body);
@@ -38,7 +39,9 @@
    c.append(block('h3','Preguntas comunitarias'));c.append(list(p.study.questions||[]));
    renderSources(c,p.study.sources);
   }else{
-   c.append(block('p','Este capítulo forma parte de la colección completa de Tehilim. Estamos preparando una lectura con texto hebreo, traducción, contexto, comentarios tradicionales, glosario y preguntas comunitarias.'));
+   c.append(block('p','Tema principal: '+(p.guide?.title||'Estudio en preparación')+'. Esta guía orienta la lectura del texto; todavía no constituye un comentario tradicional versículo por versículo.','thLead'));
+   c.append(block('h3','Para profundizar'),block('p','Lee el Salmo completo, observa sus cambios de voz, imágenes y contexto. Distingue la súplica, la alabanza, la sabiduría y las referencias históricas antes de aplicar el pasaje a una experiencia personal.'));
+   c.append(block('h3','Pregunta de estudio'),block('p','¿Qué expresa el poema en su contexto y cómo podría orientar una acción responsable hoy, sin atribuirle una promesa que no formula?'));
   }
   const pLink=block('p','');pLink.appendChild(link('Leer el texto del Salmo '+p.number+' ↗','https://www.sefaria.org/Psalms.'+p.number));c.append(pLink);
   showView('study');
@@ -79,8 +82,9 @@
   if(which==='atlas')window.DerejTehilimAtlas?.open();
   if(collection||loading)return;
   $('thCount').textContent='Cargando los Salmos…';
-  loading=fetch('content/tehilim/indice.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Índice no disponible');return r.json()}).then(d=>{
-   if(!Array.isArray(d.psalms)||d.psalms.length!==150)throw Error('Índice incompleto');
+  loading=Promise.all([fetch('content/tehilim/indice.json',{cache:'no-store'}),fetch('content/tehilim/guia-150.json',{cache:'no-store'})]).then(async([a,b])=>{if(!a.ok||!b.ok)throw Error('Colección no disponible');return [await a.json(),await b.json()]}).then(([d,g])=>{
+   if(!Array.isArray(d.psalms)||d.psalms.length!==150||!Array.isArray(g.psalms)||g.psalms.length!==150)throw Error('Índice incompleto');
+   for(const p of d.psalms){const guide=g.psalms[p.number-1];if(!guide||guide.number!==p.number)throw Error('Guía desordenada');p.guide=guide;if(!p.study)p.title=guide.title;}
    collection=d;renderIndex();
   }).catch(()=>{$('thCount').textContent='No fue posible cargar los Salmos. Cierra y vuelve a abrir para reintentar.';}).finally(()=>{loading=null;});
  }
