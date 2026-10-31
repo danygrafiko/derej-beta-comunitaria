@@ -14,7 +14,8 @@ module.exports = async function handler(req, res) {
   res.setHeader('Cache-Control', 'private, no-store');
   res.setHeader('X-Content-Type-Options', 'nosniff');
   const send = (status, data) => res.status(status).json(data);
-  const credential = process.env.AI_GATEWAY_API_KEY || process.env.VERCEL_OIDC_TOKEN;
+  // Vercel Functions receive a fresh platform-issued OIDC token on each request.
+  const credential = process.env.AI_GATEWAY_API_KEY || req.headers['x-vercel-oidc-token'] || process.env.VERCEL_OIDC_TOKEN;
   const enabled = process.env.DEREJ_AI_ENABLED !== '0' && !!credential;
   if (req.method === 'GET') return send(200, { enabled, version: 1 });
   if (req.method !== 'POST') { res.setHeader('Allow','GET, POST'); return send(405,{ error:'Método no permitido.' }); }
@@ -41,7 +42,9 @@ module.exports = async function handler(req, res) {
     });
     if (!response.ok) {
       // Do not log prompts, response bodies, credentials or IP addresses.
-      console.warn('derej_ai_gateway_status', response.status);
+      const failure = await response.json().catch(()=>({}));
+      const code = String(failure.error?.code || failure.error?.type || 'unavailable').replace(/[^a-z_]/gi,'').slice(0,70);
+      console.warn('derej_ai_gateway_status', response.status, code);
       return send(503,{code:'provider_unavailable',error:'La conexión de IA no está disponible ahora. Tu pregunta no se ha guardado en Dérej. Puedes intentarlo más tarde o consultar los estudios.'});
     }
     const data = await response.json();
