@@ -4,7 +4,7 @@
   const screen = document.querySelector('[data-screen="preguntas"]');
   if (!screen) return;
   const $ = id => screen.querySelector('#' + id);
-  let history = [], busy = false, available = true, context = '', studyTitle = '', controller = null;
+  let history = [], busy = false, available = false, context = '', studyTitle = '', controller = null;
   const questions = ['¿Qué diferencia hay entre Nétzaj y Hod?', '¿Cómo trabajar mi autoestima desde la dignidad?', '¿Qué propone Dérej para empezar a meditar?', '¿Cómo leer los Salmos relacionados con el cuerpo?'];
   function open(from = '', title = '') {
     context = from; studyTitle = title;
@@ -94,11 +94,31 @@
     const button=document.createElement('button'); button.type='button'; button.className='dqStudyEntry';
     button.dataset.dqOpen=''; button.dataset.dqContext='biblioteca'; button.textContent='✧ Preguntar sobre Tehilim'; tehilim.prepend(button);
   }
-  fetch('/api/preguntas',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(data=>{
-    if (data && !data.enabled) {
-      available=false; $('dqSend').disabled=true; $('dqConsent').disabled=true;
-      $('dqActivation').hidden=false;
-      notice('Las respuestas con IA están pendientes de activación. Mientras tanto, puedes explorar todos los estudios de la biblioteca.');
-    }
-  }).catch(()=>{});
+  async function checkAvailability(){
+    const activation=$('dqActivation');available=false;
+    $('dqForm').hidden=true;$('dqSuggestions').hidden=true;activation.hidden=false;
+    $('dqConsent').disabled=true;$('dqSend').disabled=true;
+    $('dqRetryAvailability').disabled=true;
+    activation.querySelector('strong').textContent='Comprobando disponibilidad…';
+    activation.querySelector('p').textContent='En un momento sabremos si puedes conversar con Dérej IA.';
+    notice('');
+    try{
+      const response=await fetch('/api/preguntas',{cache:'no-store',signal:AbortSignal.timeout(10000)});
+      if(!response.ok)throw Error('status');
+      const data=await response.json();if(typeof data.enabled!=='boolean')throw Error('status');
+      available=data.enabled;
+      $('dqForm').hidden=!available;$('dqSuggestions').hidden=!available;activation.hidden=available;
+      $('dqConsent').disabled=!available;$('dqSend').disabled=!available;
+      if(!available){
+        $('dqConsent').checked=false;
+        activation.querySelector('strong').textContent='La conversación con IA aún no está activada';
+        activation.querySelector('p').textContent='El formulario estará disponible cuando se habilite el servicio. Mientras tanto, puedes leer y explorar los estudios de Dérej.';
+      }
+    }catch{
+      activation.querySelector('strong').textContent='No pudimos comprobar la conexión';
+      activation.querySelector('p').textContent='Vuelve a comprobar la disponibilidad para abrir el formulario. Tu pregunta, si ya habías escrito una, permanece en esta pestaña.';
+    }finally{$('dqRetryAvailability').disabled=false;}
+  }
+  $('dqRetryAvailability').addEventListener('click',checkAvailability);
+  checkAvailability();
 })();
