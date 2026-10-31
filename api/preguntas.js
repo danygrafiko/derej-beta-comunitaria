@@ -16,7 +16,7 @@ module.exports = async function handler(req, res) {
   const send = (status, data) => res.status(status).json(data);
   // Vercel Functions receive a fresh platform-issued OIDC token on each request.
   const credential = process.env.AI_GATEWAY_API_KEY || req.headers['x-vercel-oidc-token'] || process.env.VERCEL_OIDC_TOKEN;
-  const enabled = process.env.DEREJ_AI_ENABLED !== '0' && !!credential;
+  const enabled = process.env.DEREJ_AI_ENABLED === '1' && !!credential;
   if (req.method === 'GET') return send(200, { enabled, version: 1 });
   if (req.method !== 'POST') { res.setHeader('Allow','GET, POST'); return send(405,{ error:'Método no permitido.' }); }
   if (req.headers.origin && req.headers.origin !== 'https://' + req.headers.host && !/^http:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(req.headers.origin)) return send(403,{ error:'Solicitud no permitida.' });

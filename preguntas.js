@@ -4,7 +4,7 @@
   const screen = document.querySelector('[data-screen="preguntas"]');
   if (!screen) return;
   const $ = id => screen.querySelector('#' + id);
-  let history = [], busy = false, context = '', studyTitle = '', controller = null;
+  let history = [], busy = false, available = true, context = '', studyTitle = '', controller = null;
   const questions = ['¿Qué diferencia hay entre Nétzaj y Hod?', '¿Cómo trabajar mi autoestima desde la dignidad?', '¿Qué propone Dérej para empezar a meditar?', '¿Cómo leer los Salmos relacionados con el cuerpo?'];
   function open(from = '', title = '') {
     context = from; studyTitle = title;
@@ -13,7 +13,8 @@
     route('preguntas'); $('dqQuestion').focus();
   }
   function busyState(value) {
-    busy = value; $('dqSend').disabled = value; $('dqQuestion').disabled = value;
+    busy = value; $('dqSend').disabled = value || !available; $('dqQuestion').disabled = value;
+    $('dqClear').disabled=value;
     $('dqStop').hidden = !value;
     screen.querySelectorAll('[data-dq-suggestion]').forEach(b => b.disabled = value);
     $('dqThread').setAttribute('aria-busy', String(value));
@@ -34,7 +35,7 @@
     }); return button;
   }
   async function ask(event) {
-    event.preventDefault(); if (busy) return;
+    event.preventDefault(); if (busy || !available) return;
     const question = $('dqQuestion').value.trim();
     if (!question) { $('dqQuestion').focus(); return; }
     if (!$('dqConsent').checked) { notice('Confirma el envío de tu pregunta para continuar.'); $('dqConsent').focus(); return; }
@@ -94,6 +95,10 @@
     button.dataset.dqOpen=''; button.dataset.dqContext='biblioteca'; button.textContent='✧ Preguntar sobre Tehilim'; tehilim.prepend(button);
   }
   fetch('/api/preguntas',{cache:'no-store'}).then(r=>r.ok?r.json():null).then(data=>{
-    if (data && !data.enabled) notice('El espacio está preparado. La conexión de IA está pendiente de activación.');
+    if (data && !data.enabled) {
+      available=false; $('dqSend').disabled=true; $('dqConsent').disabled=true;
+      $('dqActivation').hidden=false;
+      notice('Las respuestas con IA están pendientes de activación. Mientras tanto, puedes explorar todos los estudios de la biblioteca.');
+    }
   }).catch(()=>{});
 })();
