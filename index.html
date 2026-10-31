@@ -36,6 +36,7 @@
 <link rel="stylesheet" href="meditacion.css?v=1">
 <link rel="stylesheet" href="biblioteca-catalogo.css?v=3">
 <link rel="stylesheet" href="editorial-references.css?v=1">
+<link rel="stylesheet" href="preguntas.css?v=1">
 </head>
 <body>
 <main class="appShell">
@@ -77,6 +78,7 @@
     <div class="bibliotecaInner">
       <button type="button" class="bibliotecaBack" data-route="home">← Patio</button>
       <header class="bibliotecaIntro"><span>BEIT MIDRASH · CASA DE ESTUDIO</span><div class="bibliotecaBook" aria-hidden="true">✧</div><h1 id="bibliotecaTitle" tabindex="-1">Biblioteca</h1><p>Un lugar para leer con calma, conocer a nuestros sabios y volver a las fuentes.</p></header>
+    <aside class="dqLibraryEntry" aria-labelledby="dqEntryTitle"><div><small>UN ESPACIO PARA PREGUNTAR</small><h2 id="dqEntryTitle">Pregúntale a Dérej</h2><p>Conversa sobre nuestras lecturas. Explora una idea, encuentra sus fuentes y vuelve al estudio con una pregunta nueva.</p></div><button type="button" data-dq-open>Abrir conversación ↗</button></aside>
     <section class="npEntry" aria-labelledby="npEntryTitle">
       <div><span class="npEyebrow">BEIT MIDRASH · ESTUDIOS</span><h2 id="npEntryTitle">Nombres y presencia</h2><p>Leer los nombres del Creador en su contexto. Comprender, contemplar y responder en la vida.</p></div>
       <button type="button" data-nombres-open>Abrir el recorrido →</button>
@@ -442,12 +444,26 @@
       <div class="mdPaper"><p class="mdPosition" id="mdPosition"></p><button type="button" id="mdReturn" hidden>← Volver a la lectura</button><article id="mdArticle" aria-labelledby="mdChapterTitle"></article><nav class="mdPager" aria-label="Continuar el estudio"><button type="button" id="mdPrevious">← Anterior</button><button type="button" id="mdNext">Siguiente →</button></nav><p class="mdStatus" id="mdStatus" role="status" aria-live="polite"></p></div></div>
     </div>
   </section>
+  <section class="screen dqScreen" data-screen="preguntas" hidden aria-labelledby="dqTitle">
+    <div class="dqInner"><nav class="dqTop" aria-label="Conversación"><button type="button" class="dqBack" data-route="biblioteca">← Biblioteca</button><button type="button" id="dqClear" class="dqClear">Borrar conversación</button></nav>
+      <header class="dqHero"><p class="dqEyebrow">PREGÚNTALE A DÉREJ · ACOMPAÑANTE DE ESTUDIO</p><h1 id="dqTitle" tabindex="-1">Toda pregunta<br>abre un camino.</h1><p>Una conversación para comprender lo que leemos, explorar sus raíces y llevar una idea a la vida.</p></header>
+      <div id="dqContext" class="dqContext" hidden><span>Estás explorando · <strong id="dqContextLabel"></strong></span><button id="dqReturn" type="button">Volver al estudio ↗</button></div>
+      <div class="dqLayout"><div class="dqConversation"><div id="dqWelcome" class="dqWelcome"><h2>¿Por dónde quieres comenzar?</h2><div id="dqSuggestions" class="dqSuggestions"></div></div>
+        <div id="dqThread" role="log" aria-label="Conversación con Dérej IA" aria-live="polite" aria-relevant="additions"></div>
+        <form id="dqForm" class="dqForm"><label for="dqQuestion">Tu pregunta</label><textarea id="dqQuestion" name="question" maxlength="1200" required placeholder="Hay algo de esta lectura que quisiera comprender…" aria-describedby="dqPrivacy dqStatus" rows="3"></textarea>
+          <label class="dqConsent"><input type="checkbox" id="dqConsent" required><span id="dqPrivacy">Acepto enviar mi pregunta y los mensajes recientes de esta conversación al servicio de IA para preparar la respuesta. Evitaré incluir datos personales.</span></label>
+          <div class="dqFormActions"><button id="dqStop" class="dqStop" type="button" hidden>Detener</button><button id="dqSend" class="dqSend" type="submit">Preguntar a Dérej ↗</button></div>
+        </form><p id="dqStatus" class="dqStatus" role="status" aria-live="polite"></p>
+      </div><aside class="dqSidebar"><h2>Una lectura con raíces.</h2><p>Las respuestas parten de la colección preparada de Dérej: Salmos, Camino diario, Voces, meditación, autoestima, genealogías, Nombres y Árbol de la Vida.</p><ul><li>Revisa los pasajes utilizados en cada respuesta.</li><li>Distingue el texto, su interpretación y la reflexión editorial.</li><li>Si falta respaldo, Dérej debe reconocerlo. La IA puede equivocarse.</li></ul><p>La conversación vive en esta pestaña. Dérej no la publica ni la guarda en tu historial. Los servicios de IA y alojamiento pueden conservar registros según sus políticas.</p></aside></div>
+    </div>
+  </section>
 </main>
 <dialog id="metricsPrivacy" class="metricsPrivacy" aria-labelledby="metricsPrivacyTitle">
   <h2 id="metricsPrivacyTitle">Privacidad en Dérej</h2>
   <p>Tus reflexiones, textos e historial de avance se guardan en este navegador.</p>
   <p>Si activas «Mi momento diario», guardamos por separado la suscripción técnica del dispositivo, la hora, la zona horaria y la puerta elegida para enviar el recordatorio. Puedes desactivarlo desde esa opción. No se adjuntan tus reflexiones ni tu historial.</p>
   <p>Para mejorar el Camino contamos visitas, puertas abiertas —incluidos Árbol, Voces y Nombres—, tiempo visible, estudios iniciados, acciones de marcar un estudio como realizado y actividad de la radio. Usamos códigos aleatorios que cambian cada día, sin nombres ni correos. El registro de métricas no guarda tu dirección IP, lo que escribes, qué jornada elegiste ni tu historial personal de avance.</p>
+  <p>En «Pregúntale a Dérej», tu pregunta, los mensajes recientes y los pasajes recuperados se envían al servicio de IA solo cuando lo confirmas. Dérej no guarda ni publica la conversación; sus proveedores pueden conservar registros técnicos conforme a sus políticas.</p>
   <label><input type="checkbox" id="metricsConsent">Permitir métricas anónimas</label>
   <small>Puedes desactivarlas aquí cuando quieras. Esto no afecta al estudio ni a la radio. Los proveedores de alojamiento pueden conservar sus registros técnicos habituales.</small>
   <small id="metricsBrowserChoice" hidden>Tu navegador solicita no participar en el seguimiento. Respetamos esa preferencia y las métricas están desactivadas.</small>
@@ -498,7 +514,8 @@
 <script src="tehilim-biblioteca.js?v=curaduria-150-2"></script>
 <script src="tehilim-atlas.js?v=curaduria-13-2"></script>
 <script src="patriarcas-sefirot.js?v=1"></script>
-<script src="biblioteca-catalogo.js?v=4"></script>
+<script src="biblioteca-catalogo.js?v=5"></script>
+<script src="preguntas.js?v=1"></script>
 </body>
 </html>
 
