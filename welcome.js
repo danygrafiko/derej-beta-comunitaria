@@ -35,6 +35,7 @@
   function home(){write(INTRO_KEY,{completed:true});close();route('home');const title=document.getElementById('homeTitle');if(title){title.tabIndex=-1;title.focus({preventScroll:true});}}
   function entry(){
     dialog.innerHTML=frame('Bienvenido a Dérej','Hay un lugar para ti.','Un portal abierto a toda persona que quiera acercarse al Creador de todo, estudiar y aprender a amar a los demás.')+`<h2 class="welcomeQuestion">¿Es tu primera visita?</h2><div class="welcomeChoices"><article class="welcomeChoice"><div class="welcomeEyebrow">Comenzar</div><h2>Es mi primera vez</h2><p>Te acompañamos a conocer la casa y dar tu primer paso. No necesitas conocimientos previos.</p><button type="button" class="welcomePrimary" data-welcome="new">Conocer Dérej →</button></article><article class="welcomeChoice"><div class="welcomeEyebrow">Regresar</div><h2>Ya he estado aquí</h2><p>Qué bueno encontrarte de nuevo. Elige por dónde continuar hoy.</p><button type="button" class="welcomeSecondary" data-welcome="return">Volver a entrar →</button></article></div><div class="welcomePurpose"><p>Este portal no tiene objetivos religiosos ni persigue fines económicos.</p><p>Nos reúne el deseo de amarnos los unos a los otros. Para nosotros, todas las almas tienen el mismo valor ante el Creador.</p></div><p class="welcomeFoot"><button type="button" class="welcomeQuiet" data-welcome="skip">Entrar directamente al patio</button></p>`+statusMarkup();open();focusTitle();
+    const first=document.createElement('button');first.type='button';first.className='welcomePrimary firstWelcomeButton';first.dataset.welcome='first';first.textContent='Comenzar Primeros pasos →';dialog.querySelector('.welcomeChoice')?.append(first);
   }
   function returning(){
     const saved=getResume();
@@ -99,6 +100,7 @@
   activateRamakStep=function(...args){const value=previousStep.apply(this,args);remember();return value;};
   dialog.addEventListener('click',e=>{
     const action=e.target.closest('[data-welcome]')?.dataset.welcome;if(!action)return;
+    if(action==='first'){write(INTRO_KEY,{completed:true});close();route('primeros-pasos');return;}
     pending=null;
     if(action==='entry')entry();else if(action==='new'){guideStep=0;guide();}else if(action==='return')returning();else if(action==='skip')home();else if(action==='back'){if(guideStep===0)entry();else{guideStep--;guide();}}else if(action==='next'){if(guideStep===GUIDE.length-1)home();else{guideStep++;guide();}}else if(action==='study')enter('camino');else if(action==='radio')enter('radio');else if(action==='resume')enter('camino','resume');
   });
