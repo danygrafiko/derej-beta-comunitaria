@@ -4,7 +4,7 @@
   const screen = document.querySelector('[data-screen="preguntas"]');
   if (!screen) return;
   const $ = id => screen.querySelector('#' + id);
-  let history = [], busy = false, available = false, context = '', studyTitle = '', controller = null;
+  let history = [], busy = false, available = false, context = '', studyTitle = '', controller = null, responseTimeoutMs=35000;
   const questions = ['¿Qué diferencia hay entre Nétzaj y Hod?', '¿Cómo trabajar mi autoestima desde la dignidad?', '¿Qué propone Dérej para empezar a meditar?', '¿Cómo leer los Salmos relacionados con el cuerpo?'];
   function open(from = '', title = '') {
     context = from; studyTitle = title;
@@ -43,7 +43,7 @@
     const user = message('TÚ',question,'dqUser');
     busyState(true); notice('Buscando en los estudios y preparando una respuesta…');
     controller = new AbortController();
-    const timeout = setTimeout(() => controller?.abort(),35000);
+    const timeout = setTimeout(() => controller?.abort(),responseTimeoutMs);
     try {
       const response = await fetch('/api/preguntas', { method:'POST', headers:{'Content-Type':'application/json'}, cache:'no-store', signal:controller.signal,
         body:JSON.stringify({question,history:history.slice(-6),context,studyTitle,consent:true}) });
@@ -82,7 +82,7 @@
     open(from,title);
   });
   // These are public study screens. Personal notes are never read or transmitted.
-  for (const name of ['autoestima','meditacion','voces','genealogias','arbol','nombres','camino','pozo']) {
+  for (const name of ['autoestima','meditacion','voces','genealogias','arbol','nombres','camino','pozo','primeros-pasos']) {
     const root=document.querySelector('[data-screen="'+name+'"]'); if (!root) continue;
     const button=document.createElement('button'); button.type='button'; button.className='dqStudyEntry';
     button.dataset.dqOpen=''; button.dataset.dqContext=name; button.textContent='✧ Preguntar sobre este estudio'; root.prepend(button);
@@ -106,6 +106,7 @@
       const response=await fetch('/api/preguntas',{cache:'no-store',signal:AbortSignal.timeout(10000)});
       if(!response.ok)throw Error('status');
       const data=await response.json();if(typeof data.enabled!=='boolean')throw Error('status');
+      if(Number.isFinite(data.responseTimeoutMs))responseTimeoutMs=Math.min(120000,Math.max(10000,data.responseTimeoutMs));
       available=data.enabled;
       $('dqForm').hidden=!available;$('dqSuggestions').hidden=!available;activation.hidden=available;
       $('dqConsent').disabled=!available;$('dqSend').disabled=!available;

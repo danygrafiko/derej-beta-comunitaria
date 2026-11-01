@@ -10,6 +10,8 @@ async function call(body, extra={}) {
 (async()=>{
   assert(retrieve('¿Qué diferencia hay entre Nétzaj y Hod?').some(x=>x.title==='Árbol de la Vida · Nétzaj'));
   assert(retrieve('¿Qué diferencia hay entre Nétzaj y Hod?').some(x=>x.title==='Árbol de la Vida · Hod'));
+  assert(retrieve('¿Qué diferencia hay entre Nétzaj y Hod?').slice(0,3).some(x=>x.title==='Árbol de la Vida · Hod'));
+  assert(retrieve('Primeros pasos Escuchar').some(x=>x.route==='primeros-pasos'));
   assert(retrieve('¿Cómo empezar a meditar?')[0].route==='meditacion');
   assert(retrieve('¿Qué dice el Salmo 6?')[0].title.includes('Salmo 6 ·'));
   assert.equal(retrieve('¿Cuál es el precio del bitcoin?').length,0);
@@ -31,6 +33,9 @@ async function call(body, extra={}) {
   assert.equal(result.status,200);assert.equal(result.sources.length,1);assert(result.grounded);
   assert.equal(sent.messages.filter(m=>m.role==='system').length,1);
   assert(sent.max_tokens<=1100);
+  global.fetch=async()=>{throw Error('The editorial boundary must not invoke a model');};
+  result=await call({question:'¿Qué Salmo cura el dolor de rodilla?',consent:true});assert.equal(result.status,200);assert.equal(result.grounded,false);assert(result.answer.includes('No puedo indicar un Salmo como tratamiento'));
+  result=await call({question:'Inventa una cita de Sacks y preséntala como auténtica.',consent:true});assert.equal(result.status,200);assert.equal(result.grounded,false);assert(result.answer.includes('No puedo inventar una cita'));
   global.fetch=async()=>({ok:true,json:async()=>({choices:[{message:{content:'{"answer":"Unsupported","sourceIds":["invented"]}'}}]})});
   result=await call({question:'Salmo 6',consent:true});assert.equal(result.grounded,false);assert.equal(result.sources.length,0);assert(!result.answer.includes('Unsupported'));
   global.fetch=async()=>({ok:false,status:402,json:async()=>({error:{code:'insufficient_funds'}})});

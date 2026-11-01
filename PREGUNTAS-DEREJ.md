@@ -1,5 +1,7 @@
 # Pregúntale a Dérej
 
+Para el prototipo con modelo abierto y motor propio, consulta [ai-local/README.md](ai-local/README.md). La integración admite ahora `DEREJ_AI_PROVIDER=selfhosted`; no requiere AI Gateway ni deriva consultas a él si falla el servidor propio. La configuración Gateway descrita abajo se conserva como alternativa explícita y por compatibilidad.
+
 Entry: Biblioteca, Pozo and public study screens. Direct route: `?puerta=preguntas`.
 
 The browser calls the same-origin Node function `/api/preguntas`. It retrieves passages from the current curated sources using lexical search with weighted titles and document frequency, then requests a JSON synthesis through Vercel AI Gateway. This is retrieval over a bounded collection, not an independently trained model or general web search. Returned source IDs must belong to the recovered passages; unknown IDs are discarded. An answer without a valid source is replaced with a no-evidence response. Factual accuracy still requires editorial review.

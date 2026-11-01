@@ -1,6 +1,8 @@
 'use strict';
 const { createHash } = require('node:crypto');
 const { retrieve, routes, system } = require('./_lib/derej.cjs');
+const { configuration, generate } = require('./_lib/engine.cjs');
+const { boundary } = require('./_lib/editorial.cjs');
 // Burst protection is per warm instance, not a distributed billing budget.
 const buckets = new Map();
 function permit(key) {
@@ -14,10 +16,8 @@ module.exports = async function handler(req, res) {
   res.setHeader('Cache-Control', 'private, no-store');
   res.setHeader('X-Content-Type-Options', 'nosniff');
   const send = (status, data) => res.status(status).json(data);
-  // Vercel Functions receive a fresh platform-issued OIDC token on each request.
-  const credential = process.env.AI_GATEWAY_API_KEY || req.headers['x-vercel-oidc-token'] || process.env.VERCEL_OIDC_TOKEN;
-  const enabled = process.env.DEREJ_AI_ENABLED === '1' && !!credential;
-  if (req.method === 'GET') return send(200, { enabled, version: 1 });
+  const engine=configuration(req),enabled=engine.enabled;
+  if (req.method === 'GET') return send(200, { enabled, version: 2, responseTimeoutMs:engine.provider==='selfhosted'?100000:35000 });
   if (req.method !== 'POST') { res.setHeader('Allow','GET, POST'); return send(405,{ error:'Método no permitido.' }); }
   if (req.headers.origin && req.headers.origin !== 'https://' + req.headers.host && !/^http:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(req.headers.origin)) return send(403,{ error:'Solicitud no permitida.' });
   if (!/^application\/json(?:;|$)/i.test(req.headers['content-type'] || '')) return send(415,{error:'Envía una pregunta en formato JSON.'});
@@ -29,22 +29,23 @@ module.exports = async function handler(req, res) {
   const address = req.headers['x-vercel-forwarded-for'] || req.socket?.remoteAddress || 'unknown';
   if (!permit(createHash('sha256').update(String(address)).digest('hex'))) { res.setHeader('Retry-After','60'); return send(429,{error:'Hagamos una pausa. Puedes volver a preguntar en un minuto.'}); }
   const question = body.question.trim();
+  const limited=boundary(question);if(limited)return send(200,limited);
   const history = Array.isArray(body.history) ? body.history.slice(-6).filter(m => m && ['user','assistant'].includes(m.role) && typeof m.content === 'string').map(m => ({role:m.role,content:m.content.slice(0,1800)})) : [];
   const context = routes.has(body.context) ? body.context : '';
   const studyTitle = typeof body.studyTitle === 'string' ? body.studyTitle.slice(0,180) : '';
-  const evidence = retrieve(question + ' ' + studyTitle,context,history.filter(m=>m.role==='user').slice(-1).map(m=>m.content).join(' '));
+  const candidates = retrieve(question + ' ' + studyTitle,context,history.filter(m=>m.role==='user').slice(-1).map(m=>m.content).join(' '));
+  const evidence=engine.provider==='selfhosted'?candidates.slice(0,3):candidates;
   if (!evidence.length) return send(200,{ answer:'No encontré un pasaje suficientemente relacionado en la colección de Dérej preparada para estas consultas. ¿Puedes precisar el tema, el nombre del sabio o el Salmo que quieres estudiar?', reflection:'', sources:[], grounded:false });
   try {
-    const response = await fetch('https://ai-gateway.vercel.sh/v1/chat/completions', {
-      method:'POST', headers:{Authorization:'Bearer ' + credential,'Content-Type':'application/json'}, signal:AbortSignal.timeout(25000),
-      body:JSON.stringify({ model:process.env.AI_GATEWAY_MODEL || 'openai/gpt-6-luna', max_tokens:1100, response_format:{type:'json_object'},
-        messages:[{role:'system',content:system + '\nPASAJES:\n' + JSON.stringify(evidence.map(({id,title,text})=>({id,title,text})))},...history,{role:'user',content:question}] })
-    });
+    const passages=evidence.map(({id,title,text})=>({id,title,text:engine.provider==='selfhosted'?text.slice(0,1600):text}));
+    const recent=engine.provider==='selfhosted'?history.slice(-4).map(m=>({...m,content:m.content.slice(0,900)})):history;
+    const localGuide=engine.provider==='selfhosted'?'\nSelecciona primero los sourceIds y después redacta una respuesta directa en dos párrafos breves. Esos IDs identifican textos de Dérej, incluidas sus reflexiones editoriales; puedes citarlos como documentos aunque no sean citas de un sabio. No atribuyas al texto bíblico una aplicación editorial, ni niegues el origen tradicional de un concepto solo porque Dérej propone una práctica. Al explicar Nétzaj y Hod, describe su relación complementaria, sin presentarlas como adversarias. Presenta cada práctica como una opción; no conviertas una práctica citada en requisito obligatorio ni en el único camino para empezar. Usa los IDs únicamente en sourceIds, nunca dentro de answer. La pregunta final debe ayudar a reflexionar, no pedirle al usuario que verifique tus fuentes.':'';
+    const response = await generate(engine,[{role:'system',content:system+localGuide+'\nLos únicos sourceIds válidos son: '+passages.map(p=>p.id).join(', ')+'.\nPASAJES:\n'+JSON.stringify(passages)},...recent,{role:'user',content:question}],passages.map(p=>p.id));
     if (!response.ok) {
       // Do not log prompts, response bodies, credentials or IP addresses.
       const failure = await response.json().catch(()=>({}));
       const code = String(failure.error?.code || failure.error?.type || 'unavailable').replace(/[^a-z_]/gi,'').slice(0,70);
-      console.warn('derej_ai_gateway_status', response.status, code);
+      console.warn('derej_ai_engine_status', response.status, code);
       return send(503,{code:'provider_unavailable',error:'La conexión de IA no está disponible ahora. Tu pregunta no se ha guardado en Dérej. Puedes intentarlo más tarde o consultar los estudios.'});
     }
     const data = await response.json();

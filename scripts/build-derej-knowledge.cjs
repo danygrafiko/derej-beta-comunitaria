@@ -40,6 +40,12 @@ for (const region of atlas.regions) add('Salmos y cuerpo · ' + region.name, 'bi
 add('Tehilim · Horarios, método y límites', 'biblioteca', { times: atlas.times, horarios: atlas.horariosCurados, method: atlas.method, editorial: atlas.editorialPolicy, medical: atlas.medical, sources: atlas.traditionalSources }, { collection: 'tehilim' });
 const camino = JSON.parse(fs.readFileSync('content/caminos-ramak-v25.json'));
 for (const week of camino.parashot) for (const day of week.caminos) add('Camino diario · ' + week.parasha + ' · Día ' + day.dia, 'camino', { ref: week.ref, note: week.nota_ramak, ...day });
+// Extract only the public constant, never the reader's saved notes or browser state.
+const firstSource=fs.readFileSync('primeros-pasos.js','utf8');
+const firstStart=firstSource.indexOf(' const encounters='),firstEnd=firstSource.indexOf('\n const esc=');
+if(firstStart<0||firstEnd<firstStart)throw Error('No se encontró la colección pública de Primeros pasos.');
+const firstEncounters=vm.runInNewContext(firstSource.slice(firstStart,firstEnd)+'\nencounters',{},{timeout:1000});
+for(const item of firstEncounters)add('Primeros pasos · '+item.title,'primeros-pasos',item);
 fs.mkdirSync('api/_lib', { recursive: true });
 fs.writeFileSync('api/_lib/knowledge.json', JSON.stringify({ version: 1, chunks }));
 console.log('Indexed', chunks.length, 'curated passages.');

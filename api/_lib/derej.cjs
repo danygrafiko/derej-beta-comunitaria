@@ -6,7 +6,7 @@ const tokens = text => [...new Set(normalize(text).match(/[a-z0-9]+/g) || [])].f
 const indexed = chunks.map(c => ({ ...c, normalized: normalize(c.title + '\n' + c.text), titleText: normalize(c.title), words:new Set(tokens(c.title + '\n' + c.text)), titleWords:new Set(tokens(c.title)) }));
 const frequency = new Map();
 for (const c of indexed) for (const word of c.words) frequency.set(word,(frequency.get(word)||0)+1);
-const routes = new Set(['biblioteca','autoestima','meditacion','voces','genealogias','arbol','nombres','camino','pozo']);
+const routes = new Set(['biblioteca','autoestima','meditacion','voces','genealogias','arbol','nombres','camino','pozo','primeros-pasos']);
 function retrieve(question, context = '', previous = '') {
   let query = question;
   if (/salmos?/.test(normalize(query))) query += ' tehilim';
@@ -24,6 +24,7 @@ function retrieve(question, context = '', previous = '') {
       score += older.filter(t => c.titleWords.has(t)).length * 0.5;
     }
     if (hits === 1 && terms.length > 1 && !terms.some(t => c.titleWords.has(t))) score = 0;
+    if(c.route==='arbol' && terms.includes(normalize(c.title.split('·').at(-1).trim())))score+=15;
     const psalm = normalize(question).match(/(?:salmo|tehilim)\s+(\d{1,3})\b/);
     if (psalm && c.titleText.includes('salmo ' + psalm[1] + ' ·')) score += 40;
     else if (psalm && c.titleText.startsWith('tehilim · salmo ')) score=0;
