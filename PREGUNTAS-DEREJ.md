@@ -1,5 +1,7 @@
 # Pregúntale a Dérej
 
+**Suspendido por decisión del propietario.** Se retiraron la pantalla y los accesos del portal; la API permanece deshabilitada aunque existan credenciales o variables de activación. El código se conserva para una eventual evaluación futura. Reactivarlo requiere una decisión explícita y un cambio de código.
+
 Para el prototipo con modelo abierto y motor propio, consulta [ai-local/README.md](ai-local/README.md). La integración admite ahora `DEREJ_AI_PROVIDER=selfhosted`; no requiere AI Gateway ni deriva consultas a él si falla el servidor propio. La configuración Gateway descrita abajo se conserva como alternativa explícita y por compatibilidad.
 
 Entry: Biblioteca, Pozo and public study screens. Direct route: `?puerta=preguntas`.

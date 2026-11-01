@@ -16,7 +16,8 @@ module.exports = async function handler(req, res) {
   res.setHeader('Cache-Control', 'private, no-store');
   res.setHeader('X-Content-Type-Options', 'nosniff');
   const send = (status, data) => res.status(status).json(data);
-  const engine=configuration(req),enabled=engine.enabled;
+  // Suspensión solicitada por el propietario: no reactivar mediante variables de entorno.
+  const engine=configuration(req),enabled=false;
   if (req.method === 'GET') return send(200, { enabled, version: 2, responseTimeoutMs:engine.provider==='selfhosted'?100000:35000 });
   if (req.method !== 'POST') { res.setHeader('Allow','GET, POST'); return send(405,{ error:'Método no permitido.' }); }
   if (req.headers.origin && req.headers.origin !== 'https://' + req.headers.host && !/^http:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(req.headers.origin)) return send(403,{ error:'Solicitud no permitida.' });
