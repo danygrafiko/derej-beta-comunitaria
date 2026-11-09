@@ -57,6 +57,13 @@ data.total_caminos=data.parashot.reduce((n,p)=>n+p.caminos.length,0);
 data.revision_editorial='DÉREJ v2.6 · secuencia anual de aliyot y curaduría contextual';
 data.nota_fuentes='Las etiquetas distinguen paráfrasis de fuente y aplicaciones propias. En las jornadas v2.6, «Marco de la fuente» resume el pasaje identificado y «Aplicación Dérej» expresa nuestra lectura de la escena; no atribuimos a los maestros comentarios directos que no hayamos localizado. Las prácticas son propuestas libres de Dérej.';
 data.auditoria={fecha:'2026-10-20',total_parashot:data.parashot.length,total_caminos:data.total_caminos,lej_leja_estado:'COMPLETO · 7/7',jornadas_reelaboradas:days.length,desalineaciones_de_versiculo_corregidas:50,criterio:'Versículo central dentro de la aliyá anual correspondiente. Las referencias interpretativas pueden ir a otros textos si se explicita su aplicación.',alcance:'Correspondencia y contexto revisados; se conservan las fuentes de las jornadas previamente alineadas. No se declara cotejo crítico de todas sus ediciones ni traducciones.'};
+// Conservar la revisión posterior de Llevar al reconstruir la edición v2.6.
+for(const [parasha,day,kavana,hitbodedut] of require('../content/curaduria-llevar-v27.cjs')){
+ const c=data.parashot.find(p=>p.parasha===parasha)?.caminos.find(c=>c.dia===day);
+ if(!c)throw Error('Jornada de Llevar no encontrada: '+parasha+'/'+day);
+ Object.assign(c.paraLlevar,{kavana,hitbodedut});
+ c.revision_llevar='v2.7 · intención y conversación propias · 2026-11-09';
+}
 fs.writeFileSync(dataPath,JSON.stringify(data,null,2)+'\n');
 fs.writeFileSync(path.join(root,'content/aliyot-anuales-v26.json'),JSON.stringify(references,null,2)+'\n');
 console.log('Curaduría aplicada:',days.length,'jornadas reelaboradas;',data.total_caminos,'jornadas en total.');

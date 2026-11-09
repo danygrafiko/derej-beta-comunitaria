@@ -17,7 +17,7 @@ w.HTMLMediaElement.prototype.pause=function(){};
 w.setInterval=()=>0;
 w.fetch=async url=>({ok:true,json:async()=>String(url).includes('caminos-ramak')?JSON.parse(JSON.stringify(data)):JSON.parse(fs.readFileSync(path.join(root,'radio.json'),'utf8'))});
 (async()=>{
- for(const f of ['voces-content.js','encuentros-v21.js','prelaunch-local.js','mobile-v234.js','navigation-v235.js','cleanup-v236.js','navigation-v241.js'])evaluate(fs.readFileSync(path.join(root,f),'utf8'));
+ for(const f of ['voces-content.js','encuentros-v21.js','editorial-references.js','prelaunch-local.js','mobile-v234.js','navigation-v235.js','cleanup-v236.js','navigation-v241.js'])evaluate(fs.readFileSync(path.join(root,f),'utf8'));
  await pause();
  assert.equal(evaluate("normalizeHebrewText('א&thinsp;ב&nbsp;ג&#x5d3;&#1492;')"),'א ב גדה');
  assert.equal(evaluate("normalizeHebrewText('&amp;thinsp;א')"),'א');
@@ -48,6 +48,12 @@ w.fetch=async url=>({ok:true,json:async()=>String(url).includes('caminos-ramak')
 
    if(c.pasuk.es_tipo)assert.equal(rootPanel.querySelector('.derejVerseKind').textContent,c.pasuk.es_tipo);
    assert.equal(w.document.querySelectorAll('.ramakVoices .ramakVoice').length,4+(c.voces.baalshemtov||p.parasha==='Noaj'&&c.dia===1?1:0));
+   for(const card of w.document.querySelectorAll('.ramakVoices .ramakVoice')){
+    const application=card.querySelector('.derejVoiceApplication');assert(application);
+    assert(!application.closest('details'),'La aplicación diaria debe estar visible');
+    const framework=card.querySelector('.derejVoiceFramework');
+    if(framework){assert(!framework.open);assert(application.compareDocumentPosition(framework)&w.Node.DOCUMENT_POSITION_FOLLOWING);}
+   }
    if(p.parasha!=='Noaj')assert(!/Teivá|entrada de Noaj al arca/.test(w.document.querySelector('.ramakVoices').textContent),p.parasha+'/'+c.dia);
    if(data.parashot.indexOf(p)>=3)for(const voice of Object.values(c.voces)){assert(voice.base);assert(voice.atribucion);}
    assert.equal(w.document.querySelectorAll('.ramakVoices a[href*="sefaria.org"]').length,0);

@@ -7464,6 +7464,9 @@ function prepareCaminoShell(){
       .ramakVoice{padding:14px;border:1px solid #d0c0a5;border-radius:17px;background:#faf1e2}
       .ramakVoice b{font:1.02rem Georgia,serif;color:#3b332a}
       .ramakVoice p{margin:.45rem 0 0;color:#665c4f;font:.86rem/1.48 Georgia,serif}
+      .ramakVoice details{margin-top:12px;border-top:1px solid #d0c0a5;padding-top:9px}
+      .ramakVoice summary{cursor:pointer;color:#665335;font-size:.8rem;line-height:1.5;min-height:32px}
+      .ramakVoice summary:focus-visible{outline:2px solid #665335;outline-offset:4px;border-radius:3px}
       .derejVerseTranslation{margin:10px auto 13px;max-width:34rem;text-align:center;color:#594f42;font:1rem/1.52 Georgia,serif}
       .derejRootNote{margin:14px 0 0;padding:10px 12px;border-left:2px solid #a89470;background:rgba(247,238,221,.7);color:#6d604d;font:.76rem/1.48 Georgia,serif}
       .derejVoiceSource{display:block!important;margin:0;color:#383129!important;font:1rem/1.28 Georgia,serif!important}
@@ -9102,7 +9105,7 @@ function scene(c,label){
 function renderVoiceCard(raw,label){
   if(raw&&typeof raw==='object'){
     const source=esc(raw.fuente||label);
-    return `<article class="ramakVoice"><small>${esc(label.toUpperCase())}</small><b class="derejVoiceSource">${source}</b>${raw.tipo?`<span class="derejVoiceType">${esc(raw.tipo)}</span>`:''}${raw.base?`<p><strong>Marco de la fuente.</strong> ${esc(raw.base)}</p>`:''}<p>${raw.base?'<strong>Aplicación Dérej.</strong> ':'<strong>Lectura editorial Dérej.</strong> '}${esc(raw.texto||'')}</p></article>`;
+    return `<article class="ramakVoice"><small>${esc(label.toUpperCase())}</small><b class="derejVoiceSource">${source}</b>${raw.tipo?`<span class="derejVoiceType">${esc(raw.tipo)}</span>`:''}<p class="derejVoiceApplication">${raw.base?'<strong>Aplicación Dérej.</strong> ':'<strong>Lectura editorial Dérej.</strong> '}${esc(raw.texto||'')}</p>${raw.base?`<details class="derejVoiceFramework"><summary>Consultar el marco de la fuente</summary><p>${esc(raw.base)}</p>${raw.atribucion?`<p>${esc(raw.atribucion)}</p>`:''}</details>`:''}</article>`;
   }
   return `<article class="ramakVoice"><small>${esc(label.toUpperCase())}</small><b>${esc(label)}</b><p>${esc(raw||'')}</p></article>`;
 }
