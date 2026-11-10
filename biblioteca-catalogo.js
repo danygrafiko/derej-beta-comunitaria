@@ -9,6 +9,7 @@
  catalog.innerHTML='<div class="libTools"><label class="libSearch"><span>Buscar una lectura</span><input id="libSearch" type="search" placeholder="Salmos, meditación, Abraham…" autocomplete="off"></label><p class="libHint">Elige un tema.<br>Encuentra una pregunta.</p></div><div class="libFilters" role="group" aria-label="Temas de la biblioteca"></div><aside class="libResume" hidden><div><small>TU ÚLTIMA LECTURA ABIERTA</small><strong></strong></div><button type="button">Volver al estudio ↗</button></aside><div class="libResults"><h2>Explorar la colección</h2><span id="libCount" role="status"></span></div><div class="libGrid"></div><div class="libEmpty" hidden><h3>No encontramos esa lectura.</h3><p>Prueba con otro nombre o explora todos los temas.</p><button type="button">Ver toda la biblioteca</button></div>';
  const conversation=root.querySelector('.dqLibraryEntry');if(conversation)conversation.after(catalog);else intro.after(catalog);
  const entries=[
+ ['.heEntry','hebreo','texto','Hebreo bíblico','DICCIONARIO · 128 PALABRAS','glosario diccionario hebreo biblico raíces palabras lengua torá shalom nefesh ruaj'],
  ['.thEntry','tehilim','texto','Salmos para el camino','COLECCIÓN · 150 SALMOS','tehilim cuerpo alma oración'],
  ['.npEntry','nombres','texto','Nombres y presencia','RECORRIDO DE ESTUDIO','creador nombres hebreo'],
  ['.vocHomeEntry','voces','voces','Voces del Camino','VIDAS · OBRAS · ENSEÑANZAS','hilel baal shem tov ramak rambam najman rashi jonathan sacks abraham ibn ezra sabios esperanza escucha lengua exégesis'],

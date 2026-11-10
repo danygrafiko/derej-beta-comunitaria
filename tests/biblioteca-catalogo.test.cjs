@@ -4,6 +4,7 @@ const fs=require('fs');
 const vm=require('vm');
 const d=new JSDOM(fs.readFileSync('index.html','utf8'),{url:'https://derej-beta-comunitaria.vercel.app/',runScripts:'outside-only',pretendToBeVisual:true});
 const w=d.window;
+require('./browser-lifecycle.cjs')(w);
 w.matchMedia=()=>({matches:false,addEventListener(){}});
 w.HTMLElement.prototype.scrollIntoView=function(){};
 w.scrollTo=()=>{};
@@ -23,7 +24,7 @@ setTimeout(()=>{
  assert.equal(doc.querySelector('.prLibrary'),null);
  assert.equal(doc.querySelector('[data-lib-id=vayera]'),null);
  assert(doc.querySelector('[data-ramak-panel=profundizar]'));
- assert.equal(doc.querySelectorAll('.libCard').length,7);
+ assert.equal(doc.querySelectorAll('.libCard').length,8);
  assert.equal(doc.querySelector('[data-lib-id=sacks]'),null);
  assert.equal(doc.querySelector('[data-lib-id=ibnezra]'),null);
  assert(doc.querySelector('[data-lib-id=voces]'));
@@ -45,6 +46,7 @@ setTimeout(()=>{
  doc.querySelector('.libResume button').click();
  assert.equal(doc.getElementById('tehilimExplorer').hidden,false);
  assert.equal(w.localStorage.getItem('derej.library.last.v1'),'tehilim');
- console.log('PASS: 7 entradas, sabios integrados en Voces, filtros, búsqueda, Tehilim y última lectura conservados.');
+ assert(doc.querySelector('[data-lib-id=hebreo] a[href="diccionario-hebreo.html"]'));
+ console.log('PASS: 8 entradas, sabios integrados en Voces, filtros, búsqueda, Tehilim y última lectura conservados.');
  d.window.close();
 },1000);

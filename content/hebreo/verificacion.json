@@ -1,0 +1,16 @@
+{
+  "entries": 128,
+  "references": 256,
+  "errors": [],
+  "method": "Se cotejó en OSHB que cada referencia contiene el identificador léxico declarado; esto comprueba presencia y forma, no sustituye la revisión semántica. El texto de pantalla retira signos de cantilación y marcas auxiliares; conserva vocales.",
+  "corpus_commit": "3d15126fb1ef74867fc1434be1942e837932691f",
+  "editorial_variants": [
+    "panim: lema editorial פָּנִים / STEP פָּנֶה",
+    "mayim: lema editorial מַיִם / STEP מַי",
+    "tiferet: lema editorial תִּפְאֶרֶת / STEP תִּפְאָרָה"
+  ],
+  "editorial_variants_resolution": "Las tres formas de consulta se explican en sus fichas. Ninguna discrepancia altera el cotejo de los versículos.",
+  "extended_studies": 24,
+  "later_terms": 6,
+  "status": "Sin referencias ausentes en el cotejo léxico; no equivale a revisión académica independiente."
+}

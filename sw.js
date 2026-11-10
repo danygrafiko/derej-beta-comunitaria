@@ -1,8 +1,13 @@
 const CACHE_PREFIX = 'derej-master-';
-const CACHE = 'derej-master-v2.0-rc2-20261002-02';
+const CACHE = 'derej-master-hebreo-20261110-01';
 const SHELL = [
   './',
   './index.html',
+  './diccionario-hebreo.html',
+  './diccionario-hebreo.css?v=1',
+  './diccionario-hebreo.js?v=1',
+  './content/hebreo/diccionario.json?v=1',
+  './content/hebreo/guia.json?v=1',
   './styles.css',
   './app.js',
   './config.js',
@@ -60,7 +65,7 @@ self.addEventListener('fetch', event => {
     const isAppShell = url.pathname === scopePath || url.pathname === `${scopePath}index.html`;
 
     if (!isAppShell) {
-      const isStudyModule = /\/artefacto-(camino-parasha|shabat|moed|adam-adama)\.html$/.test(url.pathname);
+      const isStudyModule = /\/diccionario-hebreo\.html$/.test(url.pathname) || /\/artefacto-(camino-parasha|shabat|moed|adam-adama)\.html$/.test(url.pathname);
       // Standalone study modules may fall back to their own cached page; admin pages never fall back to the app shell.
       event.respondWith(fetch(request).catch(() => isStudyModule ? caches.match(request) : Promise.reject(new Error('offline'))));
       return;

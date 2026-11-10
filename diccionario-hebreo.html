@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#284333">
+<meta name="description" content="Diccionario de hebreo bíblico de Dérej: 128 palabras del Tanaj, raíces, pronunciación orientativa, ejemplos y notas de contexto.">
+<title>Hebreo bíblico · Biblioteca Dérej</title>
+<link rel="icon" href="icon-192.png">
+<link rel="stylesheet" href="diccionario-hebreo.css?v=1">
+<script defer src="diccionario-hebreo.js?v=1"></script>
+</head>
+<body>
+<a class="skip" href="#main">Ir al contenido</a>
+<header class="topbar"><a class="brand" href="./?puerta=biblioteca" aria-label="Dérej, volver a Biblioteca"><span>Dérej <b lang="he" dir="rtl">דרך</b></span><small>EL CAMINO</small></a><a class="libraryBack" href="./?puerta=biblioteca">← Biblioteca</a></header>
+<main id="main">
+<section class="hero" id="hero"><div><span class="eyebrow">BIBLIOTECA · LENGUA Y CONTEXTO</span><h1>Palabras para<br>volver al texto.</h1><p>Un diccionario de hebreo bíblico para leer con más atención, comprender los matices y dejar que cada pasaje hable en su contexto.</p><div class="heroFoot"><span><b>128</b> palabras</span><span><b>256</b> ejemplos bíblicos</span><span>Una palabra.<br>Más de una puerta.</span></div></div><div class="heroHebrew" aria-hidden="true"><span lang="he" dir="rtl">דֶּרֶךְ</span><i>dérej</i><small>camino · trayecto · manera de vivir</small></div></section>
+<nav class="sections" aria-label="Secciones del diccionario"><a href="#diccionario" data-nav="diccionario" aria-current="page">Diccionario</a><a href="#guia" data-nav="guia">Aprender a leer</a><a href="#recorridos" data-nav="recorridos">Recorridos</a><a href="#tradicion" data-nav="tradicion">Biblia y tradición</a><a href="#fuentes" data-nav="fuentes">Fuentes y criterio</a></nav>
+<p id="loading" role="status">Preparando las palabras…</p>
+<section id="explorer" hidden aria-labelledby="explorerTitle">
+<div class="sectionIntro"><div><span class="eyebrow">BUSCAR · COMPARAR · VOLVER</span><h2 id="explorerTitle" tabindex="-1">Explorar el diccionario</h2></div><p>Busca una palabra, un sentido o una raíz.<br>El hebreo se puede escribir sin vocales.</p></div>
+<div class="searchbox"><label for="query">¿Qué palabra quieres comprender?</label><div><input id="query" type="search" autocomplete="off" dir="auto" placeholder="Shalom, vida, רוח, שמר…"><button type="button" id="clearSearch" aria-label="Borrar búsqueda">Borrar</button></div></div>
+<div class="filters"><label>Tema<select id="category"><option value="">Todos los temas</option></select></label><button type="button" id="onlySaved" aria-pressed="false">Mis guardados <span id="savedCount">0</span></button><button type="button" id="reset">Restablecer filtros</button></div>
+<div id="alphabet" class="alphabet" role="group" aria-label="Filtrar por letra inicial hebrea"></div>
+<div class="resultsHead"><p id="count" role="status" aria-live="polite"></p><label>Orden<select id="sort"><option value="hebrew">Alfabeto hebreo</option><option value="spanish">Transliteración</option></select></label></div>
+<div id="wordGrid" class="wordGrid"></div><div class="empty" id="empty" hidden><h3>No encontramos una palabra con esos filtros.</h3><p>Prueba otra grafía o una raíz. También puedes explorar todos los temas.</p><button type="button" id="emptyReset">Ver todas las palabras</button></div><button type="button" class="loadMore" id="loadMore" hidden>Mostrar más palabras</button>
+<aside class="quietNote"><b>Un diccionario de estudio, en contexto.</b> Esta primera edición reúne una selección de 128 entradas; no abarca todo el vocabulario del Tanaj. La transliteración es una ayuda de pronunciación contemporánea. <a href="#fuentes">Conocer el criterio editorial →</a></aside>
+</section>
+<article id="entry" class="entry" hidden aria-labelledby="entryTitle"></article>
+<section id="guide" class="readingPage" hidden aria-labelledby="guideTitle"></section>
+<section id="journeys" class="readingPage" hidden aria-labelledby="journeysTitle"></section>
+<section id="tradition" class="readingPage" hidden aria-labelledby="traditionTitle"></section>
+<section id="sources" class="readingPage" hidden aria-labelledby="sourcesTitle"></section>
+<noscript><p>Activa JavaScript para buscar y abrir las fichas. El estudio completo también está disponible en el documento editorial de Dérej.</p></noscript>
+</main>
+<footer><a href="./?puerta=biblioteca">Volver a la Biblioteca de Dérej</a><p>Leer una palabra. Escuchar un contexto. Volver con una pregunta.</p><small>Edición de estudio 1.0 · 10 de noviembre de 2026</small></footer>
+</body>
+</html>
