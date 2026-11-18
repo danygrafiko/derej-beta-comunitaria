@@ -12,6 +12,14 @@ for(const [p,d,kavana,hitbodedut] of changes){
  assert.equal(c.paraLlevar.kavana,kavana);assert.equal(c.paraLlevar.hitbodedut,hitbodedut);
  assert(c.revision_llevar.includes('2026-11-09'));
 }
+// La conversación personal es una sola invitación, sin interrogatorio ni instrucciones acumuladas.
+for(const c of rows){
+ const message=c.paraLlevar.hitbodedut;
+ assert(message.length<=130, 'Hitbodedut demasiado extensa: '+c.parasha+'/'+c.dia);
+ assert(message.trim().split(/\s+/u).length<=18, 'Hitbodedut tiene demasiadas palabras: '+c.parasha+'/'+c.dia);
+ assert(!/[¿?]/u.test(message), 'Hitbodedut no debe presentar un cuestionario: '+c.parasha+'/'+c.dia);
+ assert.equal((message.match(/[.!]/gu)||[]).length,1,'Hitbodedut debe tener una sola invitación: '+c.parasha+'/'+c.dia);
+}
 for(const field of ['reflexion','avoda','kavana','hitbodedut']){
  const texts=rows.map(c=>normalize(field==='reflexion'?c.reflexion:c.paraLlevar[field]));
  assert.equal(new Set(texts).size,140,'Contenido diario repetido: '+field);
