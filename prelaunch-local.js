@@ -1,7 +1,7 @@
 /* DÉREJ v2.5.2 · UX móvil · Caminos Diarios */
 const screens=[...document.querySelectorAll('[data-screen]')];
 const $=id=>document.getElementById(id);
-const RAMAK_URL='content/caminos-ramak-v25.json';
+const RAMAK_URL='content/caminos-ramak-v25.json?v=hitbodedut-sencilla-20261118-1';
 const BIBLICAL_BOOK_ES={
   'Bereshit':'Génesis',
   'Shemot':'Éxodo',
