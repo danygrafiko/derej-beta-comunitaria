@@ -1,7 +1,7 @@
 /* DÉREJ v2.5.2 · UX móvil · Caminos Diarios */
 const screens=[...document.querySelectorAll('[data-screen]')];
 const $=id=>document.getElementById(id);
-const RAMAK_URL='content/caminos-ramak-v25.json';
+const RAMAK_URL='content/caminos-ramak-v25.json?v=hitbodedut-sencilla-20261118-1';
 const BIBLICAL_BOOK_ES={
   'Bereshit':'Génesis',
   'Shemot':'Éxodo',
@@ -7480,6 +7480,8 @@ function prepareCaminoShell(){
       .ramakBody textarea{width:100%;box-sizing:border-box;resize:vertical;border:1px solid #c7b89c;border-radius:15px;background:#fffdf7;color:#342e26;padding:12px;font:1rem/1.45 Georgia,serif;outline:none}
       .ramakBody textarea:focus{border-color:var(--ramak-accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--ramak-accent),transparent 78%)}
       .ramakCarryGrid{display:grid;gap:9px}
+      .ramakHitbodedutHelp{margin:12px 0 0;font:400 .88rem/1.5 system-ui,sans-serif;opacity:.8;max-width:52ch}
+      .ramakHitbodedut strong{display:block;line-height:1.48}
       .ramakKavana{background:#302f29;color:#f1dfbc;border-color:#302f29}
       .ramakKavana small{color:#d6bd84}.ramakKavana strong,.ramakKavana p{color:#f2e1c0}
       .ramakNav{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:15px}
@@ -10477,7 +10479,7 @@ function renderPanels(p,c){
       <span class="ramakBodyEyebrow">INTENCIÓN · CONVERSACIÓN PERSONAL · MEMORIA</span>
       <div class="ramakCarryGrid">
         <div class="ramakCard ramakKavana"><small>KAVANÁ · INTENCIÓN</small><strong>${esc(carry.kavana||'')}</strong></div>
-        <div class="ramakCard"><small>HITBODEDUT · CONVERSACIÓN PERSONAL</small><strong>${esc(carry.hitbodedut||'')}</strong></div>
+        <div class="ramakCard ramakHitbodedut"><small>HITBODEDUT · UN MOMENTO PARA CONVERSAR</small><strong>${esc(carry.hitbodedut||'')}</strong><p class="ramakHitbodedutHelp">Puedes hablar con el Creador de todo o permanecer en silencio. No hay respuestas obligatorias.</p></div>
         ${saved.note?`<div class="ramakCard"><small>TU NOTA</small><p>“${esc(saved.note)}”</p></div>`:''}
       </div>
       <button class="ramakSave" type="button" id="ramakSaveMemory">Guardar este Camino en Mi Camino</button>
