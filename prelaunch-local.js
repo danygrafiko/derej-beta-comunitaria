@@ -19012,7 +19012,7 @@ loadRamak();
   function renderGates(){
     const host=document.getElementById('shabatGates');
     host.innerHTML=SHABAT_DATA.map(x=>`
-      <button class="shabatGate${x.id===selectedId?' on':''}" type="button" data-shabat-id="${x.id}">
+      <button class="shabatGate${x.id===selectedId?' on':''}" type="button" data-shabat-id="${x.id}" aria-pressed="${x.id===selectedId}">
         <div class="shabatGateTop">
           <span class="shabatGateNum">${x.num}</span>
           <span class="shabatGateHeb">${x.hebreoNikud}</span>
@@ -19295,7 +19295,7 @@ loadRamak();
     return `
       <div class="shabatReading">
         <div class="shabatPracticeTitle"><b>${x.practica.titulo}</b><span>PROPUESTA DÉREJ · 7 OPCIONES</span></div>
-        <div class="shabatDays" aria-label="Elegir día">${x.practica.dias.map((d,i)=>`<button type="button" class="shabatDay${i===selectedDay?' on':''}" data-shabat-day="${i}">${d.dia.replace('Día ','D')}</button>`).join('')}</div>
+        <div class="shabatDays" aria-label="Elegir día">${x.practica.dias.map((d,i)=>`<button type="button" class="shabatDay${i===selectedDay?' on':''}" data-shabat-day="${i}" aria-pressed="${i===selectedDay}">${d.dia.replace('Día ','D')}</button>`).join('')}</div>
         <p>Elige una sola idea, si lo deseas. Las siete opciones no son tareas obligatorias.</p><div class="shabatAction">${item.accion}</div>
         <div class="shabatKavana"><small>INTENCIÓN PARA RECORDAR</small><p>“${x.tagline}”</p></div>
       </div>`;
@@ -19569,10 +19569,10 @@ loadRamak();
         <h2>${x.titulo}</h2>
         <p class="shabatTranslit">${x.tituloHeb} · ${x.translit}</p>
         <p class="shabatTagline">${x.tagline}</p>
-        <div class="shabatTabs" role="tablist" aria-label="Maneras de conocer este tema">
-          <button type="button" class="shabatTab${selectedTab==='abierta'?' on':''}" data-shabat-tab="abierta">Conocer</button>
-          <button type="button" class="shabatTab${selectedTab==='profunda'?' on':''}" data-shabat-tab="profunda">Profundizar</button>
-          <button type="button" class="shabatTab${selectedTab==='practica'?' on':''}" data-shabat-tab="practica">Llevar</button>
+        <div class="shabatTabs" role="group" aria-label="Maneras de conocer este tema">
+          <button type="button" class="shabatTab${selectedTab==='abierta'?' on':''}" data-shabat-tab="abierta" aria-pressed="${selectedTab==='abierta'}">Conocer</button>
+          <button type="button" class="shabatTab${selectedTab==='profunda'?' on':''}" data-shabat-tab="profunda" aria-pressed="${selectedTab==='profunda'}">Profundizar</button>
+          <button type="button" class="shabatTab${selectedTab==='practica'?' on':''}" data-shabat-tab="practica" aria-pressed="${selectedTab==='practica'}">Llevar</button>
         </div>
         <div id="shabatTabContent">${tabContent(x)}</div>
         <div class="shabatNav">
@@ -23857,7 +23857,7 @@ loadRamak();
   function renderGates(){
     const host=document.getElementById('moedGates');
     host.innerHTML=MOED_DATA.map(x=>`
-      <button class="moedGate${x.id===selectedId?' on':''}" type="button" data-moed-id="${x.id}" style="--moed-card-pos:${cardPositions[x.id]||'50% 50%'}">
+      <button class="moedGate${x.id===selectedId?' on':''}" type="button" data-moed-id="${x.id}" aria-pressed="${x.id===selectedId}" style="--moed-card-pos:${cardPositions[x.id]||'50% 50%'}">
         <div class="moedGateTop">
           <span class="moedGateIcon">${icons[x.id]||'•'}</span>
           <span class="moedGateHeb">${x.hebrewFull}</span>
@@ -24160,7 +24160,7 @@ loadRamak();
           <small>DÉREJ · 7 IDEAS OPCIONALES</small>
           <b>${x.practicaIntro}</b>
         </div>
-        <div class="moedDays" aria-label="Elegir una propuesta opcional">${x.practica7.map((d,i)=>`<button type="button" class="moedDay${i===selectedDay?' on':''}" data-moed-day="${i}" aria-label="Opción ${d.day}">${d.day}</button>`).join('')}</div>
+        <div class="moedDays" aria-label="Elegir una propuesta opcional">${x.practica7.map((d,i)=>`<button type="button" class="moedDay${i===selectedDay?' on':''}" data-moed-day="${i}" aria-pressed="${i===selectedDay}" aria-label="Opción ${d.day}">${d.day}</button>`).join('')}</div>
         <div class="moedAction"><b>${item.title}</b><p>${item.desc}</p></div>
         <p class="moedDateNote">Puedes elegir una idea sin completar las siete. Estas propuestas de Dérej no sustituyen ni representan las observancias rituales judías.</p>
       </div>`;
@@ -24436,10 +24436,10 @@ loadRamak();
         <p class="moedTagline">${x.tag}</p>
         ${window.DerejMoedCalendar?.detail(x.id)||''}
         ${x.experiences?.length?experienceDoors(x):''}
-        <div class="moedTabs" role="tablist" aria-label="Maneras de conocer este tema">
-          <button type="button" class="moedTab${selectedTab==='abierta'?' on':''}" data-moed-tab="abierta">Conocer</button>
-          <button type="button" class="moedTab${selectedTab==='profunda'?' on':''}" data-moed-tab="profunda">Profundizar</button>
-          <button type="button" class="moedTab${selectedTab==='practica'?' on':''}" data-moed-tab="practica">${x.experiences?.length?'Experiencias':'Llevar'}</button>
+        <div class="moedTabs" role="group" aria-label="Maneras de conocer este tema">
+          <button type="button" class="moedTab${selectedTab==='abierta'?' on':''}" data-moed-tab="abierta" aria-pressed="${selectedTab==='abierta'}">Conocer</button>
+          <button type="button" class="moedTab${selectedTab==='profunda'?' on':''}" data-moed-tab="profunda" aria-pressed="${selectedTab==='profunda'}">Profundizar</button>
+          <button type="button" class="moedTab${selectedTab==='practica'?' on':''}" data-moed-tab="practica" aria-pressed="${selectedTab==='practica'}">${x.experiences?.length?'Experiencias':'Llevar'}</button>
         </div>
         <div id="moedTabContent">${tabContent(x)}</div>
         <div class="moedNav">
