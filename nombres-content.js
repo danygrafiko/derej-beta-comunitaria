@@ -15,7 +15,7 @@ window.DEREJ_NOMBRES = {
       ],
       "title": "Nombrar al Creador único",
       "reading": "Deuteronomio 6,4 y Éxodo 3,13–15. Fuentes 1, 3, 8 y 9.",
-      "questions": "¿Qué imagen del Creador recibí de otras personas? ¿Qué parte de esa imagen he examinado por mí mismo? ¿Puedo escuchar una experiencia distinta sin convertir la conversación en una disputa?",
+      "questions": "¿Qué idea sobre el Creador quiero comprender mejor?",
       "action": "Escribir dos frases que empiecen con Cuando digo «Creador de todo», pienso en… Elegir después una palabra que necesite ser estudiada con más cuidado. En grupo, escuchar las respuestas sin corregirlas de inmediato.",
       "prayer": "Creador, ayúdame a hablar de Ti con humildad y a escuchar con respeto lo que todavía no comprendo."
     },
@@ -34,7 +34,7 @@ window.DEREJ_NOMBRES = {
       ],
       "title": "Reconocer al Creador en la vida",
       "reading": "Génesis 1,1–5 y 1,26–31. Fuentes 2, 10 y 17.",
-      "questions": "¿Qué límite me ayuda a vivir mejor? ¿Qué norma aplico a otras personas con más dureza que a mí mismo? ¿Qué responsabilidad concreta tengo frente a la vida que compartimos?",
+      "questions": "¿Qué responsabilidad concreta puedo asumir para cuidar la vida que compartimos?",
       "action": "Elegir un ámbito pequeño que necesite cuidado: el agua, una planta, un espacio compartido o un compromiso pendiente. Realizar hoy una acción verificable y anotar a quién beneficia. Evitar juzgar el dolor de otra persona como si conociéramos su causa divina.",
       "prayer": "Creador de la vida, enséñame a poner orden con justicia y a cuidar aquello que has puesto a mi alcance."
     },
@@ -53,7 +53,7 @@ window.DEREJ_NOMBRES = {
       ],
       "title": "Misericordia que permite volver",
       "reading": "Éxodo 34,1–9. Fuentes 4, 10 y 11.",
-      "questions": "¿Qué diferencia encuentro entre excusar un daño y abrir una posibilidad de reparación? ¿A quién sigo describiendo únicamente por un error? ¿Qué necesito corregir yo antes de pedir comprensión?",
+      "questions": "¿Cómo puedo reconocer un daño y abrir una posibilidad de reparación?",
       "action": "Identificar una situación donde pueda disminuir la dureza sin abandonar la verdad. Sustituir una acusación global por la descripción precisa de una conducta y una petición concreta. Si la reparación depende de mí, realizar el primer paso hoy.",
       "prayer": "Creador de todo, fuente de misericordia, dame paciencia para reconocer el daño y valor para repararlo sin quitar dignidad a nadie."
     },
@@ -71,7 +71,7 @@ window.DEREJ_NOMBRES = {
       ],
       "title": "Presencia en lo que aún no sabemos",
       "reading": "Éxodo 3,1–15, con atención a los versículos 7, 12 y 14. Fuentes 3 y 12.",
-      "questions": "¿Qué situación quiero resolver antes de atreverme a actuar? ¿Qué compañía necesito pedir? ¿Cómo puedo estar presente para alguien sin ofrecer explicaciones que no tengo?",
+      "questions": "¿Cómo puedo acompañar a alguien cuando no tengo todas las respuestas?",
       "action": "Elegir una conversación pendiente con alguien que esté atravesando una dificultad. Preguntar qué ayuda concreta necesita y escuchar la respuesta. También puede ser necesario pedir apoyo para uno mismo. Registrar el paso realizado, sin exigir una emoción espiritual especial.",
       "prayer": "Creador, acompáñame en lo que no entiendo y ayúdame a dar el paso que hoy sí puedo dar."
     },
@@ -89,7 +89,7 @@ window.DEREJ_NOMBRES = {
       ],
       "title": "Confianza y dignidad en el camino",
       "reading": "Génesis 17,1; 14,18–22; 16,7–13; 21,33. Fuentes 5, 6 y 13.",
-      "questions": "¿Qué significa confiar cuando mis recursos son limitados? ¿Qué límite necesito reconocer? ¿Qué persona de mi entorno suele pasar inadvertida?",
+      "questions": "¿Qué me ayudaría a confiar y reconocer mis límites?",
       "action": "Escoger una sola acción: reconocer un límite y pedir ayuda; cumplir una promesa pequeña; o escuchar a alguien cuya voz rara vez se toma en cuenta. La conexión entre estas acciones y los nombres estudiados es una propuesta pedagógica Dérej.",
       "prayer": "Creador de todo, que ves la vida de cada persona, ayúdame a reconocer mis límites y a prestar atención a quien pasa inadvertido."
     },
@@ -107,7 +107,7 @@ window.DEREJ_NOMBRES = {
       ],
       "title": "Hablar con honestidad ante el Creador",
       "reading": "Génesis 15,1–6 y 1 Samuel 1,9–18. Fuentes 5, 7 y 9.",
-      "questions": "¿Qué me cuesta expresar en una oración o en una conversación sincera? ¿Cuándo he interpretado demasiado rápido a otra persona? ¿Qué parte de mi responsabilidad puedo ejercer con más escucha?",
+      "questions": "¿Qué me cuesta expresar con sinceridad ante el Creador de todo?",
       "action": "Escribir tres frases privadas: esto me preocupa; esto necesito pedir; esto me corresponde hacer. Después, revisar una opinión reciente sobre alguien y distinguir lo observado de lo supuesto. Si hubo un juicio injusto, corregirlo.",
       "prayer": "Señor de la vida, recibe lo que me cuesta decir y enséñame a escuchar antes de juzgar."
     },
@@ -126,7 +126,7 @@ window.DEREJ_NOMBRES = {
       ],
       "title": "La cercanía y lo ilimitado",
       "reading": "Releer Éxodo 3,7–12. Lecturas complementarias en las fuentes 14, 15 y 16.",
-      "questions": "¿Dónde encuentro espacio para una atención más profunda? ¿Qué afirmación sobre el Creador debería formular con más humildad? ¿Cuál de mis relaciones necesita un cuidado concreto?",
+      "questions": "¿Qué relación de mi vida necesita más atención y cuidado?",
       "action": "Guardar dos minutos de silencio, sin visualizaciones obligatorias. Elegir después una acción de cuidado. Cordovero, en Tomer Devorá, relaciona el parecido con el Creador con las cualidades que desarrollamos en nuestros actos. Revisar al final del día lo realizado y lo que sigue pendiente.",
       "prayer": "Creador, ayúdame a reconocer tu cercanía y a responder con una vida más atenta, generosa y verdadera."
     }
