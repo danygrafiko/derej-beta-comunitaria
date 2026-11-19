@@ -21,7 +21,7 @@ for(const item of shabat){
  assert.equal(item.practica.dias.length,7);
  assert(item.abierta && item.profunda && item.profunda.fuentes.length>0);
 }
-const single=s=>((s.match(/¿/gu)||[]).length<=1)&&(s.match(/¿/gu)||[]).length===(s.match(/\?/gu)||[]).length);
+const single=s=>(s.match(/¿/gu)||[]).length<=1&&(s.match(/¿/gu)||[]).length===(s.match(/\?/gu)||[]).length;
 for(const item of moed){
  assert(item.abierta && item.profunda && item.sources.length);
  if(item.id==='iom-kipur'){assert.equal(item.practica7.length,0);assert(item.experiences.length>=2);continue;}
