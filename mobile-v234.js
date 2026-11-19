@@ -34,6 +34,7 @@
         .ramakPasukMeta span b{display:block;margin-bottom:2px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;color:#7b6d55}
 
         .ramakBody{padding:18px 18px calc(92px + env(safe-area-inset-bottom))!important}
+        .ramakPanel[data-ramak-panel="encuentro"] .ramakBody{padding-bottom:calc(26px + env(safe-area-inset-bottom))!important}
         .ramakNav{margin-top:16px!important}
         .ramakPanels{padding-bottom:calc(16px + env(safe-area-inset-bottom))!important}
         .derejGlossFloat{max-width:calc(58vw - 12px)}
