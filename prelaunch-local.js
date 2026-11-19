@@ -16563,7 +16563,7 @@ loadRamak();
       <div class="shabatHeroCopy">
         <span class="shabatEyebrow">SHABAT · שבת</span>
         <h1 id="shabatTitle">Detener<br>y escuchar.</h1>
-        <p>Seis caminos para conocer el Shabat en la tradición judía y explorar el descanso, la gratitud y el encuentro.</p>
+        <p>Seis puertas para conocer cómo se vive el Shabat en la tradición judía. Puedes elegir una y reflexionar a tu ritmo.</p>
         <button class="shabatEnter" data-shabat-scroll="shabatJourney">Recorrer los seis caminos <span>↓</span></button>
       </div>
     </section>
@@ -16827,7 +16827,7 @@ loadRamak();
       <header class="shabatJourneyHead">
         <span>SEIS GESTOS · UN MISMO SHABAT</span>
         <h2 id="shabatJourneyTitle">De recibir la luz<br>a despedirla con belleza.</h2>
-        <p>Las lecturas presentan prácticas de la tradición judía. Las propuestas de Dérej son invitaciones libres para la vida cotidiana; no requieren observancia religiosa.</p>
+        <p>Conoce primero la tradición. Después, si quieres, elige una reflexión o una acción cotidiana propuesta por Dérej. No necesitas recorrer las seis puertas ni practicar rituales.</p>
       </header>
       <div class="shabatJourneyLine" aria-hidden="true"></div>
       <div id="shabatGates"></div>
@@ -19296,8 +19296,8 @@ loadRamak();
       <div class="shabatReading">
         <div class="shabatPracticeTitle"><b>${x.practica.titulo}</b><span>PROPUESTA DÉREJ · 7 OPCIONES</span></div>
         <div class="shabatDays" aria-label="Elegir día">${x.practica.dias.map((d,i)=>`<button type="button" class="shabatDay${i===selectedDay?' on':''}" data-shabat-day="${i}">${d.dia.replace('Día ','D')}</button>`).join('')}</div>
-        <p>Elige una propuesta a tu ritmo. Puedes volver cualquier día.</p><div class="shabatAction">${item.accion}</div>
-        <div class="shabatKavana"><small>CAVANÁ DE LA SEMANA</small><p>“${x.tagline}”</p></div>
+        <p>Elige una sola idea, si lo deseas. Las siete opciones no son tareas obligatorias.</p><div class="shabatAction">${item.accion}</div>
+        <div class="shabatKavana"><small>INTENCIÓN PARA RECORDAR</small><p>“${x.tagline}”</p></div>
       </div>`;
   }
 
@@ -19569,10 +19569,10 @@ loadRamak();
         <h2>${x.titulo}</h2>
         <p class="shabatTranslit">${x.tituloHeb} · ${x.translit}</p>
         <p class="shabatTagline">${x.tagline}</p>
-        <div class="shabatTabs" role="tablist" aria-label="Profundidad de lectura">
-          <button type="button" class="shabatTab${selectedTab==='abierta'?' on':''}" data-shabat-tab="abierta">Abierta</button>
-          <button type="button" class="shabatTab${selectedTab==='profunda'?' on':''}" data-shabat-tab="profunda">Profunda</button>
-          <button type="button" class="shabatTab${selectedTab==='practica'?' on':''}" data-shabat-tab="practica">Práctica</button>
+        <div class="shabatTabs" role="tablist" aria-label="Maneras de conocer este tema">
+          <button type="button" class="shabatTab${selectedTab==='abierta'?' on':''}" data-shabat-tab="abierta">Conocer</button>
+          <button type="button" class="shabatTab${selectedTab==='profunda'?' on':''}" data-shabat-tab="profunda">Profundizar</button>
+          <button type="button" class="shabatTab${selectedTab==='practica'?' on':''}" data-shabat-tab="practica">Llevar</button>
         </div>
         <div id="shabatTabContent">${tabContent(x)}</div>
         <div class="shabatNav">
@@ -21924,7 +21924,7 @@ loadRamak();
       <div class="moedHeroCopy">
         <span class="moedEyebrow">MOED · מועד</span>
         <h1 id="moedTitle">El tiempo<br>respira por<br>estaciones.</h1>
-        <p>Un portal para vivir los tiempos sagrados como señales en el Camino.</p>
+        <p>Conoce las festividades y el calendario judío. Después, elige una reflexión personal sin confundirla con sus rituales.</p>
         <button class="moedEnter" data-moed-scroll="moedJourney">Recorrer los tiempos <span>↓</span></button>
       </div>
     </section>
@@ -22187,7 +22187,7 @@ loadRamak();
     <section class="moedJourney" id="moedJourney" aria-labelledby="moedJourneyTitle">
       <header class="moedJourneyHead">
         <span>CICLOS · ENCUENTROS · SEÑALES</span>
-        <h2 id="moedJourneyTitle">Cada tiempo<br>tiene un propósito.</h2>
+        <h2 id="moedJourneyTitle">Cada tiempo<br>tiene una historia.</h2><p>Elige una festividad para conocer su origen. Las prácticas de Dérej son propuestas voluntarias de estudio y cuidado cotidiano.</p>
       </header>
       <div id="moedCalendarRoot">${window.DerejMoedCalendar?.annual()||''}</div>
       <div id="moedGates" class="moedGates"></div>
@@ -24157,12 +24157,12 @@ loadRamak();
     return `
       <div class="moedReading">
         <div class="moedPracticeHead">
-          <small>PRÁCTICA 7 DÍAS</small>
+          <small>DÉREJ · 7 IDEAS OPCIONALES</small>
           <b>${x.practicaIntro}</b>
         </div>
-        <div class="moedDays" aria-label="Elegir día">${x.practica7.map((d,i)=>`<button type="button" class="moedDay${i===selectedDay?' on':''}" data-moed-day="${i}">D${d.day}</button>`).join('')}</div>
+        <div class="moedDays" aria-label="Elegir una propuesta opcional">${x.practica7.map((d,i)=>`<button type="button" class="moedDay${i===selectedDay?' on':''}" data-moed-day="${i}" aria-label="Opción ${d.day}">${d.day}</button>`).join('')}</div>
         <div class="moedAction"><b>${item.title}</b><p>${item.desc}</p></div>
-        <div class="moedPracticeIntro"><small>ORIENTACIÓN DEL CICLO</small><p>${x.practicaIntro}</p></div>
+        <p class="moedDateNote">Puedes elegir una idea sin completar las siete. Estas propuestas de Dérej no sustituyen ni representan las observancias rituales judías.</p>
       </div>`;
   }
 
@@ -24436,10 +24436,10 @@ loadRamak();
         <p class="moedTagline">${x.tag}</p>
         ${window.DerejMoedCalendar?.detail(x.id)||''}
         ${x.experiences?.length?experienceDoors(x):''}
-        <div class="moedTabs" role="tablist" aria-label="Profundidad de lectura">
-          <button type="button" class="moedTab${selectedTab==='abierta'?' on':''}" data-moed-tab="abierta">Abierta</button>
-          <button type="button" class="moedTab${selectedTab==='profunda'?' on':''}" data-moed-tab="profunda">Profunda</button>
-          <button type="button" class="moedTab${selectedTab==='practica'?' on':''}" data-moed-tab="practica">${x.experiences?.length?'Experiencias':'Práctica'}</button>
+        <div class="moedTabs" role="tablist" aria-label="Maneras de conocer este tema">
+          <button type="button" class="moedTab${selectedTab==='abierta'?' on':''}" data-moed-tab="abierta">Conocer</button>
+          <button type="button" class="moedTab${selectedTab==='profunda'?' on':''}" data-moed-tab="profunda">Profundizar</button>
+          <button type="button" class="moedTab${selectedTab==='practica'?' on':''}" data-moed-tab="practica">${x.experiences?.length?'Experiencias':'Llevar'}</button>
         </div>
         <div id="moedTabContent">${tabContent(x)}</div>
         <div class="moedNav">
