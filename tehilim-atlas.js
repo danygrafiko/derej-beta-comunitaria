@@ -82,7 +82,7 @@ function render(){
 async function open(){
  panel.querySelector('#thAtlasLoad').textContent='Cargando atlas…';
  try{
-  if(!data){const res=await fetch('content/tehilim/atlas-corporal.json',{cache:'no-store'});if(!res.ok)throw Error('Atlas no disponible');data=await res.json();if(!Array.isArray(data.regions)||data.regions.length<10)throw Error('Atlas incompleto');
+  if(!data){const res=await fetch('content/tehilim/atlas-corporal.json?v=claridad-20261118-2',{cache:'no-store'});if(!res.ok)throw Error('Atlas no disponible');data=await res.json();if(!Array.isArray(data.regions)||data.regions.length<10)throw Error('Atlas incompleto');
    const select=$('thAtlasRegion');select.replaceChildren(...data.regions.map(x=>{const o=document.createElement('option');o.value=x.id;o.textContent=x.name;return o;}));
    const times=$('thAtlasTime');times.replaceChildren(...data.times.map(x=>{const o=document.createElement('option');o.value=x.id;o.textContent=x.name;return o;}));
    $('thAtlasIntro').textContent='Un espacio para leer con atención y acompañar lo que estás viviendo.';
