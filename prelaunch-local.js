@@ -1,7 +1,7 @@
 /* DÉREJ v2.5.2 · UX móvil · Caminos Diarios */
 const screens=[...document.querySelectorAll('[data-screen]')];
 const $=id=>document.getElementById(id);
-const RAMAK_URL='content/caminos-ramak-v25.json?v=hitbodedut-sencilla-20261118-1';
+const RAMAK_URL='content/caminos-ramak-v25.json?v=preguntas-claras-20261118-1';
 const BIBLICAL_BOOK_ES={
   'Bereshit':'Génesis',
   'Shemot':'Éxodo',
@@ -7454,6 +7454,7 @@ function prepareCaminoShell(){
       .ramakSceneTitle h2{font:clamp(2rem,8.5vw,3rem)/.96 Georgia,serif;margin:.25em 0 0;color:#fff2d8;text-shadow:0 2px 16px #000}
       .ramakBody{padding:18px}
       .ramakBodyEyebrow{font-size:.58rem;letter-spacing:.15em;font-weight:900;color:#796947}
+      .ramakStageIntro{margin:9px 0 14px;color:#685c4c;font:.86rem/1.48 Georgia,serif}
       .ramakReflection{margin:13px 0 0;padding:16px;border-left:5px solid var(--ramak-accent);border-radius:17px;background:color-mix(in srgb,var(--ramak-accent),#fff8e9 82%)}
       .ramakReflection small,.ramakCard small,.ramakVoice small{display:block;font-size:.55rem;letter-spacing:.14em;font-weight:900;color:#6d654f;margin-bottom:6px}
       .ramakReflection p{margin:0;font:1.14rem/1.48 Georgia,serif;color:#383129}
@@ -8560,7 +8561,7 @@ function navButtons(step){
   const order=['encuentro','raiz','profundizar','practica','llevar'];
   const i=order.indexOf(step);
   const prev=i>0?`<button type="button" data-ramak-step="${order[i-1]}">← ${['Encuentro','Raíz','Profundizar','Práctica','Llevar'][i-1]}</button>`:'<span></span>';
-  const next=i<order.length-1?`<button type="button" data-ramak-step="${order[i+1]}">${['Encuentro','Raíz','Profundizar','Práctica','Llevar'][i+1]} →</button>`:'<button type="button" data-route="personal">Ir a Mi Camino →</button>';
+  const next=i<order.length-1?`<button type="button" data-ramak-step="${order[i+1]}">${step==='encuentro'?'Conocer el pasaje':['Encuentro','Raíz','Profundizar','Práctica','Llevar'][i+1]} →</button>`:'<button type="button" data-route="personal">Ir a Mi Camino →</button>';
   return `<div class="ramakNav">${prev}${next}</div>`;
 }
 
@@ -9398,7 +9399,7 @@ function renderPanels(p,c){
     ${scene(c,'01 · ENCUENTRO')}
     <div class="ramakBody">
       <span class="ramakBodyEyebrow">${esc(p.parasha)} · ${esc(c.sefira)}${colorName}</span>
-      <div class="ramakReflection"><small>PREGUNTA PARA HOY</small><p>${esc(c.reflexion)}</p></div>
+      <div class="ramakReflection"><small>PARA REFLEXIONAR HOY</small><p>${esc(c.reflexion)}</p></div>
       ${navButtons('encuentro')}
     </div>`;
 
@@ -9661,6 +9662,7 @@ function renderPanels(p,c){
     ${scene(c,'02 · RAÍZ')}
     <div class="ramakBody">
       <span class="ramakBodyEyebrow">RAÍZ · ${esc(p.parasha)}</span>
+      <p class="ramakStageIntro">Este es el pasaje que inspira la reflexión de hoy.</p>
       <div class="ramakCard ramakVerseCard">
         <div class="ramakHebrew" lang="he" dir="rtl">${esc(normalizeHebrewText(pasuk.hebreo))}</div>
         ${pasuk.es?`<p class="derejVerseTranslation">${esc(pasuk.es)}</p>`:''}
