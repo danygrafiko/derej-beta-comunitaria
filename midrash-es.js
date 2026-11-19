@@ -38,10 +38,10 @@
     notes.appendChild(noteBody);article.appendChild(notes);
     const rootNav=rootBody.querySelector('.ramakNav');if(rootNav)rootNav.before(article);else rootBody.appendChild(article);
     const questions=document.createElement('details');questions.id='derejMidrashQuestions';questions.dataset.dayKey=key;
-    const summary=document.createElement('summary');summary.textContent='Preguntas para conversar';questions.appendChild(summary);
+    const summary=document.createElement('summary');summary.textContent='Dos preguntas opcionales';questions.appendChild(summary);
     const questionBody=document.createElement('div');questionBody.className='midrashQuestionsBody';
     paragraph(questionBody,`Sobre el estudio de hoy y «${item.title}».`,'midrashQuestionsIntro');
-    const list=document.createElement('ol');item.questions.forEach(text=>{const li=document.createElement('li');li.textContent=text;list.appendChild(li);});
+    const list=document.createElement('ol');item.questions.forEach((text,i)=>{const li=document.createElement('li');li.textContent=(i===0?'Para comprender el Midrash: ':'Para tu vida: ')+text;list.appendChild(li);});
     questionBody.appendChild(list);questions.appendChild(questionBody);
     const depthNav=depthBody.querySelector('.ramakNav');if(depthNav)depthNav.before(questions);else depthBody.appendChild(questions);
   }

@@ -55,8 +55,8 @@ window.DEREJ_MEDITACION = {
           "text": "Antes de una reunión difícil, podrías decir en palabras propias: «Creador de todo, ayúdame a hablar con claridad y a escuchar lo que todavía no comprendo». Después observa si dejaste terminar a la otra persona. Esa conducta ofrece un criterio más concreto que la sensación de haber orado bien."
         },
         {
-          "title": "Pregunta para estudiar",
-          "text": "¿Qué diferencia hay entre desear algo, prestar atención y comprometerse a actuar? Escribe un ejemplo en el que esas tres cosas hayan ido juntas y otro en el que se hayan separado."
+          "title": "Para reflexionar",
+          "text": "¿Cómo cambia mi manera de actuar cuando presto atención a lo que hago?"
         },
         {
           "title": "Alcance",
@@ -89,8 +89,8 @@ window.DEREJ_MEDITACION = {
           "text": "Si contemplas la gratitud, recuerda quiénes hicieron posible una comida: quienes cultivaron, transportaron, cocinaron o compartieron. Después dirige tu agradecimiento al Creador de todo y elige una persona a quien agradecer de manera concreta. La pregunta es cómo lo comprendido modifica tu forma de recibir."
         },
         {
-          "title": "Pregunta para estudiar",
-          "text": "¿Qué parte de la idea entiendo con claridad y qué parte repito porque me resulta familiar?"
+          "title": "Para reflexionar",
+          "text": "¿Qué parte de esta enseñanza comprendo realmente?"
         },
         {
           "title": "Alcance",
@@ -123,8 +123,8 @@ window.DEREJ_MEDITACION = {
           "text": "Una oración original para esta guía podría ser: «Creador de todo, hoy respondí con dureza. Me cuesta admitir que estaba cansado y quería tener razón. Ayúdame a pedir disculpas sin justificarme y a preparar mejor esa conversación». La práctica continúa al realizar la reparación que corresponda."
         },
         {
-          "title": "Pregunta para estudiar",
-          "text": "¿Qué estoy evitando decir por temor a reconocerlo ante mí mismo?"
+          "title": "Para reflexionar",
+          "text": "¿Qué necesito decir con sinceridad, aunque me cueste?"
         },
         {
           "title": "Alcance",
@@ -157,8 +157,8 @@ window.DEREJ_MEDITACION = {
           "text": "Al escuchar a una persona, puedes recordar interiormente que ese encuentro merece cuidado. Después presta atención a sus palabras sin adelantar tu respuesta. El ejercicio vincula el recuerdo espiritual con una atención concreta al otro; esta aplicación es nuestra propuesta de lectura."
         },
         {
-          "title": "Pregunta para estudiar",
-          "text": "¿Cómo distinguir una conciencia de compañía de una vigilancia interior que me vuelve rígido? Examina qué interpretación favorece una responsabilidad serena."
+          "title": "Para reflexionar",
+          "text": "¿Esta práctica me ayuda a sentirme acompañado y a actuar con serenidad?"
         },
         {
           "title": "Alcance",
@@ -191,8 +191,8 @@ window.DEREJ_MEDITACION = {
           "text": "Al leer un texto sobre confianza, podrías preguntarte qué responsabilidad te corresponde cumplir y qué resultado está fuera de tu control. Esa pregunta permite trabajar la confianza sin usar el versículo para evitar una decisión. El vínculo con la experiencia es interpretativo y debe contrastarse con el contexto."
         },
         {
-          "title": "Pregunta para estudiar",
-          "text": "¿Estoy dejando que el texto cuestione mi idea inicial, o solo busco una frase que la confirme?"
+          "title": "Para reflexionar",
+          "text": "¿Qué parte del texto me ayuda a revisar una idea que tenía?"
         },
         {
           "title": "Alcance",
@@ -225,8 +225,8 @@ window.DEREJ_MEDITACION = {
           "text": "Una pieza nueva podría acompañar el estudio de la hospitalidad con una melodía sencilla y pausas amplias. La presentaríamos como composición contemporánea de Radio Dérej. Para llamarla nigún tradicional deberíamos contar con una procedencia verificable. Una obra generada con IA también debe identificar su carácter contemporáneo."
         },
         {
-          "title": "Pregunta para estudiar",
-          "text": "¿La música me ayuda a atender el contenido, o me lleva a buscar únicamente una emoción agradable?"
+          "title": "Para reflexionar",
+          "text": "¿La música me ayuda a escuchar con más atención?"
         },
         {
           "title": "Alcance",
@@ -259,8 +259,8 @@ window.DEREJ_MEDITACION = {
           "text": "Si eliges jésed, podrías ofrecer ayuda durante un tiempo acordado. Si trabajas guevurá, podrías practicar un límite claro sin humillar. El seguimiento consiste en observar cómo actuaste y cómo recibió la otra persona esa acción. La reflexión se corrige al encontrarse con la realidad."
         },
         {
-          "title": "Pregunta para estudiar",
-          "text": "¿Qué cualidad necesito cultivar para responder mejor a esta situación y no solo para sentirme mejor conmigo mismo?"
+          "title": "Para reflexionar",
+          "text": "¿Qué cualidad quiero practicar en mi trato hacia otras personas?"
         },
         {
           "title": "Alcance",
@@ -293,8 +293,8 @@ window.DEREJ_MEDITACION = {
           "text": "Una ficha de álef podría mostrar su forma, su nombre y ejemplos de uso, seguidos por una explicación simbólica atribuida a una fuente concreta. La ficha distinguiría el dato lingüístico de la interpretación. Así evitamos convertir cualquier asociación creativa con una letra en una enseñanza antigua."
         },
         {
-          "title": "Pregunta para estudiar",
-          "text": "¿Qué parte de lo que sé sobre esta letra procede de la lengua y qué parte pertenece a una interpretación simbólica específica?"
+          "title": "Para reflexionar",
+          "text": "¿Qué sé de esta letra por el idioma y qué proviene de una interpretación simbólica?"
         },
         {
           "title": "Alcance",
@@ -327,8 +327,8 @@ window.DEREJ_MEDITACION = {
           "text": "Como ejercicio propio de Dérej, puedes revisar si tu pensamiento, tu palabra y tu acción coinciden en una promesa concreta. Quizás dijiste que escucharías a alguien y sigues posponiéndolo. Dar un paso para cumplirlo trabaja la coherencia personal. Lo identificamos expresamente como reflexión ética contemporánea, sin atribuirle la condición técnica o los efectos espirituales de un yijud."
         },
         {
-          "title": "Pregunta para estudiar",
-          "text": "¿Qué se pierde cuando una práctica se extrae de sus textos y se presenta como una técnica rápida disponible para cualquier fin?"
+          "title": "Para reflexionar",
+          "text": "¿Por qué es importante conocer el contexto antes de practicar una enseñanza?"
         },
         {
           "title": "Alcance",
@@ -361,8 +361,8 @@ window.DEREJ_MEDITACION = {
           "text": "Ante una observación incómoda, puedes preguntar primero qué parte es cierta. Si corresponde, reconoce el error y corrígelo. Si la observación es injusta, responde con claridad. Para nuestro trabajo comunitario, la humildad permite aprender y también ejercer el juicio con cuidado."
         },
         {
-          "title": "Pregunta para estudiar",
-          "text": "¿Puedo reconocer que dependo del Creador de todo sin desentenderme de lo que debo hacer?"
+          "title": "Para reflexionar",
+          "text": "¿Cómo puedo confiar en el Creador de todo y asumir mis responsabilidades?"
         },
         {
           "title": "Alcance",
