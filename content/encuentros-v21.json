@@ -17,7 +17,7 @@
       "heb": "בְּרֵאשִׁית",
       "fecha": "25 Elul - 2 Tishrei",
       "tema": "De Tohu a Tikun — traer luz al caos",
-      "pregunta": "¿Qué mundo estás creando con lo que haces hoy?",
+      "pregunta": "¿Qué cambia a tu alrededor con lo que haces cada día?",
       "status": "Desarrollada",
       "color": "bg-[#1a1a1a] text-white"
     },
@@ -27,7 +27,7 @@
       "heb": "נֹחַ",
       "fecha": "3 - 9 Tishrei",
       "tema": "Sostener el arca cuando afuera diluvia",
-      "pregunta": "¿Qué preservas cuando todo se derrumba?",
+      "pregunta": "¿Qué es importante cuidar en un momento difícil?",
       "status": "Desarrollada",
       "color": "bg-[#E8DDD0] text-[#1a1a1a]"
     },
@@ -37,7 +37,7 @@
       "heb": "לֶךְ-לְךָ",
       "fecha": "10 - 16 Tishrei",
       "tema": "Irte para encontrarte",
-      "pregunta": "¿De qué tierra tienes que salir para volver a ti?",
+      "pregunta": "¿Qué cambio necesitas hacer para crecer?",
       "status": "Desarrollada",
       "color": "bg-[#1a1a1a] text-white"
     },
@@ -47,7 +47,7 @@
       "heb": "וַיֵּרָא",
       "fecha": "17 - 23 Tishrei",
       "tema": "Abrir la tienda en tiempos cerrados",
-      "pregunta": "¿A quién le abres la puerta cuando es incómodo?",
+      "pregunta": "¿A quién te gustaría recibir con más generosidad?",
       "status": "Estructura lista",
       "color": "bg-white border border-[#E8DDD0] text-[#1a1a1a]"
     },
@@ -57,7 +57,7 @@
       "heb": "חַיֵּי שָׂרָה",
       "fecha": "24 - 30 Tishrei",
       "tema": "Comprar tierra con futuro",
-      "pregunta": "¿Qué lugar eliges para enterrar tu amor?",
+      "pregunta": "¿Cómo te gustaría honrar a quienes has amado?",
       "status": "Estructura lista",
       "color": "bg-white border border-[#E8DDD0] text-[#1a1a1a]"
     },
@@ -67,7 +67,7 @@
       "heb": "תּוֹלְדֹת",
       "fecha": "1 - 7 Jeshván",
       "tema": "¿Qué herencia dejas?",
-      "pregunta": "¿Qué bendición estás peleando que no te corresponde?",
+      "pregunta": "¿Cómo distingues entre lo que deseas y lo que te corresponde?",
       "status": "Estructura lista",
       "color": "bg-white border border-[#E8DDD0] text-[#1a1a1a]"
     },
@@ -77,7 +77,7 @@
       "heb": "וַיֵּצֵא",
       "fecha": "8 - 14 Jeshván",
       "tema": "Convertir piedra en altar",
-      "pregunta": "¿Dónde duermes incómodo y despiertas con promesa?",
+      "pregunta": "¿Qué aprendizaje ha nacido de una etapa incómoda?",
       "status": "Estructura lista",
       "color": "bg-[#E8DDD0] text-[#1a1a1a]"
     },
@@ -87,7 +87,7 @@
       "heb": "וַיִּשְׁלַח",
       "fecha": "15 - 21 Jeshván",
       "tema": "Luchar con el ángel y no soltarte hasta bendecir",
-      "pregunta": "¿Con qué parte de ti tienes que pelear para nombrarte?",
+      "pregunta": "¿Qué dificultad interna te gustaría afrontar con sinceridad?",
       "status": "Estructura lista",
       "color": "bg-white border border-[#E8DDD0] text-[#1a1a1a]"
     },
@@ -97,7 +97,7 @@
       "heb": "וַיֵּשֶׁב",
       "fecha": "22 - 28 Jeshván",
       "tema": "Sostener el sueño cuando te venden",
-      "pregunta": "¿Qué sueño tuyo sigue vivo en el pozo?",
+      "pregunta": "¿Qué esperanza sigues cuidando en una etapa difícil?",
       "status": "Estructura lista",
       "color": "bg-white border border-[#E8DDD0] text-[#1a1a1a]"
     },
@@ -107,7 +107,7 @@
       "heb": "מִקֵּץ",
       "fecha": "29 Jeshván - 5 Kislev",
       "tema": "Interpretar el hambre ajena",
-      "pregunta": "¿Qué escasez sabes leer en otros?",
+      "pregunta": "¿Qué necesidad ajena podrías ayudar a atender?",
       "status": "Estructura lista",
       "color": "bg-white border border-[#E8DDD0] text-[#1a1a1a]"
     },
@@ -117,7 +117,7 @@
       "heb": "וַיִּגַּשׁ",
       "fecha": "6 - 12 Kislev",
       "tema": "Acercarte cuando podrías vengarte",
-      "pregunta": "¿Te acercas o cobras la cuenta?",
+      "pregunta": "¿Cómo te acercas a alguien después de un conflicto?",
       "status": "Estructura lista",
       "color": "bg-[#E8DDD0] text-[#1a1a1a]"
     },
@@ -127,7 +127,7 @@
       "heb": "וַיְחִי",
       "fecha": "13 - 19 Kislev",
       "tema": "Bendecir antes de irte",
-      "pregunta": "¿Cómo te despides dejando vida?",
+      "pregunta": "¿Qué enseñanza te gustaría dejar a quienes amas?",
       "status": "Estructura lista",
       "color": "bg-[#1a1a1a] text-white"
     }
@@ -139,29 +139,29 @@
       "parashaHeb": "בראשית",
       "aliyah": "Rishon · 1:1-1:5",
       "shoresh": "תֹהוּ · Tohu vaVohu",
-      "pregunta": "¿Qué haces cuando todo es caos?",
+      "pregunta": "Cuando todo parece desordenado, ¿qué haces primero?",
       "alternativas": [
         {
           "id": "A",
-          "texto": "Te paralizas. Esperas que el orden venga de afuera.",
+          "texto": "Me cuesta empezar y necesito una pausa.",
           "mida": "Shomer",
           "midahDesc": "Custodia temerosa"
         },
         {
           "id": "B",
-          "texto": "Intentas controlar todo. Pones orden rápido para no sentir.",
+          "texto": "Quiero ordenar todo de inmediato.",
           "mida": "Shomer",
           "midahDesc": "Custodia ansiosa"
         },
         {
           "id": "C",
-          "texto": "Nombras el caos sin huir. Dices: esto es tohu, y aún así estoy.",
+          "texto": "Primero intento nombrar lo que está pasando.",
           "mida": "Bore",
           "midahDesc": "Crea presencia"
         },
         {
           "id": "D",
-          "texto": "Traes un gesto mínimo de orden que otros puedan continuar.",
+          "texto": "Prefiero comenzar con una pequeña acción.",
           "mida": "Bore",
           "midahDesc": "Crea futuro"
         }
@@ -189,29 +189,29 @@
       "parashaHeb": "בראשית",
       "aliyah": "Sheni · 1:6-1:8",
       "shoresh": "אוֹר · Yehi Or",
-      "pregunta": "¿Dónde eliges traer luz hoy?",
+      "pregunta": "¿En qué situación podrías ayudar hoy con un gesto pequeño?",
       "alternativas": [
         {
           "id": "A",
-          "texto": "Esperas a sentirte iluminado para actuar.",
+          "texto": "Necesito entender la situación antes de ayudar.",
           "mida": "Shomer",
           "midahDesc": "Pasividad luminosa"
         },
         {
           "id": "B",
-          "texto": "Iluminas donde ya hay luz, donde es fácil que te aplaudan.",
+          "texto": "Empiezo por lo que ya funciona bien.",
           "mida": "Shomer",
           "midahDesc": "Luz de vitrina"
         },
         {
           "id": "C",
-          "texto": "Nombras una oscuridad concreta en tu entorno y llevas ahí una palabra.",
+          "texto": "Busco una dificultad concreta que puedo atender.",
           "mida": "Bore",
           "midahDesc": "Luz que nombra"
         },
         {
           "id": "D",
-          "texto": "Eres luz sin decir que eres luz: haces visible algo invisible de otro.",
+          "texto": "Intento ayudar sin buscar reconocimiento.",
           "mida": "Bore",
           "midahDesc": "Luz que revela"
         }
@@ -239,29 +239,29 @@
       "parashaHeb": "בראשית",
       "aliyah": "Shlishi · 1:9-1:13",
       "shoresh": "פְּרִי · Etz Pri",
-      "pregunta": "¿Das fruto o solo sombra?",
+      "pregunta": "¿Cómo compartes algo bueno para que otros también puedan crecer?",
       "alternativas": [
         {
           "id": "A",
-          "texto": "Das sombra: estás, pero nadie puede comer de ti.",
+          "texto": "Acompaño con mi presencia, aunque no sepa qué ofrecer.",
           "mida": "Shomer",
           "midahDesc": "Presencia estéril"
         },
         {
           "id": "B",
-          "texto": "Das fruto pero amargo: ayudas con culpa, con cuenta.",
+          "texto": "A veces espero que reconozcan mi ayuda.",
           "mida": "Shomer",
           "midahDesc": "Fruto con espina"
         },
         {
           "id": "C",
-          "texto": "Das fruto que contiene semilla: lo que das puede reproducirse sin ti.",
+          "texto": "Comparto lo que sé para que otros continúen.",
           "mida": "Bore",
           "midahDesc": "Fruto generativo"
         },
         {
           "id": "D",
-          "texto": "Eres árbol frutal, no solo fruto: sostienes proceso.",
+          "texto": "Prefiero construir algo que crezca con el tiempo.",
           "mida": "Bore",
           "midahDesc": "Fruto enraizado"
         }
@@ -289,29 +289,29 @@
       "parashaHeb": "בראשית",
       "aliyah": "Revií · 1:14-1:19",
       "shoresh": "מוֹעֵד · Meorot",
-      "pregunta": "¿Qué tiempo gobierna tu tiempo?",
+      "pregunta": "¿Cómo decides qué merece tu tiempo?",
       "alternativas": [
         {
           "id": "A",
-          "texto": "El tiempo del reloj externo: corres atrás de urgencias.",
+          "texto": "Atiendo primero lo que parece urgente.",
           "mida": "Shomer",
           "midahDesc": "Tiempo esclavo"
         },
         {
           "id": "B",
-          "texto": "El tiempo infinito: todo es \"algún día\", nada aterriza.",
+          "texto": "Me cuesta decidir cuándo empezar.",
           "mida": "Shomer",
           "midahDesc": "Tiempo etéreo"
         },
         {
           "id": "C",
-          "texto": "El tiempo de moed: marcas hitos, fiestas, cierres que te ordenan.",
+          "texto": "Me ayudan las fechas y los ritmos compartidos.",
           "mida": "Bore",
           "midahDesc": "Tiempo sagrado"
         },
         {
           "id": "D",
-          "texto": "El tiempo que gobiernas tú: decides qué no entra en tu calendario.",
+          "texto": "Pongo límites para cuidar lo importante.",
           "mida": "Bore",
           "midahDesc": "Tiempo soberano"
         }
@@ -339,29 +339,29 @@
       "parashaHeb": "בראשית",
       "aliyah": "Jamishi · 1:20-1:23",
       "shoresh": "נֶפֶשׁ חַיָּה · Nefesh Jaya",
-      "pregunta": "¿Cómo cuidas la vida que no habla?",
+      "pregunta": "¿Cómo cuidas a los seres vivos que dependen de ti?",
       "alternativas": [
         {
           "id": "A",
-          "texto": "Ni la ves. La vida no humana es fondo, no figura.",
+          "texto": "A veces no noto la vida que me rodea.",
           "mida": "Shomer",
           "midahDesc": "Ceguera"
         },
         {
           "id": "B",
-          "texto": "La usas. Te sirve mientras sea útil.",
+          "texto": "Me fijo primero en mis necesidades.",
           "mida": "Shomer",
           "midahDesc": "Utilitarismo"
         },
         {
           "id": "C",
-          "texto": "La reconoces como nefesh: alma viviente, no recurso.",
+          "texto": "Recuerdo que otros seres vivos también necesitan cuidado.",
           "mida": "Bore",
           "midahDesc": "Reconocimiento"
         },
         {
           "id": "D",
-          "texto": "Te haces responsable de una vida concreta que depende de ti hoy.",
+          "texto": "Intento proteger una vida cercana de manera concreta.",
           "mida": "Bore",
           "midahDesc": "Ahrayut"
         }
@@ -389,29 +389,29 @@
       "parashaHeb": "בראשית",
       "aliyah": "Shishi · 1:24-2:3",
       "shoresh": "נַעֲשֶׂה · Naasé Adam",
-      "pregunta": "¿Con quién co-creas?",
+      "pregunta": "¿Con quién te gustaría construir algo en colaboración?",
       "alternativas": [
         {
           "id": "A",
-          "texto": "Crees solo. El Creador en plural te da miedo.",
+          "texto": "Me resulta más fácil trabajar por mi cuenta.",
           "mida": "Shomer",
           "midahDesc": "Soledad creadora"
         },
         {
           "id": "B",
-          "texto": "Co-creas solo con quien piensa como tú.",
+          "texto": "Busco personas con ideas parecidas.",
           "mida": "Shomer",
           "midahDesc": "Tribu cerrada"
         },
         {
           "id": "C",
-          "texto": "Invitas a otros a decir \"hagamos\" aunque sea incómodo.",
+          "texto": "Intento escuchar otras perspectivas.",
           "mida": "Bore",
           "midahDesc": "Plural sagrado"
         },
         {
           "id": "D",
-          "texto": "Co-creas con tu adamá, con tu cuerpo: no solo ideas.",
+          "texto": "Quiero crear junto a otros respetando los límites.",
           "mida": "Bore",
           "midahDesc": "Creación encarnada"
         }
@@ -439,29 +439,29 @@
       "parashaHeb": "בראשית",
       "aliyah": "Shevií · 2:4-4:26",
       "shoresh": "שַׁבָּת · Vayejal",
-      "pregunta": "¿Sabes detenerte para que el mundo respire?",
+      "pregunta": "¿Qué te ayuda a descansar sin sentir que debes hacer más?",
       "alternativas": [
         {
           "id": "A",
-          "texto": "Descansas cuando te caes. El cuerpo te para.",
+          "texto": "Me detengo cuando ya estoy agotado.",
           "mida": "Shomer",
           "midahDesc": "Shabat forzado"
         },
         {
           "id": "B",
-          "texto": "Paras el hacer pero no la mente. Estás en pausa ansiosa.",
+          "texto": "Dejo las tareas pero sigo pensando en ellas.",
           "mida": "Shomer",
           "midahDesc": "Pausa sin presencia"
         },
         {
           "id": "C",
-          "texto": "Detienes tu obra para verla. Te preguntas si es buena.",
+          "texto": "Me ayuda mirar y agradecer lo que ya hice.",
           "mida": "Bore",
           "midahDesc": "Contemplación"
         },
         {
           "id": "D",
-          "texto": "Dejas que otros y la tierra existan sin tu intervención.",
+          "texto": "Dejo espacio para que otros actúen a su manera.",
           "mida": "Bore",
           "midahDesc": "Shabat del mundo"
         }
@@ -489,29 +489,29 @@
       "parashaHeb": "נח",
       "aliyah": "Rishon · 6:9-6:22",
       "shoresh": "צַדִּיק · Ish Tzadik",
-      "pregunta": "¿Qué es ser justo cuando todos se desvían?",
+      "pregunta": "Cuando tu entorno cambia, ¿qué te ayuda a mantener tus valores?",
       "alternativas": [
         {
           "id": "A",
-          "texto": "Justo para ti: te comparas con peores para sentirte bien.",
+          "texto": "Suelo fijarme en lo que hacen los demás.",
           "mida": "Shomer",
           "midahDesc": "Tzidkut comparativa"
         },
         {
           "id": "B",
-          "texto": "Justo solo en privado, en público te adaptas.",
+          "texto": "Me cuesta sostener mis valores frente a otros.",
           "mida": "Shomer",
           "midahDesc": "Tzidkut dividida"
         },
         {
           "id": "C",
-          "texto": "Justo con coherencia, aunque no sea perfecto, en tus generaciones.",
+          "texto": "Busco actuar según mis valores en mi situación.",
           "mida": "Bore",
           "midahDesc": "Tzadik bedorotav"
         },
         {
           "id": "D",
-          "texto": "Justo que camina con Creador de todo, no solo que cumple normas.",
+          "texto": "Me apoyo en mi fe para seguir aprendiendo.",
           "mida": "Bore",
           "midahDesc": "Et haElohim hithalej"
         }
@@ -539,29 +539,29 @@
       "parashaHeb": "נח",
       "aliyah": "Sheni · 7:1-7:16",
       "shoresh": "תֵּבָה · Bo el Teivá",
-      "pregunta": "¿Cuál es tu arca hoy?",
+      "pregunta": "¿Qué necesitas proteger durante una etapa difícil?",
       "alternativas": [
         {
           "id": "A",
-          "texto": "No tienes arca. Te mojas con todos y llamas a eso empatía.",
+          "texto": "Todavía estoy descubriendo qué necesito cuidar.",
           "mida": "Shomer",
           "midahDesc": "Sin límite"
         },
         {
           "id": "B",
-          "texto": "Tu arca es bunker: nadie entra, solo tú sobrevives.",
+          "texto": "Primero busco un lugar seguro para mí.",
           "mida": "Shomer",
           "midahDesc": "Arca ego"
         },
         {
           "id": "C",
-          "texto": "Tu arca tiene puertas y ventanas, entra vida diversa.",
+          "texto": "Quiero protegerme sin aislarme de los demás.",
           "mida": "Bore",
           "midahDesc": "Arca abierta"
         },
         {
           "id": "D",
-          "texto": "Tu arca navega: no es esconderte, es preservar para volver a salir.",
+          "texto": "Cuido lo importante y me preparo para volver a participar.",
           "mida": "Bore",
           "midahDesc": "Arca misión"
         }
@@ -589,29 +589,29 @@
       "parashaHeb": "נח",
       "aliyah": "Shlishi · 7:17-8:14",
       "shoresh": "יוֹנָה · Vayishlaj et haYoná",
-      "pregunta": "¿Cómo sabes cuándo soltar?",
+      "pregunta": "Cuando llega un cambio, ¿cómo sabes que estás listo para avanzar?",
       "alternativas": [
         {
           "id": "A",
-          "texto": "No sueltas nunca. Controlas por si acaso.",
+          "texto": "Me cuesta dejar atrás una etapa.",
           "mida": "Shomer",
           "midahDesc": "Aferramiento"
         },
         {
           "id": "B",
-          "texto": "Sueltas todo rápido para no sentir espera.",
+          "texto": "A veces avanzo antes de sentirme preparado.",
           "mida": "Shomer",
           "midahDesc": "Soltar evasivo"
         },
         {
           "id": "C",
-          "texto": "Soltas con señal: mandas paloma, esperas rama de olivo.",
+          "texto": "Prefiero observar las señales antes de decidir.",
           "mida": "Bore",
           "midahDesc": "Soltar con escucha"
         },
         {
           "id": "D",
-          "texto": "Soltas y aprendes del regreso: si vuelve, aún no es tiempo.",
+          "texto": "Pruebo un paso pequeño y observo cómo resulta.",
           "mida": "Bore",
           "midahDesc": "Soltar que enseña"
         }
@@ -639,29 +639,29 @@
       "parashaHeb": "נח",
       "aliyah": "Revií · 8:15-9:7",
       "shoresh": "קֶשֶׁת · Brit Keshet",
-      "pregunta": "¿Qué pacto renuevas después del diluvio?",
+      "pregunta": "¿Qué compromiso de cuidado te gustaría renovar?",
       "alternativas": [
         {
           "id": "A",
-          "texto": "Haces como si nada pasó. Sigues igual.",
+          "texto": "Me cuesta imaginar que algo cambie después de una crisis.",
           "mida": "Shomer",
           "midahDesc": "Negación"
         },
         {
           "id": "B",
-          "texto": "Prometes que nunca más te va a doler, te endureces.",
+          "texto": "Necesito tiempo antes de hacer promesas.",
           "mida": "Shomer",
           "midahDesc": "Pacto de piedra"
         },
         {
           "id": "C",
-          "texto": "Haces pacto de no destruir, aunque puedas.",
+          "texto": "Quiero comprometerme a evitar daños repetidos.",
           "mida": "Bore",
           "midahDesc": "Pacto de arco"
         },
         {
           "id": "D",
-          "texto": "Pones señal en el cielo: que todos recuerden tu pacto.",
+          "texto": "Me ayudan los recordatorios de lo que he decidido.",
           "mida": "Bore",
           "midahDesc": "Pacto visible"
         }
@@ -689,29 +689,29 @@
       "parashaHeb": "נח",
       "aliyah": "Jamishi · 9:8-10:32",
       "shoresh": "כֶּרֶם · Vayajel Noaj Ish HaAdamá",
-      "pregunta": "¿Qué plantas después de sobrevivir?",
+      "pregunta": "Después de superar una dificultad, ¿qué te gustaría comenzar?",
       "alternativas": [
         {
           "id": "A",
-          "texto": "Nada. Te quedas en sobreviviente eterno.",
+          "texto": "Todavía necesito recuperar fuerzas.",
           "mida": "Shomer",
           "midahDesc": "Trauma"
         },
         {
           "id": "B",
-          "texto": "Plantas viña para emborracharte y olvidar.",
+          "texto": "Estoy buscando una manera sana de consolarme.",
           "mida": "Shomer",
           "midahDesc": "Escape"
         },
         {
           "id": "C",
-          "texto": "Plantas viña para alegrar, pero aprendes límite.",
+          "texto": "Busco alegría sin olvidar mis límites.",
           "mida": "Bore",
           "midahDesc": "Alegría con conciencia"
         },
         {
           "id": "D",
-          "texto": "Vuelves a ser Ish HaAdamá: hombre de la tierra, no solo del arca.",
+          "texto": "Quiero empezar algo nuevo a mi propio ritmo.",
           "mida": "Bore",
           "midahDesc": "Retorno a la tierra"
         }
@@ -739,29 +739,29 @@
       "parashaHeb": "נח",
       "aliyah": "Shishi · 11:1-11:32",
       "shoresh": "מִגְדָּל · Dor HaFlagá",
-      "pregunta": "¿Construyes torre o ciudad?",
+      "pregunta": "¿Qué estás intentando construir junto a otras personas?",
       "alternativas": [
         {
           "id": "A",
-          "texto": "Torre: quieres llegar al cielo para no depender.",
+          "texto": "Me entusiasman los proyectos grandes.",
           "mida": "Shomer",
           "midahDesc": "Torre de control"
         },
         {
           "id": "B",
-          "texto": "Torre con tu nombre: que sepan que tú la hiciste.",
+          "texto": "Me importa que se reconozca mi esfuerzo.",
           "mida": "Shomer",
           "midahDesc": "Torre de ego"
         },
         {
           "id": "C",
-          "texto": "Ciudad: lugar para vivir juntos, no monumento.",
+          "texto": "Me interesa construir un espacio compartido.",
           "mida": "Bore",
           "midahDesc": "Ir"
         },
         {
           "id": "D",
-          "texto": "Lengua compartida pero no única: celebras Babel como diversidad.",
+          "texto": "Me gustaría escuchar historias y perspectivas diferentes.",
           "mida": "Bore",
           "midahDesc": "Ciudad de lenguas"
         }
@@ -789,29 +789,29 @@
       "parashaHeb": "נח",
       "aliyah": "Shevií · Shabat",
       "shoresh": "מְנוּחָה · Shabat Noaj",
-      "pregunta": "¿Qué arca dejas abierta en Shabat?",
+      "pregunta": "¿Qué necesitas dejar pendiente para poder descansar?",
       "alternativas": [
         {
           "id": "A",
-          "texto": "Cierras todo. Shabat como bunker.",
+          "texto": "Necesito desconectarme de las obligaciones.",
           "mida": "Shomer",
           "midahDesc": "Cierre"
         },
         {
           "id": "B",
-          "texto": "Abres todo y te diluyes.",
+          "texto": "Me cuesta decir que no a nuevas demandas.",
           "mida": "Shomer",
           "midahDesc": "Sin borde"
         },
         {
           "id": "C",
-          "texto": "Dejas una ventana abierta: entra luz, no tormenta.",
+          "texto": "Dejo algunas cosas para después sin perder mi descanso.",
           "mida": "Bore",
           "midahDesc": "Ventana de teivá"
         },
         {
           "id": "D",
-          "texto": "Descansas de salvar al mundo y dejas que el mundo te sostenga.",
+          "texto": "Me permito recibir cuidado, no solo ofrecerlo.",
           "mida": "Bore",
           "midahDesc": "Menuhá"
         }
@@ -839,29 +839,29 @@
       "parashaHeb": "לך לך",
       "aliyah": "Rishon · 12:1-12:13",
       "shoresh": "לֶךְ · Lej Lejá",
-      "pregunta": "¿De qué tienes que irte para crecer?",
+      "pregunta": "¿Qué cambio te ayudaría a crecer, aunque dé miedo?",
       "alternativas": [
         {
           "id": "A",
-          "texto": "Te vas físicamente pero llevas todo adentro igual.",
+          "texto": "Un cambio de lugar no borra mis preocupaciones.",
           "mida": "Shomer",
           "midahDesc": "Fuga geográfica"
         },
         {
           "id": "B",
-          "texto": "No te vas, aunque sabes que tienes que irte.",
+          "texto": "Siento temor al dejar algo conocido.",
           "mida": "Shomer",
           "midahDesc": "Apego"
         },
         {
           "id": "C",
-          "texto": "Te vas de tu tierra, tu lugar, tu casa paterna — capas de identidad.",
+          "texto": "Me ayuda reconocer qué vínculos quiero conservar.",
           "mida": "Bore",
           "midahDesc": "Lej Lejá de verdad"
         },
         {
           "id": "D",
-          "texto": "Te vas hacia ti: lech lejá es ir a ti, no huir de.",
+          "texto": "Quiero avanzar sin negar mi propia historia.",
           "mida": "Bore",
           "midahDesc": "Retorno"
         }
@@ -889,29 +889,29 @@
       "parashaHeb": "לך לך",
       "aliyah": "Sheni · 12:14-13:4",
       "shoresh": "בְּרָכָה · VeEseja LeGoy Gadol",
-      "pregunta": "¿Qué bendición traes que aún no das?",
+      "pregunta": "¿Qué bien has recibido y te gustaría compartir?",
       "alternativas": [
         {
           "id": "A",
-          "texto": "Crees que no tienes bendición. Te achicas.",
+          "texto": "A veces me cuesta reconocer lo bueno que puedo ofrecer.",
           "mida": "Shomer",
           "midahDesc": "Brajá escondida"
         },
         {
           "id": "B",
-          "texto": "Bendices solo a los tuyos.",
+          "texto": "Me resulta natural cuidar primero a personas cercanas.",
           "mida": "Shomer",
           "midahDesc": "Brajá tribal"
         },
         {
           "id": "C",
-          "texto": "Entiendes que fuiste bendecido para ser bendición.",
+          "texto": "Quisiera compartir lo valioso que recibí.",
           "mida": "Bore",
           "midahDesc": "Venivrejú"
         },
         {
           "id": "D",
-          "texto": "Bendices sin saberlo: tu forma de estar bendice.",
+          "texto": "A veces ayudo de maneras discretas.",
           "mida": "Bore",
           "midahDesc": "Heyé Brajá"
         }
@@ -939,29 +939,29 @@
       "parashaHeb": "לך לך",
       "aliyah": "Shlishi · 13:5-13:18",
       "shoresh": "רָעָב · VaYehi Raav",
-      "pregunta": "¿Qué haces cuando tu promesa pasa hambre?",
+      "pregunta": "Cuando una decisión te trae dificultades, ¿cómo cuidas lo esencial?",
       "alternativas": [
         {
           "id": "A",
-          "texto": "Culpas a la promesa. El Creador no cumplió.",
+          "texto": "Una dificultad puede hacerme dudar de mi decisión.",
           "mida": "Shomer",
           "midahDesc": "Desilusión"
         },
         {
           "id": "B",
-          "texto": "Bajas a Egipto y te olvidas de quién eres para sobrevivir.",
+          "texto": "Primero intento atender la necesidad inmediata.",
           "mida": "Shomer",
           "midahDesc": "Asimilación"
         },
         {
           "id": "C",
-          "texto": "Bajas pero mantienes tu nombre, vuelves enriquecido.",
+          "texto": "Busco conservar mis valores en medio del cambio.",
           "mida": "Bore",
           "midahDesc": "Descenso con retorno"
         },
         {
           "id": "D",
-          "texto": "Entiendes que el hambre es parte del camino de la promesa.",
+          "texto": "Quiero aprender sin idealizar el sufrimiento.",
           "mida": "Bore",
           "midahDesc": "Raav como maestro"
         }
@@ -989,29 +989,29 @@
       "parashaHeb": "לך לך",
       "aliyah": "Revií · 14:1-14:20",
       "shoresh": "נָשָׂא · Al tira, Avram",
-      "pregunta": "¿A quién levantas la mirada?",
+      "pregunta": "Después de un conflicto, ¿qué posibilidades nuevas puedes mirar?",
       "alternativas": [
         {
           "id": "A",
-          "texto": "Miras abajo, a lo que perdiste en la pelea con Lot.",
+          "texto": "Todavía pienso mucho en lo que perdí.",
           "mida": "Shomer",
           "midahDesc": "Mirada de carencia"
         },
         {
           "id": "B",
-          "texto": "Miras solo tu tienda, tu ombligo.",
+          "texto": "Me concentro en mi entorno cercano.",
           "mida": "Shomer",
           "midahDesc": "Mirada corta"
         },
         {
           "id": "C",
-          "texto": "Levantas ojos: norte, sur, este, oeste — todo lo que ves será tuyo si miras amplio.",
+          "texto": "Trato de mirar opciones que antes no veía.",
           "mida": "Bore",
           "midahDesc": "Seet"
         },
         {
           "id": "D",
-          "texto": "Miras al cielo para contar estrellas: aprendes a contar lo incontable.",
+          "texto": "Me permito imaginar posibilidades nuevas.",
           "mida": "Bore",
           "midahDesc": "Mirada de promesa"
         }
@@ -1039,29 +1039,29 @@
       "parashaHeb": "לך לך",
       "aliyah": "Jamishi · 14:21-15:21",
       "shoresh": "בְּתָרִים · Brit Bein HaBetarim",
-      "pregunta": "¿Qué pacto estás dispuesto a partirte?",
+      "pregunta": "¿Qué compromiso quieres sostener aunque todavía haya incertidumbre?",
       "alternativas": [
         {
           "id": "A",
-          "texto": "Quieres pacto sin costo, sin partir nada tuyo.",
+          "texto": "Me cuesta comprometerme si falta información.",
           "mida": "Shomer",
           "midahDesc": "Pacto light"
         },
         {
           "id": "B",
-          "texto": "Partes al otro, no a ti.",
+          "texto": "Busco entender bien antes de prometer.",
           "mida": "Shomer",
           "midahDesc": "Pacto violento"
         },
         {
           "id": "C",
-          "texto": "Te partes tú: tus certezas, en medio, y dejas que el Creador pase entre las partes.",
+          "texto": "Puedo revisar una certeza importante.",
           "mida": "Bore",
           "midahDesc": "Brit que duele"
         },
         {
           "id": "D",
-          "texto": "Haces pacto de noche, con miedo, pero con fuego que pasa.",
+          "texto": "Intento sostener una decisión aun cuando tengo miedo.",
           "mida": "Bore",
           "midahDesc": "Brit de antorcha"
         }
@@ -1089,29 +1089,29 @@
       "parashaHeb": "לך לך",
       "aliyah": "Shishi · 16:1-16:16",
       "shoresh": "רָאָה · Hagar",
-      "pregunta": "¿Ves a quien nadie ve?",
+      "pregunta": "¿A quién podrías prestar más atención hoy?",
       "alternativas": [
         {
           "id": "A",
-          "texto": "No ves. Usas y descartas.",
+          "texto": "A veces no noto las dificultades de otros.",
           "mida": "Shomer",
           "midahDesc": "Invisibilización"
         },
         {
           "id": "B",
-          "texto": "Ves pero tarde, cuando ya se fue al desierto.",
+          "texto": "Reconozco que a veces entiendo demasiado tarde.",
           "mida": "Shomer",
           "midahDesc": "Visión tardía"
         },
         {
           "id": "C",
-          "texto": "Dices: tú eres El Roí, el Creador que me ve, y ves a quien llora.",
+          "texto": "Quiero escuchar a quien suele quedar al margen.",
           "mida": "Bore",
           "midahDesc": "Roí"
         },
         {
           "id": "D",
-          "texto": "Nombras al pozo: Beer Lajai Roí, pozo del Viviente que me ve.",
+          "texto": "Intento reconocer la dignidad de cada persona.",
           "mida": "Bore",
           "midahDesc": "Pozo de visión"
         }
@@ -1139,29 +1139,29 @@
       "parashaHeb": "לך לך",
       "aliyah": "Shevií · 17:1-17:27",
       "shoresh": "בְּרִית · Brit Milá",
-      "pregunta": "¿Qué marca eliges llevar en tu cuerpo?",
+      "pregunta": "¿Qué compromiso importante quieres que se note en tu manera de vivir?",
       "alternativas": [
         {
           "id": "A",
-          "texto": "Llevas marcas que te pusieron, no que elegiste.",
+          "texto": "Estoy tratando de comprender un compromiso heredado.",
           "mida": "Shomer",
           "midahDesc": "Marca heredada"
         },
         {
           "id": "B",
-          "texto": "No marcas nada, todo es fluido, nada te compromete.",
+          "texto": "Prefiero pensar antes de asumir una obligación.",
           "mida": "Shomer",
           "midahDesc": "Sin marca"
         },
         {
           "id": "C",
-          "texto": "Eliges marcar tu carne con pacto: duele, pero dice quién eres.",
+          "texto": "Busco expresar mis convicciones con acciones.",
           "mida": "Bore",
           "midahDesc": "Brit en carne"
         },
         {
           "id": "D",
-          "texto": "Tu marca es para que otros sepan que pertenecen.",
+          "texto": "Quiero recordar mis compromisos de forma respetuosa.",
           "mida": "Bore",
           "midahDesc": "Marca que incluye"
         }
@@ -1188,7 +1188,7 @@
     {
       "dias": "22-28",
       "parasha": "Vayerá",
-      "preguntaMadre": "¿A quién le abres la tienda en tiempos cerrados?",
+      "preguntaMadre": "¿A quién podrías recibir hoy con más generosidad?",
       "practicas": [
         "Hospitalidad radical: invita a alguien distinto a tu mesa",
         "Intercede: reza/discute por Sodoma, por quien no te cae bien",
@@ -1199,7 +1199,7 @@
     {
       "dias": "29-35",
       "parasha": "Jayé Sará",
-      "preguntaMadre": "¿Qué tierra compras con lágrimas para que otros vivan?",
+      "preguntaMadre": "¿Qué gesto puede honrar a alguien que extrañas?",
       "practicas": [
         "Compra lugar: invierte en tierra comunitaria",
         "Duelo que funda: convierte pérdida en herencia",
@@ -1210,7 +1210,7 @@
     {
       "dias": "36-42",
       "parasha": "Toldot",
-      "preguntaMadre": "¿Qué herencia peleas que no es tuya?",
+      "preguntaMadre": "¿Qué deseas sin pasar por encima de otra persona?",
       "practicas": [
         "Revisar bendición robada: ¿dónde manipulas para ser amado?",
         "Cavar pozos: volver a abrir lo que tus padres cavaron",
@@ -1221,7 +1221,7 @@
     {
       "dias": "43-49",
       "parasha": "Vayetzé",
-      "preguntaMadre": "¿Dónde duermes incómodo y despiertas con escala al cielo?",
+      "preguntaMadre": "¿Qué puedes aprender de un momento difícil?",
       "practicas": [
         "Piedra como almohada: dormir en incomodidad con promesa",
         "Trabajar 7 años por amor: amor como trabajo",
@@ -1232,7 +1232,7 @@
     {
       "dias": "50-56",
       "parasha": "Vayishlaj",
-      "preguntaMadre": "¿Con qué ángel tienes que pelear para cambiar de nombre?",
+      "preguntaMadre": "¿Qué parte de tu historia quieres comprender mejor?",
       "practicas": [
         "Lucha nocturna: enfrenta miedo de encuentro con Esaú",
         "Mandar regalos al que te odia",
@@ -1243,7 +1243,7 @@
     {
       "dias": "57-63",
       "parasha": "Vayéshev",
-      "preguntaMadre": "¿Sostienes tu sueño cuando te venden?",
+      "preguntaMadre": "¿Qué sueño quieres seguir cuidando en la dificultad?",
       "practicas": [
         "No vender sueños ajenos",
         "Resistir acoso: Yosef y esposa de Potifar",
@@ -1254,7 +1254,7 @@
     {
       "dias": "64-70",
       "parasha": "Miketz",
-      "preguntaMadre": "¿Sabes leer el hambre de otros?",
+      "preguntaMadre": "¿Qué necesidad de los demás puedes reconocer?",
       "practicas": [
         "Administrar escasez con generosidad",
         "Interpretar sin humillar",
@@ -1265,7 +1265,7 @@
     {
       "dias": "71-77",
       "parasha": "Vayigash",
-      "preguntaMadre": "¿Te acercas cuando podrías vengarte?",
+      "preguntaMadre": "¿Cómo puedes acercarte después de un conflicto?",
       "practicas": [
         "Vayigash: acercamiento radical a quien te dañó",
         "Llorar fuerte para que se escuche",
@@ -1276,7 +1276,7 @@
     {
       "dias": "78-84",
       "parasha": "Vayejí",
-      "preguntaMadre": "¿Cómo bendices antes de irte?",
+      "preguntaMadre": "¿Qué enseñanza querrías compartir antes de despedirte?",
       "practicas": [
         "Bendecir a cada hijo según su camino",
         "Pedir no ser enterrado en lugar ajeno",
@@ -1287,7 +1287,7 @@
     {
       "dias": "85-91",
       "parasha": "Cierre Sefer Bereshit",
-      "preguntaMadre": "¿Qué libro dejas escrito con tu vida?",
+      "preguntaMadre": "¿Qué aprendizaje de este camino quieres conservar?",
       "practicas": [
         "Escribir tu Bereshit personal",
         "Cerrar ciclos con brajá",
@@ -1295,5 +1295,6 @@
       ],
       "tema": "Cierre e inicio"
     }
-  ]
+  ],
+  "revision_preguntas": "2026-11-18 · preguntas claras · alternativas descriptivas sin puntuación espiritual · pasajes y atribuciones conservados"
 }
