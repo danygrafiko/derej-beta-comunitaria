@@ -90,7 +90,7 @@
       "caminos": [
         {
           "dia": 1,
-          "titulo": "OR",
+          "titulo": "Una palabra que trae luz",
           "sefira": "Chesed",
           "ramak_color": {
             "nombre": "Blanco plateado",
@@ -125,14 +125,15 @@
               "texto": "Rabí Najman invita a buscar incluso dentro de uno mismo algún punto real de bien. Una pequeña luz no niega la oscuridad; puede impedir que la oscuridad sea toda la historia."
             }
           },
-          "reflexion": "¿Dónde te ayudaría un poco de claridad hoy?",
+          "reflexion": "¿A quién podrías ayudar hoy con una palabra sincera y amable?",
           "paraLlevar": {
             "avoda": "Piensa en alguien que esté pasando un momento difícil. Dile algo bueno y verdadero que ves en esa persona. Sin aconsejar ni corregir: sólo acompaña.",
             "kavana": "Yehi Or bejayay — Que haya luz en mi vida, también aquí.",
             "hitbodedut": "Agradece algo sencillo que hoy te sostiene."
           },
           "aliya": 1,
-          "aliyaRange": "Bereshit 1:1-2:3"
+          "aliyaRange": "Bereshit 1:1-2:3",
+          "tituloTranslit": "OR"
         },
         {
           "dia": 2,
@@ -185,7 +186,7 @@
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             }
           },
-          "reflexion": "¿Qué lugar está bajo tu cuidado y necesita atención?",
+          "reflexion": "¿Qué espacio de tu casa o comunidad podrías cuidar mejor hoy?",
           "paraLlevar": {
             "avoda": "Dedica siete minutos a cuidar un espacio compartido sin esperar reconocimiento.",
             "kavana": "Recibo este espacio como un lugar del que soy responsable, no como una posesión ilimitada.",
@@ -249,7 +250,7 @@
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             }
           },
-          "reflexion": "¿Qué responsabilidad estás evitando nombrar?",
+          "reflexion": "Cuando cometes un error, ¿cómo puedes reconocerlo sin buscar excusas?",
           "paraLlevar": {
             "avoda": "Reconoce un hecho propio sin añadir de inmediato una justificación.",
             "kavana": "Puedo decir la verdad sobre mis actos sin reducir toda mi identidad a un error.",
@@ -312,7 +313,7 @@
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             }
           },
-          "reflexion": "¿De quién has dejado de saber por falta de atención?",
+          "reflexion": "¿A qué persona podrías llamar hoy para saber cómo está?",
           "paraLlevar": {
             "avoda": "Contacta a alguien para escucharlo, sin exigirle que te cuente más de lo que desea.",
             "kavana": "Quiero permanecer atento a la vida de mi hermano sin decidir por él.",
@@ -438,7 +439,7 @@
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             }
           },
-          "reflexion": "¿Qué nombre de tu historia merece ser recordado con gratitud?",
+          "reflexion": "¿A qué persona de tu historia recuerdas con gratitud?",
           "paraLlevar": {
             "avoda": "Anota el nombre de alguien que te transmitió un bien y un gesto suyo que quieras conservar.",
             "kavana": "Me reconozco parte de una historia que puedo recibir, agradecer y también transformar.",
@@ -501,7 +502,7 @@
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             }
           },
-          "reflexion": "¿Qué bien puedes sostener cuando el entorno desalienta?",
+          "reflexion": "¿Qué buena acción puedes mantener, aunque tu entorno no te acompañe?",
           "paraLlevar": {
             "avoda": "Realiza una acción de cuidado que dependa de ti, aunque no cambie todo el problema.",
             "kavana": "Sostendré el bien que está a mi alcance, aunque su alcance sea pequeño.",
@@ -524,7 +525,7 @@
         {
           "dia": 1,
           "sefira": "Chesed",
-          "titulo": "TZADIK TAMIM",
+          "titulo": "Actuar con integridad",
           "pasuk": {
             "hebreo": "נֹחַ אִישׁ צַדִּיק תָּמִים הָיָה בְּדֹרֹתָיו",
             "trans": "Noaj ish tzadik tamim haya bedorotav",
@@ -563,7 +564,8 @@
             "hex": "#E8EAED"
           },
           "aliya": 1,
-          "aliyaRange": "Bereshit 6:9-6:22"
+          "aliyaRange": "Bereshit 6:9-6:22",
+          "tituloTranslit": "TZADIK TAMIM"
         },
         {
           "dia": 2,
@@ -611,7 +613,7 @@
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             }
           },
-          "reflexion": "¿Qué preparación concreta estás postergando?",
+          "reflexion": "¿Qué pequeño preparativo podrías hacer hoy para evitar un problema?",
           "paraLlevar": {
             "avoda": "Completa una tarea preventiva pendiente que proteja a alguien o algo bajo tu cuidado.",
             "kavana": "Me dispongo a preparar a tiempo aquello que puede resguardar una vida.",
@@ -629,7 +631,7 @@
         {
           "dia": 3,
           "sefira": "Tiferet",
-          "titulo": "MABUL - Cuando el orden se rompe",
+          "titulo": "Reconstruir después de una dificultad",
           "pasuk": {
             "hebreo": "וַיְהִי הַמַּבּוּל אַרְבָּעִים יוֹם עַל הָאָרֶץ",
             "trans": "Vayehi hamabul arba'im yom al ha'aretz",
@@ -668,7 +670,8 @@
             "hex": "#FFFBEB"
           },
           "aliya": 3,
-          "aliyaRange": "Bereshit 7:17-8:14"
+          "aliyaRange": "Bereshit 7:17-8:14",
+          "tituloTranslit": "MABUL"
         },
         {
           "dia": 4,
@@ -716,7 +719,7 @@
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             }
           },
-          "reflexion": "¿Qué necesita cuidado al comenzar una nueva etapa?",
+          "reflexion": "Al comenzar una etapa nueva, ¿a quién necesitas tener en cuenta?",
           "paraLlevar": {
             "avoda": "Antes de iniciar algo, conversa con una persona afectada por ese cambio.",
             "kavana": "Quiero entrar en lo nuevo con atención a quienes compartirán sus consecuencias.",
@@ -777,7 +780,7 @@
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             }
           },
-          "reflexion": "¿Qué compromiso de cuidado necesitas recordar?",
+          "reflexion": "¿Qué promesa de cuidado hiciste y te gustaría cumplir?",
           "paraLlevar": {
             "avoda": "Escribe un compromiso pequeño, verificable y respetuoso con otra forma de vida.",
             "kavana": "Haré memoria del vínculo que me une con la vida que me rodea.",
@@ -838,7 +841,7 @@
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             }
           },
-          "reflexion": "¿Cómo respondes ante la vulnerabilidad ajena?",
+          "reflexion": "Si alguien comparte algo íntimo contigo, ¿cómo puedes proteger su privacidad?",
           "paraLlevar": {
             "avoda": "Evita difundir una imagen o detalle íntimo que no tienes autorización para compartir.",
             "kavana": "La vulnerabilidad que otro deja ver merece de mí discreción y respeto.",
@@ -925,7 +928,7 @@
         {
           "dia": 1,
           "sefira": "Chesed",
-          "titulo": "LEJ LEJA - Vete hacia ti",
+          "titulo": "Dar el primer paso hacia un cambio",
           "pasuk": {
             "hebreo": "לֶךְ־לְךָ מֵאַרְצְךָ",
             "trans": "Lej lejá me'artzeja",
@@ -975,7 +978,8 @@
           "aliya": 1,
           "aliyaRange": "Bereshit 12:1-12:13",
           "rootNote": "Génesis 12:1 contiene el llamado a Abram, que parte acompañado por Sarai y Lot. El hebreo mostrado es el fragmento inicial; el español es una paráfrasis del versículo completo. «Vete hacia ti» es una lectura interpretativa del título. Los marcos de las fuentes y nuestras aplicaciones al camino personal se presentan por separado.",
-          "revision_editorial": "v2.7 · marco y aplicación desarrollados · 2026-10-21"
+          "revision_editorial": "v2.7 · marco y aplicación desarrollados · 2026-10-21",
+          "tituloTranslit": "LEJ LEJA"
         },
         {
           "dia": 2,
@@ -1173,7 +1177,7 @@
             "fuente_url": "https://www.sefaria.org/Genesis.14.23"
           },
           "rootNote": "El relato continúa con las necesidades de los compañeros y luego con la promesa de descendencia y las estrellas. La renuncia personal de Abram no borra la parte de otros. El texto español es una paráfrasis de Dérej. Las cuatro voces ofrecen marcos de lectura; sus aplicaciones a esta escena son nuestras y no comentarios directos de los maestros a este versículo.",
-          "reflexion": "¿Qué beneficio podría comprometer tu libertad o perjudicar a otro?",
+          "reflexion": "Antes de aceptar un favor, ¿qué condiciones te gustaría conocer?",
           "paraLlevar": {
             "avoda": "Revisa una oferta o favor pendiente: aclara condiciones, compromisos y derechos de las demás personas.",
             "kavana": "La integridad necesita límites que puedan explicarse.",
@@ -1233,7 +1237,7 @@
             "fuente_url": "https://www.sefaria.org/Genesis.16.13"
           },
           "rootNote": "Esta extensa aliyá comprende el pacto entre las partes, la aflicción anunciada, Hagar e Ishmael y el cambio de nombre de Abram. Hagar es una mujer esclavizada; su retorno en el relato no es un consejo para quien vive violencia. El texto español es una paráfrasis de Dérej. Las cuatro voces ofrecen marcos de lectura; sus aplicaciones a esta escena son nuestras y no comentarios directos de los maestros a este versículo.",
-          "reflexion": "¿Qué persona ha quedado fuera de tu mirada?",
+          "reflexion": "¿A quién de tu entorno conoces poco y podrías escuchar mejor?",
           "paraLlevar": {
             "avoda": "Escucha a alguien cuya experiencia suelas pasar por alto, sin apropiarte de su relato ni exigirle exposición.",
             "kavana": "La responsabilidad comienza por reconocer la situación real de la otra persona.",
@@ -1293,7 +1297,7 @@
             "fuente_url": "https://www.sefaria.org/Genesis.17.19"
           },
           "rootNote": "La última aliyá desarrolla la señal del pacto, el cambio de nombre de Sarai a Sara, el anuncio de Itzjak y la bendición de Ishmael. Estudiar la circuncisión en su contexto no prescribe su práctica a los participantes de Dérej. El texto español es una paráfrasis de Dérej. Las cuatro voces ofrecen marcos de lectura; sus aplicaciones a esta escena son nuestras y no comentarios directos de los maestros a este versículo.",
-          "reflexion": "¿Qué responsabilidad concreta nace de lo que esperas para el futuro?",
+          "reflexion": "¿Qué puedes hacer hoy para cuidar una esperanza que tienes para el futuro?",
           "paraLlevar": {
             "avoda": "Traduce una esperanza en una acción de cuidado que puedas sostener esta semana.",
             "kavana": "Un futuro deseado pide responsabilidad presente.",
@@ -1352,7 +1356,7 @@
           "ramak_color": {
             "hex": "#E8EAED"
           },
-          "titulo": "VAYERA - La tienda abierta",
+          "titulo": "Recibir a otros con atención",
           "pasuk": {
             "hebreo": "וַיָּרָץ לִקְרָאתָם מִפֶּתַח הָאֹהֶל",
             "trans": "Vayaratz likratam mipetaj ha'ohel",
@@ -1408,7 +1412,8 @@
           "aliya": 1,
           "aliyaRange": "Bereshit 18:1-18:14",
           "rootNote": "Abraham está junto a su tienda en Mamré. Al ver a tres visitantes, se acerca, ofrece agua, descanso y alimento; después se anuncia el nacimiento de un hijo de Sara. La hospitalidad ocurre dentro de esa escena y tiene gestos materiales concretos. El español del versículo es una paráfrasis de Dérej. Los marcos de las cuatro fuentes orientan nuestras aplicaciones; no se atribuyen a los maestros comentarios directos sobre esta escena.",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "VAYERA"
         },
         {
           "dia": 2,
@@ -1416,7 +1421,7 @@
           "ramak_color": {
             "hex": "#B85C38"
           },
-          "titulo": "TZEAKAT SEDOM - El clamor",
+          "titulo": "Escuchar el sufrimiento cercano",
           "pasuk": {
             "hebreo": "זַעֲקַת סְדֹם וַעֲמֹרָה כִּי רָבָּה",
             "trans": "Za'akat Sedom va'Amora ki raba",
@@ -1464,7 +1469,8 @@
           "aliya": 2,
           "aliyaRange": "Bereshit 18:15-18:33",
           "rootNote": "El clamor de Sodoma introduce la discusión de Abraham sobre la justicia y la posibilidad de preservar la ciudad. La tradición seleccionada atiende a la violencia contra quien ayuda a una persona pobre. El relato no autoriza a identificar pueblos actuales con Sodoma. El español del versículo es una paráfrasis de Dérej. Los marcos de las cuatro fuentes orientan nuestras aplicaciones; no se atribuyen a los maestros comentarios directos sobre esta escena.",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "TZEAKAT SEDOM"
         },
         {
           "dia": 3,
@@ -1515,7 +1521,7 @@
               "texto": "Habla de aquello que te cuesta dejar y de la ayuda que podrías aceptar. Pedir apoyo puede ser parte del primer paso hacia una situación más segura."
             }
           },
-          "reflexion": "¿Cómo puedes respetar el ritmo de alguien que atraviesa un cambio difícil?",
+          "reflexion": "Cuando alguien está en una situación difícil, ¿cómo puedes ofrecer ayuda sin imponerte?",
           "paraLlevar": {
             "avoda": "Pregunta a alguien qué apoyo concreto le sería útil y respeta su respuesta.",
             "kavana": "La urgencia necesita acciones proporcionadas.",
@@ -1532,7 +1538,7 @@
           "ramak_color": {
             "hex": "#F9C6D0"
           },
-          "titulo": "VAYASHKEM AVRAHAM - Volver por la mañana",
+          "titulo": "Retomar una buena práctica al día siguiente",
           "pasuk": {
             "hebreo": "וַיַּשְׁכֵּם אַבְרָהָם בַּבֹּקֶר",
             "trans": "Vayashkem Avraham baboker",
@@ -1580,7 +1586,8 @@
           "aliya": 4,
           "aliyaRange": "Bereshit 19:21-21:4",
           "rootNote": "Abraham regresa por la mañana al lugar donde había estado ante el Creador y contempla la destrucción de las ciudades. Esta aliyá incluye también el episodio de Sara en Guerar y el nacimiento de Isaac. Volver a orar no permite borrar el duelo ni presentar toda pérdida como una enseñanza necesaria. El español del versículo es una paráfrasis de Dérej. Los marcos de las cuatro fuentes orientan nuestras aplicaciones; no se atribuyen a los maestros comentarios directos sobre esta escena.",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "VAYASHKEM AVRAHAM"
         },
         {
           "dia": 5,
@@ -1631,7 +1638,7 @@
               "texto": "Habla de una necesidad propia sin avergonzarte de ella. Si lo deseas, identifica una persona o un servicio al que puedas pedir apoyo concreto."
             }
           },
-          "reflexion": "¿Qué necesidad material requiere atención antes que un consejo?",
+          "reflexion": "¿A quién podrías ofrecer hoy una ayuda concreta, más allá de darle consejos?",
           "paraLlevar": {
             "avoda": "Ofrece un apoyo concreto, como agua, alimento, traslado o información útil, según lo que la persona necesite.",
             "kavana": "La ayuda se verifica en necesidades atendidas.",
@@ -1708,7 +1715,7 @@
           "ramak_color": {
             "hex": "#1E2A5A"
           },
-          "titulo": "HASHEM YIREH - Nombrar lo visto",
+          "titulo": "Cuidar la vida en una decisión difícil",
           "pasuk": {
             "hebreo": "וַיִּקְרָא אַבְרָהָם שֵׁם־הַמָּקוֹם הַהוּא יְהוָה יִרְאֶה",
             "trans": "Vayikra Avraham shem hamakom hahu Adonai Yireh",
@@ -1747,7 +1754,7 @@
               "texto": "Agradecer una vida preservada puede acompañar el cierre de esta semana. Nuestra aplicación deja espacio al dolor y a las preguntas: no exige agradecer el daño ni idealizar lo sufrido."
             }
           },
-          "reflexion": "¿Qué acción necesitas detener o cambiar para cuidar mejor una vida?",
+          "reflexion": "Antes de tomar una decisión difícil, ¿cómo puedes cuidar a quienes podrían salir afectados?",
           "paraLlevar": {
             "avoda": "Revisa una decisión de esta semana: identifica a quién afecta y un ajuste concreto que cuide mejor a esa persona.",
             "kavana": "Que mi camino cuide la vida.",
@@ -1756,7 +1763,8 @@
           "aliya": 7,
           "aliyaRange": "Bereshit 22:1-22:24",
           "rootNote": "La séptima aliyá narra la Akedá: Isaac es atado, la intervención del mensajero detiene a Abraham y el carnero es ofrecido en lugar del hijo. Después Abraham nombra el lugar. Nuestra lectura conserva la detención del daño y la vida de Isaac; no propone imitar el sacrificio ni justificar violencia como prueba espiritual. El español del versículo es una paráfrasis de Dérej. Los marcos de las cuatro fuentes orientan nuestras aplicaciones; no se atribuyen a los maestros comentarios directos sobre esta escena.",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "HASHEM YIREH"
         }
       ]
     },
@@ -1772,7 +1780,7 @@
           "ramak_color": {
             "hex": "#E8EAED"
           },
-          "titulo": "JAYEI SARA - Una vida que deja huella",
+          "titulo": "Una vida que deja huella",
           "pasuk": {
             "hebreo": "וַיִּהְיוּ חַיֵּי שָׂרָה",
             "trans": "Vayihyu jaye Sara",
@@ -1817,7 +1825,8 @@
           },
           "aliya": 1,
           "aliyaRange": "Bereshit 23:1-23:16",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "JAYEI SARA"
         },
         {
           "dia": 2,
@@ -1929,7 +1938,7 @@
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             }
           },
-          "reflexion": "¿Qué necesidad puedes atender sin prometer más de lo que puedes sostener?",
+          "reflexion": "¿A quién puedes ayudar hoy sin comprometerte a más de lo que puedes hacer?",
           "paraLlevar": {
             "avoda": "Realiza una ayuda específica y acuerda sus límites para evitar el agotamiento.",
             "kavana": "Ofreceré mi ayuda con atención y con límites que permitan seguir cuidando.",
@@ -1990,7 +1999,7 @@
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             }
           },
-          "reflexion": "¿Qué necesitas explicar antes de seguir adelante?",
+          "reflexion": "Antes de continuar una tarea compartida, ¿qué necesitas explicar a los demás?",
           "paraLlevar": {
             "avoda": "Expón con sencillez el propósito y los límites de una tarea compartida.",
             "kavana": "Mantendré presente el propósito compartido al explicar lo que se me ha confiado.",
@@ -2008,7 +2017,7 @@
           "ramak_color": {
             "hex": "#D46A8C"
           },
-          "titulo": "VATIPOL - Descender del camello",
+          "titulo": "Acercarse con respeto",
           "pasuk": {
             "hebreo": "וַתִּפֹּל מֵעַל הַגָּמָל",
             "trans": "Vatipol me'al hagamal",
@@ -2045,7 +2054,7 @@
               "base": "Rabí Najman anima a perseverar en el acercamiento al Creador sin despreciar los pequeños movimientos del camino."
             }
           },
-          "reflexion": "¿Qué te ayudaría a acercarte a alguien importante para ti?",
+          "reflexion": "Cuando te acercas a alguien importante, ¿cómo puedes mostrar respeto y escuchar de verdad?",
           "paraLlevar": {
             "avoda": "En una conversación de hoy, renuncia a una postura de superioridad: pregunta algo que no sabes y escucha la respuesta completa.",
             "kavana": "Vatipol — Puedo descender sin perder mi dignidad.",
@@ -2053,7 +2062,8 @@
           },
           "aliya": 5,
           "aliyaRange": "Bereshit 24:53-24:67",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "VATIPOL"
         },
         {
           "dia": 6,
@@ -2061,7 +2071,7 @@
           "ramak_color": {
             "hex": "#E9A426"
           },
-          "titulo": "VAYEVAREJ ET YITZJAK - La bendición continúa",
+          "titulo": "Transmitir lo bueno que recibimos",
           "pasuk": {
             "hebreo": "וַיְבָרֶךְ אֱלֹהִים אֶת־יִצְחָק בְּנוֹ",
             "trans": "Vayevarej Elohim et Yitzjak beno",
@@ -2106,7 +2116,8 @@
           },
           "aliya": 6,
           "aliyaRange": "Bereshit 25:1-25:11",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "VAYEVAREJ ET YITZJAK"
         },
         {
           "dia": 7,
@@ -2157,7 +2168,7 @@
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             }
           },
-          "reflexion": "¿Qué historia estás dejando fuera cuando cuentas la tuya?",
+          "reflexion": "Cuando cuentas tu historia familiar, ¿a quién podrías incluir también?",
           "paraLlevar": {
             "avoda": "Escucha una memoria familiar o comunitaria desde otra perspectiva, sin exigir una versión única.",
             "kavana": "Dejaré que otras memorias amplíen el relato con el que comprendo mi origen.",
@@ -2183,7 +2194,7 @@
           "ramak_color": {
             "hex": "#E8EAED"
           },
-          "titulo": "VAYETAR YITZJAK - Persistir en la oración",
+          "titulo": "Persistir en la oración",
           "pasuk": {
             "hebreo": "וַיֶּעְתַּר יִצְחָק לַיהוָה לְנֹכַח אִשְׁתּוֹ",
             "trans": "Vayetar Yitzjak laAdonai lenojaj ishto",
@@ -2228,7 +2239,8 @@
           },
           "aliya": 1,
           "aliyaRange": "Bereshit 25:19-26:5",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "VAYETAR YITZJAK"
         },
         {
           "dia": 2,
@@ -2340,7 +2352,7 @@
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             }
           },
-          "reflexion": "¿Qué disputa necesita una salida distinta?",
+          "reflexion": "Si una discusión se repite, ¿qué otra solución podrías intentar?",
           "paraLlevar": {
             "avoda": "Propón una alternativa concreta que cuide las necesidades de ambas partes.",
             "kavana": "Puedo buscar un lugar donde vivir sin convertir cada conflicto en una lucha por vencer.",
@@ -2401,7 +2413,7 @@
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             }
           },
-          "reflexion": "¿Qué base cotidiana necesita ser fortalecida?",
+          "reflexion": "¿Qué tarea de cuidado podrías organizar mejor esta semana?",
           "paraLlevar": {
             "avoda": "Ordena una tarea doméstica o de cuidado que ayude a sostener la semana.",
             "kavana": "Daré valor al trabajo sencillo que hace posible permanecer y construir junto a otros.",
@@ -2419,7 +2431,7 @@
           "ramak_color": {
             "hex": "#D46A8C"
           },
-          "titulo": "HAKOL KOL YAAKOV - La voz y las manos",
+          "titulo": "Que los actos acompañen las palabras",
           "pasuk": {
             "hebreo": "הַקֹּל קוֹל יַעֲקֹב וְהַיָּדַיִם יְדֵי עֵשָׂו",
             "trans": "Hakol kol Yaakov vehayadayim yedei Esav",
@@ -2464,7 +2476,8 @@
           },
           "aliya": 5,
           "aliyaRange": "Bereshit 26:30-27:27",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "HAKOL KOL YAAKOV"
         },
         {
           "dia": 6,
@@ -2472,7 +2485,7 @@
           "ramak_color": {
             "hex": "#E9A426"
           },
-          "titulo": "VAYISA ESAV KOLO VAYEVK - El llanto de Esav",
+          "titulo": "Dar espacio a la tristeza",
           "pasuk": {
             "hebreo": "וַיִּשָּׂא עֵשָׂו קֹלוֹ וַיֵּבְךְּ",
             "trans": "Vayisa Esav kolo vayevk",
@@ -2509,15 +2522,16 @@
               "base": "Rabí Najman describe la conversación personal con el Creador en la lengua habitual de quien habla."
             }
           },
-          "reflexion": "¿Qué necesitas para reconocer una pérdida sin apresurarte a resolverla?",
+          "reflexion": "Cuando sufres una pérdida, ¿qué te ayuda a expresar la tristeza sin apresurarte?",
           "paraLlevar": {
-            "avoda": "Nombra una pérdida o consecuencia que te duela. Luego escribe una sola acción de reparación que aún esté a tu alcance.",
+            "avoda": "Si atravesaste una pérdida, date un momento para reconocer lo que sientes. Si hay algo que se pueda reparar, elige un paso posible sin exigirte resolverlo todo.",
             "kavana": "Beji — Mi dolor puede decir la verdad sin decidir todo mi futuro.",
             "hitbodedut": "Da espacio a una tristeza sin apresurarte a resolverla."
           },
           "aliya": 6,
           "aliyaRange": "Bereshit 27:28-28:4",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "VAYISA ESAV KOLO VAYEVK"
         },
         {
           "dia": 7,
@@ -2525,7 +2539,7 @@
           "ramak_color": {
             "hex": "#1E2A5A"
           },
-          "titulo": "VAYELEJ ESAV - Intentar corregir",
+          "titulo": "Corregir un error sin repetirlo",
           "pasuk": {
             "hebreo": "וַיֵּלֶךְ עֵשָׂו אֶל־יִשְׁמָעֵאל",
             "trans": "Vayelej Esav el Yishmael",
@@ -2562,15 +2576,16 @@
               "base": "Rabí Najman anima a perseverar en el acercamiento al Creador sin despreciar los pequeños movimientos del camino."
             }
           },
-          "reflexion": "Cuando una decisión no funciona, ¿qué necesitas cambiar de verdad?",
+          "reflexion": "Si intentas corregir un error, ¿qué puedes cambiar para no repetirlo?",
           "paraLlevar": {
-            "avoda": "Toma una corrección reciente que estés intentando hacer y pregunta: «¿Qué causa estoy dejando intacta?». Ajusta un paso desde ahí.",
+            "avoda": "Piensa en un cambio que intentaste y no funcionó. Elige una causa que aún puedes atender y ajusta un paso.",
             "kavana": "Vayelej — No sólo me muevo; reviso hacia dónde.",
             "hitbodedut": "Nombra algo que quieres reparar con mayor comprensión."
           },
           "aliya": 7,
           "aliyaRange": "Bereshit 28:5-28:9",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "VAYELEJ ESAV"
         }
       ]
     },
@@ -2586,7 +2601,7 @@
           "ramak_color": {
             "hex": "#E8EAED"
           },
-          "titulo": "VAYETZE - Salir sin saber todavía",
+          "titulo": "Comenzar un cambio sin tener todo resuelto",
           "pasuk": {
             "hebreo": "וַיֵּצֵא יַעֲקֹב מִבְּאֵר שָׁבַע וַיֵּלֶךְ חָרָנָה",
             "trans": "Vayetze Yaakov miBe'er Sheva vayelej Jarana",
@@ -2631,7 +2646,8 @@
           },
           "aliya": 1,
           "aliyaRange": "Bereshit 28:10-28:22",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "VAYETZE"
         },
         {
           "dia": 2,
@@ -2682,7 +2698,7 @@
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             }
           },
-          "reflexion": "¿Qué ayuda práctica puedes ofrecer respetando el lugar del otro?",
+          "reflexion": "Antes de ayudar a alguien, ¿cómo puedes saber qué necesita realmente?",
           "paraLlevar": {
             "avoda": "Pregunta qué tarea sería útil y realiza solo lo acordado.",
             "kavana": "Mi ayuda tendrá en cuenta la voluntad de quien la recibe y el lugar que desea conservar.",
@@ -2743,7 +2759,7 @@
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             }
           },
-          "reflexion": "¿Qué dolor estás dejando de escuchar detrás de una reacción?",
+          "reflexion": "Cuando alguien está triste, ¿cómo puedes escucharlo sin compararlo con otra persona?",
           "paraLlevar": {
             "avoda": "Escucha a una persona sin compararla con otra ni intentar corregir enseguida su emoción.",
             "kavana": "Escucharé el deseo de ser querido sin medirlo con la historia de otra persona.",
@@ -2944,7 +2960,7 @@
           "ramak_color": {
             "hex": "#1E2A5A"
           },
-          "titulo": "HALAJ LEDARKO - Seguir el camino",
+          "titulo": "Seguir adelante con lo aprendido",
           "pasuk": {
             "hebreo": "וְיַעֲקֹב הָלַךְ לְדַרְכּוֹ וַיִּפְגְּעוּ־בוֹ מַלְאֲכֵי אֱלֹהִים",
             "trans": "VeYaakov halaj ledarko vayifge'u vo malajei Elohim",
@@ -2989,7 +3005,8 @@
           },
           "aliya": 7,
           "aliyaRange": "Bereshit 31:43-32:3",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "HALAJ LEDARKO"
         }
       ]
     },
@@ -3005,7 +3022,7 @@
           "ramak_color": {
             "hex": "#E8EAED"
           },
-          "titulo": "VAYISHLAJ - Enviar antes de encontrarse",
+          "titulo": "Preparar una conversación difícil",
           "pasuk": {
             "hebreo": "וַיִּשְׁלַח יַעֲקֹב מַלְאָכִים לְפָנָיו אֶל־עֵשָׂו אָחִיו",
             "trans": "Vayishlaj Yaakov malajim lefanav el Esav ajiv",
@@ -3051,7 +3068,8 @@
           "aliya": 1,
           "rootNote": "מַלְאָכִים (malajim) puede significar «mensajeros» y, en otros contextos, «ángeles». Aquí DÉREJ evita decidir automáticamente que se trata de seres angélicos.",
           "aliyaRange": "Bereshit 32:4-32:13",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "VAYISHLAJ"
         },
         {
           "dia": 2,
@@ -3102,7 +3120,7 @@
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             }
           },
-          "reflexion": "¿Qué conflicto necesitas reconocer antes de resolverlo?",
+          "reflexion": "Ante un conflicto que te preocupa, ¿qué necesitas entender primero?",
           "paraLlevar": {
             "avoda": "Escribe qué sabes, qué temes y qué apoyo necesitas frente a un conflicto.",
             "kavana": "No necesito resolver toda mi lucha esta noche para reconocer que necesito compañía.",
@@ -3224,7 +3242,7 @@
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             }
           },
-          "reflexion": "¿A quién estás dejando atrás por imponer tu velocidad?",
+          "reflexion": "Cuando avanzas con otras personas, ¿cómo puedes respetar sus tiempos?",
           "paraLlevar": {
             "avoda": "Ajusta el ritmo de una tarea compartida después de preguntar por las necesidades de quienes participan.",
             "kavana": "Elegiré un ritmo que permita llegar juntos y no sólo terminar antes.",
@@ -3242,7 +3260,7 @@
           "ramak_color": {
             "hex": "#D46A8C"
           },
-          "titulo": "DINA - La dignidad de quien fue herida",
+          "titulo": "Dina: escuchar sin culpar a quien sufrió daño",
           "pasuk": {
             "hebreo": "וַיִּקַּח אֹתָהּ וַיִּשְׁכַּב אֹתָהּ וַיְעַנֶּהָ",
             "trans": "Vayikaj otah vayishkav otah vaye'aneha",
@@ -3288,7 +3306,8 @@
           "aliya": 5,
           "rootNote": "El texto atribuye la acción violenta a Shejem. DÉREJ no interpreta la salida de Diná como causa ni justificación de la violencia que sufrió.",
           "aliyaRange": "Bereshit 34:1-35:11",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "DINA"
         },
         {
           "dia": 6,
@@ -3339,7 +3358,7 @@
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             }
           },
-          "reflexion": "¿Qué pérdida necesita presencia antes que explicaciones?",
+          "reflexion": "¿Cómo puedes acompañar a alguien que está de duelo sin intentar explicar su pérdida?",
           "paraLlevar": {
             "avoda": "Acompaña a alguien en duelo con una ayuda concreta y sin imponer una interpretación de su pérdida.",
             "kavana": "Daré lugar a la ausencia sin exigir que el dolor encuentre enseguida una explicación.",
@@ -3400,7 +3419,7 @@
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             }
           },
-          "reflexion": "¿Qué sabes de la historia de quienes consideras diferentes?",
+          "reflexion": "¿Qué podrías aprender sobre la historia de una comunidad distinta a la tuya?",
           "paraLlevar": {
             "avoda": "Aprende un dato de una comunidad cercana a partir de una voz que pertenezca a ella.",
             "kavana": "Reconoceré que la memoria de otros pueblos tiene valor más allá de su relación conmigo.",
@@ -3426,7 +3445,7 @@
           "ramak_color": {
             "hex": "#E8EAED"
           },
-          "titulo": "VAYESHEV - Asentarse sin quedar inmóvil",
+          "titulo": "Cambiar sin perder lo que nos cuida",
           "pasuk": {
             "hebreo": "וַיֵּשֶׁב יַעֲקֹב בְּאֶרֶץ מְגוּרֵי אָבִיו",
             "trans": "Vayeshev Yaakov be'eretz megurei aviv",
@@ -3471,7 +3490,8 @@
           },
           "aliya": 1,
           "aliyaRange": "Bereshit 37:1-37:11",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "VAYESHEV"
         },
         {
           "dia": 2,
@@ -3522,7 +3542,7 @@
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             }
           },
-          "reflexion": "¿Qué necesitas comprender antes de aceptar un encargo?",
+          "reflexion": "Antes de aceptar una tarea, ¿qué te gustaría saber para cumplirla bien?",
           "paraLlevar": {
             "avoda": "Aclara el propósito, los límites y los apoyos de una tarea que vas a asumir.",
             "kavana": "Mi disponibilidad irá acompañada de preguntas sobre el cuidado, los límites y el apoyo necesario.",
@@ -3583,7 +3603,7 @@
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             }
           },
-          "reflexion": "¿Qué decisión necesita recuperar la voz de quien será afectado?",
+          "reflexion": "Antes de decidir algo que afecta a otra persona, ¿cómo puedes escuchar su opinión?",
           "paraLlevar": {
             "avoda": "Antes de decidir por alguien, pregunta por su voluntad y por las consecuencias que vivirá.",
             "kavana": "Recordaré que ninguna conveniencia convierte a una persona en un objeto del que disponer.",
@@ -3644,7 +3664,7 @@
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             }
           },
-          "reflexion": "¿Qué verdad necesitas reconocer sin desplazar la culpa?",
+          "reflexion": "Si te equivocaste con alguien, ¿cómo puedes reconocerlo sin culpar a otra persona?",
           "paraLlevar": {
             "avoda": "Corrige una afirmación injusta que hayas hecho sobre otra persona.",
             "kavana": "Estoy dispuesto a rectificar cuando una verdad cuestione la versión que me favorece.",
@@ -3766,7 +3786,7 @@
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             }
           },
-          "reflexion": "¿Qué límite necesitas sostener ante una presión indebida?",
+          "reflexion": "Si alguien te presiona para hacer algo que no quieres, ¿cómo puedes poner un límite seguro?",
           "paraLlevar": {
             "avoda": "Formula una respuesta clara y busca apoyo si una situación supera tus posibilidades de protección.",
             "kavana": "Mi dignidad merece un límite claro, incluso cuando la presión venga de alguien con más poder.",
@@ -3784,7 +3804,7 @@
           "ramak_color": {
             "hex": "#1E2A5A"
           },
-          "titulo": "VELO ZAJAR - Cuando quien podía ayudarte te olvida",
+          "titulo": "Cuando alguien se olvida de ayudarte",
           "pasuk": {
             "hebreo": "וְלֹא־זָכַר שַׂר־הַמַּשְׁקִים אֶת־יוֹסֵף וַיִּשְׁכָּחֵהוּ",
             "trans": "Velo zajar sar hamashkim et Yosef vayishkajehu",
@@ -3829,7 +3849,8 @@
           },
           "aliya": 7,
           "aliyaRange": "Bereshit 40:1-40:23",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "VELO ZAJAR"
         }
       ]
     },
@@ -3845,7 +3866,7 @@
           "ramak_color": {
             "hex": "#E8EAED"
           },
-          "titulo": "MIKETZ - Cuando una espera termina",
+          "titulo": "Cuando una espera termina",
           "pasuk": {
             "hebreo": "וַיְהִי מִקֵּץ שְׁנָתַיִם יָמִים",
             "trans": "Vayehi miketz shnatayim yamim",
@@ -3882,15 +3903,16 @@
               "base": "Rabí Najman anima a perseverar en el acercamiento al Creador sin despreciar los pequeños movimientos del camino."
             }
           },
-          "reflexion": "Cuando una espera termina, ¿qué nueva responsabilidad aparece?",
+          "reflexion": "Cuando termina una espera importante, ¿qué necesitas hacer a continuación?",
           "paraLlevar": {
-            "avoda": "Nombra hoy una espera que haya terminado. Escribe no sólo «por fin», sino también «ahora me toca…».",
+            "avoda": "Recuerda una espera que terminó. Anota el primer paso que necesitaste dar después.",
             "kavana": "Miketz — Un final también abre una tarea.",
             "hitbodedut": "Agradece una oportunidad que comienza a abrirse."
           },
           "aliya": 1,
           "aliyaRange": "Bereshit 41:1-41:14",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "MIKETZ"
         },
         {
           "dia": 2,
@@ -3941,7 +3963,7 @@
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             }
           },
-          "reflexion": "¿Qué preocupación necesita un plan realizable?",
+          "reflexion": "¿Qué situación que te preocupa podrías afrontar con un plan sencillo?",
           "paraLlevar": {
             "avoda": "Convierte una preocupación en una tarea con responsable y fecha de revisión.",
             "kavana": "Transformaré una parte de mi inquietud en preparación concreta y proporcionada.",
@@ -4002,7 +4024,7 @@
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             }
           },
-          "reflexion": "¿Qué necesitas escuchar antes de dirigir una tarea?",
+          "reflexion": "Antes de organizar el trabajo de otros, ¿qué necesitas escuchar de ellos?",
           "paraLlevar": {
             "avoda": "Pregunta a una persona que realiza el trabajo qué dificultad no se ve desde fuera.",
             "kavana": "Entraré en una responsabilidad nueva con disposición a aprender de quienes conocen el terreno.",
@@ -4063,7 +4085,7 @@
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             }
           },
-          "reflexion": "¿Qué ausencia está influyendo en lo que dices?",
+          "reflexion": "¿Qué persona ausente sigue siendo importante en la historia de tu familia?",
           "paraLlevar": {
             "avoda": "Escribe un hecho familiar o comunitario distinguiendo lo que sabes de lo que supones.",
             "kavana": "Hablaré de las ausencias con honestidad sobre lo que conozco y lo que ignoro.",
@@ -4124,7 +4146,7 @@
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             }
           },
-          "reflexion": "¿Qué promesa tuya necesita una acción verificable?",
+          "reflexion": "¿Qué promesa pendiente podrías empezar a cumplir con un gesto concreto?",
           "paraLlevar": {
             "avoda": "Confirma una promesa pendiente y acuerda cómo sabrá la otra persona que la cumpliste.",
             "kavana": "Mi palabra de compromiso tendrá una medida que la otra persona pueda reconocer.",
@@ -4203,7 +4225,7 @@
           "ramak_color": {
             "hex": "#1E2A5A"
           },
-          "titulo": "NIKMERU RAJAMAV - Cuando la compasión desborda",
+          "titulo": "Dar espacio a nuestras emociones",
           "pasuk": {
             "hebreo": "וַיְמַהֵר יוֹסֵף כִּי־נִכְמְרוּ רַחֲמָיו אֶל־אָחִיו וַיְבַקֵּשׁ לִבְכּוֹת",
             "trans": "Vayemaher Yosef ki nikmeru rajamav el ajiv vayevakesh livkot",
@@ -4248,7 +4270,8 @@
           },
           "aliya": 7,
           "aliyaRange": "Bereshit 43:30-44:17",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "NIKMERU RAJAMAV"
         }
       ]
     },
@@ -4264,7 +4287,7 @@
           "ramak_color": {
             "hex": "#E8EAED"
           },
-          "titulo": "VAYIGASH - Acercarse para hablar",
+          "titulo": "Acercarse para hablar",
           "pasuk": {
             "hebreo": "וַיִּגַּשׁ אֵלָיו יְהוּדָה",
             "trans": "Vayigash elav Yehuda",
@@ -4309,7 +4332,8 @@
           },
           "aliya": 1,
           "aliyaRange": "Bereshit 44:18-44:30",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "VAYIGASH"
         },
         {
           "dia": 2,
@@ -4360,7 +4384,7 @@
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             }
           },
-          "reflexion": "¿Qué conversación requiere claridad y tiempo para ser recibida?",
+          "reflexion": "¿Cómo puedes contar algo importante sin presionar a la otra persona para que responda enseguida?",
           "paraLlevar": {
             "avoda": "Comunica algo importante con sencillez y deja espacio para que la otra persona procese lo dicho.",
             "kavana": "Diré lo importante con claridad, sin exigir que el otro responda al ritmo de mi alivio.",
@@ -4421,7 +4445,7 @@
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             }
           },
-          "reflexion": "¿Estás dejando que el otro cuente su parte?",
+          "reflexion": "En una conversación difícil, ¿escuchas a la otra persona antes de responder?",
           "paraLlevar": {
             "avoda": "Escucha una versión completa antes de ofrecer tu interpretación.",
             "kavana": "Dejaré una pausa real para que otra voz pueda entrar en la conversación.",
@@ -4604,7 +4628,7 @@
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             }
           },
-          "reflexion": "¿Qué encuentro necesita tu presencia sin prisa?",
+          "reflexion": "¿Con quién te gustaría pasar un momento sin prisas ni distracciones?",
           "paraLlevar": {
             "avoda": "Dedica un tiempo acordado a alguien importante, sin atender otra tarea a la vez.",
             "kavana": "Reservaré presencia para el encuentro, sin convertir cada momento compartido en una tarea más.",
@@ -4622,7 +4646,7 @@
           "ramak_color": {
             "hex": "#1E2A5A"
           },
-          "titulo": "VAYESHEV YISRAEL BEERETZ MITZRAYIM - Habitar sin olvidar",
+          "titulo": "Cuidar el lugar donde estamos",
           "pasuk": {
             "hebreo": "וַיֵּשֶׁב יִשְׂרָאֵל בְּאֶרֶץ מִצְרַיִם בְּאֶרֶץ גֹּשֶׁן",
             "trans": "Vayeshev Yisrael be'eretz Mitzrayim be'eretz Goshen",
@@ -4659,7 +4683,7 @@
               "base": "Rabí Najman anima a perseverar en el acercamiento al Creador sin despreciar los pequeños movimientos del camino."
             }
           },
-          "reflexion": "¿Cómo puedes construir una buena vida en una etapa que sabes que es temporal?",
+          "reflexion": "Aunque estés viviendo una etapa temporal, ¿qué puedes hacer para cuidarte donde estás?",
           "paraLlevar": {
             "avoda": "Mejora hoy un aspecto de tu espacio presente sin confundir mejorarlo con renunciar a tus próximos pasos.",
             "kavana": "Goshen — Puedo habitar el presente sin olvidar hacia dónde camino.",
@@ -4668,7 +4692,8 @@
           "aliya": 7,
           "rootNote": "Este versículo cierra Vayigash. Bereshit 47:28 ya abre Vayechi; DÉREJ corrige aquí la frontera entre ambas Parashot.",
           "aliyaRange": "Bereshit 47:11-47:27",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "VAYESHEV YISRAEL BEERETZ MITZRAYIM"
         }
       ]
     },
@@ -4684,7 +4709,7 @@
           "ramak_color": {
             "hex": "#E8EAED"
           },
-          "titulo": "VAYECHI - Vivir también el último tramo",
+          "titulo": "Vivir plenamente la etapa presente",
           "pasuk": {
             "hebreo": "וַיְחִי יַעֲקֹב בְּאֶרֶץ מִצְרַיִם שְׁבַע עֶשְׂרֵה שָׁנָה",
             "trans": "Vayechi Yaakov be'eretz Mitzrayim sheva esre shana",
@@ -4729,7 +4754,8 @@
           },
           "aliya": 1,
           "aliyaRange": "Bereshit 47:28-48:9",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "VAYECHI"
         },
         {
           "dia": 2,
@@ -4780,7 +4806,7 @@
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             }
           },
-          "reflexion": "¿Qué cuidado recibido puedes reconocer sin idealizar tu historia?",
+          "reflexion": "¿Qué gesto de cuidado recuerdas con gratitud de alguien que te ayudó?",
           "paraLlevar": {
             "avoda": "Agradece un gesto concreto que te haya sostenido en un momento difícil.",
             "kavana": "Agradeceré el cuidado recibido con palabras concretas, sin borrar las dificultades de mi historia.",
@@ -4841,7 +4867,7 @@
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             }
           },
-          "reflexion": "¿Qué decisión ajena estás corrigiendo sin haber preguntado su motivo?",
+          "reflexion": "Antes de corregir una decisión de otra persona, ¿cómo puedes conocer sus razones?",
           "paraLlevar": {
             "avoda": "Pide una explicación antes de intervenir en una decisión que otra persona puede tomar por sí misma.",
             "kavana": "Preguntaré antes de suponer que mi manera de ordenar las cosas es la única posible.",
@@ -4859,7 +4885,7 @@
           "ramak_color": {
             "hex": "#F9C6D0"
           },
-          "titulo": "HIKABTZU VESHIMU - Reunirse y escuchar",
+          "titulo": "Reunirse y escuchar",
           "pasuk": {
             "hebreo": "הִקָּבְצוּ וְשִׁמְעוּ בְּנֵי יַעֲקֹב",
             "trans": "Hikabtzu veshimu bnei Yaakov",
@@ -4896,7 +4922,7 @@
               "base": "Rabí Najman describe la conversación personal con el Creador en la lengua habitual de quien habla."
             }
           },
-          "reflexion": "¿A quién necesitas incluir en una conversación aunque no estén de acuerdo?",
+          "reflexion": "¿A quién deberías escuchar antes de tomar una decisión que también le afecta?",
           "paraLlevar": {
             "avoda": "Reúne hoy información antes de decidir: escucha al menos dos perspectivas que normalmente mantienes separadas.",
             "kavana": "Hikabtzu — Reunir no significa uniformar.",
@@ -4904,7 +4930,8 @@
           },
           "aliya": 4,
           "aliyaRange": "Bereshit 49:1-49:18",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "HIKABTZU VESHIMU"
         },
         {
           "dia": 5,
@@ -4955,7 +4982,7 @@
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             }
           },
-          "reflexion": "¿Qué recurso disponible puedes compartir con respeto?",
+          "reflexion": "¿Qué tienes hoy que podría ser útil a otra persona si lo compartes?",
           "paraLlevar": {
             "avoda": "Comparte alimento, tiempo o conocimiento preguntando primero qué sería útil.",
             "kavana": "Compartiré mis recursos sin convertir la ayuda en una forma de dirigir la vida ajena.",
@@ -4973,7 +5000,7 @@
           "ramak_color": {
             "hex": "#E9A426"
           },
-          "titulo": "VAYETZAV ET BANAV - Decir claramente lo que deseas",
+          "titulo": "Decir claramente lo que deseas",
           "pasuk": {
             "hebreo": "וַיְצַו אוֹתָם וַיֹּאמֶר אֲלֵהֶם אֲנִי נֶאֱסָף אֶל־עַמִּי",
             "trans": "Vayetzav otam vayomer alehem ani ne'esaf el ami",
@@ -5018,7 +5045,8 @@
           },
           "aliya": 6,
           "aliyaRange": "Bereshit 49:27-50:20",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "VAYETZAV ET BANAV"
         },
         {
           "dia": 7,
@@ -5026,7 +5054,7 @@
           "ramak_color": {
             "hex": "#1E2A5A"
           },
-          "titulo": "PAKOD YIFKOD - Llevar lo que no debe quedar atrás",
+          "titulo": "Dejar una enseñanza para otros",
           "pasuk": {
             "hebreo": "פָּקֹד יִפְקֹד אֱלֹהִים אֶתְכֶם וְהַעֲלִתֶם אֶת־עַצְמֹתַי מִזֶּה",
             "trans": "Pakod yifkod Elohim etjem veha'alitem et atzmotai mize",
@@ -5063,16 +5091,17 @@
               "base": "Rabí Najman anima a perseverar en el acercamiento al Creador sin despreciar los pequeños movimientos del camino."
             }
           },
-          "reflexion": "¿Qué valor, memoria o tarea quieres que continúe aun cuando tú ya no seas quien la lleve?",
+          "reflexion": "¿Qué enseñanza o recuerdo te gustaría que otros conservaran de ti?",
           "paraLlevar": {
-            "avoda": "Escribe una frase de legado: «Si algo de mí merece continuar, quisiera que fuera…». Compártela o guárdala donde pueda ser encontrada.",
+            "avoda": "Escribe una enseñanza o recuerdo que te gustaría transmitir. Puedes compartirlo o guardarlo.",
             "kavana": "Pakod yifkod — Puedo confiar algo al futuro sin controlarlo.",
             "hitbodedut": "Comparte una enseñanza que quisieras dejar a otros."
           },
           "aliya": 7,
           "rootNote": "DÉREJ cierra Bereshit con la promesa de Bereshit 50:25, inmediatamente antes de la muerte de Yosef en 50:26. Así el final conserva muerte y continuidad en la misma escena.",
           "aliyaRange": "Bereshit 50:21-50:26",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "PAKOD YIFKOD"
         }
       ]
     },
@@ -5088,7 +5117,7 @@
           "ramak_color": {
             "hex": "#E8EAED"
           },
-          "titulo": "VE'ELE SHEMOT - Que nadie pierda su nombre",
+          "titulo": "Que nadie pierda su nombre",
           "pasuk": {
             "hebreo": "וְאֵלֶּה שְׁמוֹת בְּנֵי יִשְׂרָאֵל הַבָּאִים מִצְרָיְמָה",
             "trans": "Ve'ele shemot bnei Yisrael haba'im Mitzrayma",
@@ -5133,7 +5162,8 @@
           },
           "aliya": 1,
           "aliyaRange": "Shemot 1:1-1:17",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "VE'ELE SHEMOT"
         },
         {
           "dia": 2,
@@ -5141,7 +5171,7 @@
           "ramak_color": {
             "hex": "#B85C38"
           },
-          "titulo": "VELO YAJLA OD HATZPINO - Cuando ya no puedes ocultarlo",
+          "titulo": "Buscar otra forma de proteger",
           "pasuk": {
             "hebreo": "וְלֹא־יָכְלָה עוֹד הַצְּפִינוֹ וַתִּקַּח־לוֹ תֵּבַת גֹּמֶא",
             "trans": "Velo yajla od hatzpino vatikaj lo tevat gome",
@@ -5178,15 +5208,16 @@
               "base": "Rabí Najman anima a perseverar en el acercamiento al Creador sin despreciar los pequeños movimientos del camino."
             }
           },
-          "reflexion": "¿Qué situación estás intentando proteger con una estrategia que ya llegó a su límite?",
+          "reflexion": "Cuando una forma de proteger a alguien deja de funcionar, ¿qué otra ayuda segura puedes buscar?",
           "paraLlevar": {
-            "avoda": "Identifica hoy una estrategia que ya no funciona. No la abandones sin más: diseña un siguiente modo concreto de cuidar lo que importa.",
+            "avoda": "Si una forma de proteger a alguien dejó de servir, busca una alternativa segura o pide apoyo antes de cambiarla.",
             "kavana": "Gevurah — Reconocer el límite también puede proteger.",
             "hitbodedut": "Habla de una forma de cuidar que hoy necesita cambiar."
           },
           "aliya": 2,
           "aliyaRange": "Shemot 1:18-2:10",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "VELO YAJLA OD HATZPINO"
         },
         {
           "dia": 3,
@@ -5194,7 +5225,7 @@
           "ramak_color": {
             "hex": "#FFFBEB"
           },
-          "titulo": "VAYIZAKU - Cuando el dolor encuentra voz",
+          "titulo": "Cuando el dolor encuentra voz",
           "pasuk": {
             "hebreo": "וַיֵּאָנְחוּ בְנֵי־יִשְׂרָאֵל מִן־הָעֲבֹדָה וַיִּזְעָקוּ",
             "trans": "Vaye'aneju bnei Yisrael min ha'avoda vayizaku",
@@ -5239,7 +5270,8 @@
           },
           "aliya": 3,
           "aliyaRange": "Shemot 2:11-2:25",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "VAYIZAKU"
         },
         {
           "dia": 4,
@@ -5247,7 +5279,7 @@
           "ramak_color": {
             "hex": "#F9C6D0"
           },
-          "titulo": "RA'OH RA'ITI - He visto la aflicción",
+          "titulo": "He visto la aflicción",
           "pasuk": {
             "hebreo": "רָאֹה רָאִיתִי אֶת־עֳנִי עַמִּי אֲשֶׁר בְּמִצְרָיִם וְאֶת־צַעֲקָתָם שָׁמַעְתִּי",
             "trans": "Ra'oh ra'iti et oni ami asher beMitzrayim ve'et tza'akatam shamati",
@@ -5292,7 +5324,8 @@
           },
           "aliya": 4,
           "aliyaRange": "Shemot 3:1-3:15",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "RA'OH RA'ITI"
         },
         {
           "dia": 5,
@@ -5300,7 +5333,7 @@
           "ramak_color": {
             "hex": "#D46A8C"
           },
-          "titulo": "LO ISH DEVARIM ANOJI - No soy hombre de palabras",
+          "titulo": "Una dificultad no define tus capacidades",
           "pasuk": {
             "hebreo": "לֹא אִישׁ דְּבָרִים אָנֹכִי... כִּי כְבַד־פֶּה וּכְבַד לָשׁוֹן אָנֹכִי",
             "trans": "Lo ish devarim anoji... ki jevad pe ujevad lashon anoji",
@@ -5345,7 +5378,8 @@
           },
           "aliya": 5,
           "aliyaRange": "Shemot 3:16-4:17",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "LO ISH DEVARIM ANOJI"
         },
         {
           "dia": 6,
@@ -5353,7 +5387,7 @@
           "ramak_color": {
             "hex": "#E9A426"
           },
-          "titulo": "VAYA'AMEN HA'AM - Volver a creer que puede haber camino",
+          "titulo": "Recuperar una pequeña esperanza",
           "pasuk": {
             "hebreo": "וַיַּאֲמֵן הָעָם וַיִּשְׁמְעוּ כִּי־פָקַד יְהוָה אֶת־בְּנֵי יִשְׂרָאֵל",
             "trans": "Vaya'amen ha'am vayishme'u ki pakad Adonai et bnei Yisrael",
@@ -5390,15 +5424,16 @@
               "base": "Rabí Najman anima a perseverar en el acercamiento al Creador sin despreciar los pequeños movimientos del camino."
             }
           },
-          "reflexion": "¿Qué posibilidad buena te cuesta recibir porque demasiadas veces esperaste algo que no ocurrió?",
+          "reflexion": "Después de varias decepciones, ¿qué pequeña esperanza te gustaría permitirte?",
           "paraLlevar": {
-            "avoda": "Permite hoy una esperanza pequeña y verificable: no «todo cambiará», sino «puedo dar este siguiente paso».",
+            "avoda": "Piensa en un paso pequeño que sí puedas dar, aunque todavía no tengas certezas.",
             "kavana": "Emuná — Puedo volver a admitir que existe un camino.",
             "hitbodedut": "Confía una esperanza que temes volver a recibir."
           },
           "aliya": 6,
           "aliyaRange": "Shemot 4:18-4:31",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "VAYA'AMEN HA'AM"
         },
         {
           "dia": 7,
@@ -5406,7 +5441,7 @@
           "ramak_color": {
             "hex": "#1E2A5A"
           },
-          "titulo": "ATA TIR'EH - Ahora verás",
+          "titulo": "Ahora verás",
           "pasuk": {
             "hebreo": "עַתָּה תִרְאֶה אֲשֶׁר אֶעֱשֶׂה לְפַרְעֹה",
             "trans": "Ata tir'eh asher e'ese leFaro",
@@ -5451,7 +5486,8 @@
           },
           "aliya": 7,
           "aliyaRange": "Shemot 5:1-6:1",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "ATA TIR'EH"
         }
       ]
     },
@@ -5467,7 +5503,7 @@
           "ramak_color": {
             "hex": "#E8EAED"
           },
-          "titulo": "VAERA - Conocer de otra manera",
+          "titulo": "Revisar una idea que creías segura",
           "pasuk": {
             "hebreo": "וָאֵרָא אֶל־אַבְרָהָם אֶל־יִצְחָק וְאֶל־יַעֲקֹב בְּאֵל שַׁדָּי וּשְׁמִי יְהוָה לֹא נוֹדַעְתִּי לָהֶם",
             "trans": "Vaera el Avraham el Yitzjak ve'el Yaakov be'El Shaddai, ushmi Adonai lo nodati lahem",
@@ -5504,7 +5540,7 @@
               "base": "Rabí Najman desarrolla la teshuvá como disposición a cambiar y acercarse al Creador."
             }
           },
-          "reflexion": "¿Qué creías conocer por completo y hoy necesitas volver a mirar con más humildad?",
+          "reflexion": "¿Qué idea que dabas por segura estarías dispuesto a revisar?",
           "paraLlevar": {
             "avoda": "Elige una convicción importante y formula una pregunta que todavía permanece abierta dentro de ella.",
             "kavana": "Vaera — Conocer más también puede hacerme más humilde.",
@@ -5513,7 +5549,8 @@
           "aliya": 1,
           "aliyaRange": "Shemot 6:2-6:13",
           "rootNote": "La traducción de Shemot 6:3 tiene dificultades interpretativas conocidas. DÉREJ evita presentar una jerarquía simplista de «nombres superiores e inferiores» y trabaja el texto como profundización del conocimiento.",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "VAERA"
         },
         {
           "dia": 2,
@@ -5521,7 +5558,7 @@
           "ramak_color": {
             "hex": "#B85C38"
           },
-          "titulo": "HU AHARON UMOSHE - No son héroes sin historia",
+          "titulo": "No son héroes sin historia",
           "pasuk": {
             "hebreo": "הוּא אַהֲרֹן וּמֹשֶׁה אֲשֶׁר אָמַר יְהוָה לָהֶם הוֹצִיאוּ אֶת־בְּנֵי יִשְׂרָאֵל",
             "trans": "Hu Aharon uMoshe asher amar Adonai lahem hotzi'u et bnei Yisrael",
@@ -5566,7 +5603,8 @@
           },
           "aliya": 2,
           "aliyaRange": "Shemot 6:14-6:28",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "HU AHARON UMOSHE"
         },
         {
           "dia": 3,
@@ -5574,7 +5612,7 @@
           "ramak_color": {
             "hex": "#FFFBEB"
           },
-          "titulo": "AKSHE ET LEV PARO - Cómo se endurece un corazón",
+          "titulo": "Cambiar una respuesta automática",
           "pasuk": {
             "hebreo": "וַאֲנִי אַקְשֶׁה אֶת־לֵב פַּרְעֹה",
             "trans": "Va'ani akshe et lev Paro",
@@ -5619,7 +5657,8 @@
           },
           "aliya": 3,
           "aliyaRange": "Shemot 6:29-7:7",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "AKSHE ET LEV PARO"
         },
         {
           "dia": 4,
@@ -5627,7 +5666,7 @@
           "ramak_color": {
             "hex": "#F9C6D0"
           },
-          "titulo": "VATÁAL HATZFARDEA - Cuando algo invade toda la casa",
+          "titulo": "Atender un problema repetido",
           "pasuk": {
             "hebreo": "וַתַּעַל הַצְּפַרְדֵּעַ וַתְּכַס אֶת־אֶרֶץ מִצְרָיִם",
             "trans": "Vata'al hatzfardea vatejas et eretz Mitzrayim",
@@ -5664,7 +5703,7 @@
               "base": "Rabí Najman describe la conversación personal con el Creador en la lengua habitual de quien habla."
             }
           },
-          "reflexion": "¿Qué problema pequeño o repetitivo estás dejando ocupar cada vez más espacio en tu vida?",
+          "reflexion": "¿Qué pequeña molestia repetida está afectando demasiado tu día?",
           "paraLlevar": {
             "avoda": "Elige una molestia recurrente y haz hoy una intervención concreta de quince minutos sobre su causa, no sólo sobre el síntoma.",
             "kavana": "Tzfardea — No necesito acostumbrarme a todo lo que invade.",
@@ -5672,7 +5711,8 @@
           },
           "aliya": 4,
           "aliyaRange": "Shemot 7:8-8:6",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "VATÁAL HATZFARDEA"
         },
         {
           "dia": 5,
@@ -5680,7 +5720,7 @@
           "ramak_color": {
             "hex": "#D46A8C"
           },
-          "titulo": "ETZBA ELOHIM HI - Reconocer el límite",
+          "titulo": "Reconocer el límite",
           "pasuk": {
             "hebreo": "אֶצְבַּע אֱלֹהִים הִוא",
             "trans": "Etzba Elohim hi",
@@ -5726,7 +5766,8 @@
           "aliya": 5,
           "aliyaRange": "Shemot 8:7-8:18",
           "rootNote": "Rambam, Moreh Nevujim I:66, trata «dedo del Creador» como lenguaje figurado, no como descripción corporal.",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "ETZBA ELOHIM HI"
         },
         {
           "dia": 6,
@@ -5795,7 +5836,7 @@
           "ramak_color": {
             "hex": "#1E2A5A"
           },
-          "titulo": "VAYOSEF LAJATO - Cuando pasa la tormenta",
+          "titulo": "Sostener una buena decisión después de la dificultad",
           "pasuk": {
             "hebreo": "וַיַּרְא פַּרְעֹה כִּי־חָדַל הַמָּטָר וְהַבָּרָד וְהַקֹּלֹת וַיֹּסֶף לַחֲטֹא וַיַּכְבֵּד לִבּוֹ",
             "trans": "Vayar Paro ki jadal hamatar vehabarad vehakolot, vayosef lajato vayajbed libo",
@@ -5832,15 +5873,16 @@
               "base": "Rabí Najman anima a perseverar en el acercamiento al Creador sin despreciar los pequeños movimientos del camino."
             }
           },
-          "reflexion": "¿Qué cambio prometes mientras algo duele y abandonas en cuanto llega el alivio?",
+          "reflexion": "¿Qué decisión buena tomaste en una dificultad y te gustaría mantener ahora que pasó?",
           "paraLlevar": {
-            "avoda": "Recupera hoy una decisión buena que tomaste en un momento difícil y abandonaste cuando la presión disminuyó.",
+            "avoda": "Recuerda una decisión valiosa que tomaste en una etapa difícil. Elige un gesto para sostenerla hoy.",
             "kavana": "Teshuvá — El cambio debe sobrevivir al alivio.",
             "hitbodedut": "Recuerda una promesa que deseas mantener incluso en calma."
           },
           "aliya": 7,
           "aliyaRange": "Shemot 9:17-9:35",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "VAYOSEF LAJATO"
         }
       ]
     },
@@ -5856,7 +5898,7 @@
           "ramak_color": {
             "hex": "#E8EAED"
           },
-          "titulo": "BO EL PARO - Entrar sin controlar la respuesta",
+          "titulo": "Entrar sin controlar la respuesta",
           "pasuk": {
             "hebreo": "בֹּא אֶל־פַּרְעֹה",
             "trans": "Bo el Paro",
@@ -5902,7 +5944,8 @@
           "aliya": 1,
           "aliyaRange": "Shemot 10:1-10:11",
           "rootNote": "DÉREJ no traduce «Bo» como una promesa explícita de «entra conmigo». El texto ordena acercarse a Faraón; la compañía divina pertenece al contexto de la misión, no a una palabra añadida al versículo.",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "BO EL PARO"
         },
         {
           "dia": 2,
@@ -5910,7 +5953,7 @@
           "ramak_color": {
             "hex": "#B85C38"
           },
-          "titulo": "LO RA'U ISH ET AJIV - La oscuridad de no ver al otro",
+          "titulo": "Ver a las personas que tenemos cerca",
           "pasuk": {
             "hebreo": "לֹא־רָאוּ אִישׁ אֶת־אָחִיו וְלֹא־קָמוּ אִישׁ מִתַּחְתָּיו",
             "trans": "Lo ra'u ish et ajiv velo kamu ish mitajtav",
@@ -5947,7 +5990,7 @@
               "base": "Rabí Najman propone buscar un punto de bien en la otra persona, incluso cuando parece difícil reconocerlo."
             }
           },
-          "reflexion": "¿Qué oscuridad te está haciendo dejar de ver a las personas que tienes cerca?",
+          "reflexion": "Cuando te preocupas mucho por tus problemas, ¿cómo puedes seguir atento a las personas cercanas?",
           "paraLlevar": {
             "avoda": "Mira hoy deliberadamente a alguien que se ha vuelto invisible para tu rutina. Pregunta cómo está y espera la respuesta.",
             "kavana": "Or — Salir de la oscuridad empieza por volver a ver al otro.",
@@ -5955,7 +5998,8 @@
           },
           "aliya": 2,
           "aliyaRange": "Shemot 10:12-10:23",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "LO RA'U ISH ET AJIV"
         },
         {
           "dia": 3,
@@ -5963,7 +6007,7 @@
           "ramak_color": {
             "hex": "#FFFBEB"
           },
-          "titulo": "LO TISHAER PARSA - Que no quede una pezuña",
+          "titulo": "Dejar atrás un hábito del pasado",
           "pasuk": {
             "hebreo": "גַּם־מִקְנֵנוּ יֵלֵךְ עִמָּנוּ לֹא תִשָּׁאֵר פַּרְסָה",
             "trans": "Gam miknenu yelej imanu, lo tisha'er parsah",
@@ -6002,13 +6046,14 @@
           },
           "reflexion": "¿Qué hábito del pasado te cuesta dejar atrás?",
           "paraLlevar": {
-            "avoda": "Identifica una concesión que mantiene vivo un hábito del que estás saliendo. Reduce hoy una vía concreta por la que ese hábito sigue entrando.",
+            "avoda": "Identifica un hábito que quieras dejar. Cambia hoy una situación concreta que suele llevarte a repetirlo.",
             "kavana": "Lo tisha'er — No quiero una libertad que deje lo esencial atrás.",
             "hitbodedut": "Nombra algo que todavía te ata al pasado."
           },
           "aliya": 3,
           "aliyaRange": "Shemot 10:24-11:3",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "LO TISHAER PARSA"
         },
         {
           "dia": 4,
@@ -6016,7 +6061,7 @@
           "ramak_color": {
             "hex": "#F9C6D0"
           },
-          "titulo": "HAJODESH HAZE LACHEM - Recuperar el tiempo",
+          "titulo": "Recuperar el tiempo",
           "pasuk": {
             "hebreo": "הַחֹדֶשׁ הַזֶּה לָכֶם רֹאשׁ חֳדָשִׁים",
             "trans": "Hajodesh haze lachem rosh jodashim",
@@ -6061,7 +6106,8 @@
           },
           "aliya": 4,
           "aliyaRange": "Shemot 11:4-12:20",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "HAJODESH HAZE LACHEM"
         },
         {
           "dia": 5,
@@ -6069,7 +6115,7 @@
           "ramak_color": {
             "hex": "#D46A8C"
           },
-          "titulo": "MA HAAVODA HAZOT LACHEM - ¿Qué significa este servicio?",
+          "titulo": "Comprender el sentido de nuestras costumbres",
           "pasuk": {
             "hebreo": "וְהָיָה כִּי־יֹאמְרוּ אֲלֵיכֶם בְּנֵיכֶם מָה הָעֲבֹדָה הַזֹּאת לָכֶם",
             "trans": "Vehaya ki yomru aleijem beneijem: ma ha'avoda hazot lachem",
@@ -6114,7 +6160,8 @@
           },
           "aliya": 5,
           "aliyaRange": "Shemot 12:21-12:28",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "MA HAAVODA HAZOT LACHEM"
         },
         {
           "dia": 6,
@@ -6122,7 +6169,7 @@
           "ramak_color": {
             "hex": "#E9A426"
           },
-          "titulo": "MATZOT - El pan de una salida apresurada",
+          "titulo": "El pan de una salida apresurada",
           "pasuk": {
             "hebreo": "וַיֹּאפוּ אֶת־הַבָּצֵק אֲשֶׁר הוֹצִיאוּ מִמִּצְרַיִם עֻגֹת מַצּוֹת כִּי לֹא חָמֵץ",
             "trans": "Vayofu et habatzek asher hotzi'u miMitzrayim ugot matzot ki lo jametz",
@@ -6167,7 +6214,8 @@
           },
           "aliya": 6,
           "aliyaRange": "Shemot 12:29-12:51",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "MATZOT"
         },
         {
           "dia": 7,
@@ -6175,7 +6223,7 @@
           "ramak_color": {
             "hex": "#1E2A5A"
           },
-          "titulo": "VEHIGADETA LEVINJA - La libertad se cuenta",
+          "titulo": "La libertad se cuenta",
           "pasuk": {
             "hebreo": "וְהִגַּדְתָּ לְבִנְךָ בַּיּוֹם הַהוּא לֵאמֹר בַּעֲבוּר זֶה עָשָׂה יְהוָה לִי בְּצֵאתִי מִמִּצְרָיִם",
             "trans": "Vehigadeta levinja bayom hahu lemor: ba'avur ze asa Adonai li betzeti miMitzrayim",
@@ -6221,7 +6269,8 @@
           "aliya": 7,
           "aliyaRange": "Shemot 13:1-13:16",
           "rootNote": "Rambam, Hiljot Jametz uMatzá 7:1, utiliza este versículo como base de la mitzvá de narrar la salida de Egipto.",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "VEHIGADETA LEVINJA"
         }
       ]
     },
@@ -6237,7 +6286,7 @@
           "ramak_color": {
             "hex": "#E8EAED"
           },
-          "titulo": "VAYASEV ELOHIM - El camino no siempre es el más corto",
+          "titulo": "El camino no siempre es el más corto",
           "pasuk": {
             "hebreo": "וַיַּסֵּב אֱלֹהִים אֶת־הָעָם דֶּרֶךְ הַמִּדְבָּר",
             "trans": "Vayasev Elohim et ha'am derej hamidbar",
@@ -6276,13 +6325,14 @@
           },
           "reflexion": "Si el camino tarda más de lo esperado, ¿qué te ayuda a no sentir que has fracasado?",
           "paraLlevar": {
-            "avoda": "Identifica hoy un «rodeo» de tu vida. Escribe qué capacidad puede estar pidiéndote desarrollar antes de llegar.",
+            "avoda": "Reconoce que avanzar más lento no es fracasar. Anota qué apoyo te ayudaría en este tramo.",
             "kavana": "Derej — Un camino más largo también puede ser camino.",
             "hitbodedut": "Confía tu impaciencia cuando el camino parece más largo."
           },
           "aliya": 1,
           "aliyaRange": "Shemot 13:17-14:8",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "VAYASEV ELOHIM"
         },
         {
           "dia": 2,
@@ -6290,7 +6340,7 @@
           "ramak_color": {
             "hex": "#B85C38"
           },
-          "titulo": "AL TIRA'U - No dejen que el miedo decida todo",
+          "titulo": "No dejen que el miedo decida todo",
           "pasuk": {
             "hebreo": "אַל־תִּירָאוּ הִתְיַצְּבוּ וּרְאוּ אֶת־יְשׁוּעַת יְהוָה",
             "trans": "Al tira'u, hityatzvu ur'u et yeshuat Adonai",
@@ -6335,7 +6385,8 @@
           },
           "aliya": 2,
           "aliyaRange": "Shemot 14:9-14:14",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "AL TIRA'U"
         },
         {
           "dia": 3,
@@ -6343,7 +6394,7 @@
           "ramak_color": {
             "hex": "#FFFBEB"
           },
-          "titulo": "MA TITZAK ELAI - Hay un momento para avanzar",
+          "titulo": "Hay un momento para avanzar",
           "pasuk": {
             "hebreo": "מַה־תִּצְעַק אֵלָי דַּבֵּר אֶל־בְּנֵי־יִשְׂרָאֵל וְיִסָּעוּ",
             "trans": "Ma titzak elai; daber el bnei Yisrael veyisa'u",
@@ -6380,15 +6431,16 @@
               "base": "Rabí Najman describe la conversación personal con el Creador en la lengua habitual de quien habla."
             }
           },
-          "reflexion": "¿En qué asunto sigues pidiendo claridad cuando ya conoces el siguiente paso responsable?",
+          "reflexion": "¿Qué pequeño paso puedes dar en un asunto que ya has pensado bastante?",
           "paraLlevar": {
-            "avoda": "Haz hoy un movimiento pequeño en un asunto sobre el que ya has pensado y orado suficientemente.",
+            "avoda": "Elige un asunto que ya has considerado y da un paso pequeño, seguro y responsable.",
             "kavana": "Veyisa'u — La oración también puede desembocar en movimiento.",
             "hitbodedut": "Nombra un paso que deseas dar con valentía."
           },
           "aliya": 3,
           "aliyaRange": "Shemot 14:15-14:25",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "MA TITZAK ELAI"
         },
         {
           "dia": 4,
@@ -6396,7 +6448,7 @@
           "ramak_color": {
             "hex": "#F9C6D0"
           },
-          "titulo": "AZ YASHIR - Cantar lo que no quieres olvidar",
+          "titulo": "Recordar el bien después de una dificultad",
           "pasuk": {
             "hebreo": "אָז יָשִׁיר־מֹשֶׁה וּבְנֵי יִשְׂרָאֵל אֶת־הַשִּׁירָה הַזֹּאת",
             "trans": "Az yashir Moshe uvnei Yisrael et hashira hazot",
@@ -6433,7 +6485,7 @@
               "base": "Rabí Najman relaciona el agradecimiento y la alabanza con el acercamiento al Creador."
             }
           },
-          "reflexion": "¿Qué liberación reciente estás a punto de olvidar porque ya apareció el próximo problema?",
+          "reflexion": "¿Qué dificultad superaste recientemente que merece ser recordada con gratitud?",
           "paraLlevar": {
             "avoda": "Nombra por escrito algo concreto que haya cambiado para bien y agradece por ello antes de pedir lo siguiente.",
             "kavana": "Shirá — Lo que fue abierto merece memoria.",
@@ -6441,7 +6493,8 @@
           },
           "aliya": 4,
           "aliyaRange": "Shemot 14:26-15:26",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "AZ YASHIR"
         },
         {
           "dia": 5,
@@ -6449,7 +6502,7 @@
           "ramak_color": {
             "hex": "#D46A8C"
           },
-          "titulo": "MI YITEN MUTENU - Cuando la nostalgia maquilla Egipto",
+          "titulo": "Cuando la nostalgia maquilla Egipto",
           "pasuk": {
             "hebreo": "מִי־יִתֵּן מוּתֵנוּ בְיַד־יְהוָה בְּאֶרֶץ מִצְרַיִם בְּשִׁבְתֵּנוּ עַל־סִיר הַבָּשָׂר",
             "trans": "Mi yiten mutenu veyad Adonai be'eretz Mitzrayim, beshivtenu al sir habasar",
@@ -6494,7 +6547,8 @@
           },
           "aliya": 5,
           "aliyaRange": "Shemot 15:27-16:10",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "MI YITEN MUTENU"
         },
         {
           "dia": 6,
@@ -6502,7 +6556,7 @@
           "ramak_color": {
             "hex": "#E9A426"
           },
-          "titulo": "LO HEEDIF HAMARBE - Aprender cuánto basta",
+          "titulo": "Aprender cuánto basta",
           "pasuk": {
             "hebreo": "וְלֹא הֶעְדִּיף הַמַּרְבֶּה וְהַמַּמְעִיט לֹא הֶחְסִיר",
             "trans": "Velo he'edif hamarbeh vehamamit lo hejsir",
@@ -6547,7 +6601,8 @@
           },
           "aliya": 6,
           "aliyaRange": "Shemot 16:11-16:36",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "LO HEEDIF HAMARBE"
         },
         {
           "dia": 7,
@@ -6555,7 +6610,7 @@
           "ramak_color": {
             "hex": "#1E2A5A"
           },
-          "titulo": "VAYEHI YADAV EMUNA - Manos sostenidas",
+          "titulo": "Pedir ayuda para seguir adelante",
           "pasuk": {
             "hebreo": "וִידֵי מֹשֶׁה כְּבֵדִים... וַיְהִי יָדָיו אֱמוּנָה עַד־בֹּא הַשָּׁמֶשׁ",
             "trans": "Videi Moshe kvedim... vayehi yadav emuna ad bo hashemesh",
@@ -6592,7 +6647,7 @@
               "base": "Rabí Najman propone buscar un punto de bien en la otra persona, incluso cuando parece difícil reconocerlo."
             }
           },
-          "reflexion": "¿Qué carga estás intentando sostener solo aunque ya sabes que tus brazos se cansaron?",
+          "reflexion": "¿En qué tarea necesitas pedir ayuda en lugar de intentar hacerlo todo solo?",
           "paraLlevar": {
             "avoda": "Pide hoy una ayuda concreta y limitada. No «ayúdame con todo», sino «¿puedes sostener esta parte conmigo?».",
             "kavana": "Emuná — La firmeza también puede ser compartida.",
@@ -6601,7 +6656,8 @@
           "aliya": 7,
           "aliyaRange": "Shemot 17:1-17:16",
           "rootNote": "DÉREJ no convierte Amalek en una etiqueta psicológica ni en un enemigo contemporáneo. Este Camino se concentra en la escena del propio texto: cansancio, apoyo y perseverancia compartida.",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "VAYEHI YADAV EMUNA"
         }
       ]
     },
@@ -6617,7 +6673,7 @@
           "ramak_color": {
             "hex": "#E8EAED"
           },
-          "titulo": "VAYISHMA YITRO - Escuchar hasta moverse",
+          "titulo": "Escuchar hasta moverse",
           "pasuk": {
             "hebreo": "וַיִּשְׁמַע יִתְרוֹ כֹהֵן מִדְיָן חֹתֵן מֹשֶׁה אֵת כָּל־אֲשֶׁר עָשָׂה אֱלֹהִים",
             "trans": "Vayishma Yitro... et kol asher asa Elohim",
@@ -6662,7 +6718,8 @@
           },
           "aliya": 1,
           "aliyaRange": "Shemot 18:1-18:12",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "VAYISHMA YITRO"
         },
         {
           "dia": 2,
@@ -6670,7 +6727,7 @@
           "ramak_color": {
             "hex": "#B85C38"
           },
-          "titulo": "LO TOV HADAVAR - No es bueno hacerlo todo solo",
+          "titulo": "No es bueno hacerlo todo solo",
           "pasuk": {
             "hebreo": "לֹא־טוֹב הַדָּבָר אֲשֶׁר אַתָּה עֹשֶׂה",
             "trans": "Lo tov hadavar asher ata ose",
@@ -6716,7 +6773,8 @@
           },
           "aliya": 2,
           "aliyaRange": "Shemot 18:13-18:23",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "LO TOV HADAVAR"
         },
         {
           "dia": 3,
@@ -6724,7 +6782,7 @@
           "ramak_color": {
             "hex": "#FFFBEB"
           },
-          "titulo": "VAYISHMA MOSHE - Un líder que acepta consejo",
+          "titulo": "Aprender a recibir consejos",
           "pasuk": {
             "hebreo": "וַיִּשְׁמַע מֹשֶׁה לְקוֹל חֹתְנוֹ וַיַּעַשׂ כֹּל אֲשֶׁר אָמָר",
             "trans": "Vayishma Moshe lekol jotno, vaya'as kol asher amar",
@@ -6761,7 +6819,7 @@
               "base": "Rabí Najman describe la conversación personal con el Creador en la lengua habitual de quien habla."
             }
           },
-          "reflexion": "¿Cuándo fue la última vez que una buena idea ajena cambió realmente tu manera de hacer algo?",
+          "reflexion": "Cuando alguien te da una opinión distinta, ¿cómo puedes escucharla antes de defenderte?",
           "paraLlevar": {
             "avoda": "Pregunta hoy a alguien de confianza: «¿Qué ves que yo no estoy viendo?». Escucha la respuesta completa antes de defenderte.",
             "kavana": "Vayishma — Mi autoridad no me vuelve incapaz de aprender.",
@@ -6769,7 +6827,8 @@
           },
           "aliya": 3,
           "aliyaRange": "Shemot 18:24-18:27",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "VAYISHMA MOSHE"
         },
         {
           "dia": 4,
@@ -6777,7 +6836,7 @@
           "ramak_color": {
             "hex": "#F9C6D0"
           },
-          "titulo": "MAMLEJET KOHANIM - Una identidad que obliga",
+          "titulo": "Que los valores se noten en nuestras acciones",
           "pasuk": {
             "hebreo": "וְאַתֶּם תִּהְיוּ־לִי מַמְלֶכֶת כֹּהֲנִים וְגוֹי קָדוֹשׁ",
             "trans": "Ve'atem tihyu li mamlejet kohanim vegoy kadosh",
@@ -6816,13 +6875,14 @@
           },
           "reflexion": "¿Qué valor importante te gustaría mostrar más en tus acciones?",
           "paraLlevar": {
-            "avoda": "Completa hoy: «Si realmente pertenezco a esta comunidad/familia/convicción, entonces hoy debería…». Haz una acción concreta.",
+            "avoda": "Elige un valor importante de tu familia o comunidad. Haz hoy un gesto que lo refleje, sin compararte con otros.",
             "kavana": "Kadosh — La identidad se vuelve verdadera en la conducta.",
             "hitbodedut": "Nombra una responsabilidad que nace de tu identidad."
           },
           "aliya": 4,
           "aliyaRange": "Shemot 19:1-19:6",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "MAMLEJET KOHANIM"
         },
         {
           "dia": 5,
@@ -6830,7 +6890,7 @@
           "ramak_color": {
             "hex": "#D46A8C"
           },
-          "titulo": "HAGBEL ET HAHAR - El límite también prepara",
+          "titulo": "El límite también prepara",
           "pasuk": {
             "hebreo": "וְהִגְבַּלְתָּ אֶת־הָעָם סָבִיב לֵאמֹר הִשָּׁמְרוּ לָכֶם עֲלוֹת בָּהָר",
             "trans": "Vehigbalta et ha'am saviv... hishamru lajem alot bahar",
@@ -6867,7 +6927,7 @@
               "base": "Rabí Najman describe la conversación personal con el Creador en la lengua habitual de quien habla."
             }
           },
-          "reflexion": "¿Qué relación, práctica o espacio importante necesita un límite para poder conservar su profundidad?",
+          "reflexion": "¿Qué límite podría ayudar a cuidar una relación o un momento importante?",
           "paraLlevar": {
             "avoda": "Define hoy un límite que proteja algo valioso: una hora sin interrupciones, una conversación sin teléfono o una frontera que debas comunicar.",
             "kavana": "Gevul — Un límite puede custodiar lo que amo.",
@@ -6875,7 +6935,8 @@
           },
           "aliya": 5,
           "aliyaRange": "Shemot 19:7-19:19",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "HAGBEL ET HAHAR"
         },
         {
           "dia": 6,
@@ -6883,7 +6944,7 @@
           "ramak_color": {
             "hex": "#E9A426"
           },
-          "titulo": "ANOJI - El mandamiento comienza con una relación",
+          "titulo": "Usar la libertad con responsabilidad",
           "pasuk": {
             "hebreo": "אָנֹכִי יְהוָה אֱלֹהֶיךָ אֲשֶׁר הוֹצֵאתִיךָ מֵאֶרֶץ מִצְרַיִם מִבֵּית עֲבָדִים",
             "trans": "Anoji Adonai Eloheja asher hotzetija me'eretz Mitzrayim mibeit avadim",
@@ -6928,7 +6989,8 @@
           },
           "aliya": 6,
           "aliyaRange": "Shemot 19:20-20:14",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "ANOJI"
         },
         {
           "dia": 7,
@@ -6936,7 +6998,7 @@
           "ramak_color": {
             "hex": "#1E2A5A"
           },
-          "titulo": "AL TIRA'U - Del terror a la reverencia",
+          "titulo": "Responder al miedo con cuidado",
           "pasuk": {
             "hebreo": "אַל־תִּירָאוּ כִּי לְבַעֲבוּר נַסּוֹת אֶתְכֶם בָּא הָאֱלֹהִים וּבַעֲבוּר תִּהְיֶה יִרְאָתוֹ עַל־פְּנֵיכֶם",
             "trans": "Al tira'u... uva'avur tihye yirato al peneijem",
@@ -6973,7 +7035,7 @@
               "base": "Rabí Najman describe la conversación personal con el Creador en la lengua habitual de quien habla."
             }
           },
-          "reflexion": "¿Qué temor podrías transformar en un cuidado responsable?",
+          "reflexion": "Cuando algo importante te asusta, ¿qué puedes hacer para cuidarlo sin actuar por miedo?",
           "paraLlevar": {
             "avoda": "Ante algo que te importa profundamente, cambia hoy una reacción de pánico por una conducta concreta de respeto y cuidado.",
             "kavana": "Yirá — No todo temor tiene que paralizar.",
@@ -6981,7 +7043,8 @@
           },
           "aliya": 7,
           "aliyaRange": "Shemot 20:15-20:23",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "AL TIRA'U"
         }
       ]
     },
@@ -6997,7 +7060,7 @@
           "ramak_color": {
             "hex": "#E8EAED"
           },
-          "titulo": "BASHVI'IT YETZE LAJOFSHI - El poder necesita fecha de término",
+          "titulo": "Respetar la libertad de los demás",
           "pasuk": {
             "hebreo": "שֵׁשׁ שָׁנִים יַעֲבֹד וּבַשְּׁבִעִת יֵצֵא לַחָפְשִׁי חִנָּם",
             "trans": "Shesh shanim ya'avod uvashvi'it yetze lajofshi jinam",
@@ -7043,7 +7106,8 @@
           "aliya": 1,
           "aliyaRange": "Shemot 21:1-21:19",
           "rootNote": "Este Camino no presenta la servidumbre bíblica como modelo social actual. Trabaja críticamente una legislación antigua que limita poder dentro de su contexto y la pone en diálogo con la dignidad humana.",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "BASHVI'IT YETZE LAJOFSHI"
         },
         {
           "dia": 2,
@@ -7051,7 +7115,7 @@
           "ramak_color": {
             "hex": "#B85C38"
           },
-          "titulo": "AYIN TAJAT AYIN - Justicia sin mutilación",
+          "titulo": "Buscar reparación en lugar de venganza",
           "pasuk": {
             "hebreo": "עַיִן תַּחַת עַיִן שֵׁן תַּחַת שֵׁן",
             "trans": "Ayin tajat ayin, shen tajat shen",
@@ -7097,7 +7161,8 @@
           "aliya": 2,
           "aliyaRange": "Shemot 21:20-22:3",
           "rootNote": "En la halajá rabínica y en Rambam, «ojo por ojo» se aplica como compensación monetaria por el daño, no como lesión corporal equivalente.",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "AYIN TAJAT AYIN"
         },
         {
           "dia": 3,
@@ -7105,7 +7170,7 @@
           "ramak_color": {
             "hex": "#FFFBEB"
           },
-          "titulo": "IM KESEF TALVE - Ayudar sin convertir la ayuda en poder",
+          "titulo": "Ayudar sin convertir la ayuda en poder",
           "pasuk": {
             "hebreo": "אִם־כֶּסֶף תַּלְוֶה אֶת־עַמִּי אֶת־הֶעָנִי עִמָּךְ לֹא־תִהְיֶה לוֹ כְּנֹשֶׁה",
             "trans": "Im kesef talve et ami et he'ani imaj, lo tihye lo kenoshe",
@@ -7150,7 +7215,8 @@
           },
           "aliya": 3,
           "aliyaRange": "Shemot 22:4-22:26",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "IM KESEF TALVE"
         },
         {
           "dia": 4,
@@ -7158,7 +7224,7 @@
           "ramak_color": {
             "hex": "#F9C6D0"
           },
-          "titulo": "AZOV TA'AZOV IMO - Ayudar incluso cuando no te cae bien",
+          "titulo": "Ayudar con justicia aun en un conflicto",
           "pasuk": {
             "hebreo": "כִּי־תִרְאֶה חֲמוֹר שֹׂנַאֲךָ רֹבֵץ תַּחַת מַשָּׂאוֹ... עָזֹב תַּעֲזֹב עִמּוֹ",
             "trans": "Ki tir'e jamor sona'aja rovetz tajat masa'o... azov ta'azov imo",
@@ -7195,7 +7261,7 @@
               "base": "Rabí Najman propone buscar un punto de bien en la otra persona, incluso cuando parece difícil reconocerlo."
             }
           },
-          "reflexion": "¿Puedes hacer lo correcto por una persona que no te agrada sin fingir que la relación ya está reparada?",
+          "reflexion": "Cuando tienes un conflicto con alguien, ¿puedes ofrecer una ayuda justa sin ignorar tus límites?",
           "paraLlevar": {
             "avoda": "Realiza una acción justa o útil hacia alguien con quien tienes tensión, siempre que sea segura y no rompa límites necesarios.",
             "kavana": "Ta'azov imo — La ética no depende de simpatía.",
@@ -7203,7 +7269,8 @@
           },
           "aliya": 4,
           "aliyaRange": "Shemot 22:27-23:5",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "AZOV TA'AZOV IMO"
         },
         {
           "dia": 5,
@@ -7211,7 +7278,7 @@
           "ramak_color": {
             "hex": "#D46A8C"
           },
-          "titulo": "VEGER LO TILJATZ - Recordar que también fuiste extranjero",
+          "titulo": "Recordar que también fuiste extranjero",
           "pasuk": {
             "hebreo": "וְגֵר לֹא תִלְחָץ וְאַתֶּם יְדַעְתֶּם אֶת־נֶפֶשׁ הַגֵּר כִּי־גֵרִים הֱיִיתֶם בְּאֶרֶץ מִצְרָיִם",
             "trans": "Veger lo tiljatz, ve'atem yedatem et nefesh hager ki gerim heyitem be'eretz Mitzrayim",
@@ -7256,7 +7323,8 @@
           },
           "aliya": 5,
           "aliyaRange": "Shemot 23:6-23:19",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "VEGER LO TILJATZ"
         },
         {
           "dia": 6,
@@ -7264,7 +7332,7 @@
           "ramak_color": {
             "hex": "#E9A426"
           },
-          "titulo": "VA'AVADTEM - Servir en la vida cotidiana",
+          "titulo": "Servir en la vida cotidiana",
           "pasuk": {
             "hebreo": "וַעֲבַדְתֶּם אֵת יְהוָה אֱלֹהֵיכֶם",
             "trans": "Va'avadtem et Adonai Eloheijem",
@@ -7309,7 +7377,8 @@
           },
           "aliya": 6,
           "aliyaRange": "Shemot 23:20-23:25",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "VA'AVADTEM"
         },
         {
           "dia": 7,
@@ -7317,7 +7386,7 @@
           "ramak_color": {
             "hex": "#1E2A5A"
           },
-          "titulo": "NAASE VENISHMA - Hacer y seguir escuchando",
+          "titulo": "Hacer y seguir escuchando",
           "pasuk": {
             "hebreo": "כֹּל אֲשֶׁר־דִּבֶּר יְהוָה נַעֲשֶׂה וְנִשְׁמָע",
             "trans": "Kol asher diber Adonai na'ase venishma",
@@ -7363,7 +7432,8 @@
           "aliya": 7,
           "aliyaRange": "Shemot 23:26-24:18",
           "rootNote": "DÉREJ no presenta «Naasé venishmá» como obediencia ciega a cualquier autoridad. El versículo pertenece al pacto de Sinaí; aquí se trabaja como relación entre compromiso, acción y escucha continua.",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "NAASE VENISHMA"
         }
       ]
     },
@@ -7379,7 +7449,7 @@
           "ramak_color": {
             "hex": "#E8EAED"
           },
-          "titulo": "YIDVENU LIBO - Dar sin apropiarse",
+          "titulo": "Dar sin apropiarse",
           "pasuk": {
             "hebreo": "מֵאֵת כָּל־אִישׁ אֲשֶׁר יִדְּבֶנּוּ לִבּוֹ תִּקְחוּ אֶת־תְּרוּמָתִי",
             "trans": "Me'et kol ish asher yidvenu libo tikju et terumati",
@@ -7425,7 +7495,8 @@
           "aliya": 1,
           "aliyaRange": "Shemot 25:1-25:16",
           "rootNote": "La terumá del pasaje es una contribución voluntaria para el Mishkán; no es idéntica a la tzedaká al pobre. DÉREJ usa Hiljot Matnot Aniyim sólo como una ética comparativa sobre el modo de dar.",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "YIDVENU LIBO"
         },
         {
           "dia": 2,
@@ -7433,7 +7504,7 @@
           "ramak_color": {
             "hex": "#B85C38"
           },
-          "titulo": "VENOADTI LEJA SHAM - Un lugar para encontrarse y escuchar",
+          "titulo": "Escuchar y distinguir lo que sabemos",
           "pasuk": {
             "hebreo": "וְנוֹעַדְתִּי לְךָ שָׁם וְדִבַּרְתִּי אִתְּךָ מֵעַל הַכַּפֹּרֶת מִבֵּין שְׁנֵי הַכְּרֻבִים",
             "trans": "Venoadti leja sham vedibarti itja... mibein shnei hakeruvim",
@@ -7470,7 +7541,7 @@
               "base": "Rabí Najman describe la conversación personal con el Creador en la lengua habitual de quien habla."
             }
           },
-          "reflexion": "¿Cómo distingues entre lo que deseas y lo que realmente has comprendido?",
+          "reflexion": "¿Cómo distingues lo que sabes de lo que supones?",
           "paraLlevar": {
             "avoda": "Reserva diez minutos sin pantalla ni música. Escribe primero lo que sabes, después lo que supones y finalmente lo que todavía no sabes.",
             "kavana": "Mibein — La escucha necesita espacio entre certezas.",
@@ -7479,7 +7550,8 @@
           "aliya": 2,
           "aliyaRange": "Shemot 25:17-25:40",
           "rootNote": "Moreh Nevujim III:45 relaciona los querubines con la enseñanza sobre ángeles, profecía y rechazo de la idolatría; no los describe simplemente como símbolos románticos o infantiles.",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "VENOADTI LEJA SHAM"
         },
         {
           "dia": 3,
@@ -7487,7 +7559,7 @@
           "ramak_color": {
             "hex": "#FFFBEB"
           },
-          "titulo": "ISHÁ EL AJOTÁ - Unirse sin borrar las costuras",
+          "titulo": "Seguir unidos aunque pensemos distinto",
           "pasuk": {
             "hebreo": "חֲמֵשׁ הַיְרִיעֹת תִּהְיֶיןָ חֹבְרֹת אִשָּׁה אֶל־אֲחֹתָהּ",
             "trans": "Jamesh hayeriot tihyena jovrot isha el ajotah",
@@ -7533,7 +7605,8 @@
           },
           "aliya": 3,
           "aliyaRange": "Shemot 26:1-26:14",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "ISHÁ EL AJOTÁ"
         },
         {
           "dia": 4,
@@ -7541,7 +7614,7 @@
           "ramak_color": {
             "hex": "#F9C6D0"
           },
-          "titulo": "VAHAKEM ET HAMISHKAN - La visión necesita estructura",
+          "titulo": "Convertir una idea en un primer paso",
           "pasuk": {
             "hebreo": "וַהֲקֵמֹתָ אֶת־הַמִּשְׁכָּן כְּמִשְׁפָּטוֹ אֲשֶׁר הָרְאֵיתָ בָּהָר",
             "trans": "Vahakemota et hamishkan kemishpato asher hareita bahar",
@@ -7586,7 +7659,8 @@
           },
           "aliya": 4,
           "aliyaRange": "Shemot 26:15-26:30",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "VAHAKEM ET HAMISHKAN"
         },
         {
           "dia": 5,
@@ -7594,7 +7668,7 @@
           "ramak_color": {
             "hex": "#D46A8C"
           },
-          "titulo": "VEHIVDILA HAPAROJET - Hay límites dentro de lo sagrado",
+          "titulo": "Respetar lo que necesita privacidad",
           "pasuk": {
             "hebreo": "וְהִבְדִּילָה הַפָּרֹכֶת לָכֶם בֵּין הַקֹּדֶשׁ וּבֵין קֹדֶשׁ הַקֳּדָשִׁים",
             "trans": "Vehivdila haparojet lajem bein hakodesh uvein kodesh hakodashim",
@@ -7639,7 +7713,8 @@
           },
           "aliya": 5,
           "aliyaRange": "Shemot 26:31-26:37",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "VEHIVDILA HAPAROJET"
         },
         {
           "dia": 6,
@@ -7647,7 +7722,7 @@
           "ramak_color": {
             "hex": "#E9A426"
           },
-          "titulo": "VEASITA ET HAMIZBEAJ - También necesitamos un lugar para soltar",
+          "titulo": "También necesitamos un lugar para soltar",
           "pasuk": {
             "hebreo": "וְעָשִׂיתָ אֶת־הַמִּזְבֵּחַ עֲצֵי שִׁטִּים",
             "trans": "Veasita et hamizbeaj atzei shitim",
@@ -7692,7 +7767,8 @@
           },
           "aliya": 6,
           "aliyaRange": "Shemot 27:1-27:8",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "VEASITA ET HAMIZBEAJ"
         },
         {
           "dia": 7,
@@ -7700,7 +7776,7 @@
           "ramak_color": {
             "hex": "#1E2A5A"
           },
-          "titulo": "JATZER HAMISHKAN - El santuario también necesita un umbral",
+          "titulo": "Hacer espacio para quienes llegan",
           "pasuk": {
             "hebreo": "וְעָשִׂיתָ אֵת חֲצַר הַמִּשְׁכָּן",
             "trans": "Veasita et jatzer hamishkan",
@@ -7745,7 +7821,8 @@
           },
           "aliya": 7,
           "aliyaRange": "Shemot 27:9-27:19",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "JATZER HAMISHKAN"
         }
       ]
     },
@@ -7761,7 +7838,7 @@
           "ramak_color": {
             "hex": "#E8EAED"
           },
-          "titulo": "NER TAMID - La continuidad necesita cuidado",
+          "titulo": "La continuidad necesita cuidado",
           "pasuk": {
             "hebreo": "שֶׁמֶן זַיִת זָךְ כָּתִית לַמָּאוֹר לְהַעֲלֹת נֵר תָּמִיד",
             "trans": "Shemen zayit zaj katit lamaor, leha'alot ner tamid",
@@ -7806,7 +7883,8 @@
           },
           "aliya": 1,
           "aliyaRange": "Shemot 27:20-28:12",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "NER TAMID"
         },
         {
           "dia": 2,
@@ -7814,7 +7892,7 @@
           "ramak_color": {
             "hex": "#B85C38"
           },
-          "titulo": "AL LIBO - Llevar nombres sobre el corazón",
+          "titulo": "Llevar nombres sobre el corazón",
           "pasuk": {
             "hebreo": "וְנָשָׂא אַהֲרֹן אֶת־שְׁמוֹת בְּנֵי־יִשְׂרָאֵל בְּחֹשֶׁן הַמִּשְׁפָּט עַל־לִבּוֹ",
             "trans": "Venasa Aharon et shemot bnei Yisrael bejoshen hamishpat al libo",
@@ -7860,7 +7938,8 @@
           },
           "aliya": 2,
           "aliyaRange": "Shemot 28:13-28:30",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "AL LIBO"
         },
         {
           "dia": 3,
@@ -7868,7 +7947,7 @@
           "ramak_color": {
             "hex": "#FFFBEB"
           },
-          "titulo": "VENISHMA KOLO - Hacer audible la llegada",
+          "titulo": "Hacer audible la llegada",
           "pasuk": {
             "hebreo": "וְנִשְׁמַע קוֹלוֹ בְּבֹאוֹ אֶל־הַקֹּדֶשׁ לִפְנֵי יְהוָה וּבְצֵאתוֹ",
             "trans": "Venishma kolo bevo el hakodesh... uvetzeto",
@@ -7913,7 +7992,8 @@
           },
           "aliya": 3,
           "aliyaRange": "Shemot 28:31-28:43",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "VENISHMA KOLO"
         },
         {
           "dia": 4,
@@ -7921,7 +8001,7 @@
           "ramak_color": {
             "hex": "#F9C6D0"
           },
-          "titulo": "UMILETA YAD AHARON - La autoridad necesita preparación",
+          "titulo": "La autoridad necesita preparación",
           "pasuk": {
             "hebreo": "וּמִלֵּאתָ יַד־אַהֲרֹן וְיַד־בָּנָיו",
             "trans": "Umileta yad Aharon veyad banav",
@@ -7966,7 +8046,8 @@
           },
           "aliya": 4,
           "aliyaRange": "Shemot 29:1-29:18",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "UMILETA YAD AHARON"
         },
         {
           "dia": 5,
@@ -7974,7 +8055,7 @@
           "ramak_color": {
             "hex": "#D46A8C"
           },
-          "titulo": "OZEN · YAD · REGEL - Escuchar, hacer y caminar",
+          "titulo": "Aprender a escuchar y actuar con coherencia",
           "pasuk": {
             "hebreo": "וְנָתַתָּה עַל־תְּנוּךְ אֹזֶן אַהֲרֹן וְעַל־תְּנוּךְ אֹזֶן בָּנָיו הַיְמָנִית וְעַל־בֹּהֶן יָדָם הַיְמָנִית וְעַל־בֹּהֶן רַגְלָם הַיְמָנִית",
             "trans": "",
@@ -8014,14 +8095,15 @@
           },
           "reflexion": "¿Qué pequeño cambio podría acercar tus acciones a tus palabras?",
           "paraLlevar": {
-            "avoda": "Revisa una convicción importante con tres preguntas: ¿qué escuché?, ¿qué hice?, ¿hacia dónde me está llevando?",
+            "avoda": "Elige una convicción importante. Identifica una acción de hoy que la refleje, aunque sea pequeña.",
             "kavana": "Ozen · yad · regel — Escucho, actúo y camino en una misma dirección.",
             "hitbodedut": "Reconoce una distancia entre tus palabras y tus acciones."
           },
           "aliya": 5,
           "aliyaRange": "Shemot 29:19-29:37",
           "rootNote": "El fragmento hebreo es una selección continua de Éxodo 29:20; omite el comienzo sobre el carnero y la indicación final sobre el altar. El español es una paráfrasis de esa selección. El pasaje pertenece al rito de investidura de Aharón y sus hijos. La relación «oreja–mano–pie = escuchar–actuar–caminar» es una propuesta pedagógica de Dérej, no una explicación literal atribuida a Rambam ni una práctica ritual para realizar.",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "OZEN · YAD · REGEL"
         },
         {
           "dia": 6,
@@ -8029,7 +8111,7 @@
           "ramak_color": {
             "hex": "#E9A426"
           },
-          "titulo": "BABOKER · BEIN HAARBAYIM - Darle dos anclas al día",
+          "titulo": "Cuidar un hábito al comenzar y terminar el día",
           "pasuk": {
             "hebreo": "אֶת־הַכֶּבֶשׂ הָאֶחָד תַּעֲשֶׂה בַבֹּקֶר וְאֵת הַכֶּבֶשׂ הַשֵּׁנִי תַּעֲשֶׂה בֵּין הָעַרְבָּיִם",
             "trans": "Et hakeves ha'ejad ta'ase vaboker, ve'et hakeves hasheni ta'ase bein ha'arbayim",
@@ -8074,7 +8156,8 @@
           },
           "aliya": 6,
           "aliyaRange": "Shemot 29:38-29:46",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "BABOKER · BEIN HAARBAYIM"
         },
         {
           "dia": 7,
@@ -8082,7 +8165,7 @@
           "ramak_color": {
             "hex": "#1E2A5A"
           },
-          "titulo": "KETORET TAMID - Lo invisible también llena un espacio",
+          "titulo": "Nuestros gestos afectan el ambiente",
           "pasuk": {
             "hebreo": "וְהִקְטִיר עָלָיו אַהֲרֹן קְטֹרֶת סַמִּים בַּבֹּקֶר בַּבֹּקֶר... וּבְהַעֲלֹת אַהֲרֹן אֶת־הַנֵּרֹת בֵּין הָעַרְבַּיִם יַקְטִירֶנָּה",
             "trans": "Vehiktir alav Aharon ketoret samim baboker baboker... uvein ha'arbayim yaktirena",
@@ -8128,7 +8211,8 @@
           "aliya": 7,
           "aliyaRange": "Shemot 30:1-30:10",
           "rootNote": "Rambam, Hiljot Temidín uMusafín 3:1, codifica explícitamente la ketoret dos veces al día. La idea de «atmósfera» es una aplicación pedagógica de DÉREJ, no una definición halájica del incienso.",
-          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26"
+          "revision_editorial": "Revisión de coherencia · aliyá, voces y atribuciones · 2026-10-26",
+          "tituloTranslit": "KETORET TAMID"
         }
       ]
     }
