@@ -2597,30 +2597,30 @@
             "rambam": {
               "fuente": "Mishné Torá · Hiljot Deot 6:1",
               "tipo": "LECTURA DÉREJ",
-              "texto": "DÉREJ lee la salida de Yaakov como una salida que también lo expondrá a transformarse.",
-              "atribucion": "El vínculo entre esta fuente y la escena diaria es una elaboración de Dérej. No es una cita literal ni un comentario directo del maestro sobre este pasaje.",
-              "base": "Rambam recuerda que el entorno influye profundamente en la persona y que, cuando hace falta, cambiar de lugar puede ser parte de cuidar el propio camino."
+              "texto": "En Rambam, elegir el entorno forma parte de la responsabilidad personal. Yaakov deja un lugar familiar sin saber cómo será el siguiente. Dérej propone mirar esta salida sin romantizarla: un cambio puede abrir posibilidades, pero importa también con qué principios entramos en el nuevo espacio.",
+              "atribucion": "La relación con la escena bíblica es una interpretación editorial de Dérej; no es una cita textual ni un comentario directo del sabio sobre este pasaje.",
+              "base": "Rambam explica que el carácter y la conducta se ven influidos por las personas y los ambientes que frecuentamos."
             },
             "ramak": {
-              "fuente": "Tomer Devorah 1:1",
-              "tipo": "SÍNTESIS DÉREJ",
-              "texto": "En clave de Chesed, salir no es huir de todo vínculo. Yaakov lleva consigo una historia y, al mismo tiempo, queda disponible para encuentros que todavía no conoce.",
-              "atribucion": "El vínculo entre esta fuente y la escena diaria es una elaboración de Dérej. No es una cita literal ni un comentario directo del maestro sobre este pasaje.",
-              "base": "Tomer Devorah comienza situando la semejanza con el Creador en la conducta y propone imitar cualidades de misericordia. La asociación de esta jornada con una sefirá es una elaboración de Dérej."
+              "fuente": "Tomer Devorah · capítulo 1, apertura",
+              "tipo": "LECTURA DÉREJ",
+              "texto": "Para Ramak, la vida espiritual necesita tomar forma en la conducta. Al partir, Yaakov lleva consigo algo más que recuerdos: la posibilidad de tratar con dignidad a personas todavía desconocidas. Aplicamos esta enseñanza al viaje; no afirmamos que Ramak comente directamente esta escena.",
+              "atribucion": "La relación con la escena bíblica es una interpretación editorial de Dérej; no es una cita textual ni un comentario directo del sabio sobre este pasaje.",
+              "base": "Ramak sostiene que la semejanza con el Creador se expresa en las acciones, no solo en la apariencia o las ideas."
             },
             "ramjal": {
-              "fuente": "Mesilat Yesharim 1",
+              "fuente": "Mesilat Yesharim · capítulo 1",
               "tipo": "LECTURA DÉREJ",
-              "texto": "A veces descubrir esa tarea exige abandonar un lugar conocido y dejar que el camino revele algo que desde casa no se veía.",
-              "atribucion": "El vínculo entre esta fuente y la escena diaria es una elaboración de Dérej. No es una cita literal ni un comentario directo del maestro sobre este pasaje.",
-              "base": "Ramjal comienza preguntando cuál es la tarea de una persona en su mundo."
+              "texto": "Ramjal distingue el movimiento del propósito. No conocer el desenlace de un camino no significa caminar sin orientación. La salida de Yaakov permite pensar en una decisión concreta: conservar un criterio de conducta aun cuando las circunstancias cambien y todavía falten respuestas.",
+              "atribucion": "La relación con la escena bíblica es una interpretación editorial de Dérej; no es una cita textual ni un comentario directo del sabio sobre este pasaje.",
+              "base": "Ramjal comienza su obra invitando a discernir cuál es la tarea de la persona en su mundo."
             },
             "rabiNajman": {
               "fuente": "Likutei Moharan II:48",
               "tipo": "LECTURA DÉREJ",
-              "texto": "Rabí Najman enseña a continuar aun cuando el camino parezca lleno de retrocesos. Salir no garantiza claridad inmediata: puede ser el comienzo de aprender a caminar sin tener todo resuelto.",
-              "atribucion": "El vínculo entre esta fuente y la escena diaria es una elaboración de Dérej. No es una cita literal ni un comentario directo del maestro sobre este pasaje.",
-              "base": "Rabí Najman anima a perseverar en el acercamiento al Creador sin despreciar los pequeños movimientos del camino."
+              "texto": "Rabí Najman no confunde avanzar con tenerlo todo resuelto. Su enseñanza sobre la perseverancia nos acompaña al leer la partida de Yaakov: el primer paso no cancela el miedo ni garantiza éxito, pero puede ser valioso incluso cuando el camino sigue incierto.",
+              "atribucion": "La relación con la escena bíblica es una interpretación editorial de Dérej; no es una cita textual ni un comentario directo del sabio sobre este pasaje.",
+              "base": "Rabí Najman alienta a perseverar en la búsqueda espiritual aun cuando aparecen caídas, dificultades o aparentes retrocesos."
             }
           },
           "reflexion": "¿Qué cambio te cuesta iniciar, aunque sientas que podría ayudarte a crecer?",
@@ -2651,35 +2651,31 @@
           "voces": {
             "rambam": {
               "fuente": "Mishné Torá · Hiljot Deot 1:6",
-              "url": "https://www.sefaria.org/Mishneh_Torah%2C_Human_Dispositions.1.6",
-              "base": "Rambam presenta la misericordia y otras cualidades como orientaciones para la conducta humana.",
+              "base": "Rambam relaciona los caminos del Creador con cualidades que deben expresarse en la conducta, como la misericordia.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "La iniciativa necesita atención a la situación.",
-              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
+              "texto": "La misericordia no queda en un sentimiento agradable: importa qué hace posible para el otro. Ante la fuerza de Yaakov al mover la piedra del pozo, Dérej invita a mirar el efecto de la ayuda. La capacidad personal adquiere valor cuando responde a una necesidad real.",
+              "atribucion": "La relación con la escena bíblica es una interpretación editorial de Dérej; no es una cita textual ni un comentario directo del sabio sobre este pasaje."
             },
             "ramak": {
-              "fuente": "Tomer Devorah 1:1",
-              "url": "https://www.sefaria.org/Tomer_Devorah.1.1",
-              "base": "Ramak sitúa la semejanza con el Creador en los actos y desarrolla cualidades de misericordia.",
+              "fuente": "Tomer Devorah 2:3",
+              "base": "Ramak propone considerar valiosa a cada criatura y orientar la propia conducta hacia el bien de quien lo necesita.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "Ayudar puede facilitar el trabajo de otra persona.",
-              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
+              "texto": "Ramak habla de una humildad que no desprecia a nadie. En la escena del pozo, ayudar no requiere convertirse en dueño de la situación. La lectura de Dérej subraya una diferencia sencilla: facilitar que alguien acceda al agua no es apropiarse de su historia ni de sus decisiones.",
+              "atribucion": "La relación con la escena bíblica es una interpretación editorial de Dérej; no es una cita textual ni un comentario directo del sabio sobre este pasaje."
             },
             "ramjal": {
-              "fuente": "Mesilat Yesharim 3",
-              "url": "https://www.sefaria.org/Mesillat_Yesharim.3",
-              "base": "Ramjal invita a examinar las acciones, antes de realizarlas y al revisar lo que ya hicimos.",
+              "fuente": "Mesilat Yesharim · capítulo 3",
+              "base": "Ramjal invita a examinar los actos y sus motivos con atención, sin dejarse arrastrar por la costumbre.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "No conviertas una capacidad propia en permiso para controlar.",
-              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
+              "texto": "Ramjal introduce una pausa entre intención y acción. Una ayuda generosa puede confundirse con la necesidad de dirigirlo todo. Dérej aplica su método a la escena del pozo: antes de intervenir, conviene reconocer qué problema existe y qué lugar corresponde ocupar a quien ofrece ayuda.",
+              "atribucion": "La relación con la escena bíblica es una interpretación editorial de Dérej; no es una cita textual ni un comentario directo del sabio sobre este pasaje."
             },
             "rabiNajman": {
-              "fuente": "Likutei Moharan II:25:1",
-              "url": "https://www.sefaria.org/Likutei_Moharan%2C_Part_II.25.1",
-              "base": "Rabí Najman describe la conversación personal con el Creador en la lengua habitual de quien habla.",
+              "fuente": "Likutei Moharan I:282 · Azamra",
+              "base": "Rabí Najman enseña a buscar un punto de bien en otras personas, incluso cuando la mirada inicial se fija en lo negativo.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "Nombra una ayuda que puedes ofrecer sin pedir protagonismo.",
-              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
+              "texto": "Rabí Najman nos enseña a mirar el bien sin reducir a nadie a una impresión rápida. En el encuentro junto al pozo, Dérej propone reconocer a las personas por algo más que la ayuda que necesitan. Una relación comienza mejor cuando también percibimos su dignidad y sus capacidades.",
+              "atribucion": "La relación con la escena bíblica es una interpretación editorial de Dérej; no es una cita textual ni un comentario directo del sabio sobre este pasaje."
             }
           },
           "reflexion": "¿Qué ayuda práctica puedes ofrecer respetando el lugar del otro?",
@@ -2711,36 +2707,32 @@
           },
           "voces": {
             "rambam": {
-              "fuente": "Mishné Torá · Hiljot Deot 1:6",
-              "url": "https://www.sefaria.org/Mishneh_Torah%2C_Human_Dispositions.1.6",
-              "base": "Rambam presenta la misericordia y otras cualidades como orientaciones para la conducta humana.",
+              "fuente": "Mishné Torá · Hiljot Deot 6:3",
+              "base": "Rambam desarrolla el deber de amar al prójimo y atender a su bienestar con una seriedad semejante a la que dedicamos al propio.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "La relación exige atender a las consecuencias de nuestros actos.",
-              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
+              "texto": "Leá expresa el dolor de sentirse menos amada. Rambam no comenta aquí su historia, pero su enseñanza obliga a tomar en serio la vida interior y el bienestar de quien tenemos cerca. Para Dérej, escuchar a alguien relegado exige más que compasión verbal: requiere un trato respetuoso y concreto.",
+              "atribucion": "La relación con la escena bíblica es una interpretación editorial de Dérej; no es una cita textual ni un comentario directo del sabio sobre este pasaje."
             },
             "ramak": {
-              "fuente": "Tomer Devorah 1:1",
-              "url": "https://www.sefaria.org/Tomer_Devorah.1.1",
-              "base": "Ramak sitúa la semejanza con el Creador en los actos y desarrolla cualidades de misericordia.",
+              "fuente": "Tomer Devorah 2:3",
+              "base": "Ramak pide no despreciar a ninguna criatura y mantener abierta la disposición de beneficiar a quien lo necesita.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "Una persona merece cuidado aunque no sea la preferida.",
-              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
+              "texto": "La humildad de Ramak corrige una mirada selectiva: la dignidad no depende de ser la persona preferida. Al escuchar a Leá, Dérej invita a reconocer a quien suele quedar a un lado. No se trata de borrar su dolor con una explicación espiritual, sino de no añadir indiferencia.",
+              "atribucion": "La relación con la escena bíblica es una interpretación editorial de Dérej; no es una cita textual ni un comentario directo del sabio sobre este pasaje."
             },
             "ramjal": {
-              "fuente": "Mesilat Yesharim 3",
-              "url": "https://www.sefaria.org/Mesillat_Yesharim.3",
-              "base": "Ramjal invita a examinar las acciones, antes de realizarlas y al revisar lo que ya hicimos.",
+              "fuente": "Mesilat Yesharim · capítulo 19",
+              "base": "Ramjal incluye la benevolencia y el cuidado del prójimo entre las dimensiones de una vida piadosa.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "Distingue comprender una emoción de justificar cualquier conducta.",
-              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
+              "texto": "Ramjal recuerda que la intención espiritual también se prueba en nuestras relaciones. La tristeza de Leá no necesita una respuesta que la apresure a sentirse mejor. Dérej vincula esta enseñanza con una forma de cuidado: escuchar, reconocer la herida y evitar explicaciones que silencien a quien habla.",
+              "atribucion": "La relación con la escena bíblica es una interpretación editorial de Dérej; no es una cita textual ni un comentario directo del sabio sobre este pasaje."
             },
             "rabiNajman": {
-              "fuente": "Likutei Moharan II:25:1",
-              "url": "https://www.sefaria.org/Likutei_Moharan%2C_Part_II.25.1",
-              "base": "Rabí Najman describe la conversación personal con el Creador en la lengua habitual de quien habla.",
+              "fuente": "Likutei Moharan II:25",
+              "base": "Rabí Najman enseña la hitbodedut: hablar personalmente con el Creador en palabras propias y en la lengua que resulte natural.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "Habla de tu necesidad de afecto sin avergonzarte.",
-              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
+              "texto": "La conversación personal que propone Rabí Najman admite expresar aquello que cuesta reconocer delante de otros. Al leer la voz de Leá, Dérej no convierte su dolor en una consigna. Puede haber una oración honesta en nombrar la necesidad de afecto sin fingir que ya ha desaparecido.",
+              "atribucion": "La relación con la escena bíblica es una interpretación editorial de Dérej; no es una cita textual ni un comentario directo del sabio sobre este pasaje."
             }
           },
           "reflexion": "¿Qué dolor estás dejando de escuchar detrás de una reacción?",
@@ -2772,36 +2764,32 @@
           },
           "voces": {
             "rambam": {
-              "fuente": "Mishné Torá · Hiljot Deot 1:6",
-              "url": "https://www.sefaria.org/Mishneh_Torah%2C_Human_Dispositions.1.6",
-              "base": "Rambam presenta la misericordia y otras cualidades como orientaciones para la conducta humana.",
+              "fuente": "Mishné Torá · Hiljot Deot 1:4",
+              "base": "Rambam presenta el camino equilibrado y la formación consciente de cualidades como parte del cuidado de la conducta.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "La honestidad incluye reconocer lo que no podemos garantizar.",
-              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
+              "texto": "La espera de Rajel no debe transformarse en una medida de su valor. Rambam no habla de esta escena en el pasaje citado; Dérej toma su insistencia en la prudencia de los juicios para evitar una conclusión injusta: un resultado que no controlamos no define la dignidad de una persona.",
+              "atribucion": "La relación con la escena bíblica es una interpretación editorial de Dérej; no es una cita textual ni un comentario directo del sabio sobre este pasaje."
             },
             "ramak": {
-              "fuente": "Tomer Devorah 1:1",
-              "url": "https://www.sefaria.org/Tomer_Devorah.1.1",
-              "base": "Ramak sitúa la semejanza con el Creador en los actos y desarrolla cualidades de misericordia.",
+              "fuente": "Tomer Devorah · capítulo 1, apertura",
+              "base": "Ramak desarrolla atributos de misericordia como modelo de una conducta que cuida y sostiene, incluso en situaciones difíciles.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "Acompañar puede consistir en permanecer disponible.",
-              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
+              "texto": "La misericordia de la que habla Ramak no es un premio por conseguir aquello que se desea. En la espera de Rajel, Dérej propone una presencia menos condicionada por el resultado: acompañar sin prometer lo que nadie puede garantizar y sin reducir la vida ajena a una sola ausencia.",
+              "atribucion": "La relación con la escena bíblica es una interpretación editorial de Dérej; no es una cita textual ni un comentario directo del sabio sobre este pasaje."
             },
             "ramjal": {
-              "fuente": "Mesilat Yesharim 3",
-              "url": "https://www.sefaria.org/Mesillat_Yesharim.3",
-              "base": "Ramjal invita a examinar las acciones, antes de realizarlas y al revisar lo que ya hicimos.",
+              "fuente": "Mesilat Yesharim · capítulo 3",
+              "base": "Ramjal propone examinar las acciones y distinguir lo que corresponde corregir de aquello que solo creemos comprender.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "Evita convertir un resultado biográfico en medida de mérito.",
-              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
+              "texto": "La vigilancia ética de Ramjal también exige revisar nuestros juicios. Frente a la espera de Rajel, una lectura apresurada puede confundir sufrimiento con falta de mérito. Dérej propone separar los hechos del juicio que proyectamos sobre ellos y hablar de esa historia con respeto.",
+              "atribucion": "La relación con la escena bíblica es una interpretación editorial de Dérej; no es una cita textual ni un comentario directo del sabio sobre este pasaje."
             },
             "rabiNajman": {
-              "fuente": "Likutei Moharan II:25:1",
-              "url": "https://www.sefaria.org/Likutei_Moharan%2C_Part_II.25.1",
-              "base": "Rabí Najman describe la conversación personal con el Creador en la lengua habitual de quien habla.",
+              "fuente": "Likutei Moharan I:282 · Azamra",
+              "base": "Rabí Najman aconseja descubrir algún punto de bien también en uno mismo para no quedar definido por las propias faltas o dificultades.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "Expresa una espera y deja espacio para la incertidumbre.",
-              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
+              "texto": "La búsqueda del bien que enseña Rabí Najman no niega el dolor. En la espera de Rajel, Dérej propone no permitir que una dificultad ocupe toda la identidad de una persona. Hay vínculos, capacidades y actos valiosos que siguen existiendo mientras una respuesta no llega.",
+              "atribucion": "La relación con la escena bíblica es una interpretación editorial de Dérej; no es una cita textual ni un comentario directo del sabio sobre este pasaje."
             }
           },
           "reflexion": "Cuando alguien cercano espera algo importante, ¿cómo puedes acompañarlo sin hacer promesas?",
@@ -2833,36 +2821,32 @@
           },
           "voces": {
             "rambam": {
-              "fuente": "Mishné Torá · Hiljot Deot 1:6",
-              "url": "https://www.sefaria.org/Mishneh_Torah%2C_Human_Dispositions.1.6",
-              "base": "Rambam presenta la misericordia y otras cualidades como orientaciones para la conducta humana.",
+              "fuente": "Mishné Torá · Hiljot Deot 2:6",
+              "base": "Rambam rechaza la duplicidad entre lo que se guarda en el corazón y lo que se expresa con la boca; exige palabras veraces.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "Un trato justo necesita condiciones comprensibles.",
-              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
+              "texto": "Yaakov reclama por condiciones cambiadas una y otra vez. La enseñanza de Rambam sobre la verdad invita a distinguir la palabra dada de una promesa ambigua. Dérej aplica esta exigencia a los acuerdos cotidianos: lo que se ofrece debe poder entenderse y sostenerse sin doble lenguaje.",
+              "atribucion": "La relación con la escena bíblica es una interpretación editorial de Dérej; no es una cita textual ni un comentario directo del sabio sobre este pasaje."
             },
             "ramak": {
-              "fuente": "Tomer Devorah 1:1",
-              "url": "https://www.sefaria.org/Tomer_Devorah.1.1",
-              "base": "Ramak sitúa la semejanza con el Creador en los actos y desarrolla cualidades de misericordia.",
+              "fuente": "Tomer Devorah 2:7",
+              "base": "Ramak aconseja conducir la ira con sabiduría y buena voluntad para evitar que se vuelva destructiva.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "Reconocer el esfuerzo ajeno forma parte del cuidado.",
-              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
+              "texto": "La paciencia de Ramak no autoriza a aceptar cualquier injusticia. Cuando Yaakov describe los cambios de Labán, Dérej propone mantener juntas dos exigencias: poner límites claros y evitar que el enojo borre la humanidad del otro. Cuidar el vínculo no obliga a callar un incumplimiento.",
+              "atribucion": "La relación con la escena bíblica es una interpretación editorial de Dérej; no es una cita textual ni un comentario directo del sabio sobre este pasaje."
             },
             "ramjal": {
-              "fuente": "Mesilat Yesharim 3",
-              "url": "https://www.sefaria.org/Mesillat_Yesharim.3",
-              "base": "Ramjal invita a examinar las acciones, antes de realizarlas y al revisar lo que ya hicimos.",
+              "fuente": "Mesilat Yesharim · capítulo 11",
+              "base": "Ramjal examina con rigor la honestidad y el daño en los tratos, también en las formas menos evidentes de aprovechamiento.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "Distingue una expectativa personal de un incumplimiento verificable.",
-              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
+              "texto": "Para Ramjal, la rectitud no termina en evitar el engaño más visible. La reclamación de Yaakov permite mirar las condiciones del trabajo y el cumplimiento de los acuerdos. Dérej aplica su examen ético a una pregunta práctica: si cambian los términos, debe hacerse explícito qué cambió y a quién perjudica.",
+              "atribucion": "La relación con la escena bíblica es una interpretación editorial de Dérej; no es una cita textual ni un comentario directo del sabio sobre este pasaje."
             },
             "rabiNajman": {
-              "fuente": "Likutei Moharan II:25:1",
-              "url": "https://www.sefaria.org/Likutei_Moharan%2C_Part_II.25.1",
-              "base": "Rabí Najman describe la conversación personal con el Creador en la lengua habitual de quien habla.",
+              "fuente": "Likutei Moharan II:25",
+              "base": "Rabí Najman propone hablar con el Creador de manera directa, también sobre las dificultades personales y las emociones difíciles.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "Nombra una dificultad sin convertir a la otra persona en una caricatura.",
-              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
+              "texto": "La hitbodedut puede dar lugar a palabras que todavía no sabemos expresar en una conversación tensa. Frente al reclamo de Yaakov, Dérej propone distinguir la claridad de la descarga: reconocer el enojo en privado puede ayudarnos después a formular una reclamación firme sin humillar.",
+              "atribucion": "La relación con la escena bíblica es una interpretación editorial de Dérej; no es una cita textual ni un comentario directo del sabio sobre este pasaje."
             }
           },
           "reflexion": "Cuando alguien cambia lo acordado contigo y te parece injusto, ¿cómo podrías decírselo?",
@@ -2894,36 +2878,32 @@
           },
           "voces": {
             "rambam": {
-              "fuente": "Mishné Torá · Hiljot Deot 1:6",
-              "url": "https://www.sefaria.org/Mishneh_Torah%2C_Human_Dispositions.1.6",
-              "base": "Rambam presenta la misericordia y otras cualidades como orientaciones para la conducta humana.",
+              "fuente": "Mishné Torá · Hiljot Sejirut 11:1",
+              "base": "Rambam desarrolla la obligación de pagar al trabajador a tiempo y de tratar seriamente sus derechos salariales.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "Dar cuenta requiere precisión y honestidad.",
-              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
+              "texto": "Yaakov enumera años de trabajo y desgaste. Rambam no interpreta aquí ese discurso, pero su legislación recuerda que el trabajo crea obligaciones concretas. Dérej propone atender tanto al esfuerzo que suele quedar invisible como a la responsabilidad de cumplir los pagos y acuerdos que corresponden.",
+              "atribucion": "La relación con la escena bíblica es una interpretación editorial de Dérej; no es una cita textual ni un comentario directo del sabio sobre este pasaje."
             },
             "ramak": {
-              "fuente": "Tomer Devorah 1:1",
-              "url": "https://www.sefaria.org/Tomer_Devorah.1.1",
-              "base": "Ramak sitúa la semejanza con el Creador en los actos y desarrolla cualidades de misericordia.",
+              "fuente": "Tomer Devorah 2:2",
+              "base": "Ramak presenta la humildad como una disposición que necesita cultivarse gradualmente, no como una simple declaración de modestia.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "Escuchar un reclamo evita reducir a alguien a su función.",
-              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
+              "texto": "Ante el recuento que hace Yaakov de su trabajo, la humildad de Ramak no pide borrar los hechos ni negar un esfuerzo verdadero. La aplicación de Dérej distingue entre defender con claridad una contribución y convertir el reclamo en desprecio hacia la otra persona. Ambas cosas no son iguales.",
+              "atribucion": "La relación con la escena bíblica es una interpretación editorial de Dérej; no es una cita textual ni un comentario directo del sabio sobre este pasaje."
             },
             "ramjal": {
-              "fuente": "Mesilat Yesharim 3",
-              "url": "https://www.sefaria.org/Mesillat_Yesharim.3",
-              "base": "Ramjal invita a examinar las acciones, antes de realizarlas y al revisar lo que ya hicimos.",
+              "fuente": "Mesilat Yesharim · capítulo 3",
+              "base": "Ramjal propone examinar los hechos y los motivos, revisando tanto lo que hacemos como el sentido de nuestros actos.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "Revisa tus propias responsabilidades antes de hablar por toda la situación.",
-              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
+              "texto": "En su defensa, Yaakov repasa pérdidas, cuidados y años de servicio. El examen de Ramjal invita a separar hechos comprobables, interpretaciones y responsabilidades propias. Dérej aplica esa disciplina a los desacuerdos: la precisión fortalece un reclamo legítimo más que la exageración.",
+              "atribucion": "La relación con la escena bíblica es una interpretación editorial de Dérej; no es una cita textual ni un comentario directo del sabio sobre este pasaje."
             },
             "rabiNajman": {
-              "fuente": "Likutei Moharan II:25:1",
-              "url": "https://www.sefaria.org/Likutei_Moharan%2C_Part_II.25.1",
-              "base": "Rabí Najman describe la conversación personal con el Creador en la lengua habitual de quien habla.",
+              "fuente": "Likutei Moharan II:25",
+              "base": "Rabí Najman describe la conversación personal como un espacio para expresar el estado real del corazón, sin fórmulas prestadas.",
               "tipo": "LECTURA DÉREJ",
-              "texto": "Expresa el cansancio sin usarlo para herir.",
-              "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
+              "texto": "El cansancio puede hacer que las palabras salgan como golpes. La práctica de Rabí Najman permite decir primero, con sencillez, cuánto pesan el desgaste y la frustración. Dérej propone que esa sinceridad no sustituya una conversación necesaria, sino que ayude a llegar a ella sin herir deliberadamente.",
+              "atribucion": "La relación con la escena bíblica es una interpretación editorial de Dérej; no es una cita textual ni un comentario directo del sabio sobre este pasaje."
             }
           },
           "reflexion": "¿Qué esfuerzo necesitas explicar con claridad?",
@@ -2953,32 +2933,32 @@
           },
           "voces": {
             "rambam": {
-              "fuente": "Moreh Nevujim II:42",
+              "fuente": "Guía de los perplejos II:42",
               "tipo": "LECTURA DÉREJ",
-              "texto": "DÉREJ evita convertir el relato en una descripción física y conserva su fuerza: al volver al camino, Yaakov percibe que su historia es más grande que lo visible.",
-              "atribucion": "El vínculo entre esta fuente y la escena diaria es una elaboración de Dérej. No es una cita literal ni un comentario directo del maestro sobre este pasaje.",
-              "base": "Rambam insiste en que las apariciones de ángeles pertenecen al lenguaje de la visión profética."
+              "texto": "Yaakov vuelve a encontrarse con mensajeros al terminar la parashá. Rambam invita a no apresurarnos a imaginar una escena física sin atender al modo en que se relata. Dérej conserva esa cautela: el pasaje puede estudiarse sin resolver de forma simplista qué clase de experiencia describe.",
+              "atribucion": "La relación con la escena bíblica es una interpretación editorial de Dérej; no es una cita textual ni un comentario directo del sabio sobre este pasaje.",
+              "base": "Rambam examina las narraciones de apariciones angélicas dentro de su reflexión sobre visión y profecía; su propuesta tiene un marco filosófico propio."
             },
             "ramak": {
-              "fuente": "Tomer Devorah 1:1",
-              "tipo": "SÍNTESIS DÉREJ",
-              "texto": "En clave de Malchut, el final de Vayetze no es llegar y quedarse quieto, sino volver a caminar. Realeza aquí significa habitar el camino con todo lo aprendido.",
-              "atribucion": "El vínculo entre esta fuente y la escena diaria es una elaboración de Dérej. No es una cita literal ni un comentario directo del maestro sobre este pasaje.",
-              "base": "Tomer Devorah comienza situando la semejanza con el Creador en la conducta y propone imitar cualidades de misericordia. La asociación de esta jornada con una sefirá es una elaboración de Dérej."
+              "fuente": "Tomer Devorah 9:1",
+              "tipo": "LECTURA DÉREJ",
+              "texto": "La lectura cabalística de Maljut no equivale a dominar a otros. En el retorno de Yaakov al camino, Dérej toma de Ramak una actitud de humildad: seguir adelante con experiencia acumulada, pero sin apropiarse de los encuentros ni convertir cada avance en una prueba de superioridad.",
+              "atribucion": "La relación con la escena bíblica es una interpretación editorial de Dérej; no es una cita textual ni un comentario directo del sabio sobre este pasaje.",
+              "base": "Ramak vincula la cualidad de Maljut con la humildad y con la conciencia de no poseerlo todo por derecho propio."
             },
             "ramjal": {
-              "fuente": "Mesilat Yesharim 19",
+              "fuente": "Mesilat Yesharim · capítulo 19",
               "tipo": "LECTURA DÉREJ",
-              "texto": "Reconocer acompañamiento puede convertir el mismo camino de siempre en un camino vivido de otra manera.",
-              "atribucion": "El vínculo entre esta fuente y la escena diaria es una elaboración de Dérej. No es una cita literal ni un comentario directo del maestro sobre este pasaje.",
-              "base": "Ramjal enseña que una acción espiritual incluye intención y modo."
+              "texto": "La etapa termina, pero el camino continúa. Ramjal invita a mirar con qué intención se realiza una acción, no solo si puede darse por cumplida. Dérej aplica esa enseñanza al regreso de Yaakov: continuar no consiste en coleccionar logros, sino en cuidar la manera de vivir lo aprendido.",
+              "atribucion": "La relación con la escena bíblica es una interpretación editorial de Dérej; no es una cita textual ni un comentario directo del sabio sobre este pasaje.",
+              "base": "Ramjal explora la intención y la dimensión interior de los actos religiosos y de la relación con los demás."
             },
             "rabiNajman": {
               "fuente": "Likutei Moharan II:48",
               "tipo": "LECTURA DÉREJ",
-              "texto": "El Camino continúa. Rabí Najman enseña que los movimientos pequeños se acumulan; DÉREJ cierra la semana no con una llegada definitiva, sino con Yaakov nuevamente en marcha.",
-              "atribucion": "El vínculo entre esta fuente y la escena diaria es una elaboración de Dérej. No es una cita literal ni un comentario directo del maestro sobre este pasaje.",
-              "base": "Rabí Najman anima a perseverar en el acercamiento al Creador sin despreciar los pequeños movimientos del camino."
+              "texto": "Para Rabí Najman, las dificultades no cancelan el valor de perseverar. Yaakov sigue su camino después de encuentros, trabajo y conflictos. Dérej cierra la semana sin prometer una llegada perfecta: la madurez también puede consistir en caminar de nuevo, con más atención y menos certeza de control.",
+              "atribucion": "La relación con la escena bíblica es una interpretación editorial de Dérej; no es una cita textual ni un comentario directo del sabio sobre este pasaje.",
+              "base": "Rabí Najman anima a no abandonar la búsqueda espiritual ante obstáculos y aparentes retrocesos."
             }
           },
           "reflexion": "¿Qué aprendizaje de esta semana quieres llevar a tu vida?",
