@@ -1,7 +1,7 @@
 /* DÉREJ v2.5.2 · UX móvil · Caminos Diarios */
 const screens=[...document.querySelectorAll('[data-screen]')];
 const $=id=>document.getElementById(id);
-const RAMAK_URL='content/caminos-ramak-v25.json?v=vayetze-dia6-20261120-1';
+const RAMAK_URL='content/caminos-ramak-v25.json?v=claridad-140-caminos-20261120-1';
 const BIBLICAL_BOOK_ES={
   'Bereshit':'Génesis',
   'Shemot':'Éxodo',
@@ -1342,8 +1342,9 @@ function slug(v=''){
 
 function caminoMeaning(c){
   const title=String(c?.titulo||'').trim();
+  const translit=String(c?.tituloTranslit||'').trim();
   const editorial=title.includes(' - ')?title.split(' - ').slice(1).join(' - ').trim():'';
-  return editorial || RAMAK_GLOSS[title] || '';
+  return (translit?RAMAK_GLOSS[translit]:null) || editorial || RAMAK_GLOSS[title] || '';
 }
 
 
@@ -7455,6 +7456,9 @@ function prepareCaminoShell(){
       .ramakBody{padding:18px}
       .ramakBodyEyebrow{font-size:.58rem;letter-spacing:.15em;font-weight:900;color:#796947}
       .ramakStageIntro{margin:9px 0 14px;color:#685c4c;font:.86rem/1.48 Georgia,serif}
+      .ramakTranslitNote{display:flex;align-items:baseline;flex-wrap:wrap;gap:6px 12px;margin:2px 0 15px;color:#5c5549;font:.78rem/1.5 Georgia,serif}
+      .ramakTranslitNote small{font:.58rem/1.5 sans-serif;letter-spacing:.1em;color:#786950;font-weight:800}
+      .ramakTranslitNote b{font-weight:650;color:#3d4637}
       .ramakReflection{margin:13px 0 0;padding:16px;border-left:5px solid var(--ramak-accent);border-radius:17px;background:color-mix(in srgb,var(--ramak-accent),#fff8e9 82%)}
       .ramakReflection small,.ramakCard small,.ramakVoice small{display:block;font-size:.55rem;letter-spacing:.14em;font-weight:900;color:#6d654f;margin-bottom:6px}
       .ramakReflection p{margin:0;font:1.14rem/1.48 Georgia,serif;color:#383129}
@@ -8822,6 +8826,7 @@ function navButtons(step){
 
 function scene(c,label){
   const meaning=caminoMeaning(c);
+  const glossTerm=c.tituloTranslit||c.titulo;
   const image=caminoDayImage(c);
   const sceneStyle=image
     ? ` style="background-image:linear-gradient(180deg,rgba(7,10,8,.08),rgba(7,10,8,.74)),url('${image}')"`
@@ -8844,7 +8849,7 @@ function scene(c,label){
       <small>${label}</small>
       <div class="ramakTitleLine">
         <h2>${esc(c.titulo)}</h2>
-        ${meaning?`<button type="button" class="ramakGlossBtn" data-ramak-gloss="${esc(c.titulo)}" data-ramak-meaning="${esc(meaning)}" aria-label="Ver significado de ${esc(c.titulo)}">א?</button>`:''}
+        ${meaning?`<button type="button" class="ramakGlossBtn" data-ramak-gloss="${esc(glossTerm)}" data-ramak-meaning="${esc(meaning)}" aria-label="Ver significado de ${esc(glossTerm)}">א?</button>`:''}
       </div>
     </div>
   </div>`;
@@ -9663,6 +9668,7 @@ function renderPanels(p,c){
     <div class="ramakBody">
       <span class="ramakBodyEyebrow">RAÍZ · ${esc(p.parasha)}</span>
       <p class="ramakStageIntro">Este es el pasaje que inspira la reflexión de hoy.</p>
+      ${c.tituloTranslit?`<p class="ramakTranslitNote"><small>TÉRMINO O NOMBRE EN HEBREO TRANSLITERADO</small><b>${esc(c.tituloTranslit)}</b></p>`:''}
       <div class="ramakCard ramakVerseCard">
         <div class="ramakHebrew" lang="he" dir="rtl">${esc(normalizeHebrewText(pasuk.hebreo))}</div>
         ${pasuk.es?`<p class="derejVerseTranslation">${esc(pasuk.es)}</p>`:''}
