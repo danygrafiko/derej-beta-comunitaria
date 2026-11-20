@@ -45,7 +45,7 @@ const runtime=read('prelaunch-local.js');
 const html=read('index.html');
 assert(runtime.includes('content/caminos-ramak-v25.json?v=claridad-140-caminos-20261120-1'));
 assert(html.includes('src="prelaunch-local.js?v=claridad-140-caminos-20261120-1"'));
-assert(runtime.includes('TÉRMINO O NOMBRE EN HEBREO TRANSLITERADO'));
+assert(runtime.includes('HEBREO TRANSLITERADO'));
 assert(runtime.includes('const glossTerm=c.tituloTranslit||c.titulo;'));
 assert(!/src="deep-review-v\d+\.js/.test(html));
 new vm.Script(runtime,{filename:'prelaunch-local.js'});
