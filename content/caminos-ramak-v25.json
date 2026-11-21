@@ -200,7 +200,7 @@
         },
         {
           "dia": 3,
-          "titulo": "Responder a la pregunta",
+          "titulo": "Reconocer un error sin buscar excusas",
           "sefira": "Tiferet",
           "ramak_color": {
             "nombre": "Blanco con vetas rojas",
@@ -1521,9 +1521,9 @@
               "texto": "Habla de aquello que te cuesta dejar y de la ayuda que podrías aceptar. Pedir apoyo puede ser parte del primer paso hacia una situación más segura."
             }
           },
-          "reflexion": "Cuando alguien está en una situación difícil, ¿cómo puedes ofrecer ayuda sin imponerte?",
+          "reflexion": "Cuando alguien atraviesa una situación urgente, ¿qué ayuda concreta y segura puedes ofrecerle?",
           "paraLlevar": {
-            "avoda": "Pregunta a alguien qué apoyo concreto le sería útil y respeta su respuesta.",
+            "avoda": "Si alguien necesita ayuda urgente, ofrece una acción concreta y segura; si hay peligro, busca apoyo adecuado.",
             "kavana": "La urgencia necesita acciones proporcionadas.",
             "hitbodedut": "Expresa un temor que hoy te acompaña."
           },
@@ -2638,9 +2638,9 @@
               "base": "Rabí Najman anima a perseverar en el acercamiento al Creador sin despreciar los pequeños movimientos del camino."
             }
           },
-          "reflexion": "¿Qué cambio te cuesta iniciar, aunque sientas que podría ayudarte a crecer?",
+          "reflexion": "¿Qué cambio has postergado porque todavía no sabes cómo resultará?",
           "paraLlevar": {
-            "avoda": "Cambia hoy una pequeña parte de tu rutina y observa qué descubres cuando no haces todo de la manera habitual.",
+            "avoda": "Da hoy un paso pequeño hacia ese cambio: busca información, conversa o prepara algo que necesites.",
             "kavana": "Vayetze — Salgo sin exigir conocer ya todo el camino.",
             "hitbodedut": "Habla de una etapa que sientes que debes dejar atrás."
           },
@@ -2655,7 +2655,7 @@
           "ramak_color": {
             "hex": "#B85C38"
           },
-          "titulo": "Ayudar sin ocupar toda la escena",
+          "titulo": "Ayudar sin imponer",
           "pasuk": {
             "hebreo": "וַיְהִי כַּאֲשֶׁר רָאָה יַעֲקֹב אֶת־רָחֵל בַּת־לָבָן אֲחִי אִמּוֹ וְאֶת־צֹאן לָבָן אֲחִי אִמּוֹ וַיִּגַּשׁ יַעֲקֹב וַיָּגֶל אֶת־הָאֶבֶן מֵעַל פִּי הַבְּאֵר וַיַּשְׁקְ אֶת־צֹאן לָבָן אֲחִי אִמּֽוֹ׃",
             "trans": "",
@@ -2698,11 +2698,11 @@
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             }
           },
-          "reflexion": "Antes de ayudar a alguien, ¿cómo puedes saber qué necesita realmente?",
+          "reflexion": "¿Cómo puedes ayudar a alguien sin decidir por esa persona?",
           "paraLlevar": {
-            "avoda": "Pregunta qué tarea sería útil y realiza solo lo acordado.",
-            "kavana": "Mi ayuda tendrá en cuenta la voluntad de quien la recibe y el lugar que desea conservar.",
-            "hitbodedut": "Comparte cómo te gustaría ayudar sin invadir."
+            "avoda": "Pregunta qué necesita la otra persona y ofrece una ayuda que respete su decisión.",
+            "kavana": "Antes de ayudar, escucharé qué necesita la otra persona.",
+            "hitbodedut": "Habla de una ocasión en la que quisiste ayudar y no supiste cuánto intervenir."
           },
           "aliya": 2,
           "rootNote": "La segunda aliyá relata el encuentro junto al pozo y la llegada a casa de Laván; la escalera pertenece a la primera. El texto español es una paráfrasis de Dérej. Las cuatro voces ofrecen marcos de lectura; sus aplicaciones a esta escena son nuestras y no comentarios directos de los maestros a este versículo.",
@@ -2716,7 +2716,7 @@
           "ramak_color": {
             "hex": "#FFFBEB"
           },
-          "titulo": "Escuchar a quien desea ser amada",
+          "titulo": "Escuchar a quien se siente poco querido",
           "pasuk": {
             "hebreo": "וַתַּהַר לֵאָה וַתֵּלֶד בֵּן וַתִּקְרָא שְׁמוֹ רְאוּבֵן כִּי אָֽמְרָה כִּֽי־רָאָה יְהֹוָה בְּעׇנְיִי כִּי עַתָּה יֶאֱהָבַנִי אִישִֽׁי׃",
             "trans": "",
@@ -2759,10 +2759,10 @@
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             }
           },
-          "reflexion": "Cuando alguien está triste, ¿cómo puedes escucharlo sin compararlo con otra persona?",
+          "reflexion": "Si alguien se siente poco querido, ¿cómo puedes escucharlo sin quitarle importancia a lo que siente?",
           "paraLlevar": {
-            "avoda": "Escucha a una persona sin compararla con otra ni intentar corregir enseguida su emoción.",
-            "kavana": "Escucharé el deseo de ser querido sin medirlo con la historia de otra persona.",
+            "avoda": "Escucha a alguien sin comparar su historia con la de otra persona ni intentar corregir enseguida su emoción.",
+            "kavana": "Escucharé su dolor sin compararlo ni quitarle importancia.",
             "hitbodedut": "Nombra una ocasión en que deseaste ser visto con amor."
           },
           "aliya": 3,
@@ -2820,10 +2820,10 @@
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             }
           },
-          "reflexion": "Cuando alguien cercano espera algo importante, ¿cómo puedes acompañarlo sin hacer promesas?",
+          "reflexion": "Cuando algo que deseas tarda en llegar, ¿cómo puedes cuidarte sin pensar que vales menos?",
           "paraLlevar": {
-            "avoda": "Ofrece compañía sin prometer que todo saldrá como la otra persona desea.",
-            "kavana": "Acompañaré la espera sin hacer depender la dignidad de nadie del resultado que llegue.",
+            "avoda": "Reconoce una cualidad tuya que no dependa de conseguir lo que estás esperando.",
+            "kavana": "Mi valor y el de los demás no dependen de conseguir lo que esperamos.",
             "hitbodedut": "Habla con el Creador de todo de una espera que llevas en el corazón."
           },
           "aliya": 4,
@@ -2838,7 +2838,7 @@
           "ramak_color": {
             "hex": "#D46A8C"
           },
-          "titulo": "Cuando cambian lo acordado",
+          "titulo": "Hablar cuando cambian un acuerdo",
           "pasuk": {
             "hebreo": "וַאֲבִיכֶן הֵתֶל בִּי וְהֶחֱלִף אֶת־מַשְׂכֻּרְתִּי עֲשֶׂרֶת מֹנִים וְלֹֽא־נְתָנוֹ אֱלֹהִים לְהָרַע עִמָּדִֽי׃",
             "trans": "",
@@ -2881,9 +2881,9 @@
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             }
           },
-          "reflexion": "Cuando alguien cambia lo acordado contigo y te parece injusto, ¿cómo podrías decírselo?",
+          "reflexion": "Si alguien cambia lo acordado contigo, ¿cómo puedes pedir una explicación con respeto?",
           "paraLlevar": {
-            "avoda": "Si un acuerdo importante para ti no está claro, prepara una pregunta respetuosa para conversarlo.",
+            "avoda": "Si tienes un acuerdo pendiente de aclaración, escribe qué se acordó, qué cambió y qué necesitas conversar.",
             "kavana": "Quiero acuerdos claros en los que el esfuerzo de cada persona pueda ser reconocido.",
             "hitbodedut": "Expresa cómo te sientes ante un trato injusto."
           },
@@ -2899,7 +2899,7 @@
           "ramak_color": {
             "hex": "#E9A426"
           },
-          "titulo": "Expresar el esfuerzo con respeto",
+          "titulo": "Explicar tu esfuerzo sin atacar",
           "pasuk": {
             "hebreo": "זֶה עֶשְׂרִים שָׁנָה אָנֹכִי עִמָּךְ רְחֵלֶיךָ וְעִזֶּיךָ לֹא שִׁכֵּלוּ וְאֵילֵי צֹאנְךָ לֹא אָכָֽלְתִּי׃",
             "trans": "",
@@ -2942,9 +2942,9 @@
               "atribucion": "El marco resume la fuente indicada. La aplicación es elaboración propia de Dérej; no es una cita ni una exégesis atribuida al maestro."
             }
           },
-          "reflexion": "Cuando alguien no reconoce tu esfuerzo, ¿cómo puedes contarle lo que has hecho con calma y respeto?",
+          "reflexion": "Si tu esfuerzo no ha sido reconocido, ¿cómo puedes explicar lo que hiciste con hechos y respeto?",
           "paraLlevar": {
-            "avoda": "Si tienes una conversación pendiente, anota dos hechos sobre lo que hiciste y cómo te gustaría expresarlos con respeto.",
+            "avoda": "Antes de una conversación pendiente, anota dos hechos concretos sobre lo que hiciste y exprésalos con respeto.",
             "kavana": "Hablaré de mi esfuerzo con hechos y dignidad, dejando espacio para una respuesta.",
             "hitbodedut": "Habla del esfuerzo que quisieras que fuera reconocido."
           },
@@ -2997,9 +2997,9 @@
               "base": "Rabí Najman anima a perseverar en el acercamiento al Creador sin despreciar los pequeños movimientos del camino."
             }
           },
-          "reflexion": "¿Qué aprendizaje de esta semana quieres llevar a tu vida?",
+          "reflexion": "¿Qué aprendizaje de esta semana quieres poner en práctica?",
           "paraLlevar": {
-            "avoda": "Camina hoy diez minutos sin audio ni pantalla. No busques una revelación: observa qué llevas contigo después de esta semana.",
+            "avoda": "Camina diez minutos sin pantalla y piensa en una acción pequeña para poner en práctica lo aprendido.",
             "kavana": "Ledarko — Continúo el Camino.",
             "hitbodedut": "Agradece un aprendizaje que llevarás contigo."
           },
@@ -5441,7 +5441,7 @@
           "ramak_color": {
             "hex": "#1E2A5A"
           },
-          "titulo": "Ahora verás",
+          "titulo": "Volver a intentarlo cuando algo sale mal",
           "pasuk": {
             "hebreo": "עַתָּה תִרְאֶה אֲשֶׁר אֶעֱשֶׂה לְפַרְעֹה",
             "trans": "Ata tir'eh asher e'ese leFaro",
@@ -6502,7 +6502,7 @@
           "ramak_color": {
             "hex": "#D46A8C"
           },
-          "titulo": "Cuando la nostalgia maquilla Egipto",
+          "titulo": "No idealizar lo que dejamos atrás",
           "pasuk": {
             "hebreo": "מִי־יִתֵּן מוּתֵנוּ בְיַד־יְהוָה בְּאֶרֶץ מִצְרַיִם בְּשִׁבְתֵּנוּ עַל־סִיר הַבָּשָׂר",
             "trans": "Mi yiten mutenu veyad Adonai be'eretz Mitzrayim, beshivtenu al sir habasar",
@@ -8165,7 +8165,7 @@
           "ramak_color": {
             "hex": "#1E2A5A"
           },
-          "titulo": "Nuestros gestos afectan el ambiente",
+          "titulo": "Un gesto puede mejorar el día de alguien",
           "pasuk": {
             "hebreo": "וְהִקְטִיר עָלָיו אַהֲרֹן קְטֹרֶת סַמִּים בַּבֹּקֶר בַּבֹּקֶר... וּבְהַעֲלֹת אַהֲרֹן אֶת־הַנֵּרֹת בֵּין הָעַרְבַּיִם יַקְטִירֶנָּה",
             "trans": "Vehiktir alav Aharon ketoret samim baboker baboker... uvein ha'arbayim yaktirena",
@@ -8235,7 +8235,7 @@
     }
   },
   "schema_version": "2.5",
-  "revision_editorial": "DÉREJ v2.6 · secuencia anual de aliyot y curaduría contextual",
+  "revision_editorial": "DÉREJ v2.6 · secuencia anual de aliyot y curaduría contextual · claridad final 2026-11-20",
   "nota_fuentes": "Las etiquetas distinguen paráfrasis de fuente y aplicaciones propias. En las jornadas v2.6, «Marco de la fuente» resume el pasaje identificado y «Aplicación Dérej» expresa nuestra lectura de la escena; no atribuimos a los maestros comentarios directos que no hayamos localizado. Las prácticas son propuestas libres de Dérej.",
-  "revision_preguntas": "2026-11-20 · revisión editorial integral de 140 Caminos · 68 preguntas, 93 títulos y 12 prácticas aclaradas · pasajes y voces conservados"
+  "revision_preguntas": "2026-11-20 · segunda pasada de claridad: Vayetze D1-D7, cuatro títulos adicionales y diferenciación de Vayera D3 · 140 Caminos conservados, fuentes y pasajes sin alterar"
 }
