@@ -10216,11 +10216,32 @@ function renderPanels(p,c){
 
 
 
+  const practiceGuides = {
+    'Vayishlaj|2': {
+      simple: 'Piensa en un desacuerdo reciente. Recuerda algo que ocurrió y distingue eso de lo que temes que pase.',
+      example: 'Mi hermano aún no responde mi mensaje. Temo que esté molesto. Antes de sacar conclusiones, puedo hablar con alguien de confianza.',
+      question: '¿Qué ayuda te vendría bien antes de hablar de lo que pasó?'
+    },
+    'Vayishlaj|3': {
+      simple: 'Piensa en alguien con quien te sientas a gusto. Ofrécele algo sencillo y dale tiempo para decidir.',
+      example: '«¿Te gustaría que salgamos a caminar un rato? Si hoy prefieres descansar, está bien».',
+      question: '¿Cómo invitarías a alguien a conversar para que se sienta libre de decir que sí o que no?'
+    }
+  };
+  const guide = practiceGuides[p.parasha + '|' + Number(c.dia)];
+  const practiceHelp = guide ? `
+    <details class="ramakPracticeHelp" style="margin-top:1rem">
+      <summary style="cursor:pointer;padding:.65rem 0"><b>Ver de otra manera</b></summary>
+      <p>${esc(guide.simple)}</p>
+      <details name="ramak-practice-option"><summary style="cursor:pointer;padding:.65rem 0">Ver un ejemplo</summary><p>${esc(guide.example)}</p></details>
+      <details name="ramak-practice-option"><summary style="cursor:pointer;padding:.65rem 0">Probar otra pregunta</summary><p>${esc(guide.question)}</p></details>
+      <button type="button" data-derej-feedback-open>Todavía me cuesta entender</button>
+    </details>` : '';
   caminoScreen.querySelector('[data-ramak-panel="practica"]').innerHTML=`
     ${scene(c,'04 · PRÁCTICA')}
     <div class="ramakBody">
       <span class="ramakBodyEyebrow">AVODÁ · LLEVAR EL ESTUDIO A LA VIDA</span>
-      <div class="ramakCard ramakPractice"><small>AVODÁ · GESTO DE HOY</small><strong>${esc(carry.avoda||'')}</strong></div>
+      <div class="ramakCard ramakPractice"><small>AVODÁ · GESTO DE HOY</small><strong>${esc(carry.avoda||'')}</strong>${practiceHelp}</div>
       <label for="ramakNote">Una nota para guardar este momento</label>
       <textarea id="ramakNote" rows="4" maxlength="700" placeholder="Escribe libremente lo que quieras guardar de este momento.">${esc(saved.note||'')}</textarea>
       <p id="ramakDraftStatus" class="ramakSourceNote" role="status"></p>
