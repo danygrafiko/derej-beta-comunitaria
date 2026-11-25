@@ -9951,6 +9951,15 @@ function renderPanels(p,c){
   caminoScreen.querySelector('[data-ramak-panel="profundizar"]').innerHTML=`
     ${scene(c,'03 · PROFUNDIZAR')}
     <div class="ramakBody">
+      ${p.parasha === 'Vayetze' && Number(c.dia) === 1 ? `
+        <details class="ramakCard">
+          <summary><strong>Seguir estudiando · La palabra que Yaakov usa al despertar</strong></summary>
+          <p><small>Bereshit 28:17 · Lectura jasídica de Gal Einai</small></p>
+          <p>Al despertar, Yaakov siente temor. Enseguida habla del lugar donde durmió. En hebreo, el verbo que expresa lo que sintió y la palabra que usa para describir el lugar comparten una raíz. Esa palabra es <em>norá</em>: aquí expresa que el lugar le inspira reverencia.</p>
+          <p>Gal Einai reconoce esa misma palabra en la primera bendición de la Amidá, la oración que se recita de pie. En el sueño, Yaakov descubre algo sagrado en el lugar donde pasó la noche. En la plegaria, <em>norá</em> expresa reverencia ante el Creador de todo.</p>
+          <p class="ramakSourceNote"><a href="https://sefardi.com/parasha/vayetzei/" target="_blank" rel="noopener noreferrer">Leer la primera aliyá en Sefardí.com ↗</a></p>
+          <p class="ramakSourceNote"><a href="https://galeinai.org/2023/11/24/parashat-vaietze-alia-a-alia/" target="_blank" rel="noopener noreferrer">Leer el estudio de Gal Einai · Primera lectura ↗</a></p>
+        </details>` : ''}
       <span class="ramakBodyEyebrow">VOCES PARA PROFUNDIZAR</span>
       <div class="ramakVoices">
         ${voiceNames.map(([key,label])=>renderVoiceCard(voices[key],label)).join('')}
