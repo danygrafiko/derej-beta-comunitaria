@@ -9147,11 +9147,20 @@ function renderVoiceCard(raw,label,p,c){
 
 function aliyahReadingLinks(p,c,primaryUrl){
   const day=Number(c.dia);
-  const sources=[['Parashot.com.ar',primaryUrl]];
   const reading=parashaStudies[p.parasha]?.reading;
-  if(reading)sources.push(['Sefardí.com','https://sefardi.com/parasha/'+reading+'/#aliya-'+day]);
-  return '<div class="aliyahDestinations">'+sources.map(([name,url])=>
-    '<a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer" hreflang="es"><strong>Leer en '+name+'</strong><span aria-hidden="true">↗︎</span></a>'
+  const sefardiUrl=reading && 'https://sefardi.com/parasha/'+reading+'/#aliya-'+day;
+  const sources=[];
+  if(p.parasha==='Vayishlaj'){
+    sources.push(['Leer la '+day+'ª aliyá en Sefardí.com · '+biblicalRefEs(c.aliyaRange),sefardiUrl]);
+    const weeklyUrl=new URL(primaryUrl);
+    weeklyUrl.searchParams.set('aliya','all');
+    sources.push(['Leer Vayishlaj completa en Parashot.com.ar',weeklyUrl.href]);
+  }else{
+    sources.push(['Leer en Parashot.com.ar',primaryUrl]);
+    if(sefardiUrl)sources.push(['Leer en Sefardí.com',sefardiUrl]);
+  }
+  return '<div class="aliyahDestinations">'+sources.map(([label,url])=>
+    '<a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer" hreflang="es"><strong>'+esc(label)+'</strong><span aria-hidden="true">↗︎</span></a>'
   ).join('')+'</div>';
 }
 
