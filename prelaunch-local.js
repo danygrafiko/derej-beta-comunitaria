@@ -9152,6 +9152,14 @@ function aliyahReadingLinks(p,c,primaryUrl){
   const sources=[];
   if(p.parasha==='Vayishlaj'){
     sources.push(['Leer la '+day+'ª aliyá en Sefardí.com · '+biblicalRefEs(c.aliyaRange),sefardiUrl]);
+    const range=/^Bereshit (\d+):(\d+)-(\d+):(\d+)$/.exec(c.aliyaRange);
+    if(range){
+      const [,first,start,last,end]=range;
+      const chapterUrl=n=>'https://masuah.org/Jumash/bereshit_C'+n+'.htm';
+      const guide=first===last?'versículos '+start+'–'+end:'desde el versículo '+start;
+      sources.push(['Estudiar con Masuah · Génesis '+first+', '+guide+' · Comentarios de Mordejai Edery',chapterUrl(first)]);
+      if(first!==last)sources.push(['Continuar en Masuah · Génesis '+last+', versículos 1–'+end,chapterUrl(last)]);
+    }
     const weeklyUrl=new URL(primaryUrl);
     weeklyUrl.searchParams.set('aliya','all');
     sources.push(['Leer Vayishlaj completa en Parashot.com.ar',weeklyUrl.href]);
