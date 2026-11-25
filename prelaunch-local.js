@@ -9111,15 +9111,36 @@ function scene(c,label){
 
 
 
+const consultedVoiceEditions = {
+  "Mishné Torá · Hiljot Deot 1:6": [
+    "Moznaim Publications en Chabad.org · traducción inglesa de Eliyahu Touger, con texto hebreo · ley 6",
+    "https://www.chabad.org/library/article_cdo/aid/910340/jewish/Deot-Chapter-One.htm"
+  ],
+  "Tomer Devorah 1:1": [
+    "La palmera de Débora · Ediciones Obelisco, 2024 · traducción española de David N. Benabraham · comienzo del capítulo I",
+    "https://nirvanalibros.mx/wp-content/uploads/2024/04/LA-PALMERA-DE-DEBORA-TOMER-DEBORA.pdf"
+  ],
+  "Mesilat Yesharim 3": [
+    "Path of the Just · versión inglesa de Yosef Sebag · capítulo 3, texto hebreo e inglés",
+    "https://www.dafyomi.co.il/general/info/ref/mesilat.php?d=5"
+  ],
+  "Likutei Moharan II:25:1": [
+    "Breslov Research Institute en español · «Hitbodedut – Qué, cómo, cuándo, dónde…», primera parte · exposición de Likutey Moharán II, 25",
+    "https://es.breslov.org/hitbodedut-que-como-cuando-donde-1a-parte/"
+  ]
+};
+
 function renderVoiceCard(raw,label,p,c){
   if(!raw)return '';
   const voice=typeof raw==='object'?raw:{texto:raw};
+  const edition=consultedVoiceEditions[voice.fuente];
   const verse=c.pasuk||{};
-  return '<article class="ramakVoice"><small>'+esc(label.toUpperCase())+'</small><b class="derejVoiceSource">'+esc(voice.fuente||label)+'</b>'
+  return '<article class="ramakVoice"><small>'+esc(label.toUpperCase())+'</small><small>Fuente del sabio</small><b class="derejVoiceSource">'+esc(voice.fuente||label)+'</b>'
     +'<details class="dailyVoiceStudy"><summary>Abrir estudio con '+esc(label)+'</summary>'
     +'<p><strong>'+esc(p.parasha)+' · '+Number(c.dia)+'ª aliyá</strong><br>'+esc(c.titulo||'')+'</p>'
     +(verse.es?'<p><strong>El pasaje · '+esc(biblicalRefEs(verse.ref||''))+'</strong><br>'+esc(verse.es)+(verse.es_tipo?' <small>('+esc(verse.es_tipo)+')</small>':'')+'</p>':'')
     +(voice.base?'<p><strong>La enseñanza de la fuente</strong><br>'+esc(voice.base)+'</p>':'')
+    +'<p><strong>Edición consultada</strong><br>'+(edition?'<a href="'+esc(edition[1])+'" target="_blank" rel="noopener noreferrer">'+esc(edition[0])+'</a>':'Pendiente de documentar.')+'</p>'
     +'<p><strong>Lectura de Dérej para este día</strong><br>'+esc(voice.texto||'')+'</p>'
     +(voice.atribucion?'<small>'+esc(voice.atribucion)+'</small>':'')+'</details></article>';
 }
