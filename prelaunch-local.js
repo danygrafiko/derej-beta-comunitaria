@@ -9481,11 +9481,110 @@ function renderPanels(p,c){
 
 
 
+  const vayishlajHelp = [
+  {
+    "encuentro": [
+      "Piensa en cómo iniciarías una conversación que te preocupa.",
+      "Podría preguntarle si tiene un momento tranquilo para hablar.",
+      "¿Con qué frase te gustaría empezar?"
+    ],
+    "practica": [
+      "Lee tu mensaje antes de enviarlo. Cambia una acusación por una petición concreta.",
+      "En vez de «Siempre me dejas esperando», podría escribir «Avísame si vas a llegar tarde».",
+      "¿Qué necesitas pedir en ese mensaje?"
+    ]
+  },
+  {
+    "encuentro": [
+      "Recuerda un desacuerdo. Elige algo que quisieras aclarar antes de responder.",
+      "Creí que mi amiga había cancelado el plan. Quisiera saber qué entendió ella cuando acordamos la hora.",
+      "¿Qué le preguntarías para entender su versión?"
+    ],
+    "practica": [
+      "Piensa en un desacuerdo reciente. Recuerda algo que ocurrió y distingue eso de lo que temes que pase.",
+      "Mi hermano aún no responde mi mensaje. Temo que esté molesto. Antes de sacar conclusiones, puedo hablar con alguien de confianza.",
+      "¿Qué ayuda te vendría bien antes de hablar de lo que pasó?"
+    ]
+  },
+  {
+    "encuentro": [
+      "Piensa en alguien con quien te gustaría acercarte. ¿Qué podrías ofrecerle sin pedirle que haga lo mismo?",
+      "Puedo saludar a mi vecino aunque hoy prefiera seguir de largo.",
+      "¿Qué gesto tendría sentido para ti aunque nadie te respondiera?"
+    ],
+    "practica": [
+      "Piensa en alguien con quien te sientas a gusto. Ofrécele algo sencillo y dale tiempo para decidir.",
+      "«¿Te gustaría que salgamos a caminar un rato? Si hoy prefieres descansar, está bien».",
+      "¿Cómo invitarías a alguien a conversar para que se sienta libre de decir que sí o que no?"
+    ]
+  },
+  {
+    "encuentro": [
+      "Recuerda una ocasión en que a alguien le costó seguir el ritmo del grupo.",
+      "Al caminar juntos, a veces sigo hablando y recién después noto que alguien se quedó atrás.",
+      "¿Cómo podrías darte cuenta de que alguien necesita más tiempo?"
+    ],
+    "practica": [
+      "En una tarea que hagan juntos, pregunta qué ritmo les acomoda y acuerden un ajuste.",
+      "«¿Les sirve revisar una página a la vez y esperar a que todos terminen?»",
+      "¿Qué parte de la tarea podrían hacer con más calma?"
+    ]
+  },
+  {
+    "encuentro": [
+      "Imagina que alguien te cuenta que le hicieron daño. Piensa qué te ayudaría a escuchar su relato con respeto.",
+      "Podría decirle «Gracias por contármelo. Te escucho».",
+      "¿Qué palabras le permitirían seguir hablando a su ritmo?"
+    ],
+    "practica": [
+      "Recuerda una frase que pone en duda a quien sufrió una agresión. Ensaya una forma más cuidadosa de expresarte.",
+      "Si me sale «¿Por qué fuiste?», puedo detenerme y decir «Siento que te hayan hecho eso».",
+      "¿Cómo dirías esa frase si la persona estuviera delante de ti?"
+    ]
+  },
+  {
+    "encuentro": [
+      "Piensa en alguien que ha perdido a un ser querido. ¿Cómo le harías saber que puede contar contigo?",
+      "«Me acordé de ti esta mañana. Si te apetece compañía, puedo pasar un rato».",
+      "Si esa persona quisiera estar en silencio, ¿cómo la acompañarías?"
+    ],
+    "practica": [
+      "Elige una ayuda pequeña que puedas ofrecerle a alguien en duelo y pregúntale si le serviría.",
+      "«Voy a hacer compras esta tarde. ¿Te traigo algo?»",
+      "¿Qué tarea cotidiana podrías facilitarle esta semana?"
+    ]
+  },
+  {
+    "encuentro": [
+      "Elige una comunidad que conozcas poco. Piensa qué te gustaría saber de su historia.",
+      "Me gustaría saber cómo celebraban sus fiestas las primeras familias que llegaron a este barrio.",
+      "Si pudieras conversar con alguien de esa comunidad, ¿qué te gustaría preguntarle?"
+    ],
+    "practica": [
+      "Busca un relato contado por alguien de esa comunidad y quédate con un detalle que hayas aprendido.",
+      "Puedo escuchar una entrevista a una vecina que fundó el club del barrio y recordar cómo eligieron su nombre.",
+      "¿Qué detalle de esa historia conociste por boca de alguien que la vivió?"
+    ]
+  }
+];
+  function renderHelp(stage) {
+    const entry = p.parasha === 'Vayishlaj' && vayishlajHelp[Number(c.dia)-1]?.[stage];
+    if (!entry) return '';
+    const [simple, example, question] = entry;
+    return `
+    <details class="ramakPracticeHelp" style="margin-top:1rem">
+      <summary style="cursor:pointer;padding:.65rem 0"><b>Ver de otra manera</b></summary>
+      <p>${esc(simple)}</p>
+      <details name="ramak-${stage}-option"><summary style="cursor:pointer;padding:.65rem 0">Ver un ejemplo</summary><p>${esc(example)}</p></details>
+      <details name="ramak-${stage}-option"><summary style="cursor:pointer;padding:.65rem 0">Probar otra pregunta</summary><p>${esc(question)}</p></details>
+      <button type="button" data-derej-feedback-open>Todavía me cuesta entender</button>
+    </details>`;
+  }
   caminoScreen.querySelector('[data-ramak-panel="encuentro"]').innerHTML=`
     ${scene(c,'01 · ENCUENTRO')}
     <div class="ramakBody">
       <span class="ramakBodyEyebrow">${esc(p.parasha)} · ${esc(c.sefira)}${colorName}</span>
-      <div class="ramakReflection"><small>PARA REFLEXIONAR HOY</small><p>${esc(c.reflexion)}</p></div>
+      <div class="ramakReflection"><small>PARA REFLEXIONAR HOY</small><p>${esc(c.reflexion)}</p>${renderHelp('encuentro')}</div>
       ${navButtons('encuentro')}
     </div>`;
 
@@ -10297,32 +10396,11 @@ function renderPanels(p,c){
 
 
 
-  const practiceGuides = {
-    'Vayishlaj|2': {
-      simple: 'Piensa en un desacuerdo reciente. Recuerda algo que ocurrió y distingue eso de lo que temes que pase.',
-      example: 'Mi hermano aún no responde mi mensaje. Temo que esté molesto. Antes de sacar conclusiones, puedo hablar con alguien de confianza.',
-      question: '¿Qué ayuda te vendría bien antes de hablar de lo que pasó?'
-    },
-    'Vayishlaj|3': {
-      simple: 'Piensa en alguien con quien te sientas a gusto. Ofrécele algo sencillo y dale tiempo para decidir.',
-      example: '«¿Te gustaría que salgamos a caminar un rato? Si hoy prefieres descansar, está bien».',
-      question: '¿Cómo invitarías a alguien a conversar para que se sienta libre de decir que sí o que no?'
-    }
-  };
-  const guide = practiceGuides[p.parasha + '|' + Number(c.dia)];
-  const practiceHelp = guide ? `
-    <details class="ramakPracticeHelp" style="margin-top:1rem">
-      <summary style="cursor:pointer;padding:.65rem 0"><b>Ver de otra manera</b></summary>
-      <p>${esc(guide.simple)}</p>
-      <details name="ramak-practice-option"><summary style="cursor:pointer;padding:.65rem 0">Ver un ejemplo</summary><p>${esc(guide.example)}</p></details>
-      <details name="ramak-practice-option"><summary style="cursor:pointer;padding:.65rem 0">Probar otra pregunta</summary><p>${esc(guide.question)}</p></details>
-      <button type="button" data-derej-feedback-open>Todavía me cuesta entender</button>
-    </details>` : '';
   caminoScreen.querySelector('[data-ramak-panel="practica"]').innerHTML=`
     ${scene(c,'04 · PRÁCTICA')}
     <div class="ramakBody">
       <span class="ramakBodyEyebrow">AVODÁ · LLEVAR EL ESTUDIO A LA VIDA</span>
-      <div class="ramakCard ramakPractice"><small>AVODÁ · GESTO DE HOY</small><strong>${esc(carry.avoda||'')}</strong>${practiceHelp}</div>
+      <div class="ramakCard ramakPractice"><small>AVODÁ · GESTO DE HOY</small><strong>${esc(carry.avoda||'')}</strong>${renderHelp('practica')}</div>
       <label for="ramakNote">Una nota para guardar este momento</label>
       <textarea id="ramakNote" rows="4" maxlength="700" placeholder="Escribe libremente lo que quieras guardar de este momento.">${esc(saved.note||'')}</textarea>
       <p id="ramakDraftStatus" class="ramakSourceNote" role="status"></p>
