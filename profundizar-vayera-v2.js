@@ -134,12 +134,7 @@ function mine(c){
 }
  function voiceBlock(c,keys){
   const namesLocal={rambam:'Rambam',ramak:'Ramak',ramjal:'Ramjal',rabiNajman:'Rabí Najmán',baalshemtov:'Baal Shem Tov'};
-  return keys.map(key=>{
-    const v=c.voces?.[key];if(!v)return '';
-    const reading=v.texto?'<p><strong>Aplicación Dérej.</strong> '+esc(v.texto)+'</p>':'';
-    const framework=v.base?'<details><summary>Consultar el marco de la fuente</summary><p>'+esc(v.base)+'</p>'+(v.atribucion?'<p class="prSmall">'+esc(v.atribucion)+'</p>':'')+'</details>':'';
-    return '<article class="prSelectedVoice"><small>'+esc(namesLocal[key]||key)+'</small><h4>'+esc(v.fuente||'Fuente tradicional')+'</h4>'+reading+framework+'</article>';
-  }).join('');
+  return keys.map(key=>renderVoiceCard(c.voces?.[key],namesLocal[key]||key,{parasha:'Vayera'},c)).join('');
 }
 function deepStudy(c){
   const t=STUDY[Number(c.dia)];if(!t)return '';
@@ -155,6 +150,7 @@ function deepStudy(c){
    + '<section class="prDeepSection prDeepQuestion"><small>04 · PREGUNTA PARA EL ESTUDIO</small><h3>'+esc(t.question)+'</h3>'
    + '<p>Para pensar y conversar. Las acciones personales corresponden a la etapa Práctica.</p></section>'
    + '<div class="prDeepTools"><a href="'+urlForDay(c.dia)+'" target="_blank" rel="noopener noreferrer" hreflang="es">Leer la aliyá completa ↗</a>'
+   + sefardiAliyahLink({parasha:'Vayera'},c)
    + '<button type="button" data-pr-people>Conocer personajes →</button>'
    + '<button type="button" data-pr-save aria-pressed="'+saved+'">'+(saved?'✓ Lectura guardada · Quitar':'Guardar esta lectura')+'</button></div>'
    + '<p class="prDeepSaveStatus" role="status" aria-live="polite"></p>'

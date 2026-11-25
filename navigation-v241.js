@@ -184,6 +184,7 @@
           <strong>Abrir ${aliyah} completa</strong>
           <span>→</span>
         </a>
+        ${sefardiAliyahLink(p,c)}
         <small class="v242AliyahFallback">La lectura se abre aparte para mantener DÉREJ, tu Camino y Radio activos.</small>
       </div>
     `;

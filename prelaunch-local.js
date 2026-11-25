@@ -9111,12 +9111,24 @@ function scene(c,label){
 
 
 
-function renderVoiceCard(raw,label){
-  if(raw&&typeof raw==='object'){
-    const source=esc(raw.fuente||label);
-    return `<article class="ramakVoice"><small>${esc(label.toUpperCase())}</small><b class="derejVoiceSource">${source}</b>${raw.tipo?`<span class="derejVoiceType">${esc(raw.tipo)}</span>`:''}<p class="derejVoiceApplication">${raw.base?'<strong>Aplicación Dérej.</strong> ':'<strong>Lectura editorial Dérej.</strong> '}${esc(raw.texto||'')}</p>${raw.base?`<details class="derejVoiceFramework"><summary>Consultar el marco de la fuente</summary><p>${esc(raw.base)}</p>${raw.atribucion?`<p>${esc(raw.atribucion)}</p>`:''}</details>`:''}</article>`;
-  }
-  return `<article class="ramakVoice"><small>${esc(label.toUpperCase())}</small><b>${esc(label)}</b><p>${esc(raw||'')}</p></article>`;
+function renderVoiceCard(raw,label,p,c){
+  if(!raw)return '';
+  const voice=typeof raw==='object'?raw:{texto:raw};
+  const verse=c.pasuk||{};
+  return '<article class="ramakVoice"><small>'+esc(label.toUpperCase())+'</small><b class="derejVoiceSource">'+esc(voice.fuente||label)+'</b>'
+    +'<details class="dailyVoiceStudy"><summary>Abrir estudio con '+esc(label)+'</summary>'
+    +'<p><strong>'+esc(p.parasha)+' · '+Number(c.dia)+'ª aliyá</strong><br>'+esc(c.titulo||'')+'</p>'
+    +(verse.es?'<p><strong>El pasaje · '+esc(biblicalRefEs(verse.ref||''))+'</strong><br>'+esc(verse.es)+(verse.es_tipo?' <small>('+esc(verse.es_tipo)+')</small>':'')+'</p>':'')
+    +(voice.base?'<p><strong>La enseñanza de la fuente</strong><br>'+esc(voice.base)+'</p>':'')
+    +'<p><strong>Lectura de Dérej para este día</strong><br>'+esc(voice.texto||'')+'</p>'
+    +(voice.atribucion?'<small>'+esc(voice.atribucion)+'</small>':'')+'</details></article>';
+}
+
+function sefardiAliyahLink(p,c){
+  const source=parashaStudies[p.parasha];
+  if(!source)return '';
+  const day=Number(c.dia);
+  return '<a class="sefardiAliyahOption" href="https://sefardi.com/parasha/'+source.reading+'/#aliya-'+day+'" target="_blank" rel="noopener noreferrer">Leer la '+day+'ª aliyá en Sefardí.com ↗︎</a>';
 }
 
 
@@ -9177,7 +9189,7 @@ function renderParashaStudies(p,c){
       <h3 id="parashaStudyTitle">Para seguir estudiando</h3>
       <p>Si quieres profundizar en ${esc(p.parasha)}, te invitamos a seguir leyendo.</p>
       <a href="https://galeinai.org/${sources.study}/" target="_blank" rel="noopener noreferrer"><span class="studyLinkLabel"><strong>Gal Einai</strong><small>Estudiar la parashá</small></span><span class="studyLinkArrow" aria-hidden="true">↗︎</span></a>
-      <a href="https://sefardi.com/parasha/${sources.reading}/#aliya-${day}" target="_blank" rel="noopener noreferrer"><span class="studyLinkLabel"><strong>Sefardí.com</strong><small>Leer la ${day}ª aliyá</small></span><span class="studyLinkArrow" aria-hidden="true">↗︎</span></a>
+
     </div>
   </section>`;
 }
@@ -9997,8 +10009,8 @@ function renderPanels(p,c){
     <div class="ramakBody">
       <span class="ramakBodyEyebrow">VOCES PARA PROFUNDIZAR</span>
       <div class="ramakVoices">
-        ${voiceNames.map(([key,label])=>renderVoiceCard(voices[key],label)).join('')}
-        ${bstVoice?renderVoiceCard(bstVoice,'Baal Shem Tov'):''}
+        ${voiceNames.map(([key,label])=>renderVoiceCard(voices[key],label,p,c)).join('')}
+        ${bstVoice?renderVoiceCard(bstVoice,'Baal Shem Tov',p,c):''}
         ${bstVoice?.url?`<p class="ramakSourceNote"><a href="${esc(bstVoice.url)}" target="_blank" rel="noopener noreferrer">Consultar la fuente de esta lectura del Baal Shem Tov ↗</a></p>`:''}
       </div>
       ${window.DEREJ_EDITORIAL.reference('Las voces son síntesis editoriales de Dérej, con referencias identificadas. Las conexiones con el pasaje diario son aplicaciones de Dérej. Cuando una enseñanza se transmite en una exposición posterior, se identifica esa fuente; no se presenta como cita literal del maestro.')}
