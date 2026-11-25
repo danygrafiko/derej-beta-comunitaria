@@ -4244,7 +4244,7 @@ function prepareCaminoShell(){
         <h1 id="caminoTitle">Caminos Diarios</h1>
         <p class="weekTitle">Bereshit a Tetzavé</p>
         <p class="heroEditorial">Una lectura. Una pregunta para hoy. Una práctica para llevar.</p>
-        <button class="heroEnter" type="button" data-ramak-scroll="ramakChooser">Elegir un Camino <span>↓</span></button><button type="button" class="caminoPersonalEntry" data-open-gal-einai>Estudiar con Gal Einai · Vayetzé →</button><button type="button" class="caminoPersonalEntry" data-route="personal">Mi Camino · Mis huellas y recuerdos →</button>
+        <button class="heroEnter" type="button" data-ramak-scroll="ramakChooser">Elegir un Camino <span>↓</span></button><button type="button" class="caminoPersonalEntry" data-route="personal">Mi Camino · Mis huellas y recuerdos →</button>
       </div>
     </section>
 
@@ -9138,6 +9138,47 @@ function normalizeHebrewText(value){
   return text.normalize('NFC').replace(/\s+/gu,' ').trim();
 }
 
+const parashaStudies = {
+  'Bereshit': { reading: 'bereshit', study: 'category/parasha/bereshit/bereshit-bereshit' },
+  'Noaj': { reading: 'noach', study: 'category/parasha/bereshit/p-noaj' },
+  'Lej Lejá': { reading: 'lech-lecha', study: '2023/10/26/parashat-lej-leja-alia-a-alia' },
+  'Vayera': { reading: 'vayera', study: '2023/11/02/parashat-vaiera-alia-a-alia' },
+  'Jaye Sara': { reading: 'chayei-sara', study: 'category/parasha/bereshit/jaie-sara' },
+  'Toldot': { reading: 'toldot', study: '2023/11/16/parashat-toldot-alia-a-alia' },
+  'Vayetze': { reading: 'vayetzei', study: '2023/11/24/parashat-vaietze-alia-a-alia' },
+  'Vayishlaj': { reading: 'vayishlach', study: '2023/12/05/parashat-vaishlaj-alia-a-alia' },
+  'Vayeshev': { reading: 'vayeshev', study: 'category/parasha/bereshit/vayeshev' },
+  'Miketz': { reading: 'miketz', study: 'category/parasha/bereshit/miketz' },
+  'Vayigash': { reading: 'vayigash', study: 'category/parasha/bereshit/vaigash' },
+  'Vayechi': { reading: 'vayechi', study: 'category/parasha/bereshit/vayeji' },
+  'Shemot': { reading: 'shemot', study: '2026/01/08/lecciones-de-la-zarza-ardiente' },
+  'Vaera': { reading: 'vaera', study: 'category/parasha/shemot/vaera' },
+  'Bo': { reading: 'bo', study: 'category/parasha/shemot/bo' },
+  'Beshalaj': { reading: 'beshalach', study: 'category/parasha/shemot/beshalaj' },
+  'Yitro': { reading: 'yitro', study: 'category/parasha/shemot/itro' },
+  'Mishpatim': { reading: 'mishpatim', study: 'category/parasha/shemot/mishpatim' },
+  'Teruma': { reading: 'terumah', study: 'category/parasha/shemot/teruma' },
+  'Tetzave': { reading: 'tetzaveh', study: 'category/parasha/shemot/tetzave' }
+};
+
+function renderParashaStudies(p,c){
+  const sources=parashaStudies[p.parasha];
+  if(!sources)return '';
+  const day=Number(c.dia);
+  const note=p.parasha==='Vayetze' && day===1 ? `<details open id="estudio-gal-einai" class="ramakCard">
+          <summary><strong>Seguir estudiando · La palabra que Yaakov usa al despertar</strong></summary>
+          <p><small>Bereshit 28:17 · Lectura jasídica de Gal Einai</small></p>
+          <p>Al despertar, Yaakov siente temor. Enseguida habla del lugar donde durmió. En hebreo, el verbo que expresa lo que sintió y la palabra que usa para describir el lugar comparten una raíz. Esa palabra es <em>norá</em>: aquí expresa que el lugar le inspira reverencia.</p>
+          <p>Gal Einai reconoce esa misma palabra en la primera bendición de la Amidá, la oración que se recita de pie. En el sueño, Yaakov descubre algo sagrado en el lugar donde pasó la noche. En la plegaria, <em>norá</em> expresa reverencia ante el Creador de todo.</p>
+        </details>` : '';
+  return `<section class="ramakCard" aria-labelledby="parashaStudyTitle">
+    <h3 id="parashaStudyTitle">Estudios de la parashá · ${esc(p.parasha)}</h3>
+    ${note}
+    <p class="ramakSourceNote"><a href="https://galeinai.org/${sources.study}/" target="_blank" rel="noopener noreferrer">Estudiar esta parashá con Gal Einai ↗</a></p>
+    <p class="ramakSourceNote"><a href="https://sefardi.com/parasha/${sources.reading}/#aliya-${day}" target="_blank" rel="noopener noreferrer">Leer la ${day}ª aliyá en Sefardí.com ↗</a></p>
+  </section>`;
+}
+
 function renderPanels(p,c){
   const rc=c.ramak_color||{};
   const saved=loadRamakMemory(p.parasha,c.dia)||{};
@@ -9951,15 +9992,7 @@ function renderPanels(p,c){
   caminoScreen.querySelector('[data-ramak-panel="profundizar"]').innerHTML=`
     ${scene(c,'03 · PROFUNDIZAR')}
     <div class="ramakBody">
-      ${p.parasha === 'Vayetze' && Number(c.dia) === 1 ? `
-        <details open id="estudio-gal-einai" class="ramakCard">
-          <summary><strong>Seguir estudiando · La palabra que Yaakov usa al despertar</strong></summary>
-          <p><small>Bereshit 28:17 · Lectura jasídica de Gal Einai</small></p>
-          <p>Al despertar, Yaakov siente temor. Enseguida habla del lugar donde durmió. En hebreo, el verbo que expresa lo que sintió y la palabra que usa para describir el lugar comparten una raíz. Esa palabra es <em>norá</em>: aquí expresa que el lugar le inspira reverencia.</p>
-          <p>Gal Einai reconoce esa misma palabra en la primera bendición de la Amidá, la oración que se recita de pie. En el sueño, Yaakov descubre algo sagrado en el lugar donde pasó la noche. En la plegaria, <em>norá</em> expresa reverencia ante el Creador de todo.</p>
-          <p class="ramakSourceNote"><a href="https://sefardi.com/parasha/vayetzei/" target="_blank" rel="noopener noreferrer">Leer la primera aliyá en Sefardí.com ↗</a></p>
-          <p class="ramakSourceNote"><a href="https://galeinai.org/2023/11/24/parashat-vaietze-alia-a-alia/" target="_blank" rel="noopener noreferrer">Leer el estudio de Gal Einai · Primera lectura ↗</a></p>
-        </details>` : ''}
+      ${renderParashaStudies(p,c)}
       <span class="ramakBodyEyebrow">VOCES PARA PROFUNDIZAR</span>
       <div class="ramakVoices">
         ${voiceNames.map(([key,label])=>renderVoiceCard(voices[key],label)).join('')}
@@ -13944,19 +13977,6 @@ document.addEventListener('click',e=>{
 
 
 
-  if(e.target.closest('[data-open-gal-einai]') && RAMAK_DATA){
-    saveRamakDraft();
-    selectedParasha='Vayetze';
-    selectedDay=1;
-    selectedRamakStep='profundizar';
-    renderRamak(false);
-    const study=document.getElementById('estudio-gal-einai');
-    if(study){
-      study.querySelector('summary').focus({preventScroll:true});
-      study.scrollIntoView({block:'center'});
-    }
-    return;
-  }
   const p=e.target.closest('[data-ramak-parasha]');
   if(p&&RAMAK_DATA){
     saveRamakDraft();
