@@ -43,7 +43,7 @@
     paragraph(questionBody,`Sobre el estudio de hoy y «${item.title}».`,'midrashQuestionsIntro');
     const list=document.createElement('ol');item.questions.forEach((text,i)=>{const li=document.createElement('li');li.textContent=(i===0?'Para comprender el Midrash: ':'Para tu vida: ')+text;list.appendChild(li);});
     questionBody.appendChild(list);questions.appendChild(questionBody);
-    const depthNav=depthBody.querySelector('.ramakNav');if(depthNav)depthNav.before(questions);else depthBody.appendChild(questions);
+    const depthNav=depthBody.querySelector('.parashaStudyClosing, .ramakNav');if(depthNav)depthNav.before(questions);else depthBody.appendChild(questions);
   }
   if(typeof renderPanels==='function'){
     const previous=renderPanels;renderPanels=function(p,c){const result=previous.call(this,p,c);ensure(p,c);return result;};

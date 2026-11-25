@@ -200,7 +200,7 @@ function attach(){
   if(p?.parasha!=='Vayera'||!c)return;
   const body=document.querySelector('[data-ramak-panel="profundizar"] .ramakBody');
   if(!body)return;
-  body.innerHTML=renderParashaStudies(p,c)+deepStudy(c)+navButtons('profundizar');
+  body.innerHTML=deepStudy(c)+renderParashaStudies(p,c)+navButtons('profundizar');
 }
   function deepLink(){
   if(!pendingDeep||!pilot())return;

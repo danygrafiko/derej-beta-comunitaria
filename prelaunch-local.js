@@ -9171,11 +9171,14 @@ function renderParashaStudies(p,c){
           <p>Al despertar, Yaakov siente temor. Enseguida habla del lugar donde durmió. En hebreo, el verbo que expresa lo que sintió y la palabra que usa para describir el lugar comparten una raíz. Esa palabra es <em>norá</em>: aquí expresa que el lugar le inspira reverencia.</p>
           <p>Gal Einai reconoce esa misma palabra en la primera bendición de la Amidá, la oración que se recita de pie. En el sueño, Yaakov descubre algo sagrado en el lugar donde pasó la noche. En la plegaria, <em>norá</em> expresa reverencia ante el Creador de todo.</p>
         </details>` : '';
-  return `<section class="ramakCard" aria-labelledby="parashaStudyTitle">
-    <h3 id="parashaStudyTitle">Estudios de la parashá · ${esc(p.parasha)}</h3>
-    ${note}
-    <p class="ramakSourceNote"><a href="https://galeinai.org/${sources.study}/" target="_blank" rel="noopener noreferrer">Estudiar esta parashá con Gal Einai ↗</a></p>
-    <p class="ramakSourceNote"><a href="https://sefardi.com/parasha/${sources.reading}/#aliya-${day}" target="_blank" rel="noopener noreferrer">Leer la ${day}ª aliyá en Sefardí.com ↗</a></p>
+  return `${note}<section class="parashaStudyClosing" aria-labelledby="parashaStudyTitle">
+    <img src="assets/home-courtyard-library-v3.webp" alt="" loading="lazy" decoding="async">
+    <div class="parashaStudyCopy">
+      <h3 id="parashaStudyTitle">Para seguir estudiando</h3>
+      <p>Si quieres saber más sobre ${esc(p.parasha)}, te invitamos a explorar estas dos lecturas.</p>
+      <a href="https://galeinai.org/${sources.study}/" target="_blank" rel="noopener noreferrer">Estudiar la parashá con Gal Einai <span aria-hidden="true">↗︎</span></a>
+      <a href="https://sefardi.com/parasha/${sources.reading}/#aliya-${day}" target="_blank" rel="noopener noreferrer">Leer la ${day}ª aliyá en Sefardí.com <span aria-hidden="true">↗︎</span></a>
+    </div>
   </section>`;
 }
 
@@ -9992,7 +9995,6 @@ function renderPanels(p,c){
   caminoScreen.querySelector('[data-ramak-panel="profundizar"]').innerHTML=`
     ${scene(c,'03 · PROFUNDIZAR')}
     <div class="ramakBody">
-      ${renderParashaStudies(p,c)}
       <span class="ramakBodyEyebrow">VOCES PARA PROFUNDIZAR</span>
       <div class="ramakVoices">
         ${voiceNames.map(([key,label])=>renderVoiceCard(voices[key],label)).join('')}
@@ -10000,6 +10002,7 @@ function renderPanels(p,c){
         ${bstVoice?.url?`<p class="ramakSourceNote"><a href="${esc(bstVoice.url)}" target="_blank" rel="noopener noreferrer">Consultar la fuente de esta lectura del Baal Shem Tov ↗</a></p>`:''}
       </div>
       ${window.DEREJ_EDITORIAL.reference('Las voces son síntesis editoriales de Dérej, con referencias identificadas. Las conexiones con el pasaje diario son aplicaciones de Dérej. Cuando una enseñanza se transmite en una exposición posterior, se identifica esa fuente; no se presenta como cita literal del maestro.')}
+      ${renderParashaStudies(p,c)}
       ${navButtons('profundizar')}
     </div>`;
 
