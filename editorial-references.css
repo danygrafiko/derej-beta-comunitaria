@@ -25,8 +25,14 @@
 
 .dailyVoiceStudy>summary:focus-visible{outline:3px solid #475f41;outline-offset:2px}
 
-.aliyahDestinations{display:grid;gap:.55rem;margin:.8rem 0}
-.aliyahDestinations a{box-sizing:border-box;display:flex;align-items:center;justify-content:space-between;gap:.75rem;min-height:46px;padding:.7rem .85rem;background:#354532;color:#fff8e8;border:1px solid #927b54;border-radius:13px;text-decoration:none;text-align:left;font:600 1.06rem/1.35 Georgia,serif}
-.aliyahDestinations a:visited{color:#fff8e8}
-.aliyahDestinations a span{flex:none;color:#edd39a}
-.aliyahDestinations a:focus-visible{outline:3px solid #715a32;outline-offset:2px}
+.aliyahDestinations{display:grid;border:1px solid #c9b99d;border-radius:14px;background:#fff9ef;margin:.8rem 0}
+.aliyahDestinations a,.aliyahDestinations a:visited{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:.75rem;min-height:48px;padding:.7rem .9rem;color:#344630;text-decoration:none;text-align:left}
+.aliyahDestinations a+a{border-top:1px solid #dacdb6}
+.aliyahDestinations a:first-child{border-radius:14px 14px 0 0}
+.aliyahDestinations a:last-child{border-radius:0 0 14px 14px}
+.aliyahDestinations a:hover{background:#f3eddf}
+.aliyahDestinations a:focus-visible{outline:3px solid #475f41;outline-offset:-3px}
+.readingSourceCopy{min-width:0;overflow-wrap:anywhere}
+.readingSourceCopy strong{display:block;font:600 1.05rem/1.3 Georgia,serif}
+.aliyahDestinations .readingSourceCopy small{display:block;margin:.2rem 0 0;color:#605745;font:normal .85rem/1.4 system-ui,sans-serif;letter-spacing:normal;text-transform:none}
+.readingSourceArrow{color:#536545;font:1.15rem/1 system-ui,sans-serif}

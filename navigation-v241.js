@@ -168,7 +168,7 @@
     const heb=HEBREW_DAY[day]||`Día ${day}`;
     const url=parashotUrl(p.parasha,day);
     const range=c.aliyaRange
-      ? `Lectura diaria · ${c.aliyaRange}.`
+      ? biblicalRefEs(c.aliyaRange)
       : `Lectura de Torá correspondiente al Día ${day} de este Camino.`;
 
 
@@ -179,9 +179,9 @@
       </div>
       <div class="v241AliyahBody">
         <h3>${p.parasha} · ${heb}</h3>
-        <p>${range} Léela antes o junto a las cuatro voces para mantener Profundizar unido al texto semanal.</p>
+        <p>${range}</p>
         ${aliyahReadingLinks(p,c,url)}
-        <small class="v242AliyahFallback">La lectura se abre aparte para mantener DÉREJ, tu Camino y Radio activos.</small>
+        <small class="v242AliyahFallback">Las fuentes se abren en otra pestaña.</small>
       </div>
     `;
   }
