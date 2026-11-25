@@ -4244,7 +4244,7 @@ function prepareCaminoShell(){
         <h1 id="caminoTitle">Caminos Diarios</h1>
         <p class="weekTitle">Bereshit a Tetzavé</p>
         <p class="heroEditorial">Una lectura. Una pregunta para hoy. Una práctica para llevar.</p>
-        <button class="heroEnter" type="button" data-ramak-scroll="ramakChooser">Elegir un Camino <span>↓</span></button><button type="button" class="caminoPersonalEntry" data-route="personal">Mi Camino · Mis huellas y recuerdos →</button>
+        <button class="heroEnter" type="button" data-ramak-scroll="ramakChooser">Elegir un Camino <span>↓</span></button><button type="button" class="caminoPersonalEntry" data-open-gal-einai>Estudiar con Gal Einai · Vayetzé →</button><button type="button" class="caminoPersonalEntry" data-route="personal">Mi Camino · Mis huellas y recuerdos →</button>
       </div>
     </section>
 
@@ -9952,7 +9952,7 @@ function renderPanels(p,c){
     ${scene(c,'03 · PROFUNDIZAR')}
     <div class="ramakBody">
       ${p.parasha === 'Vayetze' && Number(c.dia) === 1 ? `
-        <details class="ramakCard">
+        <details open id="estudio-gal-einai" class="ramakCard">
           <summary><strong>Seguir estudiando · La palabra que Yaakov usa al despertar</strong></summary>
           <p><small>Bereshit 28:17 · Lectura jasídica de Gal Einai</small></p>
           <p>Al despertar, Yaakov siente temor. Enseguida habla del lugar donde durmió. En hebreo, el verbo que expresa lo que sintió y la palabra que usa para describir el lugar comparten una raíz. Esa palabra es <em>norá</em>: aquí expresa que el lugar le inspira reverencia.</p>
@@ -13944,6 +13944,19 @@ document.addEventListener('click',e=>{
 
 
 
+  if(e.target.closest('[data-open-gal-einai]') && RAMAK_DATA){
+    saveRamakDraft();
+    selectedParasha='Vayetze';
+    selectedDay=1;
+    selectedRamakStep='profundizar';
+    renderRamak(false);
+    const study=document.getElementById('estudio-gal-einai');
+    if(study){
+      study.querySelector('summary').focus({preventScroll:true});
+      study.scrollIntoView({block:'center'});
+    }
+    return;
+  }
   const p=e.target.closest('[data-ramak-parasha]');
   if(p&&RAMAK_DATA){
     saveRamakDraft();
