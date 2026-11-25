@@ -9145,11 +9145,14 @@ function renderVoiceCard(raw,label,p,c){
     +(voice.atribucion?'<small>'+esc(voice.atribucion)+'</small>':'')+'</details></article>';
 }
 
-function sefardiAliyahLink(p,c){
-  const source=parashaStudies[p.parasha];
-  if(!source)return '';
+function aliyahReadingLinks(p,c,primaryUrl){
   const day=Number(c.dia);
-  return '<a class="sefardiAliyahOption" href="https://sefardi.com/parasha/'+source.reading+'/#aliya-'+day+'" target="_blank" rel="noopener noreferrer">Leer la '+day+'ª aliyá en Sefardí.com ↗︎</a>';
+  const sources=[['Parashot.com.ar',primaryUrl]];
+  const reading=parashaStudies[p.parasha]?.reading;
+  if(reading)sources.push(['Sefardí.com','https://sefardi.com/parasha/'+reading+'/#aliya-'+day]);
+  return '<div class="aliyahDestinations">'+sources.map(([name,url])=>
+    '<a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer" hreflang="es"><strong>Leer en '+name+'</strong><span aria-hidden="true">↗︎</span></a>'
+  ).join('')+'</div>';
 }
 
 

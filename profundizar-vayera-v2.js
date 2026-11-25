@@ -149,8 +149,8 @@ function deepStudy(c){
    + '<section class="prDeepSection"><small>03 · CONEXIONES Y MATICES</small><h3>'+esc(t.connection)+'</h3><p>'+esc(t.meaning)+'</p></section>'
    + '<section class="prDeepSection prDeepQuestion"><small>04 · PREGUNTA PARA EL ESTUDIO</small><h3>'+esc(t.question)+'</h3>'
    + '<p>Para pensar y conversar. Las acciones personales corresponden a la etapa Práctica.</p></section>'
-   + '<div class="prDeepTools"><a href="'+urlForDay(c.dia)+'" target="_blank" rel="noopener noreferrer" hreflang="es">Leer la aliyá completa ↗</a>'
-   + sefardiAliyahLink({parasha:'Vayera'},c)
+   + aliyahReadingLinks({parasha:'Vayera'},c,urlForDay(c.dia))
+   + '<div class="prDeepTools">'
    + '<button type="button" data-pr-people>Conocer personajes →</button>'
    + '<button type="button" data-pr-save aria-pressed="'+saved+'">'+(saved?'✓ Lectura guardada · Quitar':'Guardar esta lectura')+'</button></div>'
    + '<p class="prDeepSaveStatus" role="status" aria-live="polite"></p>'

@@ -19,8 +19,14 @@
 .parashaStudyCopy a:focus-visible{outline:3px solid #475f41;outline-offset:2px}
 
 .dailyVoiceStudy{margin-top:.75rem}
-.dailyVoiceStudy>summary,.sefardiAliyahOption{box-sizing:border-box;padding:.7rem .85rem;min-height:44px;border:1px solid #a99d82;border-radius:10px;color:#354732;background:#fbf6eb;font:600 .95rem/1.45 system-ui,sans-serif;cursor:pointer}
+.dailyVoiceStudy>summary{box-sizing:border-box;padding:.7rem .85rem;min-height:44px;border:1px solid #a99d82;border-radius:10px;color:#354732;background:#fbf6eb;font:600 .95rem/1.45 system-ui,sans-serif;cursor:pointer}
 .dailyVoiceStudy[open]>summary{margin-bottom:.9rem}
 .dailyVoiceStudy p{margin:.8rem 0}
-.v241AliyahBody .sefardiAliyahOption{display:block;margin:.6rem 0;text-align:center}
-.dailyVoiceStudy>summary:focus-visible,.sefardiAliyahOption:focus-visible{outline:3px solid #475f41;outline-offset:2px}
+
+.dailyVoiceStudy>summary:focus-visible{outline:3px solid #475f41;outline-offset:2px}
+
+.aliyahDestinations{display:grid;gap:.55rem;margin:.8rem 0}
+.aliyahDestinations a{box-sizing:border-box;display:flex;align-items:center;justify-content:space-between;gap:.75rem;min-height:46px;padding:.7rem .85rem;background:#354532;color:#fff8e8;border:1px solid #927b54;border-radius:13px;text-decoration:none;text-align:left;font:600 1.06rem/1.35 Georgia,serif}
+.aliyahDestinations a:visited{color:#fff8e8}
+.aliyahDestinations a span{flex:none;color:#edd39a}
+.aliyahDestinations a:focus-visible{outline:3px solid #715a32;outline-offset:2px}

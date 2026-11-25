@@ -180,11 +180,7 @@
       <div class="v241AliyahBody">
         <h3>${p.parasha} · ${heb}</h3>
         <p>${range} Léela antes o junto a las cuatro voces para mantener Profundizar unido al texto semanal.</p>
-        <a class="v241AliyahLink" href="${url}" target="_blank" rel="noopener noreferrer">
-          <strong>Abrir ${aliyah} completa</strong>
-          <span>→</span>
-        </a>
-        ${sefardiAliyahLink(p,c)}
+        ${aliyahReadingLinks(p,c,url)}
         <small class="v242AliyahFallback">La lectura se abre aparte para mantener DÉREJ, tu Camino y Radio activos.</small>
       </div>
     `;
