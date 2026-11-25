@@ -1,7 +1,7 @@
 /* DÉREJ v2.5.2 · UX móvil · Caminos Diarios */
 const screens=[...document.querySelectorAll('[data-screen]')];
 const $=id=>document.getElementById(id);
-const RAMAK_URL='content/caminos-ramak-v25.json?v=claridad-140-caminos-20261120-1';
+const RAMAK_URL='content/caminos-ramak-v25.json?v=camino-diario-editorial-1';
 const BIBLICAL_BOOK_ES={
   'Bereshit':'Génesis',
   'Shemot':'Éxodo',
@@ -9504,16 +9504,17 @@ function renderPanels(p,c){
     const practice = stage === 'practica';
     const group = 'ramak-help-' + stage;
     const examples = options.map(({pregunta, situacion, gesto}) => {
-      const title = practice ? situacion : pregunta;
-      const example = practice ? gesto : situacion + '. ' + gesto;
+      const title = situacion;
+      const example = gesto;
       return `<details name="${group}">
         <summary style="cursor:pointer;padding:.7rem 0">${esc(title)}</summary>
+        ${practice ? '': `<p>${esc(pregunta)}</p>`}
         <p><small>${practice ? 'UN GESTO POSIBLE' : 'POR EJEMPLO'}</small><br>${esc(example)}.</p>
       </details>`;
     }).join('');
     return `<details class="ramakPracticeHelp" style="margin-top:1rem">
       <summary style="cursor:pointer;padding:.7rem 0"><b>Ver de otra manera</b></summary>
-      <p>${practice ? 'Elige una situación parecida a la tuya para ver un gesto que podrías probar.' : 'Elige la pregunta que te ayude a empezar. Al abrirla verás un ejemplo.'}</p>
+      <p>${practice ? 'Elige una situación parecida a la tuya para ver un gesto que podrías probar.' : 'Elige una situación. Dentro encontrarás una pregunta y un ejemplo para empezar.'}</p>
       ${examples}
       <button type="button" data-derej-feedback-open>Todavía me cuesta entender</button>
     </details>`;
@@ -10606,7 +10607,7 @@ function renderPanels(p,c){
       <span class="ramakBodyEyebrow">INTENCIÓN · CONVERSACIÓN PERSONAL · MEMORIA</span>
       <div class="ramakCarryGrid">
         <div class="ramakCard ramakKavana"><small>KAVANÁ · INTENCIÓN</small><strong>${esc(carry.kavana||'')}</strong></div>
-        <div class="ramakCard ramakHitbodedut"><small>HITBODEDUT · UN MOMENTO PARA CONVERSAR</small><strong>${esc(carry.hitbodedut||'')}</strong><p class="ramakHitbodedutHelp">Puedes hablar con el Creador de todo o permanecer en silencio. No hay respuestas obligatorias.</p></div>
+        <div class="ramakCard ramakHitbodedut"><small>HITBODEDUT · UN MOMENTO PARA CONVERSAR</small><strong>${esc(carry.hitbodedut||'')}</strong><p class="ramakHitbodedutHelp">Puedes quedarte en silencio, hablar con el Creador de todo o compartir con alguien una idea que te acompañe hoy.</p></div>
         ${saved.note?`<div class="ramakCard"><small>TU NOTA</small><p>“${esc(saved.note)}”</p></div>`:''}
       </div>
       <button class="ramakSave" type="button" id="ramakSaveMemory">Guardar este Camino en Mi Camino</button>
