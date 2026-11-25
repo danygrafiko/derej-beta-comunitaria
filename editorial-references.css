@@ -9,5 +9,11 @@
 .parashaStudyCopy{padding:clamp(1rem,4vw,1.6rem)}
 .parashaStudyCopy h3{margin:0;color:#354632;font:normal 1.6rem/1.2 Georgia,serif}
 .parashaStudyCopy p{margin:.5rem 0 1rem;line-height:1.5}
-.parashaStudyCopy a{display:flex;align-items:center;justify-content:space-between;gap:.65rem;min-height:44px;padding:.65rem .9rem;margin:.5rem 0 0;border:1px solid #657055;border-radius:12px;color:#344831;font-weight:600;text-decoration:underline;text-underline-offset:.18em}
+.parashaStudyCopy a{box-sizing:border-box;display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:.8rem;min-height:48px;padding:.75rem .9rem;margin:.55rem 0 0;border:1px solid #c4b393;border-radius:12px;background:#fcf7ec;color:#33462f;text-align:left;text-decoration:none}
+.parashaStudyCopy .studyLinkLabel{min-width:0;line-height:1.35}
+.studyLinkLabel strong,.studyLinkLabel small{display:block}
+.studyLinkLabel strong{font:600 1.12rem/1.3 Georgia,serif}
+.studyLinkLabel small{margin-top:.16rem;color:#514b40;font:.89rem/1.4 system-ui,sans-serif}
+.studyLinkArrow{display:grid;place-items:center;width:1.9rem;height:1.9rem;border-radius:50%;background:#354732;color:#fff8e8;font:1.05rem/1 system-ui,sans-serif}
+.parashaStudyCopy a:hover{border-color:#687457}
 .parashaStudyCopy a:focus-visible{outline:3px solid #475f41;outline-offset:2px}

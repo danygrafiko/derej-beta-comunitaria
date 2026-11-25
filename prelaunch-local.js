@@ -9175,9 +9175,9 @@ function renderParashaStudies(p,c){
     <img src="assets/home-courtyard-library-v3.webp" alt="" loading="lazy" decoding="async">
     <div class="parashaStudyCopy">
       <h3 id="parashaStudyTitle">Para seguir estudiando</h3>
-      <p>Si quieres saber más sobre ${esc(p.parasha)}, te invitamos a explorar estas dos lecturas.</p>
-      <a href="https://galeinai.org/${sources.study}/" target="_blank" rel="noopener noreferrer">Estudiar la parashá con Gal Einai <span aria-hidden="true">↗︎</span></a>
-      <a href="https://sefardi.com/parasha/${sources.reading}/#aliya-${day}" target="_blank" rel="noopener noreferrer">Leer la ${day}ª aliyá en Sefardí.com <span aria-hidden="true">↗︎</span></a>
+      <p>Si quieres profundizar en ${esc(p.parasha)}, te invitamos a seguir leyendo.</p>
+      <a href="https://galeinai.org/${sources.study}/" target="_blank" rel="noopener noreferrer"><span class="studyLinkLabel"><strong>Gal Einai</strong><small>Estudiar la parashá</small></span><span class="studyLinkArrow" aria-hidden="true">↗︎</span></a>
+      <a href="https://sefardi.com/parasha/${sources.reading}/#aliya-${day}" target="_blank" rel="noopener noreferrer"><span class="studyLinkLabel"><strong>Sefardí.com</strong><small>Leer la ${day}ª aliyá</small></span><span class="studyLinkArrow" aria-hidden="true">↗︎</span></a>
     </div>
   </section>`;
 }
