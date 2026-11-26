@@ -37,6 +37,44 @@
 <link rel="stylesheet" href="biblioteca-catalogo.css?v=3">
 <link rel="stylesheet" href="editorial-references.css?v=fuentes-lectura-1">
 <link rel="stylesheet" href="primeros-pasos.css?v=1">
+<style id="derej-encuentro-responsive-20261126">
+  /* Portadas del Encuentro: metadatos y título en flujo normal. */
+  .ramakPanel[data-ramak-panel="encuentro"] .ramakScene:not(.ramakSceneCompact){
+    box-sizing:border-box;display:flex;flex-direction:column;justify-content:space-between;
+    height:auto;min-height:260px;gap:24px;padding:18px 20px 24px;
+  }
+  .ramakPanel[data-ramak-panel="encuentro"] .ramakScene:not(.ramakSceneCompact) .ramakSceneTop{
+    display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:8px;min-width:0;
+  }
+  .ramakPanel[data-ramak-panel="encuentro"] .ramakScene:not(.ramakSceneCompact) .ramakSceneBadge{
+    box-sizing:border-box;max-width:100%;min-width:0;white-space:normal;overflow-wrap:anywhere;line-height:1.25;
+    background:rgba(10,14,10,.76);
+  }
+  .ramakPanel[data-ramak-panel="encuentro"] .ramakScene:not(.ramakSceneCompact) .ramakSceneTitle{
+    position:relative;inset:auto;min-width:0;width:100%;max-width:100%;margin:0;
+  }
+  .ramakPanel[data-ramak-panel="encuentro"] .ramakScene:not(.ramakSceneCompact) .ramakTitleLine{
+    min-width:0;max-width:100%;align-items:flex-start;
+  }
+  .ramakPanel[data-ramak-panel="encuentro"] .ramakScene:not(.ramakSceneCompact) .ramakSceneTitle h2{
+    font-size:clamp(1.75rem,4.8vw,3rem);line-height:1.13;max-width:100%;min-width:0;
+    margin:0;white-space:normal;overflow-wrap:break-word;text-wrap:pretty;text-shadow:0 2px 8px #000,0 1px 2px #000;
+  }
+  .ramakPanel[data-ramak-panel="encuentro"] .ramakScene:not(.ramakSceneCompact) .ramakHeroSubtitle{
+    line-height:1.2;margin-top:.24em;
+  }
+  @media(max-width:600px){
+    .ramakPanel[data-ramak-panel="encuentro"] .ramakScene:not(.ramakSceneCompact){
+      min-height:220px;gap:24px;padding:16px 16px 23px;
+    }
+    .ramakPanel[data-ramak-panel="encuentro"] .ramakScene:not(.ramakSceneCompact) .ramakSceneTitle h2{
+      font-size:clamp(1.65rem,7.4vw,2.4rem);line-height:1.14;
+    }
+    .ramakPanel[data-ramak-panel="encuentro"] .ramakScene:not(.ramakSceneCompact) .ramakSceneBadge{
+      font-size:.66rem;letter-spacing:.065em;padding:7px 10px;
+    }
+  }
+</style>
 </head>
 <body>
 <main class="appShell">
