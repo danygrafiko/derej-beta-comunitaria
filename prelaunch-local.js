@@ -5289,6 +5289,15 @@ function prepareCaminoShell(){
 
 
 
+      <details class="ramakWeeklySummary" id="ramakWeeklySummary" hidden>
+        <summary>Leer el resumen de <span id="ramakSummaryName"></span></summary>
+        <div class="ramakSummaryBody">
+          <small id="ramakSummaryRef"></small>
+          <p id="ramakSummaryStory"></p>
+          <h4>Una mirada Dérej</h4>
+          <p id="ramakSummaryReflection"></p>
+        </div>
+      </details>
       <a class="ramakReadingCard" id="ramakReadingCard" href="#" target="_blank" rel="noopener noreferrer">
         <span class="ramakReadingIcon" aria-hidden="true">📜</span>
         <span class="ramakReadingCopy">
@@ -7422,6 +7431,13 @@ function prepareCaminoShell(){
       .ramakParashaTab b{font:.92rem Georgia,serif}
       .ramakParashaTab.on{background:#354532;color:#fff;border-color:#354532;box-shadow:0 7px 18px rgba(53,69,50,.17)}
       .ramakParashaTab.on small{color:#ead39c}
+      .ramakWeeklySummary{margin:12px 0;border:1px solid #cdbd9f;border-radius:16px;background:#fff7e9;color:#352e26}
+      .ramakWeeklySummary[hidden]{display:none}
+      .ramakWeeklySummary summary{padding:14px 16px;cursor:pointer;font:600 1.05rem/1.4 Georgia,serif;color:#354532}
+      .ramakWeeklySummary summary:focus-visible{outline:3px solid #637653;outline-offset:2px;border-radius:16px}
+      .ramakSummaryBody{padding:0 16px 16px;max-width:65ch}
+      .ramakSummaryBody p{font:1rem/1.62 Georgia,serif;margin:.45em 0}
+      .ramakSummaryBody h4{font:600 1.05rem Georgia,serif;margin:1em 0 .3em}
       .ramakWeekCard{display:grid;gap:12px;padding:17px;border:1px solid #cdbd9f;border-left:6px solid var(--ramak-accent);border-radius:22px;background:#fff7e9;box-shadow:0 10px 26px rgba(58,45,28,.06)}
       .ramakWeekCard small{font-size:.56rem;letter-spacing:.16em;font-weight:900;color:#7c6b4b}
       .ramakWeekCard h3{font:clamp(1.85rem,7vw,2.5rem)/1 Georgia,serif;margin:.25em 0 .14em;color:#352e26}
@@ -10872,6 +10888,103 @@ function renderPanels(p,c){
 
 
 
+const weeklyEditorialSummaries = {
+  "Bereshit": [
+    "El Creador de todo separa la luz de la oscuridad, reúne las aguas y da lugar a la vida. El séptimo día descansa. En el jardín, el ser humano recibe la tarea de cultivar y cuidar. Adán y Eva comen del árbol prohibido y dejan el jardín. Más tarde, Caín mata a su hermano Abel. Pasan las generaciones, crece la violencia y el relato dirige la mirada hacia Noaj.",
+    "Cuando Caín pregunta si acaso debe cuidar a su hermano, la pregunta queda también en nuestras manos. A veces cuidar empieza por advertir que alguien falta en la mesa."
+  ],
+  "Noaj": [
+    "Ante la violencia que llena la tierra, el Creador de todo encarga a Noaj construir un arca. Durante el diluvio, su familia y los animales encuentran refugio en ella. Cuando vuelven a pisar tierra, el arco iris queda como señal de un pacto con todo ser vivo. La vida recomienza con sus dificultades. Generaciones después, quienes levantan una ciudad y una torre en Babel terminan dispersos, hablando lenguas distintas.",
+    "Noaj suelta una paloma y espera. Antes de abrir el arca para todos, necesita saber si afuera hay dónde posarse. Hay una delicadeza en ese modo de cuidar."
+  ],
+  "Lej Lejá": [
+    "Abram deja su tierra con Sarai y su sobrino Lot. El hambre los lleva a Egipto. De regreso, los rebaños crecen tanto que Abram propone a Lot elegir dónde establecerse. Más tarde sale a rescatarlo cuando cae prisionero. Mientras la promesa de descendencia tarda, Agar, sierva de Sarai, da a luz a Ismael. Al final, Abram y Sarai reciben los nombres de Abraham y Sara, y la circuncisión queda como señal del pacto.",
+    "Abram deja que Lot elija primero. En una disputa por espacio, ese gesto abre una posibilidad concreta de seguir siendo familia."
+  ],
+  "Vayera": [
+    "Abraham recibe a tres visitantes que anuncian el nacimiento de un hijo. Después intercede por quienes podrían ser justos en Sodoma. Lot escapa antes de que la ciudad sea destruida. Tras un episodio en Guerar, Sara da a luz a Isaac. Agar e Ismael son expulsados al desierto y encuentran agua cuando su situación parece desesperada. Al final, Abraham lleva a Isaac al monte. Una voz lo detiene antes de que hiera al muchacho.",
+    "En el desierto, el relato se detiene a escuchar a un niño que ha quedado lejos de la tienda de Abraham. Leer esta semana también es darle a Ismael ese lugar en nuestra atención."
+  ],
+  "Jaye Sara": [
+    "Sara muere en Hebrón. Abraham negocia la compra de la cueva de Majpelá para enterrarla. Más tarde envía a su siervo a buscar esposa para Isaac. Junto a un pozo, Rebeca ofrece agua al viajero y también a sus camellos. Cuando su familia le pregunta si quiere partir, ella responde que irá. Isaac la recibe y encuentra consuelo después de la muerte de su madre. Años más tarde, Isaac e Ismael sepultan juntos a Abraham.",
+    "Dar agua a un viajero lleva un momento. Volver al pozo hasta que beban todos sus camellos exige tiempo. Así conocemos a Rebeca, por lo que decide hacer cuando ya ha cumplido con la cortesía."
+  ],
+  "Toldot": [
+    "Rebeca e Isaac tienen dos hijos, Esaú y Jacob. Esaú vuelve hambriento del campo y vende a Jacob su primogenitura por un plato de lentejas. Años después, Isaac, ya anciano, pide a Esaú que prepare una comida para bendecirlo. Con ayuda de Rebeca, Jacob se presenta en lugar de su hermano y recibe la bendición. Esaú llora al saberlo y amenaza con matarlo. Jacob parte hacia la familia de su madre.",
+    "Quizá recordemos enseguida quién recibió la bendición. Vale la pena escuchar también a Esaú cuando pide a su padre que lo bendiga a él. En esa petición se oye algo que ambos hermanos necesitan."
+  ],
+  "Vayetze": [
+    "Jacob sale de su casa y duerme al aire libre. Sueña con una escalera que une tierra y cielo y recibe la promesa de que será acompañado. En casa de Labán trabaja para casarse con Raquel, pero en la boda Labán le entrega a Lea. Jacob se casa también con Raquel y se compromete a seguir trabajando. La familia crece entre afectos, rivalidades y largas jornadas con los rebaños. Al emprender el regreso, Jacob y Labán acuerdan un límite entre ellos.",
+    "Al principio del viaje, Jacob duerme con una piedra junto a la cabeza. Al despertar, la coloca en pie para recordar lo vivido. El lugar sigue siendo el mismo y, sin embargo, ahora tiene una historia para él."
+  ],
+  "Vayishlaj": [
+    "Jacob vuelve a la tierra de su familia y se entera de que Esaú viene a su encuentro con cuatrocientos hombres. Tiene miedo. Divide el campamento, pide protección al Creador de todo y envía regalos a su hermano. Esa noche lucha con un desconocido hasta el amanecer. Recibe el nombre de Israel y queda cojeando. Al día siguiente, Esaú corre a abrazarlo y los dos lloran. Más adelante, Siquem viola a Dina y dos de sus hermanos matan a los varones de la ciudad. Jacob regresa a Betel. Raquel muere al dar a luz a Benjamín. Jacob y Esaú vuelven a reunirse para sepultar a Isaac. La parashá cierra con los descendientes de Esaú.",
+    "Jacob había hecho planes para sobrevivir al encuentro. Ninguno de esos planes incluía que su hermano corriera a abrazarlo. Los dos siguen luego por caminos distintos, pero han podido verse y llorar juntos."
+  ],
+  "Vayeshev": [
+    "José cuenta sueños en los que su familia se inclina ante él. Sus hermanos, heridos por el favoritismo de Jacob, lo arrojan a un pozo. José acaba vendido y llevado a Egipto. Mientras Jacob está de duelo, la historia se detiene en Tamar, que consigue que Judá reconozca su responsabilidad hacia ella. En Egipto, una acusación falsa lleva a José a prisión. Allí interpreta los sueños de dos funcionarios. El copero recupera la libertad y se olvida de él.",
+    "En la cárcel, José nota que sus compañeros tienen mala cara y les pregunta qué les pasa. Todavía espera que alguien se acuerde de él y, aun así, alcanza a mirar a quienes tiene al lado."
+  ],
+  "Miketz": [
+    "Dos años después, el copero recuerda a José cuando el faraón sueña con vacas y espigas. José interpreta que vendrán siete años de abundancia y siete de hambre. El faraón le confía la administración de las reservas. El hambre lleva a sus hermanos a Egipto en busca de grano. José los reconoce y les exige volver con Benjamín. En el segundo viaje, hace colocar su copa en el saco del menor. Cuando los alcanzan en el camino, todos regresan con él.",
+    "Años atrás, los hermanos volvieron a casa dejando atrás a José. Esta vez podrían salvarse dejando a Benjamín, pero dan la vuelta juntos. El cambio empieza a verse antes de que sepan explicarlo."
+  ],
+  "Vayigash": [
+    "Judá se acerca a José y se ofrece a quedar como esclavo en lugar de Benjamín. Le cuenta lo que significaría para su padre perder también a este hijo. José rompe a llorar y revela a sus hermanos quién es. Los envía a buscar a Jacob. La familia baja a Egipto, padre e hijo vuelven a abrazarse y los recién llegados se establecen en Gosén. Mientras tanto, el hambre continúa y la tierra de Egipto pasa, en gran parte, a manos del faraón.",
+    "Judá había participado en la venta de José. Ahora se ofrece a pagar él mismo el precio de que otro hermano vuelva a casa. Su manera de pedir cambia porque también ha cambiado lo que está dispuesto a hacer."
+  ],
+  "Vayechi": [
+    "Al acercarse su muerte, Jacob pide a José que lo sepulte con sus antepasados. Recibe a Efraín y Manasés, hijos de José, y cruza las manos al bendecirlos. Después reúne a sus propios hijos y dirige a cada uno palabras distintas, algunas difíciles de escuchar. La familia lleva sus restos a Majpelá. Tras el funeral, los hermanos temen que José se vengue. Él les asegura que seguirá alimentándolos a ellos y a sus hijos. Antes de morir, José pide que algún día sus huesos también salgan de Egipto.",
+    "Los hermanos han vivido años bajo la protección de José y todavía sienten miedo. Él responde hablando de algo que podrán comprobar mañana, cuando haya que alimentar a sus hijos."
+  ],
+  "Shemot": [
+    "Un nuevo faraón somete a los israelitas a trabajos forzados. Las parteras se resisten a matar a los recién nacidos. Una madre deja a su hijo en una cesta junto al Nilo y la hija del faraón lo recoge. Ese niño, Moisés, crece, huye a Midián y se hace pastor. Ante una zarza que arde, el Creador de todo lo llama a volver a Egipto. Moisés y Aarón piden al faraón que deje salir al pueblo. La primera respuesta es más trabajo para los esclavos.",
+    "Antes de que Moisés pueda hablar por su pueblo, varias mujeres hacen posible que viva. La historia de la salida empieza en decisiones pequeñas que para un recién nacido lo son todo."
+  ],
+  "Vaera": [
+    "El Creador de todo renueva ante Moisés la promesa de liberar a los israelitas. Moisés se la transmite, pero el pueblo, agotado por la esclavitud, apenas puede escucharlo. Moisés y Aarón se presentan de nuevo ante el faraón. El Nilo se convierte en sangre y llegan las primeras siete plagas, hasta el granizo. Una y otra vez el faraón parece ceder y después se niega a dejar salir al pueblo.",
+    "El texto se toma en serio el cansancio de quienes reciben una buena noticia y ya no tienen aliento para escucharla. Recordarlo puede cambiar la manera en que acompañamos a alguien agotado."
+  ],
+  "Bo": [
+    "La langosta y la oscuridad alcanzan a Egipto. Antes de la última plaga, las familias israelitas reciben instrucciones para preparar la comida de Pésaj y marcar sus puertas. La muerte de los primogénitos llena de duelo a los egipcios. El faraón ordena la salida y el pueblo parte con la masa aún sin fermentar. La narración mira también al futuro, al día en que los hijos pregunten qué significan estas costumbres.",
+    "En medio de una salida apresurada, la Torá reserva un lugar para la pregunta de un hijo que todavía no está allí. Así, una comida podrá contar a otra generación lo que una familia vivió."
+  ],
+  "Beshalaj": [
+    "Al salir de Egipto, el pueblo queda entre el mar y el ejército que lo persigue. El mar se abre, los israelitas cruzan y las aguas cubren a sus perseguidores. Moisés y el pueblo cantan, y Miriam sale con su pandero. En el desierto vuelven la sed y el hambre. El pueblo recibe maná y aprende a recoger cada día su porción. En la lucha contra Amalec, Aarón y Jur sostienen los brazos cansados de Moisés mientras Josué combate.",
+    "Hasta los brazos de Moisés pesan. Aarón y Jur acercan una piedra para que se siente y se ponen uno a cada lado. Su ayuda empieza por darse cuenta de lo que su cuerpo ya no puede sostener."
+  ],
+  "Yitro": [
+    "Yitro visita a su yerno Moisés y observa que pasa el día entero resolviendo disputas. Le aconseja elegir personas de confianza para compartir esa tarea. Más tarde, el pueblo acampa frente al Sinaí y se prepara para el encuentro con el Creador de todo. En medio de truenos y sonido de shofar escucha las Diez Palabras, que unen el descanso de Shabat y la relación con el Creador con obligaciones hacia padres, vecinos y extraños.",
+    "Yitro ve tanto el cansancio de Moisés como la larga espera de quienes vienen a consultarlo. Compartir una responsabilidad también puede ser una forma de cuidar el tiempo de los demás."
+  ],
+  "Mishpatim": [
+    "Después del Sinaí, la Torá entra en las decisiones de todos los días. Trata la esclavitud, los daños entre vecinos, los préstamos y la restitución de lo perdido. Ordena proteger al extranjero, a la viuda y al huérfano, y pone límites a quienes administran justicia. También establece tiempos de descanso y de fiesta. Moisés lee al pueblo las palabras del pacto. El pueblo se compromete y Moisés sube al monte.",
+    "Si alguien deja su manto en garantía, hay que devolvérselo antes de la noche. La Torá invita a imaginar una escena muy sencilla antes de exigir lo que se nos debe. ¿Con qué se cubrirá esa persona para dormir?"
+  ],
+  "Teruma": [
+    "Moisés recibe las instrucciones para construir un santuario en medio del campamento. Los materiales vendrán de quienes deseen aportarlos. La Torá describe el arca con su cubierta, la mesa, la menorá, los tejidos, las tablas, el altar y el patio. Cada pieza tiene una medida y un lugar. El espacio que acompañará al pueblo en el desierto empieza con lo que cada persona puede traer.",
+    "Para imaginar el santuario solemos pensar en el oro. El relato también pide madera, aceite e hilo. Leer despacio esa lista permite reconocer cuántas manos distintas hacen falta para preparar un lugar común."
+  ],
+  "Tetzave": [
+    "La Torá pide aceite de oliva para mantener encendida la lámpara del santuario. Luego describe las vestiduras de Aarón y sus hijos. Aarón llevará los nombres de las tribus sobre los hombros y en el pectoral, a la altura del corazón. Siguen las instrucciones para consagrar a los sacerdotes, presentar la ofrenda diaria y quemar incienso sobre un altar destinado a ese servicio.",
+    "Cuando Aarón entre al santuario, llevará consigo los nombres de personas que se han quedado afuera. Antes de representar a otros, vale la pena detenerse a recordar quiénes son y qué nos han confiado."
+  ]
+};
+
+function renderWeeklySummary(parasha){
+  const panel = $('ramakWeeklySummary');
+  if (panel.dataset.parasha === parasha.parasha) return;
+  panel.open = false;
+  panel.dataset.parasha = parasha.parasha;
+  const copy = weeklyEditorialSummaries[parasha.parasha];
+  panel.hidden = !copy;
+  if (!copy) return;
+  $('ramakSummaryName').textContent = parasha.parasha;
+  $('ramakSummaryRef').textContent = biblicalRefEs(parasha.ref);
+  $('ramakSummaryStory').textContent = copy[0];
+  $('ramakSummaryReflection').textContent = copy[1];
+}
+
 function renderRamak(scrollToChooser=false){
   if(!RAMAK_DATA||!caminoScreen) return;
   const contentCount=document.getElementById('ramakContentCount');
@@ -11401,6 +11514,7 @@ function renderRamak(scrollToChooser=false){
 
   const pi=RAMAK_DATA.parashot.findIndex(x=>x.parasha===p.parasha);
   $('ramakWeekIndex').textContent=`PARASHÁ ${String(pi+1).padStart(2,'0')} DE ${RAMAK_DATA.parashot.length}`;
+  renderWeeklySummary(p);
   $('ramakParashaTitle').textContent=p.parasha;
   $('ramakPrinciple').textContent=p.principio||'Encuentros Diarios';
   $('ramakTorahRef').textContent=p.ref?`Torá · ${biblicalRefEs(p.ref)}`:'';
